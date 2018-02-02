@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MuseoCyrl300.otf">
+            <string>MuseoCyrl-300</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DMStockCell" rowHeight="74" id="wOf-1j-yn5" customClass="DMStockCell" customModule="Dominant_Investors" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wOf-1j-yn5" id="eai-lM-6kG">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSD-BO-C7X">
+                        <rect key="frame" x="16" y="19" width="80" height="36"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.89999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="KWH-wh-snO">
+                        <rect key="frame" x="104" y="19" width="79.5" height="36"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6nf-je-HgL">
+                        <rect key="frame" x="279.5" y="30.5" width="79.5" height="14"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                        <color key="textColor" red="0.3294117647" green="0.63529411759999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="745" verticalCompressionResistancePriority="745" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Cs-MV-kfX">
+                        <rect key="frame" x="191.5" y="19" width="80" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="46" id="Cfj-KO-C2s"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Cfj-KO-C2s"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AgK-qY-9Xt">
+                        <rect key="frame" x="279.5" y="48.5" width="79.5" height="14.5"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="AgK-qY-9Xt" firstAttribute="trailing" secondItem="6nf-je-HgL" secondAttribute="trailing" id="18Y-pw-fYy"/>
+                    <constraint firstItem="6nf-je-HgL" firstAttribute="width" secondItem="qSD-BO-C7X" secondAttribute="width" id="32y-ZJ-y0y"/>
+                    <constraint firstItem="AgK-qY-9Xt" firstAttribute="height" secondItem="6nf-je-HgL" secondAttribute="height" id="5R3-4C-KLO"/>
+                    <constraint firstItem="qSD-BO-C7X" firstAttribute="top" secondItem="eai-lM-6kG" secondAttribute="topMargin" constant="8" id="6Qt-L9-MBg"/>
+                    <constraint firstItem="KWH-wh-snO" firstAttribute="top" secondItem="qSD-BO-C7X" secondAttribute="top" id="8Ax-K9-1RX"/>
+                    <constraint firstItem="AgK-qY-9Xt" firstAttribute="trailing" secondItem="6nf-je-HgL" secondAttribute="trailing" id="A4H-03-aab"/>
+                    <constraint firstItem="6nf-je-HgL" firstAttribute="trailing" secondItem="eai-lM-6kG" secondAttribute="trailingMargin" id="ArM-n5-P3h"/>
+                    <constraint firstItem="AgK-qY-9Xt" firstAttribute="leading" secondItem="6nf-je-HgL" secondAttribute="leading" id="BuA-4D-XLd"/>
+                    <constraint firstItem="KWH-wh-snO" firstAttribute="leading" secondItem="qSD-BO-C7X" secondAttribute="trailing" constant="8" id="MRd-08-AcH"/>
+                    <constraint firstItem="6nf-je-HgL" firstAttribute="bottom" secondItem="AgK-qY-9Xt" secondAttribute="bottom" id="N0e-FG-xdm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qSD-BO-C7X" secondAttribute="bottom" constant="8" id="OEb-ga-3gj"/>
+                    <constraint firstItem="6nf-je-HgL" firstAttribute="centerY" secondItem="4Cs-MV-kfX" secondAttribute="centerY" id="RTE-bs-R4b"/>
+                    <constraint firstItem="6nf-je-HgL" firstAttribute="height" secondItem="4Cs-MV-kfX" secondAttribute="height" id="ajU-2F-5xM"/>
+                    <constraint firstItem="6nf-je-HgL" firstAttribute="leading" secondItem="4Cs-MV-kfX" secondAttribute="trailing" constant="8" id="dbU-FQ-akj"/>
+                    <constraint firstItem="AgK-qY-9Xt" firstAttribute="top" secondItem="6nf-je-HgL" secondAttribute="bottom" constant="4" id="e9D-C1-sL3"/>
+                    <constraint firstItem="KWH-wh-snO" firstAttribute="bottom" secondItem="qSD-BO-C7X" secondAttribute="bottom" id="evy-rE-kBP"/>
+                    <constraint firstItem="4Cs-MV-kfX" firstAttribute="bottom" secondItem="KWH-wh-snO" secondAttribute="bottom" id="h2J-hI-h64"/>
+                    <constraint firstItem="qSD-BO-C7X" firstAttribute="leading" secondItem="eai-lM-6kG" secondAttribute="leadingMargin" id="iAF-gq-sFZ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="AgK-qY-9Xt" secondAttribute="bottom" id="ia9-RS-Blx"/>
+                    <constraint firstItem="AgK-qY-9Xt" firstAttribute="bottom" secondItem="4Cs-MV-kfX" secondAttribute="bottom" id="m5k-Mc-yy3"/>
+                    <constraint firstItem="4Cs-MV-kfX" firstAttribute="top" secondItem="KWH-wh-snO" secondAttribute="top" id="mlz-dy-Kfu"/>
+                    <constraint firstItem="4Cs-MV-kfX" firstAttribute="leading" secondItem="KWH-wh-snO" secondAttribute="trailing" constant="8" id="ny9-AO-3jT"/>
+                    <constraint firstItem="KWH-wh-snO" firstAttribute="width" secondItem="qSD-BO-C7X" secondAttribute="width" id="rnd-Nm-pMc"/>
+                    <constraint firstItem="4Cs-MV-kfX" firstAttribute="leading" secondItem="KWH-wh-snO" secondAttribute="trailing" constant="31" id="tU5-Li-oes"/>
+                    <constraint firstItem="4Cs-MV-kfX" firstAttribute="width" secondItem="qSD-BO-C7X" secondAttribute="width" id="uFq-eD-jdP"/>
+                    <constraint firstItem="4Cs-MV-kfX" firstAttribute="bottom" secondItem="KWH-wh-snO" secondAttribute="bottom" id="uxQ-CB-Be7"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="tU5-Li-oes"/>
+                        <exclude reference="uxQ-CB-Be7"/>
+                        <exclude reference="N0e-FG-xdm"/>
+                        <exclude reference="ajU-2F-5xM"/>
+                        <exclude reference="18Y-pw-fYy"/>
+                        <exclude reference="m5k-Mc-yy3"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="currentPrice" destination="4Cs-MV-kfX" id="b2f-NP-C9E"/>
+                <outlet property="exchangeOrBuyPoint" destination="KWH-wh-snO" id="wnj-Rg-67t"/>
+                <outlet property="investmentPeriod" destination="AgK-qY-9Xt" id="Ru7-Tc-2Yi"/>
+                <outlet property="profitability" destination="6nf-je-HgL" id="5g4-7w-603"/>
+                <outlet property="ticker" destination="qSD-BO-C7X" id="shp-dB-QMq"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

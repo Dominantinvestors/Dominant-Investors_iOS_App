@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MuseoCyrl500.otf">
+            <string>MuseoCyrl-500</string>
+        </array>
+        <array key="MuseoCyrl700.otf">
+            <string>MuseoCyrl-700</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="w1S-o1-zCY" customClass="DMTrialUsageView" customModule="Dominant_Investors" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9Z-7M-CUn">
+                    <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trialBg" translatesAutoresizingMaskIntoConstraints="NO" id="mWf-fK-8ge">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        </imageView>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNf-mf-2bF" customClass="FXBlurView">
+                            <rect key="frame" x="4.5" y="150.5" width="310" height="247"/>
+                            <subviews>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s4-OR-Aww">
+                                    <rect key="frame" x="39" y="183" width="232.5" height="40"/>
+                                    <color key="backgroundColor" red="1" green="0.001345359695" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="Bii-ZN-sQJ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="14"/>
+                                    <state key="normal" title="FREE 1-DAY TRIAL">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="startTrialActionWithSender:" destination="w1S-o1-zCY" eventType="touchUpInside" id="kal-Pc-isE"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr3-6i-sOK">
+                                    <rect key="frame" x="0.0" y="8" width="310" height="167"/>
+                                    <string key="text">Get free access to the app
+functionality right now!</string>
+                                    <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="cr3-6i-sOK" firstAttribute="top" secondItem="jNf-mf-2bF" secondAttribute="top" constant="8" id="0Mc-m1-VpP"/>
+                                <constraint firstAttribute="trailing" secondItem="cr3-6i-sOK" secondAttribute="trailing" id="1a3-Io-KY0"/>
+                                <constraint firstItem="1s4-OR-Aww" firstAttribute="width" secondItem="jNf-mf-2bF" secondAttribute="width" multiplier="0.75" id="5nk-91-UPd"/>
+                                <constraint firstItem="cr3-6i-sOK" firstAttribute="leading" secondItem="jNf-mf-2bF" secondAttribute="leading" id="6dz-DK-OAf"/>
+                                <constraint firstItem="1s4-OR-Aww" firstAttribute="centerX" secondItem="jNf-mf-2bF" secondAttribute="centerX" id="LWI-0X-Je9"/>
+                                <constraint firstItem="1s4-OR-Aww" firstAttribute="top" secondItem="cr3-6i-sOK" secondAttribute="bottom" constant="8" id="X5I-py-d30"/>
+                                <constraint firstItem="cr3-6i-sOK" firstAttribute="top" secondItem="jNf-mf-2bF" secondAttribute="top" constant="8" id="YWk-5F-8id"/>
+                                <constraint firstAttribute="bottom" secondItem="1s4-OR-Aww" secondAttribute="bottom" constant="24" id="jAQ-mR-a7B"/>
+                                <constraint firstAttribute="width" constant="310" id="lrV-BH-oNC"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DMWhiteLogo" translatesAutoresizingMaskIntoConstraints="NO" id="QOc-Hc-4sN">
+                            <rect key="frame" x="4" y="98.5" width="310.5" height="20"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="jNf-mf-2bF" firstAttribute="top" secondItem="QOc-Hc-4sN" secondAttribute="bottom" constant="32" id="4Wi-Qw-gDc"/>
+                        <constraint firstItem="mWf-fK-8ge" firstAttribute="leading" secondItem="c9Z-7M-CUn" secondAttribute="leading" id="8eh-ny-DR1"/>
+                        <constraint firstItem="QOc-Hc-4sN" firstAttribute="leading" secondItem="jNf-mf-2bF" secondAttribute="leading" id="BEL-7H-JKF"/>
+                        <constraint firstItem="jNf-mf-2bF" firstAttribute="height" secondItem="c9Z-7M-CUn" secondAttribute="height" multiplier="0.45" id="BGQ-hM-XN1"/>
+                        <constraint firstItem="QOc-Hc-4sN" firstAttribute="trailing" secondItem="jNf-mf-2bF" secondAttribute="trailing" id="Mfe-0r-Wdc"/>
+                        <constraint firstAttribute="trailing" secondItem="mWf-fK-8ge" secondAttribute="trailing" id="akY-rD-Hdi"/>
+                        <constraint firstAttribute="bottom" secondItem="mWf-fK-8ge" secondAttribute="bottom" id="cQJ-79-bId"/>
+                        <constraint firstItem="jNf-mf-2bF" firstAttribute="centerX" secondItem="c9Z-7M-CUn" secondAttribute="centerX" id="d6z-m4-kkS"/>
+                        <constraint firstItem="mWf-fK-8ge" firstAttribute="top" secondItem="c9Z-7M-CUn" secondAttribute="top" id="f69-dh-Q30"/>
+                        <constraint firstItem="jNf-mf-2bF" firstAttribute="centerY" secondItem="c9Z-7M-CUn" secondAttribute="centerY" id="rgt-Ao-VZl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="L1v-cP-eHo" firstAttribute="bottom" secondItem="c9Z-7M-CUn" secondAttribute="bottom" id="LeQ-PV-470"/>
+                <constraint firstItem="c9Z-7M-CUn" firstAttribute="top" secondItem="L1v-cP-eHo" secondAttribute="top" id="nmO-ZJ-mnl"/>
+                <constraint firstItem="L1v-cP-eHo" firstAttribute="trailing" secondItem="c9Z-7M-CUn" secondAttribute="trailing" id="q8r-tw-bLn"/>
+                <constraint firstItem="c9Z-7M-CUn" firstAttribute="leading" secondItem="L1v-cP-eHo" secondAttribute="leading" id="sfG-Fc-jeB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="L1v-cP-eHo"/>
+            <point key="canvasLocation" x="-225" y="10"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="DMWhiteLogo" width="244" height="20"/>
+        <image name="trialBg" width="320" height="685"/>
+    </resources>
+</document>

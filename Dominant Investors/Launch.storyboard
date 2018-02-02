@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="x2w-LU-Ql3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Xbf-4i-ieq">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="x2w-LU-Ql3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="c9d-5X-Bu6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="c2J-Yd-yOd" kind="relationship" relationship="rootViewController" id="wZ3-Om-K8n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAA-Lg-QHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-511" y="130"/>
+        </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="odo-BQ-W3b">
+            <objects>
+                <viewController id="c2J-Yd-yOd" customClass="DMLaunchViewController" customModule="Dominant_Investors" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="flV-90-wLD"/>
+                        <viewControllerLayoutGuide type="bottom" id="b8b-HU-WEc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NiG-IA-joc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hbG-6h-kzs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YUZ-V6-DWa">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YUZ-V6-DWa" firstAttribute="centerX" secondItem="NiG-IA-joc" secondAttribute="centerX" id="0zX-yd-NCh"/>
+                            <constraint firstItem="YUZ-V6-DWa" firstAttribute="centerY" secondItem="NiG-IA-joc" secondAttribute="centerY" id="EqO-kZ-hUO"/>
+                            <constraint firstItem="hbG-6h-kzs" firstAttribute="top" secondItem="NiG-IA-joc" secondAttribute="top" id="Mkg-HT-cbg"/>
+                            <constraint firstAttribute="trailing" secondItem="hbG-6h-kzs" secondAttribute="trailing" id="YbO-cI-h6r"/>
+                            <constraint firstItem="hbG-6h-kzs" firstAttribute="leading" secondItem="NiG-IA-joc" secondAttribute="leading" id="ZI0-tV-76y"/>
+                            <constraint firstItem="b8b-HU-WEc" firstAttribute="top" secondItem="hbG-6h-kzs" secondAttribute="bottom" id="ktZ-Xq-USJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q2t-17-jRE"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="YUZ-V6-DWa" id="svw-44-PIV"/>
+                        <outlet property="backgroundImage" destination="hbG-6h-kzs" id="sdl-pd-FZ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5f-dQ-AdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="130"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,1114 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4509E8C91EF68825002CC7C4 /* DMSignalsHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4509E8C81EF68824002CC7C4 /* DMSignalsHistoryService.swift */; };
+		4509E8CB1EF69977002CC7C4 /* DMSignalHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4509E8CA1EF69977002CC7C4 /* DMSignalHistoryModel.swift */; };
+		45121B821E5CB05E00D83C4E /* DMDropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45121B801E5CB05E00D83C4E /* DMDropDownTableViewCell.swift */; };
+		45121B831E5CB05E00D83C4E /* DMDropDownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45121B811E5CB05E00D83C4E /* DMDropDownTableViewCell.xib */; };
+		45121B851E5CB1B200D83C4E /* DMDropdownListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45121B841E5CB1B200D83C4E /* DMDropdownListDelegate.swift */; };
+		4518F86A1EF33D4B000D044F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4518F8691EF33D4B000D044F /* Alamofire.framework */; };
+		4518F86C1EF33DBF000D044F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4518F8691EF33D4B000D044F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		452A43FA1E5A4DCD0058D11C /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A43F81E5A4DCD0058D11C /* ChartView.swift */; };
+		452A43FB1E5A4DCD0058D11C /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452A43F91E5A4DCD0058D11C /* ChartView.xib */; };
+		452A43FE1E5A570F0058D11C /* DMContainerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A43FD1E5A570F0058D11C /* DMContainerDelegate.swift */; };
+		452A44001E5A5C5E0058D11C /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A43FF1E5A5C5E0058D11C /* AlamofireImage.framework */; };
+		453CA0B91E5C7B34004A6A5C /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453CA0B81E5C7B34004A6A5C /* MBProgressHUD.framework */; };
+		454BFEFA1E5C1F7A0088EF31 /* DMFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BFEF91E5C1F7A0088EF31 /* DMFileManager.swift */; };
+		454E086E1E601BE0004767E9 /* DMStockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E086D1E601BE0004767E9 /* DMStockDetailViewController.swift */; };
+		456F07AC1EDDB6AA00DABE35 /* Dominant+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F07AB1EDDB6AA00DABE35 /* Dominant+UIImageView.swift */; };
+		4581D6B71E60FE0C005F2173 /* DMStockInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581D6B51E60FE0C005F2173 /* DMStockInfoCell.swift */; };
+		4581D6B81E60FE0C005F2173 /* DMStockInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4581D6B61E60FE0C005F2173 /* DMStockInfoCell.xib */; };
+		4581D6BA1E610320005F2173 /* DMPortfolioUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581D6B91E610320005F2173 /* DMPortfolioUserInterface.swift */; };
+		4581D6BC1E610AFC005F2173 /* Dominant+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581D6BB1E610AFC005F2173 /* Dominant+UIImage.swift */; };
+		4581D6BD1E61CE6F005F2173 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 452A43FF1E5A5C5E0058D11C /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4581D6BF1E61CE6F005F2173 /* Quickblox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45B4E77D1E58FE7200D56BDE /* Quickblox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4581D6C01E61CE93005F2173 /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 453CA0B81E5C7B34004A6A5C /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4581D6C21E61FB92005F2173 /* DMRotatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581D6C11E61FB92005F2173 /* DMRotatingViewController.swift */; };
+		4581D6C41E624192005F2173 /* Dominant+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581D6C31E624192005F2173 /* Dominant+UIView.swift */; };
+		4581D6C61E631A32005F2173 /* Dominant+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581D6C51E631A31005F2173 /* Dominant+Array.swift */; };
+		4592F76F1E59B35E004C85F4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592F76E1E59B35E004C85F4 /* Constants.swift */; };
+		45A1078F1E59C24100591170 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A1078E1E59C24100591170 /* FXBlurView.m */; };
+		45A107921E59C3AC00591170 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B7A0321E591629000CB062 /* Crashlytics.framework */; };
+		45A1079E1E59C3AC00591170 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B7A0301E591525000CB062 /* Fabric.framework */; };
+		45A107A01E59C3AD00591170 /* Quickblox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B4E77D1E58FE7200D56BDE /* Quickblox.framework */; };
+		45A107A51E59CFED00591170 /* MuseoCyrl100.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7561E58F12800D56BDE /* MuseoCyrl100.otf */; };
+		45A107A61E59CFED00591170 /* MuseoCyrl300.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7571E58F12800D56BDE /* MuseoCyrl300.otf */; };
+		45A107A71E59CFED00591170 /* MuseoCyrl500.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7581E58F12800D56BDE /* MuseoCyrl500.otf */; };
+		45A107A81E59CFED00591170 /* MuseoCyrl700.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7591E58F12800D56BDE /* MuseoCyrl700.otf */; };
+		45A107A91E59CFED00591170 /* MuseoCyrl900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E75A1E58F12800D56BDE /* MuseoCyrl900.otf */; };
+		45A107AC1E59D35400591170 /* DMRatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A107AB1E59D35400591170 /* DMRatingTableViewCell.swift */; };
+		45A107AE1E59D3E600591170 /* DMRatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A107AD1E59D3E600591170 /* DMRatingModel.swift */; };
+		45A107B51E59DCF300591170 /* DMSignalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A107B31E59DCF300591170 /* DMSignalCell.swift */; };
+		45A107B61E59DCF300591170 /* DMSignalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45A107B41E59DCF300591170 /* DMSignalCell.xib */; };
+		45A107B91E59DF9B00591170 /* DMCompanyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A107B71E59DF9B00591170 /* DMCompanyCollectionCell.swift */; };
+		45A107BA1E59DF9B00591170 /* DMCompanyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45A107B81E59DF9B00591170 /* DMCompanyCollectionCell.xib */; };
+		45B4E7301E58ED5C00D56BDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E72F1E58ED5C00D56BDE /* AppDelegate.swift */; };
+		45B4E7371E58ED5C00D56BDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7361E58ED5C00D56BDE /* Assets.xcassets */; };
+		45B4E73A1E58ED5C00D56BDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7381E58ED5C00D56BDE /* LaunchScreen.storyboard */; };
+		45B4E74A1E58EE9E00D56BDE /* DMAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7491E58EE9E00D56BDE /* DMAPIService.swift */; };
+		45B4E74C1E58EEB200D56BDE /* DMQuickBloxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E74B1E58EEB200D56BDE /* DMQuickBloxService.swift */; };
+		45B4E74E1E58EECE00D56BDE /* DMAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E74D1E58EECE00D56BDE /* DMAuthorizationManager.swift */; };
+		45B4E7501E58EF4200D56BDE /* DMDominantPortfolioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E74F1E58EF4200D56BDE /* DMDominantPortfolioService.swift */; };
+		45B4E7521E58EF5700D56BDE /* DMPersonalPortfolioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7511E58EF5700D56BDE /* DMPersonalPortfolioService.swift */; };
+		45B4E7541E58EF9E00D56BDE /* DMSignalsStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7531E58EF9E00D56BDE /* DMSignalsStoreService.swift */; };
+		45B4E75E1E58F9C200D56BDE /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E75D1E58F9C200D56BDE /* DMViewController.swift */; };
+		45B4E7671E58FBB100D56BDE /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7661E58FBB100D56BDE /* Authorization.storyboard */; };
+		45B4E7691E58FBC900D56BDE /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7681E58FBC900D56BDE /* TabBar.storyboard */; };
+		45B4E76B1E58FBD500D56BDE /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E76A1E58FBD500D56BDE /* Portfolio.storyboard */; };
+		45B4E76D1E58FC0400D56BDE /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E76C1E58FC0400D56BDE /* Launch.storyboard */; };
+		45B4E76F1E58FC1100D56BDE /* Signals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E76E1E58FC1100D56BDE /* Signals.storyboard */; };
+		45B4E7731E58FCF600D56BDE /* DMDominantPortfolioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7721E58FCF600D56BDE /* DMDominantPortfolioModel.swift */; };
+		45B4E7751E58FD1B00D56BDE /* DMPersonalPortfolioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7741E58FD1B00D56BDE /* DMPersonalPortfolioModel.swift */; };
+		45B4E7771E58FD3F00D56BDE /* DMInvestmentSignalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7761E58FD3F00D56BDE /* DMInvestmentSignalModel.swift */; };
+		45B4E7791E58FD5A00D56BDE /* DMCompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7781E58FD5A00D56BDE /* DMCompanyModel.swift */; };
+		45B4E77C1E58FE0500D56BDE /* SwiftStockKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E77B1E58FE0500D56BDE /* SwiftStockKit.swift */; };
+		45B4E7841E59106B00D56BDE /* Ratings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7831E59106B00D56BDE /* Ratings.storyboard */; };
+		45B4E7881E5911D900D56BDE /* DMRatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7871E5911D900D56BDE /* DMRatingsViewController.swift */; };
+		45B4E78A1E59120B00D56BDE /* DMLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7891E59120B00D56BDE /* DMLaunchViewController.swift */; };
+		45B4E7901E59126A00D56BDE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B4E78D1E59126A00D56BDE /* Bolts.framework */; };
+		45B7A0271E591433000CB062 /* DMSignalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A0261E591433000CB062 /* DMSignalsViewController.swift */; };
+		45B7A0291E591445000CB062 /* DMAnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A0281E591445000CB062 /* DMAnalyticsViewController.swift */; };
+		45B7A02B1E591458000CB062 /* DMPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A02A1E591458000CB062 /* DMPortfolioViewController.swift */; };
+		45B7A02D1E59146F000CB062 /* DMTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A02C1E59146F000CB062 /* DMTabBarViewController.swift */; };
+		45B7A02F1E59148A000CB062 /* DMUserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A02E1E59148A000CB062 /* DMUserProfileModel.swift */; };
+		45B7A0371E5916A2000CB062 /* DMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A0361E5916A2000CB062 /* DMLoginViewController.swift */; };
+		45B7A0391E5916B0000CB062 /* DMSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A0381E5916B0000CB062 /* DMSignUpViewController.swift */; };
+		45B7A03B1E5917B9000CB062 /* DMDropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A03A1E5917B9000CB062 /* DMDropdownViewController.swift */; };
+		45B7A03D1E59180F000CB062 /* DMSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A03C1E59180F000CB062 /* DMSubscriptionViewController.swift */; };
+		45B7A03F1E591864000CB062 /* DMCompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A03E1E591864000CB062 /* DMCompanyDetailViewController.swift */; };
+		45C7D6E21E5E4CF90089E8C7 /* DMStockCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7D6E11E5E4CF90089E8C7 /* DMStockCellDelegate.swift */; };
+		45C7D6E41E5E50CA0089E8C7 /* DMCalculationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7D6E31E5E50CA0089E8C7 /* DMCalculationService.swift */; };
+		45C7D6E71E5E516A0089E8C7 /* Dominant+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7D6E61E5E516A0089E8C7 /* Dominant+Double.swift */; };
+		45D070401E5CE5BA00B6CAC5 /* DMStockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0703F1E5CE5BA00B6CAC5 /* DMStockCell.swift */; };
+		45D070421E5CE98000B6CAC5 /* DMStockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D070411E5CE98000B6CAC5 /* DMStockCell.xib */; };
+		45D070441E5D723700B6CAC5 /* DMRatingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D070431E5D723700B6CAC5 /* DMRatingTableViewCell.xib */; };
+		45D070491E5E1F2E00B6CAC5 /* DMResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D070481E5E1F2E00B6CAC5 /* DMResponseObject.swift */; };
+		45D0704B1E5E276300B6CAC5 /* DMDateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0704A1E5E276300B6CAC5 /* DMDateService.swift */; };
+		45D0704F1E5E45A500B6CAC5 /* DMPortfolioTotalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D0704D1E5E45A500B6CAC5 /* DMPortfolioTotalCell.xib */; };
+		45D070501E5E45A500B6CAC5 /* DMPortfolioTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0704E1E5E45A500B6CAC5 /* DMPortfolioTotalCell.swift */; };
+		45D73F741E63598D001BB511 /* DMSubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D73F731E63598D001BB511 /* DMSubscriptionModel.swift */; };
+		45D73F761E636D1B001BB511 /* Dominant+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D73F751E636D1B001BB511 /* Dominant+String.swift */; };
+		961074401FBA469A0022A8BB /* DMTradingViewGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9610743F1FBA469A0022A8BB /* DMTradingViewGraphViewController.swift */; };
+		961CACF91FC4130900BD8D10 /* DMScreenerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961CACF81FC4130900BD8D10 /* DMScreenerContainerViewController.swift */; };
+		961CACFB1FC4136500BD8D10 /* DMCryptoScreenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961CACFA1FC4136500BD8D10 /* DMCryptoScreenerViewController.swift */; };
+		964A40F61FCF0D2C006A5C8C /* DMTrialUsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A40F51FCF0D2C006A5C8C /* DMTrialUsageView.swift */; };
+		964A40F81FCF0D3D006A5C8C /* DMTrialUsageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 964A40F71FCF0D3D006A5C8C /* DMTrialUsageView.xib */; };
+		964A40FA1FCF54AC006A5C8C /* DMTrialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A40F91FCF54AC006A5C8C /* DMTrialModel.swift */; };
+		965DCF2E1FC1AB8B003E74C1 /* Dominant+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DCF2D1FC1AB8B003E74C1 /* Dominant+UINavigationController.swift */; };
+		965DCF301FC1ADE9003E74C1 /* DMEstimazeChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DCF2F1FC1ADE9003E74C1 /* DMEstimazeChartViewController.swift */; };
+		9667CC741FCCB314006E8071 /* DMTrialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667CC731FCCB314006E8071 /* DMTrialView.swift */; };
+		9667CC771FCCB390006E8071 /* DMTrialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9667CC761FCCB390006E8071 /* DMTrialView.xib */; };
+		9672676B1FD827260070EAC2 /* Dominant+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672676A1FD827260070EAC2 /* Dominant+NSLayoutConstraint.swift */; };
+		967A2DAB1FD1CF7D00E1E941 /* DMStatsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A2DAA1FD1CF7D00E1E941 /* DMStatsContainer.swift */; };
+		967A2DAE1FD1D2BF00E1E941 /* DMCryptoInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A2DAD1FD1D2BF00E1E941 /* DMCryptoInfoContainer.swift */; };
+		967A2DB11FD430E600E1E941 /* DMInfoIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A2DB01FD430E600E1E941 /* DMInfoIntroView.swift */; };
+		967A2DB31FD4310100E1E941 /* DMInfoIntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967A2DB21FD4310100E1E941 /* DMInfoIntroView.xib */; };
+		968303F41FC4496700BCBBBD /* DMScreenerTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968303F31FC4496700BCBBBD /* DMScreenerTypeViewController.swift */; };
+		9684633D200F9AFD005CCC09 /* USERS.JAN.BD.json in Resources */ = {isa = PBXBuildFile; fileRef = 9684633C200F9AFD005CCC09 /* USERS.JAN.BD.json */; };
+		968D5D111FA711A5007970CE /* Screener.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968D5D101FA711A5007970CE /* Screener.storyboard */; };
+		968D5D141FA71400007970CE /* DMScreenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D5D131FA71400007970CE /* DMScreenerViewController.swift */; };
+		96CD23D31FDA8E6800FBBEB3 /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CD23D11FDA8E6700FBBEB3 /* Analytics.storyboard */; };
+		96CD23D61FDAB73700FBBEB3 /* OutsourceCharts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CD23D51FDAB73700FBBEB3 /* OutsourceCharts.storyboard */; };
+		96D31D931F799DC900980BBB /* DMTradingViewChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D31D921F799DC900980BBB /* DMTradingViewChartViewController.swift */; };
+		BE53AF2C1F5E7D2A002B485F /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE53AF291F5E7D2A002B485F /* FBAudienceNetwork.framework */; };
+		BE53AF2D1F5E7D2A002B485F /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE53AF2A1F5E7D2A002B485F /* FBSDKMessengerShareKit.framework */; };
+		BE9EE2691F5D4C9300E80FDA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */; };
+		BE9EE26C1F5D4C9A00E80FDA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE26A1F5D4C9A00E80FDA /* FBSDKCoreKit.framework */; };
+		BE9EE26D1F5D4C9A00E80FDA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE26B1F5D4C9A00E80FDA /* FBSDKLoginKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		45A107A21E59C3AD00591170 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4581D6C01E61CE93005F2173 /* MBProgressHUD.framework in Embed Frameworks */,
+				4581D6BD1E61CE6F005F2173 /* AlamofireImage.framework in Embed Frameworks */,
+				4581D6BF1E61CE6F005F2173 /* Quickblox.framework in Embed Frameworks */,
+				4518F86C1EF33DBF000D044F /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4509E8C81EF68824002CC7C4 /* DMSignalsHistoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSignalsHistoryService.swift; sourceTree = "<group>"; };
+		4509E8CA1EF69977002CC7C4 /* DMSignalHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSignalHistoryModel.swift; sourceTree = "<group>"; };
+		45121B801E5CB05E00D83C4E /* DMDropDownTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDropDownTableViewCell.swift; sourceTree = "<group>"; };
+		45121B811E5CB05E00D83C4E /* DMDropDownTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMDropDownTableViewCell.xib; sourceTree = "<group>"; };
+		45121B841E5CB1B200D83C4E /* DMDropdownListDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDropdownListDelegate.swift; sourceTree = "<group>"; };
+		4518F8691EF33D4B000D044F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		452A43F81E5A4DCD0058D11C /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		452A43F91E5A4DCD0058D11C /* ChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
+		452A43FD1E5A570F0058D11C /* DMContainerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMContainerDelegate.swift; sourceTree = "<group>"; };
+		452A43FF1E5A5C5E0058D11C /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		453CA0B81E5C7B34004A6A5C /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
+		454BFEF91E5C1F7A0088EF31 /* DMFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMFileManager.swift; sourceTree = "<group>"; };
+		454E086D1E601BE0004767E9 /* DMStockDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMStockDetailViewController.swift; sourceTree = "<group>"; };
+		456F07AB1EDDB6AA00DABE35 /* Dominant+UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dominant+UIImageView.swift"; sourceTree = "<group>"; };
+		4581D6B51E60FE0C005F2173 /* DMStockInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMStockInfoCell.swift; sourceTree = "<group>"; };
+		4581D6B61E60FE0C005F2173 /* DMStockInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMStockInfoCell.xib; sourceTree = "<group>"; };
+		4581D6B91E610320005F2173 /* DMPortfolioUserInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPortfolioUserInterface.swift; sourceTree = "<group>"; };
+		4581D6BB1E610AFC005F2173 /* Dominant+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dominant+UIImage.swift"; sourceTree = "<group>"; };
+		4581D6C11E61FB92005F2173 /* DMRotatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMRotatingViewController.swift; sourceTree = "<group>"; };
+		4581D6C31E624192005F2173 /* Dominant+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dominant+UIView.swift"; sourceTree = "<group>"; };
+		4581D6C51E631A31005F2173 /* Dominant+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dominant+Array.swift"; sourceTree = "<group>"; };
+		4592F76E1E59B35E004C85F4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4592F7741E59BFEB004C85F4 /* Dominant Investors-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Dominant Investors-Bridging-Header.h"; path = "Dominant Investors/Dominant Investors-Bridging-Header.h"; sourceTree = "<group>"; };
+		45A1078D1E59C24100591170 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		45A1078E1E59C24100591170 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		45A107AB1E59D35400591170 /* DMRatingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMRatingTableViewCell.swift; sourceTree = "<group>"; };
+		45A107AD1E59D3E600591170 /* DMRatingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMRatingModel.swift; sourceTree = "<group>"; };
+		45A107B31E59DCF300591170 /* DMSignalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSignalCell.swift; sourceTree = "<group>"; };
+		45A107B41E59DCF300591170 /* DMSignalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMSignalCell.xib; sourceTree = "<group>"; };
+		45A107B71E59DF9B00591170 /* DMCompanyCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMCompanyCollectionCell.swift; sourceTree = "<group>"; };
+		45A107B81E59DF9B00591170 /* DMCompanyCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMCompanyCollectionCell.xib; sourceTree = "<group>"; };
+		45B4E72C1E58ED5C00D56BDE /* Dominant Investors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dominant Investors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45B4E72F1E58ED5C00D56BDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45B4E7361E58ED5C00D56BDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45B4E7391E58ED5C00D56BDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		45B4E73B1E58ED5D00D56BDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45B4E7491E58EE9E00D56BDE /* DMAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAPIService.swift; sourceTree = "<group>"; };
+		45B4E74B1E58EEB200D56BDE /* DMQuickBloxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMQuickBloxService.swift; sourceTree = "<group>"; };
+		45B4E74D1E58EECE00D56BDE /* DMAuthorizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAuthorizationManager.swift; sourceTree = "<group>"; };
+		45B4E74F1E58EF4200D56BDE /* DMDominantPortfolioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDominantPortfolioService.swift; sourceTree = "<group>"; };
+		45B4E7511E58EF5700D56BDE /* DMPersonalPortfolioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPersonalPortfolioService.swift; sourceTree = "<group>"; };
+		45B4E7531E58EF9E00D56BDE /* DMSignalsStoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSignalsStoreService.swift; sourceTree = "<group>"; };
+		45B4E7561E58F12800D56BDE /* MuseoCyrl100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl100.otf; sourceTree = "<group>"; };
+		45B4E7571E58F12800D56BDE /* MuseoCyrl300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl300.otf; sourceTree = "<group>"; };
+		45B4E7581E58F12800D56BDE /* MuseoCyrl500.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl500.otf; sourceTree = "<group>"; };
+		45B4E7591E58F12800D56BDE /* MuseoCyrl700.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl700.otf; sourceTree = "<group>"; };
+		45B4E75A1E58F12800D56BDE /* MuseoCyrl900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl900.otf; sourceTree = "<group>"; };
+		45B4E75D1E58F9C200D56BDE /* DMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMViewController.swift; sourceTree = "<group>"; };
+		45B4E7661E58FBB100D56BDE /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		45B4E7681E58FBC900D56BDE /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		45B4E76A1E58FBD500D56BDE /* Portfolio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
+		45B4E76C1E58FC0400D56BDE /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		45B4E76E1E58FC1100D56BDE /* Signals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signals.storyboard; sourceTree = "<group>"; };
+		45B4E7721E58FCF600D56BDE /* DMDominantPortfolioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDominantPortfolioModel.swift; sourceTree = "<group>"; };
+		45B4E7741E58FD1B00D56BDE /* DMPersonalPortfolioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPersonalPortfolioModel.swift; sourceTree = "<group>"; };
+		45B4E7761E58FD3F00D56BDE /* DMInvestmentSignalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMInvestmentSignalModel.swift; sourceTree = "<group>"; };
+		45B4E7781E58FD5A00D56BDE /* DMCompanyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMCompanyModel.swift; sourceTree = "<group>"; };
+		45B4E77B1E58FE0500D56BDE /* SwiftStockKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftStockKit.swift; sourceTree = "<group>"; };
+		45B4E77D1E58FE7200D56BDE /* Quickblox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quickblox.framework; sourceTree = "<group>"; };
+		45B4E7831E59106B00D56BDE /* Ratings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ratings.storyboard; sourceTree = "<group>"; };
+		45B4E7871E5911D900D56BDE /* DMRatingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMRatingsViewController.swift; sourceTree = "<group>"; };
+		45B4E7891E59120B00D56BDE /* DMLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLaunchViewController.swift; sourceTree = "<group>"; };
+		45B4E78D1E59126A00D56BDE /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		45B7A0261E591433000CB062 /* DMSignalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSignalsViewController.swift; sourceTree = "<group>"; };
+		45B7A0281E591445000CB062 /* DMAnalyticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAnalyticsViewController.swift; sourceTree = "<group>"; };
+		45B7A02A1E591458000CB062 /* DMPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPortfolioViewController.swift; sourceTree = "<group>"; };
+		45B7A02C1E59146F000CB062 /* DMTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMTabBarViewController.swift; sourceTree = "<group>"; };
+		45B7A02E1E59148A000CB062 /* DMUserProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMUserProfileModel.swift; sourceTree = "<group>"; };
+		45B7A0301E591525000CB062 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		45B7A0321E591629000CB062 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		45B7A0361E5916A2000CB062 /* DMLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginViewController.swift; sourceTree = "<group>"; };
+		45B7A0381E5916B0000CB062 /* DMSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSignUpViewController.swift; sourceTree = "<group>"; };
+		45B7A03A1E5917B9000CB062 /* DMDropdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDropdownViewController.swift; sourceTree = "<group>"; };
+		45B7A03C1E59180F000CB062 /* DMSubscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSubscriptionViewController.swift; sourceTree = "<group>"; };
+		45B7A03E1E591864000CB062 /* DMCompanyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMCompanyDetailViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		45C7D6E11E5E4CF90089E8C7 /* DMStockCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMStockCellDelegate.swift; sourceTree = "<group>"; };
+		45C7D6E31E5E50CA0089E8C7 /* DMCalculationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMCalculationService.swift; sourceTree = "<group>"; };
+		45C7D6E61E5E516A0089E8C7 /* Dominant+Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dominant+Double.swift"; sourceTree = "<group>"; };
+		45D0703F1E5CE5BA00B6CAC5 /* DMStockCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMStockCell.swift; sourceTree = "<group>"; };
+		45D070411E5CE98000B6CAC5 /* DMStockCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMStockCell.xib; sourceTree = "<group>"; };
+		45D070431E5D723700B6CAC5 /* DMRatingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMRatingTableViewCell.xib; sourceTree = "<group>"; };
+		45D070481E5E1F2E00B6CAC5 /* DMResponseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMResponseObject.swift; sourceTree = "<group>"; };
+		45D0704A1E5E276300B6CAC5 /* DMDateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDateService.swift; sourceTree = "<group>"; };
+		45D0704D1E5E45A500B6CAC5 /* DMPortfolioTotalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMPortfolioTotalCell.xib; sourceTree = "<group>"; };
+		45D0704E1E5E45A500B6CAC5 /* DMPortfolioTotalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPortfolioTotalCell.swift; sourceTree = "<group>"; };
+		45D73F731E63598D001BB511 /* DMSubscriptionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSubscriptionModel.swift; sourceTree = "<group>"; };
+		45D73F751E636D1B001BB511 /* Dominant+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dominant+String.swift"; sourceTree = "<group>"; };
+		9610743F1FBA469A0022A8BB /* DMTradingViewGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMTradingViewGraphViewController.swift; sourceTree = "<group>"; };
+		961CACF81FC4130900BD8D10 /* DMScreenerContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMScreenerContainerViewController.swift; sourceTree = "<group>"; };
+		961CACFA1FC4136500BD8D10 /* DMCryptoScreenerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMCryptoScreenerViewController.swift; sourceTree = "<group>"; };
+		964A40F51FCF0D2C006A5C8C /* DMTrialUsageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMTrialUsageView.swift; sourceTree = "<group>"; };
+		964A40F71FCF0D3D006A5C8C /* DMTrialUsageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DMTrialUsageView.xib; sourceTree = "<group>"; };
+		964A40F91FCF54AC006A5C8C /* DMTrialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMTrialModel.swift; sourceTree = "<group>"; };
+		965DCF2D1FC1AB8B003E74C1 /* Dominant+UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dominant+UINavigationController.swift"; sourceTree = "<group>"; };
+		965DCF2F1FC1ADE9003E74C1 /* DMEstimazeChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMEstimazeChartViewController.swift; sourceTree = "<group>"; };
+		9667CC731FCCB314006E8071 /* DMTrialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMTrialView.swift; sourceTree = "<group>"; };
+		9667CC761FCCB390006E8071 /* DMTrialView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DMTrialView.xib; sourceTree = "<group>"; };
+		9672676A1FD827260070EAC2 /* Dominant+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dominant+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
+		967A2DAA1FD1CF7D00E1E941 /* DMStatsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMStatsContainer.swift; sourceTree = "<group>"; };
+		967A2DAD1FD1D2BF00E1E941 /* DMCryptoInfoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMCryptoInfoContainer.swift; sourceTree = "<group>"; };
+		967A2DB01FD430E600E1E941 /* DMInfoIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMInfoIntroView.swift; sourceTree = "<group>"; };
+		967A2DB21FD4310100E1E941 /* DMInfoIntroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DMInfoIntroView.xib; sourceTree = "<group>"; };
+		968303F31FC4496700BCBBBD /* DMScreenerTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMScreenerTypeViewController.swift; sourceTree = "<group>"; };
+		9684633C200F9AFD005CCC09 /* USERS.JAN.BD.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = USERS.JAN.BD.json; sourceTree = "<group>"; };
+		968D5D101FA711A5007970CE /* Screener.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Screener.storyboard; sourceTree = "<group>"; };
+		968D5D131FA71400007970CE /* DMScreenerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMScreenerViewController.swift; sourceTree = "<group>"; };
+		96CD23D11FDA8E6700FBBEB3 /* Analytics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Analytics.storyboard; sourceTree = "<group>"; };
+		96CD23D51FDAB73700FBBEB3 /* OutsourceCharts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OutsourceCharts.storyboard; sourceTree = "<group>"; };
+		96D31D921F799DC900980BBB /* DMTradingViewChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMTradingViewChartViewController.swift; sourceTree = "<group>"; };
+		BE53AF291F5E7D2A002B485F /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		BE53AF2A1F5E7D2A002B485F /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		BE9EE26A1F5D4C9A00E80FDA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		BE9EE26B1F5D4C9A00E80FDA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45B4E7291E58ED5C00D56BDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452A44001E5A5C5E0058D11C /* AlamofireImage.framework in Frameworks */,
+				45A107A01E59C3AD00591170 /* Quickblox.framework in Frameworks */,
+				45A107921E59C3AC00591170 /* Crashlytics.framework in Frameworks */,
+				BE53AF2C1F5E7D2A002B485F /* FBAudienceNetwork.framework in Frameworks */,
+				4518F86A1EF33D4B000D044F /* Alamofire.framework in Frameworks */,
+				453CA0B91E5C7B34004A6A5C /* MBProgressHUD.framework in Frameworks */,
+				BE53AF2D1F5E7D2A002B485F /* FBSDKMessengerShareKit.framework in Frameworks */,
+				BE9EE26C1F5D4C9A00E80FDA /* FBSDKCoreKit.framework in Frameworks */,
+				BE9EE2691F5D4C9300E80FDA /* FBSDKShareKit.framework in Frameworks */,
+				BE9EE26D1F5D4C9A00E80FDA /* FBSDKLoginKit.framework in Frameworks */,
+				45A1079E1E59C3AC00591170 /* Fabric.framework in Frameworks */,
+				45B4E7901E59126A00D56BDE /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45121B7F1E5CB04C00D83C4E /* DMDropDownTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				45121B801E5CB05E00D83C4E /* DMDropDownTableViewCell.swift */,
+				45121B811E5CB05E00D83C4E /* DMDropDownTableViewCell.xib */,
+			);
+			name = DMDropDownTableViewCell;
+			sourceTree = "<group>";
+		};
+		452A43F71E5A4DBB0058D11C /* DMChartView */ = {
+			isa = PBXGroup;
+			children = (
+				452A43F81E5A4DCD0058D11C /* ChartView.swift */,
+				452A43F91E5A4DCD0058D11C /* ChartView.xib */,
+			);
+			name = DMChartView;
+			sourceTree = "<group>";
+		};
+		452A43FC1E5A56F60058D11C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				452A43FD1E5A570F0058D11C /* DMContainerDelegate.swift */,
+				45121B841E5CB1B200D83C4E /* DMDropdownListDelegate.swift */,
+				45C7D6E11E5E4CF90089E8C7 /* DMStockCellDelegate.swift */,
+				4581D6B91E610320005F2173 /* DMPortfolioUserInterface.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		4581D6B41E60FDE6005F2173 /* DMStockInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				4581D6B51E60FE0C005F2173 /* DMStockInfoCell.swift */,
+				4581D6B61E60FE0C005F2173 /* DMStockInfoCell.xib */,
+			);
+			name = DMStockInfoCell;
+			sourceTree = "<group>";
+		};
+		4592F7731E59BFCB004C85F4 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				45A1078D1E59C24100591170 /* FXBlurView.h */,
+				45A1078E1E59C24100591170 /* FXBlurView.m */,
+			);
+			name = FXBlurView;
+			sourceTree = "<group>";
+		};
+		45A107AA1E59D33D00591170 /* DMRatingTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				45A107AB1E59D35400591170 /* DMRatingTableViewCell.swift */,
+				45D070431E5D723700B6CAC5 /* DMRatingTableViewCell.xib */,
+			);
+			name = DMRatingTableViewCell;
+			sourceTree = "<group>";
+		};
+		45A107B01E59D52200591170 /* DMPortfolioStockCell */ = {
+			isa = PBXGroup;
+			children = (
+				45D0703F1E5CE5BA00B6CAC5 /* DMStockCell.swift */,
+				45D070411E5CE98000B6CAC5 /* DMStockCell.xib */,
+			);
+			name = DMPortfolioStockCell;
+			sourceTree = "<group>";
+		};
+		45A107B11E59D52C00591170 /* DMCompanyCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				45A107B71E59DF9B00591170 /* DMCompanyCollectionCell.swift */,
+				45A107B81E59DF9B00591170 /* DMCompanyCollectionCell.xib */,
+			);
+			name = DMCompanyCollectionCell;
+			sourceTree = "<group>";
+		};
+		45A107B21E59DC0800591170 /* DMSignalCell */ = {
+			isa = PBXGroup;
+			children = (
+				45A107B31E59DCF300591170 /* DMSignalCell.swift */,
+				45A107B41E59DCF300591170 /* DMSignalCell.xib */,
+			);
+			name = DMSignalCell;
+			sourceTree = "<group>";
+		};
+		45B4E7231E58ED5C00D56BDE = {
+			isa = PBXGroup;
+			children = (
+				4592F7741E59BFEB004C85F4 /* Dominant Investors-Bridging-Header.h */,
+				45B4E72E1E58ED5C00D56BDE /* Dominant Investors */,
+				45B4E7431E58ED7D00D56BDE /* Resources */,
+				45B4E7471E58EE2B00D56BDE /* Framewroks */,
+				45B4E72D1E58ED5C00D56BDE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45B4E72D1E58ED5C00D56BDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45B4E72C1E58ED5C00D56BDE /* Dominant Investors.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45B4E72E1E58ED5C00D56BDE /* Dominant Investors */ = {
+			isa = PBXGroup;
+			children = (
+				45B4E72F1E58ED5C00D56BDE /* AppDelegate.swift */,
+				4592F76E1E59B35E004C85F4 /* Constants.swift */,
+				45B4E7461E58EE1D00D56BDE /* Custom Views */,
+				45B4E7451E58EDA500D56BDE /* Storyboards */,
+				45B4E7441E58ED8900D56BDE /* Models */,
+				45B4E7421E58ED7100D56BDE /* Controllers */,
+				45B4E7411E58ED6900D56BDE /* Managers */,
+				452A43FC1E5A56F60058D11C /* Protocols */,
+				45C7D6E51E5E51590089E8C7 /* Extensions */,
+			);
+			path = "Dominant Investors";
+			sourceTree = "<group>";
+		};
+		45B4E7411E58ED6900D56BDE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				45B4E7491E58EE9E00D56BDE /* DMAPIService.swift */,
+				45B4E74B1E58EEB200D56BDE /* DMQuickBloxService.swift */,
+				45B4E74D1E58EECE00D56BDE /* DMAuthorizationManager.swift */,
+				45B4E74F1E58EF4200D56BDE /* DMDominantPortfolioService.swift */,
+				4509E8C81EF68824002CC7C4 /* DMSignalsHistoryService.swift */,
+				45B4E7511E58EF5700D56BDE /* DMPersonalPortfolioService.swift */,
+				45B4E7531E58EF9E00D56BDE /* DMSignalsStoreService.swift */,
+				45C7D6E31E5E50CA0089E8C7 /* DMCalculationService.swift */,
+				45D0704A1E5E276300B6CAC5 /* DMDateService.swift */,
+				454BFEF91E5C1F7A0088EF31 /* DMFileManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		45B4E7421E58ED7100D56BDE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				45B4E75D1E58F9C200D56BDE /* DMViewController.swift */,
+				965DCF331FC1AEF7003E74C1 /* Charts */,
+				45B4E7601E58F9DD00D56BDE /* Launch Screen */,
+				45B4E75F1E58F9C800D56BDE /* Tab Bar */,
+				45B7A0351E59168A000CB062 /* Login */,
+				45B7A0341E591683000CB062 /* Sign Up */,
+				45B4E7861E59107900D56BDE /* Ratings */,
+				45B4E7631E58F9FE00D56BDE /* Signals */,
+				45B4E7621E58F9EE00D56BDE /* Analytics */,
+				45B4E7611E58F9E600D56BDE /* Portfolio */,
+				968D5D121FA713CF007970CE /* Screener */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		45B4E7431E58ED7D00D56BDE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9684633C200F9AFD005CCC09 /* USERS.JAN.BD.json */,
+				45B4E7551E58F0B300D56BDE /* Fonts */,
+				45B4E7361E58ED5C00D56BDE /* Assets.xcassets */,
+				45B4E73B1E58ED5D00D56BDE /* Info.plist */,
+			);
+			name = Resources;
+			path = "Dominant Investors";
+			sourceTree = "<group>";
+		};
+		45B4E7441E58ED8900D56BDE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				45B4E7721E58FCF600D56BDE /* DMDominantPortfolioModel.swift */,
+				45B4E7741E58FD1B00D56BDE /* DMPersonalPortfolioModel.swift */,
+				45B4E7761E58FD3F00D56BDE /* DMInvestmentSignalModel.swift */,
+				4509E8CA1EF69977002CC7C4 /* DMSignalHistoryModel.swift */,
+				45A107AD1E59D3E600591170 /* DMRatingModel.swift */,
+				45B4E7781E58FD5A00D56BDE /* DMCompanyModel.swift */,
+				45B7A02E1E59148A000CB062 /* DMUserProfileModel.swift */,
+				45D070481E5E1F2E00B6CAC5 /* DMResponseObject.swift */,
+				45D73F731E63598D001BB511 /* DMSubscriptionModel.swift */,
+				964A40F91FCF54AC006A5C8C /* DMTrialModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		45B4E7451E58EDA500D56BDE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				45B4E7381E58ED5C00D56BDE /* LaunchScreen.storyboard */,
+				45B4E76C1E58FC0400D56BDE /* Launch.storyboard */,
+				45B4E7661E58FBB100D56BDE /* Authorization.storyboard */,
+				45B4E7681E58FBC900D56BDE /* TabBar.storyboard */,
+				968D5D101FA711A5007970CE /* Screener.storyboard */,
+				45B4E76A1E58FBD500D56BDE /* Portfolio.storyboard */,
+				45B4E7831E59106B00D56BDE /* Ratings.storyboard */,
+				45B4E76E1E58FC1100D56BDE /* Signals.storyboard */,
+				96CD23D51FDAB73700FBBEB3 /* OutsourceCharts.storyboard */,
+				96CD23D11FDA8E6700FBBEB3 /* Analytics.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		45B4E7461E58EE1D00D56BDE /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				967A2DAF1FD430BD00E1E941 /* DMInfoIntoView */,
+				967A2DAC1FD1D2A500E1E941 /* DMCryptoInfoContainer */,
+				967A2DA91FD1CF6000E1E941 /* DMStatsContainer */,
+				9667CC751FCCB380006E8071 /* DMTrialView */,
+				4581D6B41E60FDE6005F2173 /* DMStockInfoCell */,
+				45D0704C1E5E458800B6CAC5 /* DMPortfolioTotalCell */,
+				45121B7F1E5CB04C00D83C4E /* DMDropDownTableViewCell */,
+				452A43F71E5A4DBB0058D11C /* DMChartView */,
+				45A107B21E59DC0800591170 /* DMSignalCell */,
+				45A107B11E59D52C00591170 /* DMCompanyCollectionCell */,
+				45A107B01E59D52200591170 /* DMPortfolioStockCell */,
+				45A107AA1E59D33D00591170 /* DMRatingTableViewCell */,
+				4592F7731E59BFCB004C85F4 /* FXBlurView */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		45B4E7471E58EE2B00D56BDE /* Framewroks */ = {
+			isa = PBXGroup;
+			children = (
+				BE53AF291F5E7D2A002B485F /* FBAudienceNetwork.framework */,
+				BE53AF2A1F5E7D2A002B485F /* FBSDKMessengerShareKit.framework */,
+				BE9EE26A1F5D4C9A00E80FDA /* FBSDKCoreKit.framework */,
+				BE9EE26B1F5D4C9A00E80FDA /* FBSDKLoginKit.framework */,
+				BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */,
+				453CA0B81E5C7B34004A6A5C /* MBProgressHUD.framework */,
+				452A43FF1E5A5C5E0058D11C /* AlamofireImage.framework */,
+				45B7A0321E591629000CB062 /* Crashlytics.framework */,
+				45B4E78D1E59126A00D56BDE /* Bolts.framework */,
+				4518F8691EF33D4B000D044F /* Alamofire.framework */,
+				45B7A0301E591525000CB062 /* Fabric.framework */,
+				45B4E77D1E58FE7200D56BDE /* Quickblox.framework */,
+				45B4E77A1E58FDE700D56BDE /* SwiftStockKit */,
+			);
+			name = Framewroks;
+			sourceTree = "<group>";
+		};
+		45B4E7551E58F0B300D56BDE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				45B4E7561E58F12800D56BDE /* MuseoCyrl100.otf */,
+				45B4E7571E58F12800D56BDE /* MuseoCyrl300.otf */,
+				45B4E7581E58F12800D56BDE /* MuseoCyrl500.otf */,
+				45B4E7591E58F12800D56BDE /* MuseoCyrl700.otf */,
+				45B4E75A1E58F12800D56BDE /* MuseoCyrl900.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		45B4E75F1E58F9C800D56BDE /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				45B7A02C1E59146F000CB062 /* DMTabBarViewController.swift */,
+				4581D6C11E61FB92005F2173 /* DMRotatingViewController.swift */,
+			);
+			name = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		45B4E7601E58F9DD00D56BDE /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				45B4E7891E59120B00D56BDE /* DMLaunchViewController.swift */,
+			);
+			name = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		45B4E7611E58F9E600D56BDE /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				45B7A02A1E591458000CB062 /* DMPortfolioViewController.swift */,
+				45B7A03A1E5917B9000CB062 /* DMDropdownViewController.swift */,
+				454E086D1E601BE0004767E9 /* DMStockDetailViewController.swift */,
+			);
+			name = Portfolio;
+			sourceTree = "<group>";
+		};
+		45B4E7621E58F9EE00D56BDE /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				45B7A0281E591445000CB062 /* DMAnalyticsViewController.swift */,
+				45B7A03E1E591864000CB062 /* DMCompanyDetailViewController.swift */,
+				9610743F1FBA469A0022A8BB /* DMTradingViewGraphViewController.swift */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		45B4E7631E58F9FE00D56BDE /* Signals */ = {
+			isa = PBXGroup;
+			children = (
+				45B7A0261E591433000CB062 /* DMSignalsViewController.swift */,
+				45B7A03C1E59180F000CB062 /* DMSubscriptionViewController.swift */,
+			);
+			name = Signals;
+			sourceTree = "<group>";
+		};
+		45B4E77A1E58FDE700D56BDE /* SwiftStockKit */ = {
+			isa = PBXGroup;
+			children = (
+				45B4E77B1E58FE0500D56BDE /* SwiftStockKit.swift */,
+			);
+			name = SwiftStockKit;
+			sourceTree = "<group>";
+		};
+		45B4E7861E59107900D56BDE /* Ratings */ = {
+			isa = PBXGroup;
+			children = (
+				45B4E7871E5911D900D56BDE /* DMRatingsViewController.swift */,
+			);
+			name = Ratings;
+			sourceTree = "<group>";
+		};
+		45B7A0341E591683000CB062 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				45B7A0381E5916B0000CB062 /* DMSignUpViewController.swift */,
+			);
+			name = "Sign Up";
+			sourceTree = "<group>";
+		};
+		45B7A0351E59168A000CB062 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				45B7A0361E5916A2000CB062 /* DMLoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		45C7D6E51E5E51590089E8C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				45C7D6E61E5E516A0089E8C7 /* Dominant+Double.swift */,
+				4581D6BB1E610AFC005F2173 /* Dominant+UIImage.swift */,
+				4581D6C31E624192005F2173 /* Dominant+UIView.swift */,
+				4581D6C51E631A31005F2173 /* Dominant+Array.swift */,
+				45D73F751E636D1B001BB511 /* Dominant+String.swift */,
+				456F07AB1EDDB6AA00DABE35 /* Dominant+UIImageView.swift */,
+				965DCF2D1FC1AB8B003E74C1 /* Dominant+UINavigationController.swift */,
+				9672676A1FD827260070EAC2 /* Dominant+NSLayoutConstraint.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		45D0704C1E5E458800B6CAC5 /* DMPortfolioTotalCell */ = {
+			isa = PBXGroup;
+			children = (
+				45D0704D1E5E45A500B6CAC5 /* DMPortfolioTotalCell.xib */,
+				45D0704E1E5E45A500B6CAC5 /* DMPortfolioTotalCell.swift */,
+			);
+			name = DMPortfolioTotalCell;
+			sourceTree = "<group>";
+		};
+		964A40F41FCF0D0D006A5C8C /* DMTrialUsageView */ = {
+			isa = PBXGroup;
+			children = (
+				964A40F51FCF0D2C006A5C8C /* DMTrialUsageView.swift */,
+				964A40F71FCF0D3D006A5C8C /* DMTrialUsageView.xib */,
+			);
+			name = DMTrialUsageView;
+			sourceTree = "<group>";
+		};
+		965DCF331FC1AEF7003E74C1 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				965DCF2F1FC1ADE9003E74C1 /* DMEstimazeChartViewController.swift */,
+				96D31D921F799DC900980BBB /* DMTradingViewChartViewController.swift */,
+			);
+			name = Charts;
+			sourceTree = "<group>";
+		};
+		9667CC751FCCB380006E8071 /* DMTrialView */ = {
+			isa = PBXGroup;
+			children = (
+				964A40F41FCF0D0D006A5C8C /* DMTrialUsageView */,
+				9667CC731FCCB314006E8071 /* DMTrialView.swift */,
+				9667CC761FCCB390006E8071 /* DMTrialView.xib */,
+			);
+			name = DMTrialView;
+			sourceTree = "<group>";
+		};
+		967A2DA91FD1CF6000E1E941 /* DMStatsContainer */ = {
+			isa = PBXGroup;
+			children = (
+				967A2DAA1FD1CF7D00E1E941 /* DMStatsContainer.swift */,
+			);
+			name = DMStatsContainer;
+			sourceTree = "<group>";
+		};
+		967A2DAC1FD1D2A500E1E941 /* DMCryptoInfoContainer */ = {
+			isa = PBXGroup;
+			children = (
+				967A2DAD1FD1D2BF00E1E941 /* DMCryptoInfoContainer.swift */,
+			);
+			name = DMCryptoInfoContainer;
+			sourceTree = "<group>";
+		};
+		967A2DAF1FD430BD00E1E941 /* DMInfoIntoView */ = {
+			isa = PBXGroup;
+			children = (
+				967A2DB01FD430E600E1E941 /* DMInfoIntroView.swift */,
+				967A2DB21FD4310100E1E941 /* DMInfoIntroView.xib */,
+			);
+			name = DMInfoIntoView;
+			sourceTree = "<group>";
+		};
+		968303F21FC4493800BCBBBD /* Screeners */ = {
+			isa = PBXGroup;
+			children = (
+				968303F31FC4496700BCBBBD /* DMScreenerTypeViewController.swift */,
+				968D5D131FA71400007970CE /* DMScreenerViewController.swift */,
+				961CACFA1FC4136500BD8D10 /* DMCryptoScreenerViewController.swift */,
+			);
+			name = Screeners;
+			sourceTree = "<group>";
+		};
+		968D5D121FA713CF007970CE /* Screener */ = {
+			isa = PBXGroup;
+			children = (
+				961CACF81FC4130900BD8D10 /* DMScreenerContainerViewController.swift */,
+				968303F21FC4493800BCBBBD /* Screeners */,
+			);
+			name = Screener;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45B4E72B1E58ED5C00D56BDE /* Dominant Investors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45B4E73E1E58ED5D00D56BDE /* Build configuration list for PBXNativeTarget "Dominant Investors" */;
+			buildPhases = (
+				45B4E7281E58ED5C00D56BDE /* Sources */,
+				45B4E7291E58ED5C00D56BDE /* Frameworks */,
+				45B4E72A1E58ED5C00D56BDE /* Resources */,
+				45A107A21E59C3AD00591170 /* Embed Frameworks */,
+				45A107A41E59C51C00591170 /* Run Script */,
+				451A96D31E65A7F300DBA061 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dominant Investors";
+			productName = "Dominant Investors";
+			productReference = 45B4E72C1E58ED5C00D56BDE /* Dominant Investors.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45B4E7241E58ED5C00D56BDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Dominant;
+				TargetAttributes = {
+					45B4E72B1E58ED5C00D56BDE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 45F26FVHGB;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 45B4E7271E58ED5C00D56BDE /* Build configuration list for PBXProject "Dominant Investors" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45B4E7231E58ED5C00D56BDE;
+			productRefGroup = 45B4E72D1E58ED5C00D56BDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45B4E72B1E58ED5C00D56BDE /* Dominant Investors */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45B4E72A1E58ED5C00D56BDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A107A51E59CFED00591170 /* MuseoCyrl100.otf in Resources */,
+				45A107A61E59CFED00591170 /* MuseoCyrl300.otf in Resources */,
+				4581D6B81E60FE0C005F2173 /* DMStockInfoCell.xib in Resources */,
+				45A107A71E59CFED00591170 /* MuseoCyrl500.otf in Resources */,
+				9667CC771FCCB390006E8071 /* DMTrialView.xib in Resources */,
+				45D070441E5D723700B6CAC5 /* DMRatingTableViewCell.xib in Resources */,
+				45D070421E5CE98000B6CAC5 /* DMStockCell.xib in Resources */,
+				45A107B61E59DCF300591170 /* DMSignalCell.xib in Resources */,
+				45121B831E5CB05E00D83C4E /* DMDropDownTableViewCell.xib in Resources */,
+				45A107A81E59CFED00591170 /* MuseoCyrl700.otf in Resources */,
+				9684633D200F9AFD005CCC09 /* USERS.JAN.BD.json in Resources */,
+				45D0704F1E5E45A500B6CAC5 /* DMPortfolioTotalCell.xib in Resources */,
+				45A107A91E59CFED00591170 /* MuseoCyrl900.otf in Resources */,
+				964A40F81FCF0D3D006A5C8C /* DMTrialUsageView.xib in Resources */,
+				45B4E7691E58FBC900D56BDE /* TabBar.storyboard in Resources */,
+				45A107BA1E59DF9B00591170 /* DMCompanyCollectionCell.xib in Resources */,
+				968D5D111FA711A5007970CE /* Screener.storyboard in Resources */,
+				45B4E76F1E58FC1100D56BDE /* Signals.storyboard in Resources */,
+				45B4E73A1E58ED5C00D56BDE /* LaunchScreen.storyboard in Resources */,
+				45B4E76B1E58FBD500D56BDE /* Portfolio.storyboard in Resources */,
+				96CD23D31FDA8E6800FBBEB3 /* Analytics.storyboard in Resources */,
+				967A2DB31FD4310100E1E941 /* DMInfoIntroView.xib in Resources */,
+				45B4E76D1E58FC0400D56BDE /* Launch.storyboard in Resources */,
+				96CD23D61FDAB73700FBBEB3 /* OutsourceCharts.storyboard in Resources */,
+				452A43FB1E5A4DCD0058D11C /* ChartView.xib in Resources */,
+				45B4E7841E59106B00D56BDE /* Ratings.storyboard in Resources */,
+				45B4E7671E58FBB100D56BDE /* Authorization.storyboard in Resources */,
+				45B4E7371E58ED5C00D56BDE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		451A96D31E65A7F300DBA061 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone";
+		};
+		45A107A41E59C51C00591170 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run a57b2bc2dfde54edc4d69735a3034939a67ed90d 2ddc672d9e9791a7576c14662ceac3c8d5cfc5fe90a5871c5e45bd5fb9c9b013";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45B4E7281E58ED5C00D56BDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45B4E78A1E59120B00D56BDE /* DMLaunchViewController.swift in Sources */,
+				45B4E7301E58ED5C00D56BDE /* AppDelegate.swift in Sources */,
+				4581D6BA1E610320005F2173 /* DMPortfolioUserInterface.swift in Sources */,
+				45B4E7771E58FD3F00D56BDE /* DMInvestmentSignalModel.swift in Sources */,
+				4509E8CB1EF69977002CC7C4 /* DMSignalHistoryModel.swift in Sources */,
+				964A40F61FCF0D2C006A5C8C /* DMTrialUsageView.swift in Sources */,
+				45B4E7881E5911D900D56BDE /* DMRatingsViewController.swift in Sources */,
+				45D73F741E63598D001BB511 /* DMSubscriptionModel.swift in Sources */,
+				45D070401E5CE5BA00B6CAC5 /* DMStockCell.swift in Sources */,
+				45B4E7751E58FD1B00D56BDE /* DMPersonalPortfolioModel.swift in Sources */,
+				45B7A02D1E59146F000CB062 /* DMTabBarViewController.swift in Sources */,
+				965DCF2E1FC1AB8B003E74C1 /* Dominant+UINavigationController.swift in Sources */,
+				45B4E75E1E58F9C200D56BDE /* DMViewController.swift in Sources */,
+				45D0704B1E5E276300B6CAC5 /* DMDateService.swift in Sources */,
+				4592F76F1E59B35E004C85F4 /* Constants.swift in Sources */,
+				4581D6C61E631A32005F2173 /* Dominant+Array.swift in Sources */,
+				961CACFB1FC4136500BD8D10 /* DMCryptoScreenerViewController.swift in Sources */,
+				45A107B91E59DF9B00591170 /* DMCompanyCollectionCell.swift in Sources */,
+				45B4E7791E58FD5A00D56BDE /* DMCompanyModel.swift in Sources */,
+				454BFEFA1E5C1F7A0088EF31 /* DMFileManager.swift in Sources */,
+				45B4E74A1E58EE9E00D56BDE /* DMAPIService.swift in Sources */,
+				9667CC741FCCB314006E8071 /* DMTrialView.swift in Sources */,
+				968303F41FC4496700BCBBBD /* DMScreenerTypeViewController.swift in Sources */,
+				45B7A02F1E59148A000CB062 /* DMUserProfileModel.swift in Sources */,
+				45B7A03B1E5917B9000CB062 /* DMDropdownViewController.swift in Sources */,
+				4581D6C21E61FB92005F2173 /* DMRotatingViewController.swift in Sources */,
+				45B7A03F1E591864000CB062 /* DMCompanyDetailViewController.swift in Sources */,
+				452A43FE1E5A570F0058D11C /* DMContainerDelegate.swift in Sources */,
+				45121B821E5CB05E00D83C4E /* DMDropDownTableViewCell.swift in Sources */,
+				45B4E74E1E58EECE00D56BDE /* DMAuthorizationManager.swift in Sources */,
+				45C7D6E21E5E4CF90089E8C7 /* DMStockCellDelegate.swift in Sources */,
+				968D5D141FA71400007970CE /* DMScreenerViewController.swift in Sources */,
+				45B7A0271E591433000CB062 /* DMSignalsViewController.swift in Sources */,
+				45C7D6E41E5E50CA0089E8C7 /* DMCalculationService.swift in Sources */,
+				456F07AC1EDDB6AA00DABE35 /* Dominant+UIImageView.swift in Sources */,
+				4581D6B71E60FE0C005F2173 /* DMStockInfoCell.swift in Sources */,
+				45A107B51E59DCF300591170 /* DMSignalCell.swift in Sources */,
+				961CACF91FC4130900BD8D10 /* DMScreenerContainerViewController.swift in Sources */,
+				96D31D931F799DC900980BBB /* DMTradingViewChartViewController.swift in Sources */,
+				4581D6BC1E610AFC005F2173 /* Dominant+UIImage.swift in Sources */,
+				45B4E7731E58FCF600D56BDE /* DMDominantPortfolioModel.swift in Sources */,
+				967A2DAB1FD1CF7D00E1E941 /* DMStatsContainer.swift in Sources */,
+				45B4E7501E58EF4200D56BDE /* DMDominantPortfolioService.swift in Sources */,
+				45B4E7521E58EF5700D56BDE /* DMPersonalPortfolioService.swift in Sources */,
+				45B4E7541E58EF9E00D56BDE /* DMSignalsStoreService.swift in Sources */,
+				45121B851E5CB1B200D83C4E /* DMDropdownListDelegate.swift in Sources */,
+				45B4E77C1E58FE0500D56BDE /* SwiftStockKit.swift in Sources */,
+				965DCF301FC1ADE9003E74C1 /* DMEstimazeChartViewController.swift in Sources */,
+				45D070501E5E45A500B6CAC5 /* DMPortfolioTotalCell.swift in Sources */,
+				45B7A03D1E59180F000CB062 /* DMSubscriptionViewController.swift in Sources */,
+				4581D6C41E624192005F2173 /* Dominant+UIView.swift in Sources */,
+				452A43FA1E5A4DCD0058D11C /* ChartView.swift in Sources */,
+				45D73F761E636D1B001BB511 /* Dominant+String.swift in Sources */,
+				961074401FBA469A0022A8BB /* DMTradingViewGraphViewController.swift in Sources */,
+				454E086E1E601BE0004767E9 /* DMStockDetailViewController.swift in Sources */,
+				45D070491E5E1F2E00B6CAC5 /* DMResponseObject.swift in Sources */,
+				964A40FA1FCF54AC006A5C8C /* DMTrialModel.swift in Sources */,
+				45A107AE1E59D3E600591170 /* DMRatingModel.swift in Sources */,
+				45B7A0391E5916B0000CB062 /* DMSignUpViewController.swift in Sources */,
+				9672676B1FD827260070EAC2 /* Dominant+NSLayoutConstraint.swift in Sources */,
+				45B4E74C1E58EEB200D56BDE /* DMQuickBloxService.swift in Sources */,
+				967A2DB11FD430E600E1E941 /* DMInfoIntroView.swift in Sources */,
+				45B7A02B1E591458000CB062 /* DMPortfolioViewController.swift in Sources */,
+				45B7A0371E5916A2000CB062 /* DMLoginViewController.swift in Sources */,
+				45B7A0291E591445000CB062 /* DMAnalyticsViewController.swift in Sources */,
+				45A1078F1E59C24100591170 /* FXBlurView.m in Sources */,
+				4509E8C91EF68825002CC7C4 /* DMSignalsHistoryService.swift in Sources */,
+				45C7D6E71E5E516A0089E8C7 /* Dominant+Double.swift in Sources */,
+				45A107AC1E59D35400591170 /* DMRatingTableViewCell.swift in Sources */,
+				967A2DAE1FD1D2BF00E1E941 /* DMCryptoInfoContainer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		45B4E7381E58ED5C00D56BDE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45B4E7391E58ED5C00D56BDE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45B4E73C1E58ED5D00D56BDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45B4E73D1E58ED5D00D56BDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45B4E73F1E58ED5D00D56BDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 45F26FVHGB;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Dominant Investors/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.DominantStocks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0c4a953e-d909-4035-9655-b07e905ddd0c";
+				PROVISIONING_PROFILE_SPECIFIER = DM_Dev;
+				SWIFT_OBJC_BRIDGING_HEADER = "Dominant Investors/Dominant Investors-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		45B4E7401E58ED5D00D56BDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 45F26FVHGB;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Dominant Investors/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.DominantStocks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f6bf8edc-cecf-4e5e-b91a-f65e8c7741ba";
+				PROVISIONING_PROFILE_SPECIFIER = Doms_AppStore;
+				SWIFT_OBJC_BRIDGING_HEADER = "Dominant Investors/Dominant Investors-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45B4E7271E58ED5C00D56BDE /* Build configuration list for PBXProject "Dominant Investors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45B4E73C1E58ED5D00D56BDE /* Debug */,
+				45B4E73D1E58ED5D00D56BDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45B4E73E1E58ED5D00D56BDE /* Build configuration list for PBXNativeTarget "Dominant Investors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45B4E73F1E58ED5D00D56BDE /* Debug */,
+				45B4E7401E58ED5D00D56BDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45B4E7241E58ED5C00D56BDE /* Project object */;
+}

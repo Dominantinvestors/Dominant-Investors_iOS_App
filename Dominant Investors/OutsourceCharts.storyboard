@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j0l-uE-c2o">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Estimaze Chart View Controller-->
+        <scene sceneID="s3x-ss-RrA">
+            <objects>
+                <viewController storyboardIdentifier="DMEstimazeChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zyr-ux-rLf" customClass="DMEstimazeChartViewController" customModule="Dominant_Investors" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vru-a1-dvU"/>
+                        <viewControllerLayoutGuide type="bottom" id="SUN-Fq-B0b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hN8-GU-3Hn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="K8s-GL-bcB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aKD-Ab-JtQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W5n-yq-fn2">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="W5n-yq-fn2" firstAttribute="top" secondItem="aKD-Ab-JtQ" secondAttribute="top" id="MZh-Eq-UZ1"/>
+                                    <constraint firstAttribute="trailing" secondItem="W5n-yq-fn2" secondAttribute="trailing" id="MiN-n5-nWx"/>
+                                    <constraint firstItem="W5n-yq-fn2" firstAttribute="leading" secondItem="aKD-Ab-JtQ" secondAttribute="leading" id="O3n-uC-7hZ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aKD-Ab-JtQ" firstAttribute="top" secondItem="Pgu-39-zWS" secondAttribute="top" id="62C-vb-Rfo"/>
+                            <constraint firstItem="K8s-GL-bcB" firstAttribute="top" secondItem="Vru-a1-dvU" secondAttribute="bottom" id="65r-y9-EIn"/>
+                            <constraint firstItem="W5n-yq-fn2" firstAttribute="width" secondItem="hN8-GU-3Hn" secondAttribute="width" id="8wz-da-3ar"/>
+                            <constraint firstItem="K8s-GL-bcB" firstAttribute="leading" secondItem="hN8-GU-3Hn" secondAttribute="leading" id="N5Y-BQ-8O8"/>
+                            <constraint firstAttribute="trailing" secondItem="K8s-GL-bcB" secondAttribute="trailing" id="TG6-9N-CMd"/>
+                            <constraint firstAttribute="bottom" secondItem="K8s-GL-bcB" secondAttribute="bottom" id="cf7-xF-vqj"/>
+                            <constraint firstItem="Pgu-39-zWS" firstAttribute="trailing" secondItem="aKD-Ab-JtQ" secondAttribute="trailing" id="e9e-9f-YhA"/>
+                            <constraint firstItem="W5n-yq-fn2" firstAttribute="height" secondItem="hN8-GU-3Hn" secondAttribute="height" multiplier="0.5" id="pmW-1x-sJH"/>
+                            <constraint firstItem="Pgu-39-zWS" firstAttribute="bottom" secondItem="aKD-Ab-JtQ" secondAttribute="bottom" id="vuo-we-ic4"/>
+                            <constraint firstItem="aKD-Ab-JtQ" firstAttribute="leading" secondItem="Pgu-39-zWS" secondAttribute="leading" id="ygy-LF-35B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pgu-39-zWS"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="aKD-Ab-JtQ" id="uiC-tt-ndR"/>
+                        <outlet property="webView" destination="K8s-GL-bcB" id="4ao-6V-4hX"/>
+                        <outlet property="webimageView" destination="W5n-yq-fn2" id="Uv4-rh-soV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fi5-RO-TfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2772" y="1088.9055472263869"/>
+        </scene>
+        <!--Trading View Chart View Controller-->
+        <scene sceneID="MwD-9g-feM">
+            <objects>
+                <viewController storyboardIdentifier="DMTradingViewChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j0l-uE-c2o" customClass="DMTradingViewChartViewController" customModule="Dominant_Investors" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DTw-5E-ttb"/>
+                        <viewControllerLayoutGuide type="bottom" id="IGp-W7-yxk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gIh-l0-LGA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vyb-9x-py7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062745098040000002" green="0.070588235289999995" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vyb-9x-py7" firstAttribute="leading" secondItem="gIh-l0-LGA" secondAttribute="leading" id="HNO-XV-Wfc"/>
+                            <constraint firstAttribute="bottom" secondItem="Vyb-9x-py7" secondAttribute="bottom" id="LaQ-dK-CT5"/>
+                            <constraint firstItem="Vyb-9x-py7" firstAttribute="top" secondItem="DTw-5E-ttb" secondAttribute="bottom" id="Zki-IC-326"/>
+                            <constraint firstAttribute="trailing" secondItem="Vyb-9x-py7" secondAttribute="trailing" id="q39-Gg-beF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1mX-Ye-4Zm"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Vyb-9x-py7" id="vqk-jf-yuA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ijy-FB-1hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833" y="1089"/>
+        </scene>
+    </scenes>
+</document>

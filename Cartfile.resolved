@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" "4.5.1"
+github "Alamofire/AlamofireImage" "3.3.0"
+github "jdg/MBProgressHUD" "1.0.0"
+github "jerkoch/SwipeCellKit" "2.0.0"

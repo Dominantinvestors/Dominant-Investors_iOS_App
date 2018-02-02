@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MuseoCyrl300.otf">
+            <string>MuseoCyrl-300</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DMRatingTableViewCell" rowHeight="75" id="HQt-Pi-pYr" customClass="DMRatingTableViewCell" customModule="Dominant_Investors" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HQt-Pi-pYr" id="iWQ-bc-mz8">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="WfG-xH-FJx">
+                        <rect key="frame" x="16" y="12" width="109" height="50.5"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Vangos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="2b9-31-88I">
+                        <rect key="frame" x="133" y="12" width="109" height="50.5"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="+300%" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="JBo-Cv-GFb">
+                        <rect key="frame" x="250" y="12" width="109" height="50.5"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                        <color key="textColor" red="0.47058823529999999" green="0.73333333329999995" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2b9-31-88I" firstAttribute="top" secondItem="iWQ-bc-mz8" secondAttribute="topMargin" constant="4" id="3Ck-st-lLA"/>
+                    <constraint firstItem="2b9-31-88I" firstAttribute="width" secondItem="WfG-xH-FJx" secondAttribute="width" id="6Az-Wg-bB9"/>
+                    <constraint firstItem="JBo-Cv-GFb" firstAttribute="top" secondItem="iWQ-bc-mz8" secondAttribute="topMargin" constant="4" id="AiD-y5-m9S"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="JBo-Cv-GFb" secondAttribute="trailing" constant="8" id="ELT-s8-Cfd"/>
+                    <constraint firstItem="JBo-Cv-GFb" firstAttribute="leading" secondItem="2b9-31-88I" secondAttribute="trailing" constant="8" id="J5S-0d-FYf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="WfG-xH-FJx" secondAttribute="bottom" constant="4" id="Nrp-b3-q3T"/>
+                    <constraint firstItem="WfG-xH-FJx" firstAttribute="leading" secondItem="iWQ-bc-mz8" secondAttribute="leadingMargin" constant="8" id="eEy-4S-9wR"/>
+                    <constraint firstItem="2b9-31-88I" firstAttribute="leading" secondItem="WfG-xH-FJx" secondAttribute="trailing" constant="8" id="f2W-kK-Cn9"/>
+                    <constraint firstItem="WfG-xH-FJx" firstAttribute="top" secondItem="iWQ-bc-mz8" secondAttribute="topMargin" constant="4" id="gqZ-kr-63u"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="JBo-Cv-GFb" secondAttribute="bottom" constant="4" id="l9C-dJ-ZyK"/>
+                    <constraint firstItem="JBo-Cv-GFb" firstAttribute="width" secondItem="WfG-xH-FJx" secondAttribute="width" id="rHV-3S-dUf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="2b9-31-88I" secondAttribute="bottom" constant="4" id="sA7-SG-ktE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="investorLabel" destination="2b9-31-88I" id="OsP-0d-ZLl"/>
+                <outlet property="overallLabel" destination="JBo-Cv-GFb" id="IX8-0Q-dcx"/>
+                <outlet property="positionLabel" destination="WfG-xH-FJx" id="cXs-4p-N31"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
