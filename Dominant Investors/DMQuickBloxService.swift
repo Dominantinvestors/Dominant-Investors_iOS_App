@@ -41,9 +41,7 @@ class DMQuickBloxService: NSObject {
     }
     
     // MARK: Get Data
-    
-    
-    
+
     open func getPersonalPortfolio(completion : @escaping ([DMPersonalPortfolioModel]) -> Void) {
         
         QBRequest.objects(withClassName: "personal2", extendedRequest: self.personalLimit(), successBlock: { (response, objects, page) in
