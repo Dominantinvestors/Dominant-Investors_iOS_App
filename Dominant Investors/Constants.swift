@@ -43,5 +43,13 @@ struct APIReqests {
     static let DMUniqueAPIKey = "bd8faf666cb58d501e9078b4dd1bc78a"
 }
 
+struct Network {
+    static let baseURL = "http://172.104.22.205"
+    static let APIVersion = "/api/v1"
+    static let authAPIModule = "/accounts"
+    static let loginEndPoint = "/login/"
+    static let logoutEndPoint = "/logout/"
+//    http://172.104.22.205/api/v1/accounts/login/
+}
 
 

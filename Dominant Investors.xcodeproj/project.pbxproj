@@ -116,6 +116,9 @@
 		96CD23D31FDA8E6800FBBEB3 /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CD23D11FDA8E6700FBBEB3 /* Analytics.storyboard */; };
 		96CD23D61FDAB73700FBBEB3 /* OutsourceCharts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CD23D51FDAB73700FBBEB3 /* OutsourceCharts.storyboard */; };
 		96D31D931F799DC900980BBB /* DMTradingViewChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D31D921F799DC900980BBB /* DMTradingViewChartViewController.swift */; };
+		9C51CF8E203E191E001D343D /* DMServerAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C51CF89203E18DD001D343D /* DMServerAPIManager.swift */; };
+		9C51CF8F203E191E001D343D /* DMServerMainSignalsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C51CF8C203E191E001D343D /* DMServerMainSignalsRequests.swift */; };
+		9C51CF90203E191E001D343D /* DMServerAuthRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C51CF8D203E191E001D343D /* DMServerAuthRequests.swift */; };
 		BE53AF2C1F5E7D2A002B485F /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE53AF291F5E7D2A002B485F /* FBAudienceNetwork.framework */; };
 		BE53AF2D1F5E7D2A002B485F /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE53AF2A1F5E7D2A002B485F /* FBSDKMessengerShareKit.framework */; };
 		BE9EE2691F5D4C9300E80FDA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */; };
@@ -250,6 +253,9 @@
 		96CD23D11FDA8E6700FBBEB3 /* Analytics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Analytics.storyboard; sourceTree = "<group>"; };
 		96CD23D51FDAB73700FBBEB3 /* OutsourceCharts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OutsourceCharts.storyboard; sourceTree = "<group>"; };
 		96D31D921F799DC900980BBB /* DMTradingViewChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMTradingViewChartViewController.swift; sourceTree = "<group>"; };
+		9C51CF89203E18DD001D343D /* DMServerAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMServerAPIManager.swift; sourceTree = "<group>"; };
+		9C51CF8C203E191E001D343D /* DMServerMainSignalsRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMServerMainSignalsRequests.swift; sourceTree = "<group>"; };
+		9C51CF8D203E191E001D343D /* DMServerAuthRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMServerAuthRequests.swift; path = ../../Desktop/DMServerAuthRequests.swift; sourceTree = "<group>"; };
 		BE53AF291F5E7D2A002B485F /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		BE53AF2A1F5E7D2A002B485F /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -401,6 +407,7 @@
 		45B4E7411E58ED6900D56BDE /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				9C51CF87203E17BD001D343D /* Server Services */,
 				45B4E7491E58EE9E00D56BDE /* DMAPIService.swift */,
 				45B4E74B1E58EEB200D56BDE /* DMQuickBloxService.swift */,
 				45B4E74D1E58EECE00D56BDE /* DMAuthorizationManager.swift */,
@@ -705,6 +712,16 @@
 			name = Screener;
 			sourceTree = "<group>";
 		};
+		9C51CF87203E17BD001D343D /* Server Services */ = {
+			isa = PBXGroup;
+			children = (
+				9C51CF89203E18DD001D343D /* DMServerAPIManager.swift */,
+				9C51CF8D203E191E001D343D /* DMServerAuthRequests.swift */,
+				9C51CF8C203E191E001D343D /* DMServerMainSignalsRequests.swift */,
+			);
+			name = "Server Services";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -887,12 +904,15 @@
 				965DCF301FC1ADE9003E74C1 /* DMEstimazeChartViewController.swift in Sources */,
 				45D070501E5E45A500B6CAC5 /* DMPortfolioTotalCell.swift in Sources */,
 				45B7A03D1E59180F000CB062 /* DMSubscriptionViewController.swift in Sources */,
+				9C51CF8F203E191E001D343D /* DMServerMainSignalsRequests.swift in Sources */,
 				4581D6C41E624192005F2173 /* Dominant+UIView.swift in Sources */,
 				452A43FA1E5A4DCD0058D11C /* ChartView.swift in Sources */,
 				45D73F761E636D1B001BB511 /* Dominant+String.swift in Sources */,
+				9C51CF8E203E191E001D343D /* DMServerAPIManager.swift in Sources */,
 				961074401FBA469A0022A8BB /* DMTradingViewGraphViewController.swift in Sources */,
 				454E086E1E601BE0004767E9 /* DMStockDetailViewController.swift in Sources */,
 				45D070491E5E1F2E00B6CAC5 /* DMResponseObject.swift in Sources */,
+				9C51CF90203E191E001D343D /* DMServerAuthRequests.swift in Sources */,
 				964A40FA1FCF54AC006A5C8C /* DMTrialModel.swift in Sources */,
 				45A107AE1E59D3E600591170 /* DMRatingModel.swift in Sources */,
 				45B7A0391E5916B0000CB062 /* DMSignUpViewController.swift in Sources */,

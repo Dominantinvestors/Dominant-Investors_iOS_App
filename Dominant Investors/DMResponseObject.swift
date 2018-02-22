@@ -35,6 +35,8 @@ class DMResponseObject: NSObject {
         self.customData = user.customData
     }
     
+    
+    
     init(customObject : QBCOCustomObject) {
         super.init()
         self.id = customObject.id
@@ -44,5 +46,6 @@ class DMResponseObject: NSObject {
             self.fields[value as! String] = key
         }
     }
+
     
 }
