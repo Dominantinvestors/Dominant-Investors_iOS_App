@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0972ABD1203F0D2900F9F247 /* DMServerAuthRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0972ABD0203F0D2800F9F247 /* DMServerAuthRequests.swift */; };
+		0972ABD4203F24E900F9F247 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0972ABD3203F24E900F9F247 /* AuthModel.swift */; };
 		4509E8C91EF68825002CC7C4 /* DMSignalsHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4509E8C81EF68824002CC7C4 /* DMSignalsHistoryService.swift */; };
 		4509E8CB1EF69977002CC7C4 /* DMSignalHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4509E8CA1EF69977002CC7C4 /* DMSignalHistoryModel.swift */; };
 		45121B821E5CB05E00D83C4E /* DMDropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45121B801E5CB05E00D83C4E /* DMDropDownTableViewCell.swift */; };
@@ -118,7 +120,6 @@
 		96D31D931F799DC900980BBB /* DMTradingViewChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D31D921F799DC900980BBB /* DMTradingViewChartViewController.swift */; };
 		9C51CF8E203E191E001D343D /* DMServerAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C51CF89203E18DD001D343D /* DMServerAPIManager.swift */; };
 		9C51CF8F203E191E001D343D /* DMServerMainSignalsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C51CF8C203E191E001D343D /* DMServerMainSignalsRequests.swift */; };
-		9C51CF90203E191E001D343D /* DMServerAuthRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C51CF8D203E191E001D343D /* DMServerAuthRequests.swift */; };
 		BE53AF2C1F5E7D2A002B485F /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE53AF291F5E7D2A002B485F /* FBAudienceNetwork.framework */; };
 		BE53AF2D1F5E7D2A002B485F /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE53AF2A1F5E7D2A002B485F /* FBSDKMessengerShareKit.framework */; };
 		BE9EE2691F5D4C9300E80FDA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */; };
@@ -144,6 +145,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0972ABD0203F0D2800F9F247 /* DMServerAuthRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMServerAuthRequests.swift; sourceTree = "<group>"; };
+		0972ABD3203F24E900F9F247 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		4509E8C81EF68824002CC7C4 /* DMSignalsHistoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSignalsHistoryService.swift; sourceTree = "<group>"; };
 		4509E8CA1EF69977002CC7C4 /* DMSignalHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSignalHistoryModel.swift; sourceTree = "<group>"; };
 		45121B801E5CB05E00D83C4E /* DMDropDownTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDropDownTableViewCell.swift; sourceTree = "<group>"; };
@@ -255,7 +258,6 @@
 		96D31D921F799DC900980BBB /* DMTradingViewChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMTradingViewChartViewController.swift; sourceTree = "<group>"; };
 		9C51CF89203E18DD001D343D /* DMServerAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMServerAPIManager.swift; sourceTree = "<group>"; };
 		9C51CF8C203E191E001D343D /* DMServerMainSignalsRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMServerMainSignalsRequests.swift; sourceTree = "<group>"; };
-		9C51CF8D203E191E001D343D /* DMServerAuthRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMServerAuthRequests.swift; path = ../../Desktop/DMServerAuthRequests.swift; sourceTree = "<group>"; };
 		BE53AF291F5E7D2A002B485F /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		BE53AF2A1F5E7D2A002B485F /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -286,6 +288,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0972ABD2203F24BB00F9F247 /* ServerObjects */ = {
+			isa = PBXGroup;
+			children = (
+				0972ABD3203F24E900F9F247 /* AuthModel.swift */,
+			);
+			name = ServerObjects;
+			sourceTree = "<group>";
+		};
 		45121B7F1E5CB04C00D83C4E /* DMDropDownTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +475,7 @@
 				45D070481E5E1F2E00B6CAC5 /* DMResponseObject.swift */,
 				45D73F731E63598D001BB511 /* DMSubscriptionModel.swift */,
 				964A40F91FCF54AC006A5C8C /* DMTrialModel.swift */,
+				0972ABD2203F24BB00F9F247 /* ServerObjects */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -716,7 +727,7 @@
 			isa = PBXGroup;
 			children = (
 				9C51CF89203E18DD001D343D /* DMServerAPIManager.swift */,
-				9C51CF8D203E191E001D343D /* DMServerAuthRequests.swift */,
+				0972ABD0203F0D2800F9F247 /* DMServerAuthRequests.swift */,
 				9C51CF8C203E191E001D343D /* DMServerMainSignalsRequests.swift */,
 			);
 			name = "Server Services";
@@ -859,10 +870,12 @@
 				4581D6BA1E610320005F2173 /* DMPortfolioUserInterface.swift in Sources */,
 				45B4E7771E58FD3F00D56BDE /* DMInvestmentSignalModel.swift in Sources */,
 				4509E8CB1EF69977002CC7C4 /* DMSignalHistoryModel.swift in Sources */,
+				0972ABD4203F24E900F9F247 /* AuthModel.swift in Sources */,
 				964A40F61FCF0D2C006A5C8C /* DMTrialUsageView.swift in Sources */,
 				45B4E7881E5911D900D56BDE /* DMRatingsViewController.swift in Sources */,
 				45D73F741E63598D001BB511 /* DMSubscriptionModel.swift in Sources */,
 				45D070401E5CE5BA00B6CAC5 /* DMStockCell.swift in Sources */,
+				0972ABD1203F0D2900F9F247 /* DMServerAuthRequests.swift in Sources */,
 				45B4E7751E58FD1B00D56BDE /* DMPersonalPortfolioModel.swift in Sources */,
 				45B7A02D1E59146F000CB062 /* DMTabBarViewController.swift in Sources */,
 				965DCF2E1FC1AB8B003E74C1 /* Dominant+UINavigationController.swift in Sources */,
@@ -912,7 +925,6 @@
 				961074401FBA469A0022A8BB /* DMTradingViewGraphViewController.swift in Sources */,
 				454E086E1E601BE0004767E9 /* DMStockDetailViewController.swift in Sources */,
 				45D070491E5E1F2E00B6CAC5 /* DMResponseObject.swift in Sources */,
-				9C51CF90203E191E001D343D /* DMServerAuthRequests.swift in Sources */,
 				964A40FA1FCF54AC006A5C8C /* DMTrialModel.swift in Sources */,
 				45A107AE1E59D3E600591170 /* DMRatingModel.swift in Sources */,
 				45B7A0391E5916B0000CB062 /* DMSignUpViewController.swift in Sources */,

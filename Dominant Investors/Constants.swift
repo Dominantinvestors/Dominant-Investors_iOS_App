@@ -49,7 +49,13 @@ struct Network {
     static let authAPIModule = "/accounts"
     static let loginEndPoint = "/login/"
     static let logoutEndPoint = "/logout/"
+	static let main = "/main/"
 //    http://172.104.22.205/api/v1/accounts/login/
+}
+
+struct ConstantsUserDefaults{
+	static let authorized = "Authorized"
+	static let accessToken = "AccessToken"
 }
 
 

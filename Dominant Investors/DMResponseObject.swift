@@ -46,6 +46,13 @@ class DMResponseObject: NSObject {
             self.fields[value as! String] = key
         }
     }
+	
+	init(response: [Any]) {
+		super.init()
+		
+		
+		
+	}
 
     
 }

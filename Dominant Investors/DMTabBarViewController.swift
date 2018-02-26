@@ -66,7 +66,7 @@ class DMTabBarViewController: DMViewController {
         let analytics = UIStoryboard(name: "Analytics", bundle: nil).instantiateInitialViewController()!
         let portfolio = UIStoryboard(name: "Portfolio", bundle: nil).instantiateInitialViewController()!
         let ratings   = UIStoryboard(name: "Ratings"  , bundle: nil).instantiateInitialViewController()!
-        
+		
         self.viewControllers = [analytics as! DMViewController,portfolio as! DMViewController,ratings as! DMViewController]
         setupContainers()
     }
