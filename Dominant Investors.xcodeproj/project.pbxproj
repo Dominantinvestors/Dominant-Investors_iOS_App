@@ -125,6 +125,14 @@
 		BE9EE2691F5D4C9300E80FDA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */; };
 		BE9EE26C1F5D4C9A00E80FDA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE26A1F5D4C9A00E80FDA /* FBSDKCoreKit.framework */; };
 		BE9EE26D1F5D4C9A00E80FDA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE26B1F5D4C9A00E80FDA /* FBSDKLoginKit.framework */; };
+		CE89586B212E934300822B54 /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895862212E934300822B54 /* SessionAdapter.swift */; };
+		CE89586C212E934300822B54 /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895863212E934300822B54 /* CompletionHandler.swift */; };
+		CE89586D212E934300822B54 /* AccountsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895864212E934300822B54 /* AccountsDataProvider.swift */; };
+		CE89586E212E934300822B54 /* Environment+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895866212E934300822B54 /* Environment+Request.swift */; };
+		CE89586F212E934300822B54 /* Settings+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895867212E934300822B54 /* Settings+Request.swift */; };
+		CE895870212E934300822B54 /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895868212E934300822B54 /* RequestProvider.swift */; };
+		CE895871212E934300822B54 /* User+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895869212E934300822B54 /* User+Request.swift */; };
+		CE895872212E934300822B54 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89586A212E934300822B54 /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -263,6 +271,14 @@
 		BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		BE9EE26A1F5D4C9A00E80FDA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		BE9EE26B1F5D4C9A00E80FDA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		CE895862212E934300822B54 /* SessionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
+		CE895863212E934300822B54 /* CompletionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
+		CE895864212E934300822B54 /* AccountsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsDataProvider.swift; sourceTree = "<group>"; };
+		CE895866212E934300822B54 /* Environment+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Environment+Request.swift"; sourceTree = "<group>"; };
+		CE895867212E934300822B54 /* Settings+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+Request.swift"; sourceTree = "<group>"; };
+		CE895868212E934300822B54 /* RequestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
+		CE895869212E934300822B54 /* User+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Request.swift"; sourceTree = "<group>"; };
+		CE89586A212E934300822B54 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +433,7 @@
 		45B4E7411E58ED6900D56BDE /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CE895861212E934300822B54 /* Repositories */,
 				9C51CF87203E17BD001D343D /* Server Services */,
 				45B4E7491E58EE9E00D56BDE /* DMAPIService.swift */,
 				45B4E74B1E58EEB200D56BDE /* DMQuickBloxService.swift */,
@@ -733,6 +750,29 @@
 			name = "Server Services";
 			sourceTree = "<group>";
 		};
+		CE895861212E934300822B54 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CE895865212E934300822B54 /* Requests */,
+				CE89586A212E934300822B54 /* Repository.swift */,
+				CE895862212E934300822B54 /* SessionAdapter.swift */,
+				CE895863212E934300822B54 /* CompletionHandler.swift */,
+				CE895864212E934300822B54 /* AccountsDataProvider.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CE895865212E934300822B54 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				CE895866212E934300822B54 /* Environment+Request.swift */,
+				CE895867212E934300822B54 /* Settings+Request.swift */,
+				CE895868212E934300822B54 /* RequestProvider.swift */,
+				CE895869212E934300822B54 /* User+Request.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -874,6 +914,7 @@
 				964A40F61FCF0D2C006A5C8C /* DMTrialUsageView.swift in Sources */,
 				45B4E7881E5911D900D56BDE /* DMRatingsViewController.swift in Sources */,
 				45D73F741E63598D001BB511 /* DMSubscriptionModel.swift in Sources */,
+				CE89586E212E934300822B54 /* Environment+Request.swift in Sources */,
 				45D070401E5CE5BA00B6CAC5 /* DMStockCell.swift in Sources */,
 				0972ABD1203F0D2900F9F247 /* DMServerAuthRequests.swift in Sources */,
 				45B4E7751E58FD1B00D56BDE /* DMPersonalPortfolioModel.swift in Sources */,
@@ -881,12 +922,15 @@
 				965DCF2E1FC1AB8B003E74C1 /* Dominant+UINavigationController.swift in Sources */,
 				45B4E75E1E58F9C200D56BDE /* DMViewController.swift in Sources */,
 				45D0704B1E5E276300B6CAC5 /* DMDateService.swift in Sources */,
+				CE89586F212E934300822B54 /* Settings+Request.swift in Sources */,
+				CE895871212E934300822B54 /* User+Request.swift in Sources */,
 				4592F76F1E59B35E004C85F4 /* Constants.swift in Sources */,
 				4581D6C61E631A32005F2173 /* Dominant+Array.swift in Sources */,
 				961CACFB1FC4136500BD8D10 /* DMCryptoScreenerViewController.swift in Sources */,
 				45A107B91E59DF9B00591170 /* DMCompanyCollectionCell.swift in Sources */,
 				45B4E7791E58FD5A00D56BDE /* DMCompanyModel.swift in Sources */,
 				454BFEFA1E5C1F7A0088EF31 /* DMFileManager.swift in Sources */,
+				CE89586D212E934300822B54 /* AccountsDataProvider.swift in Sources */,
 				45B4E74A1E58EE9E00D56BDE /* DMAPIService.swift in Sources */,
 				9667CC741FCCB314006E8071 /* DMTrialView.swift in Sources */,
 				968303F41FC4496700BCBBBD /* DMScreenerTypeViewController.swift in Sources */,
@@ -898,12 +942,15 @@
 				45121B821E5CB05E00D83C4E /* DMDropDownTableViewCell.swift in Sources */,
 				45B4E74E1E58EECE00D56BDE /* DMAuthorizationManager.swift in Sources */,
 				45C7D6E21E5E4CF90089E8C7 /* DMStockCellDelegate.swift in Sources */,
+				CE895870212E934300822B54 /* RequestProvider.swift in Sources */,
 				968D5D141FA71400007970CE /* DMScreenerViewController.swift in Sources */,
 				45B7A0271E591433000CB062 /* DMSignalsViewController.swift in Sources */,
+				CE89586B212E934300822B54 /* SessionAdapter.swift in Sources */,
 				45C7D6E41E5E50CA0089E8C7 /* DMCalculationService.swift in Sources */,
 				456F07AC1EDDB6AA00DABE35 /* Dominant+UIImageView.swift in Sources */,
 				4581D6B71E60FE0C005F2173 /* DMStockInfoCell.swift in Sources */,
 				45A107B51E59DCF300591170 /* DMSignalCell.swift in Sources */,
+				CE895872212E934300822B54 /* Repository.swift in Sources */,
 				961CACF91FC4130900BD8D10 /* DMScreenerContainerViewController.swift in Sources */,
 				96D31D931F799DC900980BBB /* DMTradingViewChartViewController.swift in Sources */,
 				4581D6BC1E610AFC005F2173 /* Dominant+UIImage.swift in Sources */,
@@ -934,6 +981,7 @@
 				45B7A02B1E591458000CB062 /* DMPortfolioViewController.swift in Sources */,
 				45B7A0371E5916A2000CB062 /* DMLoginViewController.swift in Sources */,
 				45B7A0291E591445000CB062 /* DMAnalyticsViewController.swift in Sources */,
+				CE89586C212E934300822B54 /* CompletionHandler.swift in Sources */,
 				45A1078F1E59C24100591170 /* FXBlurView.m in Sources */,
 				4509E8C91EF68825002CC7C4 /* DMSignalsHistoryService.swift in Sources */,
 				45C7D6E71E5E516A0089E8C7 /* Dominant+Double.swift in Sources */,

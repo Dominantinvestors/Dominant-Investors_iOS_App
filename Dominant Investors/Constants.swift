@@ -44,6 +44,9 @@ struct APIReqests {
 }
 
 struct Network {
+    
+    static let baseURL2 = "http://dominant-investors.geeks.land/api/v1"
+    
     static let baseURL = "http://172.104.22.205"
     static let APIVersion = "/api/v1"
     static let authAPIModule = "/accounts"
