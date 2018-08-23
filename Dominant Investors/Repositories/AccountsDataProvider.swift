@@ -15,10 +15,25 @@ struct AccountsDataProvider: Repository, Syncable {
     }
     
     func login(_ email: String, _ password: String, completion: @escaping Completion)  {
-        send(request: DMUserProfileModel.login(email, password)).response { respounce in
-            completion(respounce.response?.statusCode ?? 500, respounce.error?.localizedDescription)
+        send(request: DMUserProfileModel.login(email, password)).responseJSON { response in
+            switch response.result {
+            case .success(let data):
+                if let json = data as? [String : AnyObject] {
+                    let token = json["token"] as? String
+                    UserDefaults.standard.set(token, forKey: ConstantsUserDefaults.accessToken)
+                }
+            case .failure(let error):
+                print("Request failed with error: \(error)")
+            }
+            
+            completion(response.response?.statusCode ?? 500, response.error?.localizedDescription)
         }
     }
+    
+    func signUpWith(login: String, email: String, password: String, confirm: String , inviterID: String?, completion : @escaping Completion) {
+    
+    }
+        
 //
 //    func settings(completion: @escaping (Response<Settings>) -> Void)  {
 //        let trace = Performance.startTrace(name: "GetSettings")

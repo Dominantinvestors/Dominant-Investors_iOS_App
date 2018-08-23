@@ -1129,7 +1129,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantStocks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantCrypto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0ea4c939-bd94-471a-b8a5-39b5e80b2350";
 				PROVISIONING_PROFILE_SPECIFIER = "XC Ad Hoc: *";
@@ -1157,10 +1157,10 @@
 				INFOPLIST_FILE = "Dominant Investors/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantStocks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantCrypto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5cc837e6-fe7c-4c5e-a479-6fb1a630d726";
-				PROVISIONING_PROFILE_SPECIFIER = "App Store Dominant";
+				PROVISIONING_PROFILE = "bbe854f9-60b8-413c-bdc4-4f032c4bf3cb";
+				PROVISIONING_PROFILE_SPECIFIER = "DominantCrypto Distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant Investors/Dominant Investors-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
