@@ -16,22 +16,21 @@ struct AccountsDataProvider: Repository, Syncable {
     
     func login(_ email: String, _ password: String, completion: @escaping Completion)  {
         send(request: DMUserProfileModel.login(email, password)).responseJSON { response in
-            switch response.result {
-            case .success(let data):
-                if let json = data as? [String : AnyObject] {
-                    let token = json["token"] as? String
-                    UserDefaults.standard.set(token, forKey: ConstantsUserDefaults.accessToken)
-                }
-            case .failure(let error):
-                print("Request failed with error: \(error)")
+            if let json = response.result.value as? [String : AnyObject] {
+                let token = json["token"] as? String
+                UserDefaults.standard.set(token, forKey: ConstantsUserDefaults.accessToken)
             }
-            
             completion(response.response?.statusCode ?? 500, response.error?.localizedDescription)
         }
     }
     
-    func signUpWith(login: String, email: String, password: String, confirm: String , inviterID: String?, completion : @escaping Completion) {
-    
+    func signOn(login: String,
+                email: String,
+                password: String,
+                confirm: String,
+                inviterID: String?,
+                completion: @escaping Completion) {
+        
     }
         
 //
