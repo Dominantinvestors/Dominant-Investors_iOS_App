@@ -125,6 +125,126 @@
 		BE9EE2691F5D4C9300E80FDA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */; };
 		BE9EE26C1F5D4C9A00E80FDA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE26A1F5D4C9A00E80FDA /* FBSDKCoreKit.framework */; };
 		BE9EE26D1F5D4C9A00E80FDA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE26B1F5D4C9A00E80FDA /* FBSDKLoginKit.framework */; };
+		CE20EA09212EEAE600438794 /* DMLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7891E59120B00D56BDE /* DMLaunchViewController.swift */; };
+		CE20EA0A212EEAE600438794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E72F1E58ED5C00D56BDE /* AppDelegate.swift */; };
+		CE20EA0B212EEAE600438794 /* DMPortfolioUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581D6B91E610320005F2173 /* DMPortfolioUserInterface.swift */; };
+		CE20EA0C212EEAE600438794 /* DMInvestmentSignalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7761E58FD3F00D56BDE /* DMInvestmentSignalModel.swift */; };
+		CE20EA0D212EEAE600438794 /* DMSignalHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4509E8CA1EF69977002CC7C4 /* DMSignalHistoryModel.swift */; };
+		CE20EA0E212EEAE600438794 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0972ABD3203F24E900F9F247 /* AuthModel.swift */; };
+		CE20EA0F212EEAE600438794 /* DMTrialUsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A40F51FCF0D2C006A5C8C /* DMTrialUsageView.swift */; };
+		CE20EA10212EEAE600438794 /* DMRatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7871E5911D900D56BDE /* DMRatingsViewController.swift */; };
+		CE20EA11212EEAE600438794 /* DMSubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D73F731E63598D001BB511 /* DMSubscriptionModel.swift */; };
+		CE20EA12212EEAE600438794 /* DMStockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0703F1E5CE5BA00B6CAC5 /* DMStockCell.swift */; };
+		CE20EA13212EEAE600438794 /* DMServerAuthRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0972ABD0203F0D2800F9F247 /* DMServerAuthRequests.swift */; };
+		CE20EA14212EEAE600438794 /* DMPersonalPortfolioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7741E58FD1B00D56BDE /* DMPersonalPortfolioModel.swift */; };
+		CE20EA15212EEAE600438794 /* DMTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A02C1E59146F000CB062 /* DMTabBarViewController.swift */; };
+		CE20EA16212EEAE600438794 /* Dominant+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DCF2D1FC1AB8B003E74C1 /* Dominant+UINavigationController.swift */; };
+		CE20EA17212EEAE600438794 /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E75D1E58F9C200D56BDE /* DMViewController.swift */; };
+		CE20EA18212EEAE600438794 /* DMDateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0704A1E5E276300B6CAC5 /* DMDateService.swift */; };
+		CE20EA19212EEAE600438794 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592F76E1E59B35E004C85F4 /* Constants.swift */; };
+		CE20EA1A212EEAE600438794 /* Dominant+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581D6C51E631A31005F2173 /* Dominant+Array.swift */; };
+		CE20EA1B212EEAE600438794 /* DMCryptoScreenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961CACFA1FC4136500BD8D10 /* DMCryptoScreenerViewController.swift */; };
+		CE20EA1C212EEAE600438794 /* DMCompanyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A107B71E59DF9B00591170 /* DMCompanyCollectionCell.swift */; };
+		CE20EA1D212EEAE600438794 /* DMCompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7781E58FD5A00D56BDE /* DMCompanyModel.swift */; };
+		CE20EA1E212EEAE600438794 /* DMFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BFEF91E5C1F7A0088EF31 /* DMFileManager.swift */; };
+		CE20EA1F212EEAE600438794 /* DMAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7491E58EE9E00D56BDE /* DMAPIService.swift */; };
+		CE20EA20212EEAE600438794 /* DMTrialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667CC731FCCB314006E8071 /* DMTrialView.swift */; };
+		CE20EA21212EEAE600438794 /* DMScreenerTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968303F31FC4496700BCBBBD /* DMScreenerTypeViewController.swift */; };
+		CE20EA22212EEAE600438794 /* DMUserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A02E1E59148A000CB062 /* DMUserProfileModel.swift */; };
+		CE20EA23212EEAE600438794 /* DMDropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A03A1E5917B9000CB062 /* DMDropdownViewController.swift */; };
+		CE20EA24212EEAE600438794 /* DMRotatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581D6C11E61FB92005F2173 /* DMRotatingViewController.swift */; };
+		CE20EA25212EEAE600438794 /* DMCompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A03E1E591864000CB062 /* DMCompanyDetailViewController.swift */; };
+		CE20EA26212EEAE600438794 /* DMContainerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A43FD1E5A570F0058D11C /* DMContainerDelegate.swift */; };
+		CE20EA27212EEAE600438794 /* DMDropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45121B801E5CB05E00D83C4E /* DMDropDownTableViewCell.swift */; };
+		CE20EA28212EEAE600438794 /* DMAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E74D1E58EECE00D56BDE /* DMAuthorizationManager.swift */; };
+		CE20EA29212EEAE600438794 /* DMStockCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7D6E11E5E4CF90089E8C7 /* DMStockCellDelegate.swift */; };
+		CE20EA2A212EEAE600438794 /* DMScreenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D5D131FA71400007970CE /* DMScreenerViewController.swift */; };
+		CE20EA2B212EEAE600438794 /* DMSignalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A0261E591433000CB062 /* DMSignalsViewController.swift */; };
+		CE20EA2C212EEAE600438794 /* DMCalculationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7D6E31E5E50CA0089E8C7 /* DMCalculationService.swift */; };
+		CE20EA2D212EEAE600438794 /* Dominant+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F07AB1EDDB6AA00DABE35 /* Dominant+UIImageView.swift */; };
+		CE20EA2E212EEAE600438794 /* DMStockInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581D6B51E60FE0C005F2173 /* DMStockInfoCell.swift */; };
+		CE20EA2F212EEAE600438794 /* DMSignalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A107B31E59DCF300591170 /* DMSignalCell.swift */; };
+		CE20EA30212EEAE600438794 /* DMScreenerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961CACF81FC4130900BD8D10 /* DMScreenerContainerViewController.swift */; };
+		CE20EA31212EEAE600438794 /* DMTradingViewChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D31D921F799DC900980BBB /* DMTradingViewChartViewController.swift */; };
+		CE20EA32212EEAE600438794 /* Dominant+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581D6BB1E610AFC005F2173 /* Dominant+UIImage.swift */; };
+		CE20EA33212EEAE600438794 /* DMDominantPortfolioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7721E58FCF600D56BDE /* DMDominantPortfolioModel.swift */; };
+		CE20EA34212EEAE600438794 /* DMStatsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A2DAA1FD1CF7D00E1E941 /* DMStatsContainer.swift */; };
+		CE20EA35212EEAE600438794 /* DMDominantPortfolioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E74F1E58EF4200D56BDE /* DMDominantPortfolioService.swift */; };
+		CE20EA36212EEAE600438794 /* DMPersonalPortfolioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7511E58EF5700D56BDE /* DMPersonalPortfolioService.swift */; };
+		CE20EA37212EEAE600438794 /* DMSignalsStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7531E58EF9E00D56BDE /* DMSignalsStoreService.swift */; };
+		CE20EA38212EEAE600438794 /* DMDropdownListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45121B841E5CB1B200D83C4E /* DMDropdownListDelegate.swift */; };
+		CE20EA39212EEAE600438794 /* SwiftStockKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E77B1E58FE0500D56BDE /* SwiftStockKit.swift */; };
+		CE20EA3A212EEAE600438794 /* DMEstimazeChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DCF2F1FC1ADE9003E74C1 /* DMEstimazeChartViewController.swift */; };
+		CE20EA3B212EEAE600438794 /* DMPortfolioTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0704E1E5E45A500B6CAC5 /* DMPortfolioTotalCell.swift */; };
+		CE20EA3C212EEAE600438794 /* DMSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A03C1E59180F000CB062 /* DMSubscriptionViewController.swift */; };
+		CE20EA3D212EEAE600438794 /* DMServerMainSignalsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C51CF8C203E191E001D343D /* DMServerMainSignalsRequests.swift */; };
+		CE20EA3E212EEAE600438794 /* Dominant+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581D6C31E624192005F2173 /* Dominant+UIView.swift */; };
+		CE20EA3F212EEAE600438794 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A43F81E5A4DCD0058D11C /* ChartView.swift */; };
+		CE20EA40212EEAE600438794 /* Dominant+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D73F751E636D1B001BB511 /* Dominant+String.swift */; };
+		CE20EA41212EEAE600438794 /* DMServerAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C51CF89203E18DD001D343D /* DMServerAPIManager.swift */; };
+		CE20EA42212EEAE600438794 /* DMTradingViewGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9610743F1FBA469A0022A8BB /* DMTradingViewGraphViewController.swift */; };
+		CE20EA43212EEAE600438794 /* DMStockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E086D1E601BE0004767E9 /* DMStockDetailViewController.swift */; };
+		CE20EA44212EEAE600438794 /* DMResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D070481E5E1F2E00B6CAC5 /* DMResponseObject.swift */; };
+		CE20EA45212EEAE600438794 /* DMTrialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A40F91FCF54AC006A5C8C /* DMTrialModel.swift */; };
+		CE20EA46212EEAE600438794 /* DMRatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A107AD1E59D3E600591170 /* DMRatingModel.swift */; };
+		CE20EA47212EEAE600438794 /* DMSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A0381E5916B0000CB062 /* DMSignUpViewController.swift */; };
+		CE20EA48212EEAE600438794 /* Dominant+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672676A1FD827260070EAC2 /* Dominant+NSLayoutConstraint.swift */; };
+		CE20EA49212EEAE600438794 /* DMQuickBloxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E74B1E58EEB200D56BDE /* DMQuickBloxService.swift */; };
+		CE20EA4A212EEAE600438794 /* DMInfoIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A2DB01FD430E600E1E941 /* DMInfoIntroView.swift */; };
+		CE20EA4B212EEAE600438794 /* DMPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A02A1E591458000CB062 /* DMPortfolioViewController.swift */; };
+		CE20EA4C212EEAE600438794 /* DMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A0361E5916A2000CB062 /* DMLoginViewController.swift */; };
+		CE20EA4D212EEAE600438794 /* DMAnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7A0281E591445000CB062 /* DMAnalyticsViewController.swift */; };
+		CE20EA4E212EEAE600438794 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A1078E1E59C24100591170 /* FXBlurView.m */; };
+		CE20EA4F212EEAE600438794 /* DMSignalsHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4509E8C81EF68824002CC7C4 /* DMSignalsHistoryService.swift */; };
+		CE20EA50212EEAE600438794 /* Dominant+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7D6E61E5E516A0089E8C7 /* Dominant+Double.swift */; };
+		CE20EA51212EEAE600438794 /* DMRatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A107AB1E59D35400591170 /* DMRatingTableViewCell.swift */; };
+		CE20EA52212EEAE600438794 /* DMCryptoInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A2DAD1FD1D2BF00E1E941 /* DMCryptoInfoContainer.swift */; };
+		CE20EA54212EEAE600438794 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A43FF1E5A5C5E0058D11C /* AlamofireImage.framework */; };
+		CE20EA55212EEAE600438794 /* Quickblox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B4E77D1E58FE7200D56BDE /* Quickblox.framework */; };
+		CE20EA56212EEAE600438794 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B7A0321E591629000CB062 /* Crashlytics.framework */; };
+		CE20EA57212EEAE600438794 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE53AF291F5E7D2A002B485F /* FBAudienceNetwork.framework */; };
+		CE20EA58212EEAE600438794 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4518F8691EF33D4B000D044F /* Alamofire.framework */; };
+		CE20EA59212EEAE600438794 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453CA0B81E5C7B34004A6A5C /* MBProgressHUD.framework */; };
+		CE20EA5A212EEAE600438794 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE53AF2A1F5E7D2A002B485F /* FBSDKMessengerShareKit.framework */; };
+		CE20EA5B212EEAE600438794 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE26A1F5D4C9A00E80FDA /* FBSDKCoreKit.framework */; };
+		CE20EA5C212EEAE600438794 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */; };
+		CE20EA5D212EEAE600438794 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE26B1F5D4C9A00E80FDA /* FBSDKLoginKit.framework */; };
+		CE20EA5E212EEAE600438794 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B7A0301E591525000CB062 /* Fabric.framework */; };
+		CE20EA5F212EEAE600438794 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B4E78D1E59126A00D56BDE /* Bolts.framework */; };
+		CE20EA61212EEAE600438794 /* MuseoCyrl100.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7561E58F12800D56BDE /* MuseoCyrl100.otf */; };
+		CE20EA62212EEAE600438794 /* MuseoCyrl300.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7571E58F12800D56BDE /* MuseoCyrl300.otf */; };
+		CE20EA63212EEAE600438794 /* crypto.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE20EA05212EE89600438794 /* crypto.xcassets */; };
+		CE20EA64212EEAE600438794 /* DMStockInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4581D6B61E60FE0C005F2173 /* DMStockInfoCell.xib */; };
+		CE20EA65212EEAE600438794 /* MuseoCyrl500.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7581E58F12800D56BDE /* MuseoCyrl500.otf */; };
+		CE20EA66212EEAE600438794 /* DMTrialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9667CC761FCCB390006E8071 /* DMTrialView.xib */; };
+		CE20EA67212EEAE600438794 /* DMRatingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D070431E5D723700B6CAC5 /* DMRatingTableViewCell.xib */; };
+		CE20EA68212EEAE600438794 /* DMStockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D070411E5CE98000B6CAC5 /* DMStockCell.xib */; };
+		CE20EA69212EEAE600438794 /* DMSignalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45A107B41E59DCF300591170 /* DMSignalCell.xib */; };
+		CE20EA6A212EEAE600438794 /* DMDropDownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45121B811E5CB05E00D83C4E /* DMDropDownTableViewCell.xib */; };
+		CE20EA6B212EEAE600438794 /* MuseoCyrl700.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7591E58F12800D56BDE /* MuseoCyrl700.otf */; };
+		CE20EA6C212EEAE600438794 /* USERS.JAN.BD.json in Resources */ = {isa = PBXBuildFile; fileRef = 9684633C200F9AFD005CCC09 /* USERS.JAN.BD.json */; };
+		CE20EA6D212EEAE600438794 /* DMPortfolioTotalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D0704D1E5E45A500B6CAC5 /* DMPortfolioTotalCell.xib */; };
+		CE20EA6E212EEAE600438794 /* MuseoCyrl900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E75A1E58F12800D56BDE /* MuseoCyrl900.otf */; };
+		CE20EA6F212EEAE600438794 /* DMTrialUsageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 964A40F71FCF0D3D006A5C8C /* DMTrialUsageView.xib */; };
+		CE20EA70212EEAE600438794 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7681E58FBC900D56BDE /* TabBar.storyboard */; };
+		CE20EA71212EEAE600438794 /* DMCompanyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45A107B81E59DF9B00591170 /* DMCompanyCollectionCell.xib */; };
+		CE20EA72212EEAE600438794 /* Screener.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968D5D101FA711A5007970CE /* Screener.storyboard */; };
+		CE20EA73212EEAE600438794 /* Signals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E76E1E58FC1100D56BDE /* Signals.storyboard */; };
+		CE20EA74212EEAE600438794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7381E58ED5C00D56BDE /* LaunchScreen.storyboard */; };
+		CE20EA75212EEAE600438794 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E76A1E58FBD500D56BDE /* Portfolio.storyboard */; };
+		CE20EA76212EEAE600438794 /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CD23D11FDA8E6700FBBEB3 /* Analytics.storyboard */; };
+		CE20EA77212EEAE600438794 /* DMInfoIntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967A2DB21FD4310100E1E941 /* DMInfoIntroView.xib */; };
+		CE20EA78212EEAE600438794 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E76C1E58FC0400D56BDE /* Launch.storyboard */; };
+		CE20EA79212EEAE600438794 /* OutsourceCharts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CD23D51FDAB73700FBBEB3 /* OutsourceCharts.storyboard */; };
+		CE20EA7A212EEAE600438794 /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452A43F91E5A4DCD0058D11C /* ChartView.xib */; };
+		CE20EA7B212EEAE600438794 /* Ratings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7831E59106B00D56BDE /* Ratings.storyboard */; };
+		CE20EA7C212EEAE600438794 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7661E58FBB100D56BDE /* Authorization.storyboard */; };
+		CE20EA7D212EEAE600438794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45B4E7361E58ED5C00D56BDE /* Assets.xcassets */; };
+		CE20EA7F212EEAE600438794 /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 453CA0B81E5C7B34004A6A5C /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE20EA80212EEAE600438794 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 452A43FF1E5A5C5E0058D11C /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE20EA81212EEAE600438794 /* Quickblox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45B4E77D1E58FE7200D56BDE /* Quickblox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE20EA82212EEAE600438794 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4518F8691EF33D4B000D044F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE20EA8B212EEB3F00438794 /* investors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE20EA8A212EEB3F00438794 /* investors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -138,6 +258,20 @@
 				4581D6BD1E61CE6F005F2173 /* AlamofireImage.framework in Embed Frameworks */,
 				4581D6BF1E61CE6F005F2173 /* Quickblox.framework in Embed Frameworks */,
 				4518F86C1EF33DBF000D044F /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE20EA7E212EEAE600438794 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE20EA7F212EEAE600438794 /* MBProgressHUD.framework in Embed Frameworks */,
+				CE20EA80212EEAE600438794 /* AlamofireImage.framework in Embed Frameworks */,
+				CE20EA81212EEAE600438794 /* Quickblox.framework in Embed Frameworks */,
+				CE20EA82212EEAE600438794 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +397,10 @@
 		BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		BE9EE26A1F5D4C9A00E80FDA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		BE9EE26B1F5D4C9A00E80FDA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		CE20EA05212EE89600438794 /* crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = crypto.xcassets; sourceTree = "<group>"; };
+		CE20EA88212EEAE600438794 /* Dominant Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dominant Crypto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE20EA89212EEAE700438794 /* Dominant Investors copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dominant Investors copy-Info.plist"; path = "/Users/user/Desktop/ciklum/Dominant-Investors_iOS_App/Dominant Investors copy-Info.plist"; sourceTree = "<absolute>"; };
+		CE20EA8A212EEB3F00438794 /* investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = investors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +420,25 @@
 				BE9EE26D1F5D4C9A00E80FDA /* FBSDKLoginKit.framework in Frameworks */,
 				45A1079E1E59C3AC00591170 /* Fabric.framework in Frameworks */,
 				45B4E7901E59126A00D56BDE /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE20EA53212EEAE600438794 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE20EA54212EEAE600438794 /* AlamofireImage.framework in Frameworks */,
+				CE20EA55212EEAE600438794 /* Quickblox.framework in Frameworks */,
+				CE20EA56212EEAE600438794 /* Crashlytics.framework in Frameworks */,
+				CE20EA57212EEAE600438794 /* FBAudienceNetwork.framework in Frameworks */,
+				CE20EA58212EEAE600438794 /* Alamofire.framework in Frameworks */,
+				CE20EA59212EEAE600438794 /* MBProgressHUD.framework in Frameworks */,
+				CE20EA5A212EEAE600438794 /* FBSDKMessengerShareKit.framework in Frameworks */,
+				CE20EA5B212EEAE600438794 /* FBSDKCoreKit.framework in Frameworks */,
+				CE20EA5C212EEAE600438794 /* FBSDKShareKit.framework in Frameworks */,
+				CE20EA5D212EEAE600438794 /* FBSDKLoginKit.framework in Frameworks */,
+				CE20EA5E212EEAE600438794 /* Fabric.framework in Frameworks */,
+				CE20EA5F212EEAE600438794 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +544,7 @@
 				45B4E7431E58ED7D00D56BDE /* Resources */,
 				45B4E7471E58EE2B00D56BDE /* Framewroks */,
 				45B4E72D1E58ED5C00D56BDE /* Products */,
+				CE20EA89212EEAE700438794 /* Dominant Investors copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -394,6 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				45B4E72C1E58ED5C00D56BDE /* Dominant Investors.app */,
+				CE20EA88212EEAE600438794 /* Dominant Crypto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -456,6 +615,8 @@
 				9684633C200F9AFD005CCC09 /* USERS.JAN.BD.json */,
 				45B4E7551E58F0B300D56BDE /* Fonts */,
 				45B4E7361E58ED5C00D56BDE /* Assets.xcassets */,
+				CE20EA05212EE89600438794 /* crypto.xcassets */,
+				CE20EA8A212EEB3F00438794 /* investors.xcassets */,
 				45B4E73B1E58ED5D00D56BDE /* Info.plist */,
 			);
 			name = Resources;
@@ -756,6 +917,26 @@
 			productReference = 45B4E72C1E58ED5C00D56BDE /* Dominant Investors.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CE20EA07212EEAE600438794 /* Dominant Crypto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE20EA85212EEAE600438794 /* Build configuration list for PBXNativeTarget "Dominant Crypto" */;
+			buildPhases = (
+				CE20EA08212EEAE600438794 /* Sources */,
+				CE20EA53212EEAE600438794 /* Frameworks */,
+				CE20EA60212EEAE600438794 /* Resources */,
+				CE20EA7E212EEAE600438794 /* Embed Frameworks */,
+				CE20EA83212EEAE600438794 /* Run Script */,
+				CE20EA84212EEAE600438794 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dominant Crypto";
+			productName = "Dominant Investors";
+			productReference = CE20EA88212EEAE600438794 /* Dominant Crypto.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -770,6 +951,10 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = QSURT3ZX3X;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
+					};
+					CE20EA07212EEAE600438794 = {
+						DevelopmentTeam = QSURT3ZX3X;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -788,6 +973,7 @@
 			projectRoot = "";
 			targets = (
 				45B4E72B1E58ED5C00D56BDE /* Dominant Investors */,
+				CE20EA07212EEAE600438794 /* Dominant Crypto */,
 			);
 		};
 /* End PBXProject section */
@@ -803,6 +989,7 @@
 				45A107A71E59CFED00591170 /* MuseoCyrl500.otf in Resources */,
 				9667CC771FCCB390006E8071 /* DMTrialView.xib in Resources */,
 				45D070441E5D723700B6CAC5 /* DMRatingTableViewCell.xib in Resources */,
+				CE20EA8B212EEB3F00438794 /* investors.xcassets in Resources */,
 				45D070421E5CE98000B6CAC5 /* DMStockCell.xib in Resources */,
 				45A107B61E59DCF300591170 /* DMSignalCell.xib in Resources */,
 				45121B831E5CB05E00D83C4E /* DMDropDownTableViewCell.xib in Resources */,
@@ -825,6 +1012,42 @@
 				45B4E7841E59106B00D56BDE /* Ratings.storyboard in Resources */,
 				45B4E7671E58FBB100D56BDE /* Authorization.storyboard in Resources */,
 				45B4E7371E58ED5C00D56BDE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE20EA60212EEAE600438794 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE20EA61212EEAE600438794 /* MuseoCyrl100.otf in Resources */,
+				CE20EA62212EEAE600438794 /* MuseoCyrl300.otf in Resources */,
+				CE20EA63212EEAE600438794 /* crypto.xcassets in Resources */,
+				CE20EA64212EEAE600438794 /* DMStockInfoCell.xib in Resources */,
+				CE20EA65212EEAE600438794 /* MuseoCyrl500.otf in Resources */,
+				CE20EA66212EEAE600438794 /* DMTrialView.xib in Resources */,
+				CE20EA67212EEAE600438794 /* DMRatingTableViewCell.xib in Resources */,
+				CE20EA68212EEAE600438794 /* DMStockCell.xib in Resources */,
+				CE20EA69212EEAE600438794 /* DMSignalCell.xib in Resources */,
+				CE20EA6A212EEAE600438794 /* DMDropDownTableViewCell.xib in Resources */,
+				CE20EA6B212EEAE600438794 /* MuseoCyrl700.otf in Resources */,
+				CE20EA6C212EEAE600438794 /* USERS.JAN.BD.json in Resources */,
+				CE20EA6D212EEAE600438794 /* DMPortfolioTotalCell.xib in Resources */,
+				CE20EA6E212EEAE600438794 /* MuseoCyrl900.otf in Resources */,
+				CE20EA6F212EEAE600438794 /* DMTrialUsageView.xib in Resources */,
+				CE20EA70212EEAE600438794 /* TabBar.storyboard in Resources */,
+				CE20EA71212EEAE600438794 /* DMCompanyCollectionCell.xib in Resources */,
+				CE20EA72212EEAE600438794 /* Screener.storyboard in Resources */,
+				CE20EA73212EEAE600438794 /* Signals.storyboard in Resources */,
+				CE20EA74212EEAE600438794 /* LaunchScreen.storyboard in Resources */,
+				CE20EA75212EEAE600438794 /* Portfolio.storyboard in Resources */,
+				CE20EA76212EEAE600438794 /* Analytics.storyboard in Resources */,
+				CE20EA77212EEAE600438794 /* DMInfoIntroView.xib in Resources */,
+				CE20EA78212EEAE600438794 /* Launch.storyboard in Resources */,
+				CE20EA79212EEAE600438794 /* OutsourceCharts.storyboard in Resources */,
+				CE20EA7A212EEAE600438794 /* ChartView.xib in Resources */,
+				CE20EA7B212EEAE600438794 /* Ratings.storyboard in Resources */,
+				CE20EA7C212EEAE600438794 /* Authorization.storyboard in Resources */,
+				CE20EA7D212EEAE600438794 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,6 +1080,33 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run a57b2bc2dfde54edc4d69735a3034939a67ed90d 2ddc672d9e9791a7576c14662ceac3c8d5cfc5fe90a5871c5e45bd5fb9c9b013";
+		};
+		CE20EA83212EEAE600438794 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run a57b2bc2dfde54edc4d69735a3034939a67ed90d 2ddc672d9e9791a7576c14662ceac3c8d5cfc5fe90a5871c5e45bd5fb9c9b013";
+		};
+		CE20EA84212EEAE600438794 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -939,6 +1189,87 @@
 				45C7D6E71E5E516A0089E8C7 /* Dominant+Double.swift in Sources */,
 				45A107AC1E59D35400591170 /* DMRatingTableViewCell.swift in Sources */,
 				967A2DAE1FD1D2BF00E1E941 /* DMCryptoInfoContainer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE20EA08212EEAE600438794 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE20EA09212EEAE600438794 /* DMLaunchViewController.swift in Sources */,
+				CE20EA0A212EEAE600438794 /* AppDelegate.swift in Sources */,
+				CE20EA0B212EEAE600438794 /* DMPortfolioUserInterface.swift in Sources */,
+				CE20EA0C212EEAE600438794 /* DMInvestmentSignalModel.swift in Sources */,
+				CE20EA0D212EEAE600438794 /* DMSignalHistoryModel.swift in Sources */,
+				CE20EA0E212EEAE600438794 /* AuthModel.swift in Sources */,
+				CE20EA0F212EEAE600438794 /* DMTrialUsageView.swift in Sources */,
+				CE20EA10212EEAE600438794 /* DMRatingsViewController.swift in Sources */,
+				CE20EA11212EEAE600438794 /* DMSubscriptionModel.swift in Sources */,
+				CE20EA12212EEAE600438794 /* DMStockCell.swift in Sources */,
+				CE20EA13212EEAE600438794 /* DMServerAuthRequests.swift in Sources */,
+				CE20EA14212EEAE600438794 /* DMPersonalPortfolioModel.swift in Sources */,
+				CE20EA15212EEAE600438794 /* DMTabBarViewController.swift in Sources */,
+				CE20EA16212EEAE600438794 /* Dominant+UINavigationController.swift in Sources */,
+				CE20EA17212EEAE600438794 /* DMViewController.swift in Sources */,
+				CE20EA18212EEAE600438794 /* DMDateService.swift in Sources */,
+				CE20EA19212EEAE600438794 /* Constants.swift in Sources */,
+				CE20EA1A212EEAE600438794 /* Dominant+Array.swift in Sources */,
+				CE20EA1B212EEAE600438794 /* DMCryptoScreenerViewController.swift in Sources */,
+				CE20EA1C212EEAE600438794 /* DMCompanyCollectionCell.swift in Sources */,
+				CE20EA1D212EEAE600438794 /* DMCompanyModel.swift in Sources */,
+				CE20EA1E212EEAE600438794 /* DMFileManager.swift in Sources */,
+				CE20EA1F212EEAE600438794 /* DMAPIService.swift in Sources */,
+				CE20EA20212EEAE600438794 /* DMTrialView.swift in Sources */,
+				CE20EA21212EEAE600438794 /* DMScreenerTypeViewController.swift in Sources */,
+				CE20EA22212EEAE600438794 /* DMUserProfileModel.swift in Sources */,
+				CE20EA23212EEAE600438794 /* DMDropdownViewController.swift in Sources */,
+				CE20EA24212EEAE600438794 /* DMRotatingViewController.swift in Sources */,
+				CE20EA25212EEAE600438794 /* DMCompanyDetailViewController.swift in Sources */,
+				CE20EA26212EEAE600438794 /* DMContainerDelegate.swift in Sources */,
+				CE20EA27212EEAE600438794 /* DMDropDownTableViewCell.swift in Sources */,
+				CE20EA28212EEAE600438794 /* DMAuthorizationManager.swift in Sources */,
+				CE20EA29212EEAE600438794 /* DMStockCellDelegate.swift in Sources */,
+				CE20EA2A212EEAE600438794 /* DMScreenerViewController.swift in Sources */,
+				CE20EA2B212EEAE600438794 /* DMSignalsViewController.swift in Sources */,
+				CE20EA2C212EEAE600438794 /* DMCalculationService.swift in Sources */,
+				CE20EA2D212EEAE600438794 /* Dominant+UIImageView.swift in Sources */,
+				CE20EA2E212EEAE600438794 /* DMStockInfoCell.swift in Sources */,
+				CE20EA2F212EEAE600438794 /* DMSignalCell.swift in Sources */,
+				CE20EA30212EEAE600438794 /* DMScreenerContainerViewController.swift in Sources */,
+				CE20EA31212EEAE600438794 /* DMTradingViewChartViewController.swift in Sources */,
+				CE20EA32212EEAE600438794 /* Dominant+UIImage.swift in Sources */,
+				CE20EA33212EEAE600438794 /* DMDominantPortfolioModel.swift in Sources */,
+				CE20EA34212EEAE600438794 /* DMStatsContainer.swift in Sources */,
+				CE20EA35212EEAE600438794 /* DMDominantPortfolioService.swift in Sources */,
+				CE20EA36212EEAE600438794 /* DMPersonalPortfolioService.swift in Sources */,
+				CE20EA37212EEAE600438794 /* DMSignalsStoreService.swift in Sources */,
+				CE20EA38212EEAE600438794 /* DMDropdownListDelegate.swift in Sources */,
+				CE20EA39212EEAE600438794 /* SwiftStockKit.swift in Sources */,
+				CE20EA3A212EEAE600438794 /* DMEstimazeChartViewController.swift in Sources */,
+				CE20EA3B212EEAE600438794 /* DMPortfolioTotalCell.swift in Sources */,
+				CE20EA3C212EEAE600438794 /* DMSubscriptionViewController.swift in Sources */,
+				CE20EA3D212EEAE600438794 /* DMServerMainSignalsRequests.swift in Sources */,
+				CE20EA3E212EEAE600438794 /* Dominant+UIView.swift in Sources */,
+				CE20EA3F212EEAE600438794 /* ChartView.swift in Sources */,
+				CE20EA40212EEAE600438794 /* Dominant+String.swift in Sources */,
+				CE20EA41212EEAE600438794 /* DMServerAPIManager.swift in Sources */,
+				CE20EA42212EEAE600438794 /* DMTradingViewGraphViewController.swift in Sources */,
+				CE20EA43212EEAE600438794 /* DMStockDetailViewController.swift in Sources */,
+				CE20EA44212EEAE600438794 /* DMResponseObject.swift in Sources */,
+				CE20EA45212EEAE600438794 /* DMTrialModel.swift in Sources */,
+				CE20EA46212EEAE600438794 /* DMRatingModel.swift in Sources */,
+				CE20EA47212EEAE600438794 /* DMSignUpViewController.swift in Sources */,
+				CE20EA48212EEAE600438794 /* Dominant+NSLayoutConstraint.swift in Sources */,
+				CE20EA49212EEAE600438794 /* DMQuickBloxService.swift in Sources */,
+				CE20EA4A212EEAE600438794 /* DMInfoIntroView.swift in Sources */,
+				CE20EA4B212EEAE600438794 /* DMPortfolioViewController.swift in Sources */,
+				CE20EA4C212EEAE600438794 /* DMLoginViewController.swift in Sources */,
+				CE20EA4D212EEAE600438794 /* DMAnalyticsViewController.swift in Sources */,
+				CE20EA4E212EEAE600438794 /* FXBlurView.m in Sources */,
+				CE20EA4F212EEAE600438794 /* DMSignalsHistoryService.swift in Sources */,
+				CE20EA50212EEAE600438794 /* Dominant+Double.swift in Sources */,
+				CE20EA51212EEAE600438794 /* DMRatingTableViewCell.swift in Sources */,
+				CE20EA52212EEAE600438794 /* DMCryptoInfoContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1120,6 +1451,65 @@
 			};
 			name = Release;
 		};
+		CE20EA86212EEAE600438794 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = QSURT3ZX3X;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Dominant Investors copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantCrypto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bbe854f9-60b8-413c-bdc4-4f032c4bf3cb";
+				PROVISIONING_PROFILE_SPECIFIER = "DominantCrypto Distribution";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dominant Investors/Dominant Investors-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		CE20EA87212EEAE600438794 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = QSURT3ZX3X;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Dominant Investors copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantCrypto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bbe854f9-60b8-413c-bdc4-4f032c4bf3cb";
+				PROVISIONING_PROFILE_SPECIFIER = "DominantCrypto Distribution";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dominant Investors/Dominant Investors-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1137,6 +1527,15 @@
 			buildConfigurations = (
 				45B4E73F1E58ED5D00D56BDE /* Debug */,
 				45B4E7401E58ED5D00D56BDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE20EA85212EEAE600438794 /* Build configuration list for PBXNativeTarget "Dominant Crypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE20EA86212EEAE600438794 /* Debug */,
+				CE20EA87212EEAE600438794 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
