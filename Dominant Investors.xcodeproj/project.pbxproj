@@ -128,8 +128,6 @@
 		CE89586B212E934300822B54 /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895862212E934300822B54 /* SessionAdapter.swift */; };
 		CE89586C212E934300822B54 /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895863212E934300822B54 /* CompletionHandler.swift */; };
 		CE89586D212E934300822B54 /* AccountsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895864212E934300822B54 /* AccountsDataProvider.swift */; };
-		CE89586E212E934300822B54 /* Environment+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895866212E934300822B54 /* Environment+Request.swift */; };
-		CE89586F212E934300822B54 /* Settings+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895867212E934300822B54 /* Settings+Request.swift */; };
 		CE895870212E934300822B54 /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895868212E934300822B54 /* RequestProvider.swift */; };
 		CE895871212E934300822B54 /* User+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895869212E934300822B54 /* User+Request.swift */; };
 		CE895872212E934300822B54 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89586A212E934300822B54 /* Repository.swift */; };
@@ -274,8 +272,6 @@
 		CE895862212E934300822B54 /* SessionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
 		CE895863212E934300822B54 /* CompletionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
 		CE895864212E934300822B54 /* AccountsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsDataProvider.swift; sourceTree = "<group>"; };
-		CE895866212E934300822B54 /* Environment+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Environment+Request.swift"; sourceTree = "<group>"; };
-		CE895867212E934300822B54 /* Settings+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+Request.swift"; sourceTree = "<group>"; };
 		CE895868212E934300822B54 /* RequestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
 		CE895869212E934300822B54 /* User+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Request.swift"; sourceTree = "<group>"; };
 		CE89586A212E934300822B54 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -765,8 +761,6 @@
 		CE895865212E934300822B54 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				CE895866212E934300822B54 /* Environment+Request.swift */,
-				CE895867212E934300822B54 /* Settings+Request.swift */,
 				CE895868212E934300822B54 /* RequestProvider.swift */,
 				CE895869212E934300822B54 /* User+Request.swift */,
 			);
@@ -914,7 +908,6 @@
 				964A40F61FCF0D2C006A5C8C /* DMTrialUsageView.swift in Sources */,
 				45B4E7881E5911D900D56BDE /* DMRatingsViewController.swift in Sources */,
 				45D73F741E63598D001BB511 /* DMSubscriptionModel.swift in Sources */,
-				CE89586E212E934300822B54 /* Environment+Request.swift in Sources */,
 				45D070401E5CE5BA00B6CAC5 /* DMStockCell.swift in Sources */,
 				0972ABD1203F0D2900F9F247 /* DMServerAuthRequests.swift in Sources */,
 				45B4E7751E58FD1B00D56BDE /* DMPersonalPortfolioModel.swift in Sources */,
@@ -922,7 +915,6 @@
 				965DCF2E1FC1AB8B003E74C1 /* Dominant+UINavigationController.swift in Sources */,
 				45B4E75E1E58F9C200D56BDE /* DMViewController.swift in Sources */,
 				45D0704B1E5E276300B6CAC5 /* DMDateService.swift in Sources */,
-				CE89586F212E934300822B54 /* Settings+Request.swift in Sources */,
 				CE895871212E934300822B54 /* User+Request.swift in Sources */,
 				4592F76F1E59B35E004C85F4 /* Constants.swift in Sources */,
 				4581D6C61E631A32005F2173 /* Dominant+Array.swift in Sources */,
