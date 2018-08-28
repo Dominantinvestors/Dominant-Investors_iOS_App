@@ -10,7 +10,8 @@ import UIKit
 import MBProgressHUD
 
 class DMLoginViewController: DMViewController, UITextFieldDelegate {
-
+    let accountsDataProvider = AccountsDataProvider.default()
+    
     @IBOutlet weak var usernameTextField  : UITextField!
     @IBOutlet weak var passwordTextField  : UITextField!
     @IBOutlet weak var overlayView        : FXBlurView!
@@ -20,16 +21,6 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-		
-		//Test API
-		DMServerAPIManager.sharedInstance.loginWith(login: "test_user", password: "qwerty1234") { (success, error) in
-			if success{
-				DMServerAPIManager.sharedInstance.getSignalCompaniesWith(limit: 5, offset: 1) { (model) in
-					
-				}
-			}
-		}
-		
     }
 
     // MARK: Private
@@ -89,20 +80,24 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
     
     private func proceedLogin() {
         self.showActivityIndicator()
-        DMAuthorizationManager.sharedInstance.loginWith(login: self.usernameTextField.text!,
-                                                        password: self.passwordTextField.text!) { (success, error) in
-                                                            DispatchQueue.main.async {
-                                                                self.dismissActivityIndicator()
-                                                                if (success) {
-                                                                    self.showTabBar()
-                                                                } else {
-                                                                    self.showAlertWith(title: NSLocalizedString("Authorization error", comment: ""),
-                                                                                       message: error!.description,
-                                                                                       cancelButton: false)
-                                                                }
-                                                            }
+        
+        accountsDataProvider.login(self.usernameTextField.text!, self.passwordTextField.text!) { success, error in
+            
+            
+            self.accountsDataProvider.getUser(completion: { success, error in
+                
+            })
+            
+            
+            self.dismissActivityIndicator()
+            if (success) {
+                self.showTabBar()
+            } else if let error = error {
+                self.showAlertWith(title: NSLocalizedString("Authorization error", comment: ""),
+                                   message: error,
+                                   cancelButton: false)
+            }
         }
-  
     }
     
     // MARK: Actions
@@ -127,10 +122,9 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
         }
         
         let nextField = textField.tag + 1
-        let nextResponder = self.view.viewWithTag(nextField) as UIResponder!
         
-        if (nextResponder != nil){
-            nextResponder?.becomeFirstResponder()
+        if let nextResponder = self.view.viewWithTag(nextField) as UIResponder? {
+            nextResponder.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
         }

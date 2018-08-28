@@ -2,4 +2,4 @@ github "Alamofire/Alamofire" ~> 4.4
 github "Alamofire/AlamofireImage"
 github "jdg/MBProgressHUD" ~> 1.0.0
 github "jerkoch/SwipeCellKit"
-github "tristanhimmelman/AlamofireObjectMapper" ~> 5.0
+github "Hearst-DD/ObjectMapper" ~> 3.3

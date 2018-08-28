@@ -36,6 +36,9 @@ class DMSignalHistoryModel: NSObject {
         if let buyPoint = response.fields["buyPoint"] as? Float {
             buy = Double(buyPoint)
             self.buyPoint = String(format : "%.2f", buyPoint)
+        } else if let buyPoint = response.fields["buyPoint"] as? Double{
+            buy = buyPoint
+            self.buyPoint = String(format : "%.2f", buyPoint)
         } else {
             self.buyPoint = ""
         }
@@ -43,6 +46,9 @@ class DMSignalHistoryModel: NSObject {
         if let sellPoint = response.fields["sellPoint"] as? Float {
             self.sellPoint = String(format : "%.2f", sellPoint)
             sell = Double(sellPoint)
+        } else if let sellPoint = response.fields["sellPoint"] as? Double{
+            sell = sellPoint
+            self.sellPoint = String(format : "%.2f", sellPoint)
         } else {
             self.sellPoint = ""
         }

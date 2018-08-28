@@ -1,23 +1,57 @@
-//
-//  DMUserProfileModel.swift
-//  Dominant Investors
-//
-//  Created by Nekit on 19.02.17.
-//  Copyright © 2017 Dominant. All rights reserved.
-//
-
 import Foundation
-import Quickblox
+import ObjectMapper
+
+//class Settings: Mappable {
+//
+//    var welcomePage: String!
+//    var forgotPassword: String!
+//    var countryCode: String! = Environment.localisation
+//    var forgotPasswordSuccessUrl: String!
+//    var logoutUrl: String!
+//    var language: String!
+//
+//    required init?(map: Map) {}
+//
+//    init(welcomePage: String, forgotPassword: String) {
+//        self.welcomePage = welcomePage
+//        self.forgotPassword = forgotPassword
+//    }
+//
+//    func mapping(map: Map) {
+//        welcomePage <- map["WelcomePageUrl"]
+//        forgotPassword <- map["ForgotPasswordPageUrl"]
+//        forgotPasswordSuccessUrl <- map["ForgotPasswordSuccessUrl"]
+//        logoutUrl <- map["LogoutUrl"]
+//        language <- map["Language"]
+//    }
+//}
+
+class UserModel: Mappable {
+    
+    required init?(map: Map) {    }
+    
+    func mapping(map: Map) {
+        //        welcomePage <- map["WelcomePageUrl"]
+        //        forgotPassword <- map["ForgotPasswordPageUrl"]
+        //        forgotPasswordSuccessUrl <- map["ForgotPasswordSuccessUrl"]
+        //        logoutUrl <- map["LogoutUrl"]
+        //        language <- map["Language"]
+    }
+    
+}
+
 
 class DMUserProfileModel: NSObject, NSCoding {
-    
+ 
+
     var userID            : String!
     var userName          : String!
     var userProfileImage  : String!
     var createdAt         : Date?
     
     var userRating        : UInt!
-        
+    
+
     init(response : DMResponseObject) {
         super.init()
         self.userID           = response.id
@@ -34,12 +68,10 @@ class DMUserProfileModel: NSObject, NSCoding {
         self.userName         = aDecoder.decodeObject(forKey: "userName") as! String
         self.userRating       = aDecoder.decodeObject(forKey: "userRating") as! UInt
         
-        
         if let timeInterval = aDecoder.decodeDouble(forKey: "createdAt") as? Double{
             let date = Date(timeIntervalSince1970: timeInterval)
             self.createdAt = date
         }
-       
     }
     
      public func encode(with aCoder: NSCoder) {

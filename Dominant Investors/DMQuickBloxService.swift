@@ -245,35 +245,35 @@ class DMQuickBloxService: NSObject {
 //    }
     
     open func loginWith(login : String, password : String, competion : @escaping (Bool, String?) -> Void) {
-        QBRequest.logIn(withUserLogin: login, password: "weaDF3mz", successBlock: { (response, user) in
-            let userModel = DMUserProfileModel.init(response: DMResponseObject.init(user: user!))
-            
-            if  user!.externalUserID != 0 {
-                DMAuthorizationManager.sharedInstance.userID = user!.externalUserID
-                DMAuthorizationManager.sharedInstance.userProfile = userModel
-                let data  = NSKeyedArchiver.archivedData(withRootObject: userModel)
-                UserDefaults.standard.set(data, forKey : "Authorized")
-                UserDefaults.standard.set(DMAuthorizationManager.sharedInstance.userID, forKey : "user_id")
-                competion(true, nil)
-            } else {
-                DMAuthorizationManager.sharedInstance.userID = user!.id
-                DMAuthorizationManager.sharedInstance.userProfile = userModel
-                let data  = NSKeyedArchiver.archivedData(withRootObject: userModel)
-                UserDefaults.standard.set(data, forKey : "Authorized")
-                UserDefaults.standard.set(DMAuthorizationManager.sharedInstance.userID, forKey : "user_id")
-                
-                let params = QBUpdateUserParameters()
-                params.externalUserID = user!.id
-                QBRequest.updateCurrentUser(params, successBlock: { (response, user) in
-                    competion(true, nil)
-                }, errorBlock: { (error) in
-                    competion(false, Strings.DMStandartLoginError)
-                })
-            }
-            
-        }) { (error) in
-            competion(false, Strings.DMStandartLoginError)
-        }
+//        QBRequest.logIn(withUserLogin: login, password: "weaDF3mz", successBlock: { (response, user) in
+//            let userModel = DMUserProfileModel.init(response: DMResponseObject.init(user: user!))
+//
+//            if  user!.externalUserID != 0 {
+//                DMAuthorizationManager.sharedInstance.userID = user!.externalUserID
+//                DMAuthorizationManager.sharedInstance.userProfile = userModel
+//                let data  = NSKeyedArchiver.archivedData(withRootObject: userModel)
+//                UserDefaults.standard.set(data, forKey : "Authorized")
+//                UserDefaults.standard.set(DMAuthorizationManager.sharedInstance.userID, forKey : "user_id")
+//                competion(true, nil)
+//            } else {
+//                DMAuthorizationManager.sharedInstance.userID = user!.id
+//                DMAuthorizationManager.sharedInstance.userProfile = userModel
+//                let data  = NSKeyedArchiver.archivedData(withRootObject: userModel)
+//                UserDefaults.standard.set(data, forKey : "Authorized")
+//                UserDefaults.standard.set(DMAuthorizationManager.sharedInstance.userID, forKey : "user_id")
+//
+//                let params = QBUpdateUserParameters()
+//                params.externalUserID = user!.id
+//                QBRequest.updateCurrentUser(params, successBlock: { (response, user) in
+//                    competion(true, nil)
+//                }, errorBlock: { (error) in
+//                    competion(false, Strings.DMStandartLoginError)
+//                })
+//            }
+//
+//        }) { (error) in
+//            competion(false, Strings.DMStandartLoginError)
+//        }
     }
     
     open func signUpWith(login : String, email : String, password : String, confirm : String , inviterID : String?, completion : @escaping (Bool, String?) -> Void) {

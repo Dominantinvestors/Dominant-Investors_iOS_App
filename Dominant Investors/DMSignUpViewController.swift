@@ -11,6 +11,8 @@ import MBProgressHUD
 
 class DMSignUpViewController: DMViewController, UITextFieldDelegate {
 
+    let accountsDataProvider = AccountsDataProvider.default()
+
     @IBOutlet weak var signUpButton              : UIButton!
     @IBOutlet weak var alreadyHaveAccount        : UIButton!
     
@@ -108,22 +110,21 @@ class DMSignUpViewController: DMViewController, UITextFieldDelegate {
         
         
         self.showActivityIndicator()
-        DMAuthorizationManager.sharedInstance.signUpWith(login : self.loginTextField.text!,
-                                                         email     : self.emailTextField.text!,
-                                                         password  : self.passwordTextField.text!,
-                                                         confirm   : self.confirmPasswordTextField.text!,
-                                                         inviterID : "DEPRECATED FIELD") { (success, error) in
-                                                            DispatchQueue.main.async {
-                                                                self.dismissActivityIndicator()
-                                                                if (success) {
-                                                                    self.dismiss(animated: true, completion: nil)
-                                                                } else {
-                                                                    self.showAlertWith(title: NSLocalizedString("Sign up error", comment: ""),
-                                                                                       message: error!.description,
-                                                                                       cancelButton: false)
-                                                                }
-                                                            }
-        }
+        
+        accountsDataProvider.signOn(login: self.loginTextField.text!,
+                                    email: self.emailTextField.text!,
+                                    password: self.passwordTextField.text!,
+                                    confirm: self.confirmPasswordTextField.text!)
+        { (success, error) in
+                self.dismissActivityIndicator()
+                if (success) {
+                    self.dismiss(animated: true, completion: nil)
+                } else if let error = error {
+                    self.showAlertWith(title: NSLocalizedString("Sign up error", comment: ""),
+                                       message: error,
+                                       cancelButton: false)
+                }
+            }
     }
     
     // MARK: Actions
@@ -145,10 +146,9 @@ class DMSignUpViewController: DMViewController, UITextFieldDelegate {
         }
         
         let nextField = textField.tag + 1
-        let nextResponder = self.view.viewWithTag(nextField) as UIResponder!
         
-        if (nextResponder != nil){
-            nextResponder?.becomeFirstResponder()
+        if let nextResponder = self.view.viewWithTag(nextField) as UIResponder? {
+            nextResponder.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
         }

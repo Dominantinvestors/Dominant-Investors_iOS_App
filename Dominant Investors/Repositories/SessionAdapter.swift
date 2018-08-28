@@ -12,12 +12,13 @@ class MainSessionManager: SessionManager {
         return session
     }
     
-    static func `default`(token: String) -> MainSessionManager{
+    static func `default`(token: String?) -> MainSessionManager{
         let configuration = URLSessionConfiguration.default
+    
         configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
-        
+
         let session = MainSessionManager(configuration: configuration)
-        session.adapter = RFTSessionAdapter(token: token)
+        session.adapter = RFTSessionAdapter(token: token ?? "")
         
         return session
     }
@@ -48,8 +49,11 @@ struct RFTSessionAdapter: RequestAdapter {
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
         
-        urlRequest.setValue(token, forHTTPHeaderField: "X-CSRFToken")
-        
+        urlRequest.setValue("application/json", forHTTPHeaderField: "accept")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        urlRequest.setValue("Token \(token)", forHTTPHeaderField: "Authorization")
+
         return urlRequest
     }
 }

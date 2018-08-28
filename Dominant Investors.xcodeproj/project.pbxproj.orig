@@ -125,6 +125,14 @@
 		BE9EE2691F5D4C9300E80FDA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */; };
 		BE9EE26C1F5D4C9A00E80FDA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE26A1F5D4C9A00E80FDA /* FBSDKCoreKit.framework */; };
 		BE9EE26D1F5D4C9A00E80FDA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EE26B1F5D4C9A00E80FDA /* FBSDKLoginKit.framework */; };
+<<<<<<< HEAD
+		CE89586B212E934300822B54 /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895862212E934300822B54 /* SessionAdapter.swift */; };
+		CE89586C212E934300822B54 /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895863212E934300822B54 /* CompletionHandler.swift */; };
+		CE89586D212E934300822B54 /* AccountsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895864212E934300822B54 /* AccountsDataProvider.swift */; };
+		CE895870212E934300822B54 /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895868212E934300822B54 /* RequestProvider.swift */; };
+		CE895871212E934300822B54 /* User+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895869212E934300822B54 /* User+Request.swift */; };
+		CE895872212E934300822B54 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89586A212E934300822B54 /* Repository.swift */; };
+=======
 		CE20EA09212EEAE600438794 /* DMLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E7891E59120B00D56BDE /* DMLaunchViewController.swift */; };
 		CE20EA0A212EEAE600438794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4E72F1E58ED5C00D56BDE /* AppDelegate.swift */; };
 		CE20EA0B212EEAE600438794 /* DMPortfolioUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581D6B91E610320005F2173 /* DMPortfolioUserInterface.swift */; };
@@ -245,12 +253,7 @@
 		CE20EA81212EEAE600438794 /* Quickblox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45B4E77D1E58FE7200D56BDE /* Quickblox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE20EA82212EEAE600438794 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4518F8691EF33D4B000D044F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE20EA8B212EEB3F00438794 /* investors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE20EA8A212EEB3F00438794 /* investors.xcassets */; };
-		CE89586B212E934300822B54 /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895862212E934300822B54 /* SessionAdapter.swift */; };
-		CE89586C212E934300822B54 /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895863212E934300822B54 /* CompletionHandler.swift */; };
-		CE89586D212E934300822B54 /* AccountsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895864212E934300822B54 /* AccountsDataProvider.swift */; };
-		CE895870212E934300822B54 /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895868212E934300822B54 /* RequestProvider.swift */; };
-		CE895871212E934300822B54 /* User+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895869212E934300822B54 /* User+Request.swift */; };
-		CE895872212E934300822B54 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89586A212E934300822B54 /* Repository.swift */; };
+>>>>>>> develop
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -318,7 +321,7 @@
 		45A107B41E59DCF300591170 /* DMSignalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMSignalCell.xib; sourceTree = "<group>"; };
 		45A107B71E59DF9B00591170 /* DMCompanyCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMCompanyCollectionCell.swift; sourceTree = "<group>"; };
 		45A107B81E59DF9B00591170 /* DMCompanyCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMCompanyCollectionCell.xib; sourceTree = "<group>"; };
-		45B4E72C1E58ED5C00D56BDE /* DominantInvestors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominantInvestors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45B4E72C1E58ED5C00D56BDE /* Dominant Investors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dominant Investors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45B4E72F1E58ED5C00D56BDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45B4E7361E58ED5C00D56BDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45B4E7391E58ED5C00D56BDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -403,16 +406,19 @@
 		BE9EE2681F5D4C9300E80FDA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		BE9EE26A1F5D4C9A00E80FDA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		BE9EE26B1F5D4C9A00E80FDA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		CE20EA05212EE89600438794 /* crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = crypto.xcassets; sourceTree = "<group>"; };
-		CE20EA88212EEAE600438794 /* DominantCrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominantCrypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE20EA89212EEAE700438794 /* Dominant Investors copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dominant Investors copy-Info.plist"; path = "/Users/user/Desktop/ciklum/Dominant-Investors_iOS_App/Dominant Investors copy-Info.plist"; sourceTree = "<absolute>"; };
-		CE20EA8A212EEB3F00438794 /* investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = investors.xcassets; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		CE895862212E934300822B54 /* SessionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
 		CE895863212E934300822B54 /* CompletionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
 		CE895864212E934300822B54 /* AccountsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsDataProvider.swift; sourceTree = "<group>"; };
 		CE895868212E934300822B54 /* RequestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
 		CE895869212E934300822B54 /* User+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Request.swift"; sourceTree = "<group>"; };
 		CE89586A212E934300822B54 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+=======
+		CE20EA05212EE89600438794 /* crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = crypto.xcassets; sourceTree = "<group>"; };
+		CE20EA88212EEAE600438794 /* Dominant Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dominant Crypto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE20EA89212EEAE700438794 /* Dominant Investors copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dominant Investors copy-Info.plist"; path = "/Users/user/Desktop/ciklum/Dominant-Investors_iOS_App/Dominant Investors copy-Info.plist"; sourceTree = "<absolute>"; };
+		CE20EA8A212EEB3F00438794 /* investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = investors.xcassets; sourceTree = "<group>"; };
+>>>>>>> develop
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -563,8 +569,8 @@
 		45B4E72D1E58ED5C00D56BDE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				45B4E72C1E58ED5C00D56BDE /* DominantInvestors.app */,
-				CE20EA88212EEAE600438794 /* DominantCrypto.app */,
+				45B4E72C1E58ED5C00D56BDE /* Dominant Investors.app */,
+				CE20EA88212EEAE600438794 /* Dominant Crypto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -931,9 +937,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		45B4E72B1E58ED5C00D56BDE /* DominantInvestors */ = {
+		45B4E72B1E58ED5C00D56BDE /* Dominant Investors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 45B4E73E1E58ED5D00D56BDE /* Build configuration list for PBXNativeTarget "DominantInvestors" */;
+			buildConfigurationList = 45B4E73E1E58ED5D00D56BDE /* Build configuration list for PBXNativeTarget "Dominant Investors" */;
 			buildPhases = (
 				45B4E7281E58ED5C00D56BDE /* Sources */,
 				45B4E7291E58ED5C00D56BDE /* Frameworks */,
@@ -946,14 +952,14 @@
 			);
 			dependencies = (
 			);
-			name = DominantInvestors;
+			name = "Dominant Investors";
 			productName = "Dominant Investors";
-			productReference = 45B4E72C1E58ED5C00D56BDE /* DominantInvestors.app */;
+			productReference = 45B4E72C1E58ED5C00D56BDE /* Dominant Investors.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CE20EA07212EEAE600438794 /* DominantCrypto */ = {
+		CE20EA07212EEAE600438794 /* Dominant Crypto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE20EA85212EEAE600438794 /* Build configuration list for PBXNativeTarget "DominantCrypto" */;
+			buildConfigurationList = CE20EA85212EEAE600438794 /* Build configuration list for PBXNativeTarget "Dominant Crypto" */;
 			buildPhases = (
 				CE20EA08212EEAE600438794 /* Sources */,
 				CE20EA53212EEAE600438794 /* Frameworks */,
@@ -966,9 +972,9 @@
 			);
 			dependencies = (
 			);
-			name = DominantCrypto;
+			name = "Dominant Crypto";
 			productName = "Dominant Investors";
-			productReference = CE20EA88212EEAE600438794 /* DominantCrypto.app */;
+			productReference = CE20EA88212EEAE600438794 /* Dominant Crypto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1006,8 +1012,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				45B4E72B1E58ED5C00D56BDE /* DominantInvestors */,
-				CE20EA07212EEAE600438794 /* DominantCrypto */,
+				45B4E72B1E58ED5C00D56BDE /* Dominant Investors */,
+				CE20EA07212EEAE600438794 /* Dominant Crypto */,
 			);
 		};
 /* End PBXProject section */
@@ -1452,7 +1458,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantInvestors;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantCrypto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5cc837e6-fe7c-4c5e-a479-6fb1a630d726";
 				PROVISIONING_PROFILE_SPECIFIER = "App Store Dominant";
@@ -1480,7 +1486,7 @@
 				INFOPLIST_FILE = "Dominant Investors/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantInvestors;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantCrypto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "bbe854f9-60b8-413c-bdc4-4f032c4bf3cb";
 				PROVISIONING_PROFILE_SPECIFIER = "DominantCrypto Distribution";
@@ -1562,7 +1568,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45B4E73E1E58ED5D00D56BDE /* Build configuration list for PBXNativeTarget "DominantInvestors" */ = {
+		45B4E73E1E58ED5D00D56BDE /* Build configuration list for PBXNativeTarget "Dominant Investors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45B4E73F1E58ED5D00D56BDE /* Debug */,
@@ -1571,7 +1577,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE20EA85212EEAE600438794 /* Build configuration list for PBXNativeTarget "DominantCrypto" */ = {
+		CE20EA85212EEAE600438794 /* Build configuration list for PBXNativeTarget "Dominant Crypto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE20EA86212EEAE600438794 /* Debug */,

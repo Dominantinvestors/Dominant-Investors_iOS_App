@@ -27,13 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            
 //        }
         
-        QBSettings.setLogLevel(.errors)
-        QBSettings.setApplicationID(67714)
-        QBSettings.setAuthKey("OpuJ8LmRmBfmCqU")
-        QBSettings.setAuthSecret("EHWwdvuUjNVHCgv")
-        QBSettings.setAccountKey("E8fxy9j9qwWXczPKb4yp")
-        
-        DMQuickBloxService.sharedInstance.regUser()
+//        QBSettings.setLogLevel(.errors)
+//        QBSettings.setApplicationID(67714)
+//        QBSettings.setAuthKey("OpuJ8LmRmBfmCqU")
+//        QBSettings.setAuthSecret("EHWwdvuUjNVHCgv")
+//        QBSettings.setAccountKey("E8fxy9j9qwWXczPKb4yp")
+//
+//        DMQuickBloxService.sharedInstance.regUser()
         
         return true
     }

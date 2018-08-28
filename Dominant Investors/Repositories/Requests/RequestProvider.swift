@@ -43,6 +43,9 @@ class BaseRequestBuilder: RequestProvider {
         let url = try self.asURL()
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "accept")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
         return try encoder().encode(request, with: parameters)
     }
 }

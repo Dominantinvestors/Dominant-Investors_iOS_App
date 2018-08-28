@@ -21,9 +21,9 @@ class DMLaunchViewController: DMViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.showActivityIndicator()
-        if (!checkOldAppMigration()) {
+//        if (!checkOldAppMigration()) {
             launchApp()
-        }
+//        }
     }
 
     private func setupUI() {
@@ -42,18 +42,18 @@ class DMLaunchViewController: DMViewController {
         self.dismissActivityIndicator()
     }
     
-    private func checkOldAppMigration() -> Bool {
-        if let username = UserDefaults.standard.object(forKey: "kUsername") as! String! {
-            if let password = UserDefaults.standard.object(forKey: "kPassword") as! String! {
-                DMAuthorizationManager.sharedInstance.loginWith(login: username, password: password, completion: { (success, error) in
-                    DispatchQueue.main.async {
-                        self.launchApp()
-                    }
-                })
-            } else { return false }
-        } else { return false }
-        
-        return true
-    }
+//    private func checkOldAppMigration() -> Bool {
+//        if let username = UserDefaults.standard.object(forKey: "kUsername") as! String! {
+//            if let password = UserDefaults.standard.object(forKey: "kPassword") as! String! {
+//                DMAuthorizationManager.sharedInstance.loginWith(login: username, password: password, completion: { (success, error) in
+//                    DispatchQueue.main.async {
+//                        self.launchApp()
+//                    }
+//                })
+//            } else { return false }
+//        } else { return false }
+//
+//        return true
+//    }
     
 }
