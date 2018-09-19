@@ -81,10 +81,6 @@
 		CE735E5B21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CBF21523B2300E2849E /* CreateSignalTableViewCell.swift */; };
 		CE735E5C21523B2400E2849E /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC021523B2300E2849E /* WatchListTableViewCell.swift */; };
 		CE735E5D21523B2400E2849E /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC021523B2300E2849E /* WatchListTableViewCell.swift */; };
-		CE735E5E21523B2400E2849E /* NavigationControllerDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC221523B2300E2849E /* NavigationControllerDecorator.swift */; };
-		CE735E5F21523B2400E2849E /* NavigationControllerDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC221523B2300E2849E /* NavigationControllerDecorator.swift */; };
-		CE735E6021523B2400E2849E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC321523B2300E2849E /* NavigationController.swift */; };
-		CE735E6121523B2400E2849E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC321523B2300E2849E /* NavigationController.swift */; };
 		CE735E6221523B2400E2849E /* DMScreenerTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC521523B2300E2849E /* DMScreenerTypeViewController.swift */; };
 		CE735E6321523B2400E2849E /* DMScreenerTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC521523B2300E2849E /* DMScreenerTypeViewController.swift */; };
 		CE735E6421523B2400E2849E /* DMSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC621523B2300E2849E /* DMSubscriptionViewController.swift */; };
@@ -105,8 +101,6 @@
 		CE735E7321523B2400E2849E /* DMTradingViewChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD021523B2300E2849E /* DMTradingViewChartViewController.swift */; };
 		CE735E7421523B2400E2849E /* DMEstimazeChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD121523B2300E2849E /* DMEstimazeChartViewController.swift */; };
 		CE735E7521523B2400E2849E /* DMEstimazeChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD121523B2300E2849E /* DMEstimazeChartViewController.swift */; };
-		CE735E7621523B2400E2849E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD221523B2300E2849E /* Storyboard.swift */; };
-		CE735E7721523B2400E2849E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD221523B2300E2849E /* Storyboard.swift */; };
 		CE735E7821523B2400E2849E /* DMLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD421523B2300E2849E /* DMLaunchViewController.swift */; };
 		CE735E7921523B2400E2849E /* DMLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD421523B2300E2849E /* DMLaunchViewController.swift */; };
 		CE735E7A21523B2400E2849E /* StringTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CD621523B2300E2849E /* StringTableViewCell.xib */; };
@@ -115,8 +109,6 @@
 		CE735E7D21523B2400E2849E /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD721523B2300E2849E /* SearchController.swift */; };
 		CE735E7E21523B2400E2849E /* StringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD821523B2300E2849E /* StringTableViewCell.swift */; };
 		CE735E7F21523B2400E2849E /* StringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD821523B2300E2849E /* StringTableViewCell.swift */; };
-		CE735E8021523B2400E2849E /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD921523B2300E2849E /* DMViewController.swift */; };
-		CE735E8121523B2400E2849E /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD921523B2300E2849E /* DMViewController.swift */; };
 		CE735E8221523B2400E2849E /* BuySectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CDB21523B2300E2849E /* BuySectionView.xib */; };
 		CE735E8321523B2400E2849E /* BuySectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CDB21523B2300E2849E /* BuySectionView.xib */; };
 		CE735E8421523B2400E2849E /* BuySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CDC21523B2300E2849E /* BuySectionView.swift */; };
@@ -127,12 +119,8 @@
 		CE735E8921523B2400E2849E /* BuyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CDE21523B2300E2849E /* BuyTableViewCell.swift */; };
 		CE735E8A21523B2400E2849E /* BuyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CDF21523B2300E2849E /* BuyTableViewCell.xib */; };
 		CE735E8B21523B2400E2849E /* BuyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CDF21523B2300E2849E /* BuyTableViewCell.xib */; };
-		CE735E8C21523B2400E2849E /* KeyboardObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE021523B2300E2849E /* KeyboardObservableViewController.swift */; };
-		CE735E8D21523B2400E2849E /* KeyboardObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE021523B2300E2849E /* KeyboardObservableViewController.swift */; };
 		CE735E8E21523B2400E2849E /* DMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE221523B2300E2849E /* DMLoginViewController.swift */; };
 		CE735E8F21523B2400E2849E /* DMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE221523B2300E2849E /* DMLoginViewController.swift */; };
-		CE735E9021523B2400E2849E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE321523B2300E2849E /* TabBarController.swift */; };
-		CE735E9121523B2400E2849E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE321523B2300E2849E /* TabBarController.swift */; };
 		CE735E9221523B2400E2849E /* DMAnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE521523B2300E2849E /* DMAnalyticsViewController.swift */; };
 		CE735E9321523B2400E2849E /* DMAnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE521523B2300E2849E /* DMAnalyticsViewController.swift */; };
 		CE735E9421523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE621523B2300E2849E /* DMCompanyDetailViewController.swift */; };
@@ -235,6 +223,22 @@
 		CE735F392152653600E2849E /* MuseoCyrl900.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2F2152653600E2849E /* MuseoCyrl900.otf */; };
 		CE735F3B215265FF00E2849E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735F3A215265FF00E2849E /* Assets.xcassets */; };
 		CE735F3C215265FF00E2849E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735F3A215265FF00E2849E /* Assets.xcassets */; };
+		CE735F462152782800E2849E /* NavigationControllerDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F402152782800E2849E /* NavigationControllerDecorator.swift */; };
+		CE735F472152782800E2849E /* NavigationControllerDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F402152782800E2849E /* NavigationControllerDecorator.swift */; };
+		CE735F482152782800E2849E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F412152782800E2849E /* NavigationController.swift */; };
+		CE735F492152782800E2849E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F412152782800E2849E /* NavigationController.swift */; };
+		CE735F4A2152782800E2849E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F422152782800E2849E /* Storyboard.swift */; };
+		CE735F4B2152782800E2849E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F422152782800E2849E /* Storyboard.swift */; };
+		CE735F4C2152782800E2849E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F432152782800E2849E /* ViewController.swift */; };
+		CE735F4D2152782800E2849E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F432152782800E2849E /* ViewController.swift */; };
+		CE735F4E2152782800E2849E /* KeyboardObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F442152782800E2849E /* KeyboardObservableViewController.swift */; };
+		CE735F4F2152782800E2849E /* KeyboardObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F442152782800E2849E /* KeyboardObservableViewController.swift */; };
+		CE735F502152782800E2849E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F452152782800E2849E /* TabBarController.swift */; };
+		CE735F512152782800E2849E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F452152782800E2849E /* TabBarController.swift */; };
+		CE735F532152785E00E2849E /* Dominant+LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F522152785E00E2849E /* Dominant+LayoutConstraint.swift */; };
+		CE735F542152785E00E2849E /* Dominant+LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F522152785E00E2849E /* Dominant+LayoutConstraint.swift */; };
+		CE735F562152788700E2849E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F552152788700E2849E /* Protocols.swift */; };
+		CE735F572152788700E2849E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F552152788700E2849E /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -283,8 +287,6 @@
 		CE735CBE21523B2300E2849E /* WatchListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchListTableViewCell.xib; sourceTree = "<group>"; };
 		CE735CBF21523B2300E2849E /* CreateSignalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateSignalTableViewCell.swift; sourceTree = "<group>"; };
 		CE735CC021523B2300E2849E /* WatchListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchListTableViewCell.swift; sourceTree = "<group>"; };
-		CE735CC221523B2300E2849E /* NavigationControllerDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDecorator.swift; sourceTree = "<group>"; };
-		CE735CC321523B2300E2849E /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		CE735CC521523B2300E2849E /* DMScreenerTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMScreenerTypeViewController.swift; sourceTree = "<group>"; };
 		CE735CC621523B2300E2849E /* DMSubscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSubscriptionViewController.swift; sourceTree = "<group>"; };
 		CE735CC721523B2300E2849E /* DMCryptoScreenerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMCryptoScreenerViewController.swift; sourceTree = "<group>"; };
@@ -295,20 +297,16 @@
 		CE735CCE21523B2300E2849E /* DMRatingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMRatingsViewController.swift; sourceTree = "<group>"; };
 		CE735CD021523B2300E2849E /* DMTradingViewChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMTradingViewChartViewController.swift; sourceTree = "<group>"; };
 		CE735CD121523B2300E2849E /* DMEstimazeChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMEstimazeChartViewController.swift; sourceTree = "<group>"; };
-		CE735CD221523B2300E2849E /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		CE735CD421523B2300E2849E /* DMLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLaunchViewController.swift; sourceTree = "<group>"; };
 		CE735CD621523B2300E2849E /* StringTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StringTableViewCell.xib; sourceTree = "<group>"; };
 		CE735CD721523B2300E2849E /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		CE735CD821523B2300E2849E /* StringTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTableViewCell.swift; sourceTree = "<group>"; };
-		CE735CD921523B2300E2849E /* DMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMViewController.swift; sourceTree = "<group>"; };
 		CE735CDB21523B2300E2849E /* BuySectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuySectionView.xib; sourceTree = "<group>"; };
 		CE735CDC21523B2300E2849E /* BuySectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuySectionView.swift; sourceTree = "<group>"; };
 		CE735CDD21523B2300E2849E /* BuyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		CE735CDE21523B2300E2849E /* BuyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyTableViewCell.swift; sourceTree = "<group>"; };
 		CE735CDF21523B2300E2849E /* BuyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyTableViewCell.xib; sourceTree = "<group>"; };
-		CE735CE021523B2300E2849E /* KeyboardObservableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObservableViewController.swift; sourceTree = "<group>"; };
 		CE735CE221523B2300E2849E /* DMLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginViewController.swift; sourceTree = "<group>"; };
-		CE735CE321523B2300E2849E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE735CE521523B2300E2849E /* DMAnalyticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAnalyticsViewController.swift; sourceTree = "<group>"; };
 		CE735CE621523B2300E2849E /* DMCompanyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMCompanyDetailViewController.swift; sourceTree = "<group>"; };
 		CE735CE821523B2300E2849E /* SessionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
@@ -362,6 +360,14 @@
 		CE735F2E2152653600E2849E /* MuseoCyrl300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl300.otf; sourceTree = "<group>"; };
 		CE735F2F2152653600E2849E /* MuseoCyrl900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl900.otf; sourceTree = "<group>"; };
 		CE735F3A215265FF00E2849E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE735F402152782800E2849E /* NavigationControllerDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDecorator.swift; sourceTree = "<group>"; };
+		CE735F412152782800E2849E /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		CE735F422152782800E2849E /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		CE735F432152782800E2849E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE735F442152782800E2849E /* KeyboardObservableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObservableViewController.swift; sourceTree = "<group>"; };
+		CE735F452152782800E2849E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CE735F522152785E00E2849E /* Dominant+LayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dominant+LayoutConstraint.swift"; sourceTree = "<group>"; };
+		CE735F552152788700E2849E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominantInvestors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB57268B412308413460525 /* Pods-DominantCrypto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantCrypto.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -422,6 +428,8 @@
 				CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */,
 				CE735BCF21523B0900E2849E /* Constants.swift */,
 				CE735F262152435E00E2849E /* Dominant-Bridging-Header.h */,
+				CE735F552152788700E2849E /* Protocols.swift */,
+				CE735F3E2152782800E2849E /* Extentions */,
 				CE735ED721523FA000E2849E /* Views */,
 				CE735EB021523CF200E2849E /* Models */,
 				CE735CAD21523B2300E2849E /* Controllers */,
@@ -481,12 +489,7 @@
 		CE735CAD21523B2300E2849E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE735CD221523B2300E2849E /* Storyboard.swift */,
-				CE735CD921523B2300E2849E /* DMViewController.swift */,
-				CE735CE021523B2300E2849E /* KeyboardObservableViewController.swift */,
-				CE735CE321523B2300E2849E /* TabBarController.swift */,
 				CE735CAE21523B2300E2849E /* Personal */,
-				CE735CC121523B2300E2849E /* NavigationController */,
 				CE735CC421523B2300E2849E /* Screener */,
 				CE735CCB21523B2300E2849E /* SignUp */,
 				CE735CCD21523B2300E2849E /* Ratings */,
@@ -529,23 +532,14 @@
 		CE735CBA21523B2300E2849E /* Watchlist */ = {
 			isa = PBXGroup;
 			children = (
-				CE735CBB21523B2300E2849E /* CreateSignalTableViewCell.xib */,
-				CE735CBC21523B2300E2849E /* WatchListSection.xib */,
-				CE735CBD21523B2300E2849E /* WatchListSection.swift */,
-				CE735CBE21523B2300E2849E /* WatchListTableViewCell.xib */,
 				CE735CBF21523B2300E2849E /* CreateSignalTableViewCell.swift */,
+				CE735CBB21523B2300E2849E /* CreateSignalTableViewCell.xib */,
+				CE735CBD21523B2300E2849E /* WatchListSection.swift */,
+				CE735CBC21523B2300E2849E /* WatchListSection.xib */,
 				CE735CC021523B2300E2849E /* WatchListTableViewCell.swift */,
+				CE735CBE21523B2300E2849E /* WatchListTableViewCell.xib */,
 			);
 			path = Watchlist;
-			sourceTree = "<group>";
-		};
-		CE735CC121523B2300E2849E /* NavigationController */ = {
-			isa = PBXGroup;
-			children = (
-				CE735CC221523B2300E2849E /* NavigationControllerDecorator.swift */,
-				CE735CC321523B2300E2849E /* NavigationController.swift */,
-			);
-			path = NavigationController;
 			sourceTree = "<group>";
 		};
 		CE735CC421523B2300E2849E /* Screener */ = {
@@ -723,6 +717,28 @@
 				CE735F2F2152653600E2849E /* MuseoCyrl900.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CE735F3E2152782800E2849E /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				CE735F3F2152782800E2849E /* NavigationController */,
+				CE735F422152782800E2849E /* Storyboard.swift */,
+				CE735F432152782800E2849E /* ViewController.swift */,
+				CE735F442152782800E2849E /* KeyboardObservableViewController.swift */,
+				CE735F452152782800E2849E /* TabBarController.swift */,
+				CE735F522152785E00E2849E /* Dominant+LayoutConstraint.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		CE735F3F2152782800E2849E /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				CE735F402152782800E2849E /* NavigationControllerDecorator.swift */,
+				CE735F412152782800E2849E /* NavigationController.swift */,
+			);
+			path = NavigationController;
 			sourceTree = "<group>";
 		};
 		E482CC02D3CCE862FD9AFBF9 /* Frameworks */ = {
@@ -907,6 +923,13 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
@@ -915,6 +938,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
@@ -933,6 +963,13 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
@@ -941,6 +978,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
@@ -993,13 +1037,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE735E7821523B2400E2849E /* DMLaunchViewController.swift in Sources */,
+				CE735F532152785E00E2849E /* Dominant+LayoutConstraint.swift in Sources */,
 				CE735E6A21523B2400E2849E /* DMScreenerContainerViewController.swift in Sources */,
 				CE735F0421523FA000E2849E /* SegmentControll.swift in Sources */,
 				CE735E6C21523B2400E2849E /* DMStockDetailViewController.swift in Sources */,
 				CE735F1021523FA000E2849E /* DMStatsContainer.swift in Sources */,
-				CE735E8C21523B2400E2849E /* KeyboardObservableViewController.swift in Sources */,
 				CE735D1021523B2400E2849E /* EditableSectionDataSource.swift in Sources */,
-				CE735E6021523B2400E2849E /* NavigationController.swift in Sources */,
 				CE735D0421523B2400E2849E /* TableViewComposedDataSource.swift in Sources */,
 				CE735E7021523B2400E2849E /* DMRatingsViewController.swift in Sources */,
 				CE735E6421523B2400E2849E /* DMSubscriptionViewController.swift in Sources */,
@@ -1008,6 +1051,7 @@
 				CE735E9A21523B2400E2849E /* CompletionHandler.swift in Sources */,
 				CE735EAE21523B2400E2849E /* SignalsDataProvider.swift in Sources */,
 				CE735EAC21523B2400E2849E /* Repository.swift in Sources */,
+				CE735F562152788700E2849E /* Protocols.swift in Sources */,
 				CE735E4821523B2400E2849E /* SearchTableViewCell.swift in Sources */,
 				CE735E6621523B2400E2849E /* DMCryptoScreenerViewController.swift in Sources */,
 				CE735E8621523B2400E2849E /* BuyViewController.swift in Sources */,
@@ -1017,7 +1061,6 @@
 				CE735E9421523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */,
 				CE735ED021523CF200E2849E /* UserModel.swift in Sources */,
 				CE735E7221523B2400E2849E /* DMTradingViewChartViewController.swift in Sources */,
-				CE735E7621523B2400E2849E /* Storyboard.swift in Sources */,
 				CE735E9C21523B2400E2849E /* AccountsDataProvider.swift in Sources */,
 				CE735E8421523B2400E2849E /* BuySectionView.swift in Sources */,
 				CE735EF621523FA000E2849E /* DMStockCell.swift in Sources */,
@@ -1026,18 +1069,19 @@
 				CE735EA421523B2400E2849E /* RequestProvider.swift in Sources */,
 				CE735E7E21523B2400E2849E /* StringTableViewCell.swift in Sources */,
 				CE735E7421523B2400E2849E /* DMEstimazeChartViewController.swift in Sources */,
+				CE735F4A2152782800E2849E /* Storyboard.swift in Sources */,
 				CE735ECE21523CF200E2849E /* PortfolioModel.swift in Sources */,
 				CE735E9221523B2400E2849E /* DMAnalyticsViewController.swift in Sources */,
 				CE735E6E21523B2400E2849E /* DMSignUpViewController.swift in Sources */,
 				CE735E9821523B2400E2849E /* ServiceLocator.swift in Sources */,
 				CE735F1A21523FA000E2849E /* FXBlurView.m in Sources */,
 				CE735D0221523B2400E2849E /* EditableCellDataSource.swift in Sources */,
-				CE735E5E21523B2400E2849E /* NavigationControllerDecorator.swift in Sources */,
 				CE735E7C21523B2400E2849E /* SearchController.swift in Sources */,
 				CE735D0E21523B2400E2849E /* TableViewItemConfigurators.swift in Sources */,
 				CE735E5021523B2400E2849E /* PersonDataSources.swift in Sources */,
 				CE735E4E21523B2400E2849E /* AssetsTableViewCell.swift in Sources */,
 				CE735EF821523FA000E2849E /* ChartView.swift in Sources */,
+				CE735F4C2152782800E2849E /* ViewController.swift in Sources */,
 				CE735D0C21523B2400E2849E /* Extensions.swift in Sources */,
 				CE735E8821523B2400E2849E /* BuyTableViewCell.swift in Sources */,
 				CE735E5621523B2400E2849E /* WatchListSection.swift in Sources */,
@@ -1048,16 +1092,17 @@
 				CE735E9E21523B2400E2849E /* PortfolioDataProvider.swift in Sources */,
 				CE735E9621523B2400E2849E /* SessionAdapter.swift in Sources */,
 				CE735E5A21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */,
-				CE735E9021523B2400E2849E /* TabBarController.swift in Sources */,
+				CE735F482152782800E2849E /* NavigationController.swift in Sources */,
 				CE735F1621523FA000E2849E /* DMDropDownTableViewCell.swift in Sources */,
 				CE735F0021523FA000E2849E /* DMPortfolioTotalCell.swift in Sources */,
+				CE735F4E2152782800E2849E /* KeyboardObservableViewController.swift in Sources */,
 				CE735EFC21523FA000E2849E /* DMInfoIntroView.swift in Sources */,
 				CE735F1D2152406B00E2849E /* SwiftStockKit.swift in Sources */,
 				CE735E6221523B2400E2849E /* DMScreenerTypeViewController.swift in Sources */,
 				CE735E6821523B2400E2849E /* DMScreenerViewController.swift in Sources */,
+				CE735F462152782800E2849E /* NavigationControllerDecorator.swift in Sources */,
 				CE735EAA21523B2400E2849E /* Investors+Requesrt.swift in Sources */,
 				CE735ECC21523CF200E2849E /* SignalModel.swift in Sources */,
-				CE735E8021523B2400E2849E /* DMViewController.swift in Sources */,
 				CE735E4621523B2400E2849E /* AssetsSection.swift in Sources */,
 				CE735EA621523B2400E2849E /* User+Request.swift in Sources */,
 				CE735BD021523B0900E2849E /* Constants.swift in Sources */,
@@ -1068,6 +1113,7 @@
 				CE735EC621523CF200E2849E /* OffsetResponse.swift in Sources */,
 				CE735E4021523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
 				CE735EFE21523FA000E2849E /* DMCryptoInfoContainer.swift in Sources */,
+				CE735F502152782800E2849E /* TabBarController.swift in Sources */,
 				CE735D0821523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */,
 				CE735F0221523FA000E2849E /* DMRatingTableViewCell.swift in Sources */,
 			);
@@ -1078,13 +1124,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE735E7921523B2400E2849E /* DMLaunchViewController.swift in Sources */,
+				CE735F542152785E00E2849E /* Dominant+LayoutConstraint.swift in Sources */,
 				CE735E6B21523B2400E2849E /* DMScreenerContainerViewController.swift in Sources */,
 				CE735F0521523FA000E2849E /* SegmentControll.swift in Sources */,
 				CE735E6D21523B2400E2849E /* DMStockDetailViewController.swift in Sources */,
 				CE735F1121523FA000E2849E /* DMStatsContainer.swift in Sources */,
-				CE735E8D21523B2400E2849E /* KeyboardObservableViewController.swift in Sources */,
 				CE735D1121523B2400E2849E /* EditableSectionDataSource.swift in Sources */,
-				CE735E6121523B2400E2849E /* NavigationController.swift in Sources */,
 				CE735D0521523B2400E2849E /* TableViewComposedDataSource.swift in Sources */,
 				CE735E7121523B2400E2849E /* DMRatingsViewController.swift in Sources */,
 				CE735E6521523B2400E2849E /* DMSubscriptionViewController.swift in Sources */,
@@ -1093,6 +1138,7 @@
 				CE735E9B21523B2400E2849E /* CompletionHandler.swift in Sources */,
 				CE735EAF21523B2400E2849E /* SignalsDataProvider.swift in Sources */,
 				CE735EAD21523B2400E2849E /* Repository.swift in Sources */,
+				CE735F572152788700E2849E /* Protocols.swift in Sources */,
 				CE735E4921523B2400E2849E /* SearchTableViewCell.swift in Sources */,
 				CE735E6721523B2400E2849E /* DMCryptoScreenerViewController.swift in Sources */,
 				CE735E8721523B2400E2849E /* BuyViewController.swift in Sources */,
@@ -1102,7 +1148,6 @@
 				CE735E9521523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */,
 				CE735ED121523CF200E2849E /* UserModel.swift in Sources */,
 				CE735E7321523B2400E2849E /* DMTradingViewChartViewController.swift in Sources */,
-				CE735E7721523B2400E2849E /* Storyboard.swift in Sources */,
 				CE735E9D21523B2400E2849E /* AccountsDataProvider.swift in Sources */,
 				CE735E8521523B2400E2849E /* BuySectionView.swift in Sources */,
 				CE735EF721523FA000E2849E /* DMStockCell.swift in Sources */,
@@ -1111,18 +1156,19 @@
 				CE735EA521523B2400E2849E /* RequestProvider.swift in Sources */,
 				CE735E7F21523B2400E2849E /* StringTableViewCell.swift in Sources */,
 				CE735E7521523B2400E2849E /* DMEstimazeChartViewController.swift in Sources */,
+				CE735F4B2152782800E2849E /* Storyboard.swift in Sources */,
 				CE735ECF21523CF200E2849E /* PortfolioModel.swift in Sources */,
 				CE735E9321523B2400E2849E /* DMAnalyticsViewController.swift in Sources */,
 				CE735E6F21523B2400E2849E /* DMSignUpViewController.swift in Sources */,
 				CE735E9921523B2400E2849E /* ServiceLocator.swift in Sources */,
 				CE735F1B21523FA000E2849E /* FXBlurView.m in Sources */,
 				CE735D0321523B2400E2849E /* EditableCellDataSource.swift in Sources */,
-				CE735E5F21523B2400E2849E /* NavigationControllerDecorator.swift in Sources */,
 				CE735E7D21523B2400E2849E /* SearchController.swift in Sources */,
 				CE735D0F21523B2400E2849E /* TableViewItemConfigurators.swift in Sources */,
 				CE735E5121523B2400E2849E /* PersonDataSources.swift in Sources */,
 				CE735E4F21523B2400E2849E /* AssetsTableViewCell.swift in Sources */,
 				CE735EF921523FA000E2849E /* ChartView.swift in Sources */,
+				CE735F4D2152782800E2849E /* ViewController.swift in Sources */,
 				CE735D0D21523B2400E2849E /* Extensions.swift in Sources */,
 				CE735E8921523B2400E2849E /* BuyTableViewCell.swift in Sources */,
 				CE735E5721523B2400E2849E /* WatchListSection.swift in Sources */,
@@ -1133,16 +1179,17 @@
 				CE735E9F21523B2400E2849E /* PortfolioDataProvider.swift in Sources */,
 				CE735E9721523B2400E2849E /* SessionAdapter.swift in Sources */,
 				CE735E5B21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */,
-				CE735E9121523B2400E2849E /* TabBarController.swift in Sources */,
+				CE735F492152782800E2849E /* NavigationController.swift in Sources */,
 				CE735F1721523FA000E2849E /* DMDropDownTableViewCell.swift in Sources */,
 				CE735F0121523FA000E2849E /* DMPortfolioTotalCell.swift in Sources */,
+				CE735F4F2152782800E2849E /* KeyboardObservableViewController.swift in Sources */,
 				CE735EFD21523FA000E2849E /* DMInfoIntroView.swift in Sources */,
 				CE735F1E2152406B00E2849E /* SwiftStockKit.swift in Sources */,
 				CE735E6321523B2400E2849E /* DMScreenerTypeViewController.swift in Sources */,
 				CE735E6921523B2400E2849E /* DMScreenerViewController.swift in Sources */,
+				CE735F472152782800E2849E /* NavigationControllerDecorator.swift in Sources */,
 				CE735EAB21523B2400E2849E /* Investors+Requesrt.swift in Sources */,
 				CE735ECD21523CF200E2849E /* SignalModel.swift in Sources */,
-				CE735E8121523B2400E2849E /* DMViewController.swift in Sources */,
 				CE735E4721523B2400E2849E /* AssetsSection.swift in Sources */,
 				CE735EA721523B2400E2849E /* User+Request.swift in Sources */,
 				CE735BD121523B0900E2849E /* Constants.swift in Sources */,
@@ -1153,6 +1200,7 @@
 				CE735EC721523CF200E2849E /* OffsetResponse.swift in Sources */,
 				CE735E4121523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
 				CE735EFF21523FA000E2849E /* DMCryptoInfoContainer.swift in Sources */,
+				CE735F512152782800E2849E /* TabBarController.swift in Sources */,
 				CE735D0921523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */,
 				CE735F0321523FA000E2849E /* DMRatingTableViewCell.swift in Sources */,
 			);
@@ -1289,7 +1337,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DS.DominantInvestors;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantStocks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -1309,7 +1357,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DS.DominantInvestors;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantStocks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -1329,7 +1377,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DS.DominantInvestors;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantStocks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -1349,7 +1397,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DS.DominantInvestors;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantStocks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

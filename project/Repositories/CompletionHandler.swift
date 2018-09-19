@@ -77,14 +77,17 @@ public struct BaseHandler: CompletionHandler {
             case 401:
                 return .error(.notAutorised(code, NSLocalizedString("User authorization failed !!!", comment: "")))
             case 400, 402..<500:
-                if let data = response.data, let json = String(data: data, encoding: .utf8) {
-                    return .error(.error(code, json))
-                }else {
+                
+                if let data = response.data,
+                    let json = try? JSONSerialization.jsonObject(with: data, options: []) as! [Any],
+                    let text = json[0] as? String
+                {
+                    return .error(.error(code, text))
+                } else {
                     return .error(.error(code, error.localizedDescription))
                 }
             default:
-//                return .error(.error(code, R.string.localizable.connection_error()))
-                return .error(.error(code, ""))
+                return .error(.error(code, NSLocalizedString("Connection issues. Please try again later or check your internet settings", comment: "")))
 
             }
         }

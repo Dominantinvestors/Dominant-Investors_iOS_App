@@ -103,7 +103,7 @@ class PortfolioDataSource:
         cell.message.setTitle(" 5", for: .normal)
         
         cell.edit.isHidden = true
-//        cell.message.isHidden = true
+        cell.message.isHidden = true
         
         if let portfolio = item.1 {
             cell.value.text = portfolio.value + Values.Currency

@@ -1,27 +1,25 @@
 import UIKit
 
-enum DMPortfolioType : Int {
-    case DMPersonalPortfolio = 0
-    //case DMDominantPortfolio = 1
-    case DMSignalsHistory = 1
-}
-
-enum DMActionType : Int {
-    case DMAddNewStockAction = 0
-    case DMClearPortfolioAction = 1
-}
-
 struct Values {
-    static let DMTabsCount     : Int = 3
-    static let DMDefaultScreen : Int = 0
-    static let DMPortfolioScreen : Int = 2
     static let Currency = "$"
+}
 
+var DMAuthScreensBackground : UIImage {
+    get {
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            return UIImage(named: "ratingIPHONE")!
+        case .pad:
+            return UIImage(named: "ratingIPAD")!
+        case .unspecified:
+            return UIImage(named: "ratingIPHONE")!
+        default:
+            return UIImage(named: "ratingIPAD")!
+        }
+    }
 }
 
 struct Fonts {
-    static let DMMyseoFont : UIFont = UIFont(name: "MuseoCyrl-100", size: 11)!
-    
     static func regular(_ size: CGFloat = 11) -> UIFont {
         return UIFont(name: "MuseoCyrl-300", size: size)!
     }
@@ -54,11 +52,9 @@ struct Network {
     static let loginEndPoint = "/login/"
     static let logoutEndPoint = "/logout/"
 	static let main = "/main/"
-//    http://172.104.22.205/api/v1/accounts/login/
 }
 
 struct ConstantsUserDefaults{
-	static let authorized = "Authorized"
 	static let accessToken = "AccessToken"
 }
 

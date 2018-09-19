@@ -69,9 +69,6 @@ struct RFTSessionAdapter: RequestAdapter {
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
         
-//        urlRequest.setValue("application/json", forHTTPHeaderField: "accept")
-//        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
         urlRequest.setValue("Token \(token)", forHTTPHeaderField: "Authorization")
 
         return urlRequest

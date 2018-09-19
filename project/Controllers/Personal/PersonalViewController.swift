@@ -41,7 +41,6 @@ class PersonalViewController: KeyboardObservableViewController {
         
         PortfolioDataProvider.default().get { portfolio, error in
             if let portfolio = portfolio {
-                
                 let user: UserModel = ServiceLocator.shared.getService()
                 self.portfolio.data = [(user, portfolio)]
                 self.tableView.reloadData()
@@ -83,14 +82,14 @@ class PersonalViewController: KeyboardObservableViewController {
     }
     
     private func createSignal() {
+        
+        self.tabBarController?.selectedIndex = 0
     }
     
     private func editProfile() {
     }
     
     private func onMessage() {
-        let buy: BuyViewController = UIStoryboard(name: "Portfolio", bundle: nil)[.Buy]
-        self.navigationController?.pushViewController(buy, animated: true)
     }
     
     fileprivate func setUpSegmentControll() {
@@ -124,7 +123,11 @@ class PersonalViewController: KeyboardObservableViewController {
     }
     
     fileprivate func watchListSection() -> WatchListDataSource {
-        return WatchListDataSource(data: [])
+        let watchList = WatchListDataSource(data: [])
+        watchList.selectors[.select] = {_, _, _ in
+            self.createSignal()
+        }
+        return watchList
     }
     
     fileprivate func portfolioSection() -> PortfolioDataSource {
@@ -152,17 +155,18 @@ class PersonalViewController: KeyboardObservableViewController {
         }
         
         searchController.selectedItem = { item in
-       
+            if let asset = item as? AssetsModel {
+                let buy: BuyViewController = UIStoryboard(name: "Portfolio", bundle: nil)[.Buy]
+                buy.asset = asset
+                self.navigationController?.pushViewController(buy, animated: true)
+            }
         }
   
         return SearchDataSource(data: [NSLocalizedString("Enter the ticket", comment: "")], delegate: searchController)
     }
     
     fileprivate func assetsSection() -> AssetsDataSource {
-        return AssetsDataSource(data: [])
+        let assets = AssetsDataSource(data: [])
+        return assets
     }
-}
-
-extension String: SearchItem {
-    var title: String { return self }
 }

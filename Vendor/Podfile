@@ -12,6 +12,9 @@ target :DominantInvestors do
     pod 'AlamofireObjectMapper'
     pod 'AlamofireImage'
     pod 'MBProgressHUD'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'FacebookShare'
 end
 
 target :DominantCrypto do
@@ -19,6 +22,9 @@ target :DominantCrypto do
     pod 'AlamofireObjectMapper'
     pod 'AlamofireImage'
     pod 'MBProgressHUD'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'FacebookShare'
 end
 
 post_install do |installer|

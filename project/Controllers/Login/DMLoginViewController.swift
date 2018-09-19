@@ -54,7 +54,7 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
             [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
         
         underlineAttriString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.white, range: NSRange.init(location: 0, length: underlineAttriString.length))
-        underlineAttriString.addAttribute(NSAttributedStringKey.font, value: Fonts.DMMyseoFont, range: NSRange.init(location: 0, length: underlineAttriString.length))
+        underlineAttriString.addAttribute(NSAttributedStringKey.font, value: Fonts.regular(), range: NSRange.init(location: 0, length: underlineAttriString.length))
         
         createNewAccount.setAttributedTitle(underlineAttriString, for: .normal)
     }

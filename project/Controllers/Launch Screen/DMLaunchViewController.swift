@@ -17,7 +17,7 @@ class DMLaunchViewController: DMViewController {
     }
 
     private func setupUI() {
-        self.backgroundImage.image = self.DMAuthScreensBackground
+        self.backgroundImage.image = DMAuthScreensBackground
         self.activityIndicator.startAnimating()
     }
     
