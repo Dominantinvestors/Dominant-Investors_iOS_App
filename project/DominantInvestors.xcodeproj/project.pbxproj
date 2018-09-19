@@ -11,8 +11,6 @@
 		37716B655F36541A363ED520 /* Pods_DominantCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DBD300783B3BA57C773EA0 /* Pods_DominantCrypto.framework */; };
 		CE04D7EC215236DB00AD3D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */; };
 		CE04D7ED215236DB00AD3D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */; };
-		CE735BC921523A7D00E2849E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC621523A7900E2849E /* Assets.xcassets */; };
-		CE735BCA21523A7D00E2849E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC621523A7900E2849E /* Assets.xcassets */; };
 		CE735BCC21523A7D00E2849E /* Crypto.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC721523A7D00E2849E /* Crypto.xcassets */; };
 		CE735BCD21523A7D00E2849E /* Investors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC821523A7D00E2849E /* Investors.xcassets */; };
 		CE735BD021523B0900E2849E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BCF21523B0900E2849E /* Constants.swift */; };
@@ -235,6 +233,8 @@
 		CE735F372152653600E2849E /* MuseoCyrl300.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2E2152653600E2849E /* MuseoCyrl300.otf */; };
 		CE735F382152653600E2849E /* MuseoCyrl900.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2F2152653600E2849E /* MuseoCyrl900.otf */; };
 		CE735F392152653600E2849E /* MuseoCyrl900.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2F2152653600E2849E /* MuseoCyrl900.otf */; };
+		CE735F3B215265FF00E2849E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735F3A215265FF00E2849E /* Assets.xcassets */; };
+		CE735F3C215265FF00E2849E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735F3A215265FF00E2849E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -247,7 +247,6 @@
 		CE04D7D6215236DB00AD3D4D /* DominantCrypto.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DominantCrypto.plist; sourceTree = "<group>"; };
 		CE04D7D7215236DB00AD3D4D /* DominantInvestors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DominantInvestors.plist; sourceTree = "<group>"; };
 		CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE735BC621523A7900E2849E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../ciklum/Dominant-Investors_iOS_App/Dominant Investors/Assets.xcassets"; sourceTree = "<group>"; };
 		CE735BC721523A7D00E2849E /* Crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crypto.xcassets; sourceTree = "<group>"; };
 		CE735BC821523A7D00E2849E /* Investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Investors.xcassets; sourceTree = "<group>"; };
 		CE735BCF21523B0900E2849E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -362,6 +361,7 @@
 		CE735F2D2152653600E2849E /* MuseoCyrl100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl100.otf; sourceTree = "<group>"; };
 		CE735F2E2152653600E2849E /* MuseoCyrl300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl300.otf; sourceTree = "<group>"; };
 		CE735F2F2152653600E2849E /* MuseoCyrl900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl900.otf; sourceTree = "<group>"; };
+		CE735F3A215265FF00E2849E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominantInvestors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB57268B412308413460525 /* Pods-DominantCrypto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantCrypto.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -436,8 +436,8 @@
 		CE04D7D4215236DB00AD3D4D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE735F3A215265FF00E2849E /* Assets.xcassets */,
 				CE735F2A2152653600E2849E /* Fonts */,
-				CE735BC621523A7900E2849E /* Assets.xcassets */,
 				CE735BC721523A7D00E2849E /* Crypto.xcassets */,
 				CE735BC821523A7D00E2849E /* Investors.xcassets */,
 				CE04D7D6215236DB00AD3D4D /* DominantCrypto.plist */,
@@ -818,6 +818,7 @@
 				CE735E5221523B2400E2849E /* CreateSignalTableViewCell.xib in Resources */,
 				CE735E4A21523B2400E2849E /* PortfolioTableViewCell.xib in Resources */,
 				CE735EFA21523FA000E2849E /* DMStockInfoCell.xib in Resources */,
+				CE735F3B215265FF00E2849E /* Assets.xcassets in Resources */,
 				CE735E4421523B2400E2849E /* AssetsSection.xib in Resources */,
 				CE735BE521523B1300E2849E /* OutsourceCharts.storyboard in Resources */,
 				CE735BE321523B1300E2849E /* Screener.storyboard in Resources */,
@@ -843,7 +844,6 @@
 				CE735BE121523B1300E2849E /* Analytics.storyboard in Resources */,
 				CE735E5421523B2400E2849E /* WatchListSection.xib in Resources */,
 				CE735BE921523B1300E2849E /* Main.storyboard in Resources */,
-				CE735BC921523A7D00E2849E /* Assets.xcassets in Resources */,
 				CE735E4C21523B2400E2849E /* AssetsTableViewCell.xib in Resources */,
 				CE735EF421523FA000E2849E /* DMSignalCell.xib in Resources */,
 				CE735E8A21523B2400E2849E /* BuyTableViewCell.xib in Resources */,
@@ -860,8 +860,8 @@
 				CE735E4521523B2400E2849E /* AssetsSection.xib in Resources */,
 				CE735BCC21523A7D00E2849E /* Crypto.xcassets in Resources */,
 				CE735BE621523B1300E2849E /* OutsourceCharts.storyboard in Resources */,
+				CE735F3C215265FF00E2849E /* Assets.xcassets in Resources */,
 				CE735E5921523B2400E2849E /* WatchListTableViewCell.xib in Resources */,
-				CE735BCA21523A7D00E2849E /* Assets.xcassets in Resources */,
 				CE735BDE21523B1300E2849E /* Authorization.storyboard in Resources */,
 				CE735F0921523FA000E2849E /* ChartView.xib in Resources */,
 				CE735F392152653600E2849E /* MuseoCyrl900.otf in Resources */,
