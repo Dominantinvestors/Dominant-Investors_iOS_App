@@ -1,0 +1,1393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B3745267EDC827994C5C373 /* Pods_DominantInvestors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */; };
+		37716B655F36541A363ED520 /* Pods_DominantCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DBD300783B3BA57C773EA0 /* Pods_DominantCrypto.framework */; };
+		CE04D7EC215236DB00AD3D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */; };
+		CE04D7ED215236DB00AD3D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */; };
+		CE735BC921523A7D00E2849E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC621523A7900E2849E /* Assets.xcassets */; };
+		CE735BCA21523A7D00E2849E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC621523A7900E2849E /* Assets.xcassets */; };
+		CE735BCC21523A7D00E2849E /* Crypto.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC721523A7D00E2849E /* Crypto.xcassets */; };
+		CE735BCD21523A7D00E2849E /* Investors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC821523A7D00E2849E /* Investors.xcassets */; };
+		CE735BD021523B0900E2849E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BCF21523B0900E2849E /* Constants.swift */; };
+		CE735BD121523B0900E2849E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BCF21523B0900E2849E /* Constants.swift */; };
+		CE735BDB21523B1300E2849E /* Ratings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD321523B1300E2849E /* Ratings.storyboard */; };
+		CE735BDC21523B1300E2849E /* Ratings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD321523B1300E2849E /* Ratings.storyboard */; };
+		CE735BDD21523B1300E2849E /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD421523B1300E2849E /* Authorization.storyboard */; };
+		CE735BDE21523B1300E2849E /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD421523B1300E2849E /* Authorization.storyboard */; };
+		CE735BDF21523B1300E2849E /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD521523B1300E2849E /* Portfolio.storyboard */; };
+		CE735BE021523B1300E2849E /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD521523B1300E2849E /* Portfolio.storyboard */; };
+		CE735BE121523B1300E2849E /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD621523B1300E2849E /* Analytics.storyboard */; };
+		CE735BE221523B1300E2849E /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD621523B1300E2849E /* Analytics.storyboard */; };
+		CE735BE321523B1300E2849E /* Screener.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD721523B1300E2849E /* Screener.storyboard */; };
+		CE735BE421523B1300E2849E /* Screener.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD721523B1300E2849E /* Screener.storyboard */; };
+		CE735BE521523B1300E2849E /* OutsourceCharts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD821523B1300E2849E /* OutsourceCharts.storyboard */; };
+		CE735BE621523B1300E2849E /* OutsourceCharts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD821523B1300E2849E /* OutsourceCharts.storyboard */; };
+		CE735BE721523B1300E2849E /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD921523B1300E2849E /* TabBar.storyboard */; };
+		CE735BE821523B1300E2849E /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD921523B1300E2849E /* TabBar.storyboard */; };
+		CE735BE921523B1300E2849E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BDA21523B1300E2849E /* Main.storyboard */; };
+		CE735BEA21523B1300E2849E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BDA21523B1300E2849E /* Main.storyboard */; };
+		CE735D0021523B2400E2849E /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF321523B2200E2849E /* TableViewDataSource.swift */; };
+		CE735D0121523B2400E2849E /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF321523B2200E2849E /* TableViewDataSource.swift */; };
+		CE735D0221523B2400E2849E /* EditableCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF421523B2200E2849E /* EditableCellDataSource.swift */; };
+		CE735D0321523B2400E2849E /* EditableCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF421523B2200E2849E /* EditableCellDataSource.swift */; };
+		CE735D0421523B2400E2849E /* TableViewComposedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF521523B2200E2849E /* TableViewComposedDataSource.swift */; };
+		CE735D0521523B2400E2849E /* TableViewComposedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF521523B2200E2849E /* TableViewComposedDataSource.swift */; };
+		CE735D0621523B2400E2849E /* TableViewDataSourceShim.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF621523B2200E2849E /* TableViewDataSourceShim.swift */; };
+		CE735D0721523B2400E2849E /* TableViewDataSourceShim.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF621523B2200E2849E /* TableViewDataSourceShim.swift */; };
+		CE735D0821523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF721523B2200E2849E /* TableViewDataSourceCollapsible.swift */; };
+		CE735D0921523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF721523B2200E2849E /* TableViewDataSourceCollapsible.swift */; };
+		CE735D0A21523B2400E2849E /* TableViewArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF821523B2200E2849E /* TableViewArrayDataSource.swift */; };
+		CE735D0B21523B2400E2849E /* TableViewArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF821523B2200E2849E /* TableViewArrayDataSource.swift */; };
+		CE735D0C21523B2400E2849E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF921523B2200E2849E /* Extensions.swift */; };
+		CE735D0D21523B2400E2849E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BF921523B2200E2849E /* Extensions.swift */; };
+		CE735D0E21523B2400E2849E /* TableViewItemConfigurators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BFA21523B2200E2849E /* TableViewItemConfigurators.swift */; };
+		CE735D0F21523B2400E2849E /* TableViewItemConfigurators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BFA21523B2200E2849E /* TableViewItemConfigurators.swift */; };
+		CE735D1021523B2400E2849E /* EditableSectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BFB21523B2200E2849E /* EditableSectionDataSource.swift */; };
+		CE735D1121523B2400E2849E /* EditableSectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BFB21523B2200E2849E /* EditableSectionDataSource.swift */; };
+		CE735E3E21523B2400E2849E /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CAF21523B2300E2849E /* PersonalViewController.swift */; };
+		CE735E3F21523B2400E2849E /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CAF21523B2300E2849E /* PersonalViewController.swift */; };
+		CE735E4021523B2400E2849E /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CB121523B2300E2849E /* PortfolioTableViewCell.swift */; };
+		CE735E4121523B2400E2849E /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CB121523B2300E2849E /* PortfolioTableViewCell.swift */; };
+		CE735E4221523B2400E2849E /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CB221523B2300E2849E /* SearchTableViewCell.xib */; };
+		CE735E4321523B2400E2849E /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CB221523B2300E2849E /* SearchTableViewCell.xib */; };
+		CE735E4421523B2400E2849E /* AssetsSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CB321523B2300E2849E /* AssetsSection.xib */; };
+		CE735E4521523B2400E2849E /* AssetsSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CB321523B2300E2849E /* AssetsSection.xib */; };
+		CE735E4621523B2400E2849E /* AssetsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CB421523B2300E2849E /* AssetsSection.swift */; };
+		CE735E4721523B2400E2849E /* AssetsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CB421523B2300E2849E /* AssetsSection.swift */; };
+		CE735E4821523B2400E2849E /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CB521523B2300E2849E /* SearchTableViewCell.swift */; };
+		CE735E4921523B2400E2849E /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CB521523B2300E2849E /* SearchTableViewCell.swift */; };
+		CE735E4A21523B2400E2849E /* PortfolioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CB621523B2300E2849E /* PortfolioTableViewCell.xib */; };
+		CE735E4B21523B2400E2849E /* PortfolioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CB621523B2300E2849E /* PortfolioTableViewCell.xib */; };
+		CE735E4C21523B2400E2849E /* AssetsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CB721523B2300E2849E /* AssetsTableViewCell.xib */; };
+		CE735E4D21523B2400E2849E /* AssetsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CB721523B2300E2849E /* AssetsTableViewCell.xib */; };
+		CE735E4E21523B2400E2849E /* AssetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CB821523B2300E2849E /* AssetsTableViewCell.swift */; };
+		CE735E4F21523B2400E2849E /* AssetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CB821523B2300E2849E /* AssetsTableViewCell.swift */; };
+		CE735E5021523B2400E2849E /* PersonDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CB921523B2300E2849E /* PersonDataSources.swift */; };
+		CE735E5121523B2400E2849E /* PersonDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CB921523B2300E2849E /* PersonDataSources.swift */; };
+		CE735E5221523B2400E2849E /* CreateSignalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CBB21523B2300E2849E /* CreateSignalTableViewCell.xib */; };
+		CE735E5321523B2400E2849E /* CreateSignalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CBB21523B2300E2849E /* CreateSignalTableViewCell.xib */; };
+		CE735E5421523B2400E2849E /* WatchListSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CBC21523B2300E2849E /* WatchListSection.xib */; };
+		CE735E5521523B2400E2849E /* WatchListSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CBC21523B2300E2849E /* WatchListSection.xib */; };
+		CE735E5621523B2400E2849E /* WatchListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CBD21523B2300E2849E /* WatchListSection.swift */; };
+		CE735E5721523B2400E2849E /* WatchListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CBD21523B2300E2849E /* WatchListSection.swift */; };
+		CE735E5821523B2400E2849E /* WatchListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CBE21523B2300E2849E /* WatchListTableViewCell.xib */; };
+		CE735E5921523B2400E2849E /* WatchListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CBE21523B2300E2849E /* WatchListTableViewCell.xib */; };
+		CE735E5A21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CBF21523B2300E2849E /* CreateSignalTableViewCell.swift */; };
+		CE735E5B21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CBF21523B2300E2849E /* CreateSignalTableViewCell.swift */; };
+		CE735E5C21523B2400E2849E /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC021523B2300E2849E /* WatchListTableViewCell.swift */; };
+		CE735E5D21523B2400E2849E /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC021523B2300E2849E /* WatchListTableViewCell.swift */; };
+		CE735E5E21523B2400E2849E /* NavigationControllerDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC221523B2300E2849E /* NavigationControllerDecorator.swift */; };
+		CE735E5F21523B2400E2849E /* NavigationControllerDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC221523B2300E2849E /* NavigationControllerDecorator.swift */; };
+		CE735E6021523B2400E2849E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC321523B2300E2849E /* NavigationController.swift */; };
+		CE735E6121523B2400E2849E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC321523B2300E2849E /* NavigationController.swift */; };
+		CE735E6221523B2400E2849E /* DMScreenerTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC521523B2300E2849E /* DMScreenerTypeViewController.swift */; };
+		CE735E6321523B2400E2849E /* DMScreenerTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC521523B2300E2849E /* DMScreenerTypeViewController.swift */; };
+		CE735E6421523B2400E2849E /* DMSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC621523B2300E2849E /* DMSubscriptionViewController.swift */; };
+		CE735E6521523B2400E2849E /* DMSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC621523B2300E2849E /* DMSubscriptionViewController.swift */; };
+		CE735E6621523B2400E2849E /* DMCryptoScreenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC721523B2300E2849E /* DMCryptoScreenerViewController.swift */; };
+		CE735E6721523B2400E2849E /* DMCryptoScreenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC721523B2300E2849E /* DMCryptoScreenerViewController.swift */; };
+		CE735E6821523B2400E2849E /* DMScreenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC821523B2300E2849E /* DMScreenerViewController.swift */; };
+		CE735E6921523B2400E2849E /* DMScreenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC821523B2300E2849E /* DMScreenerViewController.swift */; };
+		CE735E6A21523B2400E2849E /* DMScreenerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC921523B2300E2849E /* DMScreenerContainerViewController.swift */; };
+		CE735E6B21523B2400E2849E /* DMScreenerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CC921523B2300E2849E /* DMScreenerContainerViewController.swift */; };
+		CE735E6C21523B2400E2849E /* DMStockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CCA21523B2300E2849E /* DMStockDetailViewController.swift */; };
+		CE735E6D21523B2400E2849E /* DMStockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CCA21523B2300E2849E /* DMStockDetailViewController.swift */; };
+		CE735E6E21523B2400E2849E /* DMSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CCC21523B2300E2849E /* DMSignUpViewController.swift */; };
+		CE735E6F21523B2400E2849E /* DMSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CCC21523B2300E2849E /* DMSignUpViewController.swift */; };
+		CE735E7021523B2400E2849E /* DMRatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CCE21523B2300E2849E /* DMRatingsViewController.swift */; };
+		CE735E7121523B2400E2849E /* DMRatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CCE21523B2300E2849E /* DMRatingsViewController.swift */; };
+		CE735E7221523B2400E2849E /* DMTradingViewChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD021523B2300E2849E /* DMTradingViewChartViewController.swift */; };
+		CE735E7321523B2400E2849E /* DMTradingViewChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD021523B2300E2849E /* DMTradingViewChartViewController.swift */; };
+		CE735E7421523B2400E2849E /* DMEstimazeChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD121523B2300E2849E /* DMEstimazeChartViewController.swift */; };
+		CE735E7521523B2400E2849E /* DMEstimazeChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD121523B2300E2849E /* DMEstimazeChartViewController.swift */; };
+		CE735E7621523B2400E2849E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD221523B2300E2849E /* Storyboard.swift */; };
+		CE735E7721523B2400E2849E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD221523B2300E2849E /* Storyboard.swift */; };
+		CE735E7821523B2400E2849E /* DMLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD421523B2300E2849E /* DMLaunchViewController.swift */; };
+		CE735E7921523B2400E2849E /* DMLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD421523B2300E2849E /* DMLaunchViewController.swift */; };
+		CE735E7A21523B2400E2849E /* StringTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CD621523B2300E2849E /* StringTableViewCell.xib */; };
+		CE735E7B21523B2400E2849E /* StringTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CD621523B2300E2849E /* StringTableViewCell.xib */; };
+		CE735E7C21523B2400E2849E /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD721523B2300E2849E /* SearchController.swift */; };
+		CE735E7D21523B2400E2849E /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD721523B2300E2849E /* SearchController.swift */; };
+		CE735E7E21523B2400E2849E /* StringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD821523B2300E2849E /* StringTableViewCell.swift */; };
+		CE735E7F21523B2400E2849E /* StringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD821523B2300E2849E /* StringTableViewCell.swift */; };
+		CE735E8021523B2400E2849E /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD921523B2300E2849E /* DMViewController.swift */; };
+		CE735E8121523B2400E2849E /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CD921523B2300E2849E /* DMViewController.swift */; };
+		CE735E8221523B2400E2849E /* BuySectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CDB21523B2300E2849E /* BuySectionView.xib */; };
+		CE735E8321523B2400E2849E /* BuySectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CDB21523B2300E2849E /* BuySectionView.xib */; };
+		CE735E8421523B2400E2849E /* BuySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CDC21523B2300E2849E /* BuySectionView.swift */; };
+		CE735E8521523B2400E2849E /* BuySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CDC21523B2300E2849E /* BuySectionView.swift */; };
+		CE735E8621523B2400E2849E /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CDD21523B2300E2849E /* BuyViewController.swift */; };
+		CE735E8721523B2400E2849E /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CDD21523B2300E2849E /* BuyViewController.swift */; };
+		CE735E8821523B2400E2849E /* BuyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CDE21523B2300E2849E /* BuyTableViewCell.swift */; };
+		CE735E8921523B2400E2849E /* BuyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CDE21523B2300E2849E /* BuyTableViewCell.swift */; };
+		CE735E8A21523B2400E2849E /* BuyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CDF21523B2300E2849E /* BuyTableViewCell.xib */; };
+		CE735E8B21523B2400E2849E /* BuyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735CDF21523B2300E2849E /* BuyTableViewCell.xib */; };
+		CE735E8C21523B2400E2849E /* KeyboardObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE021523B2300E2849E /* KeyboardObservableViewController.swift */; };
+		CE735E8D21523B2400E2849E /* KeyboardObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE021523B2300E2849E /* KeyboardObservableViewController.swift */; };
+		CE735E8E21523B2400E2849E /* DMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE221523B2300E2849E /* DMLoginViewController.swift */; };
+		CE735E8F21523B2400E2849E /* DMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE221523B2300E2849E /* DMLoginViewController.swift */; };
+		CE735E9021523B2400E2849E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE321523B2300E2849E /* TabBarController.swift */; };
+		CE735E9121523B2400E2849E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE321523B2300E2849E /* TabBarController.swift */; };
+		CE735E9221523B2400E2849E /* DMAnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE521523B2300E2849E /* DMAnalyticsViewController.swift */; };
+		CE735E9321523B2400E2849E /* DMAnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE521523B2300E2849E /* DMAnalyticsViewController.swift */; };
+		CE735E9421523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE621523B2300E2849E /* DMCompanyDetailViewController.swift */; };
+		CE735E9521523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE621523B2300E2849E /* DMCompanyDetailViewController.swift */; };
+		CE735E9621523B2400E2849E /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE821523B2300E2849E /* SessionAdapter.swift */; };
+		CE735E9721523B2400E2849E /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE821523B2300E2849E /* SessionAdapter.swift */; };
+		CE735E9821523B2400E2849E /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE921523B2300E2849E /* ServiceLocator.swift */; };
+		CE735E9921523B2400E2849E /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE921523B2300E2849E /* ServiceLocator.swift */; };
+		CE735E9A21523B2400E2849E /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CEA21523B2300E2849E /* CompletionHandler.swift */; };
+		CE735E9B21523B2400E2849E /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CEA21523B2300E2849E /* CompletionHandler.swift */; };
+		CE735E9C21523B2400E2849E /* AccountsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CEB21523B2300E2849E /* AccountsDataProvider.swift */; };
+		CE735E9D21523B2400E2849E /* AccountsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CEB21523B2300E2849E /* AccountsDataProvider.swift */; };
+		CE735E9E21523B2400E2849E /* PortfolioDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CEC21523B2300E2849E /* PortfolioDataProvider.swift */; };
+		CE735E9F21523B2400E2849E /* PortfolioDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CEC21523B2300E2849E /* PortfolioDataProvider.swift */; };
+		CE735EA021523B2400E2849E /* InvestorsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CED21523B2300E2849E /* InvestorsDataProvider.swift */; };
+		CE735EA121523B2400E2849E /* InvestorsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CED21523B2300E2849E /* InvestorsDataProvider.swift */; };
+		CE735EA221523B2400E2849E /* Signals+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CEF21523B2300E2849E /* Signals+Request.swift */; };
+		CE735EA321523B2400E2849E /* Signals+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CEF21523B2300E2849E /* Signals+Request.swift */; };
+		CE735EA421523B2400E2849E /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF021523B2300E2849E /* RequestProvider.swift */; };
+		CE735EA521523B2400E2849E /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF021523B2300E2849E /* RequestProvider.swift */; };
+		CE735EA621523B2400E2849E /* User+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF121523B2300E2849E /* User+Request.swift */; };
+		CE735EA721523B2400E2849E /* User+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF121523B2300E2849E /* User+Request.swift */; };
+		CE735EA821523B2400E2849E /* Portfolio+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF221523B2300E2849E /* Portfolio+Request.swift */; };
+		CE735EA921523B2400E2849E /* Portfolio+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF221523B2300E2849E /* Portfolio+Request.swift */; };
+		CE735EAA21523B2400E2849E /* Investors+Requesrt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF321523B2300E2849E /* Investors+Requesrt.swift */; };
+		CE735EAB21523B2400E2849E /* Investors+Requesrt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF321523B2300E2849E /* Investors+Requesrt.swift */; };
+		CE735EAC21523B2400E2849E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF421523B2300E2849E /* Repository.swift */; };
+		CE735EAD21523B2400E2849E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF421523B2300E2849E /* Repository.swift */; };
+		CE735EAE21523B2400E2849E /* SignalsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF521523B2300E2849E /* SignalsDataProvider.swift */; };
+		CE735EAF21523B2400E2849E /* SignalsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF521523B2300E2849E /* SignalsDataProvider.swift */; };
+		CE735EC621523CF200E2849E /* OffsetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB621523CF200E2849E /* OffsetResponse.swift */; };
+		CE735EC721523CF200E2849E /* OffsetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB621523CF200E2849E /* OffsetResponse.swift */; };
+		CE735EC821523CF200E2849E /* InvestorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB721523CF200E2849E /* InvestorModel.swift */; };
+		CE735EC921523CF200E2849E /* InvestorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB721523CF200E2849E /* InvestorModel.swift */; };
+		CE735ECA21523CF200E2849E /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB821523CF200E2849E /* CompanyModel.swift */; };
+		CE735ECB21523CF200E2849E /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB821523CF200E2849E /* CompanyModel.swift */; };
+		CE735ECC21523CF200E2849E /* SignalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB921523CF200E2849E /* SignalModel.swift */; };
+		CE735ECD21523CF200E2849E /* SignalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB921523CF200E2849E /* SignalModel.swift */; };
+		CE735ECE21523CF200E2849E /* PortfolioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EBA21523CF200E2849E /* PortfolioModel.swift */; };
+		CE735ECF21523CF200E2849E /* PortfolioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EBA21523CF200E2849E /* PortfolioModel.swift */; };
+		CE735ED021523CF200E2849E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EBB21523CF200E2849E /* UserModel.swift */; };
+		CE735ED121523CF200E2849E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EBB21523CF200E2849E /* UserModel.swift */; };
+		CE735EF021523FA000E2849E /* DMCompanyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735ED821523FA000E2849E /* DMCompanyCollectionCell.swift */; };
+		CE735EF121523FA000E2849E /* DMCompanyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735ED821523FA000E2849E /* DMCompanyCollectionCell.swift */; };
+		CE735EF221523FA000E2849E /* DMStockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735ED921523FA000E2849E /* DMStockCell.xib */; };
+		CE735EF321523FA000E2849E /* DMStockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735ED921523FA000E2849E /* DMStockCell.xib */; };
+		CE735EF421523FA000E2849E /* DMSignalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EDA21523FA000E2849E /* DMSignalCell.xib */; };
+		CE735EF521523FA000E2849E /* DMSignalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EDA21523FA000E2849E /* DMSignalCell.xib */; };
+		CE735EF621523FA000E2849E /* DMStockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EDB21523FA000E2849E /* DMStockCell.swift */; };
+		CE735EF721523FA000E2849E /* DMStockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EDB21523FA000E2849E /* DMStockCell.swift */; };
+		CE735EF821523FA000E2849E /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EDC21523FA000E2849E /* ChartView.swift */; };
+		CE735EF921523FA000E2849E /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EDC21523FA000E2849E /* ChartView.swift */; };
+		CE735EFA21523FA000E2849E /* DMStockInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EDD21523FA000E2849E /* DMStockInfoCell.xib */; };
+		CE735EFB21523FA000E2849E /* DMStockInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EDD21523FA000E2849E /* DMStockInfoCell.xib */; };
+		CE735EFC21523FA000E2849E /* DMInfoIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EDE21523FA000E2849E /* DMInfoIntroView.swift */; };
+		CE735EFD21523FA000E2849E /* DMInfoIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EDE21523FA000E2849E /* DMInfoIntroView.swift */; };
+		CE735EFE21523FA000E2849E /* DMCryptoInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EDF21523FA000E2849E /* DMCryptoInfoContainer.swift */; };
+		CE735EFF21523FA000E2849E /* DMCryptoInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EDF21523FA000E2849E /* DMCryptoInfoContainer.swift */; };
+		CE735F0021523FA000E2849E /* DMPortfolioTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EE021523FA000E2849E /* DMPortfolioTotalCell.swift */; };
+		CE735F0121523FA000E2849E /* DMPortfolioTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EE021523FA000E2849E /* DMPortfolioTotalCell.swift */; };
+		CE735F0221523FA000E2849E /* DMRatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EE121523FA000E2849E /* DMRatingTableViewCell.swift */; };
+		CE735F0321523FA000E2849E /* DMRatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EE121523FA000E2849E /* DMRatingTableViewCell.swift */; };
+		CE735F0421523FA000E2849E /* SegmentControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EE321523FA000E2849E /* SegmentControll.swift */; };
+		CE735F0521523FA000E2849E /* SegmentControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EE321523FA000E2849E /* SegmentControll.swift */; };
+		CE735F0621523FA000E2849E /* DMSignalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EE421523FA000E2849E /* DMSignalCell.swift */; };
+		CE735F0721523FA000E2849E /* DMSignalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EE421523FA000E2849E /* DMSignalCell.swift */; };
+		CE735F0821523FA000E2849E /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EE521523FA000E2849E /* ChartView.xib */; };
+		CE735F0921523FA000E2849E /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EE521523FA000E2849E /* ChartView.xib */; };
+		CE735F0A21523FA000E2849E /* DMDropDownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EE621523FA000E2849E /* DMDropDownTableViewCell.xib */; };
+		CE735F0B21523FA000E2849E /* DMDropDownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EE621523FA000E2849E /* DMDropDownTableViewCell.xib */; };
+		CE735F0C21523FA000E2849E /* DMCompanyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EE821523FA000E2849E /* DMCompanyCollectionCell.xib */; };
+		CE735F0D21523FA000E2849E /* DMCompanyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EE821523FA000E2849E /* DMCompanyCollectionCell.xib */; };
+		CE735F0E21523FA000E2849E /* DMPortfolioTotalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EE921523FA000E2849E /* DMPortfolioTotalCell.xib */; };
+		CE735F0F21523FA000E2849E /* DMPortfolioTotalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EE921523FA000E2849E /* DMPortfolioTotalCell.xib */; };
+		CE735F1021523FA000E2849E /* DMStatsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EEA21523FA000E2849E /* DMStatsContainer.swift */; };
+		CE735F1121523FA000E2849E /* DMStatsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EEA21523FA000E2849E /* DMStatsContainer.swift */; };
+		CE735F1221523FA000E2849E /* DMRatingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EEB21523FA000E2849E /* DMRatingTableViewCell.xib */; };
+		CE735F1321523FA000E2849E /* DMRatingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EEB21523FA000E2849E /* DMRatingTableViewCell.xib */; };
+		CE735F1421523FA000E2849E /* DMInfoIntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EEC21523FA000E2849E /* DMInfoIntroView.xib */; };
+		CE735F1521523FA000E2849E /* DMInfoIntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735EEC21523FA000E2849E /* DMInfoIntroView.xib */; };
+		CE735F1621523FA000E2849E /* DMDropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EED21523FA000E2849E /* DMDropDownTableViewCell.swift */; };
+		CE735F1721523FA000E2849E /* DMDropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EED21523FA000E2849E /* DMDropDownTableViewCell.swift */; };
+		CE735F1821523FA000E2849E /* DMStockInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EEE21523FA000E2849E /* DMStockInfoCell.swift */; };
+		CE735F1921523FA000E2849E /* DMStockInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EEE21523FA000E2849E /* DMStockInfoCell.swift */; };
+		CE735F1A21523FA000E2849E /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE735EEF21523FA000E2849E /* FXBlurView.m */; };
+		CE735F1B21523FA000E2849E /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE735EEF21523FA000E2849E /* FXBlurView.m */; };
+		CE735F1D2152406B00E2849E /* SwiftStockKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F1C2152406B00E2849E /* SwiftStockKit.swift */; };
+		CE735F1E2152406B00E2849E /* SwiftStockKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F1C2152406B00E2849E /* SwiftStockKit.swift */; };
+		CE735F28215247AB00E2849E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735F27215247AB00E2849E /* Launch Screen.storyboard */; };
+		CE735F29215247AB00E2849E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735F27215247AB00E2849E /* Launch Screen.storyboard */; };
+		CE735F302152653600E2849E /* MuseoCyrl700.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2B2152653600E2849E /* MuseoCyrl700.otf */; };
+		CE735F312152653600E2849E /* MuseoCyrl700.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2B2152653600E2849E /* MuseoCyrl700.otf */; };
+		CE735F322152653600E2849E /* MuseoCyrl500.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2C2152653600E2849E /* MuseoCyrl500.otf */; };
+		CE735F332152653600E2849E /* MuseoCyrl500.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2C2152653600E2849E /* MuseoCyrl500.otf */; };
+		CE735F342152653600E2849E /* MuseoCyrl100.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2D2152653600E2849E /* MuseoCyrl100.otf */; };
+		CE735F352152653600E2849E /* MuseoCyrl100.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2D2152653600E2849E /* MuseoCyrl100.otf */; };
+		CE735F362152653600E2849E /* MuseoCyrl300.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2E2152653600E2849E /* MuseoCyrl300.otf */; };
+		CE735F372152653600E2849E /* MuseoCyrl300.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2E2152653600E2849E /* MuseoCyrl300.otf */; };
+		CE735F382152653600E2849E /* MuseoCyrl900.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2F2152653600E2849E /* MuseoCyrl900.otf */; };
+		CE735F392152653600E2849E /* MuseoCyrl900.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE735F2F2152653600E2849E /* MuseoCyrl900.otf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		363CBE73292F3B57EBC39762 /* Pods-DominantInvestors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantInvestors.release.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors.release.xcconfig"; sourceTree = "<group>"; };
+		9E0A733618BF5F7879B72B8D /* Pods-DominantCrypto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantCrypto.release.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto.release.xcconfig"; sourceTree = "<group>"; };
+		B7B4F88AD8A2FE5DB2595A6E /* Pods-DominantInvestors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantInvestors.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors.debug.xcconfig"; sourceTree = "<group>"; };
+		C9DBD300783B3BA57C773EA0 /* Pods_DominantCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominantCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE04D7A1215231CE00AD3D4D /* DominantInvestors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominantInvestors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE04D7C22152321F00AD3D4D /* DominantCrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominantCrypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE04D7D6215236DB00AD3D4D /* DominantCrypto.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DominantCrypto.plist; sourceTree = "<group>"; };
+		CE04D7D7215236DB00AD3D4D /* DominantInvestors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DominantInvestors.plist; sourceTree = "<group>"; };
+		CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE735BC621523A7900E2849E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../ciklum/Dominant-Investors_iOS_App/Dominant Investors/Assets.xcassets"; sourceTree = "<group>"; };
+		CE735BC721523A7D00E2849E /* Crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crypto.xcassets; sourceTree = "<group>"; };
+		CE735BC821523A7D00E2849E /* Investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Investors.xcassets; sourceTree = "<group>"; };
+		CE735BCF21523B0900E2849E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE735BD321523B1300E2849E /* Ratings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ratings.storyboard; sourceTree = "<group>"; };
+		CE735BD421523B1300E2849E /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		CE735BD521523B1300E2849E /* Portfolio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
+		CE735BD621523B1300E2849E /* Analytics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Analytics.storyboard; sourceTree = "<group>"; };
+		CE735BD721523B1300E2849E /* Screener.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Screener.storyboard; sourceTree = "<group>"; };
+		CE735BD821523B1300E2849E /* OutsourceCharts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OutsourceCharts.storyboard; sourceTree = "<group>"; };
+		CE735BD921523B1300E2849E /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		CE735BDA21523B1300E2849E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CE735BF321523B2200E2849E /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		CE735BF421523B2200E2849E /* EditableCellDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableCellDataSource.swift; sourceTree = "<group>"; };
+		CE735BF521523B2200E2849E /* TableViewComposedDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewComposedDataSource.swift; sourceTree = "<group>"; };
+		CE735BF621523B2200E2849E /* TableViewDataSourceShim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceShim.swift; sourceTree = "<group>"; };
+		CE735BF721523B2200E2849E /* TableViewDataSourceCollapsible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceCollapsible.swift; sourceTree = "<group>"; };
+		CE735BF821523B2200E2849E /* TableViewArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewArrayDataSource.swift; sourceTree = "<group>"; };
+		CE735BF921523B2200E2849E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CE735BFA21523B2200E2849E /* TableViewItemConfigurators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewItemConfigurators.swift; sourceTree = "<group>"; };
+		CE735BFB21523B2200E2849E /* EditableSectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableSectionDataSource.swift; sourceTree = "<group>"; };
+		CE735CAF21523B2300E2849E /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		CE735CB121523B2300E2849E /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
+		CE735CB221523B2300E2849E /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		CE735CB321523B2300E2849E /* AssetsSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetsSection.xib; sourceTree = "<group>"; };
+		CE735CB421523B2300E2849E /* AssetsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsSection.swift; sourceTree = "<group>"; };
+		CE735CB521523B2300E2849E /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		CE735CB621523B2300E2849E /* PortfolioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortfolioTableViewCell.xib; sourceTree = "<group>"; };
+		CE735CB721523B2300E2849E /* AssetsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetsTableViewCell.xib; sourceTree = "<group>"; };
+		CE735CB821523B2300E2849E /* AssetsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsTableViewCell.swift; sourceTree = "<group>"; };
+		CE735CB921523B2300E2849E /* PersonDataSources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDataSources.swift; sourceTree = "<group>"; };
+		CE735CBB21523B2300E2849E /* CreateSignalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateSignalTableViewCell.xib; sourceTree = "<group>"; };
+		CE735CBC21523B2300E2849E /* WatchListSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchListSection.xib; sourceTree = "<group>"; };
+		CE735CBD21523B2300E2849E /* WatchListSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchListSection.swift; sourceTree = "<group>"; };
+		CE735CBE21523B2300E2849E /* WatchListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchListTableViewCell.xib; sourceTree = "<group>"; };
+		CE735CBF21523B2300E2849E /* CreateSignalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateSignalTableViewCell.swift; sourceTree = "<group>"; };
+		CE735CC021523B2300E2849E /* WatchListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchListTableViewCell.swift; sourceTree = "<group>"; };
+		CE735CC221523B2300E2849E /* NavigationControllerDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDecorator.swift; sourceTree = "<group>"; };
+		CE735CC321523B2300E2849E /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		CE735CC521523B2300E2849E /* DMScreenerTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMScreenerTypeViewController.swift; sourceTree = "<group>"; };
+		CE735CC621523B2300E2849E /* DMSubscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSubscriptionViewController.swift; sourceTree = "<group>"; };
+		CE735CC721523B2300E2849E /* DMCryptoScreenerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMCryptoScreenerViewController.swift; sourceTree = "<group>"; };
+		CE735CC821523B2300E2849E /* DMScreenerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMScreenerViewController.swift; sourceTree = "<group>"; };
+		CE735CC921523B2300E2849E /* DMScreenerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMScreenerContainerViewController.swift; sourceTree = "<group>"; };
+		CE735CCA21523B2300E2849E /* DMStockDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMStockDetailViewController.swift; sourceTree = "<group>"; };
+		CE735CCC21523B2300E2849E /* DMSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSignUpViewController.swift; sourceTree = "<group>"; };
+		CE735CCE21523B2300E2849E /* DMRatingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMRatingsViewController.swift; sourceTree = "<group>"; };
+		CE735CD021523B2300E2849E /* DMTradingViewChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMTradingViewChartViewController.swift; sourceTree = "<group>"; };
+		CE735CD121523B2300E2849E /* DMEstimazeChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMEstimazeChartViewController.swift; sourceTree = "<group>"; };
+		CE735CD221523B2300E2849E /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		CE735CD421523B2300E2849E /* DMLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLaunchViewController.swift; sourceTree = "<group>"; };
+		CE735CD621523B2300E2849E /* StringTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StringTableViewCell.xib; sourceTree = "<group>"; };
+		CE735CD721523B2300E2849E /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		CE735CD821523B2300E2849E /* StringTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTableViewCell.swift; sourceTree = "<group>"; };
+		CE735CD921523B2300E2849E /* DMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMViewController.swift; sourceTree = "<group>"; };
+		CE735CDB21523B2300E2849E /* BuySectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuySectionView.xib; sourceTree = "<group>"; };
+		CE735CDC21523B2300E2849E /* BuySectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuySectionView.swift; sourceTree = "<group>"; };
+		CE735CDD21523B2300E2849E /* BuyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		CE735CDE21523B2300E2849E /* BuyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyTableViewCell.swift; sourceTree = "<group>"; };
+		CE735CDF21523B2300E2849E /* BuyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyTableViewCell.xib; sourceTree = "<group>"; };
+		CE735CE021523B2300E2849E /* KeyboardObservableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObservableViewController.swift; sourceTree = "<group>"; };
+		CE735CE221523B2300E2849E /* DMLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginViewController.swift; sourceTree = "<group>"; };
+		CE735CE321523B2300E2849E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CE735CE521523B2300E2849E /* DMAnalyticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAnalyticsViewController.swift; sourceTree = "<group>"; };
+		CE735CE621523B2300E2849E /* DMCompanyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMCompanyDetailViewController.swift; sourceTree = "<group>"; };
+		CE735CE821523B2300E2849E /* SessionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
+		CE735CE921523B2300E2849E /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		CE735CEA21523B2300E2849E /* CompletionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
+		CE735CEB21523B2300E2849E /* AccountsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsDataProvider.swift; sourceTree = "<group>"; };
+		CE735CEC21523B2300E2849E /* PortfolioDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioDataProvider.swift; sourceTree = "<group>"; };
+		CE735CED21523B2300E2849E /* InvestorsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestorsDataProvider.swift; sourceTree = "<group>"; };
+		CE735CEF21523B2300E2849E /* Signals+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Signals+Request.swift"; sourceTree = "<group>"; };
+		CE735CF021523B2300E2849E /* RequestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
+		CE735CF121523B2300E2849E /* User+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Request.swift"; sourceTree = "<group>"; };
+		CE735CF221523B2300E2849E /* Portfolio+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Portfolio+Request.swift"; sourceTree = "<group>"; };
+		CE735CF321523B2300E2849E /* Investors+Requesrt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Investors+Requesrt.swift"; sourceTree = "<group>"; };
+		CE735CF421523B2300E2849E /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CE735CF521523B2300E2849E /* SignalsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalsDataProvider.swift; sourceTree = "<group>"; };
+		CE735EB621523CF200E2849E /* OffsetResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetResponse.swift; sourceTree = "<group>"; };
+		CE735EB721523CF200E2849E /* InvestorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestorModel.swift; sourceTree = "<group>"; };
+		CE735EB821523CF200E2849E /* CompanyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
+		CE735EB921523CF200E2849E /* SignalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalModel.swift; sourceTree = "<group>"; };
+		CE735EBA21523CF200E2849E /* PortfolioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioModel.swift; sourceTree = "<group>"; };
+		CE735EBB21523CF200E2849E /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		CE735ED821523FA000E2849E /* DMCompanyCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMCompanyCollectionCell.swift; sourceTree = "<group>"; };
+		CE735ED921523FA000E2849E /* DMStockCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMStockCell.xib; sourceTree = "<group>"; };
+		CE735EDA21523FA000E2849E /* DMSignalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMSignalCell.xib; sourceTree = "<group>"; };
+		CE735EDB21523FA000E2849E /* DMStockCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMStockCell.swift; sourceTree = "<group>"; };
+		CE735EDC21523FA000E2849E /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		CE735EDD21523FA000E2849E /* DMStockInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMStockInfoCell.xib; sourceTree = "<group>"; };
+		CE735EDE21523FA000E2849E /* DMInfoIntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMInfoIntroView.swift; sourceTree = "<group>"; };
+		CE735EDF21523FA000E2849E /* DMCryptoInfoContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMCryptoInfoContainer.swift; sourceTree = "<group>"; };
+		CE735EE021523FA000E2849E /* DMPortfolioTotalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPortfolioTotalCell.swift; sourceTree = "<group>"; };
+		CE735EE121523FA000E2849E /* DMRatingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMRatingTableViewCell.swift; sourceTree = "<group>"; };
+		CE735EE321523FA000E2849E /* SegmentControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentControll.swift; sourceTree = "<group>"; };
+		CE735EE421523FA000E2849E /* DMSignalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSignalCell.swift; sourceTree = "<group>"; };
+		CE735EE521523FA000E2849E /* ChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
+		CE735EE621523FA000E2849E /* DMDropDownTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMDropDownTableViewCell.xib; sourceTree = "<group>"; };
+		CE735EE721523FA000E2849E /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		CE735EE821523FA000E2849E /* DMCompanyCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMCompanyCollectionCell.xib; sourceTree = "<group>"; };
+		CE735EE921523FA000E2849E /* DMPortfolioTotalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMPortfolioTotalCell.xib; sourceTree = "<group>"; };
+		CE735EEA21523FA000E2849E /* DMStatsContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMStatsContainer.swift; sourceTree = "<group>"; };
+		CE735EEB21523FA000E2849E /* DMRatingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMRatingTableViewCell.xib; sourceTree = "<group>"; };
+		CE735EEC21523FA000E2849E /* DMInfoIntroView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMInfoIntroView.xib; sourceTree = "<group>"; };
+		CE735EED21523FA000E2849E /* DMDropDownTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDropDownTableViewCell.swift; sourceTree = "<group>"; };
+		CE735EEE21523FA000E2849E /* DMStockInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMStockInfoCell.swift; sourceTree = "<group>"; };
+		CE735EEF21523FA000E2849E /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		CE735F1C2152406B00E2849E /* SwiftStockKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftStockKit.swift; sourceTree = "<group>"; };
+		CE735F262152435E00E2849E /* Dominant-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dominant-Bridging-Header.h"; sourceTree = "<group>"; };
+		CE735F27215247AB00E2849E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CE735F2B2152653600E2849E /* MuseoCyrl700.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl700.otf; sourceTree = "<group>"; };
+		CE735F2C2152653600E2849E /* MuseoCyrl500.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl500.otf; sourceTree = "<group>"; };
+		CE735F2D2152653600E2849E /* MuseoCyrl100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl100.otf; sourceTree = "<group>"; };
+		CE735F2E2152653600E2849E /* MuseoCyrl300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl300.otf; sourceTree = "<group>"; };
+		CE735F2F2152653600E2849E /* MuseoCyrl900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoCyrl900.otf; sourceTree = "<group>"; };
+		CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominantInvestors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEB57268B412308413460525 /* Pods-DominantCrypto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantCrypto.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE04D79E215231CE00AD3D4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B3745267EDC827994C5C373 /* Pods_DominantInvestors.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE04D7BA2152321F00AD3D4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37716B655F36541A363ED520 /* Pods_DominantCrypto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02D6829DCEBF64A819421BB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EEB57268B412308413460525 /* Pods-DominantCrypto.debug.xcconfig */,
+				9E0A733618BF5F7879B72B8D /* Pods-DominantCrypto.release.xcconfig */,
+				B7B4F88AD8A2FE5DB2595A6E /* Pods-DominantInvestors.debug.xcconfig */,
+				363CBE73292F3B57EBC39762 /* Pods-DominantInvestors.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE04D798215231CE00AD3D4D = {
+			isa = PBXGroup;
+			children = (
+				CE04D7D2215236DB00AD3D4D /* project */,
+				CE04D7A2215231CE00AD3D4D /* Products */,
+				02D6829DCEBF64A819421BB7 /* Pods */,
+				E482CC02D3CCE862FD9AFBF9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE04D7A2215231CE00AD3D4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE04D7A1215231CE00AD3D4D /* DominantInvestors.app */,
+				CE04D7C22152321F00AD3D4D /* DominantCrypto.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE04D7D2215236DB00AD3D4D /* project */ = {
+			isa = PBXGroup;
+			children = (
+				CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */,
+				CE735BCF21523B0900E2849E /* Constants.swift */,
+				CE735F262152435E00E2849E /* Dominant-Bridging-Header.h */,
+				CE735ED721523FA000E2849E /* Views */,
+				CE735EB021523CF200E2849E /* Models */,
+				CE735CAD21523B2300E2849E /* Controllers */,
+				CE735BF221523B2200E2849E /* DataSource */,
+				CE735CE721523B2300E2849E /* Repositories */,
+				CE735BD221523B1300E2849E /* Storyboards */,
+				CE04D7D4215236DB00AD3D4D /* Resources */,
+			);
+			name = project;
+			sourceTree = "<group>";
+		};
+		CE04D7D4215236DB00AD3D4D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE735F2A2152653600E2849E /* Fonts */,
+				CE735BC621523A7900E2849E /* Assets.xcassets */,
+				CE735BC721523A7D00E2849E /* Crypto.xcassets */,
+				CE735BC821523A7D00E2849E /* Investors.xcassets */,
+				CE04D7D6215236DB00AD3D4D /* DominantCrypto.plist */,
+				CE04D7D7215236DB00AD3D4D /* DominantInvestors.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE735BD221523B1300E2849E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CE735BD321523B1300E2849E /* Ratings.storyboard */,
+				CE735BD421523B1300E2849E /* Authorization.storyboard */,
+				CE735BD521523B1300E2849E /* Portfolio.storyboard */,
+				CE735BD621523B1300E2849E /* Analytics.storyboard */,
+				CE735BD721523B1300E2849E /* Screener.storyboard */,
+				CE735BD821523B1300E2849E /* OutsourceCharts.storyboard */,
+				CE735BD921523B1300E2849E /* TabBar.storyboard */,
+				CE735BDA21523B1300E2849E /* Main.storyboard */,
+				CE735F27215247AB00E2849E /* Launch Screen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CE735BF221523B2200E2849E /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				CE735BF321523B2200E2849E /* TableViewDataSource.swift */,
+				CE735BF421523B2200E2849E /* EditableCellDataSource.swift */,
+				CE735BF521523B2200E2849E /* TableViewComposedDataSource.swift */,
+				CE735BF621523B2200E2849E /* TableViewDataSourceShim.swift */,
+				CE735BF721523B2200E2849E /* TableViewDataSourceCollapsible.swift */,
+				CE735BF821523B2200E2849E /* TableViewArrayDataSource.swift */,
+				CE735BF921523B2200E2849E /* Extensions.swift */,
+				CE735BFA21523B2200E2849E /* TableViewItemConfigurators.swift */,
+				CE735BFB21523B2200E2849E /* EditableSectionDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		CE735CAD21523B2300E2849E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CD221523B2300E2849E /* Storyboard.swift */,
+				CE735CD921523B2300E2849E /* DMViewController.swift */,
+				CE735CE021523B2300E2849E /* KeyboardObservableViewController.swift */,
+				CE735CE321523B2300E2849E /* TabBarController.swift */,
+				CE735CAE21523B2300E2849E /* Personal */,
+				CE735CC121523B2300E2849E /* NavigationController */,
+				CE735CC421523B2300E2849E /* Screener */,
+				CE735CCB21523B2300E2849E /* SignUp */,
+				CE735CCD21523B2300E2849E /* Ratings */,
+				CE735CCF21523B2300E2849E /* Charts */,
+				CE735CD321523B2300E2849E /* Launch Screen */,
+				CE735CD521523B2300E2849E /* SearchController */,
+				CE735CDA21523B2300E2849E /* Buy */,
+				CE735CE121523B2300E2849E /* Login */,
+				CE735CE421523B2300E2849E /* Analytics */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE735CAE21523B2300E2849E /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CAF21523B2300E2849E /* PersonalViewController.swift */,
+				CE735CB921523B2300E2849E /* PersonDataSources.swift */,
+				CE735CB021523B2300E2849E /* Profile */,
+				CE735CBA21523B2300E2849E /* Watchlist */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		CE735CB021523B2300E2849E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CB121523B2300E2849E /* PortfolioTableViewCell.swift */,
+				CE735CB221523B2300E2849E /* SearchTableViewCell.xib */,
+				CE735CB321523B2300E2849E /* AssetsSection.xib */,
+				CE735CB421523B2300E2849E /* AssetsSection.swift */,
+				CE735CB521523B2300E2849E /* SearchTableViewCell.swift */,
+				CE735CB621523B2300E2849E /* PortfolioTableViewCell.xib */,
+				CE735CB721523B2300E2849E /* AssetsTableViewCell.xib */,
+				CE735CB821523B2300E2849E /* AssetsTableViewCell.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CE735CBA21523B2300E2849E /* Watchlist */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CBB21523B2300E2849E /* CreateSignalTableViewCell.xib */,
+				CE735CBC21523B2300E2849E /* WatchListSection.xib */,
+				CE735CBD21523B2300E2849E /* WatchListSection.swift */,
+				CE735CBE21523B2300E2849E /* WatchListTableViewCell.xib */,
+				CE735CBF21523B2300E2849E /* CreateSignalTableViewCell.swift */,
+				CE735CC021523B2300E2849E /* WatchListTableViewCell.swift */,
+			);
+			path = Watchlist;
+			sourceTree = "<group>";
+		};
+		CE735CC121523B2300E2849E /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CC221523B2300E2849E /* NavigationControllerDecorator.swift */,
+				CE735CC321523B2300E2849E /* NavigationController.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		CE735CC421523B2300E2849E /* Screener */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CC521523B2300E2849E /* DMScreenerTypeViewController.swift */,
+				CE735CC621523B2300E2849E /* DMSubscriptionViewController.swift */,
+				CE735CC721523B2300E2849E /* DMCryptoScreenerViewController.swift */,
+				CE735CC821523B2300E2849E /* DMScreenerViewController.swift */,
+				CE735CC921523B2300E2849E /* DMScreenerContainerViewController.swift */,
+				CE735CCA21523B2300E2849E /* DMStockDetailViewController.swift */,
+			);
+			path = Screener;
+			sourceTree = "<group>";
+		};
+		CE735CCB21523B2300E2849E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CCC21523B2300E2849E /* DMSignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		CE735CCD21523B2300E2849E /* Ratings */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CCE21523B2300E2849E /* DMRatingsViewController.swift */,
+			);
+			path = Ratings;
+			sourceTree = "<group>";
+		};
+		CE735CCF21523B2300E2849E /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CD021523B2300E2849E /* DMTradingViewChartViewController.swift */,
+				CE735CD121523B2300E2849E /* DMEstimazeChartViewController.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		CE735CD321523B2300E2849E /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CD421523B2300E2849E /* DMLaunchViewController.swift */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		CE735CD521523B2300E2849E /* SearchController */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CD721523B2300E2849E /* SearchController.swift */,
+				CE735CD821523B2300E2849E /* StringTableViewCell.swift */,
+				CE735CD621523B2300E2849E /* StringTableViewCell.xib */,
+			);
+			path = SearchController;
+			sourceTree = "<group>";
+		};
+		CE735CDA21523B2300E2849E /* Buy */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CDD21523B2300E2849E /* BuyViewController.swift */,
+				CE735CDC21523B2300E2849E /* BuySectionView.swift */,
+				CE735CDB21523B2300E2849E /* BuySectionView.xib */,
+				CE735CDE21523B2300E2849E /* BuyTableViewCell.swift */,
+				CE735CDF21523B2300E2849E /* BuyTableViewCell.xib */,
+			);
+			path = Buy;
+			sourceTree = "<group>";
+		};
+		CE735CE121523B2300E2849E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CE221523B2300E2849E /* DMLoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CE735CE421523B2300E2849E /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CE521523B2300E2849E /* DMAnalyticsViewController.swift */,
+				CE735CE621523B2300E2849E /* DMCompanyDetailViewController.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		CE735CE721523B2300E2849E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CE821523B2300E2849E /* SessionAdapter.swift */,
+				CE735CE921523B2300E2849E /* ServiceLocator.swift */,
+				CE735CEA21523B2300E2849E /* CompletionHandler.swift */,
+				CE735CEB21523B2300E2849E /* AccountsDataProvider.swift */,
+				CE735CEC21523B2300E2849E /* PortfolioDataProvider.swift */,
+				CE735CED21523B2300E2849E /* InvestorsDataProvider.swift */,
+				CE735CEE21523B2300E2849E /* Requests */,
+				CE735CF421523B2300E2849E /* Repository.swift */,
+				CE735CF521523B2300E2849E /* SignalsDataProvider.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CE735CEE21523B2300E2849E /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				CE735CEF21523B2300E2849E /* Signals+Request.swift */,
+				CE735CF021523B2300E2849E /* RequestProvider.swift */,
+				CE735CF121523B2300E2849E /* User+Request.swift */,
+				CE735CF221523B2300E2849E /* Portfolio+Request.swift */,
+				CE735CF321523B2300E2849E /* Investors+Requesrt.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		CE735EB021523CF200E2849E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE735EB621523CF200E2849E /* OffsetResponse.swift */,
+				CE735EB721523CF200E2849E /* InvestorModel.swift */,
+				CE735EB821523CF200E2849E /* CompanyModel.swift */,
+				CE735EB921523CF200E2849E /* SignalModel.swift */,
+				CE735EBA21523CF200E2849E /* PortfolioModel.swift */,
+				CE735EBB21523CF200E2849E /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE735ED721523FA000E2849E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE735F1C2152406B00E2849E /* SwiftStockKit.swift */,
+				CE735ED821523FA000E2849E /* DMCompanyCollectionCell.swift */,
+				CE735ED921523FA000E2849E /* DMStockCell.xib */,
+				CE735EDA21523FA000E2849E /* DMSignalCell.xib */,
+				CE735EDB21523FA000E2849E /* DMStockCell.swift */,
+				CE735EDC21523FA000E2849E /* ChartView.swift */,
+				CE735EDD21523FA000E2849E /* DMStockInfoCell.xib */,
+				CE735EDE21523FA000E2849E /* DMInfoIntroView.swift */,
+				CE735EDF21523FA000E2849E /* DMCryptoInfoContainer.swift */,
+				CE735EE021523FA000E2849E /* DMPortfolioTotalCell.swift */,
+				CE735EE121523FA000E2849E /* DMRatingTableViewCell.swift */,
+				CE735EE221523FA000E2849E /* SegmentControll */,
+				CE735EE421523FA000E2849E /* DMSignalCell.swift */,
+				CE735EE521523FA000E2849E /* ChartView.xib */,
+				CE735EE621523FA000E2849E /* DMDropDownTableViewCell.xib */,
+				CE735EE721523FA000E2849E /* FXBlurView.h */,
+				CE735EE821523FA000E2849E /* DMCompanyCollectionCell.xib */,
+				CE735EE921523FA000E2849E /* DMPortfolioTotalCell.xib */,
+				CE735EEA21523FA000E2849E /* DMStatsContainer.swift */,
+				CE735EEB21523FA000E2849E /* DMRatingTableViewCell.xib */,
+				CE735EEC21523FA000E2849E /* DMInfoIntroView.xib */,
+				CE735EED21523FA000E2849E /* DMDropDownTableViewCell.swift */,
+				CE735EEE21523FA000E2849E /* DMStockInfoCell.swift */,
+				CE735EEF21523FA000E2849E /* FXBlurView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE735EE221523FA000E2849E /* SegmentControll */ = {
+			isa = PBXGroup;
+			children = (
+				CE735EE321523FA000E2849E /* SegmentControll.swift */,
+			);
+			path = SegmentControll;
+			sourceTree = "<group>";
+		};
+		CE735F2A2152653600E2849E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE735F2B2152653600E2849E /* MuseoCyrl700.otf */,
+				CE735F2C2152653600E2849E /* MuseoCyrl500.otf */,
+				CE735F2D2152653600E2849E /* MuseoCyrl100.otf */,
+				CE735F2E2152653600E2849E /* MuseoCyrl300.otf */,
+				CE735F2F2152653600E2849E /* MuseoCyrl900.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E482CC02D3CCE862FD9AFBF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9DBD300783B3BA57C773EA0 /* Pods_DominantCrypto.framework */,
+				CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE04D7A0215231CE00AD3D4D /* DominantInvestors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE04D7B3215231D000AD3D4D /* Build configuration list for PBXNativeTarget "DominantInvestors" */;
+			buildPhases = (
+				83A23BA1B8E5F7D680A623D4 /* [CP] Check Pods Manifest.lock */,
+				CE04D79D215231CE00AD3D4D /* Sources */,
+				CE04D79E215231CE00AD3D4D /* Frameworks */,
+				CE04D79F215231CE00AD3D4D /* Resources */,
+				72F59B71AA7C279E9537D4EF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DominantInvestors;
+			productName = DominantInvestors;
+			productReference = CE04D7A1215231CE00AD3D4D /* DominantInvestors.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE04D7B62152321F00AD3D4D /* DominantCrypto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE04D7BF2152321F00AD3D4D /* Build configuration list for PBXNativeTarget "DominantCrypto" */;
+			buildPhases = (
+				85B37C726C354FFB58023F24 /* [CP] Check Pods Manifest.lock */,
+				CE04D7B72152321F00AD3D4D /* Sources */,
+				CE04D7BA2152321F00AD3D4D /* Frameworks */,
+				CE04D7BB2152321F00AD3D4D /* Resources */,
+				03EA4CA57B5E32519420D224 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DominantCrypto;
+			productName = DominantInvestors;
+			productReference = CE04D7C22152321F00AD3D4D /* DominantCrypto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE04D799215231CE00AD3D4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = DS;
+				TargetAttributes = {
+					CE04D7A0215231CE00AD3D4D = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = CE04D79C215231CE00AD3D4D /* Build configuration list for PBXProject "DominantInvestors" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE04D798215231CE00AD3D4D;
+			productRefGroup = CE04D7A2215231CE00AD3D4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE04D7A0215231CE00AD3D4D /* DominantInvestors */,
+				CE04D7B62152321F00AD3D4D /* DominantCrypto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE04D79F215231CE00AD3D4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE735BDD21523B1300E2849E /* Authorization.storyboard in Resources */,
+				CE735E5221523B2400E2849E /* CreateSignalTableViewCell.xib in Resources */,
+				CE735E4A21523B2400E2849E /* PortfolioTableViewCell.xib in Resources */,
+				CE735EFA21523FA000E2849E /* DMStockInfoCell.xib in Resources */,
+				CE735E4421523B2400E2849E /* AssetsSection.xib in Resources */,
+				CE735BE521523B1300E2849E /* OutsourceCharts.storyboard in Resources */,
+				CE735BE321523B1300E2849E /* Screener.storyboard in Resources */,
+				CE735BDF21523B1300E2849E /* Portfolio.storyboard in Resources */,
+				CE735F0E21523FA000E2849E /* DMPortfolioTotalCell.xib in Resources */,
+				CE735F382152653600E2849E /* MuseoCyrl900.otf in Resources */,
+				CE735EF221523FA000E2849E /* DMStockCell.xib in Resources */,
+				CE735E5821523B2400E2849E /* WatchListTableViewCell.xib in Resources */,
+				CE735F342152653600E2849E /* MuseoCyrl100.otf in Resources */,
+				CE735F28215247AB00E2849E /* Launch Screen.storyboard in Resources */,
+				CE735F362152653600E2849E /* MuseoCyrl300.otf in Resources */,
+				CE735F1221523FA000E2849E /* DMRatingTableViewCell.xib in Resources */,
+				CE735BDB21523B1300E2849E /* Ratings.storyboard in Resources */,
+				CE735F0821523FA000E2849E /* ChartView.xib in Resources */,
+				CE735E4221523B2400E2849E /* SearchTableViewCell.xib in Resources */,
+				CE735BCD21523A7D00E2849E /* Investors.xcassets in Resources */,
+				CE735BE721523B1300E2849E /* TabBar.storyboard in Resources */,
+				CE735E8221523B2400E2849E /* BuySectionView.xib in Resources */,
+				CE735F302152653600E2849E /* MuseoCyrl700.otf in Resources */,
+				CE735F0C21523FA000E2849E /* DMCompanyCollectionCell.xib in Resources */,
+				CE735E7A21523B2400E2849E /* StringTableViewCell.xib in Resources */,
+				CE735F1421523FA000E2849E /* DMInfoIntroView.xib in Resources */,
+				CE735BE121523B1300E2849E /* Analytics.storyboard in Resources */,
+				CE735E5421523B2400E2849E /* WatchListSection.xib in Resources */,
+				CE735BE921523B1300E2849E /* Main.storyboard in Resources */,
+				CE735BC921523A7D00E2849E /* Assets.xcassets in Resources */,
+				CE735E4C21523B2400E2849E /* AssetsTableViewCell.xib in Resources */,
+				CE735EF421523FA000E2849E /* DMSignalCell.xib in Resources */,
+				CE735E8A21523B2400E2849E /* BuyTableViewCell.xib in Resources */,
+				CE735F322152653600E2849E /* MuseoCyrl500.otf in Resources */,
+				CE735F0A21523FA000E2849E /* DMDropDownTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE04D7BB2152321F00AD3D4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE735BDC21523B1300E2849E /* Ratings.storyboard in Resources */,
+				CE735E4521523B2400E2849E /* AssetsSection.xib in Resources */,
+				CE735BCC21523A7D00E2849E /* Crypto.xcassets in Resources */,
+				CE735BE621523B1300E2849E /* OutsourceCharts.storyboard in Resources */,
+				CE735E5921523B2400E2849E /* WatchListTableViewCell.xib in Resources */,
+				CE735BCA21523A7D00E2849E /* Assets.xcassets in Resources */,
+				CE735BDE21523B1300E2849E /* Authorization.storyboard in Resources */,
+				CE735F0921523FA000E2849E /* ChartView.xib in Resources */,
+				CE735F392152653600E2849E /* MuseoCyrl900.otf in Resources */,
+				CE735BE221523B1300E2849E /* Analytics.storyboard in Resources */,
+				CE735F352152653600E2849E /* MuseoCyrl100.otf in Resources */,
+				CE735F29215247AB00E2849E /* Launch Screen.storyboard in Resources */,
+				CE735F372152653600E2849E /* MuseoCyrl300.otf in Resources */,
+				CE735EF521523FA000E2849E /* DMSignalCell.xib in Resources */,
+				CE735EF321523FA000E2849E /* DMStockCell.xib in Resources */,
+				CE735F0B21523FA000E2849E /* DMDropDownTableViewCell.xib in Resources */,
+				CE735BE421523B1300E2849E /* Screener.storyboard in Resources */,
+				CE735E7B21523B2400E2849E /* StringTableViewCell.xib in Resources */,
+				CE735E5321523B2400E2849E /* CreateSignalTableViewCell.xib in Resources */,
+				CE735F312152653600E2849E /* MuseoCyrl700.otf in Resources */,
+				CE735E8B21523B2400E2849E /* BuyTableViewCell.xib in Resources */,
+				CE735E5521523B2400E2849E /* WatchListSection.xib in Resources */,
+				CE735EFB21523FA000E2849E /* DMStockInfoCell.xib in Resources */,
+				CE735E8321523B2400E2849E /* BuySectionView.xib in Resources */,
+				CE735BEA21523B1300E2849E /* Main.storyboard in Resources */,
+				CE735F0F21523FA000E2849E /* DMPortfolioTotalCell.xib in Resources */,
+				CE735E4321523B2400E2849E /* SearchTableViewCell.xib in Resources */,
+				CE735E4B21523B2400E2849E /* PortfolioTableViewCell.xib in Resources */,
+				CE735F1321523FA000E2849E /* DMRatingTableViewCell.xib in Resources */,
+				CE735F0D21523FA000E2849E /* DMCompanyCollectionCell.xib in Resources */,
+				CE735BE821523B1300E2849E /* TabBar.storyboard in Resources */,
+				CE735BE021523B1300E2849E /* Portfolio.storyboard in Resources */,
+				CE735E4D21523B2400E2849E /* AssetsTableViewCell.xib in Resources */,
+				CE735F332152653600E2849E /* MuseoCyrl500.otf in Resources */,
+				CE735F1521523FA000E2849E /* DMInfoIntroView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03EA4CA57B5E32519420D224 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Vendor/Pods/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Vendor/Pods/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72F59B71AA7C279E9537D4EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Vendor/Pods/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Vendor/Pods/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83A23BA1B8E5F7D680A623D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DominantInvestors-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85B37C726C354FFB58023F24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DominantCrypto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE04D79D215231CE00AD3D4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE735E7821523B2400E2849E /* DMLaunchViewController.swift in Sources */,
+				CE735E6A21523B2400E2849E /* DMScreenerContainerViewController.swift in Sources */,
+				CE735F0421523FA000E2849E /* SegmentControll.swift in Sources */,
+				CE735E6C21523B2400E2849E /* DMStockDetailViewController.swift in Sources */,
+				CE735F1021523FA000E2849E /* DMStatsContainer.swift in Sources */,
+				CE735E8C21523B2400E2849E /* KeyboardObservableViewController.swift in Sources */,
+				CE735D1021523B2400E2849E /* EditableSectionDataSource.swift in Sources */,
+				CE735E6021523B2400E2849E /* NavigationController.swift in Sources */,
+				CE735D0421523B2400E2849E /* TableViewComposedDataSource.swift in Sources */,
+				CE735E7021523B2400E2849E /* DMRatingsViewController.swift in Sources */,
+				CE735E6421523B2400E2849E /* DMSubscriptionViewController.swift in Sources */,
+				CE735D0A21523B2400E2849E /* TableViewArrayDataSource.swift in Sources */,
+				CE735EA821523B2400E2849E /* Portfolio+Request.swift in Sources */,
+				CE735E9A21523B2400E2849E /* CompletionHandler.swift in Sources */,
+				CE735EAE21523B2400E2849E /* SignalsDataProvider.swift in Sources */,
+				CE735EAC21523B2400E2849E /* Repository.swift in Sources */,
+				CE735E4821523B2400E2849E /* SearchTableViewCell.swift in Sources */,
+				CE735E6621523B2400E2849E /* DMCryptoScreenerViewController.swift in Sources */,
+				CE735E8621523B2400E2849E /* BuyViewController.swift in Sources */,
+				CE735F1821523FA000E2849E /* DMStockInfoCell.swift in Sources */,
+				CE735EF021523FA000E2849E /* DMCompanyCollectionCell.swift in Sources */,
+				CE735EA221523B2400E2849E /* Signals+Request.swift in Sources */,
+				CE735E9421523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */,
+				CE735ED021523CF200E2849E /* UserModel.swift in Sources */,
+				CE735E7221523B2400E2849E /* DMTradingViewChartViewController.swift in Sources */,
+				CE735E7621523B2400E2849E /* Storyboard.swift in Sources */,
+				CE735E9C21523B2400E2849E /* AccountsDataProvider.swift in Sources */,
+				CE735E8421523B2400E2849E /* BuySectionView.swift in Sources */,
+				CE735EF621523FA000E2849E /* DMStockCell.swift in Sources */,
+				CE735EC821523CF200E2849E /* InvestorModel.swift in Sources */,
+				CE04D7EC215236DB00AD3D4D /* AppDelegate.swift in Sources */,
+				CE735EA421523B2400E2849E /* RequestProvider.swift in Sources */,
+				CE735E7E21523B2400E2849E /* StringTableViewCell.swift in Sources */,
+				CE735E7421523B2400E2849E /* DMEstimazeChartViewController.swift in Sources */,
+				CE735ECE21523CF200E2849E /* PortfolioModel.swift in Sources */,
+				CE735E9221523B2400E2849E /* DMAnalyticsViewController.swift in Sources */,
+				CE735E6E21523B2400E2849E /* DMSignUpViewController.swift in Sources */,
+				CE735E9821523B2400E2849E /* ServiceLocator.swift in Sources */,
+				CE735F1A21523FA000E2849E /* FXBlurView.m in Sources */,
+				CE735D0221523B2400E2849E /* EditableCellDataSource.swift in Sources */,
+				CE735E5E21523B2400E2849E /* NavigationControllerDecorator.swift in Sources */,
+				CE735E7C21523B2400E2849E /* SearchController.swift in Sources */,
+				CE735D0E21523B2400E2849E /* TableViewItemConfigurators.swift in Sources */,
+				CE735E5021523B2400E2849E /* PersonDataSources.swift in Sources */,
+				CE735E4E21523B2400E2849E /* AssetsTableViewCell.swift in Sources */,
+				CE735EF821523FA000E2849E /* ChartView.swift in Sources */,
+				CE735D0C21523B2400E2849E /* Extensions.swift in Sources */,
+				CE735E8821523B2400E2849E /* BuyTableViewCell.swift in Sources */,
+				CE735E5621523B2400E2849E /* WatchListSection.swift in Sources */,
+				CE735E8E21523B2400E2849E /* DMLoginViewController.swift in Sources */,
+				CE735ECA21523CF200E2849E /* CompanyModel.swift in Sources */,
+				CE735D0621523B2400E2849E /* TableViewDataSourceShim.swift in Sources */,
+				CE735D0021523B2400E2849E /* TableViewDataSource.swift in Sources */,
+				CE735E9E21523B2400E2849E /* PortfolioDataProvider.swift in Sources */,
+				CE735E9621523B2400E2849E /* SessionAdapter.swift in Sources */,
+				CE735E5A21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */,
+				CE735E9021523B2400E2849E /* TabBarController.swift in Sources */,
+				CE735F1621523FA000E2849E /* DMDropDownTableViewCell.swift in Sources */,
+				CE735F0021523FA000E2849E /* DMPortfolioTotalCell.swift in Sources */,
+				CE735EFC21523FA000E2849E /* DMInfoIntroView.swift in Sources */,
+				CE735F1D2152406B00E2849E /* SwiftStockKit.swift in Sources */,
+				CE735E6221523B2400E2849E /* DMScreenerTypeViewController.swift in Sources */,
+				CE735E6821523B2400E2849E /* DMScreenerViewController.swift in Sources */,
+				CE735EAA21523B2400E2849E /* Investors+Requesrt.swift in Sources */,
+				CE735ECC21523CF200E2849E /* SignalModel.swift in Sources */,
+				CE735E8021523B2400E2849E /* DMViewController.swift in Sources */,
+				CE735E4621523B2400E2849E /* AssetsSection.swift in Sources */,
+				CE735EA621523B2400E2849E /* User+Request.swift in Sources */,
+				CE735BD021523B0900E2849E /* Constants.swift in Sources */,
+				CE735E3E21523B2400E2849E /* PersonalViewController.swift in Sources */,
+				CE735E5C21523B2400E2849E /* WatchListTableViewCell.swift in Sources */,
+				CE735F0621523FA000E2849E /* DMSignalCell.swift in Sources */,
+				CE735EA021523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
+				CE735EC621523CF200E2849E /* OffsetResponse.swift in Sources */,
+				CE735E4021523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
+				CE735EFE21523FA000E2849E /* DMCryptoInfoContainer.swift in Sources */,
+				CE735D0821523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */,
+				CE735F0221523FA000E2849E /* DMRatingTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE04D7B72152321F00AD3D4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE735E7921523B2400E2849E /* DMLaunchViewController.swift in Sources */,
+				CE735E6B21523B2400E2849E /* DMScreenerContainerViewController.swift in Sources */,
+				CE735F0521523FA000E2849E /* SegmentControll.swift in Sources */,
+				CE735E6D21523B2400E2849E /* DMStockDetailViewController.swift in Sources */,
+				CE735F1121523FA000E2849E /* DMStatsContainer.swift in Sources */,
+				CE735E8D21523B2400E2849E /* KeyboardObservableViewController.swift in Sources */,
+				CE735D1121523B2400E2849E /* EditableSectionDataSource.swift in Sources */,
+				CE735E6121523B2400E2849E /* NavigationController.swift in Sources */,
+				CE735D0521523B2400E2849E /* TableViewComposedDataSource.swift in Sources */,
+				CE735E7121523B2400E2849E /* DMRatingsViewController.swift in Sources */,
+				CE735E6521523B2400E2849E /* DMSubscriptionViewController.swift in Sources */,
+				CE735D0B21523B2400E2849E /* TableViewArrayDataSource.swift in Sources */,
+				CE735EA921523B2400E2849E /* Portfolio+Request.swift in Sources */,
+				CE735E9B21523B2400E2849E /* CompletionHandler.swift in Sources */,
+				CE735EAF21523B2400E2849E /* SignalsDataProvider.swift in Sources */,
+				CE735EAD21523B2400E2849E /* Repository.swift in Sources */,
+				CE735E4921523B2400E2849E /* SearchTableViewCell.swift in Sources */,
+				CE735E6721523B2400E2849E /* DMCryptoScreenerViewController.swift in Sources */,
+				CE735E8721523B2400E2849E /* BuyViewController.swift in Sources */,
+				CE735F1921523FA000E2849E /* DMStockInfoCell.swift in Sources */,
+				CE735EF121523FA000E2849E /* DMCompanyCollectionCell.swift in Sources */,
+				CE735EA321523B2400E2849E /* Signals+Request.swift in Sources */,
+				CE735E9521523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */,
+				CE735ED121523CF200E2849E /* UserModel.swift in Sources */,
+				CE735E7321523B2400E2849E /* DMTradingViewChartViewController.swift in Sources */,
+				CE735E7721523B2400E2849E /* Storyboard.swift in Sources */,
+				CE735E9D21523B2400E2849E /* AccountsDataProvider.swift in Sources */,
+				CE735E8521523B2400E2849E /* BuySectionView.swift in Sources */,
+				CE735EF721523FA000E2849E /* DMStockCell.swift in Sources */,
+				CE735EC921523CF200E2849E /* InvestorModel.swift in Sources */,
+				CE04D7ED215236DB00AD3D4D /* AppDelegate.swift in Sources */,
+				CE735EA521523B2400E2849E /* RequestProvider.swift in Sources */,
+				CE735E7F21523B2400E2849E /* StringTableViewCell.swift in Sources */,
+				CE735E7521523B2400E2849E /* DMEstimazeChartViewController.swift in Sources */,
+				CE735ECF21523CF200E2849E /* PortfolioModel.swift in Sources */,
+				CE735E9321523B2400E2849E /* DMAnalyticsViewController.swift in Sources */,
+				CE735E6F21523B2400E2849E /* DMSignUpViewController.swift in Sources */,
+				CE735E9921523B2400E2849E /* ServiceLocator.swift in Sources */,
+				CE735F1B21523FA000E2849E /* FXBlurView.m in Sources */,
+				CE735D0321523B2400E2849E /* EditableCellDataSource.swift in Sources */,
+				CE735E5F21523B2400E2849E /* NavigationControllerDecorator.swift in Sources */,
+				CE735E7D21523B2400E2849E /* SearchController.swift in Sources */,
+				CE735D0F21523B2400E2849E /* TableViewItemConfigurators.swift in Sources */,
+				CE735E5121523B2400E2849E /* PersonDataSources.swift in Sources */,
+				CE735E4F21523B2400E2849E /* AssetsTableViewCell.swift in Sources */,
+				CE735EF921523FA000E2849E /* ChartView.swift in Sources */,
+				CE735D0D21523B2400E2849E /* Extensions.swift in Sources */,
+				CE735E8921523B2400E2849E /* BuyTableViewCell.swift in Sources */,
+				CE735E5721523B2400E2849E /* WatchListSection.swift in Sources */,
+				CE735E8F21523B2400E2849E /* DMLoginViewController.swift in Sources */,
+				CE735ECB21523CF200E2849E /* CompanyModel.swift in Sources */,
+				CE735D0721523B2400E2849E /* TableViewDataSourceShim.swift in Sources */,
+				CE735D0121523B2400E2849E /* TableViewDataSource.swift in Sources */,
+				CE735E9F21523B2400E2849E /* PortfolioDataProvider.swift in Sources */,
+				CE735E9721523B2400E2849E /* SessionAdapter.swift in Sources */,
+				CE735E5B21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */,
+				CE735E9121523B2400E2849E /* TabBarController.swift in Sources */,
+				CE735F1721523FA000E2849E /* DMDropDownTableViewCell.swift in Sources */,
+				CE735F0121523FA000E2849E /* DMPortfolioTotalCell.swift in Sources */,
+				CE735EFD21523FA000E2849E /* DMInfoIntroView.swift in Sources */,
+				CE735F1E2152406B00E2849E /* SwiftStockKit.swift in Sources */,
+				CE735E6321523B2400E2849E /* DMScreenerTypeViewController.swift in Sources */,
+				CE735E6921523B2400E2849E /* DMScreenerViewController.swift in Sources */,
+				CE735EAB21523B2400E2849E /* Investors+Requesrt.swift in Sources */,
+				CE735ECD21523CF200E2849E /* SignalModel.swift in Sources */,
+				CE735E8121523B2400E2849E /* DMViewController.swift in Sources */,
+				CE735E4721523B2400E2849E /* AssetsSection.swift in Sources */,
+				CE735EA721523B2400E2849E /* User+Request.swift in Sources */,
+				CE735BD121523B0900E2849E /* Constants.swift in Sources */,
+				CE735E3F21523B2400E2849E /* PersonalViewController.swift in Sources */,
+				CE735E5D21523B2400E2849E /* WatchListTableViewCell.swift in Sources */,
+				CE735F0721523FA000E2849E /* DMSignalCell.swift in Sources */,
+				CE735EA121523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
+				CE735EC721523CF200E2849E /* OffsetResponse.swift in Sources */,
+				CE735E4121523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
+				CE735EFF21523FA000E2849E /* DMCryptoInfoContainer.swift in Sources */,
+				CE735D0921523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */,
+				CE735F0321523FA000E2849E /* DMRatingTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CE04D7B1215231D000AD3D4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE04D7B2215231D000AD3D4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE04D7B4215231D000AD3D4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7B4F88AD8A2FE5DB2595A6E /* Pods-DominantInvestors.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RMCUGY65KQ;
+				INFOPLIST_FILE = Resources/DominantInvestors.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DS.DominantInvestors;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE04D7B5215231D000AD3D4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 363CBE73292F3B57EBC39762 /* Pods-DominantInvestors.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RMCUGY65KQ;
+				INFOPLIST_FILE = Resources/DominantInvestors.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DS.DominantInvestors;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE04D7C02152321F00AD3D4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEB57268B412308413460525 /* Pods-DominantCrypto.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RMCUGY65KQ;
+				INFOPLIST_FILE = Resources/DominantCrypto.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DS.DominantInvestors;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE04D7C12152321F00AD3D4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E0A733618BF5F7879B72B8D /* Pods-DominantCrypto.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RMCUGY65KQ;
+				INFOPLIST_FILE = Resources/DominantCrypto.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DS.DominantInvestors;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE04D79C215231CE00AD3D4D /* Build configuration list for PBXProject "DominantInvestors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE04D7B1215231D000AD3D4D /* Debug */,
+				CE04D7B2215231D000AD3D4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE04D7B3215231D000AD3D4D /* Build configuration list for PBXNativeTarget "DominantInvestors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE04D7B4215231D000AD3D4D /* Debug */,
+				CE04D7B5215231D000AD3D4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE04D7BF2152321F00AD3D4D /* Build configuration list for PBXNativeTarget "DominantCrypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE04D7C02152321F00AD3D4D /* Debug */,
+				CE04D7C12152321F00AD3D4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE04D799215231CE00AD3D4D /* Project object */;
+}

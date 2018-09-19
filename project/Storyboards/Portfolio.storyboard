@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U02-tf-7YS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MuseoCyrl500.otf">
+            <string>MuseoCyrl-500</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main Navigation Controller-->
+        <scene sceneID="AXR-a0-dX6">
+            <objects>
+                <navigationController id="U02-tf-7YS" customClass="MainNavigationController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="abi-HB-Vki">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zhg-Ll-4Gt" kind="relationship" relationship="rootViewController" id="MOr-9j-GRK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BK7-FE-IlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2137" y="1256"/>
+        </scene>
+        <!--Personal View Controller-->
+        <scene sceneID="z9h-zC-L4q">
+            <objects>
+                <viewController restorationIdentifier="portfolio" storyboardIdentifier="portfolio" id="zhg-Ll-4Gt" customClass="PersonalViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ggR-72-DX3"/>
+                        <viewControllerLayoutGuide type="bottom" id="ilW-DD-Bdl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Mj-ca-Qjz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imF-vl-QBW" customClass="SegmentControll" customModule="DominantCrypto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyI-2U-rho">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
+                                        <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="16"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJk-ix-1pC">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
+                                        <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="16"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="VJk-ix-1pC" firstAttribute="leading" secondItem="pyI-2U-rho" secondAttribute="trailing" id="4fl-wl-awg"/>
+                                    <constraint firstItem="pyI-2U-rho" firstAttribute="top" secondItem="imF-vl-QBW" secondAttribute="top" id="B3z-ai-mbM"/>
+                                    <constraint firstAttribute="bottom" secondItem="VJk-ix-1pC" secondAttribute="bottom" id="Uwb-rv-Hya"/>
+                                    <constraint firstItem="VJk-ix-1pC" firstAttribute="top" secondItem="imF-vl-QBW" secondAttribute="top" id="Zej-Na-Bw4"/>
+                                    <constraint firstItem="pyI-2U-rho" firstAttribute="leading" secondItem="imF-vl-QBW" secondAttribute="leading" id="gNl-LO-9H1"/>
+                                    <constraint firstAttribute="trailing" secondItem="VJk-ix-1pC" secondAttribute="trailing" id="lwh-zI-oaS"/>
+                                    <constraint firstItem="VJk-ix-1pC" firstAttribute="width" secondItem="pyI-2U-rho" secondAttribute="width" id="oyD-Qf-e3v"/>
+                                    <constraint firstAttribute="bottom" secondItem="pyI-2U-rho" secondAttribute="bottom" id="sbt-vc-M75"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="leftButton" destination="pyI-2U-rho" id="zdN-XP-Epq"/>
+                                    <outlet property="rightButton" destination="VJk-ix-1pC" id="1HH-9h-cc2"/>
+                                </connections>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kyk-mV-46I">
+                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="imF-vl-QBW" firstAttribute="top" secondItem="ggR-72-DX3" secondAttribute="bottom" id="Dd7-QR-Cpm"/>
+                            <constraint firstItem="ilW-DD-Bdl" firstAttribute="top" secondItem="kyk-mV-46I" secondAttribute="bottom" id="E3b-Nz-U8v"/>
+                            <constraint firstItem="kyk-mV-46I" firstAttribute="top" secondItem="imF-vl-QBW" secondAttribute="bottom" id="ecO-cI-psL"/>
+                            <constraint firstAttribute="trailing" secondItem="imF-vl-QBW" secondAttribute="trailing" id="ieQ-qL-7np"/>
+                            <constraint firstAttribute="trailing" secondItem="kyk-mV-46I" secondAttribute="trailing" id="pCT-XF-MAL"/>
+                            <constraint firstItem="kyk-mV-46I" firstAttribute="top" secondItem="ggR-72-DX3" secondAttribute="bottom" constant="50" id="tHA-aH-pe9"/>
+                            <constraint firstItem="kyk-mV-46I" firstAttribute="leading" secondItem="7Mj-ca-Qjz" secondAttribute="leading" id="tOF-1u-eNb"/>
+                            <constraint firstItem="imF-vl-QBW" firstAttribute="leading" secondItem="7Mj-ca-Qjz" secondAttribute="leading" id="uDR-9a-eu7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kDP-YZ-d53"/>
+                    <connections>
+                        <outlet property="segmentControll" destination="imF-vl-QBW" id="1ws-uO-jis"/>
+                        <outlet property="tableView" destination="kyk-mV-46I" id="b1v-T3-b2z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ETn-Aw-LiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2895" y="1255"/>
+        </scene>
+        <!--Buy View Controller-->
+        <scene sceneID="6Ec-Zr-iYN">
+            <objects>
+                <viewController restorationIdentifier="Buy" storyboardIdentifier="Buy" hidesBottomBarWhenPushed="YES" id="pbv-DW-CY9" customClass="BuyViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="opY-ml-z6F"/>
+                        <viewControllerLayoutGuide type="bottom" id="6KE-IQ-8wL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KUB-Cr-tLG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="b7Z-Hz-cXg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b7Z-Hz-cXg" firstAttribute="top" secondItem="opY-ml-z6F" secondAttribute="bottom" id="Ifc-Tg-mq1"/>
+                            <constraint firstItem="6KE-IQ-8wL" firstAttribute="top" secondItem="b7Z-Hz-cXg" secondAttribute="bottom" id="TfA-xb-aQX"/>
+                            <constraint firstAttribute="trailing" secondItem="b7Z-Hz-cXg" secondAttribute="trailing" id="gto-ow-48M"/>
+                            <constraint firstItem="b7Z-Hz-cXg" firstAttribute="leading" secondItem="KUB-Cr-tLG" secondAttribute="leading" id="oYs-Dn-t6A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="b7Z-Hz-cXg" id="Q1y-2r-JNI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDh-sr-fnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3671" y="1254"/>
+        </scene>
+    </scenes>
+</document>

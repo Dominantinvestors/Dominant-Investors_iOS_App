@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MuseoCyrl100.otf">
+            <string>MuseoCyrl-100</string>
+        </array>
+        <array key="MuseoCyrl300.otf">
+            <string>MuseoCyrl-300</string>
+        </array>
+        <array key="MuseoCyrl500.otf">
+            <string>MuseoCyrl-500</string>
+        </array>
+        <array key="MuseoCyrl700.otf">
+            <string>MuseoCyrl-700</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="239" id="KGk-i7-Jjw" customClass="PortfolioTableViewCell" customModule="DominantCrypto" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="239"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="238.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 4" translatesAutoresizingMaskIntoConstraints="NO" id="7j9-xs-wyj">
+                        <rect key="frame" x="16" y="8" width="94" height="94"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="94" id="6b7-EO-ucQ"/>
+                            <constraint firstAttribute="height" constant="94" id="NwP-HZ-Jiy"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dots" translatesAutoresizingMaskIntoConstraints="NO" id="3u7-59-R2x">
+                        <rect key="frame" x="16" y="169" width="288" height="2"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZg-Ul-4Ct">
+                        <rect key="frame" x="118" y="31.5" width="68" height="47.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqL-b5-gmZ">
+                                <rect key="frame" x="0.0" y="0.0" width="68" height="19.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIr-Is-EbX" customClass="ActionHandleButton" customModule="DominantCrypto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="27.5" width="68" height="20"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-100" family="Museo Cyrl" pointSize="12"/>
+                                <state key="normal" title="Button" backgroundImage="greyButton">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lIr-Is-EbX" firstAttribute="leading" secondItem="dZg-Ul-4Ct" secondAttribute="leading" id="3cM-SK-nKc"/>
+                            <constraint firstItem="CqL-b5-gmZ" firstAttribute="leading" secondItem="dZg-Ul-4Ct" secondAttribute="leading" id="A9l-zB-Py9"/>
+                            <constraint firstItem="CqL-b5-gmZ" firstAttribute="top" secondItem="dZg-Ul-4Ct" secondAttribute="top" id="Cet-mm-Zso"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lIr-Is-EbX" secondAttribute="trailing" id="fIo-9L-sIZ"/>
+                            <constraint firstAttribute="bottom" secondItem="lIr-Is-EbX" secondAttribute="bottom" id="oXF-0b-9VV"/>
+                            <constraint firstAttribute="trailing" secondItem="CqL-b5-gmZ" secondAttribute="trailing" id="op6-HS-1a4"/>
+                            <constraint firstItem="lIr-Is-EbX" firstAttribute="top" secondItem="CqL-b5-gmZ" secondAttribute="bottom" constant="8" id="znZ-UB-aqh"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dots" translatesAutoresizingMaskIntoConstraints="NO" id="yJl-Oc-kSJ">
+                        <rect key="frame" x="16" y="110" width="288" height="2"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFX-mp-stq">
+                        <rect key="frame" x="16" y="187" width="288" height="35.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 $" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjw-bk-4GA">
+                                <rect key="frame" x="0.0" y="0.0" width="72" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSx-CZ-adh">
+                                <rect key="frame" x="0.0" y="21" width="72" height="14.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="12"/>
+                                <color key="textColor" red="0.7686274509803922" green="0.792156862745098" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 $" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqQ-rP-wyA">
+                                <rect key="frame" x="72" y="0.0" width="72" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ET-QN-SYf">
+                                <rect key="frame" x="72" y="21" width="72" height="14.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="12"/>
+                                <color key="textColor" red="0.7686274509803922" green="0.792156862745098" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 $" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBx-9d-5uO">
+                                <rect key="frame" x="144" y="0.0" width="72" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhc-xM-UhQ">
+                                <rect key="frame" x="144" y="21" width="72" height="14.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="12"/>
+                                <color key="textColor" red="0.7686274509803922" green="0.792156862745098" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fC-0e-boX">
+                                <rect key="frame" x="216" y="0.0" width="72" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfn-cs-w3w">
+                                <rect key="frame" x="216" y="21" width="72" height="14.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="12"/>
+                                <color key="textColor" red="0.7686274509803922" green="0.792156862745098" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zhc-xM-UhQ" firstAttribute="top" secondItem="RBx-9d-5uO" secondAttribute="bottom" constant="4" id="0D7-Ea-kWu"/>
+                            <constraint firstItem="WqQ-rP-wyA" firstAttribute="top" secondItem="uFX-mp-stq" secondAttribute="top" id="5L2-st-1EA"/>
+                            <constraint firstItem="WqQ-rP-wyA" firstAttribute="leading" secondItem="fjw-bk-4GA" secondAttribute="trailing" id="5Pz-Ca-aZW"/>
+                            <constraint firstItem="7fC-0e-boX" firstAttribute="top" secondItem="uFX-mp-stq" secondAttribute="top" id="B48-Ae-dRc"/>
+                            <constraint firstItem="WqQ-rP-wyA" firstAttribute="width" secondItem="fjw-bk-4GA" secondAttribute="width" id="FaQ-KR-GTL"/>
+                            <constraint firstAttribute="bottom" secondItem="GSx-CZ-adh" secondAttribute="bottom" id="HIs-yL-OyE"/>
+                            <constraint firstItem="wfn-cs-w3w" firstAttribute="top" secondItem="7fC-0e-boX" secondAttribute="bottom" constant="4" id="IEv-QA-0Mw"/>
+                            <constraint firstItem="RBx-9d-5uO" firstAttribute="leading" secondItem="WqQ-rP-wyA" secondAttribute="trailing" id="K8t-nR-rsA"/>
+                            <constraint firstAttribute="trailing" secondItem="wfn-cs-w3w" secondAttribute="trailing" id="Kfb-85-23R"/>
+                            <constraint firstItem="wfn-cs-w3w" firstAttribute="leading" secondItem="zhc-xM-UhQ" secondAttribute="trailing" id="L2w-SK-BDX"/>
+                            <constraint firstItem="1ET-QN-SYf" firstAttribute="top" secondItem="WqQ-rP-wyA" secondAttribute="bottom" constant="4" id="Pre-LE-suS"/>
+                            <constraint firstItem="RBx-9d-5uO" firstAttribute="width" secondItem="fjw-bk-4GA" secondAttribute="width" id="Qg2-76-Bdl"/>
+                            <constraint firstItem="RBx-9d-5uO" firstAttribute="top" secondItem="uFX-mp-stq" secondAttribute="top" id="SD7-jm-jDu"/>
+                            <constraint firstItem="zhc-xM-UhQ" firstAttribute="width" secondItem="GSx-CZ-adh" secondAttribute="width" id="UfV-hU-IT4"/>
+                            <constraint firstItem="fjw-bk-4GA" firstAttribute="leading" secondItem="uFX-mp-stq" secondAttribute="leading" id="WWZ-7M-foW"/>
+                            <constraint firstItem="zhc-xM-UhQ" firstAttribute="leading" secondItem="1ET-QN-SYf" secondAttribute="trailing" id="Z2w-eE-Igw"/>
+                            <constraint firstItem="7fC-0e-boX" firstAttribute="width" secondItem="fjw-bk-4GA" secondAttribute="width" id="dNd-xl-odO"/>
+                            <constraint firstItem="wfn-cs-w3w" firstAttribute="width" secondItem="GSx-CZ-adh" secondAttribute="width" id="dUM-2P-z1R"/>
+                            <constraint firstAttribute="bottom" secondItem="wfn-cs-w3w" secondAttribute="bottom" id="eT9-o0-Ocs"/>
+                            <constraint firstItem="1ET-QN-SYf" firstAttribute="width" secondItem="GSx-CZ-adh" secondAttribute="width" id="ekE-fI-c23"/>
+                            <constraint firstAttribute="bottom" secondItem="zhc-xM-UhQ" secondAttribute="bottom" id="f2s-Jk-QVb"/>
+                            <constraint firstAttribute="trailing" secondItem="7fC-0e-boX" secondAttribute="trailing" id="jaJ-zr-ZPe"/>
+                            <constraint firstItem="7fC-0e-boX" firstAttribute="leading" secondItem="RBx-9d-5uO" secondAttribute="trailing" id="jb5-il-qWu"/>
+                            <constraint firstItem="fjw-bk-4GA" firstAttribute="top" secondItem="uFX-mp-stq" secondAttribute="top" id="k5p-kL-72u"/>
+                            <constraint firstItem="1ET-QN-SYf" firstAttribute="leading" secondItem="GSx-CZ-adh" secondAttribute="trailing" id="kRM-OB-Vg9"/>
+                            <constraint firstItem="GSx-CZ-adh" firstAttribute="leading" secondItem="uFX-mp-stq" secondAttribute="leading" id="r5W-gX-pvL"/>
+                            <constraint firstItem="GSx-CZ-adh" firstAttribute="top" secondItem="fjw-bk-4GA" secondAttribute="bottom" constant="4" id="wNf-AR-nFm"/>
+                            <constraint firstAttribute="bottom" secondItem="1ET-QN-SYf" secondAttribute="bottom" id="wjF-G6-bso"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-kg-5k1">
+                        <rect key="frame" x="16" y="112" width="288" height="57"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Rating" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFb-Qy-Jyi">
+                                <rect key="frame" x="0.0" y="0.0" width="52" height="57"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 followers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo4-Ov-l0G">
+                                <rect key="frame" x="68" y="0.0" width="69.5" height="57"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vt4-pZ-A1b" customClass="ActionHandleButton" customModule="DominantCrypto" customModuleProvider="target">
+                                <rect key="frame" x="222" y="8" width="66" height="41"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="16"/>
+                                <state key="normal" title="3" image="messageIcon" backgroundImage="messageBG"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="YFb-Qy-Jyi" secondAttribute="bottom" id="6Tg-zU-ueF"/>
+                            <constraint firstAttribute="trailing" secondItem="vt4-pZ-A1b" secondAttribute="trailing" id="9Hf-3Y-dNe"/>
+                            <constraint firstAttribute="bottom" secondItem="vo4-Ov-l0G" secondAttribute="bottom" id="EdA-zK-BaG"/>
+                            <constraint firstItem="vt4-pZ-A1b" firstAttribute="centerY" secondItem="WmW-kg-5k1" secondAttribute="centerY" id="Mop-CB-zJD"/>
+                            <constraint firstItem="YFb-Qy-Jyi" firstAttribute="leading" secondItem="WmW-kg-5k1" secondAttribute="leading" id="Shv-XR-Nvb"/>
+                            <constraint firstItem="vo4-Ov-l0G" firstAttribute="leading" secondItem="YFb-Qy-Jyi" secondAttribute="trailing" constant="16" id="bdS-96-Hk4"/>
+                            <constraint firstItem="YFb-Qy-Jyi" firstAttribute="top" secondItem="WmW-kg-5k1" secondAttribute="top" id="c4b-Ol-rbE"/>
+                            <constraint firstItem="vt4-pZ-A1b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vo4-Ov-l0G" secondAttribute="trailing" id="cXz-xd-1zp"/>
+                            <constraint firstItem="vt4-pZ-A1b" firstAttribute="top" secondItem="WmW-kg-5k1" secondAttribute="top" constant="8" id="nxz-Up-dml"/>
+                            <constraint firstItem="vo4-Ov-l0G" firstAttribute="top" secondItem="WmW-kg-5k1" secondAttribute="top" id="tPq-ke-0aL"/>
+                            <constraint firstAttribute="bottom" secondItem="vt4-pZ-A1b" secondAttribute="bottom" constant="8" id="yFU-yf-mOu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="uFX-mp-stq" secondAttribute="trailing" constant="16" id="0h2-T2-r3H"/>
+                    <constraint firstItem="yJl-Oc-kSJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="D9A-vs-Jrm"/>
+                    <constraint firstAttribute="trailing" secondItem="yJl-Oc-kSJ" secondAttribute="trailing" constant="16" id="E0b-CH-ubN"/>
+                    <constraint firstItem="dZg-Ul-4Ct" firstAttribute="centerY" secondItem="7j9-xs-wyj" secondAttribute="centerY" id="G0n-cz-aqc"/>
+                    <constraint firstItem="uFX-mp-stq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="GUx-Df-z94"/>
+                    <constraint firstItem="3u7-59-R2x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="T8O-aq-Z42"/>
+                    <constraint firstItem="7j9-xs-wyj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="UiG-8f-rJR"/>
+                    <constraint firstItem="WmW-kg-5k1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WJM-d1-3TQ"/>
+                    <constraint firstAttribute="trailing" secondItem="3u7-59-R2x" secondAttribute="trailing" constant="16" id="Z80-bE-jFk"/>
+                    <constraint firstItem="dZg-Ul-4Ct" firstAttribute="leading" secondItem="7j9-xs-wyj" secondAttribute="trailing" constant="8" id="ajE-7B-xMS"/>
+                    <constraint firstItem="7j9-xs-wyj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="kJF-8n-7nw"/>
+                    <constraint firstItem="uFX-mp-stq" firstAttribute="top" secondItem="3u7-59-R2x" secondAttribute="bottom" constant="16" id="psK-mZ-UDI"/>
+                    <constraint firstAttribute="trailing" secondItem="WmW-kg-5k1" secondAttribute="trailing" constant="16" id="pzn-Gi-Jiv"/>
+                    <constraint firstItem="WmW-kg-5k1" firstAttribute="top" secondItem="yJl-Oc-kSJ" secondAttribute="bottom" id="q4C-9f-6jq"/>
+                    <constraint firstAttribute="bottom" secondItem="uFX-mp-stq" secondAttribute="bottom" constant="16" id="s0i-ZD-0qP"/>
+                    <constraint firstItem="yJl-Oc-kSJ" firstAttribute="top" secondItem="7j9-xs-wyj" secondAttribute="bottom" constant="8" id="tSL-If-Q3g"/>
+                    <constraint firstItem="3u7-59-R2x" firstAttribute="top" secondItem="WmW-kg-5k1" secondAttribute="bottom" id="vBr-6p-gkH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="edit" destination="lIr-Is-EbX" id="eKk-AN-1kT"/>
+                <outlet property="followers" destination="vo4-Ov-l0G" id="fca-a6-22t"/>
+                <outlet property="icon" destination="7j9-xs-wyj" id="cgZ-9t-19J"/>
+                <outlet property="message" destination="vt4-pZ-A1b" id="f2Y-b8-alG"/>
+                <outlet property="name" destination="CqL-b5-gmZ" id="djG-Op-wAS"/>
+                <outlet property="power" destination="WqQ-rP-wyA" id="6AC-dV-pAq"/>
+                <outlet property="powerTitle" destination="1ET-QN-SYf" id="ErR-4G-qnI"/>
+                <outlet property="rating" destination="YFb-Qy-Jyi" id="sjM-Gs-5fe"/>
+                <outlet property="results" destination="7fC-0e-boX" id="ozi-Ta-1lS"/>
+                <outlet property="resultsTitle" destination="wfn-cs-w3w" id="fNt-6M-RfF"/>
+                <outlet property="total" destination="RBx-9d-5uO" id="AOk-62-q3a"/>
+                <outlet property="totalTitle" destination="zhc-xM-UhQ" id="iNT-gW-gJp"/>
+                <outlet property="value" destination="fjw-bk-4GA" id="gc0-sd-X8e"/>
+                <outlet property="valueTitle" destination="GSx-CZ-adh" id="nFO-uO-ctD"/>
+            </connections>
+            <point key="canvasLocation" x="1" y="52.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Dots" width="339" height="2"/>
+        <image name="Ellipse 4" width="94" height="94"/>
+        <image name="greyButton" width="68" height="20"/>
+        <image name="messageBG" width="66" height="46"/>
+        <image name="messageIcon" width="17" height="17"/>
+    </resources>
+</document>

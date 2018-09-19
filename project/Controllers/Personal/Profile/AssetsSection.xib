@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MuseoCyrl700.otf">
+            <string>MuseoCyrl-700</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="AssetsSection" id="iN0-l3-epB" customClass="AssetsSection" customModule="DominantCrypto" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Sy-37-C09">
+                    <rect key="frame" x="16" y="16" width="375" height="47"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TICKER" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZf-f5-N9J">
+                            <rect key="frame" x="0.0" y="0.0" width="94" height="47"/>
+                            <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="12"/>
+                            <color key="textColor" red="0.74117647058823533" green="0.75686274509803919" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUY POINT" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijo-5V-gDx">
+                            <rect key="frame" x="94" y="0.0" width="93.5" height="47"/>
+                            <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="12"/>
+                            <color key="textColor" red="0.74117647058823533" green="0.75686274509803919" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MKT PRICE $" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PN-ZR-KsX">
+                            <rect key="frame" x="187.5" y="0.0" width="94" height="47"/>
+                            <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="12"/>
+                            <color key="textColor" red="0.74117647058823533" green="0.75686274509803919" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFIT" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkE-Kf-wR7">
+                            <rect key="frame" x="281.5" y="0.0" width="93.5" height="47"/>
+                            <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="12"/>
+                            <color key="textColor" red="0.74117647058823533" green="0.75686274509803919" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="6PN-ZR-KsX" firstAttribute="leading" secondItem="Ijo-5V-gDx" secondAttribute="trailing" id="AHg-EU-OvI"/>
+                        <constraint firstItem="KkE-Kf-wR7" firstAttribute="top" secondItem="0Sy-37-C09" secondAttribute="top" id="Bn0-Do-Arg"/>
+                        <constraint firstItem="Ijo-5V-gDx" firstAttribute="leading" secondItem="dZf-f5-N9J" secondAttribute="trailing" id="DXc-Oi-yqx"/>
+                        <constraint firstItem="6PN-ZR-KsX" firstAttribute="top" secondItem="0Sy-37-C09" secondAttribute="top" id="Eyh-mr-e6L"/>
+                        <constraint firstAttribute="bottom" secondItem="6PN-ZR-KsX" secondAttribute="bottom" id="GiT-F8-x4V"/>
+                        <constraint firstItem="dZf-f5-N9J" firstAttribute="top" secondItem="0Sy-37-C09" secondAttribute="top" id="M8o-7v-RBz"/>
+                        <constraint firstAttribute="bottom" secondItem="Ijo-5V-gDx" secondAttribute="bottom" id="R1k-Lx-IN4"/>
+                        <constraint firstItem="dZf-f5-N9J" firstAttribute="leading" secondItem="0Sy-37-C09" secondAttribute="leading" id="ViV-1x-wxL"/>
+                        <constraint firstItem="6PN-ZR-KsX" firstAttribute="width" secondItem="dZf-f5-N9J" secondAttribute="width" id="fgI-Xj-G3O"/>
+                        <constraint firstItem="KkE-Kf-wR7" firstAttribute="leading" secondItem="6PN-ZR-KsX" secondAttribute="trailing" id="idk-Zr-mVT"/>
+                        <constraint firstItem="Ijo-5V-gDx" firstAttribute="top" secondItem="0Sy-37-C09" secondAttribute="top" id="qbH-AE-uyk"/>
+                        <constraint firstItem="Ijo-5V-gDx" firstAttribute="width" secondItem="dZf-f5-N9J" secondAttribute="width" id="rHV-Iy-etI"/>
+                        <constraint firstAttribute="bottom" secondItem="dZf-f5-N9J" secondAttribute="bottom" id="wAg-J1-dck"/>
+                        <constraint firstAttribute="trailing" secondItem="KkE-Kf-wR7" secondAttribute="trailing" id="wWY-hM-vOI"/>
+                        <constraint firstAttribute="bottom" secondItem="KkE-Kf-wR7" secondAttribute="bottom" id="zCs-La-SsH"/>
+                        <constraint firstItem="KkE-Kf-wR7" firstAttribute="width" secondItem="dZf-f5-N9J" secondAttribute="width" id="zzh-IR-Xdw"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dots" translatesAutoresizingMaskIntoConstraints="NO" id="ipr-h9-gIC">
+                    <rect key="frame" x="0.0" y="78" width="375" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1" id="1fu-Pe-0ri"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="XyL-jn-6SE"/>
+                        <constraint firstAttribute="height" constant="1" id="lMH-jB-Uel"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ipr-h9-gIC" secondAttribute="bottom" id="RbS-IF-9r5"/>
+                <constraint firstItem="ipr-h9-gIC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oY4-XM-Jci"/>
+                <constraint firstItem="0Sy-37-C09" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="16" id="pgX-Rr-7Fz"/>
+                <constraint firstItem="0Sy-37-C09" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="q3h-FI-WqC"/>
+                <constraint firstAttribute="bottom" secondItem="0Sy-37-C09" secondAttribute="bottom" constant="16" id="uyi-EP-TeV"/>
+                <constraint firstAttribute="trailing" secondItem="ipr-h9-gIC" secondAttribute="trailing" id="woT-xa-Vno"/>
+                <constraint firstItem="0Sy-37-C09" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="zHd-cw-fL1"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="-240.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Dots" width="339" height="2"/>
+    </resources>
+</document>

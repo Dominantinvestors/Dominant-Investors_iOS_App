@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MuseoCyrl300.otf">
+            <string>MuseoCyrl-300</string>
+        </array>
+        <array key="MuseoCyrl700.otf">
+            <string>MuseoCyrl-700</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="236" id="KGk-i7-Jjw" customClass="BuySectionView" customModule="DominantCrypto" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="236"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="235.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iXq-4u-WKQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="235.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="271" translatesAutoresizingMaskIntoConstraints="NO" id="qAg-w0-wq3">
+                        <rect key="frame" x="25" y="26" width="270" height="19"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label df;sg;dsgdkf g;dks ;d sk;ldfsk ;dsfkg;ldsk ;ld kg;dsflk ;sldkfg " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="271" translatesAutoresizingMaskIntoConstraints="NO" id="Bjv-KJ-Gxj">
+                        <rect key="frame" x="25" y="60" width="270" height="61.5"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dots" translatesAutoresizingMaskIntoConstraints="NO" id="feW-J5-TyA">
+                        <rect key="frame" x="25" y="141.5" width="270" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1" id="NI8-OH-kN2"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1" id="OfH-8j-mJE"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="Wqq-GJ-nrg"/>
+                            <constraint firstAttribute="height" constant="1" id="hyl-zl-VcN"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DM0-M3-LeN" customClass="ActionHandleButton" customModule="DominantCrypto" customModuleProvider="target">
+                        <rect key="frame" x="44.5" y="157.5" width="231" height="55.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55.5" id="v2p-yN-qMJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="15"/>
+                        <state key="normal" title="Button" backgroundImage="redButton">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="feW-J5-TyA" firstAttribute="top" secondItem="Bjv-KJ-Gxj" secondAttribute="bottom" constant="20" id="2EQ-tr-HRQ"/>
+                    <constraint firstItem="qAg-w0-wq3" firstAttribute="trailing" secondItem="feW-J5-TyA" secondAttribute="trailing" id="2Yb-DJ-J2W"/>
+                    <constraint firstItem="DM0-M3-LeN" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Bgl-zJ-BML"/>
+                    <constraint firstAttribute="trailing" secondItem="iXq-4u-WKQ" secondAttribute="trailing" id="CUT-8i-Iuc"/>
+                    <constraint firstAttribute="bottom" secondItem="iXq-4u-WKQ" secondAttribute="bottom" id="DZr-bd-ASc"/>
+                    <constraint firstItem="Bjv-KJ-Gxj" firstAttribute="trailing" secondItem="feW-J5-TyA" secondAttribute="trailing" id="HvY-OQ-M5H"/>
+                    <constraint firstItem="qAg-w0-wq3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="OBz-7d-VSj"/>
+                    <constraint firstItem="qAg-w0-wq3" firstAttribute="leading" secondItem="feW-J5-TyA" secondAttribute="leading" id="OP8-pU-aM8"/>
+                    <constraint firstItem="Bjv-KJ-Gxj" firstAttribute="leading" secondItem="feW-J5-TyA" secondAttribute="leading" id="Txn-M3-9Ns"/>
+                    <constraint firstAttribute="trailing" secondItem="qAg-w0-wq3" secondAttribute="trailing" constant="25" id="UCo-QU-q3v"/>
+                    <constraint firstItem="DM0-M3-LeN" firstAttribute="top" secondItem="feW-J5-TyA" secondAttribute="bottom" constant="15" id="bJ6-mY-w5w"/>
+                    <constraint firstItem="Bjv-KJ-Gxj" firstAttribute="top" secondItem="qAg-w0-wq3" secondAttribute="bottom" constant="15" id="eHw-ah-KvT"/>
+                    <constraint firstItem="qAg-w0-wq3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="h6g-gr-t0C"/>
+                    <constraint firstItem="iXq-4u-WKQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="q6c-0Q-zS4"/>
+                    <constraint firstItem="iXq-4u-WKQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="x47-SP-1Lv"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="DM0-M3-LeN" secondAttribute="bottom" constant="12" id="ybe-CR-BzL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="submit" destination="DM0-M3-LeN" id="jop-ws-NaU"/>
+                <outlet property="subtitle" destination="Bjv-KJ-Gxj" id="cai-1k-KYA"/>
+                <outlet property="title" destination="qAg-w0-wq3" id="Fng-mR-R08"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="-17"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Dots" width="339" height="2"/>
+        <image name="redButton" width="231" height="46"/>
+    </resources>
+</document>

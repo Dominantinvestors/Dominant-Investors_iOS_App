@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MuseoCyrl500.otf">
+            <string>MuseoCyrl-500</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="77" id="KGk-i7-Jjw" customClass="BuyTableViewCell" customModule="DominantCrypto" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="76.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h0E-9q-s9n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="76.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrW-oT-duS">
+                        <rect key="frame" x="16" y="35" width="39.5" height="15.5"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="16"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gsP-RE-4jg">
+                        <rect key="frame" x="55.5" y="0.0" width="249.5" height="75.5"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="20"/>
+                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    </textField>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dots" translatesAutoresizingMaskIntoConstraints="NO" id="AF5-YP-pwb">
+                        <rect key="frame" x="15" y="75.5" width="290" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1" id="DKl-SX-1F3"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="G2Z-fz-nYT"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1" id="KGR-qa-air"/>
+                            <constraint firstAttribute="height" constant="1" id="pC8-sZ-T9X"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zrW-oT-duS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1G8-rI-p6r"/>
+                    <constraint firstItem="h0E-9q-s9n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Hcd-sd-a60"/>
+                    <constraint firstAttribute="bottom" secondItem="AF5-YP-pwb" secondAttribute="bottom" id="HsP-hU-xbs"/>
+                    <constraint firstItem="h0E-9q-s9n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IL4-Mc-zxd"/>
+                    <constraint firstItem="AF5-YP-pwb" firstAttribute="top" secondItem="gsP-RE-4jg" secondAttribute="bottom" id="J9T-Sd-Uu8"/>
+                    <constraint firstItem="AF5-YP-pwb" firstAttribute="top" secondItem="zrW-oT-duS" secondAttribute="bottom" constant="25" id="LLh-hZ-10c"/>
+                    <constraint firstAttribute="trailing" secondItem="AF5-YP-pwb" secondAttribute="trailing" constant="15" id="ME2-Yb-mwD"/>
+                    <constraint firstAttribute="trailing" secondItem="gsP-RE-4jg" secondAttribute="trailing" constant="15" id="MM2-eJ-POZ"/>
+                    <constraint firstItem="AF5-YP-pwb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="O7Q-ya-Aly"/>
+                    <constraint firstAttribute="bottom" secondItem="h0E-9q-s9n" secondAttribute="bottom" id="ZXy-XT-j2d"/>
+                    <constraint firstAttribute="trailing" secondItem="h0E-9q-s9n" secondAttribute="trailing" id="a7Q-g2-53Z"/>
+                    <constraint firstItem="gsP-RE-4jg" firstAttribute="leading" secondItem="zrW-oT-duS" secondAttribute="trailing" id="ahm-wh-7PI"/>
+                    <constraint firstItem="gsP-RE-4jg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dTI-dq-PGN"/>
+                    <constraint firstItem="zrW-oT-duS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="yTq-QT-9Uj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="textField" destination="gsP-RE-4jg" id="9bD-eF-lnD"/>
+                <outlet property="title" destination="zrW-oT-duS" id="Jj9-K2-yS9"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="37.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Dots" width="339" height="2"/>
+    </resources>
+</document>
