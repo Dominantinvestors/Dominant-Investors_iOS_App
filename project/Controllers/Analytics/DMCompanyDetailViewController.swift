@@ -67,8 +67,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         self.priceLabel.text = self.company.buyPoint + " $"
 
         self.statsContainer.setupWithCompany(company: self.company)
-//        self.cryptoContainer.setupWithCompany(company: self.company)
-//
+
         if self.company.estimizeUrl == nil {
             self.revenueEstimizeButton.isEnabled = false
             self.revenueEstimizeButton.alpha = 0.5
@@ -213,7 +212,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
     }
     
     @IBAction func addToWatchlist(sender: UIButton) {
-        SignalsDataProvider.default().addCompany(company.id) { success, error in
+        SignalsDataProvider.default().addCompany(company) { success, error in
             if success {
                 self.tabBarController?.selectedIndex = 2
             } else {

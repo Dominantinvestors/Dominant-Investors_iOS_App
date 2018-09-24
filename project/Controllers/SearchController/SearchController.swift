@@ -8,6 +8,14 @@ extension AssetsModel: SearchItem {
     var title: String { return ticker}
 }
 
+extension CompanyModel: SearchItem {
+    var title: String { return ticker}
+}
+
+extension String: SearchItem {
+    var title: String { return self}
+}
+
 class SearchController: UIView {
     
     var textDidUpdate: ((String) -> Void)?
@@ -78,7 +86,7 @@ class SearchController: UIView {
 
         shim = TableViewDataSourceShim(self.dataSource)
         
-        self.dataSource.selectors[.select] = { _, _, item in
+        self.dataSource.selectors[.highlight] = { _, _, item in
             self.selectedItem?(item)
         }
     }

@@ -1,32 +1,16 @@
-//
-//  DMScreenerTypeViewController.swift
-//  Dominant Investors
-//
-//  Created by ios_nikitos on 21.11.17.
-//  Copyright © 2017 Dominant. All rights reserved.
-//
-
 import UIKit
 
 class DMScreenerTypeViewController: DMViewController, UIWebViewDelegate {
-
-    //MARK: Outlets
     
     @IBOutlet  weak var webView : UIWebView!
     
     var tickerLoaded = false
     
-    //MARK: Properties
-    
     var parentContainer : DMScreenerContainerViewController!
-    
-    //MARK: ViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    //MARK: Open
     
     open func openChartFor(ticker : String) {
         
@@ -38,9 +22,7 @@ class DMScreenerTypeViewController: DMViewController, UIWebViewDelegate {
             }
         }
     }
-    
-    //MARK: UIWebViewDelegate
-    
+        
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
         if request.url?.absoluteString.contains("symbols") == true {

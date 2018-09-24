@@ -11,6 +11,12 @@
 		37716B655F36541A363ED520 /* Pods_DominantCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DBD300783B3BA57C773EA0 /* Pods_DominantCrypto.framework */; };
 		CE04D7EC215236DB00AD3D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */; };
 		CE04D7ED215236DB00AD3D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */; };
+		CE449B9C215516100091940E /* AddSignalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449B9B215516100091940E /* AddSignalViewController.swift */; };
+		CE449B9D215516100091940E /* AddSignalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449B9B215516100091940E /* AddSignalViewController.swift */; };
+		CE449B9F2158D5000091940E /* Company+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449B9E2158D5000091940E /* Company+Request.swift */; };
+		CE449BA02158D5000091940E /* Company+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449B9E2158D5000091940E /* Company+Request.swift */; };
+		CE449BA22158DE3F0091940E /* SearchSignalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449BA12158DE3F0091940E /* SearchSignalViewController.swift */; };
+		CE449BA32158DE3F0091940E /* SearchSignalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449BA12158DE3F0091940E /* SearchSignalViewController.swift */; };
 		CE735BCC21523A7D00E2849E /* Crypto.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC721523A7D00E2849E /* Crypto.xcassets */; };
 		CE735BCD21523A7D00E2849E /* Investors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC821523A7D00E2849E /* Investors.xcassets */; };
 		CE735BD021523B0900E2849E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BCF21523B0900E2849E /* Constants.swift */; };
@@ -251,6 +257,9 @@
 		CE04D7D6215236DB00AD3D4D /* DominantCrypto.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DominantCrypto.plist; sourceTree = "<group>"; };
 		CE04D7D7215236DB00AD3D4D /* DominantInvestors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DominantInvestors.plist; sourceTree = "<group>"; };
 		CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE449B9B215516100091940E /* AddSignalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSignalViewController.swift; sourceTree = "<group>"; };
+		CE449B9E2158D5000091940E /* Company+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+Request.swift"; sourceTree = "<group>"; };
+		CE449BA12158DE3F0091940E /* SearchSignalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSignalViewController.swift; sourceTree = "<group>"; };
 		CE735BC721523A7D00E2849E /* Crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crypto.xcassets; sourceTree = "<group>"; };
 		CE735BC821523A7D00E2849E /* Investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Investors.xcassets; sourceTree = "<group>"; };
 		CE735BCF21523B0900E2849E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -454,6 +463,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		CE449B9A215515F80091940E /* AddSignal */ = {
+			isa = PBXGroup;
+			children = (
+				CE449B9B215516100091940E /* AddSignalViewController.swift */,
+				CE449BA12158DE3F0091940E /* SearchSignalViewController.swift */,
+			);
+			path = AddSignal;
+			sourceTree = "<group>";
+		};
 		CE735BD221523B1300E2849E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +507,7 @@
 		CE735CAD21523B2300E2849E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE449B9A215515F80091940E /* AddSignal */,
 				CE735CAE21523B2300E2849E /* Personal */,
 				CE735CC421523B2300E2849E /* Screener */,
 				CE735CCB21523B2300E2849E /* SignUp */,
@@ -545,11 +564,11 @@
 		CE735CC421523B2300E2849E /* Screener */ = {
 			isa = PBXGroup;
 			children = (
-				CE735CC521523B2300E2849E /* DMScreenerTypeViewController.swift */,
-				CE735CC621523B2300E2849E /* DMSubscriptionViewController.swift */,
-				CE735CC721523B2300E2849E /* DMCryptoScreenerViewController.swift */,
-				CE735CC821523B2300E2849E /* DMScreenerViewController.swift */,
 				CE735CC921523B2300E2849E /* DMScreenerContainerViewController.swift */,
+				CE735CC521523B2300E2849E /* DMScreenerTypeViewController.swift */,
+				CE735CC821523B2300E2849E /* DMScreenerViewController.swift */,
+				CE735CC721523B2300E2849E /* DMCryptoScreenerViewController.swift */,
+				CE735CC621523B2300E2849E /* DMSubscriptionViewController.swift */,
 				CE735CCA21523B2300E2849E /* DMStockDetailViewController.swift */,
 			);
 			path = Screener;
@@ -651,6 +670,7 @@
 				CE735CF121523B2300E2849E /* User+Request.swift */,
 				CE735CF221523B2300E2849E /* Portfolio+Request.swift */,
 				CE735CF321523B2300E2849E /* Investors+Requesrt.swift */,
+				CE449B9E2158D5000091940E /* Company+Request.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -1107,8 +1127,11 @@
 				CE735EA621523B2400E2849E /* User+Request.swift in Sources */,
 				CE735BD021523B0900E2849E /* Constants.swift in Sources */,
 				CE735E3E21523B2400E2849E /* PersonalViewController.swift in Sources */,
+				CE449B9F2158D5000091940E /* Company+Request.swift in Sources */,
 				CE735E5C21523B2400E2849E /* WatchListTableViewCell.swift in Sources */,
 				CE735F0621523FA000E2849E /* DMSignalCell.swift in Sources */,
+				CE449BA22158DE3F0091940E /* SearchSignalViewController.swift in Sources */,
+				CE449B9C215516100091940E /* AddSignalViewController.swift in Sources */,
 				CE735EA021523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
 				CE735EC621523CF200E2849E /* OffsetResponse.swift in Sources */,
 				CE735E4021523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
@@ -1194,8 +1217,11 @@
 				CE735EA721523B2400E2849E /* User+Request.swift in Sources */,
 				CE735BD121523B0900E2849E /* Constants.swift in Sources */,
 				CE735E3F21523B2400E2849E /* PersonalViewController.swift in Sources */,
+				CE449BA02158D5000091940E /* Company+Request.swift in Sources */,
 				CE735E5D21523B2400E2849E /* WatchListTableViewCell.swift in Sources */,
 				CE735F0721523FA000E2849E /* DMSignalCell.swift in Sources */,
+				CE449BA32158DE3F0091940E /* SearchSignalViewController.swift in Sources */,
+				CE449B9D215516100091940E /* AddSignalViewController.swift in Sources */,
 				CE735EA121523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
 				CE735EC721523CF200E2849E /* OffsetResponse.swift in Sources */,
 				CE735E4121523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,

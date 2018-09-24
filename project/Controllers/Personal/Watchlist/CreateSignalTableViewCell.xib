@@ -9,41 +9,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="MuseoCyrl500.otf">
-            <string>MuseoCyrl-500</string>
+        <array key="MuseoCyrl700.otf">
+            <string>MuseoCyrl-700</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="CreateSignalTableViewCell" rowHeight="108" id="KGk-i7-Jjw" customClass="CreateSignalTableViewCell" customModule="DominantCrypto" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CreateSignalTableViewCell" rowHeight="108" id="KGk-i7-Jjw" customClass="CreateSignalTableViewCell" customModule="DominantCrypto" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="107.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redButton" translatesAutoresizingMaskIntoConstraints="NO" id="pvl-EC-5f3">
-                        <rect key="frame" x="44.5" y="31" width="231" height="46"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1un-Sp-Nbu">
-                        <rect key="frame" x="141.5" y="45" width="37" height="17.5"/>
-                        <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="15"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAb-0m-Gwz" customClass="ActionHandleButton" customModule="DominantCrypto" customModuleProvider="target">
+                        <rect key="frame" x="44.5" y="30" width="231" height="46"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="17"/>
+                        <state key="normal" title="Button" backgroundImage="redButton">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="pvl-EC-5f3" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="HQE-7V-2ua"/>
-                    <constraint firstItem="1un-Sp-Nbu" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="HXF-o7-IeL"/>
-                    <constraint firstItem="pvl-EC-5f3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="n55-kF-rkG"/>
-                    <constraint firstItem="1un-Sp-Nbu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="45" id="nte-Rv-u0J"/>
-                    <constraint firstAttribute="bottom" secondItem="1un-Sp-Nbu" secondAttribute="bottom" constant="45" id="qVh-Hu-o9c"/>
+                    <constraint firstItem="cAb-0m-Gwz" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="JJe-FW-DA4"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cAb-0m-Gwz" secondAttribute="bottom" constant="21" id="KFF-pY-f8k"/>
+                    <constraint firstItem="cAb-0m-Gwz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="T2F-4A-ZQY"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="title" destination="1un-Sp-Nbu" id="oef-iD-JfN"/>
+                <outlet property="create" destination="cAb-0m-Gwz" id="3K1-Z4-7Hy"/>
             </connections>
             <point key="canvasLocation" x="34" y="93"/>
         </tableViewCell>

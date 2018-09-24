@@ -143,7 +143,7 @@ extension TableViewDataSourceShim: UITableViewDelegate {
     open func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         dataSource.didHighlightRow(in: tableView, at: indexPath)
     }
-    
+
     open func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
         dataSource.didUnhighlightRow(in: tableView, at: indexPath)
     }

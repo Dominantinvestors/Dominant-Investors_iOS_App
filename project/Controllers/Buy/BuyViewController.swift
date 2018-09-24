@@ -46,7 +46,7 @@ class BuyViewController: KeyboardObservableViewController {
     
     private func onSubmit() {
         if let asset = asset, let amount = buyDataSource.cell?.textField.text {
-            PortfolioDataProvider.default().buy(amount, asset) { succes, error in
+            SignalsDataProvider.default().buy(amount, asset) { succes, error in
                 if !succes {
                     self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
                                        message: error ?? "")
@@ -104,14 +104,17 @@ class EditableDataSource:
     CellConfigurator
 {
     var data: [String]
-    
-    let delegate: UITextFieldDelegate
+    var text: String { return cell?.textField.text ?? ""}
+    let delegate: UITextFieldDelegate?
     
     weak var cell: BuyTableViewCell?
     
-    init(title: String, delegate: UITextFieldDelegate) {
+    let rightText: String
+    
+    init(title: String, delegate: UITextFieldDelegate? = nil, rightText: String = "") {
         self.data = [title]
         self.delegate = delegate
+        self.rightText = rightText
     }
     
     func reuseIdentifier() -> String {
@@ -123,6 +126,7 @@ class EditableDataSource:
         cell.title.text = item
         cell.textField.delegate = delegate
         cell.normalStyle()
+        cell.textField.setRight(rightText)
         cell.textField.isUserInteractionEnabled = true
     }
 }

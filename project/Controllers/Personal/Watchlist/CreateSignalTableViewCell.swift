@@ -2,6 +2,6 @@ import UIKit
 
 class CreateSignalTableViewCell: UITableViewCell, ReuseIdentifier {
 
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var create: ActionHandleButton!
 
 }

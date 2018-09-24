@@ -24,7 +24,7 @@ struct SignalsDataProvider: Repository, Syncable {
     }
     
     func companies(completion: @escaping ([CompanyModel]?, String?) -> Void) {
-        send(request: SignalModel.companies()).responseObject { (response: DataResponse<OffsetResponse<CompanyModel>>) -> Void in
+        send(request: CompanyModel.get()).responseObject { (response: DataResponse<OffsetResponse<CompanyModel>>) -> Void in
             switch self.handler.handle(response) {
             case .success(let result):
                 completion(result.items, nil)
@@ -34,8 +34,46 @@ struct SignalsDataProvider: Repository, Syncable {
         }
     }
     
-    func addCompany(_ company: Int, completion: @escaping (Bool, String?) -> Void) {
-        send(request: SignalModel.addCompany(company)).responseJSON { response in
+    func addCompany(_ company: CompanyModel, completion: @escaping (Bool, String?) -> Void) {
+        send(request: company.add()).responseJSON { response in
+            switch self.handler.handle(response) {
+            case .success(_):
+                completion(true, nil)
+            case .error(let error):
+                completion(false, error.localizedDescription)
+            }
+        }
+    }
+    
+    func createSignal(for company: CompanyModel,
+                      _ buyPoint: String,
+                      _ targetPrice: String,
+                      _ stopLoss: String,
+                      completion: @escaping (Bool, String?) -> Void)
+    {
+        send(request: company.createSignal(buyPoint, targetPrice, stopLoss)).responseJSON { response in
+            switch self.handler.handle(response) {
+            case .success(_):
+                completion(true, nil)
+            case .error(let error):
+                completion(false, error.localizedDescription)
+            }
+        }
+    }
+    
+    func search(by text: String, completion: @escaping ([CompanyModel]?, String?) -> Void) {
+        send(request: CompanyModel.search(by: text)).responseObject { (response: DataResponse<OffsetResponse<CompanyModel>>) -> Void in
+            switch self.handler.handle(response) {
+            case .success(let result):
+                completion(result.items, nil)
+            case .error(let error):
+                completion(nil, error.localizedDescription)
+            }
+        }
+    }
+    
+    func buy(_ amount: String, _ asset: AssetsModel, completion: @escaping (Bool, String?) -> Void) {
+        send(request: PortfolioModel.buy(amount, asset)).responseJSON { response in
             switch self.handler.handle(response) {
             case .success(_):
                 completion(true, nil)

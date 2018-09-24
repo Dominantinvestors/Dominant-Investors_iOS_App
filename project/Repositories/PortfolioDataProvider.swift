@@ -33,26 +33,4 @@ struct PortfolioDataProvider: Repository, Syncable {
             }
         }
     }
-    
-    func searchAssets(by text: String, completion: @escaping ([AssetsModel]?, String?) -> Void) {
-        send(request: PortfolioModel.search(by: text)).responseObject { (response: DataResponse<OffsetResponse<AssetsModel>>) -> Void in
-            switch self.handler.handle(response) {
-            case .success(let result):
-                completion(result.items, nil)
-            case .error(let error):
-                completion(nil, error.localizedDescription)
-            }
-        }
-    }
-    
-    func buy(_ amount: String, _ asset: AssetsModel, completion: @escaping (Bool, String?) -> Void) {
-        send(request: PortfolioModel.buy(amount, asset)).responseJSON { response in
-            switch self.handler.handle(response) {
-            case .success(_):
-                completion(true, nil)
-            case .error(let error):
-                completion(false, error.localizedDescription)
-            }
-        }
-    }
 }

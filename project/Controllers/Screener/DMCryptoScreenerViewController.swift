@@ -1,16 +1,6 @@
-//
-//  DMCryptoScreenerViewController.swift
-//  Dominant Investors
-//
-//  Created by ios_nikitos on 21.11.17.
-//  Copyright © 2017 Dominant. All rights reserved.
-//
-
 import UIKit
 
 class DMCryptoScreenerViewController: DMScreenerTypeViewController  {
-
-    //MARK : ViewVController
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +26,4 @@ class DMCryptoScreenerViewController: DMScreenerTypeViewController  {
             self.tickerLoaded = true
         }
     }
-    
-    
-
 }

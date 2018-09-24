@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U02-tf-7YS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U02-tf-7YS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="MuseoCyrl300.otf">
+            <string>MuseoCyrl-300</string>
+        </array>
         <array key="MuseoCyrl500.otf">
             <string>MuseoCyrl-500</string>
         </array>
@@ -138,6 +140,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDh-sr-fnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3671" y="1254"/>
+        </scene>
+        <!--Add Signal View Controller-->
+        <scene sceneID="51j-2b-qnt">
+            <objects>
+                <viewController restorationIdentifier="AddSignal" storyboardIdentifier="AddSignal" hidesBottomBarWhenPushed="YES" id="H6C-e2-ZyE" customClass="AddSignalViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Xc-ne-c2B"/>
+                        <viewControllerLayoutGuide type="bottom" id="EfB-BO-I6S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GKM-Pa-t4V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vH4-Wi-Zzd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="VBL-vN-7gw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNd-jN-RFH">
+                                            <rect key="frame" x="166.5" y="70.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erP-aG-gmH">
+                                            <rect key="frame" x="167.5" y="25" width="40.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="erP-aG-gmH" firstAttribute="centerX" secondItem="VBL-vN-7gw" secondAttribute="centerX" id="EOf-Ck-y9n"/>
+                                        <constraint firstItem="CNd-jN-RFH" firstAttribute="top" secondItem="erP-aG-gmH" secondAttribute="bottom" constant="25" id="F28-ys-cH3"/>
+                                        <constraint firstItem="erP-aG-gmH" firstAttribute="top" secondItem="VBL-vN-7gw" secondAttribute="top" constant="25" id="OJH-MY-7i1"/>
+                                        <constraint firstItem="CNd-jN-RFH" firstAttribute="centerX" secondItem="VBL-vN-7gw" secondAttribute="centerX" id="n9T-Jw-STj"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EfB-BO-I6S" firstAttribute="top" secondItem="vH4-Wi-Zzd" secondAttribute="bottom" id="4Y8-C6-G8Y"/>
+                            <constraint firstAttribute="trailing" secondItem="vH4-Wi-Zzd" secondAttribute="trailing" id="QaB-3J-e0H"/>
+                            <constraint firstItem="vH4-Wi-Zzd" firstAttribute="leading" secondItem="GKM-Pa-t4V" secondAttribute="leading" id="UcM-qK-RnJ"/>
+                            <constraint firstItem="vH4-Wi-Zzd" firstAttribute="top" secondItem="3Xc-ne-c2B" secondAttribute="bottom" id="X6B-BD-0bB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="companyPrice" destination="CNd-jN-RFH" id="iJB-8g-Wmn"/>
+                        <outlet property="companyTitle" destination="erP-aG-gmH" id="7S4-t9-hsz"/>
+                        <outlet property="tableView" destination="vH4-Wi-Zzd" id="fNQ-fR-lv3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1NU-MR-dmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4316" y="1254"/>
+        </scene>
+        <!--Search Signal View Controller-->
+        <scene sceneID="Pil-JB-NBj">
+            <objects>
+                <viewController restorationIdentifier="SearchSignal" storyboardIdentifier="SearchSignal" hidesBottomBarWhenPushed="YES" id="eub-95-nls" customClass="SearchSignalViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b5S-Yf-TzY"/>
+                        <viewControllerLayoutGuide type="bottom" id="UDn-yh-p6D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="noa-I5-EqI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hai-fh-kwJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Hai-fh-kwJ" secondAttribute="trailing" id="bhy-v0-N7x"/>
+                            <constraint firstItem="Hai-fh-kwJ" firstAttribute="top" secondItem="b5S-Yf-TzY" secondAttribute="bottom" id="dIu-nb-BWZ"/>
+                            <constraint firstItem="UDn-yh-p6D" firstAttribute="top" secondItem="Hai-fh-kwJ" secondAttribute="bottom" id="hH9-wv-ruy"/>
+                            <constraint firstItem="Hai-fh-kwJ" firstAttribute="leading" secondItem="noa-I5-EqI" secondAttribute="leading" id="sxT-GV-vYs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Hai-fh-kwJ" id="CRZ-C8-THX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qA6-ao-lgv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3670" y="1916"/>
         </scene>
     </scenes>
 </document>

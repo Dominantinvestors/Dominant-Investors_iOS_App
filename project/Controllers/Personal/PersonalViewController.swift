@@ -82,8 +82,8 @@ class PersonalViewController: KeyboardObservableViewController {
     }
     
     private func createSignal() {
-        
-        self.tabBarController?.selectedIndex = 0
+        let buy = UIStoryboard(name: "Portfolio", bundle: nil)[.SearchSignal]
+        self.navigationController?.pushViewController(buy, animated: true)
     }
     
     private func editProfile() {
@@ -125,7 +125,6 @@ class PersonalViewController: KeyboardObservableViewController {
     fileprivate func watchListSection() -> WatchListDataSource {
         let watchList = WatchListDataSource(data: [])
         watchList.selectors[.select] = {_, _, _ in
-            self.createSignal()
         }
         return watchList
     }
@@ -144,7 +143,10 @@ class PersonalViewController: KeyboardObservableViewController {
     fileprivate func searchSection() -> TableViewDataSource {
         let searchController = SearchController()
         searchController.textDidUpdate = { text in
-            PortfolioDataProvider.default().searchAssets(by: text) { items, error in
+            
+            SignalsDataProvider.default().companies() { items, error in
+
+//            SignalsDataProvider.default().search(by: text) { items, error in
                 if let items = items {
                     searchController.data = items
                 } else {

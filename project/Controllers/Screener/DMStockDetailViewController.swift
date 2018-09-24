@@ -1,16 +1,6 @@
-//
-//  DMStockDetailDMStockDetailViewController.swift
-//  Dominant
-//
-//  Created by n.agoshkov on 08/07/2016.
-//  Copyright 2016 Agoshkov_Personal. All rights reserved.
-//
-
 import UIKit
 
 class DMStockDetailViewController: DMViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, ChartViewDelegate {
-    
-    // MARK: Outlets
     
     @IBOutlet weak var collectionView : UICollectionView!
     @IBOutlet weak var viewOfChart    : UIView!
@@ -20,9 +10,6 @@ class DMStockDetailViewController: DMViewController, UICollectionViewDelegateFlo
     var chartView   : ChartView!
     var chart       : SwiftStockChart!
 
-    
-    // MARK: <UIViewController>
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self

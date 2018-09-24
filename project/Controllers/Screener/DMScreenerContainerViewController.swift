@@ -1,11 +1,3 @@
-//
-//  DMScreenerContainerViewController.swift
-//  Dominant Investors
-//
-//  Created by ios_nikitos on 21.11.17.
-//  Copyright © 2017 Dominant. All rights reserved.
-//
-
 import UIKit
 
 class DMScreenerContainerViewController: DMViewController {
@@ -18,10 +10,6 @@ class DMScreenerContainerViewController: DMViewController {
     
     @IBOutlet  weak var stockLabel         : UILabel!
     @IBOutlet  weak var cryptoLabel        : UILabel!
-    
-    
-    
-    //MARK: ViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()

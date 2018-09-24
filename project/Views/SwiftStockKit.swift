@@ -251,7 +251,7 @@ class SwiftStockKit {
                                 
                                 chartPoints.append(
                                     ChartPoint(
-                                        date:  date,
+                                        date: date,
                                         volume: dataPoint["volume"] as? Int,
                                         open: dataPoint["open"] as? CGFloat,
                                         close: close != 0 ? close : lastPrice,

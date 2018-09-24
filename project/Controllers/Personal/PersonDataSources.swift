@@ -17,7 +17,10 @@ struct CreateSignalDataSource:
     }
     
     func configurateCell(_ cell: CreateSignalTableViewCell, item: String, at indexPath: IndexPath) {
-        cell.title.text = item
+        cell.create.setTitle(item, for: .normal)
+        cell.create.actionHandle(.touchUpInside) {
+            self.selectors[.select]?(cell, indexPath, item)
+        }
     }
 }
 
@@ -52,6 +55,15 @@ class WatchListDataSource:
         cell.buyPoint.text = item.buyPoint
         cell.targetPrice.text = item.targetPrice
         cell.stopLoss.text = item.stopLoss
+        cell.profile.layer.cornerRadius = cell.profile.frame.size.width / 2
+
+        if let logo = item.user?.avatar {
+            Alamofire.request(logo).responseImage { response in
+                if let image = response.result.value {
+                    cell.profile.image = image
+                }
+            }
+        }
     }
 }
 

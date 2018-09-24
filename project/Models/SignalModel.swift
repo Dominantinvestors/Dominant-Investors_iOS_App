@@ -14,10 +14,11 @@ class SignalModel: Mappable {
     var name: String = ""
     var ticker: String = ""
     
+    var user: UserModel?
+
     required init?(map: Map) { }
     
     func mapping(map: Map) {
-        
         id <- map["id"]
         type <- map["asset.type"]
         name <- map["asset.name"]
@@ -26,5 +27,7 @@ class SignalModel: Mappable {
         buyPoint <- map["buy_point"]
         targetPrice <- map["target_price"]
         stopLoss <- map["stop_loss"]
+        mktPrice <- map["mkt_price"]
+        user <- map["user"]
     }
 }

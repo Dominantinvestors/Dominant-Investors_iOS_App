@@ -1,16 +1,6 @@
-//
-//  DMScreenerViewController.swift
-//  Dominant Investors
-//
-//  Created by ios_nikitos on 30.10.17.
-//  Copyright © 2017 Dominant. All rights reserved.
-//
-
 import UIKit
 
 class DMScreenerViewController: DMScreenerTypeViewController {
-
-    //MARK : ViewVController
     
     override func viewDidLoad() {
         super.viewDidLoad()
