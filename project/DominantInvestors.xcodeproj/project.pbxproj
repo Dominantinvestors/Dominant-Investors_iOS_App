@@ -17,6 +17,14 @@
 		CE449BA02158D5000091940E /* Company+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449B9E2158D5000091940E /* Company+Request.swift */; };
 		CE449BA22158DE3F0091940E /* SearchSignalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449BA12158DE3F0091940E /* SearchSignalViewController.swift */; };
 		CE449BA32158DE3F0091940E /* SearchSignalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449BA12158DE3F0091940E /* SearchSignalViewController.swift */; };
+		CE449BA6215A16CB0091940E /* AddSignalHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449BA4215A16CB0091940E /* AddSignalHeaderTableViewCell.swift */; };
+		CE449BA7215A16CB0091940E /* AddSignalHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449BA4215A16CB0091940E /* AddSignalHeaderTableViewCell.swift */; };
+		CE449BA8215A16CB0091940E /* AddSignalHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE449BA5215A16CB0091940E /* AddSignalHeaderTableViewCell.xib */; };
+		CE449BA9215A16CB0091940E /* AddSignalHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE449BA5215A16CB0091940E /* AddSignalHeaderTableViewCell.xib */; };
+		CE449BAB215A1F830091940E /* Dominant+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449BAA215A1F820091940E /* Dominant+String.swift */; };
+		CE449BAC215A1F830091940E /* Dominant+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449BAA215A1F820091940E /* Dominant+String.swift */; };
+		CE449BAE215A20FF0091940E /* Dominant+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449BAD215A20FF0091940E /* Dominant+TextField.swift */; };
+		CE449BAF215A20FF0091940E /* Dominant+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449BAD215A20FF0091940E /* Dominant+TextField.swift */; };
 		CE735BCC21523A7D00E2849E /* Crypto.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC721523A7D00E2849E /* Crypto.xcassets */; };
 		CE735BCD21523A7D00E2849E /* Investors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC821523A7D00E2849E /* Investors.xcassets */; };
 		CE735BD021523B0900E2849E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BCF21523B0900E2849E /* Constants.swift */; };
@@ -260,6 +268,10 @@
 		CE449B9B215516100091940E /* AddSignalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSignalViewController.swift; sourceTree = "<group>"; };
 		CE449B9E2158D5000091940E /* Company+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+Request.swift"; sourceTree = "<group>"; };
 		CE449BA12158DE3F0091940E /* SearchSignalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSignalViewController.swift; sourceTree = "<group>"; };
+		CE449BA4215A16CB0091940E /* AddSignalHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSignalHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		CE449BA5215A16CB0091940E /* AddSignalHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSignalHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		CE449BAA215A1F820091940E /* Dominant+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dominant+String.swift"; sourceTree = "<group>"; };
+		CE449BAD215A20FF0091940E /* Dominant+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dominant+TextField.swift"; sourceTree = "<group>"; };
 		CE735BC721523A7D00E2849E /* Crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crypto.xcassets; sourceTree = "<group>"; };
 		CE735BC821523A7D00E2849E /* Investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Investors.xcassets; sourceTree = "<group>"; };
 		CE735BCF21523B0900E2849E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -468,6 +480,8 @@
 			children = (
 				CE449B9B215516100091940E /* AddSignalViewController.swift */,
 				CE449BA12158DE3F0091940E /* SearchSignalViewController.swift */,
+				CE449BA4215A16CB0091940E /* AddSignalHeaderTableViewCell.swift */,
+				CE449BA5215A16CB0091940E /* AddSignalHeaderTableViewCell.xib */,
 			);
 			path = AddSignal;
 			sourceTree = "<group>";
@@ -748,6 +762,8 @@
 				CE735F442152782800E2849E /* KeyboardObservableViewController.swift */,
 				CE735F452152782800E2849E /* TabBarController.swift */,
 				CE735F522152785E00E2849E /* Dominant+LayoutConstraint.swift */,
+				CE449BAA215A1F820091940E /* Dominant+String.swift */,
+				CE449BAD215A20FF0091940E /* Dominant+TextField.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -870,6 +886,7 @@
 				CE735BDB21523B1300E2849E /* Ratings.storyboard in Resources */,
 				CE735F0821523FA000E2849E /* ChartView.xib in Resources */,
 				CE735E4221523B2400E2849E /* SearchTableViewCell.xib in Resources */,
+				CE449BA8215A16CB0091940E /* AddSignalHeaderTableViewCell.xib in Resources */,
 				CE735BCD21523A7D00E2849E /* Investors.xcassets in Resources */,
 				CE735BE721523B1300E2849E /* TabBar.storyboard in Resources */,
 				CE735E8221523B2400E2849E /* BuySectionView.xib in Resources */,
@@ -912,6 +929,7 @@
 				CE735E7B21523B2400E2849E /* StringTableViewCell.xib in Resources */,
 				CE735E5321523B2400E2849E /* CreateSignalTableViewCell.xib in Resources */,
 				CE735F312152653600E2849E /* MuseoCyrl700.otf in Resources */,
+				CE449BA9215A16CB0091940E /* AddSignalHeaderTableViewCell.xib in Resources */,
 				CE735E8B21523B2400E2849E /* BuyTableViewCell.xib in Resources */,
 				CE735E5521523B2400E2849E /* WatchListSection.xib in Resources */,
 				CE735EFB21523FA000E2849E /* DMStockInfoCell.xib in Resources */,
@@ -1056,6 +1074,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE449BA6215A16CB0091940E /* AddSignalHeaderTableViewCell.swift in Sources */,
 				CE735E7821523B2400E2849E /* DMLaunchViewController.swift in Sources */,
 				CE735F532152785E00E2849E /* Dominant+LayoutConstraint.swift in Sources */,
 				CE735E6A21523B2400E2849E /* DMScreenerContainerViewController.swift in Sources */,
@@ -1080,6 +1099,7 @@
 				CE735EA221523B2400E2849E /* Signals+Request.swift in Sources */,
 				CE735E9421523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */,
 				CE735ED021523CF200E2849E /* UserModel.swift in Sources */,
+				CE449BAB215A1F830091940E /* Dominant+String.swift in Sources */,
 				CE735E7221523B2400E2849E /* DMTradingViewChartViewController.swift in Sources */,
 				CE735E9C21523B2400E2849E /* AccountsDataProvider.swift in Sources */,
 				CE735E8421523B2400E2849E /* BuySectionView.swift in Sources */,
@@ -1109,6 +1129,7 @@
 				CE735ECA21523CF200E2849E /* CompanyModel.swift in Sources */,
 				CE735D0621523B2400E2849E /* TableViewDataSourceShim.swift in Sources */,
 				CE735D0021523B2400E2849E /* TableViewDataSource.swift in Sources */,
+				CE449BAE215A20FF0091940E /* Dominant+TextField.swift in Sources */,
 				CE735E9E21523B2400E2849E /* PortfolioDataProvider.swift in Sources */,
 				CE735E9621523B2400E2849E /* SessionAdapter.swift in Sources */,
 				CE735E5A21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */,
@@ -1146,6 +1167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE449BA7215A16CB0091940E /* AddSignalHeaderTableViewCell.swift in Sources */,
 				CE735E7921523B2400E2849E /* DMLaunchViewController.swift in Sources */,
 				CE735F542152785E00E2849E /* Dominant+LayoutConstraint.swift in Sources */,
 				CE735E6B21523B2400E2849E /* DMScreenerContainerViewController.swift in Sources */,
@@ -1170,6 +1192,7 @@
 				CE735EA321523B2400E2849E /* Signals+Request.swift in Sources */,
 				CE735E9521523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */,
 				CE735ED121523CF200E2849E /* UserModel.swift in Sources */,
+				CE449BAC215A1F830091940E /* Dominant+String.swift in Sources */,
 				CE735E7321523B2400E2849E /* DMTradingViewChartViewController.swift in Sources */,
 				CE735E9D21523B2400E2849E /* AccountsDataProvider.swift in Sources */,
 				CE735E8521523B2400E2849E /* BuySectionView.swift in Sources */,
@@ -1199,6 +1222,7 @@
 				CE735ECB21523CF200E2849E /* CompanyModel.swift in Sources */,
 				CE735D0721523B2400E2849E /* TableViewDataSourceShim.swift in Sources */,
 				CE735D0121523B2400E2849E /* TableViewDataSource.swift in Sources */,
+				CE449BAF215A20FF0091940E /* Dominant+TextField.swift in Sources */,
 				CE735E9F21523B2400E2849E /* PortfolioDataProvider.swift in Sources */,
 				CE735E9721523B2400E2849E /* SessionAdapter.swift in Sources */,
 				CE735E5B21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */,

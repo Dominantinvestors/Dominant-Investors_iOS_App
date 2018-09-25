@@ -1,23 +1,16 @@
 import UIKit
 
 class DMScreenerContainerViewController: DMViewController {
-
-    @IBOutlet  weak var screenerSelector  : UISegmentedControl!
     
     @IBOutlet  weak var screenerContainer : UIView!
     @IBOutlet  weak var cryptoContainer   : UIView!
-    
-    @IBOutlet  weak var stockView         : UIView!
-    @IBOutlet  weak var cryptoView        : UIView!
-    
-    @IBOutlet  weak var stockLabel         : UILabel!
-    @IBOutlet  weak var cryptoLabel        : UILabel!
-    
+
+    @IBOutlet weak var segmentControll: SegmentControll!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.screenerSelector.selectedSegmentIndex = 0
-        self.setupUI()
-    
+        setupUI()
+        setUpSegmentControll()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,16 +27,19 @@ class DMScreenerContainerViewController: DMViewController {
         }
     }
     
-    //MARK: Actions
-    
-    @IBAction func screenerSelectorValueChanged(sender : UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            self.showScrenner()
-        } else {
-            self.showCryptoScreener()
+    fileprivate func setUpSegmentControll() {
+        segmentControll.setLeft(NSLocalizedString("STOCK SCREENER", comment: ""))
+        segmentControll.setRight(NSLocalizedString("CRYPTO SCREENER", comment: ""))
+        
+        segmentControll.selector = { index in
+            if index == 0 {
+                self.showScrenner()
+            } else {
+                self.showCryptoScreener()
+            }
         }
     }
-    
+
     //MARK: Open
     
     open func showChart(chartVC : DMTradingViewChartViewController) {
@@ -64,22 +60,12 @@ class DMScreenerContainerViewController: DMViewController {
     //MARK: Private
     
     fileprivate func setupUI() {
-        self.stockView.layer.borderWidth = 1.0
-        self.cryptoView.layer.borderWidth = 1.0
-        self.stockView.layer.borderColor = UIColor.red.cgColor
-        self.cryptoView.layer.borderColor = UIColor.clear.cgColor
-        
-        self.stockLabel.text = "STOCK SCREENER".localizedUppercase
-        self.cryptoLabel.text = "CRYPTO SCREENER".localizedUppercase
-        
         self.screenerContainer.alpha = 1
         self.cryptoContainer.alpha = 0
         self.cryptoContainer.isHidden = true
     }
     
     fileprivate func showScrenner() {
-        self.stockView.layer.borderColor = UIColor.red.cgColor
-        self.cryptoView.layer.borderColor = UIColor.clear.cgColor
         UIView.animate(withDuration: 0.3, animations: {
             self.screenerContainer.alpha = 1
             self.cryptoContainer.alpha = 0
@@ -90,8 +76,6 @@ class DMScreenerContainerViewController: DMViewController {
     }
     
     fileprivate func showCryptoScreener() {
-        self.stockView.layer.borderColor = UIColor.clear.cgColor
-        self.cryptoView.layer.borderColor = UIColor.red.cgColor
         UIView.animate(withDuration: 0.3, animations: {
             self.screenerContainer.alpha = 0
             self.cryptoContainer.alpha = 1
@@ -100,5 +84,4 @@ class DMScreenerContainerViewController: DMViewController {
             self.cryptoContainer.isHidden = false
         }
     }
-    
 }

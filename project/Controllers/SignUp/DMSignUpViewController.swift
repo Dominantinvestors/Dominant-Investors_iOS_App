@@ -6,12 +6,11 @@ class DMSignUpViewController: DMViewController, UITextFieldDelegate {
     @IBOutlet weak var signUpButton              : UIButton!
     @IBOutlet weak var alreadyHaveAccount        : UIButton!
     
-    @IBOutlet weak var loginTextField            : UITextField!
-    @IBOutlet weak var emailTextField            : UITextField!
-    @IBOutlet weak var passwordTextField         : UITextField!
-    @IBOutlet weak var confirmPasswordTextField  : UITextField!
-    @IBOutlet weak var inviteIDTextField         : UITextField!
-    
+    @IBOutlet weak var firstName            : UITextField!
+    @IBOutlet weak var lastName            : UITextField!
+    @IBOutlet weak var email         : UITextField!
+    @IBOutlet weak var password  : UITextField!
+    @IBOutlet weak var confirmPassword         : UITextField!
     
     @IBOutlet var backgroundImageView            : UIImageView!
     @IBOutlet var overlayView                    : FXBlurView!
@@ -21,7 +20,6 @@ class DMSignUpViewController: DMViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setupUI()
     }
-
 
     // MARK: Private
     private func setupUI() {
@@ -47,50 +45,37 @@ class DMSignUpViewController: DMViewController, UITextFieldDelegate {
     @objc private func hideKeyboard() {
         self.view.endEditing(true)
     }
-
     
     private func configureTextFields() {
-        self.loginTextField.attributedPlaceholder =
-            NSAttributedString(string:"USERNAME",
-                               attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
+        self.firstName.setPlaceholder(NSLocalizedString("First name", comment: ""))
+        self.lastName.setPlaceholder(NSLocalizedString("Last name", comment: ""))
+        self.email.setPlaceholder(NSLocalizedString("E-MAIL", comment: ""))
+        self.password.setPlaceholder(NSLocalizedString("PASSWORD", comment: ""))
+        self.confirmPassword.setPlaceholder(NSLocalizedString("CONFIRM PASSWORD", comment: ""))
+
+        self.signUpButton.layer.cornerRadius = signUpButton.frame.size.height / 2
         
-        self.emailTextField.attributedPlaceholder =
-            NSAttributedString(string:"E-MAIL",
-                               attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
-        
-        self.passwordTextField.attributedPlaceholder =
-            NSAttributedString(string:"PASSWORD",
-                               attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
-        
-        self.confirmPasswordTextField.attributedPlaceholder =
-            NSAttributedString(string:"CONFIRM PASSWORD",
-                               attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
-        
-        self.inviteIDTextField.attributedPlaceholder =
-            NSAttributedString(string:"INVITE ID",
-                               attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
-        
-        self.loginTextField.delegate = self
-        self.emailTextField.delegate = self
-        self.passwordTextField.delegate = self
-        self.confirmPasswordTextField.delegate = self
-        self.inviteIDTextField.delegate = self
+        self.firstName.delegate = self
+        self.lastName.delegate = self
+        self.email.delegate = self
+        self.password.delegate = self
+        self.confirmPassword.delegate = self
     }
     
     private func handleSignUp () {
-        
-        if (self.passwordTextField.text!.count < 8) {
+
+        if (self.password.text!.count < 8) {
             self.showAlertWith(title: NSLocalizedString("Sign up error", comment: ""),
                                message: NSLocalizedString("Password must be at least 8 characters", comment: ""),
                                cancelButton: false)
-            
+
             return
-        } else if (self.passwordTextField.text != self.confirmPasswordTextField.text) {
+        } else if (self.password.text != self.confirmPassword.text) {
             self.showAlertWith(title: NSLocalizedString("Sign up error", comment: ""),
                                message: NSLocalizedString("Password not match", comment: ""),
                                cancelButton: false)
             return
-        } else if (self.loginTextField.text!.count < 4) {
+        } else if (self.firstName.text!.count < 4), (self.lastName.text!.count < 4) {
             self.showAlertWith(title: NSLocalizedString("Sign up error", comment: ""),
                                message: NSLocalizedString("Username must be at least 4 characters", comment: ""),
                                cancelButton: false)
@@ -100,10 +85,11 @@ class DMSignUpViewController: DMViewController, UITextFieldDelegate {
         
         self.showActivityIndicator()
         
-        AccountsDataProvider.default().signOn(login: self.loginTextField.text!,
-                                    email: self.emailTextField.text!,
-                                    password: self.passwordTextField.text!,
-                                    confirm: self.confirmPasswordTextField.text!)
+        AccountsDataProvider.default().signOn(firstName: firstName.text!,
+                                              lastName: lastName.text!,
+                                              email: email.text!,
+                                              password: password.text!,
+                                              confirm: confirmPassword.text!)
         { (success, error) in
                 self.dismissActivityIndicator()
                 if (success) {
@@ -161,7 +147,15 @@ class DMSignUpViewController: DMViewController, UITextFieldDelegate {
                 self.view.frame.origin.y = 0
             })
         }
-        
     }
     
+}
+
+
+class TextBackground: UIView {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.layer.cornerRadius = frame.size.height / 2
+    }
 }

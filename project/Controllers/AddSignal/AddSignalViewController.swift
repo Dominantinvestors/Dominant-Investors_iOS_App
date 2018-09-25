@@ -8,9 +8,6 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
     private var targetDataSource: EditableDataSource!
     private var lossDataSource: EditableDataSource!
 
-    @IBOutlet weak var companyTitle: UILabel!
-    @IBOutlet weak var companyPrice: UILabel!
-    
     private var dataSource: TableViewDataSourceShim? = nil {
         didSet {
             tableView.dataSource = dataSource
@@ -23,19 +20,18 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
         
         title = NSLocalizedString("CREATE SIGNAL", comment: "")
         
-        companyTitle.text = company.ticker
-        companyPrice.text = company.buyPoint + Values.Currency
-        
         tableView.register(cell: BuyTableViewCell.self)
         tableView.register(cell: CreateSignalTableViewCell.self)
+        tableView.register(cell: AddSignalHeaderTableViewCell.self)
 
+        let header = AddSignalHeaderDataSource(data: [company])
         buyDataSource = EditableDataSource(title: NSLocalizedString("BUY POINT", comment: ""))
         targetDataSource = EditableDataSource(title: NSLocalizedString("TARGET PRICE", comment: ""),
                                               rightText: Values.Currency)
         lossDataSource = EditableDataSource(title: NSLocalizedString("STOPP LOSS", comment: ""),
                                             rightText: Values.Currency)
         
-        let composed = ComposedDataSource([buyDataSource, targetDataSource, lossDataSource, createSignalSection()])
+        let composed = ComposedDataSource([header, buyDataSource, targetDataSource, lossDataSource, createSignalSection()])
         self.dataSource = TableViewDataSourceShim(composed)
         self.tableView.reloadData()
     }
@@ -49,6 +45,9 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
     }
     
     private func createSignal() {
+        guard buyDataSource.text.count > 0, targetDataSource.text.count > 0, lossDataSource.text.count > 0 else {
+            return
+        }
         SignalsDataProvider.default().createSignal(for: company, buyDataSource.text, targetDataSource.text, lossDataSource.text)
         { success, error in
             if !success {
@@ -56,5 +55,19 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
                                    message: error ?? "")
             }
         }
+    }
+}
+
+struct AddSignalHeaderDataSource:
+    TableViewDataSource,
+    DataContainable,
+    CellContainable,
+    CellConfigurator
+{
+    var data: [CompanyModel]
+    
+    func configurateCell(_ cell: AddSignalHeaderTableViewCell, item: CompanyModel, at indexPath: IndexPath) {
+        cell.companyTitle.text = item.ticker
+        cell.companyPrice.attributedText = item.buyPoint.toMoneyStyle()
     }
 }

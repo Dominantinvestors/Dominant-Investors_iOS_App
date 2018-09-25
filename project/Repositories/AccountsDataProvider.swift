@@ -34,7 +34,8 @@ struct AccountsDataProvider: Repository, Syncable {
         }
     }
     
-    func signOn(login: String,
+    func signOn(firstName: String,
+                lastName: String,
                 email: String,
                 password: String,
                 confirm: String,
@@ -42,7 +43,7 @@ struct AccountsDataProvider: Repository, Syncable {
     {
         HTTPCookieStorage.shared.removeCookies(since: Date.distantPast)
 
-        send(request: UserModel.registration(email, password, confirm, login, "non")).responseJSON { response in
+        send(request: UserModel.registration(email, password, confirm, firstName, lastName)).responseJSON { response in
             switch self.handler.handle(response) {
             case .success(let json):
                 if let json = json as? [String : AnyObject] {

@@ -1,13 +1,4 @@
-//
-//  DMLoginViewController.swift
-//  Dominant Investors
-//
-//  Created by Nekit on 19.02.17.
-//  Copyright © 2017 Dominant. All rights reserved.
-//
-
 import UIKit
-import MBProgressHUD
 
 class DMLoginViewController: DMViewController, UITextFieldDelegate {
     
@@ -15,6 +6,7 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField  : UITextField!
     @IBOutlet weak var overlayView        : FXBlurView!
     @IBOutlet weak var createNewAccount   : UIButton!
+    @IBOutlet weak var signInButton   : UIButton!
     @IBOutlet var backgroundImageView     : UIImageView!
     
     override func viewDidLoad() {
@@ -29,6 +21,8 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
         configureLabels()
         configureTextFields()
         configureKeyboard()
+        
+        self.signInButton.layer.cornerRadius = signInButton.frame.size.height / 2
     }
     
     private func configureKeyboard() {
@@ -70,6 +64,7 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
         
         self.usernameTextField.delegate = self
         self.passwordTextField.delegate = self
+        
     }
     
     private func showTabBar() {

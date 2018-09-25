@@ -15,15 +15,3 @@ class BuyTableViewCell: UITableViewCell, ReuseIdentifier {
         textField.textColor = .black
     }
 }
-
-extension UITextField {
-    
-    func setRight(_ text: String) {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-        label.text = text
-        label.font = Fonts.bolt(25)
-        label.textAlignment = .center
-        rightViewMode = .always
-        rightView = label
-    }
-}

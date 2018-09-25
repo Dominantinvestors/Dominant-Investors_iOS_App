@@ -45,7 +45,7 @@ class BuyViewController: KeyboardObservableViewController {
     }
     
     private func onSubmit() {
-        if let amount = buyDataSource.cell?.textField.text {
+        if let amount = buyDataSource.cell?.textField.text, amount.count > 0 {
             SignalsDataProvider.default().buy(amount, company) { succes, error in
                 if !succes {
                     self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
@@ -117,10 +117,6 @@ class EditableDataSource:
         self.rightText = rightText
     }
     
-    func reuseIdentifier() -> String {
-        return "BuyTableViewCell"
-    }
-    
     func configurateCell(_ cell: BuyTableViewCell, item: String, at indexPath: IndexPath) {
         self.cell = cell
         cell.title.text = item
@@ -148,11 +144,7 @@ class NotEditableDataSource:
         data = [(title, text)]
         self.footer = footer
     }
-    
-    func reuseIdentifier() -> String {
-        return "BuyTableViewCell"
-    }
-    
+
     func configurateCell(_ cell: BuyTableViewCell, item: (String, String?), at indexPath: IndexPath) {
         self.cell = cell
         cell.title.text = item.0

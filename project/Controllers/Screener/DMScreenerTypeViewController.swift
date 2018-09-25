@@ -53,7 +53,5 @@ class DMScreenerTypeViewController: DMViewController, UIWebViewDelegate {
         self.webView.stringByEvaluatingJavaScript(from: bodyStyleVertical)
         self.webView.stringByEvaluatingJavaScript(from: bodyStyleHorizontal)
         self.webView.stringByEvaluatingJavaScript(from: mapStyle)
-        
     }
-    
 }

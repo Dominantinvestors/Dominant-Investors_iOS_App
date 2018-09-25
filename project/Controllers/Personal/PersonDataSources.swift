@@ -12,10 +12,6 @@ struct CreateSignalDataSource:
     
     var selectors: [DataSource.Action: (CreateSignalTableViewCell, IndexPath, String) -> ()] = [:]
     
-    func reuseIdentifier() -> String {
-        return "CreateSignalTableViewCell"
-    }
-    
     func configurateCell(_ cell: CreateSignalTableViewCell, item: String, at indexPath: IndexPath) {
         cell.create.setTitle(item, for: .normal)
         cell.create.actionHandle(.touchUpInside) {
@@ -44,11 +40,7 @@ class WatchListDataSource:
     }
     
     var selectors: [DataSource.Action: (WatchListTableViewCell, IndexPath, SignalModel) -> ()] = [:]
-    
-    func reuseIdentifier() -> String {
-        return "WatchListTableViewCell"
-    }
-    
+  
     func configurateCell(_ cell: WatchListTableViewCell, item: SignalModel, at indexPath: IndexPath) {
         cell.ticker.text = item.ticker
         cell.mktPrice.text = item.mktPrice
@@ -81,10 +73,6 @@ class PortfolioDataSource:
     }
     
     var selectors: [DataSource.Action: (PortfolioTableViewCell, IndexPath, (UserModel?, PortfolioModel?)) -> ()] = [:]
-    
-    func reuseIdentifier() -> String {
-        return "PortfolioTableViewCell"
-    }
     
     func configurateCell(_ cell: PortfolioTableViewCell, item: (UserModel?, PortfolioModel?), at indexPath: IndexPath) {
         
@@ -151,10 +139,6 @@ class AssetsDataSource:
     
     var selectors: [DataSource.Action: (AssetsTableViewCell, IndexPath, AssetsModel) -> ()] = [:]
     
-    func reuseIdentifier() -> String {
-        return "AssetsTableViewCell"
-    }
-    
     func configurateCell(_ cell: AssetsTableViewCell, item: AssetsModel, at indexPath: IndexPath) {
         cell.ticker.text = item.ticker
         cell.buyPoint.text = item.buyPoint
@@ -173,10 +157,6 @@ struct SearchDataSource:
     var data: [String]
     
     let delegate: UISearchBarDelegate
-    
-    func reuseIdentifier() -> String {
-        return "SearchTableViewCell"
-    }
     
     func configurateCell(_ cell: SearchTableViewCell, item: String, at indexPath: IndexPath) {
         cell.searchBar.placeholder = item
