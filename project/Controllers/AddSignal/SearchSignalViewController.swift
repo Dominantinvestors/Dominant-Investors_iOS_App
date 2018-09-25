@@ -40,7 +40,7 @@ class SearchSignalViewController: KeyboardObservableViewController, UISearchBarD
 //        SignalsDataProvider.default().search(by: text) { items, error in
             if let items = items {
                 self.items.data = items
-//                self.tableView.reloadData()
+                self.tableView.reloadData()
             } else {
                 self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
                                    message: error ?? "")

@@ -157,9 +157,9 @@ class PersonalViewController: KeyboardObservableViewController {
         }
         
         searchController.selectedItem = { item in
-            if let asset = item as? AssetsModel {
+            if let company = item as? CompanyModel {
                 let buy: BuyViewController = UIStoryboard(name: "Portfolio", bundle: nil)[.Buy]
-                buy.asset = asset
+                buy.company = company
                 self.navigationController?.pushViewController(buy, animated: true)
             }
         }

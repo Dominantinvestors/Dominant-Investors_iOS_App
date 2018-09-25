@@ -2,7 +2,7 @@ import UIKit
 
 class BuyViewController: KeyboardObservableViewController {
 
-    var asset: AssetsModel?
+    var company: CompanyModel!
     
     private var costDataSource: NotEditableDataSource!
     private var buyDataSource: EditableDataSource!
@@ -31,7 +31,7 @@ class BuyViewController: KeyboardObservableViewController {
         }
         
         buyDataSource = EditableDataSource(title: NSLocalizedString("SHARES OF FB", comment: ""), delegate: self)
-        let priceDataSource = NotEditableDataSource(title: NSLocalizedString("MKT PRICE", comment: ""), text: asset?.mktPrice)
+        let priceDataSource = NotEditableDataSource(title: NSLocalizedString("MKT PRICE", comment: ""), text: company.buyPoint)
         costDataSource = NotEditableDataSource(title: NSLocalizedString("EST COST", comment: ""), text: nil, footer: footer)
 
         let composed = ComposedDataSource([buyDataSource, priceDataSource, costDataSource])
@@ -45,8 +45,8 @@ class BuyViewController: KeyboardObservableViewController {
     }
     
     private func onSubmit() {
-        if let asset = asset, let amount = buyDataSource.cell?.textField.text {
-            SignalsDataProvider.default().buy(amount, asset) { succes, error in
+        if let amount = buyDataSource.cell?.textField.text {
+            SignalsDataProvider.default().buy(amount, company) { succes, error in
                 if !succes {
                     self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
                                        message: error ?? "")
@@ -70,7 +70,7 @@ extension BuyViewController: UITextFieldDelegate {
         let currentString: NSString = textField.text! as NSString
         let amount = currentString.replacingCharacters(in: range, with: string)
         
-        self.costDataSource.cell?.textField.text = cost(amount, asset?.mktPrice)
+        self.costDataSource.cell?.textField.text = cost(amount, company.buyPoint)
         
         return true
     }

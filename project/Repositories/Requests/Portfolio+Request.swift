@@ -12,10 +12,10 @@ extension PortfolioModel {
         return URLEncodingRequestBuilder(path: "/portfolio/user/assets/", method: .get, parameters: parameters)
     }
     
-    static func buy(_ amount: String, _ asset: AssetsModel) -> RequestProvider {
-        let parameters: [String: Any] = ["ticker": asset.ticker,
+    static func buy(_ amount: String, _ company: CompanyModel) -> RequestProvider {
+        let parameters: [String: Any] = ["ticker": company.ticker,
                                          "amount": amount,
-                                         "price": asset.mktPrice]
+                                         "price": company.buyPoint]
         return URLEncodingRequestBuilder(path: "/transactions/buy/", method: .post, parameters: parameters)
     }
 }

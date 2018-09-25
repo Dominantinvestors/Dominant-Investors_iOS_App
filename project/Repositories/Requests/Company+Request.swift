@@ -17,7 +17,8 @@ extension CompanyModel {
                                          "ticker": ticker,
                                          "buy_point": buyPoint,
                                          "target_price": targetPrice,
-                                         "stop_loss": stopLoss]
+                                         "stop_loss": stopLoss,
+                                         "investment_idea": "0"]
         return URLEncodingRequestBuilder(path: "/signals/", method: .post, parameters: parameters)
     }
     

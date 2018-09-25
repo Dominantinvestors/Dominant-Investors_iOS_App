@@ -3,8 +3,10 @@ import UIKit
 class DMScreenerContainerViewController: DMViewController {
 
     @IBOutlet  weak var screenerSelector  : UISegmentedControl!
+    
     @IBOutlet  weak var screenerContainer : UIView!
     @IBOutlet  weak var cryptoContainer   : UIView!
+    
     @IBOutlet  weak var stockView         : UIView!
     @IBOutlet  weak var cryptoView        : UIView!
     
