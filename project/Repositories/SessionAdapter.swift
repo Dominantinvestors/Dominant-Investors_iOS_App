@@ -28,6 +28,22 @@ class MainSessionManager: SessionManager {
         return session
     }
     
+    static func `default`(sessionToken: String) -> MainSessionManager{
+        let configuration = URLSessionConfiguration.default
+        
+        var httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
+        
+        httpAdditionalHeaders["accept"] = "application/json"
+        httpAdditionalHeaders["Content-Type"] = "application/json"
+        
+        configuration.httpAdditionalHeaders = httpAdditionalHeaders
+        
+        let session = MainSessionManager(configuration: configuration)
+        session.adapter = SessionKeySessionAdapter(session: sessionToken)
+        
+        return session
+    }
+    
     static func `default`() -> MainSessionManager{
         let configuration = URLSessionConfiguration.default
         
@@ -75,3 +91,16 @@ struct RFTSessionAdapter: RequestAdapter {
     }
 }
 
+
+struct SessionKeySessionAdapter: RequestAdapter {
+    
+    let session: String
+    
+    func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
+        var urlRequest = urlRequest
+        
+        urlRequest.setValue(session, forHTTPHeaderField: "x-mysolomeo-session-key")
+        
+        return urlRequest
+    }
+}

@@ -2,7 +2,7 @@ import UIKit
 
 class AddSignalViewController: KeyboardObservableViewController, UITextFieldDelegate {
     
-    var company: CompanyModel!
+    var company: Company!
     
     private var buyDataSource: EditableDataSource!
     private var targetDataSource: EditableDataSource!
@@ -48,9 +48,13 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
         guard buyDataSource.text.count > 0, targetDataSource.text.count > 0, lossDataSource.text.count > 0 else {
             return
         }
+        showActivityIndicator()
         SignalsDataProvider.default().createSignal(for: company, buyDataSource.text, targetDataSource.text, lossDataSource.text)
         { success, error in
-            if !success {
+            self.dismissActivityIndicator()
+            if success {
+                self.navigationController?.popToRootViewController(animated: true)
+            } else {
                 self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
                                    message: error ?? "")
             }
@@ -64,10 +68,10 @@ struct AddSignalHeaderDataSource:
     CellContainable,
     CellConfigurator
 {
-    var data: [CompanyModel]
+    var data: [Company]
     
-    func configurateCell(_ cell: AddSignalHeaderTableViewCell, item: CompanyModel, at indexPath: IndexPath) {
-        cell.companyTitle.text = item.ticker
+    func configurateCell(_ cell: AddSignalHeaderTableViewCell, item: Company, at indexPath: IndexPath) {
+        cell.companyTitle.text = item.name
         cell.companyPrice.attributedText = item.buyPoint.toMoneyStyle()
     }
 }

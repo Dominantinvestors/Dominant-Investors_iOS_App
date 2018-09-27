@@ -16,7 +16,7 @@ class BaseRequestBuilder: RequestProvider {
     
     func encoder() -> ParameterEncoding { fatalError() }
     
-    init(url: String = Network.baseURL2,
+    init(url: String = Network.baseURL,
          path: String? = nil,
          method: HTTPMethod = .get,
          parameters: [String: Any]? = nil)

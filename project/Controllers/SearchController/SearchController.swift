@@ -12,8 +12,8 @@ extension CompanyModel: SearchItem {
     var title: String { return ticker}
 }
 
-extension String: SearchItem {
-    var title: String { return self}
+extension DrivewealthModel: SearchItem {
+    var title: String { return ticker }
 }
 
 class SearchController: UIView {
@@ -142,7 +142,7 @@ extension SearchController: UISearchBarDelegate {
         let currentString: NSString = searchBar.text! as NSString
         let searchText = currentString.replacingCharacters(in: range, with: text)
         
-        if searchText.count > 0 {
+        if searchText.count > 1 {
             showTableView()
             self.textDidUpdate?(searchText)
         } else {

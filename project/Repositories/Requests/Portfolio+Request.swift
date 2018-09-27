@@ -16,6 +16,6 @@ extension PortfolioModel {
         let parameters: [String: Any] = ["ticker": company.ticker,
                                          "amount": amount,
                                          "price": company.buyPoint]
-        return URLEncodingRequestBuilder(path: "/transactions/buy/", method: .post, parameters: parameters)
+        return JSONEncodingRequestBuilder(path: "/transactions/buy/", method: .post, parameters: parameters)
     }
 }

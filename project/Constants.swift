@@ -43,15 +43,7 @@ struct APIReqests {
 }
 
 struct Network {
-    
-    static let baseURL2 = "https://dominant-investors.geeks.land/api/v1"
-    
-    static let baseURL = "http://172.104.22.205"
-    static let APIVersion = "/api/v1"
-    static let authAPIModule = "/accounts"
-    static let loginEndPoint = "/login/"
-    static let logoutEndPoint = "/logout/"
-	static let main = "/main/"
+    static let baseURL = "https://dominant-investors.geeks.land/api/v1"
 }
 
 struct ConstantsUserDefaults{

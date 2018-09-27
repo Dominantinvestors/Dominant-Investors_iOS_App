@@ -28,7 +28,6 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
     @IBOutlet weak var stopLoss                 : UILabel!
     @IBOutlet weak var targetPrice         : UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -62,9 +61,9 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
     // MARK: Private
     
     private func setupUI() {
-        self.infoLabel.text        = self.company.description
+        self.infoLabel.text = self.company.description
         self.title = self.company.name
-        self.priceLabel.text = self.company.buyPoint + " $"
+        self.priceLabel.attributedText = self.company.buyPoint.toMoneyStyle()
 
         self.statsContainer.setupWithCompany(company: self.company)
 

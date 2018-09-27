@@ -38,7 +38,31 @@ class PersonalViewController: KeyboardObservableViewController {
         
         self.dataSource = SegmentDataSourceShim([watchListController, portfolioController], tableView: tableView)
         self.tableView.reloadData()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadData()
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    private func createSignal() {
+        let buy = UIStoryboard(name: "Portfolio", bundle: nil)[.SearchSignal]
+        self.navigationController?.pushViewController(buy, animated: true)
+    }
+    
+    private func editProfile() {
+    }
+    
+    private func onMessage() {
+    }
+    
+    fileprivate func reloadData() {
         PortfolioDataProvider.default().get { portfolio, error in
             if let portfolio = portfolio {
                 let user: UserModel = ServiceLocator.shared.getService()
@@ -59,7 +83,7 @@ class PersonalViewController: KeyboardObservableViewController {
                                    message: error ?? "")
             }
         }
-
+        
         SignalsDataProvider.default().get { signals, error in
             if let signals = signals {
                 self.watchList.data = signals
@@ -69,27 +93,6 @@ class PersonalViewController: KeyboardObservableViewController {
                                    message: error ?? "")
             }
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.isHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.isHidden = false
-    }
-    
-    private func createSignal() {
-        let buy = UIStoryboard(name: "Portfolio", bundle: nil)[.SearchSignal]
-        self.navigationController?.pushViewController(buy, animated: true)
-    }
-    
-    private func editProfile() {
-    }
-    
-    private func onMessage() {
     }
     
     fileprivate func setUpSegmentControll() {
@@ -144,7 +147,11 @@ class PersonalViewController: KeyboardObservableViewController {
         let searchController = SearchController()
         searchController.textDidUpdate = { text in
             
-            SignalsDataProvider.default().companies() { items, error in
+            self.showActivityIndicator()
+            DrivewealthDataProvider.default().search(by: text) { items, error in
+                self.dismissActivityIndicator()
+                
+//            SignalsDataProvider.default().companies() { items, error in
 
 //            SignalsDataProvider.default().search(by: text) { items, error in
                 if let items = items {

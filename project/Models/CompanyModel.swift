@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 
-class CompanyModel: Mappable {
+class CompanyModel: Mappable, Company {
     
     var id: Int = 0
     var growthPotential: Int = 0

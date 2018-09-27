@@ -45,7 +45,7 @@ struct SignalsDataProvider: Repository, Syncable {
         }
     }
     
-    func createSignal(for company: CompanyModel,
+    func createSignal(for company: Company,
                       _ buyPoint: String,
                       _ targetPrice: String,
                       _ stopLoss: String,

@@ -15,6 +15,7 @@ target :DominantInvestors do
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'FacebookShare'
+    pod 'BittrexApiKit'
 end
 
 target :DominantCrypto do
@@ -25,6 +26,7 @@ target :DominantCrypto do
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'FacebookShare'
+    pod 'BittrexApiKit'
 end
 
 post_install do |installer|

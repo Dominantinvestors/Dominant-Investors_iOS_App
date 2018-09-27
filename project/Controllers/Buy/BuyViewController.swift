@@ -46,8 +46,12 @@ class BuyViewController: KeyboardObservableViewController {
     
     private func onSubmit() {
         if let amount = buyDataSource.cell?.textField.text, amount.count > 0 {
-            SignalsDataProvider.default().buy(amount, company) { succes, error in
-                if !succes {
+            showActivityIndicator()
+            SignalsDataProvider.default().buy(amount, company) { success, error in
+                self.dismissActivityIndicator()
+                if success {
+                    self.navigationController?.popToRootViewController(animated: true)
+                } else {
                     self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
                                        message: error ?? "")
                 }

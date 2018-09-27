@@ -253,6 +253,8 @@
 		CE735F542152785E00E2849E /* Dominant+LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F522152785E00E2849E /* Dominant+LayoutConstraint.swift */; };
 		CE735F562152788700E2849E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F552152788700E2849E /* Protocols.swift */; };
 		CE735F572152788700E2849E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F552152788700E2849E /* Protocols.swift */; };
+		CE8854CA215CC8940093564B /* DrivewealthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */; };
+		CE8854CB215CC8940093564B /* DrivewealthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -389,6 +391,7 @@
 		CE735F452152782800E2849E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE735F522152785E00E2849E /* Dominant+LayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dominant+LayoutConstraint.swift"; sourceTree = "<group>"; };
 		CE735F552152788700E2849E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivewealthDataProvider.swift; sourceTree = "<group>"; };
 		CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominantInvestors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB57268B412308413460525 /* Pods-DominantCrypto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantCrypto.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -669,6 +672,7 @@
 				CE735CEB21523B2300E2849E /* AccountsDataProvider.swift */,
 				CE735CEC21523B2300E2849E /* PortfolioDataProvider.swift */,
 				CE735CED21523B2300E2849E /* InvestorsDataProvider.swift */,
+				CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */,
 				CE735CEE21523B2300E2849E /* Requests */,
 				CE735CF421523B2300E2849E /* Repository.swift */,
 				CE735CF521523B2300E2849E /* SignalsDataProvider.swift */,
@@ -1159,6 +1163,7 @@
 				CE735EFE21523FA000E2849E /* DMCryptoInfoContainer.swift in Sources */,
 				CE735F502152782800E2849E /* TabBarController.swift in Sources */,
 				CE735D0821523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */,
+				CE8854CA215CC8940093564B /* DrivewealthDataProvider.swift in Sources */,
 				CE735F0221523FA000E2849E /* DMRatingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1252,6 +1257,7 @@
 				CE735EFF21523FA000E2849E /* DMCryptoInfoContainer.swift in Sources */,
 				CE735F512152782800E2849E /* TabBarController.swift in Sources */,
 				CE735D0921523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */,
+				CE8854CB215CC8940093564B /* DrivewealthDataProvider.swift in Sources */,
 				CE735F0321523FA000E2849E /* DMRatingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
