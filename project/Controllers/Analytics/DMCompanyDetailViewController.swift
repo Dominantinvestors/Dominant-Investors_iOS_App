@@ -1,10 +1,13 @@
 import UIKit
+import AFDateHelper
 
 class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebViewDelegate {
 
     var company   : CompanyModel!
     var chartView : ChartView? = nil
     var chart     : SwiftStockChart!
+    
+    var items: [ChartPoint] = []
     
     // MARK: Outlets
     @IBOutlet weak var infoLabel                : UILabel!
@@ -159,11 +162,59 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
             return String(format: "%.02f", value)
         }
         
-        
+        if self.company.isCrypto() {
+            rangeChangeForCrypto(range: range)
+        } else {
+            rangeChangeForCompany(range: range)
+        }
+    }
+    
+    func rangeChangeForCompany(range: ChartTimeRange) {
         SwiftStockKit.fetchChartPoints(symbol: self.company.ticker, range: range, crypto: self.company.isCrypto()) { (chartPoints) -> () in
             self.chart.clearChartData()
             self.chart.setChartPoints(points: chartPoints)
         }
+    }
+    
+    func rangeChangeForCrypto(range: ChartTimeRange) {
+        let endDate = Date()
+        var startDate: Date
+        
+        switch (range) {
+        case .OneDay:
+            startDate = endDate.adjust(.day, offset: -1)
+        case .FiveDays:
+            startDate = endDate.adjust(.day, offset: -5)
+        case .TenDays:
+            startDate = endDate.adjust(.day, offset: -10)
+        case .OneMonth:
+            startDate = endDate.adjust(.month, offset: -1)
+        case .ThreeMonths:
+            startDate = endDate.adjust(.month, offset: -3)
+        case .OneYear:
+            startDate = endDate.adjust(.year, offset: -1)
+        case .FiveYears:
+            startDate = endDate.adjust(.year, offset: -5)
+        }
+        
+        if !self.items.isEmpty {
+            self.filter(fot: startDate.timeIntervalSince1970)
+        } else {
+            self.showActivityIndicator()
+            CryptoCompareDataProvider.default().get(for: self.company.ticker) { points, error in
+                self.dismissActivityIndicator()
+                if let points = points {
+                    self.items = points
+                    self.filter(fot: startDate.timeIntervalSince1970)
+                }
+            }
+        }
+    }
+    
+    func filter(fot date: Double)  {
+        let points = self.items.filter({ TimeInterval( $0.timeStamp ?? 0.0) > date})
+        self.chart.clearChartData()
+        self.chart.setChartPoints(points: points)
     }
     
     func didChangeTimeRange(range: ChartTimeRange) {

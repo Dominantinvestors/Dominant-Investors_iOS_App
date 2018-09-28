@@ -63,15 +63,53 @@ class Stock: NSObject {
 //    
 //}
 
-struct ChartPoint {
+import ObjectMapper
+
+class ChartPoint: Mappable {
+    
     var date: Date?
     var volume: Int?
     var open: CGFloat?
     var close: CGFloat?
     var low: CGFloat?
     var high: CGFloat?
+    var timeStamp: Double?
 
+    required init?(map: Map) { }
+    
+    init(date: Date?, volume: Int?, open: CGFloat?, close: CGFloat?, low: CGFloat?, high: CGFloat?) {
+        self.date = date
+        self.volume = volume
+        self.open = open
+        self.close = close
+        self.low = low
+        self.high = high
+    }
+    
+    func mapping(map: Map) {
+        
+        if let datef = map["time"].currentValue as? Double {
+            date = Date(timeIntervalSince1970: TimeInterval(datef))
+        }
+        
+        timeStamp <- map["time"]
+        volume <- map["volumeto"]
+        open <- map["open"]
+        close <- map["close"]
+        low <- map["low"]
+        high <- map["high"]
+    }
 }
+
+//struct ChartPoint {
+//    var date: Date?
+//    var volume: Int?
+//    var open: CGFloat?
+//    var close: CGFloat?
+//    var low: CGFloat?
+//    var high: CGFloat?
+//
+//}
 
 enum ChartTimeRange {
     case OneDay, FiveDays, TenDays, OneMonth, ThreeMonths, OneYear, FiveYears
