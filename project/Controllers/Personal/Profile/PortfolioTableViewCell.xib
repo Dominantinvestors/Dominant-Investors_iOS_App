@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,9 +18,6 @@
         </array>
         <array key="MuseoCyrl500.otf">
             <string>MuseoCyrl-500</string>
-        </array>
-        <array key="MuseoCyrl700.otf">
-            <string>MuseoCyrl-700</string>
         </array>
     </customFonts>
     <objects>
@@ -41,7 +38,7 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dots" translatesAutoresizingMaskIntoConstraints="NO" id="3u7-59-R2x">
-                        <rect key="frame" x="16" y="169" width="288" height="2"/>
+                        <rect key="frame" x="16" y="164" width="288" height="2"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZg-Ul-4Ct">
                         <rect key="frame" x="118" y="31.5" width="68" height="47.5"/>
@@ -75,53 +72,53 @@
                         <rect key="frame" x="16" y="110" width="288" height="2"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFX-mp-stq">
-                        <rect key="frame" x="16" y="187" width="288" height="35.5"/>
+                        <rect key="frame" x="16" y="182" width="288" height="40.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 $" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjw-bk-4GA">
-                                <rect key="frame" x="0.0" y="0.0" width="72" height="17"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                                <rect key="frame" x="0.0" y="0.0" width="72" height="19.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSx-CZ-adh">
-                                <rect key="frame" x="0.0" y="21" width="72" height="14.5"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSx-CZ-adh">
+                                <rect key="frame" x="0.0" y="23.5" width="72" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
                                 <color key="textColor" red="0.7686274509803922" green="0.792156862745098" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 $" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqQ-rP-wyA">
-                                <rect key="frame" x="72" y="0.0" width="72" height="17"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                                <rect key="frame" x="72" y="0.0" width="72" height="19.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ET-QN-SYf">
-                                <rect key="frame" x="72" y="21" width="72" height="14.5"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ET-QN-SYf">
+                                <rect key="frame" x="72" y="23.5" width="72" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
                                 <color key="textColor" red="0.7686274509803922" green="0.792156862745098" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 $" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBx-9d-5uO">
-                                <rect key="frame" x="144" y="0.0" width="72" height="17"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                                <rect key="frame" x="144" y="0.0" width="72" height="19.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhc-xM-UhQ">
-                                <rect key="frame" x="144" y="21" width="72" height="14.5"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhc-xM-UhQ">
+                                <rect key="frame" x="144" y="23.5" width="72" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
                                 <color key="textColor" red="0.7686274509803922" green="0.792156862745098" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fC-0e-boX">
-                                <rect key="frame" x="216" y="0.0" width="72" height="17"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                                <rect key="frame" x="216" y="0.0" width="72" height="19.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfn-cs-w3w">
-                                <rect key="frame" x="216" y="21" width="72" height="14.5"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfn-cs-w3w">
+                                <rect key="frame" x="216" y="23.5" width="72" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
                                 <color key="textColor" red="0.7686274509803922" green="0.792156862745098" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -159,22 +156,22 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-kg-5k1">
-                        <rect key="frame" x="16" y="112" width="288" height="57"/>
+                        <rect key="frame" x="16" y="112" width="288" height="52"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Rating" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFb-Qy-Jyi">
-                                <rect key="frame" x="0.0" y="0.0" width="52" height="57"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                                <rect key="frame" x="0.0" y="0.0" width="103" height="52"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 followers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo4-Ov-l0G">
-                                <rect key="frame" x="68" y="0.0" width="69.5" height="57"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                                <rect key="frame" x="119" y="0.0" width="103" height="52"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vt4-pZ-A1b" customClass="ActionHandleButton" customModule="DominantCrypto" customModuleProvider="target">
-                                <rect key="frame" x="222" y="8" width="66" height="41"/>
+                                <rect key="frame" x="222" y="8" width="66" height="36"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="16"/>
                                 <state key="normal" title="3" image="messageIcon" backgroundImage="messageBG"/>
                             </button>
@@ -182,13 +179,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="YFb-Qy-Jyi" secondAttribute="bottom" id="6Tg-zU-ueF"/>
+                            <constraint firstItem="vo4-Ov-l0G" firstAttribute="width" secondItem="YFb-Qy-Jyi" secondAttribute="width" id="81T-aR-hw8"/>
                             <constraint firstAttribute="trailing" secondItem="vt4-pZ-A1b" secondAttribute="trailing" id="9Hf-3Y-dNe"/>
                             <constraint firstAttribute="bottom" secondItem="vo4-Ov-l0G" secondAttribute="bottom" id="EdA-zK-BaG"/>
                             <constraint firstItem="vt4-pZ-A1b" firstAttribute="centerY" secondItem="WmW-kg-5k1" secondAttribute="centerY" id="Mop-CB-zJD"/>
                             <constraint firstItem="YFb-Qy-Jyi" firstAttribute="leading" secondItem="WmW-kg-5k1" secondAttribute="leading" id="Shv-XR-Nvb"/>
                             <constraint firstItem="vo4-Ov-l0G" firstAttribute="leading" secondItem="YFb-Qy-Jyi" secondAttribute="trailing" constant="16" id="bdS-96-Hk4"/>
                             <constraint firstItem="YFb-Qy-Jyi" firstAttribute="top" secondItem="WmW-kg-5k1" secondAttribute="top" id="c4b-Ol-rbE"/>
-                            <constraint firstItem="vt4-pZ-A1b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vo4-Ov-l0G" secondAttribute="trailing" id="cXz-xd-1zp"/>
+                            <constraint firstItem="vt4-pZ-A1b" firstAttribute="leading" secondItem="vo4-Ov-l0G" secondAttribute="trailing" id="cXz-xd-1zp"/>
                             <constraint firstItem="vt4-pZ-A1b" firstAttribute="top" secondItem="WmW-kg-5k1" secondAttribute="top" constant="8" id="nxz-Up-dml"/>
                             <constraint firstItem="vo4-Ov-l0G" firstAttribute="top" secondItem="WmW-kg-5k1" secondAttribute="top" id="tPq-ke-0aL"/>
                             <constraint firstAttribute="bottom" secondItem="vt4-pZ-A1b" secondAttribute="bottom" constant="8" id="yFU-yf-mOu"/>

@@ -1,39 +1,61 @@
 import UIKit
 import AFDateHelper
+import Alamofire
 
 class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebViewDelegate {
 
-    var company   : CompanyModel!
-    var chartView : ChartView? = nil
-    var chart     : SwiftStockChart!
+    var company: CompanyModel!
+    var chartView: ChartView? = nil
+    var chart: SwiftStockChart!
     
     var items: [ChartPoint] = []
     
-    // MARK: Outlets
-    @IBOutlet weak var infoLabel                : UILabel!
-        
-    @IBOutlet weak var revenueEstimizeButton    : UIButton!
-    @IBOutlet weak var epsEstimizeButton        : UIButton!
-    @IBOutlet weak var tradingViewButton        : UIButton!
-    
-    @IBOutlet weak var chartContainer           : UIView!
-    @IBOutlet weak var priceView           : UIView!
-    @IBOutlet weak var priceLabel          : UILabel!
+    let footerView: CompanyFooterView = CompanyFooterView.instanceFromNib()
 
-    @IBOutlet weak var statsContainer           : DMStatsContainer!
-    @IBOutlet weak var tradingViewContainer     : UIView!
-    @IBOutlet weak var buttonsContainer         : UIView!
-    @IBOutlet weak var buttonsContainerHeight   : NSLayoutConstraint!
-    @IBOutlet weak var chartContainerHeight     : NSLayoutConstraint!
-    
-    @IBOutlet weak var buyPointLabel            : UILabel!
-    @IBOutlet weak var growthPotential          : UILabel!
-    @IBOutlet weak var stopLoss                 : UILabel!
-    @IBOutlet weak var targetPrice         : UILabel!
+    @IBOutlet weak var tableView: UITableView!
+
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var chartContainer: UIView!
+    @IBOutlet weak var priceView: UIView!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var chartContainerHeight: NSLayoutConstraint!
+    @IBOutlet weak var isGrowingIcon: UIImageView!
+    @IBOutlet weak var logo: UIImageView!
+
+    private var dataSource: TableViewDataSourceShim? = nil {
+        didSet {
+            tableView.dataSource = dataSource
+            tableView.delegate = dataSource
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
+        tableView.tableFooterView = footerView
+        tableView.register(cell: StatsTableViewCell.self)
+        tableView.register(TitleSection.self)
+        
+        var statistic: [TableViewDataSource] = []
+        if let _ = company.stats {
+            statistic.append( CompanySatatusDataSource(title: NSLocalizedString("Stats", comment: ""), data: company.status()))
+        }
+        
+        if let _ = company.ratings {
+            statistic.append( CompanySatatusDataSource(title: NSLocalizedString("Rating", comment: ""), data: company.rating()))
+        }
+        
+        dataSource = TableViewDataSourceShim(ComposedDataSource(statistic))
+        tableView.reloadData()
+        
+        footerView.setCompany(company)
+        footerView.revenueEstimizeButton.addTarget(self, action: #selector(estimazeButtonPressed(sender:)), for: .touchUpInside)
+        footerView.epsEstimizeButton.addTarget(self, action: #selector(EPSestimazeButtonPressed(sender:)), for: .touchUpInside)
+        footerView.tradingViewButton.addTarget(self, action: #selector(tradingViewChartButtonPressed(sender:)), for: .touchUpInside)
+        footerView.addToWatchlistButton.addTarget(self, action: #selector(addToWatchlist(sender:)), for: .touchUpInside)
+
+        _ = self.chartContainerHeight.setMultiplier(multiplier: 0.25)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,64 +86,36 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
     // MARK: Private
     
     private func setupUI() {
-        self.infoLabel.text = self.company.description
-        self.title = self.company.name
-        self.priceLabel.attributedText = self.company.buyPoint.toMoneyStyle()
-
-        self.statsContainer.setupWithCompany(company: self.company)
-
-        if self.company.estimizeUrl == nil {
-            self.revenueEstimizeButton.isEnabled = false
-            self.revenueEstimizeButton.alpha = 0.5
+        infoLabel.text = company.description
+        priceLabel.attributedText = company.buyPoint.toMoneyStyle()
+        
+        isGrowingIcon.image = company.isGrowing ?
+            UIImage(named: "grouving_green") :
+            UIImage(named: "grouving_red")
+        
+        if let logo = company.logo {
+            Alamofire.request(logo).responseImage { response in
+                if let image = response.result.value {
+                    self.logo.image = image
+                }
+            }
+        } else {
+            title = company.name
         }
-
-        if self.company.estimizeEPSUrl == nil {
-            self.epsEstimizeButton.isEnabled = false
-            self.epsEstimizeButton.alpha = 0.5
+        
+        if company.estimizeUrl == nil {
+            footerView.revenueEstimizeButton.isEnabled = false
+            footerView.revenueEstimizeButton.alpha = 0.5
         }
-
-        fillCompanyData()
         
-        self.revenueEstimizeButton.layer.cornerRadius = 25.0
-        self.revenueEstimizeButton.layer.borderColor = UIColor.red.cgColor
-        self.revenueEstimizeButton.layer.borderWidth = 1.0
-        
-        self.epsEstimizeButton.layer.cornerRadius = 25.0
-        self.epsEstimizeButton.layer.borderColor = UIColor.red.cgColor
-        self.epsEstimizeButton.layer.borderWidth = 1.0
-        
+        if company.estimizeEPSUrl == nil {
+            footerView.epsEstimizeButton.isEnabled = false
+            footerView.epsEstimizeButton.alpha = 0.5
+        }
         self.priceView.layer.cornerRadius = 25.0
     }
     
-    private func fillCompanyData() {
-        
-        if (self.company.isCrypto()) {
-            self.buttonsContainer.isHidden = true
-            self.buttonsContainerHeight.constant = 0
-        } else {
-            self.buttonsContainer.isHidden = false
-            self.buttonsContainerHeight.constant = 80
-        }
-        
-        self.statsContainer.isHidden = false
-
-        _ = self.chartContainerHeight.setMultiplier(multiplier: 0.25)
-
-        self.buyPointLabel.text = self.company.buyPoint.replacingOccurrences(of: ",", with: ".") + Values.Currency
-        self.growthPotential.text = "\(self.company.growthPotential)" + "%"
-        self.stopLoss.text = self.company.stopLoss.replacingOccurrences(of: ",", with: ".") + Values.Currency
-        self.targetPrice.text = self.company.targetPrice + Values.Currency
-    }
-    
-    
     private func loadChart() {
-        
-        if self.company.isCrypto() {
-            self.tradingViewContainer.isHidden = false
-        } else {
-            self.tradingViewContainer.isHidden = true
-            
-        }
         chartView = ChartView.create()
         chartView?.delegate = self
         chartView?.frame = CGRect(x: 24, y: 10, width: self.chartContainer.frame.width-48, height: self.chartContainer.frame.height - 20)
@@ -138,7 +132,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         loadChartWithRange(range: .OneDay)
         
         chartView?.addSubview(chart)
-        //            chartView?.backgroundColor = UIColor.black
+        chartView?.backgroundColor = UIColor.black
         
         self.view.setNeedsLayout()
         self.view.layoutIfNeeded()
@@ -231,7 +225,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         _ = self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func estimazeButtonPressed(sender : UIButton) {
+    @IBAction func estimazeButtonPressed(sender: UIButton) {
         guard let estimazeURL = self.company.estimizeUrl else { return }
 
         let storyboard = UIStoryboard.init(name: "OutsourceCharts", bundle: nil)
@@ -242,7 +236,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         }
     }
     
-    @IBAction func EPSestimazeButtonPressed(sender : UIButton) {
+    @IBAction func EPSestimazeButtonPressed(sender: UIButton) {
         guard let estimazeURL = self.company.estimizeEPSUrl else { return }
 
         let storyboard = UIStoryboard.init(name: "OutsourceCharts", bundle: nil)
@@ -253,7 +247,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         }
     }
     
-    @IBAction func tradingViewChartButtonPressed(sender : UIButton) {
+    @IBAction func tradingViewChartButtonPressed(sender: UIButton) {
         let storyboard = UIStoryboard.init(name: "OutsourceCharts", bundle: nil)
         if let chartVC = storyboard.instantiateViewController(withIdentifier: "DMTradingViewChartViewController") as? DMTradingViewChartViewController {
             chartVC.ticker = company.ticker
@@ -266,8 +260,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
             if success {
                 self.tabBarController?.selectedIndex = 2
             } else {
-                self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
-                                   message: error ?? "")
+                self.showAlertWith(message: error)
             }
         }
     }
@@ -286,5 +279,32 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 16/255, green: 18/255, blue: 26/255, alpha: 1)
         self.navigationController?.navigationBar.barStyle = .blackTranslucent
     }
-
 }
+
+struct CompanySatatusDataSource:
+    TableViewDataSource,
+    DataContainable,
+    CellContainable,
+    CellConfigurator,
+    SectionConfigurator,
+    HeaderContainable
+{
+    let title: String
+    
+    var data: [(StatusModel, StatusModel?)]
+    
+    func section() -> HeaderFooterView<TitleSection> {
+        return .view { section, index in
+            section.title.text = self.title.uppercased()
+        }
+    }
+    
+    func configurateCell(_ cell: StatsTableViewCell, item: (StatusModel, StatusModel?), at indexPath: IndexPath) {
+        cell.titleLeft.text = item.0.title
+        cell.subtitleLeft.text = item.0.subtitle
+        cell.titleRight.text = item.1?.title
+        cell.subtitleRight.text = item.1?.subtitle
+    }
+}
+
+

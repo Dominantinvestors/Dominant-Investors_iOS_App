@@ -1,6 +1,6 @@
 import UIKit
 
-class SearchTableViewCell: UITableViewCell, ReuseIdentifier {
+class SearchTableViewCell: UITableViewCell {
  
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var background: UIImageView!

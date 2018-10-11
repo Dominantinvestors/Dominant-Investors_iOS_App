@@ -1,6 +1,6 @@
 import ObjectMapper
 
-class InvestorModel: Mappable {
+class InvestorModel: Mappable, User {
     
     var id: Int = 0
 

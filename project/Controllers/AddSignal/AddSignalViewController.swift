@@ -25,7 +25,8 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
         tableView.register(cell: AddSignalHeaderTableViewCell.self)
 
         let header = AddSignalHeaderDataSource(data: [company])
-        buyDataSource = EditableDataSource(title: NSLocalizedString("BUY POINT", comment: ""))
+        buyDataSource = EditableDataSource(title: NSLocalizedString("BUY POINT", comment: ""),
+                                           rightText: Values.Currency)
         targetDataSource = EditableDataSource(title: NSLocalizedString("TARGET PRICE", comment: ""),
                                               rightText: Values.Currency)
         lossDataSource = EditableDataSource(title: NSLocalizedString("STOPP LOSS", comment: ""),
@@ -37,7 +38,7 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
     }
     
     fileprivate func createSignalSection() -> TableViewDataSource{
-        var createSignal = CreateSignalDataSource()
+        var createSignal = CreateSignalDataSource(title: NSLocalizedString("CREATE SIGNAL", comment: ""))
         createSignal.selectors[.select] = {_, _, _ in
             self.createSignal()
         }
@@ -55,8 +56,7 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
             if success {
                 self.navigationController?.popToRootViewController(animated: true)
             } else {
-                self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
-                                   message: error ?? "")
+                self.showAlertWith(message: error)
             }
         }
     }

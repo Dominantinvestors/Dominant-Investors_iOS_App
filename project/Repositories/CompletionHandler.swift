@@ -79,10 +79,18 @@ public struct BaseHandler: CompletionHandler {
             case 400, 402..<500:
                 
                 if let data = response.data,
-                    let json = try? JSONSerialization.jsonObject(with: data, options: []) as! [Any],
-                    let text = json[0] as? String
+                    let json = try? JSONSerialization.jsonObject(with: data, options: [])
                 {
-                    return .error(.error(code, text))
+                    switch json {
+                    case let array as [String]:
+                        return .error(.error(code, array[0]))
+                    case let dict as [String: [String]]:
+                        let s = dict.randomElement()
+                        return .error(.error(code, s?.value[0] ?? error.localizedDescription))
+
+                    default:
+                        return .error(.error(code, error.localizedDescription))
+                    }
                 } else {
                     return .error(.error(code, error.localizedDescription))
                 }

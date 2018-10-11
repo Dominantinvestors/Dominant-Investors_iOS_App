@@ -1,6 +1,6 @@
 import UIKit
 import StoreKit
-import MBProgressHUD
+//import MBProgressHUD
 
 
 class DMSubscriptionViewController: DMViewController, SKProductsRequestDelegate, SKPaymentTransactionObserver {

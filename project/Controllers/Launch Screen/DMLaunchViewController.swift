@@ -1,14 +1,6 @@
 import UIKit
 
 class DMLaunchViewController: DMViewController {
-
-    @IBOutlet weak var backgroundImage   : UIImageView!
-    @IBOutlet weak var activityIndicator : UIActivityIndicatorView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -16,11 +8,6 @@ class DMLaunchViewController: DMViewController {
         launchApp()
     }
 
-    private func setupUI() {
-        self.backgroundImage.image = DMAuthScreensBackground
-        self.activityIndicator.startAnimating()
-    }
-    
     private func launchApp() {
         if let token = UserDefaults.standard.string(forKey: ConstantsUserDefaults.accessToken) {
             ServiceLocator.shared.registerService(service: MainSessionManager.default(token: token))
@@ -31,8 +18,7 @@ class DMLaunchViewController: DMViewController {
                     ServiceLocator.shared.registerService(service: user)
                     self.userAuthorized()
                 } else {
-                    self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
-                                       message: error ?? "")
+                    self.showAlertWith(message: error)
                     self.userNotAuthorized()
                 }
             }

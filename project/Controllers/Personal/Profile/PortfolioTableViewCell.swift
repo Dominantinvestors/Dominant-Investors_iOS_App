@@ -1,6 +1,6 @@
 import UIKit
 
-class PortfolioTableViewCell: UITableViewCell, ReuseIdentifier {
+class PortfolioTableViewCell: UITableViewCell {
 
     @IBOutlet weak var icon: UIImageView!
 

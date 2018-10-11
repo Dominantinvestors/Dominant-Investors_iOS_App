@@ -4,7 +4,7 @@ import Alamofire
 class DMCompanyCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var companyImage : UIImageView!
-    @IBOutlet weak var companyNameLabel : UILabel!
+    @IBOutlet weak var logoImage : UIImageView!
     @IBOutlet weak var activity : UIActivityIndicatorView!
     
     var model : CompanyModel!
@@ -12,14 +12,25 @@ class DMCompanyCollectionCell: UICollectionViewCell {
     open func setupWith(model : CompanyModel) {
         self.model = model
         
-        self.companyNameLabel.text = model.name
-        
-        if let logo = model.logo {
+        self.companyImage.image = UIImage(named: "Ellipse 4")
+        self.logoImage.image = nil
+
+        if let imageUrl = model.image {
             self.activity.startAnimating()
-            Alamofire.request(logo).responseImage { response in
-                self.activity.stopAnimating()
+            
+            Alamofire.request(imageUrl).responseImage { response in
                 if let image = response.result.value {
                     self.companyImage.image = image
+                }
+                if let logo = model.logo {
+                    Alamofire.request(logo).responseImage { response in
+                        self.activity.stopAnimating()
+                        if let image = response.result.value {
+                            self.logoImage.image = image
+                        }
+                    }
+                } else {
+                    self.activity.stopAnimating()
                 }
             }
         }

@@ -2,7 +2,7 @@ import UIKit
 
 class BuyViewController: KeyboardObservableViewController {
 
-    var company: CompanyModel!
+    var company: Company!
     
     private var costDataSource: NotEditableDataSource!
     private var buyDataSource: EditableDataSource!
@@ -52,8 +52,7 @@ class BuyViewController: KeyboardObservableViewController {
                 if success {
                     self.navigationController?.popToRootViewController(animated: true)
                 } else {
-                    self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
-                                       message: error ?? "")
+                    self.showAlertWith(message: error)
                 }
             }
         }

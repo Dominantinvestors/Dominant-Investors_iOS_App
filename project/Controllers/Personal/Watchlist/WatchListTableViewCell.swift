@@ -1,6 +1,6 @@
 import UIKit
 
-class WatchListTableViewCell: UITableViewCell, ReuseIdentifier {
+class WatchListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profile: UIImageView!
 

@@ -1,11 +1,3 @@
-//
-//  DMRatingsViewController.swift
-//  Dominant Investors
-//
-//  Created by Nekit on 19.02.17.
-//  Copyright © 2017 Dominant. All rights reserved.
-//
-
 import UIKit
 
 class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableViewDataSource {
@@ -25,8 +17,6 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     }
     
     
-    // MARK: Private
-    
     private func setupUI() {
        self.tableView.dataSource = self
        self.tableView.delegate = self
@@ -42,20 +32,13 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     }
     
     open func renewRating() {
-        
+        showActivityIndicator()
         InvestorsDataProvider.default().get { investors, error in
+            self.dismissActivityIndicator()
             self.ratings = investors?.sorted(by: {$0.rating > $1.rating})
             self.tableView.reloadData()
             self.refreshControl.endRefreshing()
         }
-        
-//        DMAPIService.sharedInstance.getUserRatings { (ratings) in
-//            DispatchQueue.main.async {
-//                self.ratings = ratings.sorted(by: {$0.totalValue > $1.totalValue})
-//                self.tableView.reloadData()
-//                self.refreshControl.endRefreshing()
-//            }
-//        }
     }
     
     // MARK: UITableViewDelegate

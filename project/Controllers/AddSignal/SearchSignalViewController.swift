@@ -14,7 +14,7 @@ class SearchSignalViewController: KeyboardObservableViewController, UISearchBarD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = NSLocalizedString("SEARCH SIGNAL", comment: "")
+        title = NSLocalizedString("CREATE SIGNAL", comment: "")
     
         tableView.register(cell: SearchTableViewCell.self)
         tableView.register(cell: StringTableViewCell.self)
@@ -45,8 +45,7 @@ class SearchSignalViewController: KeyboardObservableViewController, UISearchBarD
                 self.items.data = items
                 self.tableView.reloadData()
             } else {
-                self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
-                                   message: error ?? "")
+                self.showAlertWith(message: error)
             }
         }
     }

@@ -1,5 +1,5 @@
 import UIKit
-import MBProgressHUD
+//import MBProgressHUD
 
 class DMSignUpViewController: DMViewController, UITextFieldDelegate {
 
@@ -12,7 +12,6 @@ class DMSignUpViewController: DMViewController, UITextFieldDelegate {
     @IBOutlet weak var password  : UITextField!
     @IBOutlet weak var confirmPassword         : UITextField!
     
-    @IBOutlet var backgroundImageView            : UIImageView!
     @IBOutlet var overlayView                    : FXBlurView!
 
     

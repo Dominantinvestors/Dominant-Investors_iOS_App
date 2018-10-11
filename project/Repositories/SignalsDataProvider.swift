@@ -72,7 +72,7 @@ struct SignalsDataProvider: Repository, Syncable {
         }
     }
     
-    func buy(_ amount: String, _ company: CompanyModel, completion: @escaping (Bool, String?) -> Void) {
+    func buy(_ amount: String, _ company: Company, completion: @escaping (Bool, String?) -> Void) {
         send(request: PortfolioModel.buy(amount, company)).responseJSON { response in
             switch self.handler.handle(response) {
             case .success(_):

@@ -7,7 +7,6 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
     @IBOutlet weak var overlayView        : FXBlurView!
     @IBOutlet weak var createNewAccount   : UIButton!
     @IBOutlet weak var signInButton   : UIButton!
-    @IBOutlet var backgroundImageView     : UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +55,7 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
     private func configureTextFields() {
     
         self.usernameTextField.attributedPlaceholder =
-            NSAttributedString(string:"USERNAME",
+            NSAttributedString(string:"E-mail",
                                attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
         self.passwordTextField.attributedPlaceholder =
             NSAttributedString(string:"PASSWORD",
@@ -79,9 +78,7 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
             if (success) {
                 self.showTabBar()
             } else if let error = error {
-                self.showAlertWith(title: NSLocalizedString("Authorization error", comment: ""),
-                                   message: error,
-                                   cancelButton: false)
+                self.showAlertWith(message: error)
             }
         }
     }

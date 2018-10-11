@@ -1,6 +1,6 @@
 import UIKit
 
-class BuyTableViewCell: UITableViewCell, ReuseIdentifier {
+class BuyTableViewCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var textField: UITextField!

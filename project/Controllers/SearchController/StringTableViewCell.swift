@@ -1,6 +1,6 @@
 import UIKit
 
-class StringTableViewCell: UITableViewCell, ReuseIdentifier {
+class StringTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
 

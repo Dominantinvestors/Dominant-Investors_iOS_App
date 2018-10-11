@@ -4,28 +4,13 @@ struct Values {
     static let Currency = "$"
 }
 
-var DMAuthScreensBackground : UIImage {
-    get {
-        switch UIDevice.current.userInterfaceIdiom {
-        case .phone:
-            return UIImage(named: "ratingIPHONE")!
-        case .pad:
-            return UIImage(named: "ratingIPAD")!
-        case .unspecified:
-            return UIImage(named: "ratingIPHONE")!
-        default:
-            return UIImage(named: "ratingIPAD")!
-        }
-    }
-}
-
 struct Fonts {
     static func regular(_ size: CGFloat = 11) -> UIFont {
         return UIFont(name: "MuseoCyrl-300", size: size)!
     }
     
     static func bolt(_ size: CGFloat = 11) -> UIFont {
-        return UIFont(name: "MuseoCyrl-300", size: size)!
+        return UIFont(name: "MuseoCyrl-500", size: size)!
     }
 }
 

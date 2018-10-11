@@ -18,6 +18,8 @@ class CompanyModel: Mappable, Company {
     var estimizeUrl: String?
     var estimizeEPSUrl: String?
 
+    var isGrowing: Bool = false
+
     var ratings: RatingsModel?
     var stats: StatsModel?
 
@@ -38,10 +40,10 @@ class CompanyModel: Mappable, Company {
         
         estimizeUrl <- map["estimize_url"]
         estimizeEPSUrl <- map["estimize_eps_url"]
+        isGrowing <- map["stats.is_growing"]
         
         ratings <- map["ratings"]
         stats <- map["stats"]
-
     }
     
     func isCrypto() -> Bool {
@@ -61,7 +63,6 @@ class StatsModel: Mappable {
     var peRatio: Int = 0
     var circulating: Int = 0
     var maxSupply: Int = 0
-    var isGrowing: Bool = false
 
     required init?(map: Map) { }
     
@@ -75,7 +76,6 @@ class StatsModel: Mappable {
         peRatio <- map["pe_ratio"]
         circulating <- map["circulating_supply"]
         maxSupply <- map["max_supply"]
-        isGrowing <- map["is_growing"]
     }
 }
 
@@ -102,5 +102,105 @@ class RatingsModel: Mappable {
         technology <- map["technology"]
         command <- map["command"]
         realization <- map["realization"]
+    }
+}
+
+struct StatusModel {
+    let title: String
+    let subtitle: String
+}
+
+extension CompanyModel {
+
+    func status() -> [(StatusModel, StatusModel?)] {
+        if isCrypto() {
+            return cryptoStatus()
+        } else {
+            return companyStatus()
+        }
+    }
+    
+    func rating() -> [(StatusModel, StatusModel?)] {
+        if isCrypto() {
+            return cryptoRating()
+        } else {
+            return companyRating()
+        }
+    }
+    
+    func companyStatus() -> [(StatusModel, StatusModel?)] {
+        var status: [(StatusModel, StatusModel?)] = []
+        if let stats = stats {
+            let marketCap = StatusModel(title: NSLocalizedString("Market Cap", comment: ""),
+                                        subtitle: "\(stats.marketCap) Bil")
+            let salesFQ3 = StatusModel(title: NSLocalizedString("Sales FQ3", comment: ""),
+                                       subtitle: "\(stats.salesFQ3V) (\(stats.salesFQ3P)%)")
+            
+            status.append((marketCap, salesFQ3))
+            
+            let epsfq3 = StatusModel(title: NSLocalizedString("EPS FQ3", comment: ""),
+                                     subtitle: "\(stats.epsFQ3V) (\(stats.epsFQ3P)%)")
+            let peRatio = StatusModel(title: NSLocalizedString("P/E Ratio", comment: ""),
+                                      subtitle: String(stats.peRatio))
+            
+            status.append((epsfq3, peRatio))
+        }
+        return status
+    }
+    
+    func companyRating() -> [(StatusModel, StatusModel?)] {
+        var rating: [(StatusModel, StatusModel?)] = []
+        if let ratings = ratings {
+            
+            let compRating = StatusModel(title: NSLocalizedString("Comp Rating", comment: ""),
+                                        subtitle: "\(ratings.comp) of 99")
+            let groupRating = StatusModel(title: NSLocalizedString("Group Rat.", comment: ""),
+                                       subtitle: "\(ratings.group) of 99")
+            rating.append((compRating, groupRating))
+            
+            let epsRating = StatusModel(title: NSLocalizedString("EPS Rating", comment: ""),
+                                         subtitle: "\(ratings.eps) of 99")
+            let rsRating = StatusModel(title: NSLocalizedString("RS Rating", comment: ""),
+                                          subtitle: "\(ratings.rs) of 99")
+            rating.append((epsRating, rsRating))
+        }
+        return rating
+    }
+    
+    
+    func cryptoStatus() -> [(StatusModel, StatusModel?)] {
+        var status: [(StatusModel, StatusModel?)] = []
+        if let stats = stats {
+            let marketCap = StatusModel(title: NSLocalizedString("Market Cap", comment: ""),
+                                        subtitle: "\(stats.marketCap) Bil")
+            let sirculation = StatusModel(title: NSLocalizedString("Sirculation", comment: ""),
+                                       subtitle: "\(stats.circulating) Mil")
+            
+            status.append((marketCap, sirculation))
+            
+            let maxSupply = StatusModel(title: NSLocalizedString("Max Supply", comment: ""),
+                                     subtitle: "\(stats.maxSupply) Mil")
+            
+            status.append((maxSupply, nil))
+        }
+        return status
+    }
+    
+    func cryptoRating() -> [(StatusModel, StatusModel?)] {
+        var rating: [(StatusModel, StatusModel?)] = []
+        if let ratings = ratings {
+            
+            let technology = StatusModel(title: NSLocalizedString("Technology", comment: ""),
+                                         subtitle: "\(ratings.technology) of 99")
+            let command = StatusModel(title: NSLocalizedString("Command", comment: ""),
+                                          subtitle: "\(ratings.command) of 99")
+            rating.append((technology, command))
+            
+            let realisation = StatusModel(title: NSLocalizedString("Realisation", comment: ""),
+                                        subtitle: "\(ratings.realization) of 99")
+   
+            rating.append((realisation, nil))
+        }
+        return rating
     }
 }

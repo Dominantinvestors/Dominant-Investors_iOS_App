@@ -5,14 +5,13 @@ class DMRatingTableViewCell: UITableViewCell {
     @IBOutlet weak var  positionLabel : UILabel!
     @IBOutlet weak var  investorLabel : UILabel!
     @IBOutlet weak var  overallLabel  : UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.backgroundColor = UIColor.clear
-    }
-    
+    @IBOutlet weak var  portfolio  : UIImageView!
+
     open func setupWith(model : InvestorModel) {
-        self.investorLabel.text = model.firstName + "" + model.lastName
+        
+        self.portfolio.setProfileImage(for: model)
+        
+        self.investorLabel.text = model.fullName()
         
         self.overallLabel.text = String(format : "%d", model.rating).appending("%")
         

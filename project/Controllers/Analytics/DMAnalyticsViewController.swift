@@ -1,5 +1,5 @@
 import UIKit
-import MBProgressHUD
+//import MBProgressHUD
 
 class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UICollectionViewDataSource, DMContainerDelegate {
 
@@ -37,8 +37,6 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         self.collectionView.reloadData()
         
         self.navigationController?.navigationBar.isHidden = false
-
-//        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,7 +56,7 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
                 CGSize(width: size.width/2, height: size.width/2) :
                 CGSize(width: size.width/3, height: size.width/3)
   
-            layout.sectionInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
+            layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
             layout.minimumInteritemSpacing = 0
             layout.minimumLineSpacing = 0
             layout.invalidateLayout()
@@ -71,7 +69,7 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
 //        self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
+//        layout.sectionInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
         var inlineCellsCount : CGFloat = 3
         
         if (UIDevice.current.orientation.isPortrait || UIApplication.shared.statusBarOrientation == .portrait) {

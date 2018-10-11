@@ -69,8 +69,7 @@ class PersonalViewController: KeyboardObservableViewController {
                 self.portfolio.data = [(user, portfolio)]
                 self.tableView.reloadData()
             } else {
-                self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
-                                   message: error ?? "")
+                self.showAlertWith(message: error)
             }
         }
         
@@ -79,8 +78,7 @@ class PersonalViewController: KeyboardObservableViewController {
                 self.assets.data = assets
                 self.tableView.reloadData()
             } else {
-                self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
-                                   message: error ?? "")
+                self.showAlertWith(message: error)
             }
         }
         
@@ -89,8 +87,7 @@ class PersonalViewController: KeyboardObservableViewController {
                 self.watchList.data = signals
                 self.tableView.reloadData()
             } else {
-                self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
-                                   message: error ?? "")
+                self.showAlertWith(message: error)
             }
         }
     }
@@ -118,7 +115,7 @@ class PersonalViewController: KeyboardObservableViewController {
     }
     
     fileprivate func createSignalSection() -> TableViewDataSource{
-        var createSignal = CreateSignalDataSource()
+        var createSignal = CreateSignalDataSource(title: NSLocalizedString("CREATE SIGNAL", comment: ""))
         createSignal.selectors[.select] = {_, _, _ in
             self.createSignal()
         }
@@ -145,11 +142,12 @@ class PersonalViewController: KeyboardObservableViewController {
     
     fileprivate func searchSection() -> TableViewDataSource {
         let searchController = SearchController()
+        
         searchController.textDidUpdate = { text in
             
-            self.showActivityIndicator()
+            self.showActivityIndicator(searchController)
             DrivewealthDataProvider.default().search(by: text) { items, error in
-                self.dismissActivityIndicator()
+                self.dismissActivityIndicator(searchController)
                 
 //            SignalsDataProvider.default().companies() { items, error in
 
@@ -164,7 +162,7 @@ class PersonalViewController: KeyboardObservableViewController {
         }
         
         searchController.selectedItem = { item in
-            if let company = item as? CompanyModel {
+            if let company = item as? Company {
                 let buy: BuyViewController = UIStoryboard(name: "Portfolio", bundle: nil)[.Buy]
                 buy.company = company
                 self.navigationController?.pushViewController(buy, animated: true)

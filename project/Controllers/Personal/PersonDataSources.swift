@@ -1,5 +1,4 @@
 import UIKit
-import Alamofire
 
 struct CreateSignalDataSource:
     TableViewDataSource,
@@ -8,7 +7,11 @@ struct CreateSignalDataSource:
     CellConfigurator,
     CellSelectable
 {
-    var data: [String] = [NSLocalizedString("CREATE SIGNAL", comment: "")]
+    var data: [String] 
+    
+    init(title: String ) {
+        self.data = [title]
+    }
     
     var selectors: [DataSource.Action: (CreateSignalTableViewCell, IndexPath, String) -> ()] = [:]
     
@@ -47,15 +50,8 @@ class WatchListDataSource:
         cell.buyPoint.text = item.buyPoint
         cell.targetPrice.text = item.targetPrice
         cell.stopLoss.text = item.stopLoss
-        cell.profile.layer.cornerRadius = cell.profile.frame.size.width / 2
 
-        if let logo = item.user?.avatar {
-            Alamofire.request(logo).responseImage { response in
-                if let image = response.result.value {
-                    cell.profile.image = image
-                }
-            }
-        }
+        cell.profile.setProfileImage(for: item.user)
     }
 }
 
@@ -76,14 +72,7 @@ class PortfolioDataSource:
     
     func configurateCell(_ cell: PortfolioTableViewCell, item: (UserModel?, PortfolioModel?), at indexPath: IndexPath) {
         
-        if let logo = item.0?.avatar {
-            Alamofire.request(logo).responseImage { response in
-                if let image = response.result.value {
-                    cell.icon.layer.cornerRadius = cell.icon.frame.size.width / 2
-                    cell.icon.image = image
-                }
-            }
-        }
+        cell.icon.setProfileImage(for: item.0)
         
         cell.edit.actionHandle(.touchUpInside) {
             self.selectors[.custom("edit")]?(cell, indexPath, item)
@@ -94,7 +83,7 @@ class PortfolioDataSource:
         }
         
         if let user = item.0 {
-            cell.name.text = "\(user.firstName) \(user.lastName)"
+            cell.name.text = user.fullName()
             cell.rating.text = "\(user.rating) Rating"
             cell.followers.text = "\(user.followers) followers"
         }
@@ -114,7 +103,7 @@ class PortfolioDataSource:
         cell.valueTitle.text = NSLocalizedString("PORTFOLIO VALUE", comment: "")
         cell.powerTitle.text = NSLocalizedString("BUYING POWER", comment: "")
         cell.totalTitle.text = NSLocalizedString("TOTAL GAIN/LOSS", comment: "")
-        cell.resultsTitle.text = NSLocalizedString("MIDDLE RESULTS", comment: "")
+        cell.resultsTitle.text = NSLocalizedString("PROFITABILITY", comment: "")
     }
 }
 
@@ -142,9 +131,9 @@ class AssetsDataSource:
     func configurateCell(_ cell: AssetsTableViewCell, item: AssetsModel, at indexPath: IndexPath) {
         cell.ticker.text = item.ticker
         cell.buyPoint.text = item.buyPoint
-        cell.set(mkt: Int(item.mktPrice)!)
-        cell.profitValue.text = item.profitValue
-        cell.set(profit: Int(item.profitPoints)!)
+        cell.set(mkt: Double(item.mktPrice) ?? 0.0)
+        cell.profitValue.text = String(item.profitValue)
+        cell.set(profit: item.profitPoints)
     }
 }
 
