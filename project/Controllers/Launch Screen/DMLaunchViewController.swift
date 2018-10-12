@@ -34,8 +34,12 @@ class DMLaunchViewController: DMViewController {
     }
     
     private func userAuthorized() {
-        let tabBar = UIStoryboard(name: "TabBar", bundle: nil).instantiateInitialViewController()!
-        UIApplication.shared.delegate?.window!!.rootViewController = animate(tabBar)
+        let signal: AnalitycalInfoViewController = storyboard![.AnalitycalInfo]
+        signal.viewResult = {
+            let tabBar = UIStoryboard(name: "TabBar", bundle: nil).instantiateInitialViewController()!
+            UIApplication.shared.delegate?.window!!.rootViewController = animate(tabBar)
+        }
+        self.navigationController?.pushViewController(signal, animated: true)
     }
 }
 

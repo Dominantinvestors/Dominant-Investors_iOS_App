@@ -47,12 +47,13 @@ class SearchController: UIView {
         
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         
+        addGestureRecognizer()
+
         addSubview(tableView)
 
         setUpTableDataSource()
         decorate()
         decorateTableView()
-        addGestureRecognizer()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -60,8 +61,21 @@ class SearchController: UIView {
     }
     
     private func addGestureRecognizer() {
+        let background = UIView(frame: frame)
+        
+        background.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(background)
+        
+        let vConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[background]|", options: NSLayoutFormatOptions(rawValue:0), metrics: nil, views: ["background": background] )
+        
+        addConstraints(vConstraints)
+        
+        let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[background]|", options: NSLayoutFormatOptions(rawValue:0), metrics: nil, views: ["background": background] )
+        
+        addConstraints(hConstraints)
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapOnView))
-        addGestureRecognizer(tap)
+        background.addGestureRecognizer(tap)
     }
     
     @objc private func tapOnView() {
@@ -86,7 +100,7 @@ class SearchController: UIView {
 
         shim = TableViewDataSourceShim(self.dataSource)
         
-        self.dataSource.selectors[.highlight] = { _, _, item in
+        self.dataSource.selectors[.select] = { _, _, item in
             self.selectedItem?(item)
         }
     }

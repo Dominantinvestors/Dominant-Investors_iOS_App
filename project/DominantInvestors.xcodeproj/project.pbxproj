@@ -249,6 +249,10 @@
 		CE735F572152788700E2849E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F552152788700E2849E /* Protocols.swift */; };
 		CE8854CA215CC8940093564B /* DrivewealthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */; };
 		CE8854CB215CC8940093564B /* DrivewealthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */; };
+		CEE89E4B2170884D006B8F2B /* AnalitycalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E4A2170884D006B8F2B /* AnalitycalInfoViewController.swift */; };
+		CEE89E4C2170884D006B8F2B /* AnalitycalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E4A2170884D006B8F2B /* AnalitycalInfoViewController.swift */; };
+		CEE89E4E2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E4D2170AC3B006B8F2B /* TermsAndConditionsViewController.swift */; };
+		CEE89E4F2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E4D2170AC3B006B8F2B /* TermsAndConditionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -395,6 +399,8 @@
 		CE735F522152785E00E2849E /* Dominant+LayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dominant+LayoutConstraint.swift"; sourceTree = "<group>"; };
 		CE735F552152788700E2849E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivewealthDataProvider.swift; sourceTree = "<group>"; };
+		CEE89E4A2170884D006B8F2B /* AnalitycalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalitycalInfoViewController.swift; sourceTree = "<group>"; };
+		CEE89E4D2170AC3B006B8F2B /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominantInvestors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB57268B412308413460525 /* Pods-DominantCrypto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantCrypto.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -632,6 +638,7 @@
 			isa = PBXGroup;
 			children = (
 				CE735CD421523B2300E2849E /* DMLaunchViewController.swift */,
+				CEE89E4A2170884D006B8F2B /* AnalitycalInfoViewController.swift */,
 			);
 			path = "Launch Screen";
 			sourceTree = "<group>";
@@ -662,6 +669,7 @@
 			isa = PBXGroup;
 			children = (
 				CE735CE221523B2300E2849E /* DMLoginViewController.swift */,
+				CEE89E4D2170AC3B006B8F2B /* TermsAndConditionsViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -854,6 +862,7 @@
 				TargetAttributes = {
 					CE04D7A0215231CE00AD3D4D = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -1196,6 +1205,7 @@
 				CE735EAA21523B2400E2849E /* Investors+Requesrt.swift in Sources */,
 				CE735ECC21523CF200E2849E /* SignalModel.swift in Sources */,
 				CE735E4621523B2400E2849E /* AssetsSection.swift in Sources */,
+				CEE89E4B2170884D006B8F2B /* AnalitycalInfoViewController.swift in Sources */,
 				CE735EA621523B2400E2849E /* User+Request.swift in Sources */,
 				CE735BD021523B0900E2849E /* Constants.swift in Sources */,
 				CE735E3E21523B2400E2849E /* PersonalViewController.swift in Sources */,
@@ -1204,6 +1214,7 @@
 				CE735E5C21523B2400E2849E /* WatchListTableViewCell.swift in Sources */,
 				CE449BA22158DE3F0091940E /* SearchSignalViewController.swift in Sources */,
 				CE449B9C215516100091940E /* AddSignalViewController.swift in Sources */,
+				CEE89E4E2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */,
 				CE735EA021523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
 				CE735EC621523CF200E2849E /* OffsetResponse.swift in Sources */,
 				CE735E4021523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
@@ -1289,6 +1300,7 @@
 				CE735EAB21523B2400E2849E /* Investors+Requesrt.swift in Sources */,
 				CE735ECD21523CF200E2849E /* SignalModel.swift in Sources */,
 				CE735E4721523B2400E2849E /* AssetsSection.swift in Sources */,
+				CEE89E4C2170884D006B8F2B /* AnalitycalInfoViewController.swift in Sources */,
 				CE735EA721523B2400E2849E /* User+Request.swift in Sources */,
 				CE735BD121523B0900E2849E /* Constants.swift in Sources */,
 				CE735E3F21523B2400E2849E /* PersonalViewController.swift in Sources */,
@@ -1297,6 +1309,7 @@
 				CE735E5D21523B2400E2849E /* WatchListTableViewCell.swift in Sources */,
 				CE449BA32158DE3F0091940E /* SearchSignalViewController.swift in Sources */,
 				CE449B9D215516100091940E /* AddSignalViewController.swift in Sources */,
+				CEE89E4F2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */,
 				CE735EA121523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
 				CE735EC721523CF200E2849E /* OffsetResponse.swift in Sources */,
 				CE735E4121523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,

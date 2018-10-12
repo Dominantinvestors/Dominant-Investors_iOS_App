@@ -5,6 +5,8 @@ public extension UIStoryboard {
         case Buy
         case AddSignal
         case SearchSignal
+        case AnalitycalInfo
+        case TermsAndConditions
     }
     
     subscript<T: UIViewController>(_ identifier: Identifier) -> T {

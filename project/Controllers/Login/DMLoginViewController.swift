@@ -66,8 +66,9 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
         
     }
     
-    private func showTabBar() {
-        self.dismiss(animated: false, completion: nil)
+    private func successLogin() {
+        let terms = storyboard![.TermsAndConditions]
+        self.navigationController?.pushViewController(terms, animated: true)
     }
     
     private func proceedLogin() {
@@ -76,7 +77,7 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
         AccountsDataProvider.default().login(self.usernameTextField.text!, self.passwordTextField.text!) { success, error in
             self.dismissActivityIndicator()
             if (success) {
-                self.showTabBar()
+                self.successLogin()
             } else if let error = error {
                 self.showAlertWith(message: error)
             }

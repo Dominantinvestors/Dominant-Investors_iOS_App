@@ -1,7 +1,8 @@
 import UIKit
 
 class CompanyFooterView: UITableViewCell {
-    @IBOutlet weak var tradingViewContainer: UIView!
+
+    @IBOutlet weak var buttonsEstimizeHeight: NSLayoutConstraint!
 
     @IBOutlet weak var addToWatchlistButton: UIButton!
 
@@ -33,7 +34,7 @@ class CompanyFooterView: UITableViewCell {
         targetPrice.text = company.targetPrice + Values.Currency
         
         if company.isCrypto() {
-            tradingViewContainer.isHidden = true
+            buttonsEstimizeHeight.constant = 0
         }
     }
 }

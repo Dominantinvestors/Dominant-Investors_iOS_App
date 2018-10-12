@@ -15,6 +15,9 @@
         <array key="MuseoCyrl300.otf">
             <string>MuseoCyrl-300</string>
         </array>
+        <array key="MuseoCyrl500.otf">
+            <string>MuseoCyrl-500</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Sign Up View Controller-->
@@ -90,7 +93,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CONFIRM PASSWORD" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="W3X-qu-iJa">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="11"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
@@ -108,7 +111,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="bVS-X2-qoe">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="11"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                             </textField>
                                         </subviews>
@@ -126,7 +129,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="LjO-qn-pOj">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="11"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                             </textField>
                                         </subviews>
@@ -149,7 +152,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-MAIL" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="ugo-ib-Z6f" userLabel="email">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="11"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                             </textField>
                                         </subviews>
@@ -168,7 +171,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="INVITE ID" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="aXS-GJ-7SQ" userLabel="email">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="11"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
@@ -307,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcU-z0-eMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456.80000000000001" y="-49.025487256371818"/>
+            <point key="canvasLocation" x="1214" y="-50"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="loR-ZS-cHB">
@@ -328,7 +331,7 @@
                                 <rect key="frame" x="49.666666666666657" y="207" width="315" height="350"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54h-Qt-L57">
-                                        <rect key="frame" x="47.000000000000014" y="268" width="220.66666666666669" height="40"/>
+                                        <rect key="frame" x="47.000000000000014" y="269" width="220.66666666666669" height="40"/>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.1450980392" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="NSg-oh-Pa1"/>
@@ -347,12 +350,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpI-dy-BZ3" customClass="TextBackground" customModule="DominantCrypto" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="156" width="220.66666666666669" height="60"/>
+                                        <rect key="frame" x="47.000000000000014" y="156.66666666666669" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="etB-0a-uLH">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="11"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
@@ -365,12 +368,12 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhw-xt-ZhX" customClass="TextBackground" customModule="DominantCrypto" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="88" width="220.66666666666669" height="60"/>
+                                        <rect key="frame" x="47.000000000000014" y="88.666666666666686" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Emo-io-ONH">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="11"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -384,10 +387,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dgm-Gh-RXd">
-                                        <rect key="frame" x="109.33333333333334" y="316" width="96" height="26"/>
+                                        <rect key="frame" x="109.33333333333334" y="317" width="96" height="25"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erc-KX-zIx">
-                                                <rect key="frame" x="0.0" y="0.0" width="96" height="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="25"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
                                                 <state key="normal" title="CREATE ACCOUNT">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -406,11 +409,11 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bA-ek-Gx2">
-                                        <rect key="frame" x="55.000000000000014" y="60" width="204.66666666666669" height="20"/>
+                                        <rect key="frame" x="55.000000000000014" y="59.999999999999993" width="204.66666666666669" height="20.666666666666664"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DominantLoginBg" translatesAutoresizingMaskIntoConstraints="NO" id="ydP-By-17s">
-                                        <rect key="frame" x="63.000000000000014" y="232" width="188.66666666666669" height="20"/>
+                                        <rect key="frame" x="63.000000000000014" y="232.66666666666669" width="188.66666666666669" height="20.333333333333343"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -522,9 +525,125 @@
             </objects>
             <point key="canvasLocation" x="-935" y="-49"/>
         </scene>
+        <!--Terms And Conditions View Controller-->
+        <scene sceneID="tY9-MI-db5">
+            <objects>
+                <viewController restorationIdentifier="TermsAndConditions" storyboardIdentifier="TermsAndConditions" id="bXi-71-9Lu" customClass="TermsAndConditionsViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Hp-3t-ja7"/>
+                        <viewControllerLayoutGuide type="bottom" id="HiN-gp-7el"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w7u-1I-86O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-N1-8CH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUB-qf-Qwx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="jDA-mF-BMI">
+                                        <rect key="frame" x="147" y="50" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="K9e-kY-fd3"/>
+                                            <constraint firstAttribute="height" constant="120" id="Uhr-r5-jqo"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="K9e-kY-fd3"/>
+                                                <exclude reference="Uhr-r5-jqo"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="K9e-kY-fd3"/>
+                                                <include reference="Uhr-r5-jqo"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzh-fd-oj4">
+                                        <rect key="frame" x="160" y="191" width="94" height="21"/>
+                                        <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our manifesto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nA-n6-2zh">
+                                        <rect key="frame" x="150.66666666666666" y="291" width="112.99999999999997" height="21"/>
+                                        <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dominant Investors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lP-P9-6zR">
+                                        <rect key="frame" x="129.66666666666666" y="220" width="154.99999999999997" height="21"/>
+                                        <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-6h-dW1">
+                                        <rect key="frame" x="-71" y="800.66666666666663" width="556" height="94"/>
+                                        <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="17"/>
+                                        <state key="normal" title="I AGREE" backgroundImage="addToWatchList">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onIAgree" destination="bXi-71-9Lu" eventType="touchUpInside" id="hRC-b3-Jzd"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJ4-xi-dUk">
+                                        <rect key="frame" x="20" y="342" width="374" height="428.66666666666674"/>
+                                        <mutableString key="text">The success of aggressive investing is to buy the most actively developing companies, whose profit growth rate is 50% or more, while the average company of the S&amp;P 500 shows an average quarterly economic growth of only 10%.
+
+McDolands, Microsoft, General Motors - dead money and long-established companies do not need the money of investors as they needed at an early stage of development, on the contrary, they already pay their dividends to their investors (and penny), because there is nowhere to invest.
+
+But companies with new unique products or services that develop revenues by 30%, 50%, 100% or more per year, actively raising capital through secondary placements of shares and investing all the profits in development - deserves the money of the dominant investors</mutableString>
+                                        <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3lP-P9-6zR" firstAttribute="top" secondItem="wzh-fd-oj4" secondAttribute="bottom" constant="8" id="1Hv-zD-IMK"/>
+                                    <constraint firstItem="yJ4-xi-dUk" firstAttribute="leading" secondItem="hUB-qf-Qwx" secondAttribute="leading" constant="20" id="1fu-mb-rWz"/>
+                                    <constraint firstItem="3lP-P9-6zR" firstAttribute="centerX" secondItem="hUB-qf-Qwx" secondAttribute="centerX" id="7yF-f0-HbR"/>
+                                    <constraint firstAttribute="trailing" secondItem="yJ4-xi-dUk" secondAttribute="trailing" constant="20" id="A45-Eo-LXY"/>
+                                    <constraint firstItem="jDA-mF-BMI" firstAttribute="centerX" secondItem="hUB-qf-Qwx" secondAttribute="centerX" id="BYd-x9-FGD"/>
+                                    <constraint firstItem="wzh-fd-oj4" firstAttribute="centerX" secondItem="hUB-qf-Qwx" secondAttribute="centerX" id="EQx-1o-DhZ"/>
+                                    <constraint firstItem="7nA-n6-2zh" firstAttribute="centerX" secondItem="hUB-qf-Qwx" secondAttribute="centerX" id="GG7-1q-S2r"/>
+                                    <constraint firstItem="b8w-6h-dW1" firstAttribute="centerX" secondItem="hUB-qf-Qwx" secondAttribute="centerX" id="H5l-hT-X1x"/>
+                                    <constraint firstItem="yJ4-xi-dUk" firstAttribute="top" secondItem="7nA-n6-2zh" secondAttribute="bottom" constant="30" id="Igh-YY-j2Q"/>
+                                    <constraint firstItem="7nA-n6-2zh" firstAttribute="top" secondItem="3lP-P9-6zR" secondAttribute="bottom" constant="50" id="S7V-dD-ScB"/>
+                                    <constraint firstItem="wzh-fd-oj4" firstAttribute="top" secondItem="jDA-mF-BMI" secondAttribute="bottom" constant="21" id="gOU-d3-C3b"/>
+                                    <constraint firstItem="b8w-6h-dW1" firstAttribute="top" secondItem="yJ4-xi-dUk" secondAttribute="bottom" constant="30" id="jTr-cW-pRU"/>
+                                    <constraint firstItem="yJ4-xi-dUk" firstAttribute="centerX" secondItem="hUB-qf-Qwx" secondAttribute="centerX" id="y9f-hp-cWv"/>
+                                    <constraint firstAttribute="bottom" secondItem="b8w-6h-dW1" secondAttribute="bottom" constant="30" id="yfm-eh-Vai"/>
+                                    <constraint firstItem="jDA-mF-BMI" firstAttribute="top" secondItem="hUB-qf-Qwx" secondAttribute="top" constant="50" id="zza-uh-Z5v"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wgb-N1-8CH" firstAttribute="leading" secondItem="w7u-1I-86O" secondAttribute="leading" id="FLF-3P-gvh"/>
+                            <constraint firstItem="wgb-N1-8CH" firstAttribute="top" secondItem="w7u-1I-86O" secondAttribute="top" id="Sw3-9V-03M"/>
+                            <constraint firstItem="hUB-qf-Qwx" firstAttribute="leading" secondItem="w7u-1I-86O" secondAttribute="leading" id="Xl4-kS-whv"/>
+                            <constraint firstItem="hUB-qf-Qwx" firstAttribute="top" secondItem="w7u-1I-86O" secondAttribute="top" id="ZvD-WH-DR4"/>
+                            <constraint firstAttribute="bottom" secondItem="wgb-N1-8CH" secondAttribute="bottom" id="aUe-HS-0za"/>
+                            <constraint firstAttribute="trailing" secondItem="wgb-N1-8CH" secondAttribute="trailing" id="bqx-Ia-ZfV"/>
+                            <constraint firstAttribute="bottom" secondItem="hUB-qf-Qwx" secondAttribute="bottom" id="xMa-tA-YL4"/>
+                            <constraint firstAttribute="trailing" secondItem="hUB-qf-Qwx" secondAttribute="trailing" id="xsD-r7-93y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JiD-Sz-QrR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzX-HK-8SB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="453.62318840579712" y="-50.54347826086957"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Background" width="787" height="352"/>
-        <image name="DominantLoginBg" width="241" height="20"/>
+        <image name="Background" width="1575" height="705"/>
+        <image name="DominantLoginBg" width="483" height="40"/>
+        <image name="Logo" width="324" height="364"/>
+        <image name="addToWatchList" width="556" height="94"/>
     </resources>
 </document>
