@@ -8,11 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="MuseoCyrl300.otf">
-            <string>MuseoCyrl-300</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="Xbf-4i-ieq">
@@ -59,75 +54,8 @@
             </objects>
             <point key="canvasLocation" x="298" y="130"/>
         </scene>
-        <!--Analitycal Info View Controller-->
-        <scene sceneID="SXj-59-2fd">
-            <objects>
-                <viewController restorationIdentifier="AnalitycalInfo" storyboardIdentifier="AnalitycalInfo" id="hqA-Fg-gHE" customClass="AnalitycalInfoViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="S5W-oB-39g"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZxL-9Z-k5G"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uNo-mz-NY4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignalsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="SQn-Fv-nH6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eF1-Dw-zxv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ViewSignals" translatesAutoresizingMaskIntoConstraints="NO" id="gCQ-Lm-5hq">
-                                        <rect key="frame" x="0.0" y="-50" width="1629" height="4500"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqd-gb-JfN">
-                                        <rect key="frame" x="-71" y="4286" width="556" height="94"/>
-                                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="19"/>
-                                        <state key="normal" title="VIEW RESULTS" backgroundImage="addToWatchList">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onViewResult" destination="hqA-Fg-gHE" eventType="touchUpInside" id="G4U-K7-rEU"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="zqd-gb-JfN" secondAttribute="bottom" constant="70" id="0Zm-KH-PRN"/>
-                                    <constraint firstItem="gCQ-Lm-5hq" firstAttribute="top" secondItem="eF1-Dw-zxv" secondAttribute="top" constant="-50" id="7d9-y8-Tiz"/>
-                                    <constraint firstItem="gCQ-Lm-5hq" firstAttribute="leading" secondItem="eF1-Dw-zxv" secondAttribute="leading" id="TEr-lN-wtx"/>
-                                    <constraint firstAttribute="bottom" secondItem="gCQ-Lm-5hq" secondAttribute="bottom" id="km2-5m-cig"/>
-                                    <constraint firstAttribute="trailing" secondItem="gCQ-Lm-5hq" secondAttribute="trailing" id="kmw-xd-4LK"/>
-                                    <constraint firstItem="zqd-gb-JfN" firstAttribute="centerX" secondItem="eF1-Dw-zxv" secondAttribute="centerX" id="ppO-qB-ssY"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="SQn-Fv-nH6" firstAttribute="top" secondItem="uNo-mz-NY4" secondAttribute="top" id="41k-CJ-HPA"/>
-                            <constraint firstAttribute="trailing" secondItem="eF1-Dw-zxv" secondAttribute="trailing" id="5XF-D9-dg5"/>
-                            <constraint firstAttribute="bottom" secondItem="eF1-Dw-zxv" secondAttribute="bottom" id="B1I-vV-eE8"/>
-                            <constraint firstItem="eF1-Dw-zxv" firstAttribute="top" secondItem="uNo-mz-NY4" secondAttribute="top" id="GcG-Wx-b49"/>
-                            <constraint firstItem="SQn-Fv-nH6" firstAttribute="leading" secondItem="uNo-mz-NY4" secondAttribute="leading" id="MGo-zB-td9"/>
-                            <constraint firstItem="eF1-Dw-zxv" firstAttribute="leading" secondItem="uNo-mz-NY4" secondAttribute="leading" id="eAG-3U-e6A"/>
-                            <constraint firstAttribute="bottom" secondItem="SQn-Fv-nH6" secondAttribute="bottom" id="f00-Yg-DXz"/>
-                            <constraint firstAttribute="trailing" secondItem="SQn-Fv-nH6" secondAttribute="trailing" id="zMt-SA-Qxi"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="imageView" destination="gCQ-Lm-5hq" id="Zqx-a1-k9i"/>
-                        <outlet property="scroll" destination="eF1-Dw-zxv" id="1pv-3h-cWe"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8MU-J9-zN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="970" y="130"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Background" width="1575" height="705"/>
-        <image name="SignalsBackground" width="6516" height="8192"/>
-        <image name="ViewSignals" width="1629" height="4500"/>
-        <image name="addToWatchList" width="556" height="94"/>
     </resources>
 </document>

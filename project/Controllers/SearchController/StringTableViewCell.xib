@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,9 +25,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCy-0x-VAc">
-                        <rect key="frame" x="16" y="17" width="33.5" height="21"/>
+                        <rect key="frame" x="16" y="8" width="33.5" height="17"/>
                         <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dots" translatesAutoresizingMaskIntoConstraints="NO" id="cVy-Ab-Bq4">
@@ -37,24 +36,33 @@
                             <constraint firstAttribute="height" constant="1" id="Bmt-ij-8IO"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGw-FG-aPw">
+                        <rect key="frame" x="16" y="29" width="34" height="16.5"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="cVy-Ab-Bq4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="4y9-pM-vQL"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="FCy-0x-VAc" secondAttribute="bottom" constant="6" id="8bx-P4-p82"/>
+                    <constraint firstItem="YGw-FG-aPw" firstAttribute="leading" secondItem="FCy-0x-VAc" secondAttribute="leading" id="CAW-7K-HAO"/>
                     <constraint firstAttribute="trailing" secondItem="cVy-Ab-Bq4" secondAttribute="trailing" id="DIq-B9-BgD"/>
-                    <constraint firstItem="FCy-0x-VAc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="Lxh-bq-XeT"/>
+                    <constraint firstItem="FCy-0x-VAc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="JqF-ER-jYy"/>
+                    <constraint firstItem="cVy-Ab-Bq4" firstAttribute="top" secondItem="YGw-FG-aPw" secondAttribute="bottom" constant="8" id="dQ3-cB-UUS"/>
+                    <constraint firstItem="YGw-FG-aPw" firstAttribute="top" secondItem="FCy-0x-VAc" secondAttribute="bottom" constant="4" id="etv-a5-AZU"/>
                     <constraint firstItem="FCy-0x-VAc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="qaI-aO-qs0"/>
                     <constraint firstAttribute="bottom" secondItem="cVy-Ab-Bq4" secondAttribute="bottom" id="s5h-28-HJt"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="subtitleLabel" destination="YGw-FG-aPw" id="uSh-To-acw"/>
                 <outlet property="titleLabel" destination="FCy-0x-VAc" id="0D9-Jh-J6e"/>
             </connections>
-            <point key="canvasLocation" x="-254" y="167.5"/>
+            <point key="canvasLocation" x="-254.40000000000001" y="166.8665667166417"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Dots" width="339" height="2"/>
+        <image name="Dots" width="678" height="4"/>
     </resources>
 </document>

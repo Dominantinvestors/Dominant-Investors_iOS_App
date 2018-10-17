@@ -103,7 +103,7 @@ class PortfolioDataSource:
         cell.valueTitle.text = NSLocalizedString("PORTFOLIO VALUE", comment: "")
         cell.powerTitle.text = NSLocalizedString("BUYING POWER", comment: "")
         cell.totalTitle.text = NSLocalizedString("TOTAL GAIN/LOSS", comment: "")
-        cell.resultsTitle.text = NSLocalizedString("PROFITABILITY", comment: "")
+        cell.resultsTitle.text = NSLocalizedString("PROFIT", comment: "")
     }
 }
 

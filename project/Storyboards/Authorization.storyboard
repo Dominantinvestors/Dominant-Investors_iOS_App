@@ -587,7 +587,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="onIAgree" destination="bXi-71-9Lu" eventType="touchUpInside" id="hRC-b3-Jzd"/>
+                                            <segue destination="OfR-V4-qH7" kind="show" id="uxR-2t-ybv"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJ4-xi-dUk">
@@ -639,11 +639,77 @@ But companies with new unique products or services that develop revenues by 30%,
             </objects>
             <point key="canvasLocation" x="453.62318840579712" y="-50.54347826086957"/>
         </scene>
+        <!--Analitycal Info View Controller-->
+        <scene sceneID="HJk-5U-wGw">
+            <objects>
+                <viewController restorationIdentifier="AnalitycalInfo" storyboardIdentifier="AnalitycalInfo" id="OfR-V4-qH7" customClass="AnalitycalInfoViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YdQ-QK-paE"/>
+                        <viewControllerLayoutGuide type="bottom" id="g4I-W1-nbp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ida-bb-WZT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignalsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="tyy-l4-1Oc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ag-QG-7r3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ViewSignals" translatesAutoresizingMaskIntoConstraints="NO" id="ZHV-cF-uoK">
+                                        <rect key="frame" x="0.0" y="-50" width="1629" height="4500"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxF-4Y-RPp">
+                                        <rect key="frame" x="-71" y="4286" width="556" height="94"/>
+                                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="19"/>
+                                        <state key="normal" title="VIEW RESULTS" backgroundImage="addToWatchList">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onViewResult" destination="OfR-V4-qH7" eventType="touchUpInside" id="ZeQ-xP-Wb7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rxF-4Y-RPp" secondAttribute="bottom" constant="70" id="19K-gT-g6F"/>
+                                    <constraint firstItem="rxF-4Y-RPp" firstAttribute="centerX" secondItem="7Ag-QG-7r3" secondAttribute="centerX" id="4u3-aT-nNN"/>
+                                    <constraint firstItem="ZHV-cF-uoK" firstAttribute="top" secondItem="7Ag-QG-7r3" secondAttribute="top" constant="-50" id="ZF9-gI-GHB"/>
+                                    <constraint firstItem="ZHV-cF-uoK" firstAttribute="leading" secondItem="7Ag-QG-7r3" secondAttribute="leading" id="oi4-SK-cYl"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZHV-cF-uoK" secondAttribute="bottom" id="qba-SL-PLI"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZHV-cF-uoK" secondAttribute="trailing" id="uqV-eL-WiC"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tyy-l4-1Oc" secondAttribute="bottom" id="2Pq-XR-yXK"/>
+                            <constraint firstAttribute="bottom" secondItem="7Ag-QG-7r3" secondAttribute="bottom" id="A03-Nh-eXZ"/>
+                            <constraint firstItem="tyy-l4-1Oc" firstAttribute="leading" secondItem="Ida-bb-WZT" secondAttribute="leading" id="Kwf-as-kwd"/>
+                            <constraint firstAttribute="trailing" secondItem="7Ag-QG-7r3" secondAttribute="trailing" id="PD2-d9-PoZ"/>
+                            <constraint firstAttribute="trailing" secondItem="tyy-l4-1Oc" secondAttribute="trailing" id="Z4w-X5-Uh9"/>
+                            <constraint firstItem="7Ag-QG-7r3" firstAttribute="top" secondItem="Ida-bb-WZT" secondAttribute="top" id="kfb-vL-ISb"/>
+                            <constraint firstItem="7Ag-QG-7r3" firstAttribute="leading" secondItem="Ida-bb-WZT" secondAttribute="leading" id="oy7-4m-n1F"/>
+                            <constraint firstItem="tyy-l4-1Oc" firstAttribute="top" secondItem="Ida-bb-WZT" secondAttribute="top" id="tTr-DD-HoZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ZHV-cF-uoK" id="7i8-Q8-pAB"/>
+                        <outlet property="scroll" destination="7Ag-QG-7r3" id="tbQ-kn-pmF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUB-Ma-ODl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917" y="-51"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background" width="1575" height="705"/>
         <image name="DominantLoginBg" width="483" height="40"/>
         <image name="Logo" width="324" height="364"/>
+        <image name="SignalsBackground" width="6516" height="8192"/>
+        <image name="ViewSignals" width="1629" height="4500"/>
         <image name="addToWatchList" width="556" height="94"/>
     </resources>
 </document>

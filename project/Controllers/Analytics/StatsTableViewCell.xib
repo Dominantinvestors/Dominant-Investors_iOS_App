@@ -28,22 +28,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTS-Jy-aH7">
-                        <rect key="frame" x="10" y="0.0" width="135" height="43.5"/>
+                        <rect key="frame" x="10" y="0.0" width="300" height="43.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNW-kF-sSL">
-                                <rect key="frame" x="0.0" y="15" width="38" height="13.5"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="16"/>
+                                <rect key="frame" x="0.0" y="15" width="48" height="13.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkL-d5-B8f">
-                                <rect key="frame" x="46" y="15" width="89" height="13.5"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="16"/>
+                                <rect key="frame" x="56" y="15" width="244" height="13.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uds-cG-XsT">
-                                <rect key="frame" x="0.0" y="42.5" width="135" height="1"/>
+                                <rect key="frame" x="0.0" y="42.5" width="300" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Pae-1E-CMl"/>
@@ -64,63 +64,20 @@
                             <constraint firstAttribute="trailing" secondItem="Uds-cG-XsT" secondAttribute="trailing" id="xAN-MS-xb6"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRS-Nj-2FS">
-                        <rect key="frame" x="175" y="0.0" width="135" height="43.5"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KoH-7J-NAT">
-                                <rect key="frame" x="0.0" y="42.5" width="135" height="1"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="mTC-Dy-G2n"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wt-qT-hYs">
-                                <rect key="frame" x="0.0" y="15" width="38" height="13.5"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSK-3V-QAJ">
-                                <rect key="frame" x="46" y="15" width="89" height="13.5"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="sSK-3V-QAJ" secondAttribute="trailing" id="MzO-IC-BfO"/>
-                            <constraint firstItem="sSK-3V-QAJ" firstAttribute="top" secondItem="rRS-Nj-2FS" secondAttribute="top" constant="15" id="P8x-Pl-lYJ"/>
-                            <constraint firstItem="7Wt-qT-hYs" firstAttribute="top" secondItem="rRS-Nj-2FS" secondAttribute="top" constant="15" id="Qo6-AL-XzL"/>
-                            <constraint firstItem="KoH-7J-NAT" firstAttribute="leading" secondItem="rRS-Nj-2FS" secondAttribute="leading" id="VIq-qX-D45"/>
-                            <constraint firstItem="7Wt-qT-hYs" firstAttribute="leading" secondItem="rRS-Nj-2FS" secondAttribute="leading" id="WHc-4w-GCR"/>
-                            <constraint firstAttribute="trailing" secondItem="KoH-7J-NAT" secondAttribute="trailing" id="XWG-Vj-C8t"/>
-                            <constraint firstAttribute="bottom" secondItem="7Wt-qT-hYs" secondAttribute="bottom" constant="15" id="r7G-jj-GnR"/>
-                            <constraint firstAttribute="bottom" secondItem="KoH-7J-NAT" secondAttribute="bottom" id="xcb-EE-8Ge"/>
-                            <constraint firstItem="sSK-3V-QAJ" firstAttribute="leading" secondItem="7Wt-qT-hYs" secondAttribute="trailing" constant="8" id="xxy-tU-sgU"/>
-                            <constraint firstAttribute="bottom" secondItem="sSK-3V-QAJ" secondAttribute="bottom" constant="15" id="yru-go-Vg2"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="rRS-Nj-2FS" firstAttribute="width" secondItem="hTS-Jy-aH7" secondAttribute="width" id="55D-ZY-wHD"/>
                     <constraint firstAttribute="bottom" secondItem="hTS-Jy-aH7" secondAttribute="bottom" id="Fun-eQ-Ob5"/>
-                    <constraint firstAttribute="trailing" secondItem="rRS-Nj-2FS" secondAttribute="trailing" constant="10" id="GOs-Ah-sNH"/>
-                    <constraint firstItem="rRS-Nj-2FS" firstAttribute="leading" secondItem="hTS-Jy-aH7" secondAttribute="trailing" constant="30" id="LfO-PJ-lp4"/>
                     <constraint firstItem="hTS-Jy-aH7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Na6-m8-9j0"/>
                     <constraint firstItem="hTS-Jy-aH7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="R0d-FO-xOE"/>
-                    <constraint firstAttribute="bottom" secondItem="rRS-Nj-2FS" secondAttribute="bottom" id="UDJ-dn-P6i"/>
-                    <constraint firstItem="rRS-Nj-2FS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="YiC-Mg-6Vn"/>
+                    <constraint firstAttribute="trailing" secondItem="hTS-Jy-aH7" secondAttribute="trailing" constant="10" id="Xd6-mH-hUc"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="subtitleLeft" destination="HkL-d5-B8f" id="FKN-oA-F3w"/>
-                <outlet property="subtitleRight" destination="sSK-3V-QAJ" id="w74-2A-xm0"/>
-                <outlet property="titleLeft" destination="rNW-kF-sSL" id="MX0-aX-12V"/>
-                <outlet property="titleRight" destination="7Wt-qT-hYs" id="pv6-zh-Sox"/>
+                <outlet property="subtitle" destination="HkL-d5-B8f" id="SOn-VV-qDC"/>
+                <outlet property="title" destination="rNW-kF-sSL" id="Ec5-qC-S0y"/>
             </connections>
             <point key="canvasLocation" x="-139.19999999999999" y="136.73163418290855"/>
         </tableViewCell>

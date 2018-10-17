@@ -55,6 +55,10 @@ class DrivewealthModel: Mappable, Company {
         
         ticker <- map["symbol"]
     }
+    
+    func isCrypto() -> Bool {
+        return false
+    }
 }
 
 protocol Company {
@@ -62,6 +66,8 @@ protocol Company {
     var buyPoint: String { get }
     var ticker: String { get }
     var type: String { get }
+    
+    func isCrypto() -> Bool
 }
 
 extension Company {

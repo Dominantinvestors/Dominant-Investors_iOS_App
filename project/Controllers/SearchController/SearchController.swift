@@ -2,18 +2,22 @@ import UIKit
 
 protocol SearchItem {
     var title: String { get }
+    var subtitle: String { get }
 }
 
 extension AssetsModel: SearchItem {
     var title: String { return ticker}
+    var subtitle: String { return ticker}
 }
 
 extension CompanyModel: SearchItem {
-    var title: String { return ticker}
+    var title: String { return name}
+    var subtitle: String { return ticker}
 }
 
 extension DrivewealthModel: SearchItem {
-    var title: String { return ticker }
+    var title: String { return name }
+    var subtitle: String { return ticker}
 }
 
 class SearchController: UIView {
@@ -188,5 +192,7 @@ class SearchControllerDataSource:
     
     func configurateCell(_ cell: StringTableViewCell, item: SearchItem, at indexPath: IndexPath) {
         cell.titleLabel.text = item.title
+        cell.subtitleLabel.text = item.subtitle
+
     }
 }

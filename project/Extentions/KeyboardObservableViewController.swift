@@ -6,7 +6,7 @@ class KeyboardObservableViewController: DMViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addGestureRecognizer()
+//        addGestureRecognizer()
     }
     
     override func viewWillAppear(_ animated: Bool) {

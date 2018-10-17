@@ -29,8 +29,8 @@ class BuyViewController: KeyboardObservableViewController {
         footer.selectors[.select] = { _, _ in
             self.onSubmit()
         }
-        
-        buyDataSource = EditableDataSource(title: NSLocalizedString("SHARES OF FB", comment: ""), delegate: self)
+        let priceTitle = company.isCrypto() ? NSLocalizedString("AMOUNT OF COIN", comment: "") :  NSLocalizedString("AMOUNT OF SHARES", comment: "")
+        buyDataSource = EditableDataSource(title: priceTitle, delegate: self)
         let priceDataSource = NotEditableDataSource(title: NSLocalizedString("MKT PRICE", comment: ""), text: company.buyPoint)
         costDataSource = NotEditableDataSource(title: NSLocalizedString("EST COST", comment: ""), text: nil, footer: footer)
 
@@ -64,7 +64,7 @@ extension BuyViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField)  {
         buyDataSource.cell?.editStyle()
     }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         buyDataSource.cell?.normalStyle()
     }
@@ -100,7 +100,7 @@ class BuySectionDataSource:
     }
 }
 
-class EditableDataSource:
+class EditableDataSource: NSObject,
     TableViewDataSource,
     DataContainable,
     CellContainable,
@@ -123,10 +123,21 @@ class EditableDataSource:
     func configurateCell(_ cell: BuyTableViewCell, item: String, at indexPath: IndexPath) {
         self.cell = cell
         cell.title.text = item
-        cell.textField.delegate = delegate
+        cell.textField.delegate = delegate != nil ? delegate : self
         cell.normalStyle()
         cell.textField.setRight(rightText)
         cell.textField.isUserInteractionEnabled = true
+    }
+}
+
+extension EditableDataSource: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField)  {
+        cell?.editStyle()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        cell?.normalStyle()
     }
 }
 

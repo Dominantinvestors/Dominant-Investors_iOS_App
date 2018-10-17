@@ -22,16 +22,7 @@ class DMCompanyCollectionCell: UICollectionViewCell {
                 if let image = response.result.value {
                     self.companyImage.image = image
                 }
-                if let logo = model.logo {
-                    Alamofire.request(logo).responseImage { response in
-                        self.activity.stopAnimating()
-                        if let image = response.result.value {
-                            self.logoImage.image = image
-                        }
-                    }
-                } else {
-                    self.activity.stopAnimating()
-                }
+                self.activity.stopAnimating()
             }
         }
     }

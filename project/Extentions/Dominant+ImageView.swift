@@ -5,7 +5,7 @@ extension UIImageView {
     
     func setProfileImage(for user: User?) {
         guard let user = user else {
-            setAvatar(UIImage(named: "Ellipse 4"))
+            setAvatar(UIImage(named: "c 4"))
             return
         }
         

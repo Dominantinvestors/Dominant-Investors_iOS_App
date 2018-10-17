@@ -112,7 +112,7 @@ struct StatusModel {
 
 extension CompanyModel {
 
-    func status() -> [(StatusModel, StatusModel?)] {
+    func status() -> [StatusModel] {
         if isCrypto() {
             return cryptoStatus()
         } else {
@@ -120,7 +120,7 @@ extension CompanyModel {
         }
     }
     
-    func rating() -> [(StatusModel, StatusModel?)] {
+    func rating() -> [StatusModel] {
         if isCrypto() {
             return cryptoRating()
         } else {
@@ -128,78 +128,85 @@ extension CompanyModel {
         }
     }
     
-    func companyStatus() -> [(StatusModel, StatusModel?)] {
-        var status: [(StatusModel, StatusModel?)] = []
+    func companyStatus() -> [StatusModel] {
+        var status: [StatusModel] = []
         if let stats = stats {
             let marketCap = StatusModel(title: NSLocalizedString("Market Cap", comment: ""),
                                         subtitle: "\(stats.marketCap) Bil")
             let salesFQ3 = StatusModel(title: NSLocalizedString("Sales FQ3", comment: ""),
                                        subtitle: "\(stats.salesFQ3V) (\(stats.salesFQ3P)%)")
             
-            status.append((marketCap, salesFQ3))
-            
+            status.append(marketCap)
+            status.append(salesFQ3)
+
             let epsfq3 = StatusModel(title: NSLocalizedString("EPS FQ3", comment: ""),
                                      subtitle: "\(stats.epsFQ3V) (\(stats.epsFQ3P)%)")
             let peRatio = StatusModel(title: NSLocalizedString("P/E Ratio", comment: ""),
                                       subtitle: String(stats.peRatio))
             
-            status.append((epsfq3, peRatio))
+            status.append(epsfq3)
+            status.append(peRatio)
         }
         return status
     }
     
-    func companyRating() -> [(StatusModel, StatusModel?)] {
-        var rating: [(StatusModel, StatusModel?)] = []
+    func companyRating() -> [StatusModel] {
+        var rating: [StatusModel] = []
         if let ratings = ratings {
             
             let compRating = StatusModel(title: NSLocalizedString("Comp Rating", comment: ""),
                                         subtitle: "\(ratings.comp) of 99")
             let groupRating = StatusModel(title: NSLocalizedString("Group Rat.", comment: ""),
                                        subtitle: "\(ratings.group) of 99")
-            rating.append((compRating, groupRating))
-            
+            rating.append(compRating)
+            rating.append(groupRating)
+
             let epsRating = StatusModel(title: NSLocalizedString("EPS Rating", comment: ""),
                                          subtitle: "\(ratings.eps) of 99")
             let rsRating = StatusModel(title: NSLocalizedString("RS Rating", comment: ""),
                                           subtitle: "\(ratings.rs) of 99")
-            rating.append((epsRating, rsRating))
+            rating.append(epsRating)
+            rating.append(rsRating)
+
         }
         return rating
     }
     
     
-    func cryptoStatus() -> [(StatusModel, StatusModel?)] {
-        var status: [(StatusModel, StatusModel?)] = []
+    func cryptoStatus() -> [StatusModel] {
+        var status: [StatusModel] = []
         if let stats = stats {
             let marketCap = StatusModel(title: NSLocalizedString("Market Cap", comment: ""),
                                         subtitle: "\(stats.marketCap) Bil")
             let sirculation = StatusModel(title: NSLocalizedString("Sirculation", comment: ""),
                                        subtitle: "\(stats.circulating) Mil")
             
-            status.append((marketCap, sirculation))
-            
+            status.append(marketCap)
+            status.append(sirculation)
+
             let maxSupply = StatusModel(title: NSLocalizedString("Max Supply", comment: ""),
                                      subtitle: "\(stats.maxSupply) Mil")
             
-            status.append((maxSupply, nil))
+            status.append(maxSupply)
         }
         return status
     }
     
-    func cryptoRating() -> [(StatusModel, StatusModel?)] {
-        var rating: [(StatusModel, StatusModel?)] = []
+    func cryptoRating() -> [StatusModel] {
+        var rating: [StatusModel] = []
         if let ratings = ratings {
             
             let technology = StatusModel(title: NSLocalizedString("Technology", comment: ""),
                                          subtitle: "\(ratings.technology) of 99")
             let command = StatusModel(title: NSLocalizedString("Command", comment: ""),
                                           subtitle: "\(ratings.command) of 99")
-            rating.append((technology, command))
-            
+            rating.append(technology)
+            rating.append(command)
+
             let realisation = StatusModel(title: NSLocalizedString("Realisation", comment: ""),
                                         subtitle: "\(ratings.realization) of 99")
    
-            rating.append((realisation, nil))
+            rating.append(realisation)
         }
         return rating
     }

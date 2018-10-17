@@ -232,7 +232,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         if let chartVC = storyboard.instantiateViewController(withIdentifier: "DMEstimazeChartViewController") as? DMEstimazeChartViewController {
             chartVC.estimazeImageURL = URL(string:estimazeURL)
             chartVC.ticker = self.company.ticker
-            self.showChart(chart: chartVC)
+            self.navigationController?.pushViewController(chartVC, animated: true)
         }
     }
     
@@ -243,7 +243,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         if let chartVC = storyboard.instantiateViewController(withIdentifier: "DMEstimazeChartViewController") as? DMEstimazeChartViewController {
             chartVC.estimazeImageURL = URL(string:estimazeURL)
             chartVC.ticker = self.company.ticker
-            self.showChart(chart: chartVC)
+            self.navigationController?.pushViewController(chartVC, animated: true)
         }
     }
     
@@ -251,7 +251,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         let storyboard = UIStoryboard.init(name: "OutsourceCharts", bundle: nil)
         if let chartVC = storyboard.instantiateViewController(withIdentifier: "DMTradingViewChartViewController") as? DMTradingViewChartViewController {
             chartVC.ticker = company.ticker
-            self.showChart(chart: chartVC)
+            self.navigationController?.pushViewController(chartVC, animated: true)
         }
     }
     
@@ -263,21 +263,6 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
                 self.showAlertWith(message: error)
             }
         }
-    }
-    
-    fileprivate func showChart(chart : UIViewController) {
-        
-        self.navigationController?.pushViewController(chart, animated: true)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        let backItem = UIBarButtonItem()
-            backItem.title = ""
-        self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor : UIColor.white
-        ]
-        navigationItem.backBarButtonItem = backItem
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 16/255, green: 18/255, blue: 26/255, alpha: 1)
-        self.navigationController?.navigationBar.barStyle = .blackTranslucent
     }
 }
 
@@ -291,7 +276,7 @@ struct CompanySatatusDataSource:
 {
     let title: String
     
-    var data: [(StatusModel, StatusModel?)]
+    var data: [StatusModel]
     
     func section() -> HeaderFooterView<TitleSection> {
         return .view { section, index in
@@ -299,11 +284,9 @@ struct CompanySatatusDataSource:
         }
     }
     
-    func configurateCell(_ cell: StatsTableViewCell, item: (StatusModel, StatusModel?), at indexPath: IndexPath) {
-        cell.titleLeft.text = item.0.title
-        cell.subtitleLeft.text = item.0.subtitle
-        cell.titleRight.text = item.1?.title
-        cell.subtitleRight.text = item.1?.subtitle
+    func configurateCell(_ cell: StatsTableViewCell, item: StatusModel, at indexPath: IndexPath) {
+        cell.title.text = item.title
+        cell.subtitle.text = item.subtitle
     }
 }
 

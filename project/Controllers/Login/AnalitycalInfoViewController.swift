@@ -1,8 +1,6 @@
 import UIKit
 
 class AnalitycalInfoViewController: UIViewController {
-
-    var viewResult: (() -> Void)!
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scroll: UIScrollView!
@@ -21,6 +19,6 @@ class AnalitycalInfoViewController: UIViewController {
     }
     
     @IBAction func onViewResult() {
-        viewResult()
+        self.dismiss(animated: false, completion: nil)
     }
 }

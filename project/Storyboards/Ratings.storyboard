@@ -83,5 +83,38 @@
             </objects>
             <point key="canvasLocation" x="3333.5999999999999" y="1084.4077961019491"/>
         </scene>
+        <!--Ratings Details View Controller-->
+        <scene sceneID="4AB-fm-6vy">
+            <objects>
+                <viewController id="jLz-6Z-ITj" customClass="RatingsDetailsViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Mm-zK-QIA"/>
+                        <viewControllerLayoutGuide type="bottom" id="9DL-ko-HX2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0uM-2X-Tid">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e54-TH-XvT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9DL-ko-HX2" firstAttribute="top" secondItem="e54-TH-XvT" secondAttribute="bottom" id="DgE-wJ-JGU"/>
+                            <constraint firstItem="e54-TH-XvT" firstAttribute="leading" secondItem="0uM-2X-Tid" secondAttribute="leading" id="JWv-QQ-ygo"/>
+                            <constraint firstItem="e54-TH-XvT" firstAttribute="top" secondItem="9Mm-zK-QIA" secondAttribute="bottom" id="eRX-2a-3yh"/>
+                            <constraint firstAttribute="trailing" secondItem="e54-TH-XvT" secondAttribute="trailing" id="jmt-fH-P2c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="e54-TH-XvT" id="Rd4-se-Vg2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="340-w1-9a2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4018" y="1085"/>
+        </scene>
     </scenes>
 </document>

@@ -22,7 +22,7 @@ class SearchSignalViewController: KeyboardObservableViewController, UISearchBarD
         let search = SearchDataSource(data: [NSLocalizedString("Enter the ticket", comment: "")], delegate: self)
         items = SearchControllerDataSource(data: [])
         
-        items.selectors[.highlight] = { _, _, item in
+        items.selectors[.select] = { _, _, item in
             if let company = item as? Company {
                 let add: AddSignalViewController = UIStoryboard(name: "Portfolio", bundle: nil)[.AddSignal]
                 add.company = company

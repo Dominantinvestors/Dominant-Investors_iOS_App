@@ -57,9 +57,12 @@ fileprivate extension UIButton {
     
     func select() {
         backgroundColor = .white
+        layer.borderColor = UIColor.red.cgColor
+        layer.borderWidth = 1
     }
     
     func unSelect() {
+        layer.borderColor = UIColor.clear.cgColor
         backgroundColor = UIColor(red: 226.0 / 255, green: 226.0 / 255, blue: 226.0 / 255, alpha: 1)
     }
 }

@@ -12,4 +12,6 @@ class BuySectionView: UITableViewHeaderFooterView, ReuseIdentifier {
         title.text = NSLocalizedString("Order Summary", comment: "")
         submit.setTitle(NSLocalizedString("SUBMIT", comment: ""), for: .normal)
     }
+    
 }
+
