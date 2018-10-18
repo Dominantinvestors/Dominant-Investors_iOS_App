@@ -25,6 +25,10 @@ class DMScreenerTypeViewController: DMViewController, UIWebViewDelegate {
         
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
+        if request.url?.absoluteString.contains("https://www.tradingview.com/?utm_campaign=screener&utm_medium=widget&utm_source=") == true {
+            return false
+        }
+        
         if request.url?.absoluteString.contains("symbols") == true {
             if let ticker = request.url?.lastPathComponent {
                 if ticker.contains("-") {
