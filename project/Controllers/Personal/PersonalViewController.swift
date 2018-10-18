@@ -73,7 +73,7 @@ class PersonalViewController: KeyboardObservableViewController {
             }
         }
         
-        PortfolioDataProvider.default().assets { assets, error in
+        PortfolioDataProvider.default().transactions { assets, error in
             if let assets = assets {
                 self.assets.data = assets
                 self.tableView.reloadData()
@@ -147,11 +147,11 @@ class PersonalViewController: KeyboardObservableViewController {
             
             self.showActivityIndicator(searchController)
             DrivewealthDataProvider.default().search(by: text) { items, error in
-                self.dismissActivityIndicator(searchController)
-                
+            
 //            SignalsDataProvider.default().companies() { items, error in
 
 //            SignalsDataProvider.default().search(by: text) { items, error in
+                self.dismissActivityIndicator(searchController)
                 if let items = items {
                     searchController.data = items
                 } else {

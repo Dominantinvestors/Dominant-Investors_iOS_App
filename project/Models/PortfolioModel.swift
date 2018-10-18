@@ -26,8 +26,8 @@ class AssetsModel: Mappable {
     var ticker: String = ""
     var buyPoint: String = ""
     var mktPrice: String = ""
-    var profitPoints: Int = 0
-    var profitValue: Int = 0
+    var profitPoints: String = ""
+    var profitValue: String = ""
     
     required init?(map: Map) { }
     
@@ -35,7 +35,7 @@ class AssetsModel: Mappable {
         id <- map["id"]
         ticker <- map["asset.ticker"]
         buyPoint <- map["amount"]
-        mktPrice <- map["buy_point"]
+        mktPrice <- map["price"]
         profitPoints <- map["profit_points"]
         profitValue <- map["profit_value"]
     }

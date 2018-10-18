@@ -18,4 +18,11 @@ extension PortfolioModel {
                                          "price": company.buyPoint]
         return JSONEncodingRequestBuilder(path: "/transactions/buy/", method: .post, parameters: parameters)
     }
+    
+    static func transactions() -> RequestProvider {
+        let parameters: [String: Any] = ["limit": "100",
+                                         "offset": "0"]
+        return URLEncodingRequestBuilder(path: "/portfolio/user/transactions/", method: .get, parameters: parameters)
+    }
+    
 }

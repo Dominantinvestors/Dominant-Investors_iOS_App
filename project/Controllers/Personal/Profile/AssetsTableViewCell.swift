@@ -12,21 +12,12 @@ class AssetsTableViewCell: UITableViewCell {
         mktPrice.setValue(mkt)
     }
     
-    func set(profit: Int) {
-        profitPoints.setValue(profit)
+    func set(profit: String) {
+        profitPoints.setValue(Double(profit) ?? 0)
     }
 }
 
 extension UILabel {
-    
-    func setValue(_ value: Int) {
-        if value > 0 {
-            textColor = UIColor.init(red: 120/255, green: 187/255, blue: 50/255, alpha: 1)
-        } else {
-            textColor = .red
-        }
-        text = String(value)
-    }
     
     func setValue(_ value: Double) {
         if value > 0.0 {
