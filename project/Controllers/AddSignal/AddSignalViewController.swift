@@ -50,7 +50,7 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
             return
         }
         showActivityIndicator()
-        SignalsDataProvider.default().createSignal(for: company, buyDataSource.text, targetDataSource.text, lossDataSource.text)
+        SignalsDataProvider.default().create(for: company, buyDataSource.text, targetDataSource.text, lossDataSource.text)
         { success, error in
             self.dismissActivityIndicator()
             if success {

@@ -8,6 +8,10 @@ extension CompanyModel {
         return URLEncodingRequestBuilder(path: "/signals/investment-ideas/", method: .get, parameters: parameters)
     }
     
+    static func get(_ byID: Int) -> RequestProvider {
+        return URLEncodingRequestBuilder(path: "/signals/investment-ideas/\(byID)/", method: .get)
+    }
+    
     func add() -> RequestProvider {
         return URLEncodingRequestBuilder(path: "/signals/investment-ideas/\(id)/add-to-watchlist/", method: .post)
     }

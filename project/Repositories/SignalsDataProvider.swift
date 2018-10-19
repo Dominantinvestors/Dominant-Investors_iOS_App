@@ -23,33 +23,11 @@ struct SignalsDataProvider: Repository, Syncable {
         }
     }
     
-    func companies(completion: @escaping ([CompanyModel]?, String?) -> Void) {
-        send(request: CompanyModel.get()).responseObject { (response: DataResponse<OffsetResponse<CompanyModel>>) -> Void in
-            switch self.handler.handle(response) {
-            case .success(let result):
-                completion(result.items, nil)
-            case .error(let error):
-                completion(nil, error.localizedDescription)
-            }
-        }
-    }
-    
-    func addCompany(_ company: CompanyModel, completion: @escaping (Bool, String?) -> Void) {
-        send(request: company.add()).responseJSON { response in
-            switch self.handler.handle(response) {
-            case .success(_):
-                completion(true, nil)
-            case .error(let error):
-                completion(false, error.localizedDescription)
-            }
-        }
-    }
-    
-    func createSignal(for company: Company,
-                      _ buyPoint: String,
-                      _ targetPrice: String,
-                      _ stopLoss: String,
-                      completion: @escaping (Bool, String?) -> Void)
+    func create(for company: Company,
+                _ buyPoint: String,
+                _ targetPrice: String,
+                _ stopLoss: String,
+                completion: @escaping (Bool, String?) -> Void)
     {
         send(request: company.createSignal(buyPoint, targetPrice, stopLoss)).responseJSON { response in
             switch self.handler.handle(response) {
@@ -61,24 +39,13 @@ struct SignalsDataProvider: Repository, Syncable {
         }
     }
     
-    func search(by text: String, completion: @escaping ([CompanyModel]?, String?) -> Void) {
-        send(request: CompanyModel.search(by: text)).responseObject { (response: DataResponse<OffsetResponse<CompanyModel>>) -> Void in
+    func search(by text: String, completion: @escaping ([SearchAssetModel]?, String?) -> Void) {
+        send(request: CompanyModel.search(by: text)).responseObject { (response: DataResponse<OffsetResponse<SearchAssetModel>>) -> Void in
             switch self.handler.handle(response) {
             case .success(let result):
                 completion(result.items, nil)
             case .error(let error):
                 completion(nil, error.localizedDescription)
-            }
-        }
-    }
-    
-    func buy(_ amount: String, _ company: Company, completion: @escaping (Bool, String?) -> Void) {
-        send(request: PortfolioModel.buy(amount, company)).responseJSON { response in
-            switch self.handler.handle(response) {
-            case .success(_):
-                completion(true, nil)
-            case .error(let error):
-                completion(false, error.localizedDescription)
             }
         }
     }

@@ -20,7 +20,7 @@ class PortfolioModel: Mappable {
     }
 }
 
-class AssetsModel: Mappable {
+class TransactionModel: Mappable {
 
     var id: Int = 0
     var ticker: String = ""
@@ -38,5 +38,18 @@ class AssetsModel: Mappable {
         mktPrice <- map["price"]
         profitPoints <- map["profit_points"]
         profitValue <- map["profit_value"]
+    }
+}
+
+class SearchAssetModel: Mappable {
+    
+    var id: Int = 0
+    var ticker: String = ""
+    
+    required init?(map: Map) { }
+    
+    func mapping(map: Map) {
+        id <- map["asset_id"]
+        ticker <- map["ticker_name"]
     }
 }

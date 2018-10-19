@@ -13,46 +13,50 @@
         <array key="MuseoCyrl300.otf">
             <string>MuseoCyrl-300</string>
         </array>
+        <array key="MuseoCyrl500.otf">
+            <string>MuseoCyrl-500</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="InvestorProfileTableViewCell" customModule="DominantCrypto" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="145" id="KGk-i7-Jjw" customClass="InvestorProfileTableViewCell" customModule="DominantCrypto" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="144.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="50" verticalHuggingPriority="50" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="Ellipse 4" translatesAutoresizingMaskIntoConstraints="NO" id="j5w-z3-Vcq">
-                        <rect key="frame" x="108" y="30" width="104.5" height="104.5"/>
+                        <rect key="frame" x="133" y="10" width="54.5" height="54.5"/>
                         <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="70" id="ddX-aM-g7u"/>
                             <constraint firstAttribute="width" secondItem="j5w-z3-Vcq" secondAttribute="height" multiplier="1:1" id="dy7-RK-EMD"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OcU-WH-HaA">
-                        <rect key="frame" x="227.5" y="65.5" width="77.5" height="34"/>
+                        <rect key="frame" x="202.5" y="20.5" width="102.5" height="34"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f9-sa-2xd">
-                                <rect key="frame" x="0.0" y="0.0" width="33.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f9-sa-2xd">
+                                <rect key="frame" x="0.0" y="0.0" width="58.5" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7H-Xy-7EA">
+                                <rect key="frame" x="0.0" y="17" width="41" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aQ-so-8Y3">
+                                <rect key="frame" x="45" y="17" width="57.5" height="17"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7H-Xy-7EA">
-                                <rect key="frame" x="0.0" y="17" width="33.5" height="17"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aQ-so-8Y3">
-                                <rect key="frame" x="33.5" y="17" width="44" height="17"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFi-AJ-Qyb">
-                                <rect key="frame" x="33.5" y="0.0" width="44" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFi-AJ-Qyb">
+                                <rect key="frame" x="62.5" y="0.0" width="40" height="17"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,26 +70,26 @@
                             <constraint firstAttribute="bottom" secondItem="5aQ-so-8Y3" secondAttribute="bottom" id="PXZ-c2-LCP"/>
                             <constraint firstItem="6f9-sa-2xd" firstAttribute="leading" secondItem="OcU-WH-HaA" secondAttribute="leading" id="R5a-mi-nBu"/>
                             <constraint firstItem="5aQ-so-8Y3" firstAttribute="top" secondItem="zFi-AJ-Qyb" secondAttribute="bottom" id="VRk-s8-9X1"/>
-                            <constraint firstItem="5aQ-so-8Y3" firstAttribute="leading" secondItem="D7H-Xy-7EA" secondAttribute="trailing" id="bL7-fN-js9"/>
+                            <constraint firstItem="5aQ-so-8Y3" firstAttribute="leading" secondItem="D7H-Xy-7EA" secondAttribute="trailing" constant="4" id="bL7-fN-js9"/>
                             <constraint firstAttribute="trailing" secondItem="zFi-AJ-Qyb" secondAttribute="trailing" id="dOr-bM-Kgb"/>
                             <constraint firstItem="6f9-sa-2xd" firstAttribute="top" secondItem="OcU-WH-HaA" secondAttribute="top" id="gsR-ay-wjS"/>
-                            <constraint firstItem="zFi-AJ-Qyb" firstAttribute="leading" secondItem="6f9-sa-2xd" secondAttribute="trailing" id="gwP-KD-oPB"/>
+                            <constraint firstItem="zFi-AJ-Qyb" firstAttribute="leading" secondItem="6f9-sa-2xd" secondAttribute="trailing" constant="4" id="gwP-KD-oPB"/>
                             <constraint firstItem="D7H-Xy-7EA" firstAttribute="top" secondItem="6f9-sa-2xd" secondAttribute="bottom" id="wPq-Oa-onh"/>
                             <constraint firstItem="D7H-Xy-7EA" firstAttribute="leading" secondItem="OcU-WH-HaA" secondAttribute="leading" id="wQ2-o4-0ng"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0k-J8-I32">
-                        <rect key="frame" x="15" y="61.5" width="78" height="42"/>
+                        <rect key="frame" x="15" y="20.5" width="103" height="34"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ5-Ka-haM">
-                                <rect key="frame" x="0.0" y="0.0" width="78" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="0.0" width="103" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPE-hY-LmQ">
-                                <rect key="frame" x="0.0" y="21" width="78" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="17" width="103" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -102,15 +106,22 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qnl-wx-xAZ">
-                        <rect key="frame" x="0.0" y="149.5" width="320" height="30"/>
+                        <rect key="frame" x="0.0" y="79.5" width="320" height="45"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78I-oP-91y">
-                                <rect key="frame" x="15" y="0.0" width="137.5" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78I-oP-91y" customClass="ActionHandleButton" customModule="DominantCrypto" customModuleProvider="target">
+                                <rect key="frame" x="15" y="0.0" width="137.5" height="45"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
+                                <state key="normal" title="FOLLOW" backgroundImage="rating_follow">
+                                    <color key="titleColor" red="0.81980007886886597" green="0.25161445140838623" blue="0.21554690599441528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9V-l5-T0L">
-                                <rect key="frame" x="167.5" y="0.0" width="137.5" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9V-l5-T0L" customClass="ActionHandleButton" customModule="DominantCrypto" customModuleProvider="target">
+                                <rect key="frame" x="167.5" y="0.0" width="137.5" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="rh8-tl-YGq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
+                                <state key="normal" title=" MESSAGE" image="rating_message_icon" backgroundImage="rating_messag"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,7 +144,7 @@
                     <constraint firstItem="OcU-WH-HaA" firstAttribute="leading" secondItem="j5w-z3-Vcq" secondAttribute="trailing" constant="15" id="e4n-GA-g4E"/>
                     <constraint firstItem="j5w-z3-Vcq" firstAttribute="leading" secondItem="d0k-J8-I32" secondAttribute="trailing" constant="15" id="ebt-9J-Tst"/>
                     <constraint firstAttribute="trailing" secondItem="OcU-WH-HaA" secondAttribute="trailing" constant="15" id="gnA-ai-u4F"/>
-                    <constraint firstItem="j5w-z3-Vcq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="maD-Di-JFx"/>
+                    <constraint firstItem="j5w-z3-Vcq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="maD-Di-JFx"/>
                     <constraint firstItem="Qnl-wx-xAZ" firstAttribute="top" secondItem="j5w-z3-Vcq" secondAttribute="bottom" constant="15" id="toZ-kk-HL8"/>
                     <constraint firstItem="OcU-WH-HaA" firstAttribute="width" secondItem="d0k-J8-I32" secondAttribute="width" id="uFR-vt-dt0"/>
                     <constraint firstItem="Qnl-wx-xAZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="w4Q-nd-g0v"/>
@@ -142,10 +153,22 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="137.59999999999999" y="223.98800599700152"/>
+            <connections>
+                <outlet property="firstName" destination="qJ5-Ka-haM" id="Y5o-9c-Gt8"/>
+                <outlet property="follow" destination="78I-oP-91y" id="PGC-9Y-BML"/>
+                <outlet property="followers" destination="D7H-Xy-7EA" id="cOt-bL-fzd"/>
+                <outlet property="icon" destination="j5w-z3-Vcq" id="Ev0-ij-9nG"/>
+                <outlet property="message" destination="O9V-l5-T0L" id="G2l-EL-Pxp"/>
+                <outlet property="rating" destination="6f9-sa-2xd" id="77v-UQ-tC0"/>
+                <outlet property="secondName" destination="WPE-hY-LmQ" id="7lC-Ml-SQw"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="244.22788605697153"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Ellipse 4" width="189" height="189"/>
+        <image name="rating_follow" width="290" height="96"/>
+        <image name="rating_messag" width="290" height="96"/>
+        <image name="rating_message_icon" width="25" height="25"/>
     </resources>
 </document>

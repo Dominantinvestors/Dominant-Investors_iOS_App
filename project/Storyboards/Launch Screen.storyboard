@@ -30,8 +30,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="jbP-Nt-Y6j">
                                 <rect key="frame" x="45" y="-31.666666666666657" width="324" height="364.33333333333326"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dominant Investors" translatesAutoresizingMaskIntoConstraints="NO" id="kfo-lf-fKA">
-                                <rect key="frame" x="-37.666666666666657" y="347.66666666666669" width="489.33333333333326" height="41"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dominant Investors" translatesAutoresizingMaskIntoConstraints="NO" id="kfo-lf-fKA">
+                                <rect key="frame" x="45" y="347.66666666666669" width="324" height="41"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,6 +39,8 @@
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="41u-Rq-TS1" secondAttribute="trailing" id="6gN-12-h9s"/>
                             <constraint firstItem="kfo-lf-fKA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ddd-2f-Feu"/>
+                            <constraint firstItem="kfo-lf-fKA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="45" id="G6C-3r-kx4"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kfo-lf-fKA" secondAttribute="trailing" constant="45" id="L1v-RL-k9j"/>
                             <constraint firstItem="41u-Rq-TS1" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="SE5-Z1-EOd"/>
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="SfN-ll-jLj"/>
                             <constraint firstItem="kfo-lf-fKA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UKp-7n-EPd"/>

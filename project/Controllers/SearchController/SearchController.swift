@@ -5,7 +5,12 @@ protocol SearchItem {
     var subtitle: String { get }
 }
 
-extension AssetsModel: SearchItem {
+extension SearchAssetModel: SearchItem {
+    var title: String { return ticker}
+    var subtitle: String { return ticker}
+}
+
+extension TransactionModel: SearchItem {
     var title: String { return ticker}
     var subtitle: String { return ticker}
 }

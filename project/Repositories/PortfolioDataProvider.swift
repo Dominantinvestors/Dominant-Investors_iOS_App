@@ -23,8 +23,8 @@ struct PortfolioDataProvider: Repository, Syncable {
         }
     }
     
-    func assets(completion: @escaping ([AssetsModel]?, String?) -> Void) {
-        send(request: PortfolioModel.assets()).responseObject { (response: DataResponse<OffsetResponse<AssetsModel>>) -> Void in
+    func transactions(completion: @escaping ([TransactionModel]?, String?) -> Void) {
+        send(request: PortfolioModel.transactions()).responseObject { (response: DataResponse<OffsetResponse<TransactionModel>>) -> Void in
             switch self.handler.handle(response) {
             case .success(let result):
                 completion(result.items, nil)
@@ -34,13 +34,24 @@ struct PortfolioDataProvider: Repository, Syncable {
         }
     }
     
-    func transactions(completion: @escaping ([AssetsModel]?, String?) -> Void) {
-        send(request: PortfolioModel.transactions()).responseObject { (response: DataResponse<OffsetResponse<AssetsModel>>) -> Void in
+    func transactions(_ forUser: Int, completion: @escaping ([TransactionModel]?, String?) -> Void) {
+        send(request: PortfolioModel.transactions(forUser)).responseObject { (response: DataResponse<OffsetResponse<TransactionModel>>) -> Void in
             switch self.handler.handle(response) {
             case .success(let result):
                 completion(result.items, nil)
             case .error(let error):
                 completion(nil, error.localizedDescription)
+            }
+        }
+    }
+    
+    func buy(_ amount: String, _ company: Company, completion: @escaping (Bool, String?) -> Void) {
+        send(request: PortfolioModel.buy(amount, company)).responseJSON { response in
+            switch self.handler.handle(response) {
+            case .success(_):
+                completion(true, nil)
+            case .error(let error):
+                completion(false, error.localizedDescription)
             }
         }
     }

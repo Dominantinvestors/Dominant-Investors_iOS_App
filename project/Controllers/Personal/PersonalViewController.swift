@@ -148,28 +148,46 @@ class PersonalViewController: KeyboardObservableViewController {
             self.showActivityIndicator(searchController)
             DrivewealthDataProvider.default().search(by: text) { items, error in
             
-//            SignalsDataProvider.default().companies() { items, error in
 
 //            SignalsDataProvider.default().search(by: text) { items, error in
                 self.dismissActivityIndicator(searchController)
                 if let items = items {
                     searchController.data = items
                 } else {
-                    self.showAlertWith(title: NSLocalizedString("Error!!!", comment: ""),
-                                       message: error ?? "")
+                    self.showAlertWith(message: error)
                 }
             }
         }
         
         searchController.selectedItem = { item in
+            if let asset = item as? SearchAssetModel {
+                self.selectedSearchAsset(asset)
+            }
+            
             if let company = item as? Company {
-                let buy: BuyViewController = UIStoryboard(name: "Portfolio", bundle: nil)[.Buy]
-                buy.company = company
-                self.navigationController?.pushViewController(buy, animated: true)
+                self.buyCompany(company)
             }
         }
   
         return SearchDataSource(data: [NSLocalizedString("Enter the ticket", comment: "")], delegate: searchController)
+    }
+    
+    fileprivate func buyCompany(_ company: Company) {
+        let buy: BuyViewController = UIStoryboard(name: "Portfolio", bundle: nil)[.Buy]
+        buy.company = company
+        self.navigationController?.pushViewController(buy, animated: true)
+    }
+    
+    fileprivate func selectedSearchAsset(_ asset: SearchAssetModel) {
+        self.showActivityIndicator()
+        CompanyDataProvider.default().get(asset.id, completion: { company, error  in
+            self.dismissActivityIndicator()
+            if let company = company {
+               self.buyCompany(company)
+            } else {
+                self.showAlertWith(message: error)
+            }
+        })
     }
     
     fileprivate func assetsSection() -> AssetsDataSource {

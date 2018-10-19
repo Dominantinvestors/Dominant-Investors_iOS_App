@@ -15,7 +15,7 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         
         self.showActivityIndicator()
         
-        SignalsDataProvider.default().companies{ items, error in
+        CompanyDataProvider.default().get{ items, error in
             if let items = items {
                 self.companies = items
                 self.collectionView?.reloadData()

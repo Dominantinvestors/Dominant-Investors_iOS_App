@@ -10,6 +10,7 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        title = NSLocalizedString("TOP 100", comment: "")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,7 +45,9 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     // MARK: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        let companyDetail: RatingsDetailsViewController = storyboard![.RatingsDetails]
+        companyDetail.investor = ratings![indexPath.row]
+        self.navigationController?.pushViewController(companyDetail, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="O5p-iN-H0c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zpU-hm-x4e">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,11 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="MuseoCyrl300.otf">
-            <string>MuseoCyrl-300</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Ratings View Controller-->
         <scene sceneID="Upg-4m-Ggf">
@@ -26,39 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9o6-wa-Ggn">
-                                <rect key="frame" x="0.0" y="20" width="375" height="55.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9W-KR-vGU">
-                                        <rect key="frame" x="150" y="15" width="75.5" height="25.5"/>
-                                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="21"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="Z9W-KR-vGU" firstAttribute="centerX" secondItem="9o6-wa-Ggn" secondAttribute="centerX" id="45M-uH-avj"/>
-                                    <constraint firstAttribute="bottom" secondItem="Z9W-KR-vGU" secondAttribute="bottom" constant="15" id="Dtf-cD-LRK"/>
-                                    <constraint firstItem="Z9W-KR-vGU" firstAttribute="top" secondItem="9o6-wa-Ggn" secondAttribute="top" constant="15" id="x0j-Q2-0us"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.29999999999999999"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
-                                        <point key="value" x="0.0" y="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D8P-4d-eyq">
-                                <rect key="frame" x="0.0" y="75.5" width="375" height="591.5"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                             </tableView>
@@ -66,10 +30,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="D8P-4d-eyq" firstAttribute="leading" secondItem="XOD-Ko-cfO" secondAttribute="leading" id="3nR-bJ-c6I"/>
-                            <constraint firstAttribute="trailing" secondItem="9o6-wa-Ggn" secondAttribute="trailing" id="754-Cz-Beg"/>
-                            <constraint firstItem="D8P-4d-eyq" firstAttribute="top" secondItem="9o6-wa-Ggn" secondAttribute="bottom" id="EKP-Nu-Eo1"/>
-                            <constraint firstItem="9o6-wa-Ggn" firstAttribute="leading" secondItem="XOD-Ko-cfO" secondAttribute="leading" id="MaC-Y1-D4Z"/>
-                            <constraint firstItem="9o6-wa-Ggn" firstAttribute="top" secondItem="TBf-CS-OdD" secondAttribute="bottom" id="Ztw-YW-aTz"/>
+                            <constraint firstItem="D8P-4d-eyq" firstAttribute="top" secondItem="TBf-CS-OdD" secondAttribute="bottom" id="KOT-lT-gTA"/>
                             <constraint firstAttribute="bottom" secondItem="D8P-4d-eyq" secondAttribute="bottom" id="byS-tV-svz"/>
                             <constraint firstAttribute="trailing" secondItem="D8P-4d-eyq" secondAttribute="trailing" id="d7I-f3-Z8w"/>
                         </constraints>
@@ -86,7 +47,7 @@
         <!--Ratings Details View Controller-->
         <scene sceneID="4AB-fm-6vy">
             <objects>
-                <viewController id="jLz-6Z-ITj" customClass="RatingsDetailsViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="RatingsDetails" storyboardIdentifier="RatingsDetails" hidesBottomBarWhenPushed="YES" id="jLz-6Z-ITj" customClass="RatingsDetailsViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Mm-zK-QIA"/>
                         <viewControllerLayoutGuide type="bottom" id="9DL-ko-HX2"/>
@@ -115,6 +76,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="340-w1-9a2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4018" y="1085"/>
+        </scene>
+        <!--Login Navigation Controller-->
+        <scene sceneID="G5a-3D-eLq">
+            <objects>
+                <navigationController id="zpU-hm-x4e" customClass="LoginNavigationController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6CD-6G-59j">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="O5p-iN-H0c" kind="relationship" relationship="rootViewController" id="YSs-hc-eiJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiI-3J-agj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2521" y="1084"/>
         </scene>
     </scenes>
 </document>

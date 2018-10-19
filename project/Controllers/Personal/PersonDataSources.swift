@@ -116,9 +116,9 @@ class AssetsDataSource:
     SectionConfigurator,
     HeaderContainable
 {
-    var data: [AssetsModel]
+    var data: [TransactionModel]
     
-    init(data: [AssetsModel]) {
+    init(data: [TransactionModel]) {
         self.data = data
     }
     
@@ -126,9 +126,9 @@ class AssetsDataSource:
         return .view { section, index in }
     }
     
-    var selectors: [DataSource.Action: (AssetsTableViewCell, IndexPath, AssetsModel) -> ()] = [:]
+    var selectors: [DataSource.Action: (AssetsTableViewCell, IndexPath, TransactionModel) -> ()] = [:]
     
-    func configurateCell(_ cell: AssetsTableViewCell, item: AssetsModel, at indexPath: IndexPath) {
+    func configurateCell(_ cell: AssetsTableViewCell, item: TransactionModel, at indexPath: IndexPath) {
         cell.ticker.text = item.ticker
         cell.buyPoint.text = item.buyPoint
         cell.set(mkt: Double(item.mktPrice) ?? 0.0)

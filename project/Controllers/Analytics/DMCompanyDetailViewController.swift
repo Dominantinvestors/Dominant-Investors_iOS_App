@@ -256,7 +256,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
     }
     
     @IBAction func addToWatchlist(sender: UIButton) {
-        SignalsDataProvider.default().addCompany(company) { success, error in
+        CompanyDataProvider.default().addToWatchList(company) { success, error in
             if success {
                 self.tabBarController?.selectedIndex = 2
             } else {

@@ -157,12 +157,6 @@
 		CE735E9321523B2400E2849E /* DMAnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE521523B2300E2849E /* DMAnalyticsViewController.swift */; };
 		CE735E9421523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE621523B2300E2849E /* DMCompanyDetailViewController.swift */; };
 		CE735E9521523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE621523B2300E2849E /* DMCompanyDetailViewController.swift */; };
-		CE735E9621523B2400E2849E /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE821523B2300E2849E /* SessionAdapter.swift */; };
-		CE735E9721523B2400E2849E /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE821523B2300E2849E /* SessionAdapter.swift */; };
-		CE735E9821523B2400E2849E /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE921523B2300E2849E /* ServiceLocator.swift */; };
-		CE735E9921523B2400E2849E /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CE921523B2300E2849E /* ServiceLocator.swift */; };
-		CE735E9A21523B2400E2849E /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CEA21523B2300E2849E /* CompletionHandler.swift */; };
-		CE735E9B21523B2400E2849E /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CEA21523B2300E2849E /* CompletionHandler.swift */; };
 		CE735E9C21523B2400E2849E /* AccountsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CEB21523B2300E2849E /* AccountsDataProvider.swift */; };
 		CE735E9D21523B2400E2849E /* AccountsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CEB21523B2300E2849E /* AccountsDataProvider.swift */; };
 		CE735E9E21523B2400E2849E /* PortfolioDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CEC21523B2300E2849E /* PortfolioDataProvider.swift */; };
@@ -179,14 +173,10 @@
 		CE735EA921523B2400E2849E /* Portfolio+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF221523B2300E2849E /* Portfolio+Request.swift */; };
 		CE735EAA21523B2400E2849E /* Investors+Requesrt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF321523B2300E2849E /* Investors+Requesrt.swift */; };
 		CE735EAB21523B2400E2849E /* Investors+Requesrt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF321523B2300E2849E /* Investors+Requesrt.swift */; };
-		CE735EAC21523B2400E2849E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF421523B2300E2849E /* Repository.swift */; };
-		CE735EAD21523B2400E2849E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF421523B2300E2849E /* Repository.swift */; };
 		CE735EAE21523B2400E2849E /* SignalsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF521523B2300E2849E /* SignalsDataProvider.swift */; };
 		CE735EAF21523B2400E2849E /* SignalsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735CF521523B2300E2849E /* SignalsDataProvider.swift */; };
 		CE735EC621523CF200E2849E /* OffsetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB621523CF200E2849E /* OffsetResponse.swift */; };
 		CE735EC721523CF200E2849E /* OffsetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB621523CF200E2849E /* OffsetResponse.swift */; };
-		CE735EC821523CF200E2849E /* InvestorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB721523CF200E2849E /* InvestorModel.swift */; };
-		CE735EC921523CF200E2849E /* InvestorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB721523CF200E2849E /* InvestorModel.swift */; };
 		CE735ECA21523CF200E2849E /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB821523CF200E2849E /* CompanyModel.swift */; };
 		CE735ECB21523CF200E2849E /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB821523CF200E2849E /* CompanyModel.swift */; };
 		CE735ECC21523CF200E2849E /* SignalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735EB921523CF200E2849E /* SignalModel.swift */; };
@@ -259,6 +249,16 @@
 		CEE89E5C2176201A006B8F2B /* InvestorProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E592176201A006B8F2B /* InvestorProfileTableViewCell.swift */; };
 		CEE89E5D2176201A006B8F2B /* InvestorProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE89E5A2176201A006B8F2B /* InvestorProfileTableViewCell.xib */; };
 		CEE89E5E2176201A006B8F2B /* InvestorProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE89E5A2176201A006B8F2B /* InvestorProfileTableViewCell.xib */; };
+		CEE89E762179C8F9006B8F2B /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E722179C8F9006B8F2B /* SessionAdapter.swift */; };
+		CEE89E772179C8F9006B8F2B /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E722179C8F9006B8F2B /* SessionAdapter.swift */; };
+		CEE89E782179C8F9006B8F2B /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E732179C8F9006B8F2B /* ServiceLocator.swift */; };
+		CEE89E792179C8F9006B8F2B /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E732179C8F9006B8F2B /* ServiceLocator.swift */; };
+		CEE89E7A2179C8F9006B8F2B /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E742179C8F9006B8F2B /* CompletionHandler.swift */; };
+		CEE89E7B2179C8F9006B8F2B /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E742179C8F9006B8F2B /* CompletionHandler.swift */; };
+		CEE89E7C2179C8F9006B8F2B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E752179C8F9006B8F2B /* Repository.swift */; };
+		CEE89E7D2179C8F9006B8F2B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E752179C8F9006B8F2B /* Repository.swift */; };
+		CEE89E7F2179C933006B8F2B /* CompanyDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E7E2179C933006B8F2B /* CompanyDataProvider.swift */; };
+		CEE89E802179C933006B8F2B /* CompanyDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E7E2179C933006B8F2B /* CompanyDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -357,9 +357,6 @@
 		CE735CE221523B2300E2849E /* DMLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginViewController.swift; sourceTree = "<group>"; };
 		CE735CE521523B2300E2849E /* DMAnalyticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAnalyticsViewController.swift; sourceTree = "<group>"; };
 		CE735CE621523B2300E2849E /* DMCompanyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMCompanyDetailViewController.swift; sourceTree = "<group>"; };
-		CE735CE821523B2300E2849E /* SessionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
-		CE735CE921523B2300E2849E /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
-		CE735CEA21523B2300E2849E /* CompletionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
 		CE735CEB21523B2300E2849E /* AccountsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsDataProvider.swift; sourceTree = "<group>"; };
 		CE735CEC21523B2300E2849E /* PortfolioDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioDataProvider.swift; sourceTree = "<group>"; };
 		CE735CED21523B2300E2849E /* InvestorsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestorsDataProvider.swift; sourceTree = "<group>"; };
@@ -368,10 +365,8 @@
 		CE735CF121523B2300E2849E /* User+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Request.swift"; sourceTree = "<group>"; };
 		CE735CF221523B2300E2849E /* Portfolio+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Portfolio+Request.swift"; sourceTree = "<group>"; };
 		CE735CF321523B2300E2849E /* Investors+Requesrt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Investors+Requesrt.swift"; sourceTree = "<group>"; };
-		CE735CF421523B2300E2849E /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CE735CF521523B2300E2849E /* SignalsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalsDataProvider.swift; sourceTree = "<group>"; };
 		CE735EB621523CF200E2849E /* OffsetResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetResponse.swift; sourceTree = "<group>"; };
-		CE735EB721523CF200E2849E /* InvestorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestorModel.swift; sourceTree = "<group>"; };
 		CE735EB821523CF200E2849E /* CompanyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 		CE735EB921523CF200E2849E /* SignalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalModel.swift; sourceTree = "<group>"; };
 		CE735EBA21523CF200E2849E /* PortfolioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioModel.swift; sourceTree = "<group>"; };
@@ -410,6 +405,11 @@
 		CEE89E5621761F4B006B8F2B /* RatingsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsDetailsViewController.swift; sourceTree = "<group>"; };
 		CEE89E592176201A006B8F2B /* InvestorProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorProfileTableViewCell.swift; sourceTree = "<group>"; };
 		CEE89E5A2176201A006B8F2B /* InvestorProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvestorProfileTableViewCell.xib; sourceTree = "<group>"; };
+		CEE89E722179C8F9006B8F2B /* SessionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
+		CEE89E732179C8F9006B8F2B /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		CEE89E742179C8F9006B8F2B /* CompletionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
+		CEE89E752179C8F9006B8F2B /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CEE89E7E2179C933006B8F2B /* CompanyDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDataProvider.swift; sourceTree = "<group>"; };
 		CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominantInvestors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB57268B412308413460525 /* Pods-DominantCrypto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantCrypto.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -702,16 +702,14 @@
 		CE735CE721523B2300E2849E /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				CE735CE821523B2300E2849E /* SessionAdapter.swift */,
-				CE735CE921523B2300E2849E /* ServiceLocator.swift */,
-				CE735CEA21523B2300E2849E /* CompletionHandler.swift */,
+				CE735CEE21523B2300E2849E /* Requests */,
+				CEE89E712179C8F9006B8F2B /* Services */,
 				CE735CEB21523B2300E2849E /* AccountsDataProvider.swift */,
 				CE735CEC21523B2300E2849E /* PortfolioDataProvider.swift */,
 				CE735CED21523B2300E2849E /* InvestorsDataProvider.swift */,
 				CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */,
-				CE735CEE21523B2300E2849E /* Requests */,
-				CE735CF421523B2300E2849E /* Repository.swift */,
 				CE735CF521523B2300E2849E /* SignalsDataProvider.swift */,
+				CEE89E7E2179C933006B8F2B /* CompanyDataProvider.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -733,7 +731,6 @@
 			isa = PBXGroup;
 			children = (
 				CE735EB621523CF200E2849E /* OffsetResponse.swift */,
-				CE735EB721523CF200E2849E /* InvestorModel.swift */,
 				CE735EB821523CF200E2849E /* CompanyModel.swift */,
 				CE735EB921523CF200E2849E /* SignalModel.swift */,
 				CE735EBA21523CF200E2849E /* PortfolioModel.swift */,
@@ -807,6 +804,17 @@
 				CE735F412152782800E2849E /* NavigationController.swift */,
 			);
 			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		CEE89E712179C8F9006B8F2B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CEE89E722179C8F9006B8F2B /* SessionAdapter.swift */,
+				CEE89E732179C8F9006B8F2B /* ServiceLocator.swift */,
+				CEE89E742179C8F9006B8F2B /* CompletionHandler.swift */,
+				CEE89E752179C8F9006B8F2B /* Repository.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		E482CC02D3CCE862FD9AFBF9 /* Frameworks */ = {
@@ -1162,9 +1170,7 @@
 				CE735E6421523B2400E2849E /* DMSubscriptionViewController.swift in Sources */,
 				CE735D0A21523B2400E2849E /* TableViewArrayDataSource.swift in Sources */,
 				CE735EA821523B2400E2849E /* Portfolio+Request.swift in Sources */,
-				CE735E9A21523B2400E2849E /* CompletionHandler.swift in Sources */,
 				CE735EAE21523B2400E2849E /* SignalsDataProvider.swift in Sources */,
-				CE735EAC21523B2400E2849E /* Repository.swift in Sources */,
 				CE735F562152788700E2849E /* Protocols.swift in Sources */,
 				CE735E4821523B2400E2849E /* SearchTableViewCell.swift in Sources */,
 				CE735E6621523B2400E2849E /* DMCryptoScreenerViewController.swift in Sources */,
@@ -1179,7 +1185,6 @@
 				CE09A048216B7425009C7A10 /* Dominant+ImageView.swift in Sources */,
 				CE735E9C21523B2400E2849E /* AccountsDataProvider.swift in Sources */,
 				CE735E8421523B2400E2849E /* BuySectionView.swift in Sources */,
-				CE735EC821523CF200E2849E /* InvestorModel.swift in Sources */,
 				CE04D7EC215236DB00AD3D4D /* AppDelegate.swift in Sources */,
 				CE735EA421523B2400E2849E /* RequestProvider.swift in Sources */,
 				CE735E7E21523B2400E2849E /* StringTableViewCell.swift in Sources */,
@@ -1189,7 +1194,6 @@
 				CE735E9221523B2400E2849E /* DMAnalyticsViewController.swift in Sources */,
 				CEE89E5B2176201A006B8F2B /* InvestorProfileTableViewCell.swift in Sources */,
 				CE735E6E21523B2400E2849E /* DMSignUpViewController.swift in Sources */,
-				CE735E9821523B2400E2849E /* ServiceLocator.swift in Sources */,
 				CE735F1A21523FA000E2849E /* FXBlurView.m in Sources */,
 				CE735D0221523B2400E2849E /* EditableCellDataSource.swift in Sources */,
 				CE09A0F0216E1218009C7A10 /* CompanyFooterView.swift in Sources */,
@@ -1199,6 +1203,7 @@
 				CE735E4E21523B2400E2849E /* AssetsTableViewCell.swift in Sources */,
 				CE735EF821523FA000E2849E /* ChartView.swift in Sources */,
 				CE09A045216B554D009C7A10 /* Donimant+Image.swift in Sources */,
+				CEE89E7A2179C8F9006B8F2B /* CompletionHandler.swift in Sources */,
 				CE735F4C2152782800E2849E /* ViewController.swift in Sources */,
 				CE735D0C21523B2400E2849E /* Extensions.swift in Sources */,
 				CE735E8821523B2400E2849E /* BuyTableViewCell.swift in Sources */,
@@ -1209,7 +1214,7 @@
 				CE735D0021523B2400E2849E /* TableViewDataSource.swift in Sources */,
 				CE449BAE215A20FF0091940E /* Dominant+TextField.swift in Sources */,
 				CE735E9E21523B2400E2849E /* PortfolioDataProvider.swift in Sources */,
-				CE735E9621523B2400E2849E /* SessionAdapter.swift in Sources */,
+				CEE89E7C2179C8F9006B8F2B /* Repository.swift in Sources */,
 				CE735E5A21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */,
 				CE09A0E4216DFA29009C7A10 /* StatsTableViewCell.swift in Sources */,
 				CE735F482152782800E2849E /* NavigationController.swift in Sources */,
@@ -1218,6 +1223,7 @@
 				CE735E6221523B2400E2849E /* DMScreenerTypeViewController.swift in Sources */,
 				CE735E6821523B2400E2849E /* DMScreenerViewController.swift in Sources */,
 				CE735F462152782800E2849E /* NavigationControllerDecorator.swift in Sources */,
+				CEE89E782179C8F9006B8F2B /* ServiceLocator.swift in Sources */,
 				CE735EAA21523B2400E2849E /* Investors+Requesrt.swift in Sources */,
 				CE735ECC21523CF200E2849E /* SignalModel.swift in Sources */,
 				CE735E4621523B2400E2849E /* AssetsSection.swift in Sources */,
@@ -1229,12 +1235,14 @@
 				CE449B9F2158D5000091940E /* Company+Request.swift in Sources */,
 				CE735E5C21523B2400E2849E /* WatchListTableViewCell.swift in Sources */,
 				CE449BA22158DE3F0091940E /* SearchSignalViewController.swift in Sources */,
+				CEE89E762179C8F9006B8F2B /* SessionAdapter.swift in Sources */,
 				CE449B9C215516100091940E /* AddSignalViewController.swift in Sources */,
 				CEE89E4E2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */,
 				CE735EA021523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
 				CE735EC621523CF200E2849E /* OffsetResponse.swift in Sources */,
 				CE735E4021523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
 				CE735F502152782800E2849E /* TabBarController.swift in Sources */,
+				CEE89E7F2179C933006B8F2B /* CompanyDataProvider.swift in Sources */,
 				CE735D0821523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */,
 				CE8854CA215CC8940093564B /* DrivewealthDataProvider.swift in Sources */,
 				CE735F0221523FA000E2849E /* DMRatingTableViewCell.swift in Sources */,
@@ -1259,9 +1267,7 @@
 				CE735E6521523B2400E2849E /* DMSubscriptionViewController.swift in Sources */,
 				CE735D0B21523B2400E2849E /* TableViewArrayDataSource.swift in Sources */,
 				CE735EA921523B2400E2849E /* Portfolio+Request.swift in Sources */,
-				CE735E9B21523B2400E2849E /* CompletionHandler.swift in Sources */,
 				CE735EAF21523B2400E2849E /* SignalsDataProvider.swift in Sources */,
-				CE735EAD21523B2400E2849E /* Repository.swift in Sources */,
 				CE735F572152788700E2849E /* Protocols.swift in Sources */,
 				CE735E4921523B2400E2849E /* SearchTableViewCell.swift in Sources */,
 				CE735E6721523B2400E2849E /* DMCryptoScreenerViewController.swift in Sources */,
@@ -1276,7 +1282,6 @@
 				CE09A049216B7425009C7A10 /* Dominant+ImageView.swift in Sources */,
 				CE735E9D21523B2400E2849E /* AccountsDataProvider.swift in Sources */,
 				CE735E8521523B2400E2849E /* BuySectionView.swift in Sources */,
-				CE735EC921523CF200E2849E /* InvestorModel.swift in Sources */,
 				CE04D7ED215236DB00AD3D4D /* AppDelegate.swift in Sources */,
 				CE735EA521523B2400E2849E /* RequestProvider.swift in Sources */,
 				CE735E7F21523B2400E2849E /* StringTableViewCell.swift in Sources */,
@@ -1286,7 +1291,6 @@
 				CE735E9321523B2400E2849E /* DMAnalyticsViewController.swift in Sources */,
 				CEE89E5C2176201A006B8F2B /* InvestorProfileTableViewCell.swift in Sources */,
 				CE735E6F21523B2400E2849E /* DMSignUpViewController.swift in Sources */,
-				CE735E9921523B2400E2849E /* ServiceLocator.swift in Sources */,
 				CE735F1B21523FA000E2849E /* FXBlurView.m in Sources */,
 				CE735D0321523B2400E2849E /* EditableCellDataSource.swift in Sources */,
 				CE09A0F1216E1218009C7A10 /* CompanyFooterView.swift in Sources */,
@@ -1296,6 +1300,7 @@
 				CE735E4F21523B2400E2849E /* AssetsTableViewCell.swift in Sources */,
 				CE735EF921523FA000E2849E /* ChartView.swift in Sources */,
 				CE09A046216B554D009C7A10 /* Donimant+Image.swift in Sources */,
+				CEE89E7B2179C8F9006B8F2B /* CompletionHandler.swift in Sources */,
 				CE735F4D2152782800E2849E /* ViewController.swift in Sources */,
 				CE735D0D21523B2400E2849E /* Extensions.swift in Sources */,
 				CE735E8921523B2400E2849E /* BuyTableViewCell.swift in Sources */,
@@ -1306,7 +1311,7 @@
 				CE735D0121523B2400E2849E /* TableViewDataSource.swift in Sources */,
 				CE449BAF215A20FF0091940E /* Dominant+TextField.swift in Sources */,
 				CE735E9F21523B2400E2849E /* PortfolioDataProvider.swift in Sources */,
-				CE735E9721523B2400E2849E /* SessionAdapter.swift in Sources */,
+				CEE89E7D2179C8F9006B8F2B /* Repository.swift in Sources */,
 				CE735E5B21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */,
 				CE09A0E5216DFA29009C7A10 /* StatsTableViewCell.swift in Sources */,
 				CE735F492152782800E2849E /* NavigationController.swift in Sources */,
@@ -1315,6 +1320,7 @@
 				CE735E6321523B2400E2849E /* DMScreenerTypeViewController.swift in Sources */,
 				CE735E6921523B2400E2849E /* DMScreenerViewController.swift in Sources */,
 				CE735F472152782800E2849E /* NavigationControllerDecorator.swift in Sources */,
+				CEE89E792179C8F9006B8F2B /* ServiceLocator.swift in Sources */,
 				CE735EAB21523B2400E2849E /* Investors+Requesrt.swift in Sources */,
 				CE735ECD21523CF200E2849E /* SignalModel.swift in Sources */,
 				CE735E4721523B2400E2849E /* AssetsSection.swift in Sources */,
@@ -1326,12 +1332,14 @@
 				CE449BA02158D5000091940E /* Company+Request.swift in Sources */,
 				CE735E5D21523B2400E2849E /* WatchListTableViewCell.swift in Sources */,
 				CE449BA32158DE3F0091940E /* SearchSignalViewController.swift in Sources */,
+				CEE89E772179C8F9006B8F2B /* SessionAdapter.swift in Sources */,
 				CE449B9D215516100091940E /* AddSignalViewController.swift in Sources */,
 				CEE89E4F2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */,
 				CE735EA121523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
 				CE735EC721523CF200E2849E /* OffsetResponse.swift in Sources */,
 				CE735E4121523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
 				CE735F512152782800E2849E /* TabBarController.swift in Sources */,
+				CEE89E802179C933006B8F2B /* CompanyDataProvider.swift in Sources */,
 				CE735D0921523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */,
 				CE8854CB215CC8940093564B /* DrivewealthDataProvider.swift in Sources */,
 				CE735F0321523FA000E2849E /* DMRatingTableViewCell.swift in Sources */,
