@@ -60,14 +60,23 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUN-ho-SD7">
+                                        <rect key="frame" x="0.0" y="28.5" width="72" height="17"/>
+                                        <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ZQs-oL-LRX" firstAttribute="leading" secondItem="oTD-oI-0mS" secondAttribute="trailing" id="2uI-O5-OF0"/>
                                     <constraint firstItem="cAb-nl-2zs" firstAttribute="top" secondItem="rw6-Qq-tO9" secondAttribute="top" id="3P1-cX-GEP"/>
                                     <constraint firstAttribute="bottom" secondItem="uxK-UG-duN" secondAttribute="bottom" id="718-z5-jiI"/>
+                                    <constraint firstItem="uxK-UG-duN" firstAttribute="centerY" secondItem="PUN-ho-SD7" secondAttribute="centerY" id="A1X-w3-mRx"/>
                                     <constraint firstItem="uxK-UG-duN" firstAttribute="top" secondItem="cAb-nl-2zs" secondAttribute="bottom" constant="8" id="AEc-7j-8ti"/>
                                     <constraint firstItem="oTD-oI-0mS" firstAttribute="leading" secondItem="rw6-Qq-tO9" secondAttribute="leading" id="Kug-Qv-eyp"/>
+                                    <constraint firstItem="PUN-ho-SD7" firstAttribute="trailing" secondItem="oTD-oI-0mS" secondAttribute="trailing" id="MMd-Dt-agO"/>
+                                    <constraint firstItem="PUN-ho-SD7" firstAttribute="leading" secondItem="oTD-oI-0mS" secondAttribute="leading" id="Rfv-vo-BCj"/>
                                     <constraint firstItem="zdM-9U-ghu" firstAttribute="width" secondItem="oTD-oI-0mS" secondAttribute="width" id="UAe-re-EZN"/>
                                     <constraint firstAttribute="trailing" secondItem="uxK-UG-duN" secondAttribute="trailing" id="VhL-0p-okb"/>
                                     <constraint firstItem="ZQs-oL-LRX" firstAttribute="width" secondItem="oTD-oI-0mS" secondAttribute="width" id="Xoo-VJ-HiD"/>
@@ -109,6 +118,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="amount" destination="PUN-ho-SD7" id="UOl-yH-FhC"/>
                 <outlet property="buyPoint" destination="ZQs-oL-LRX" id="VHN-j1-FnN"/>
                 <outlet property="mktPrice" destination="zdM-9U-ghu" id="WYW-nO-ncz"/>
                 <outlet property="profitPoints" destination="cAb-nl-2zs" id="2Jl-O7-Fru"/>
@@ -119,6 +129,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Dots" width="339" height="2"/>
+        <image name="Dots" width="678" height="4"/>
     </resources>
 </document>

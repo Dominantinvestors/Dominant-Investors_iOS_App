@@ -6,24 +6,19 @@ protocol SearchItem {
 }
 
 extension SearchAssetModel: SearchItem {
-    var title: String { return ticker}
-    var subtitle: String { return ticker}
-}
-
-extension TransactionModel: SearchItem {
-    var title: String { return ticker}
-    var subtitle: String { return ticker}
-}
-
-extension CompanyModel: SearchItem {
     var title: String { return name}
     var subtitle: String { return ticker}
 }
 
-extension DrivewealthModel: SearchItem {
-    var title: String { return name }
-    var subtitle: String { return ticker}
-}
+//extension TransactionModel: SearchItem {
+//    var title: String { return ticker}
+//    var subtitle: String { return ticker}
+//}
+
+//extension CompanyModel: SearchItem {
+//    var title: String { return name}
+//    var subtitle: String { return ticker}
+//}
 
 class SearchController: UIView {
     

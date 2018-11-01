@@ -23,10 +23,8 @@ class SearchSignalViewController: KeyboardObservableViewController, UISearchBarD
         items = SearchControllerDataSource(data: [])
         
         items.selectors[.select] = { _, _, item in
-            if let company = item as? Company {
-                let add: AddSignalViewController = UIStoryboard(name: "Portfolio", bundle: nil)[.AddSignal]
-                add.company = company
-                self.navigationController?.pushViewController(add, animated: true)
+            if let company = item as? SearchAssetModel {
+                self.addCompany(company)
             }
         }
         
@@ -34,13 +32,17 @@ class SearchSignalViewController: KeyboardObservableViewController, UISearchBarD
         self.tableView.reloadData()
     }
     
+    fileprivate func addCompany(_ company: Company) {
+        let add: AddSignalViewController = storyboard![.AddSignal]
+        add.company = company
+        self.navigationController?.pushViewController(add, animated: true)
+    }
+    
     fileprivate func textDidUpdate(_ text: String) {
         showActivityIndicator()
-        DrivewealthDataProvider.default().search(by: text) { items, error in
+        SignalsDataProvider.default().search(by: text) { items, error in
             self.dismissActivityIndicator()
-            //        SignalsDataProvider.default().companies() { items, error in
             
-            //        SignalsDataProvider.default().search(by: text) { items, error in
             if let items = items {
                 self.items.data = items
                 self.tableView.reloadData()

@@ -1,11 +1,27 @@
 import Foundation
 import ObjectMapper
 
+protocol Company {
+    var name: String { get }
+    var rate: String { get }
+    var ticker: String { get }
+    var type: String { get }
+    
+    func isCrypto() -> Bool
+}
+
+extension Company {
+    
+    func isCrypto() -> Bool {
+        return type == "c"
+    }
+}
+
 class CompanyModel: Mappable, Company {
     
     var id: Int = 0
     var growthPotential: Int = 0
-    var buyPoint: String = ""
+    var rate: String = ""
     var targetPrice: String = ""
     var stopLoss: String = ""
     var description: String = ""
@@ -30,24 +46,33 @@ class CompanyModel: Mappable, Company {
         type <- map["asset.type"]
         name <- map["asset.name"]
         ticker <- map["asset.ticker"]
-        growthPotential <- map["growth_potential"]
-        buyPoint <- map["buy_point"]
-        targetPrice <- map["target_price"]
-        stopLoss <- map["stop_loss"]
-        description <- map["description"]
         image <- map["image"]
         logo <- map["logo"]
+        isGrowing <- map["stats.is_growing"]
+
+        growthPotential <- map["growth_potential"]
         
+        rate <- (map["buy_point"], MonayTransformator())
+        targetPrice <- (map["target_price"], MonayTransformator())
+        stopLoss <- (map["stop_loss"], MonayTransformator())
+        description <- (map["description"], MonayTransformator())
+     
         estimizeUrl <- map["estimize_url"]
         estimizeEPSUrl <- map["estimize_eps_url"]
-        isGrowing <- map["stats.is_growing"]
         
         ratings <- map["ratings"]
         stats <- map["stats"]
     }
+}
+
+class Rate: Mappable {
     
-    func isCrypto() -> Bool {
-        return type == "c"
+    var rate: String = ""
+    
+    required init?(map: Map) { }
+    
+    func mapping(map: Map) {
+        rate <- (map["current_rate"], MonayTransformator())
     }
 }
 
@@ -55,27 +80,27 @@ class StatsModel: Mappable {
 
     var id: Int = 0
 
-    var marketCap: Int = 0
-    var epsFQ3V: Int = 0
-    var epsFQ3P: Int = 0
-    var salesFQ3V: Int = 0
-    var salesFQ3P: Int = 0
-    var peRatio: Int = 0
-    var circulating: Int = 0
-    var maxSupply: Int = 0
+    var marketCap: String = ""
+    var epsFQ3V: String = ""
+    var epsFQ3P: String = ""
+    var salesFQ3V: String = ""
+    var salesFQ3P: String = ""
+    var peRatio: String = ""
+    var circulating: String = ""
+    var maxSupply: String = ""
 
     required init?(map: Map) { }
     
     func mapping(map: Map) {
         id <- map["id"]
-        marketCap <- map["market_cap"]
-        epsFQ3V <- map["eps_fq3_value"]
-        epsFQ3P <- map["eps_fq3_percent"]
-        salesFQ3V <- map["sales_fq3_value"]
-        salesFQ3P <- map["sales_fq3_percent"]
-        peRatio <- map["pe_ratio"]
-        circulating <- map["circulating_supply"]
-        maxSupply <- map["max_supply"]
+        marketCap <- (map["market_cap"], MonayTransformator())
+        epsFQ3V <- (map["eps_value"], MonayTransformator())
+        epsFQ3P <- (map["eps_percent"], MonayTransformator())
+        salesFQ3V <- (map["sales_value"], MonayTransformator())
+        salesFQ3P <- (map["sales_percent"], MonayTransformator())
+        peRatio <- (map["pe_ratio"], MonayTransformator())
+        circulating <- (map["circulating_supply"], MonayTransformator())
+        maxSupply <- (map["max_supply"], MonayTransformator())
     }
 }
 
@@ -83,25 +108,25 @@ class RatingsModel: Mappable {
     
     var id: Int = 0
     
-    var comp: Int = 0
-    var eps: Int = 0
-    var group: Int = 0
-    var rs: Int = 0
-    var technology: Int = 0
-    var command: Int = 0
-    var realization: Int = 0
+    var comp: String = ""
+    var eps: String = ""
+    var group: String = ""
+    var rs: String = ""
+    var technology: String = ""
+    var command: String = ""
+    var realization: String = ""
     
     required init?(map: Map) { }
     
     func mapping(map: Map) {
         id <- map["id"]
-        comp <- map["comp"]
-        eps <- map["eps"]
-        group <- map["group"]
-        rs <- map["rs"]
-        technology <- map["technology"]
-        command <- map["command"]
-        realization <- map["realization"]
+        comp <- (map["comp"], MonayTransformator())
+        eps <- (map["eps"], MonayTransformator())
+        group <- (map["group"], MonayTransformator())
+        rs <- (map["rs"], MonayTransformator())
+        technology <- (map["technology"], MonayTransformator())
+        command <- (map["command"], MonayTransformator())
+        realization <- (map["realization"], MonayTransformator())
     }
 }
 
@@ -179,13 +204,13 @@ extension CompanyModel {
             let marketCap = StatusModel(title: NSLocalizedString("Market Cap", comment: ""),
                                         subtitle: "\(stats.marketCap) Bil")
             let sirculation = StatusModel(title: NSLocalizedString("Sirculation", comment: ""),
-                                       subtitle: "\(stats.circulating) Mil")
+                                       subtitle: "\(stats.circulating)")
             
             status.append(marketCap)
             status.append(sirculation)
 
             let maxSupply = StatusModel(title: NSLocalizedString("Max Supply", comment: ""),
-                                     subtitle: "\(stats.maxSupply) Mil")
+                                     subtitle: "\(stats.maxSupply)")
             
             status.append(maxSupply)
         }

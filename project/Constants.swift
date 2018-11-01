@@ -28,7 +28,7 @@ struct APIReqests {
 }
 
 struct Network {
-    static let baseURL = "https://dominant-investors.geeks.land/api/v1"
+    static let baseURL = "https://api.dominant-investors.com/api/v1"
 }
 
 struct ConstantsUserDefaults{

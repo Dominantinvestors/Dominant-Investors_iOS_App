@@ -52,7 +52,7 @@ class PersonalViewController: KeyboardObservableViewController {
     }
     
     private func createSignal() {
-        let buy = UIStoryboard(name: "Portfolio", bundle: nil)[.SearchSignal]
+        let buy = storyboard![.SearchSignal]
         self.navigationController?.pushViewController(buy, animated: true)
     }
     
@@ -142,14 +142,9 @@ class PersonalViewController: KeyboardObservableViewController {
     
     fileprivate func searchSection() -> TableViewDataSource {
         let searchController = SearchController()
-        
         searchController.textDidUpdate = { text in
-            
             self.showActivityIndicator(searchController)
-            DrivewealthDataProvider.default().search(by: text) { items, error in
-            
-
-//            SignalsDataProvider.default().search(by: text) { items, error in
+            SignalsDataProvider.default().search(by: text) { items, error in
                 self.dismissActivityIndicator(searchController)
                 if let items = items {
                     searchController.data = items
@@ -160,11 +155,7 @@ class PersonalViewController: KeyboardObservableViewController {
         }
         
         searchController.selectedItem = { item in
-            if let asset = item as? SearchAssetModel {
-                self.selectedSearchAsset(asset)
-            }
-            
-            if let company = item as? Company {
+            if let company = item as? SearchAssetModel {
                 self.buyCompany(company)
             }
         }
@@ -173,25 +164,12 @@ class PersonalViewController: KeyboardObservableViewController {
     }
     
     fileprivate func buyCompany(_ company: Company) {
-        let buy: BuyViewController = UIStoryboard(name: "Portfolio", bundle: nil)[.Buy]
+        let buy: BuyViewController = storyboard![.Buy]
         buy.company = company
         self.navigationController?.pushViewController(buy, animated: true)
     }
     
-    fileprivate func selectedSearchAsset(_ asset: SearchAssetModel) {
-        self.showActivityIndicator()
-        CompanyDataProvider.default().get(asset.id, completion: { company, error  in
-            self.dismissActivityIndicator()
-            if let company = company {
-               self.buyCompany(company)
-            } else {
-                self.showAlertWith(message: error)
-            }
-        })
-    }
-    
     fileprivate func assetsSection() -> AssetsDataSource {
-        let assets = AssetsDataSource(data: [])
-        return assets
+        return AssetsDataSource(data: [])
     }
 }

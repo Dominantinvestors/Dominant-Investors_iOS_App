@@ -130,10 +130,24 @@ class AssetsDataSource:
     
     func configurateCell(_ cell: AssetsTableViewCell, item: TransactionModel, at indexPath: IndexPath) {
         cell.ticker.text = item.ticker
+        cell.amount.text = item.amount
         cell.buyPoint.text = item.buyPoint
-        cell.set(mkt: Double(item.mktPrice) ?? 0.0)
-        cell.profitValue.text = String(item.profitValue)
-        cell.set(profit: item.profitPoints)
+        cell.mktPrice.text = item.mktPrice
+
+        if Double(item.profitPoints)! >= 0.0 {
+            cell.profitPoints.setGreen()
+        } else {
+            cell.profitPoints.setRed()
+        }
+        
+        if (Double(item.buyPoint)! - Double(item.mktPrice)!) <= 0.0 {
+            cell.mktPrice.setGreen()
+        } else {
+            cell.mktPrice.setRed()
+        }
+        
+        cell.profitPoints.text = item.profitPoints
+        cell.profitValue.text = item.profitValue
     }
 }
 

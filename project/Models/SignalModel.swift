@@ -24,10 +24,10 @@ class SignalModel: Mappable {
         name <- map["asset.name"]
         ticker <- map["asset.ticker"]
         investmentIdea <- map["investment_idea"]
-        buyPoint <- map["buy_point"]
-        targetPrice <- map["target_price"]
-        stopLoss <- map["stop_loss"]
-        mktPrice <- map["mkt_price"]
+        buyPoint <- (map["buy_point"], MonayTransformator())
+        targetPrice <- (map["target_price"], MonayTransformator())
+        stopLoss <- (map["stop_loss"], MonayTransformator())
+        mktPrice <- (map["mkt_price"], MonayTransformator())
         user <- map["user"]
     }
 }

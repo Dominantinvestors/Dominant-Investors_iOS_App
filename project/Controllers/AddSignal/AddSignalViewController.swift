@@ -72,6 +72,6 @@ struct AddSignalHeaderDataSource:
     
     func configurateCell(_ cell: AddSignalHeaderTableViewCell, item: Company, at indexPath: IndexPath) {
         cell.companyTitle.text = item.name
-        cell.companyPrice.attributedText = item.buyPoint.toMoneyStyle()
+        cell.companyPrice.attributedText = item.rate.toMoneyStyle()
     }
 }

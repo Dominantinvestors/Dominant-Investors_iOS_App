@@ -9,7 +9,7 @@ public protocol EditebaleSection: class {
 }
 
 public protocol EditebaleSectionView: class {
-    weak var observer: EditebaleSection? { get set }
+    var observer: EditebaleSection? { get set }
     
     func open()
     func close()

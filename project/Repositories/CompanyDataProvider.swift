@@ -43,4 +43,15 @@ struct CompanyDataProvider: Repository, Syncable {
             }
         }
     }
+    
+    func rate(_ company: Company, completion: @escaping (Rate?, String?) -> Void) {
+        send(request: company.rate()).responseObject { (response: DataResponse<Rate>) -> Void in
+            switch self.handler.handle(response) {
+            case .success(let result):
+                completion(result, nil)
+            case .error(let error):
+                completion(nil, error.localizedDescription)
+            }
+        }
+    }
 }

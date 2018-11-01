@@ -46,8 +46,8 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let companyDetail: RatingsDetailsViewController = storyboard![.RatingsDetails]
-        companyDetail.investor = ratings![indexPath.row]
         self.navigationController?.pushViewController(companyDetail, animated: true)
+        companyDetail.investor = ratings![indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

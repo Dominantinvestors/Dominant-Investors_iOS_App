@@ -4,9 +4,10 @@ class BuyViewController: KeyboardObservableViewController {
 
     var company: Company!
     
-    private var costDataSource: NotEditableDataSource!
     private var buyDataSource: EditableDataSource!
-    
+    private var priceDataSource: NotEditableDataSource!
+    private var costDataSource: NotEditableDataSource!
+
     private var dataSource: TableViewDataSourceShim? = nil {
         didSet {
             tableView.dataSource = dataSource
@@ -31,12 +32,29 @@ class BuyViewController: KeyboardObservableViewController {
         }
         let priceTitle = company.isCrypto() ? NSLocalizedString("AMOUNT OF COIN", comment: "") :  NSLocalizedString("AMOUNT OF SHARES", comment: "")
         buyDataSource = EditableDataSource(title: priceTitle, delegate: self)
-        let priceDataSource = NotEditableDataSource(title: NSLocalizedString("MKT PRICE", comment: ""), text: company.buyPoint)
+        
+        priceDataSource = NotEditableDataSource(title: NSLocalizedString("MKT PRICE", comment: ""), text: company.rate)
+        
         costDataSource = NotEditableDataSource(title: NSLocalizedString("EST COST", comment: ""), text: nil, footer: footer)
 
         let composed = ComposedDataSource([buyDataSource, priceDataSource, costDataSource])
-        self.dataSource = TableViewDataSourceShim(composed)
-        self.tableView.reloadData()
+        dataSource = TableViewDataSourceShim(composed)
+        tableView.reloadData()
+        
+        updateRate()
+    }
+    
+    func updateRate() {
+        self.showActivityIndicator()
+        CompanyDataProvider.default().rate(company) { rate, error in
+            self.dismissActivityIndicator()
+            if let rate = rate {
+                self.priceDataSource.data = [(NSLocalizedString("MKT PRICE", comment: ""), rate.rate)]
+                self.tableView.reloadData()
+            } else {
+                self.showAlertWith(message: error)
+            }
+        }
     }
     
     private func cost(_ left: String?, _ right: String?) -> String {
@@ -73,7 +91,7 @@ extension BuyViewController: UITextFieldDelegate {
         let currentString: NSString = textField.text! as NSString
         let amount = currentString.replacingCharacters(in: range, with: string)
         
-        self.costDataSource.cell?.textField.text = cost(amount, company.buyPoint)
+        self.costDataSource.cell?.textField.text = cost(amount, company.rate)
         
         return true
     }

@@ -87,7 +87,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
     
     private func setupUI() {
         infoLabel.text = company.description
-        priceLabel.attributedText = company.buyPoint.toMoneyStyle()
+        priceLabel.attributedText = company.rate.toMoneyStyle()
         
         isGrowingIcon.image = company.isGrowing ?
             UIImage(named: "grouving_green") :

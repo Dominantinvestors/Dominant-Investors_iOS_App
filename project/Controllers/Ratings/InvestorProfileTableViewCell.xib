@@ -115,7 +115,14 @@
                                     <color key="titleColor" red="0.81980007886886597" green="0.25161445140838623" blue="0.21554690599441528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9V-l5-T0L" customClass="ActionHandleButton" customModule="DominantCrypto" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPU-kY-kdh" customClass="ActionHandleButton" customModule="DominantCrypto" customModuleProvider="target">
+                                <rect key="frame" x="15" y="0.0" width="137.5" height="45"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
+                                <state key="normal" title="UNFOLLOW" backgroundImage="rating_follow">
+                                    <color key="titleColor" red="0.81980007889999995" green="0.25161445139999999" blue="0.21554690600000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9V-l5-T0L" customClass="ActionHandleButton" customModule="DominantCrypto" customModuleProvider="target">
                                 <rect key="frame" x="167.5" y="0.0" width="137.5" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="rh8-tl-YGq"/>
@@ -131,9 +138,13 @@
                             <constraint firstAttribute="trailing" secondItem="O9V-l5-T0L" secondAttribute="trailing" constant="15" id="JqB-rC-J78"/>
                             <constraint firstItem="O9V-l5-T0L" firstAttribute="width" secondItem="78I-oP-91y" secondAttribute="width" id="KBX-qN-CC1"/>
                             <constraint firstItem="O9V-l5-T0L" firstAttribute="leading" secondItem="78I-oP-91y" secondAttribute="trailing" constant="15" id="QhV-b7-oQo"/>
+                            <constraint firstItem="sPU-kY-kdh" firstAttribute="trailing" secondItem="78I-oP-91y" secondAttribute="trailing" id="TID-3j-VAQ"/>
                             <constraint firstAttribute="bottom" secondItem="O9V-l5-T0L" secondAttribute="bottom" id="XxT-eC-utN"/>
+                            <constraint firstItem="sPU-kY-kdh" firstAttribute="top" secondItem="78I-oP-91y" secondAttribute="top" id="f5B-Ap-dQq"/>
                             <constraint firstItem="78I-oP-91y" firstAttribute="leading" secondItem="Qnl-wx-xAZ" secondAttribute="leading" constant="15" id="geT-KY-qwc"/>
+                            <constraint firstItem="sPU-kY-kdh" firstAttribute="bottom" secondItem="78I-oP-91y" secondAttribute="bottom" id="hi2-Rz-RZY"/>
                             <constraint firstItem="O9V-l5-T0L" firstAttribute="top" secondItem="Qnl-wx-xAZ" secondAttribute="top" id="kdD-W6-w07"/>
+                            <constraint firstItem="sPU-kY-kdh" firstAttribute="leading" secondItem="78I-oP-91y" secondAttribute="leading" id="oX5-uL-qyE"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -161,6 +172,7 @@
                 <outlet property="message" destination="O9V-l5-T0L" id="G2l-EL-Pxp"/>
                 <outlet property="rating" destination="6f9-sa-2xd" id="77v-UQ-tC0"/>
                 <outlet property="secondName" destination="WPE-hY-LmQ" id="7lC-Ml-SQw"/>
+                <outlet property="unfollow" destination="sPU-kY-kdh" id="17K-G1-URG"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="244.22788605697153"/>
         </tableViewCell>

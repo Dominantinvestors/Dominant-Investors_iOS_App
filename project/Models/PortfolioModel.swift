@@ -13,10 +13,10 @@ class PortfolioModel: Mappable {
     
     func mapping(map: Map) {
         user <- map["user"]
-        value <- map["value"]
-        buyingPower <- map["buying_power"]
-        total <- map["total_gain_loss"]
-        profit <- map["avg_profit"]
+        value <- (map["value"], MonayTransformator())
+        buyingPower <- (map["buying_power"], MonayTransformator())
+        total <- (map["total_gain_loss"], MonayTransformator())
+        profit <- (map["avg_profit"], MonayTransformator())
     }
 }
 
@@ -24,6 +24,7 @@ class TransactionModel: Mappable {
 
     var id: Int = 0
     var ticker: String = ""
+    var amount: String = ""
     var buyPoint: String = ""
     var mktPrice: String = ""
     var profitPoints: String = ""
@@ -34,22 +35,32 @@ class TransactionModel: Mappable {
     func mapping(map: Map) {
         id <- map["id"]
         ticker <- map["asset.ticker"]
-        buyPoint <- map["amount"]
-        mktPrice <- map["price"]
-        profitPoints <- map["profit_points"]
-        profitValue <- map["profit_value"]
+        
+        amount <- (map["amount"], MonayTransformator())
+
+        buyPoint <- (map["price"], MonayTransformator())
+        mktPrice <- (map["mkt_price"], MonayTransformator())
+        
+        profitPoints <- (map["profit_points"], MonayTransformator())
+        profitValue <- (map["profit_value"], MonayTransformator())
     }
 }
 
-class SearchAssetModel: Mappable {
+class SearchAssetModel: Mappable, Company {
     
     var id: Int = 0
     var ticker: String = ""
+    var name: String = ""
+    var type: String = ""
+    var rate: String = ""
     
     required init?(map: Map) { }
     
     func mapping(map: Map) {
-        id <- map["asset_id"]
-        ticker <- map["ticker_name"]
+        id <- map["id"]
+        ticker <- map["ticker"]
+        name <- map["name"]
+        type <- map["category"]
+        rate <- (map["rate"], MonayTransformator())
     }
 }

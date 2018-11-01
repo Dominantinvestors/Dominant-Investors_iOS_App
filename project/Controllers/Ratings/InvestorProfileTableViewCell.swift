@@ -8,6 +8,7 @@ class InvestorProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var secondName: UILabel!
 
     @IBOutlet weak var follow: ActionHandleButton!
+    @IBOutlet weak var unfollow: ActionHandleButton!
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var followers: UILabel!
     @IBOutlet weak var message: ActionHandleButton!

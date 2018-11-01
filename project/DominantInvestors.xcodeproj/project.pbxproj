@@ -239,6 +239,8 @@
 		CE735F572152788700E2849E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F552152788700E2849E /* Protocols.swift */; };
 		CE8854CA215CC8940093564B /* DrivewealthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */; };
 		CE8854CB215CC8940093564B /* DrivewealthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */; };
+		CEB8801A2181CBAF006DFD9F /* MonayTransformator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB880192181CBAF006DFD9F /* MonayTransformator.swift */; };
+		CEB8801B2181CBAF006DFD9F /* MonayTransformator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB880192181CBAF006DFD9F /* MonayTransformator.swift */; };
 		CEE89E4B2170884D006B8F2B /* AnalitycalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E4A2170884D006B8F2B /* AnalitycalInfoViewController.swift */; };
 		CEE89E4C2170884D006B8F2B /* AnalitycalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E4A2170884D006B8F2B /* AnalitycalInfoViewController.swift */; };
 		CEE89E4E2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E4D2170AC3B006B8F2B /* TermsAndConditionsViewController.swift */; };
@@ -400,6 +402,7 @@
 		CE735F522152785E00E2849E /* Dominant+LayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dominant+LayoutConstraint.swift"; sourceTree = "<group>"; };
 		CE735F552152788700E2849E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivewealthDataProvider.swift; sourceTree = "<group>"; };
+		CEB880192181CBAF006DFD9F /* MonayTransformator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonayTransformator.swift; sourceTree = "<group>"; };
 		CEE89E4A2170884D006B8F2B /* AnalitycalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalitycalInfoViewController.swift; sourceTree = "<group>"; };
 		CEE89E4D2170AC3B006B8F2B /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		CEE89E5621761F4B006B8F2B /* RatingsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsDetailsViewController.swift; sourceTree = "<group>"; };
@@ -735,6 +738,7 @@
 				CE735EB921523CF200E2849E /* SignalModel.swift */,
 				CE735EBA21523CF200E2849E /* PortfolioModel.swift */,
 				CE735EBB21523CF200E2849E /* UserModel.swift */,
+				CEB880192181CBAF006DFD9F /* MonayTransformator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1238,6 +1242,7 @@
 				CEE89E762179C8F9006B8F2B /* SessionAdapter.swift in Sources */,
 				CE449B9C215516100091940E /* AddSignalViewController.swift in Sources */,
 				CEE89E4E2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */,
+				CEB8801A2181CBAF006DFD9F /* MonayTransformator.swift in Sources */,
 				CE735EA021523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
 				CE735EC621523CF200E2849E /* OffsetResponse.swift in Sources */,
 				CE735E4021523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
@@ -1335,6 +1340,7 @@
 				CEE89E772179C8F9006B8F2B /* SessionAdapter.swift in Sources */,
 				CE449B9D215516100091940E /* AddSignalViewController.swift in Sources */,
 				CEE89E4F2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */,
+				CEB8801B2181CBAF006DFD9F /* MonayTransformator.swift in Sources */,
 				CE735EA121523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
 				CE735EC721523CF200E2849E /* OffsetResponse.swift in Sources */,
 				CE735E4121523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
