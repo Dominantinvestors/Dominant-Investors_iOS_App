@@ -11,7 +11,7 @@ class PersonalViewController: KeyboardObservableViewController {
     
     private var watchList: WatchListDataSource!
     private var portfolio: PortfolioDataSource!
-    private var assets: AssetsDataSource!
+    private var transactions: TransactionsDataSource!
     
     @IBOutlet weak var segmentControll: SegmentControll!
     
@@ -75,7 +75,7 @@ class PersonalViewController: KeyboardObservableViewController {
         
         PortfolioDataProvider.default().transactions { assets, error in
             if let assets = assets {
-                self.assets.data = assets
+                self.transactions.data = assets
                 self.tableView.reloadData()
             } else {
                 self.showAlertWith(message: error)
@@ -110,8 +110,8 @@ class PersonalViewController: KeyboardObservableViewController {
     fileprivate func portfolioControllerDataSource() -> TableViewDataSource {
         portfolio = portfolioSection()
         let search = searchSection()
-        assets = assetsSection()
-        return ComposedDataSource([portfolio, search, assets])
+        transactions = transactionsSection()
+        return ComposedDataSource([portfolio, search, transactions])
     }
     
     fileprivate func createSignalSection() -> TableViewDataSource{
@@ -123,10 +123,39 @@ class PersonalViewController: KeyboardObservableViewController {
     }
     
     fileprivate func watchListSection() -> WatchListDataSource {
-        let watchList = WatchListDataSource(data: [])
+     
+        let editActions = [EditAction(action: .custom("Delete"),
+                                      title: NSLocalizedString("X", comment: ""),
+                                      color: UIColor.red),
+                           EditAction(action: .custom("Chart"),
+                                      title: NSLocalizedString("CHART", comment: ""),
+                                      color: Colors.DMChartButtonColor)]
+
+        let watchList = WatchListDataSource(data: [], editActions: editActions)
         watchList.selectors[.select] = {_, _, _ in
         }
+        
+        watchList.selectors[.custom("Delete")] = { _, _, model in
+            self.delete(model)
+        }
+        
+        watchList.selectors[.custom("Chart")] = { _, _, model in
+            self.chart(model.ticker)
+        }
+        
         return watchList
+    }
+    
+    fileprivate func delete(_ signal: SignalModel) {
+        self.showActivityIndicator()
+        SignalsDataProvider.default().delete(signal) { success, error in
+            self.dismissActivityIndicator()
+            if success {
+                self.reloadData()
+            } else {
+                self.showAlertWith(message: error)
+            }
+        }
     }
     
     fileprivate func portfolioSection() -> PortfolioDataSource {
@@ -169,7 +198,37 @@ class PersonalViewController: KeyboardObservableViewController {
         self.navigationController?.pushViewController(buy, animated: true)
     }
     
-    fileprivate func assetsSection() -> AssetsDataSource {
-        return AssetsDataSource(data: [])
+    fileprivate func sellCompany(_ company: TransactionModel) {
+        let sell: SellViewController = storyboard![.Sell]
+        sell.maxAmount = company.amount
+        sell.company = company
+        self.navigationController?.pushViewController(sell, animated: true)
+    }
+    
+    fileprivate func chart(_ ticker: String) {
+        let storyboard = UIStoryboard.init(name: "OutsourceCharts", bundle: nil)
+        if let chartVC = storyboard.instantiateViewController(withIdentifier: "DMTradingViewChartViewController") as? DMTradingViewChartViewController {
+            chartVC.ticker = ticker
+            self.navigationController?.pushViewController(chartVC, animated: true)
+        }
+        
+        setStatusBarBackgroundColor(.white)
+    }
+    
+    fileprivate func transactionsSection() -> TransactionsDataSource {
+        let editActions = [EditAction(action: .custom("Sell"),
+                                      title: NSLocalizedString("Sell", comment: ""),
+                                      color: UIColor.red),
+                           EditAction(action: .custom("Chart"),
+                                      title: NSLocalizedString("CHART", comment: ""),
+                                      color: Colors.DMChartButtonColor)]
+        let transactions = TransactionsDataSource(data: [], editActions: editActions)
+        transactions.selectors[.custom("Sell")] = { _, _, model in
+           self.sellCompany(model)
+        }
+        transactions.selectors[.custom("Chart")] = { _, _, model in
+            self.chart(model.ticker)
+        }
+        return transactions
     }
 }

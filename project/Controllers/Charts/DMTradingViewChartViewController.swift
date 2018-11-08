@@ -11,7 +11,11 @@ import WebKit
 
 class DMTradingViewChartViewController: DMViewController, UIWebViewDelegate {
 
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var webView: UIWebView! {
+        didSet {
+            webView.delegate = self
+        }
+    }
     
     var ticker : String!
     
@@ -22,12 +26,12 @@ class DMTradingViewChartViewController: DMViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = self.ticker!
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+//    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return .lightContent
+//    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -50,15 +54,17 @@ class DMTradingViewChartViewController: DMViewController, UIWebViewDelegate {
         self.webView.loadHTMLString(html, baseURL: nil)
     }
     
-    
-    
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        
         print("DONE")
     }
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         print(error.localizedDescription)
+    }
+    
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+       
+        return true
     }
 
 }

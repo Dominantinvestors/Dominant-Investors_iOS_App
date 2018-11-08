@@ -10,16 +10,6 @@ extension SearchAssetModel: SearchItem {
     var subtitle: String { return ticker}
 }
 
-//extension TransactionModel: SearchItem {
-//    var title: String { return ticker}
-//    var subtitle: String { return ticker}
-//}
-
-//extension CompanyModel: SearchItem {
-//    var title: String { return name}
-//    var subtitle: String { return ticker}
-//}
-
 class SearchController: UIView {
     
     var textDidUpdate: ((String) -> Void)?
@@ -133,7 +123,7 @@ class SearchController: UIView {
         
     fileprivate func showTableView() {
         let convertFrame = searchBar.superview?.convert(searchBar.frame.origin, to: self)
-        
+
         tableView.frame = CGRect(x: convertFrame!.x,
                                       y: convertFrame!.y + searchBar.frame.size.height,
                                       width: searchBar.frame.size.width,

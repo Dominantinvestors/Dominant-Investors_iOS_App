@@ -14,13 +14,15 @@ extension PortfolioModel {
     
     static func transactions() -> RequestProvider {
         let parameters: [String: Any] = ["limit": "100",
-                                         "offset": "0"]
+                                         "offset": "0",
+                                         "type": "b"]
         return URLEncodingRequestBuilder(path: "/portfolio/user/transactions/", parameters: parameters)
     }
     
     static func transactions(_ forUser: Int) -> RequestProvider {
         let parameters: [String: Any] = ["limit": "100",
-                                         "offset": "0"]
+                                         "offset": "0",
+                                         "type": "b"]
         return URLEncodingRequestBuilder(path: "/portfolio/user/transactions/\(forUser)/", parameters: parameters)
     }
 }

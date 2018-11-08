@@ -4,7 +4,7 @@ import ObjectMapper
 class SignalModel: Mappable {
     
     var id: Int = 0
-    var investmentIdea: Int = 0
+    var investmentIdea: [String: Any]?
     var buyPoint: String = ""
     var targetPrice: String = ""
     var mktPrice: String = ""

@@ -1,13 +1,13 @@
 import UIKit
 
 class BuyViewController: KeyboardObservableViewController {
-
+    
     var company: Company!
     
-    private var buyDataSource: EditableDataSource!
-    private var priceDataSource: NotEditableDataSource!
-    private var costDataSource: NotEditableDataSource!
-
+    var buyDataSource: EditableDataSource!
+    private var priceDataSource: EditableDataSource!
+    private var costDataSource: EditableDataSource!
+    
     private var dataSource: TableViewDataSourceShim? = nil {
         didSet {
             tableView.dataSource = dataSource
@@ -22,21 +22,29 @@ class BuyViewController: KeyboardObservableViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 50
-
+        
         tableView.register(cell: BuyTableViewCell.self)
         tableView.register(BuySectionView.self)
-
-        let footer = BuySectionDataSource(subtitle: NSLocalizedString("Tou are simulating a trade with Dominant investors. No money will be transacted at this time.", comment: ""))
+        
+        let footer = BuySectionConfigurator(subtitle: NSLocalizedString("Tou are simulating a trade with Dominant investors. No money will be transacted at this time.", comment: ""))
         footer.selectors[.select] = { _, _ in
             self.onSubmit()
         }
+        
         let priceTitle = company.isCrypto() ? NSLocalizedString("AMOUNT OF COIN", comment: "") :  NSLocalizedString("AMOUNT OF SHARES", comment: "")
-        buyDataSource = EditableDataSource(title: priceTitle, delegate: self)
         
-        priceDataSource = NotEditableDataSource(title: NSLocalizedString("MKT PRICE", comment: ""), text: company.rate)
+        buyDataSource = EditableDataSource(title: priceTitle,
+                                           delegate: self)
         
-        costDataSource = NotEditableDataSource(title: NSLocalizedString("EST COST", comment: ""), text: nil, footer: footer)
-
+        priceDataSource = EditableDataSource(title: NSLocalizedString("MKT PRICE", comment: ""),
+                                             rightText: Values.Currency,
+                                             editable: false)
+        
+        costDataSource = EditableDataSource(title: NSLocalizedString("EST COST", comment: ""),
+                                            rightText: Values.Currency,
+                                            editable: false,
+                                            footer: footer)
+        
         let composed = ComposedDataSource([buyDataSource, priceDataSource, costDataSource])
         dataSource = TableViewDataSourceShim(composed)
         tableView.reloadData()
@@ -44,12 +52,25 @@ class BuyViewController: KeyboardObservableViewController {
         updateRate()
     }
     
-    func updateRate() {
+    func onSubmit() {
+        showActivityIndicator()
+        PortfolioDataProvider.default().buy(buyDataSource.text, company) { success, error in
+            self.dismissActivityIndicator()
+            if success {
+                self.navigationController?.popToRootViewController(animated: true)
+            } else {
+                self.showAlertWith(message: error)
+            }
+        }
+    }
+    
+    private func updateRate() {
         self.showActivityIndicator()
         CompanyDataProvider.default().rate(company) { rate, error in
             self.dismissActivityIndicator()
             if let rate = rate {
-                self.priceDataSource.data = [(NSLocalizedString("MKT PRICE", comment: ""), rate.rate)]
+                self.priceDataSource.text = rate.rate
+                self.costDataSource.text = self.cost(self.buyDataSource.text, rate.rate)
                 self.tableView.reloadData()
             } else {
                 self.showAlertWith(message: error)
@@ -59,51 +80,40 @@ class BuyViewController: KeyboardObservableViewController {
     
     private func cost(_ left: String?, _ right: String?) -> String {
         let cost = (left.flatMap{ Double($0) } ?? 0.0) * (right.flatMap{ Double($0) } ?? 0.0)
-        return String(format:"%.2f", cost)
-    }
-    
-    private func onSubmit() {
-        if let amount = buyDataSource.cell?.textField.text, amount.count > 0 {
-            showActivityIndicator()
-            PortfolioDataProvider.default().buy(amount, company) { success, error in
-                self.dismissActivityIndicator()
-                if success {
-                    self.navigationController?.popToRootViewController(animated: true)
-                } else {
-                    self.showAlertWith(message: error)
-                }
-            }
+        if company.isCrypto() {
+            return String(format:"%.6f", cost)
+        } else {
+            return String(format:"%.2f", cost)
         }
     }
 }
 
 extension BuyViewController: UITextFieldDelegate {
-
+    
     func textFieldDidBeginEditing(_ textField: UITextField)  {
         buyDataSource.cell?.editStyle()
     }
-
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         buyDataSource.cell?.normalStyle()
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentString: NSString = textField.text! as NSString
-        let amount = currentString.replacingCharacters(in: range, with: string)
-        
-        self.costDataSource.cell?.textField.text = cost(amount, company.rate)
-        
+        var amount = currentString.replacingCharacters(in: range, with: string)
+        amount = amount.replacingOccurrences(of: ",", with: ".")
+        self.costDataSource.text = cost(amount, self.priceDataSource.text)
         return true
     }
 }
 
-class BuySectionDataSource:
+class BuySectionConfigurator:
     SectionConfigurator,
     SectionSelectable
 {
     var subtitle: String
     var selectors: [DataSource.Action: (BuySectionView, Int) -> ()] = [:]
-
+    
     init(subtitle: String) {
         self.subtitle = subtitle
     }
@@ -122,29 +132,50 @@ class EditableDataSource: NSObject,
     TableViewDataSource,
     DataContainable,
     CellContainable,
-    CellConfigurator
+    CellConfigurator,
+    FooterContainable
 {
-    var data: [String]
-    var text: String { return cell?.textField.text ?? ""}
-    let delegate: UITextFieldDelegate?
-    
     weak var cell: BuyTableViewCell?
+    var footer: BuySectionConfigurator?
+
+    var data: [String]
+    var text: String {
+        set {
+            editebleText = newValue
+            cell?.textField.text = newValue
+        }
+        get {
+            return cell?.textField.text ?? "0.0"
+        }
+    }
     
-    let rightText: String
-    
-    init(title: String, delegate: UITextFieldDelegate? = nil, rightText: String = "") {
+    private var editebleText: String?
+    private let delegate: UITextFieldDelegate?
+    private let rightText: String
+    private let editable: Bool
+
+    init(title: String,
+         text: String = "",
+         rightText: String = "",
+         delegate: UITextFieldDelegate? = nil,
+         editable: Bool = true,
+         footer: BuySectionConfigurator? = nil)
+    {
         self.data = [title]
         self.delegate = delegate
         self.rightText = rightText
+        self.footer = footer
+        self.editable = editable
     }
     
     func configurateCell(_ cell: BuyTableViewCell, item: String, at indexPath: IndexPath) {
         self.cell = cell
         cell.title.text = item
+        cell.textField.text = editebleText
         cell.textField.delegate = delegate != nil ? delegate : self
         cell.normalStyle()
         cell.textField.setRight(rightText)
-        cell.textField.isUserInteractionEnabled = true
+        cell.textField.isUserInteractionEnabled = editable
     }
 }
 
@@ -156,33 +187,5 @@ extension EditableDataSource: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         cell?.normalStyle()
-    }
-}
-
-class NotEditableDataSource:
-    TableViewDataSource,
-    DataContainable,
-    CellContainable,
-    CellConfigurator,
-    FooterContainable
-{
-    weak var cell: BuyTableViewCell?
-    
-    var data: [(String, String?)]
-    
-    var footer: BuySectionDataSource?
-    
-    init(title: String, text: String?, footer: BuySectionDataSource? = nil) {
-        data = [(title, text)]
-        self.footer = footer
-    }
-
-    func configurateCell(_ cell: BuyTableViewCell, item: (String, String?), at indexPath: IndexPath) {
-        self.cell = cell
-        cell.title.text = item.0
-        cell.textField.text = item.1 ?? "0.00"
-        cell.textField.setRight(Values.Currency)
-        cell.normalStyle()
-        cell.textField.isUserInteractionEnabled = false
     }
 }

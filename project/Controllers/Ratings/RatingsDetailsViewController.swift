@@ -42,7 +42,7 @@ class RatingsDetailsViewController: DMViewController {
         details.selectors[.custom("message")] = {_, _, _ in
         }
         
-        let assets = AssetsDataSource(data: [])
+        let assets = TransactionsDataSource(data: [])
         showActivityIndicator()
         PortfolioDataProvider.default().transactions(investor.id) { transactions, error in
             self.dismissActivityIndicator()

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,53 +35,15 @@
                             <string>Title</string>
                             <string>Title</string>
                         </scopeButtonTitles>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
-                                <point key="value" x="0.0" y="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                <real key="value" value="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                <real key="value" value="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </searchBar>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7x-cc-i3l">
-                        <rect key="frame" x="0.0" y="-41" width="320" height="41"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="qDB-2M-JFH"/>
-                        </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                <color key="value" red="0.89803921568627454" green="0.9137254901960784" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                <real key="value" value="0.29999999999999999"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
-                                <point key="value" x="0.0" y="12"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                <real key="value" value="3"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="2Le-kn-Roc" secondAttribute="bottom" constant="15" id="41K-Za-cAT"/>
-                    <constraint firstItem="C7x-cc-i3l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="-40" id="Eo7-xw-zeF"/>
                     <constraint firstAttribute="bottom" secondItem="REg-Jv-Ino" secondAttribute="bottom" constant="15" id="HH7-ta-8d1"/>
                     <constraint firstItem="2Le-kn-Roc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="K8M-q9-Tjv"/>
                     <constraint firstItem="2Le-kn-Roc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="VHN-79-6gm"/>
-                    <constraint firstAttribute="trailing" secondItem="C7x-cc-i3l" secondAttribute="trailing" id="hFL-32-Dqy"/>
                     <constraint firstAttribute="trailing" secondItem="2Le-kn-Roc" secondAttribute="trailing" constant="10" id="iVi-be-df6"/>
                     <constraint firstItem="REg-Jv-Ino" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="ng2-FA-AYO"/>
-                    <constraint firstItem="C7x-cc-i3l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qnl-1i-GuZ"/>
                     <constraint firstAttribute="trailing" secondItem="REg-Jv-Ino" secondAttribute="trailing" constant="15" id="xzz-6N-2xE"/>
                     <constraint firstItem="REg-Jv-Ino" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="yOv-Se-GtE"/>
                 </constraints>

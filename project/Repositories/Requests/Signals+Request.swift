@@ -7,4 +7,8 @@ extension SignalModel {
                                          "offset": "0"]
         return URLEncodingRequestBuilder(path: "/signals/", method: .get, parameters: parameters)
     }
+    
+    func delete() -> RequestProvider {
+        return URLEncodingRequestBuilder(path: "/signals/\(id)/", method: .delete)
+    }
 }

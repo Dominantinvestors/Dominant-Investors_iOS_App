@@ -55,4 +55,15 @@ struct PortfolioDataProvider: Repository, Syncable {
             }
         }
     }
+    
+    func sell(_ amount: String, _ company: Company, completion: @escaping (Bool, String?) -> Void) {
+        send(request: company.sell(amount)).responseJSON { response in
+            switch self.handler.handle(response) {
+            case .success(_):
+                completion(true, nil)
+            case .error(let error):
+                completion(false, error.localizedDescription)
+            }
+        }
+    }
 }

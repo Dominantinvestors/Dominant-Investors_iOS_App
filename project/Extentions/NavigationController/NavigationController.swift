@@ -11,7 +11,7 @@ fileprivate struct Empty: Decorator {
         navigationController.navigationBar.shadowImage = UIImage()
         navigationController.navigationBar.isOpaque = false
         navigationController.navigationBar.isTranslucent = true
-        navigationController.navigationBar.backgroundColor = .clear
+        navigationController.navigationBar.backgroundColor = .white
         navigationController.navigationBar.tintColor = ColorPalette.NavigationTin
         navigationController.navigationBar.titleTextAttributes = [.foregroundColor: ColorPalette.NavigationTin, .font: Fonts.regular(20)]
     }

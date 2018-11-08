@@ -2,7 +2,11 @@ import UIKit
 
 class DMScreenerTypeViewController: DMViewController, UIWebViewDelegate {
     
-    @IBOutlet  weak var webView : UIWebView!
+    @IBOutlet  weak var webView : UIWebView! {
+        didSet {
+            webView.delegate = self
+        }
+    }
     
     var tickerLoaded = false
     
@@ -26,6 +30,9 @@ class DMScreenerTypeViewController: DMViewController, UIWebViewDelegate {
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
         if request.url?.absoluteString.contains("https://www.tradingview.com/?utm_campaign=screener&utm_medium=widget&utm_source=") == true {
+            return false
+        }
+        if request.url?.absoluteString.contains("https://www.tradingview.com/?utm_campaign=cryptoscreener&utm_medium=widget&utm_source=") == true {
             return false
         }
         

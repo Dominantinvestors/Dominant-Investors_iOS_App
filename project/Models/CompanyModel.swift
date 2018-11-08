@@ -157,18 +157,15 @@ extension CompanyModel {
         var status: [StatusModel] = []
         if let stats = stats {
             let marketCap = StatusModel(title: NSLocalizedString("Market Cap", comment: ""),
-                                        subtitle: "\(stats.marketCap) Bil")
-            let salesFQ3 = StatusModel(title: NSLocalizedString("Sales FQ3", comment: ""),
+                                        subtitle: "\(stats.marketCap)")
+            let salesFQ3 = StatusModel(title: NSLocalizedString("Sales FQ", comment: ""),
                                        subtitle: "\(stats.salesFQ3V) (\(stats.salesFQ3P)%)")
-            
-            status.append(marketCap)
-            status.append(salesFQ3)
-
-            let epsfq3 = StatusModel(title: NSLocalizedString("EPS FQ3", comment: ""),
+            let epsfq3 = StatusModel(title: NSLocalizedString("EPS FQ", comment: ""),
                                      subtitle: "\(stats.epsFQ3V) (\(stats.epsFQ3P)%)")
             let peRatio = StatusModel(title: NSLocalizedString("P/E Ratio", comment: ""),
                                       subtitle: String(stats.peRatio))
-            
+            status.append(marketCap)
+            status.append(salesFQ3)
             status.append(epsfq3)
             status.append(peRatio)
         }
@@ -183,16 +180,14 @@ extension CompanyModel {
                                         subtitle: "\(ratings.comp) of 99")
             let groupRating = StatusModel(title: NSLocalizedString("Group Rat.", comment: ""),
                                        subtitle: "\(ratings.group) of 99")
-            rating.append(compRating)
-            rating.append(groupRating)
-
             let epsRating = StatusModel(title: NSLocalizedString("EPS Rating", comment: ""),
                                          subtitle: "\(ratings.eps) of 99")
             let rsRating = StatusModel(title: NSLocalizedString("RS Rating", comment: ""),
                                           subtitle: "\(ratings.rs) of 99")
+            rating.append(compRating)
+            rating.append(groupRating)
             rating.append(epsRating)
             rating.append(rsRating)
-
         }
         return rating
     }
@@ -202,16 +197,13 @@ extension CompanyModel {
         var status: [StatusModel] = []
         if let stats = stats {
             let marketCap = StatusModel(title: NSLocalizedString("Market Cap", comment: ""),
-                                        subtitle: "\(stats.marketCap) Bil")
+                                        subtitle: "\(stats.marketCap)")
             let sirculation = StatusModel(title: NSLocalizedString("Sirculation", comment: ""),
                                        subtitle: "\(stats.circulating)")
-            
-            status.append(marketCap)
-            status.append(sirculation)
-
             let maxSupply = StatusModel(title: NSLocalizedString("Max Supply", comment: ""),
                                      subtitle: "\(stats.maxSupply)")
-            
+            status.append(marketCap)
+            status.append(sirculation)
             status.append(maxSupply)
         }
         return status
@@ -225,12 +217,10 @@ extension CompanyModel {
                                          subtitle: "\(ratings.technology) of 99")
             let command = StatusModel(title: NSLocalizedString("Command", comment: ""),
                                           subtitle: "\(ratings.command) of 99")
-            rating.append(technology)
-            rating.append(command)
-
             let realisation = StatusModel(title: NSLocalizedString("Realisation", comment: ""),
                                         subtitle: "\(ratings.realization) of 99")
-   
+            rating.append(technology)
+            rating.append(command)
             rating.append(realisation)
         }
         return rating

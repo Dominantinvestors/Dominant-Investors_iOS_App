@@ -44,4 +44,12 @@ extension Company {
                                          "category": type]
         return JSONEncodingRequestBuilder(path: "/transactions/buy/", method: .post, parameters: parameters)
     }
+    
+    func sell(_ amount: String) -> RequestProvider {
+        let parameters: [String: Any] = ["ticker": ticker,
+                                         "amount": amount,
+                                         "price": rate,
+                                         "category": type]
+        return JSONEncodingRequestBuilder(path: "/transactions/sell/", method: .post, parameters: parameters)
+    }
 }

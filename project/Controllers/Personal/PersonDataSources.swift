@@ -30,28 +30,40 @@ class WatchListDataSource:
     CellConfigurator,
     CellSelectable,
     SectionConfigurator,
-    HeaderContainable
+    HeaderContainable,
+    EditableCellDataSource
 {
     var data: [SignalModel]
     
-    init(data: [SignalModel]) {
+    var selectors: [DataSource.Action: (WatchListTableViewCell, IndexPath, SignalModel) -> ()] = [:]
+
+    var edits: [EditAction]
+
+    init(data: [SignalModel], editActions: [EditAction] = []) {
         self.data = data
+        self.edits = editActions
     }
     
     func section() -> HeaderFooterView<WatchListSection> {
         return .view { section, index in }
     }
     
-    var selectors: [DataSource.Action: (WatchListTableViewCell, IndexPath, SignalModel) -> ()] = [:]
+    func editActions() -> [EditAction] {
+        return self.edits
+    }
   
     func configurateCell(_ cell: WatchListTableViewCell, item: SignalModel, at indexPath: IndexPath) {
         cell.ticker.text = item.ticker
         cell.mktPrice.text = item.mktPrice
-        cell.buyPoint.text = item.buyPoint
-        cell.targetPrice.text = item.targetPrice
-        cell.stopLoss.text = item.stopLoss
+        cell.buyPoint.text = String(format: "%.2f", Double(item.buyPoint) ?? 0.0)
+        cell.targetPrice.text = String(format: "%.2f", Double(item.targetPrice) ?? 0.0)
+        cell.stopLoss.text = String(format: "%.2f", Double(item.stopLoss) ?? 0.0)
 
-        cell.profile.setProfileImage(for: item.user)
+        if item.investmentIdea != nil {
+            cell.profile.image = UIImage(named: "Logo")
+        } else {
+            cell.profile.setProfileImage(for: item.user)
+        }
     }
 }
 
@@ -107,18 +119,22 @@ class PortfolioDataSource:
     }
 }
 
-class AssetsDataSource:
+class TransactionsDataSource:
     TableViewDataSource,
     DataContainable,
     CellContainable,
     CellConfigurator,
     CellSelectable,
     SectionConfigurator,
-    HeaderContainable
+    HeaderContainable,
+    EditableCellDataSource
 {
     var data: [TransactionModel]
     
-    init(data: [TransactionModel]) {
+    var edits: [EditAction]
+    
+    init(data: [TransactionModel], editActions: [EditAction] = []) {
+        self.edits = editActions
         self.data = data
     }
     
@@ -128,11 +144,15 @@ class AssetsDataSource:
     
     var selectors: [DataSource.Action: (AssetsTableViewCell, IndexPath, TransactionModel) -> ()] = [:]
     
+    func editActions() -> [EditAction] {
+        return self.edits
+    }
+    
     func configurateCell(_ cell: AssetsTableViewCell, item: TransactionModel, at indexPath: IndexPath) {
         cell.ticker.text = item.ticker
         cell.amount.text = item.amount
         cell.buyPoint.text = item.buyPoint
-        cell.mktPrice.text = item.mktPrice
+        cell.mktPrice.text = item.rate
 
         if Double(item.profitPoints)! >= 0.0 {
             cell.profitPoints.setGreen()
@@ -140,7 +160,7 @@ class AssetsDataSource:
             cell.profitPoints.setRed()
         }
         
-        if (Double(item.buyPoint)! - Double(item.mktPrice)!) <= 0.0 {
+        if (Double(item.buyPoint)! - Double(item.rate)!) <= 0.0 {
             cell.mktPrice.setGreen()
         } else {
             cell.mktPrice.setRed()

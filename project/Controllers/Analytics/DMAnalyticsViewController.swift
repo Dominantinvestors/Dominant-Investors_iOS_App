@@ -24,19 +24,12 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        super.prepare(for: segue, sender: sender)
-//        if segue.identifier == "contanerSegue" {
-//            let description = segue.destination as! DMSubscriptionViewController
-//            description.delegate = self
-//        }
-//    }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.collectionView.reloadData()
         
         self.navigationController?.navigationBar.isHidden = false
+        setStatusBarBackgroundColor(.clear)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

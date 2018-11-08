@@ -49,4 +49,14 @@ struct SignalsDataProvider: Repository, Syncable {
             }
         }
     }
+    
+    func delete(_ signal: SignalModel, completion: @escaping (Bool, String?) -> Void) {
+        send(request: signal.delete()).response { response in
+            if response.response?.statusCode == 204 {
+                completion(true, nil)
+            } else {
+                completion(false, response.error!.localizedDescription)
+            }
+        }
+    }
 }

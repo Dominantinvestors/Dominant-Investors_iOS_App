@@ -4,6 +4,7 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
     
     var company: Company!
     
+    private var header: AddSignalHeaderDataSource!
     private var buyDataSource: EditableDataSource!
     private var targetDataSource: EditableDataSource!
     private var lossDataSource: EditableDataSource!
@@ -24,7 +25,7 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
         tableView.register(cell: CreateSignalTableViewCell.self)
         tableView.register(cell: AddSignalHeaderTableViewCell.self)
 
-        let header = AddSignalHeaderDataSource(data: [company])
+        header = AddSignalHeaderDataSource(data: [(company, nil)])
         buyDataSource = EditableDataSource(title: NSLocalizedString("BUY POINT", comment: ""),
                                            rightText: Values.Currency)
         targetDataSource = EditableDataSource(title: NSLocalizedString("TARGET PRICE", comment: ""),
@@ -33,8 +34,9 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
                                             rightText: Values.Currency)
         
         let composed = ComposedDataSource([header, buyDataSource, targetDataSource, lossDataSource, createSignalSection()])
-        self.dataSource = TableViewDataSourceShim(composed)
-        self.tableView.reloadData()
+        dataSource = TableViewDataSourceShim(composed)
+        tableView.reloadData()
+        updateRate()
     }
     
     fileprivate func createSignalSection() -> TableViewDataSource{
@@ -43,6 +45,19 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
             self.createSignal()
         }
         return createSignal
+    }
+    
+    private func updateRate() {
+        self.showActivityIndicator()
+        CompanyDataProvider.default().rate(company) { rate, error in
+            self.dismissActivityIndicator()
+            if let rate = rate {
+                self.header.data = [(self.company, rate)]
+                self.tableView.reloadData()
+            } else {
+                self.showAlertWith(message: error)
+            }
+        }
     }
     
     private func createSignal() {
@@ -62,16 +77,20 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
     }
 }
 
-struct AddSignalHeaderDataSource:
+class AddSignalHeaderDataSource:
     TableViewDataSource,
     DataContainable,
     CellContainable,
     CellConfigurator
 {
-    var data: [Company]
+    var data: [(Company, Rate?)]
     
-    func configurateCell(_ cell: AddSignalHeaderTableViewCell, item: Company, at indexPath: IndexPath) {
-        cell.companyTitle.text = item.name
-        cell.companyPrice.attributedText = item.rate.toMoneyStyle()
+    init(data: [(Company, Rate?)]) {
+        self.data = data
+    }
+    
+    func configurateCell(_ cell: AddSignalHeaderTableViewCell, item: (Company, Rate?), at indexPath: IndexPath) {
+        cell.companyTitle.text = item.0.name
+        cell.companyPrice.attributedText = (item.1.flatMap{ $0.rate } ?? "0.0" ).toMoneyStyle()
     }
 }
