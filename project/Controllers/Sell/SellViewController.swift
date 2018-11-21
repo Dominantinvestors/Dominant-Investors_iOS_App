@@ -23,7 +23,7 @@ class SellViewController: BuyViewController {
         }
         
         showActivityIndicator()
-        PortfolioDataProvider.default().sell(buyDataSource.text, company) { success, error in
+        PortfolioDataProvider.default().sell(priceDataSource.text, buyDataSource.text, company) { success, error in
             self.dismissActivityIndicator()
             if success {
                 self.navigationController?.popToRootViewController(animated: true)

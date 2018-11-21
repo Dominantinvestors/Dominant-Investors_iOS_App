@@ -41,7 +41,7 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
     
     fileprivate func createSignalSection() -> TableViewDataSource{
         var createSignal = CreateSignalDataSource(title: NSLocalizedString("CREATE SIGNAL", comment: ""))
-        createSignal.selectors[.select] = {_, _, _ in
+        createSignal.selectors[.select] = {[unowned self] _, _, _ in
             self.createSignal()
         }
         return createSignal
@@ -49,7 +49,7 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
     
     private func updateRate() {
         self.showActivityIndicator()
-        CompanyDataProvider.default().rate(company) { rate, error in
+        CompanyDataProvider.default().rate(company) {[unowned self] rate, error in
             self.dismissActivityIndicator()
             if let rate = rate {
                 self.header.data = [(self.company, rate)]
@@ -66,7 +66,7 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
         }
         showActivityIndicator()
         SignalsDataProvider.default().create(for: company, buyDataSource.text, targetDataSource.text, lossDataSource.text)
-        { success, error in
+        {[unowned self] success, error in
             self.dismissActivityIndicator()
             if success {
                 self.navigationController?.popToRootViewController(animated: true)

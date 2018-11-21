@@ -17,11 +17,11 @@ class KeyboardObservableViewController: DMViewController {
             selector: #selector(self.didShow(sender:)),
             name: .UIKeyboardDidShow,
             object: nil)
-        
+
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(self.didHide(sender:)),
-            name: .UIKeyboardDidHide,
+            name: .UIKeyboardWillHide,
             object: nil)
     }
     
@@ -71,10 +71,7 @@ class KeyboardObservableViewController: DMViewController {
     
     @objc private func didHide(sender: NSNotification)  {
         if let duration = sender.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval {
-            self.tableView.isScrollEnabled = true
-            
             UIView.animate(withDuration: duration, animations: {
-                
                 var edgeInsets = self.tableView.contentInset
                 edgeInsets.bottom = 0
                 
@@ -85,7 +82,7 @@ class KeyboardObservableViewController: DMViewController {
                 
                 self.tableView.scrollIndicatorInsets = edgeInsets
             }, completion: { (_) in
-                self.tableView.isScrollEnabled = false
+                self.tableView.isScrollEnabled = true
             })
         }
     }

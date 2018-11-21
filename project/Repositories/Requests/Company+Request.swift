@@ -37,7 +37,7 @@ extension Company {
         return JSONEncodingRequestBuilder(path: "/signals/", method: .post, parameters: parameters)
     }
     
-    func buy(_ amount: String) -> RequestProvider {
+    func buy(_ rate: String, _ amount: String) -> RequestProvider {
         let parameters: [String: Any] = ["ticker": ticker,
                                          "amount": amount,
                                          "price": rate,
@@ -45,7 +45,7 @@ extension Company {
         return JSONEncodingRequestBuilder(path: "/transactions/buy/", method: .post, parameters: parameters)
     }
     
-    func sell(_ amount: String) -> RequestProvider {
+    func sell(_ rate: String, _ amount: String) -> RequestProvider {
         let parameters: [String: Any] = ["ticker": ticker,
                                          "amount": amount,
                                          "price": rate,

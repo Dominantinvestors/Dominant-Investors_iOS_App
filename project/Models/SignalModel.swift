@@ -1,7 +1,7 @@
 import UIKit
 import ObjectMapper
 
-class SignalModel: Mappable {
+class SignalModel: Mappable, Company {
     
     var id: Int = 0
     var investmentIdea: [String: Any]?
@@ -13,7 +13,8 @@ class SignalModel: Mappable {
     var type: String = ""
     var name: String = ""
     var ticker: String = ""
-    
+    var rate: String = ""
+
     var user: UserModel?
 
     required init?(map: Map) { }

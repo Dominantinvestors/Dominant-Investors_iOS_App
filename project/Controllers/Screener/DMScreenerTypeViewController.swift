@@ -54,7 +54,7 @@ class DMScreenerTypeViewController: DMViewController, UIWebViewDelegate {
         }
         return true
     }
-    
+
     func webViewDidFinishLoad(_ webView: UIWebView) {
         self.dismissActivityIndicator()
         let bodyStyleVertical = "document.getElementsByTagName('body')[0].style.verticalAlign = 'middle';";

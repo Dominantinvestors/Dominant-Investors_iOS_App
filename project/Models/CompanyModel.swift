@@ -3,11 +3,11 @@ import ObjectMapper
 
 protocol Company {
     var name: String { get }
-    var rate: String { get }
     var ticker: String { get }
     var type: String { get }
     
     func isCrypto() -> Bool
+    func chart() -> String
 }
 
 extension Company {
@@ -15,13 +15,21 @@ extension Company {
     func isCrypto() -> Bool {
         return type == "c"
     }
+    
+    func chart() -> String {
+        if isCrypto() {
+            return ticker + "USD"
+        } else {
+            return ticker
+        }
+    }
 }
 
 class CompanyModel: Mappable, Company {
     
     var id: Int = 0
     var growthPotential: Int = 0
-    var rate: String = ""
+    var buyPoint: String = ""
     var targetPrice: String = ""
     var stopLoss: String = ""
     var description: String = ""
@@ -52,7 +60,7 @@ class CompanyModel: Mappable, Company {
 
         growthPotential <- map["growth_potential"]
         
-        rate <- (map["buy_point"], MonayTransformator())
+        buyPoint <- (map["buy_point"], MonayTransformator())
         targetPrice <- (map["target_price"], MonayTransformator())
         stopLoss <- (map["stop_loss"], MonayTransformator())
         description <- (map["description"], MonayTransformator())

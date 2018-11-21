@@ -36,7 +36,7 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
         showActivityIndicator()
         InvestorsDataProvider.default().get { investors, error in
             self.dismissActivityIndicator()
-            self.ratings = investors?.sorted(by: {$0.rating > $1.rating})
+            self.ratings = investors?.sorted(by: {$0.index < $1.index})
             self.tableView.reloadData()
             self.refreshControl.endRefreshing()
         }
@@ -66,7 +66,6 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DMRatingTableViewCell") as! DMRatingTableViewCell
-        cell.positionLabel.text = "\(indexPath.row + 1)"
         cell.setupWith(model: ratings![indexPath.row])
         return cell
     }

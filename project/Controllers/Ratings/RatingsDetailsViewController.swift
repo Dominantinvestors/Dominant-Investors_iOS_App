@@ -135,7 +135,7 @@ class InvestorsDetailsDataSource:
         
         cell.firstName.text = item.firstName
         cell.secondName.text = item.lastName
-        cell.rating.text = "\(item.rating)"
+        cell.rating.text = "\(item.index)"
         cell.followers.text = "\(item.followers)"
     }
 }

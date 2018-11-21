@@ -12,16 +12,6 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         super.viewDidLoad()
         setupUI()
         self.hideContainer()
-        
-        self.showActivityIndicator()
-        
-        CompanyDataProvider.default().get{ items, error in
-            if let items = items {
-                self.companies = items
-                self.collectionView?.reloadData()
-            }
-            self.dismissActivityIndicator()
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +20,19 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         
         self.navigationController?.navigationBar.isHidden = false
         setStatusBarBackgroundColor(.clear)
+        
+        updateIdeas()
+    }
+    
+    private func updateIdeas() {
+        self.showActivityIndicator()
+        CompanyDataProvider.default().get{ items, error in
+            if let items = items {
+                self.companies = items
+                self.collectionView?.reloadData()
+            }
+            self.dismissActivityIndicator()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

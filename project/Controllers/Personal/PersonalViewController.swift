@@ -63,7 +63,7 @@ class PersonalViewController: KeyboardObservableViewController {
     }
     
     fileprivate func reloadData() {
-        PortfolioDataProvider.default().get { portfolio, error in
+        PortfolioDataProvider.default().get {[unowned self] portfolio, error in
             if let portfolio = portfolio {
                 let user: UserModel = ServiceLocator.shared.getService()
                 self.portfolio.data = [(user, portfolio)]
@@ -73,7 +73,7 @@ class PersonalViewController: KeyboardObservableViewController {
             }
         }
         
-        PortfolioDataProvider.default().transactions { assets, error in
+        PortfolioDataProvider.default().transactions {[unowned self] assets, error in
             if let assets = assets {
                 self.transactions.data = assets
                 self.tableView.reloadData()
@@ -82,7 +82,7 @@ class PersonalViewController: KeyboardObservableViewController {
             }
         }
         
-        SignalsDataProvider.default().get { signals, error in
+        SignalsDataProvider.default().get {[unowned self] signals, error in
             if let signals = signals {
                 self.watchList.data = signals
                 self.tableView.reloadData()
@@ -96,7 +96,7 @@ class PersonalViewController: KeyboardObservableViewController {
         segmentControll.setLeft(NSLocalizedString("WATCHLIST SIGNALS", comment: ""))
         segmentControll.setRight(NSLocalizedString("YOUR PORTFOLIO", comment: ""))
         
-        segmentControll.selector = { index in
+        segmentControll.selector = {[unowned self] index in
             self.dataSource?.selectIndex = index
         }
     }
@@ -116,14 +116,13 @@ class PersonalViewController: KeyboardObservableViewController {
     
     fileprivate func createSignalSection() -> TableViewDataSource{
         var createSignal = CreateSignalDataSource(title: NSLocalizedString("CREATE SIGNAL", comment: ""))
-        createSignal.selectors[.select] = {_, _, _ in
+        createSignal.selectors[.select] = {[unowned self] _, _, _ in
             self.createSignal()
         }
         return createSignal
     }
     
     fileprivate func watchListSection() -> WatchListDataSource {
-     
         let editActions = [EditAction(action: .custom("Delete"),
                                       title: NSLocalizedString("X", comment: ""),
                                       color: UIColor.red),
@@ -132,15 +131,15 @@ class PersonalViewController: KeyboardObservableViewController {
                                       color: Colors.DMChartButtonColor)]
 
         let watchList = WatchListDataSource(data: [], editActions: editActions)
-        watchList.selectors[.select] = {_, _, _ in
+        watchList.selectors[.select] = { _, _, _ in
         }
         
-        watchList.selectors[.custom("Delete")] = { _, _, model in
+        watchList.selectors[.custom("Delete")] = {[unowned self] _, _, model in
             self.delete(model)
         }
         
-        watchList.selectors[.custom("Chart")] = { _, _, model in
-            self.chart(model.ticker)
+        watchList.selectors[.custom("Chart")] = {[unowned self] _, _, model in
+            self.chart(model.chart())
         }
         
         return watchList
@@ -148,7 +147,7 @@ class PersonalViewController: KeyboardObservableViewController {
     
     fileprivate func delete(_ signal: SignalModel) {
         self.showActivityIndicator()
-        SignalsDataProvider.default().delete(signal) { success, error in
+        SignalsDataProvider.default().delete(signal) {[unowned self] success, error in
             self.dismissActivityIndicator()
             if success {
                 self.reloadData()
@@ -160,10 +159,10 @@ class PersonalViewController: KeyboardObservableViewController {
     
     fileprivate func portfolioSection() -> PortfolioDataSource {
         let portfolio = PortfolioDataSource(user: nil, portfolio: nil)
-        portfolio.selectors[.custom("edit")] = {_, _, _ in
+        portfolio.selectors[.custom("edit")] = {[unowned self] _, _, _ in
             self.editProfile()
         }
-        portfolio.selectors[.custom("message")] = {_, _, _ in
+        portfolio.selectors[.custom("message")] = {[unowned self] _, _, _ in
             self.onMessage()
         }
         return portfolio
@@ -171,9 +170,9 @@ class PersonalViewController: KeyboardObservableViewController {
     
     fileprivate func searchSection() -> TableViewDataSource {
         let searchController = SearchController()
-        searchController.textDidUpdate = { text in
+        searchController.textDidUpdate = {[unowned self] text in
             self.showActivityIndicator(searchController)
-            SignalsDataProvider.default().search(by: text) { items, error in
+            SignalsDataProvider.default().search(by: text) {[unowned self] items, error in
                 self.dismissActivityIndicator(searchController)
                 if let items = items {
                     searchController.data = items
@@ -223,11 +222,11 @@ class PersonalViewController: KeyboardObservableViewController {
                                       title: NSLocalizedString("CHART", comment: ""),
                                       color: Colors.DMChartButtonColor)]
         let transactions = TransactionsDataSource(data: [], editActions: editActions)
-        transactions.selectors[.custom("Sell")] = { _, _, model in
+        transactions.selectors[.custom("Sell")] = {[unowned self] _, _, model in
            self.sellCompany(model)
         }
-        transactions.selectors[.custom("Chart")] = { _, _, model in
-            self.chart(model.ticker)
+        transactions.selectors[.custom("Chart")] = {[unowned self] _, _, model in
+            self.chart(model.chart())
         }
         return transactions
     }

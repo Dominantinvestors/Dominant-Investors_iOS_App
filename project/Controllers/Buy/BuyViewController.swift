@@ -5,7 +5,7 @@ class BuyViewController: KeyboardObservableViewController {
     var company: Company!
     
     var buyDataSource: EditableDataSource!
-    private var priceDataSource: EditableDataSource!
+    var priceDataSource: EditableDataSource!
     private var costDataSource: EditableDataSource!
     
     private var dataSource: TableViewDataSourceShim? = nil {
@@ -54,7 +54,7 @@ class BuyViewController: KeyboardObservableViewController {
     
     func onSubmit() {
         showActivityIndicator()
-        PortfolioDataProvider.default().buy(buyDataSource.text, company) { success, error in
+        PortfolioDataProvider.default().buy(priceDataSource.text, buyDataSource.text, company) { success, error in
             self.dismissActivityIndicator()
             if success {
                 self.navigationController?.popToRootViewController(animated: true)

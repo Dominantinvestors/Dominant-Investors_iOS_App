@@ -61,6 +61,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         loadChart()
+        updateRate()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -84,11 +85,21 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
     }
     
     // MARK: Private
+    private func updateRate() {
+        self.showActivityIndicator()
+        CompanyDataProvider.default().rate(company) { rate, error in
+            self.dismissActivityIndicator()
+            if let rate = rate {
+                self.priceLabel.attributedText = rate.rate.toMoneyStyle()
+                self.tableView.reloadData()
+            } else {
+                self.showAlertWith(message: error)
+            }
+        }
+    }
     
     private func setupUI() {
         infoLabel.text = company.description
-        priceLabel.attributedText = company.rate.toMoneyStyle()
-        
         isGrowingIcon.image = company.isGrowing ?
             UIImage(named: "grouving_green") :
             UIImage(named: "grouving_red")
@@ -250,7 +261,7 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
     @IBAction func tradingViewChartButtonPressed(sender: UIButton) {
         let storyboard = UIStoryboard.init(name: "OutsourceCharts", bundle: nil)
         if let chartVC = storyboard.instantiateViewController(withIdentifier: "DMTradingViewChartViewController") as? DMTradingViewChartViewController {
-            chartVC.ticker = company.ticker
+            chartVC.ticker = company.isCrypto() ? company.ticker + "USD" : company.ticker
             self.navigationController?.pushViewController(chartVC, animated: true)
         }
     }

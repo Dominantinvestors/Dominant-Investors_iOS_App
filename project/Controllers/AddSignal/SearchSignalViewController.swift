@@ -22,7 +22,7 @@ class SearchSignalViewController: KeyboardObservableViewController, UISearchBarD
         let search = SearchDataSource(data: [NSLocalizedString("Enter the ticket", comment: "")], delegate: self)
         items = SearchControllerDataSource(data: [])
         
-        items.selectors[.select] = { _, _, item in
+        items.selectors[.select] = { [unowned self]  _, _, item in
             if let company = item as? SearchAssetModel {
                 self.addCompany(company)
             }
@@ -40,7 +40,7 @@ class SearchSignalViewController: KeyboardObservableViewController, UISearchBarD
     
     fileprivate func textDidUpdate(_ text: String) {
         showActivityIndicator()
-        SignalsDataProvider.default().search(by: text) { items, error in
+        SignalsDataProvider.default().search(by: text) { [unowned self] items, error in
             self.dismissActivityIndicator()
             
             if let items = items {

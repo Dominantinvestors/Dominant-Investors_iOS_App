@@ -21,6 +21,8 @@ class DMRatingTableViewCell: UITableViewCell {
         } else {
             self.backgroundColor = UIColor.clear
         }
+        
+        self.positionLabel.text = "\(model.index)"
     }
 
 }

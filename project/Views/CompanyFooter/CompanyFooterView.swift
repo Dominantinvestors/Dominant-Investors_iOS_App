@@ -28,7 +28,7 @@ class CompanyFooterView: UITableViewCell {
     }
     
     func setCompany(_ company: CompanyModel) {
-        buyPointLabel.text = company.rate.replacingOccurrences(of: ",", with: ".") + Values.Currency
+        buyPointLabel.text = company.buyPoint.replacingOccurrences(of: ",", with: ".") + Values.Currency
         growthPotential.text = "\(company.growthPotential)" + "%"
         stopLoss.text = company.stopLoss.replacingOccurrences(of: ",", with: ".") + Values.Currency
         targetPrice.text = company.targetPrice + Values.Currency

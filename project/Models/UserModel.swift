@@ -24,7 +24,7 @@ class UserModel: Mappable, User {
     var lastName: String = ""
     var followers: Int = 0
     var rating: Int = 0
-    
+
     required init?(map: Map) { }
 
     func mapping(map: Map) {
@@ -47,6 +47,7 @@ class InvestorModel: Mappable, User {
     var followers: Int = 0
     var rating: Int = 0
     var isFollowed: Bool = false
+    var index: Int = 0
 
     required init?(map: Map) { }
     
@@ -58,5 +59,6 @@ class InvestorModel: Mappable, User {
         followers <- map["followers_count"]
         rating <- map["rating"]
         isFollowed <- map["is_followed"]
+        index <- map["rating_index"]
     }
 }

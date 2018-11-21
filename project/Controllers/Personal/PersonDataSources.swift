@@ -55,9 +55,9 @@ class WatchListDataSource:
     func configurateCell(_ cell: WatchListTableViewCell, item: SignalModel, at indexPath: IndexPath) {
         cell.ticker.text = item.ticker
         cell.mktPrice.text = item.mktPrice
-        cell.buyPoint.text = String(format: "%.2f", Double(item.buyPoint) ?? 0.0)
-        cell.targetPrice.text = String(format: "%.2f", Double(item.targetPrice) ?? 0.0)
-        cell.stopLoss.text = String(format: "%.2f", Double(item.stopLoss) ?? 0.0)
+        cell.buyPoint.text = item.buyPoint
+        cell.targetPrice.text = item.targetPrice
+        cell.stopLoss.text = item.stopLoss
 
         if item.investmentIdea != nil {
             cell.profile.image = UIImage(named: "Logo")
@@ -96,7 +96,6 @@ class PortfolioDataSource:
         
         if let user = item.0 {
             cell.name.text = user.fullName()
-            cell.rating.text = "\(user.rating) Rating"
             cell.followers.text = "\(user.followers) followers"
         }
         
@@ -111,6 +110,7 @@ class PortfolioDataSource:
             cell.power.text = portfolio.buyingPower + Values.Currency
             cell.total.text = portfolio.total + Values.Currency
             cell.results.text = portfolio.profit + "%"
+            cell.rating.text = "\(portfolio.index) Rating"
         }
         cell.valueTitle.text = NSLocalizedString("PORTFOLIO VALUE", comment: "")
         cell.powerTitle.text = NSLocalizedString("BUYING POWER", comment: "")
@@ -152,7 +152,7 @@ class TransactionsDataSource:
         cell.ticker.text = item.ticker
         cell.amount.text = item.amount
         cell.buyPoint.text = item.buyPoint
-        cell.mktPrice.text = item.rate
+        cell.mktPrice.text = item.mktPrice
 
         if Double(item.profitPoints)! >= 0.0 {
             cell.profitPoints.setGreen()
@@ -160,14 +160,14 @@ class TransactionsDataSource:
             cell.profitPoints.setRed()
         }
         
-        if (Double(item.buyPoint)! - Double(item.rate)!) <= 0.0 {
+        if (Double(item.buyPoint)! - Double(item.mktPrice)!) <= 0.0 {
             cell.mktPrice.setGreen()
         } else {
             cell.mktPrice.setRed()
         }
         
         cell.profitPoints.text = item.profitPoints
-        cell.profitValue.text = item.profitValue
+        cell.profitValue.text = String(format:"%.2f", Double(item.profitValue)!)
     }
 }
 
@@ -179,7 +179,7 @@ struct SearchDataSource:
 {
     var data: [String]
     
-    let delegate: UISearchBarDelegate
+    weak var delegate: UISearchBarDelegate?
     
     func configurateCell(_ cell: SearchTableViewCell, item: String, at indexPath: IndexPath) {
         cell.searchBar.placeholder = item

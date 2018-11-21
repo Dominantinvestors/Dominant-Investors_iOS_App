@@ -94,7 +94,7 @@ class SearchController: UIView {
 
         shim = TableViewDataSourceShim(self.dataSource)
         
-        self.dataSource.selectors[.select] = { _, _, item in
+        self.dataSource.selectors[.select] = { [unowned self] _, _, item in
             self.selectedItem?(item)
         }
     }

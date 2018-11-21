@@ -45,8 +45,8 @@ struct PortfolioDataProvider: Repository, Syncable {
         }
     }
     
-    func buy(_ amount: String, _ company: Company, completion: @escaping (Bool, String?) -> Void) {
-        send(request: company.buy(amount)).responseJSON { response in
+    func buy(_ rate: String, _ amount: String, _ company: Company, completion: @escaping (Bool, String?) -> Void) {
+        send(request: company.buy(rate, amount)).responseJSON { response in
             switch self.handler.handle(response) {
             case .success(_):
                 completion(true, nil)
@@ -56,8 +56,8 @@ struct PortfolioDataProvider: Repository, Syncable {
         }
     }
     
-    func sell(_ amount: String, _ company: Company, completion: @escaping (Bool, String?) -> Void) {
-        send(request: company.sell(amount)).responseJSON { response in
+    func sell(_ rate: String, _ amount: String, _ company: Company, completion: @escaping (Bool, String?) -> Void) {
+        send(request: company.sell(rate, amount)).responseJSON { response in
             switch self.handler.handle(response) {
             case .success(_):
                 completion(true, nil)
