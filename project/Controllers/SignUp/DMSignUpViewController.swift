@@ -61,6 +61,11 @@ class DMSignUpViewController: DMViewController, UITextFieldDelegate {
         self.confirmPassword.delegate = self
     }
     
+    fileprivate func successedSignUp() {
+        let terms = storyboard![.TermsAndConditions]
+        self.navigationController?.pushViewController(terms, animated: true)
+    }
+    
     private func handleSignUp () {
 
         if (self.password.text!.count < 8) {
@@ -92,7 +97,7 @@ class DMSignUpViewController: DMViewController, UITextFieldDelegate {
         { (success, error) in
                 self.dismissActivityIndicator()
                 if (success) {
-                    self.dismiss(animated: true, completion: nil)
+                    self.successedSignUp()
                 } else if let error = error {
                     self.showAlertWith(title: NSLocalizedString("Sign up error", comment: ""),
                                        message: error,

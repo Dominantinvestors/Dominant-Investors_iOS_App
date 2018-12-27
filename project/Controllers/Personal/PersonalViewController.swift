@@ -60,6 +60,53 @@ class PersonalViewController: KeyboardObservableViewController {
     }
     
     private func onMessage() {
+        let vc = storyboard![.Conversations]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    fileprivate func buyCompany(_ company: Company) {
+        let buy: BuyViewController = storyboard![.Buy]
+        buy.company = company
+        self.navigationController?.pushViewController(buy, animated: true)
+    }
+    
+    fileprivate func sellCompany(_ company: TransactionModel) {
+        let sell: SellViewController = storyboard![.Sell]
+        sell.maxAmount = company.amount
+        sell.company = company
+        self.navigationController?.pushViewController(sell, animated: true)
+    }
+    
+    fileprivate func chart(_ company: Company) {
+        showActivityIndicator()
+        CompanyDataProvider.default().chart(company) { widget, error in
+            self.dismissActivityIndicator()
+            if let widget = widget {
+                self.showCompanyWidget(company, widget: widget.html)
+            }
+        }
+    }
+    
+    fileprivate func moreInfo(_ company: Company) {
+        showActivityIndicator()
+        CompanyDataProvider.default().more(company) { widget, error in
+            self.dismissActivityIndicator()
+            if let widget = widget {
+                self.showCompanyWidget(company, widget: widget.html)
+            }
+        }
+    }
+    
+    fileprivate func delete(_ signal: SignalModel) {
+        self.showActivityIndicator()
+        SignalsDataProvider.default().delete(signal) {[unowned self] success, error in
+            self.dismissActivityIndicator()
+            if success {
+                self.reloadData()
+            } else {
+                self.showAlertWith(message: error)
+            }
+        }
     }
     
     fileprivate func reloadData() {
@@ -89,6 +136,11 @@ class PersonalViewController: KeyboardObservableViewController {
             } else {
                 self.showAlertWith(message: error)
             }
+        }
+        
+        ConversationsDataProvider.default().unread { count, _ in
+            self.portfolio.unread = count
+            self.tableView.reloadData()
         }
     }
     
@@ -139,22 +191,10 @@ class PersonalViewController: KeyboardObservableViewController {
         }
         
         watchList.selectors[.custom("Chart")] = {[unowned self] _, _, model in
-            self.chart(model.chart())
+            self.chart(model)
         }
         
         return watchList
-    }
-    
-    fileprivate func delete(_ signal: SignalModel) {
-        self.showActivityIndicator()
-        SignalsDataProvider.default().delete(signal) {[unowned self] success, error in
-            self.dismissActivityIndicator()
-            if success {
-                self.reloadData()
-            } else {
-                self.showAlertWith(message: error)
-            }
-        }
     }
     
     fileprivate func portfolioSection() -> PortfolioDataSource {
@@ -168,18 +208,22 @@ class PersonalViewController: KeyboardObservableViewController {
         return portfolio
     }
     
+    fileprivate func searchBy(_ text: String, _ searchController: SearchController ) {
+        self.showActivityIndicator(searchController)
+        SignalsDataProvider.default().search(by: text) {[unowned self] items, error in
+            self.dismissActivityIndicator(searchController)
+            if let items = items {
+                searchController.data = items
+            } else {
+                self.showAlertWith(message: error)
+            }
+        }
+    }
+    
     fileprivate func searchSection() -> TableViewDataSource {
         let searchController = SearchController()
         searchController.textDidUpdate = {[unowned self] text in
-            self.showActivityIndicator(searchController)
-            SignalsDataProvider.default().search(by: text) {[unowned self] items, error in
-                self.dismissActivityIndicator(searchController)
-                if let items = items {
-                    searchController.data = items
-                } else {
-                    self.showAlertWith(message: error)
-                }
-            }
+            self.searchBy(text, searchController)
         }
         
         searchController.selectedItem = { item in
@@ -187,31 +231,14 @@ class PersonalViewController: KeyboardObservableViewController {
                 self.buyCompany(company)
             }
         }
-  
         return SearchDataSource(data: [NSLocalizedString("Enter the ticket", comment: "")], delegate: searchController)
     }
     
-    fileprivate func buyCompany(_ company: Company) {
-        let buy: BuyViewController = storyboard![.Buy]
-        buy.company = company
-        self.navigationController?.pushViewController(buy, animated: true)
-    }
-    
-    fileprivate func sellCompany(_ company: TransactionModel) {
-        let sell: SellViewController = storyboard![.Sell]
-        sell.maxAmount = company.amount
-        sell.company = company
-        self.navigationController?.pushViewController(sell, animated: true)
-    }
-    
-    fileprivate func chart(_ ticker: String) {
-        let storyboard = UIStoryboard.init(name: "OutsourceCharts", bundle: nil)
-        if let chartVC = storyboard.instantiateViewController(withIdentifier: "DMTradingViewChartViewController") as? DMTradingViewChartViewController {
-            chartVC.ticker = ticker
-            self.navigationController?.pushViewController(chartVC, animated: true)
-        }
-        
-        setStatusBarBackgroundColor(.white)
+    fileprivate func showCompanyWidget(_ company: Company, widget: String) {
+        let add: MoreViewController = UIStoryboard.init(name: "Screener", bundle: nil)[.More]
+        add.HTMLString = widget
+        add.ticker = company.ticker
+        self.navigationController?.pushViewController(add, animated: true)
     }
     
     fileprivate func transactionsSection() -> TransactionsDataSource {
@@ -220,13 +247,20 @@ class PersonalViewController: KeyboardObservableViewController {
                                       color: UIColor.red),
                            EditAction(action: .custom("Chart"),
                                       title: NSLocalizedString("CHART", comment: ""),
-                                      color: Colors.DMChartButtonColor)]
+                                      color: Colors.DMChartButtonColor),
+                           EditAction(action: .custom("More"),
+                                      title: NSLocalizedString("MORE", comment: ""),
+                                      color: UIColor.lightGray)]
+        
         let transactions = TransactionsDataSource(data: [], editActions: editActions)
         transactions.selectors[.custom("Sell")] = {[unowned self] _, _, model in
            self.sellCompany(model)
         }
         transactions.selectors[.custom("Chart")] = {[unowned self] _, _, model in
-            self.chart(model.chart())
+            self.chart(model)
+        }
+        transactions.selectors[.custom("More")] = {[unowned self] _, _, model in
+            self.moreInfo(model)
         }
         return transactions
     }

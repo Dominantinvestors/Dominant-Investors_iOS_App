@@ -55,6 +55,8 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         footerView.tradingViewButton.addTarget(self, action: #selector(tradingViewChartButtonPressed(sender:)), for: .touchUpInside)
         footerView.addToWatchlistButton.addTarget(self, action: #selector(addToWatchlist(sender:)), for: .touchUpInside)
 
+          footerView.comentsButton.addTarget(self, action: #selector(commentsButtonPressed(sender:)), for: .touchUpInside)
+        
         _ = self.chartContainerHeight.setMultiplier(multiplier: 0.25)
     }
     
@@ -258,11 +260,22 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         }
     }
     
+    @IBAction func commentsButtonPressed(sender: UIButton) {
+        let chat = CompanyChatViewController()
+        chat.company = company
+        navigationController?.pushViewController(chat, animated: true)
+    }
+    
     @IBAction func tradingViewChartButtonPressed(sender: UIButton) {
-        let storyboard = UIStoryboard.init(name: "OutsourceCharts", bundle: nil)
-        if let chartVC = storyboard.instantiateViewController(withIdentifier: "DMTradingViewChartViewController") as? DMTradingViewChartViewController {
-            chartVC.ticker = company.isCrypto() ? company.ticker + "USD" : company.ticker
-            self.navigationController?.pushViewController(chartVC, animated: true)
+        showActivityIndicator()
+        CompanyDataProvider.default().chart(company) { widget, error in
+            self.dismissActivityIndicator()
+            if let widget = widget {
+                let add: MoreViewController = UIStoryboard.init(name: "Screener", bundle: nil)[.More]
+                add.HTMLString = widget.html
+                add.ticker = self.company.ticker
+                self.navigationController?.pushViewController(add, animated: true)
+            }
         }
     }
     

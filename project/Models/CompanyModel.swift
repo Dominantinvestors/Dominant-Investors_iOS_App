@@ -84,6 +84,17 @@ class Rate: Mappable {
     }
 }
 
+class Widget: Mappable {
+    
+    var html: String = ""
+    
+    required init?(map: Map) { }
+    
+    func mapping(map: Map) {
+        html <- map["widget_code"]
+    }
+}
+
 class StatsModel: Mappable {
 
     var id: Int = 0

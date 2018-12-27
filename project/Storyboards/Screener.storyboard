@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mFe-bi-yPP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mFe-bi-yPP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -147,6 +147,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A99-gn-DAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1274" y="571"/>
+        </scene>
+        <!--More View Controller-->
+        <scene sceneID="Uvb-g9-kXK">
+            <objects>
+                <viewController restorationIdentifier="More" storyboardIdentifier="More" hidesBottomBarWhenPushed="YES" id="4Ak-o3-vil" customClass="MoreViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CLF-IL-3ip">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleAspectFit" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86l-EM-z2q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="687"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="86l-EM-z2q" firstAttribute="leading" secondItem="Qrd-io-ok0" secondAttribute="leading" id="0jw-Ba-fHe"/>
+                            <constraint firstItem="Qrd-io-ok0" firstAttribute="trailing" secondItem="86l-EM-z2q" secondAttribute="trailing" id="6mu-2T-Q0a"/>
+                            <constraint firstItem="86l-EM-z2q" firstAttribute="top" secondItem="CLF-IL-3ip" secondAttribute="top" id="Aao-rB-0FF"/>
+                            <constraint firstAttribute="bottom" secondItem="86l-EM-z2q" secondAttribute="bottom" constant="-20" id="aBx-I6-wT6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qrd-io-ok0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QaH-X5-f58"/>
+                    <connections>
+                        <outlet property="webView" destination="86l-EM-z2q" id="FgB-St-2l3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pif-4w-Ctf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-561" y="612"/>
         </scene>
         <!--Crypto Screener View Controller-->
         <scene sceneID="fTp-Nx-wDi">

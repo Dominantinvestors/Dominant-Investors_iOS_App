@@ -29,7 +29,7 @@ class UserModel: Mappable, User {
 
     func mapping(map: Map) {
         id <- map["id"]
-        avatar <- map["avatar"]
+        avatar <- map["avatar_thumbs.medium"]
         email <- map["email"]
         firstName <- map["first_name"]
         lastName <- map["last_name"]
@@ -48,6 +48,7 @@ class InvestorModel: Mappable, User {
     var rating: Int = 0
     var isFollowed: Bool = false
     var index: Int = 0
+    var coversetionID: Int = 0
 
     required init?(map: Map) { }
     
@@ -60,5 +61,6 @@ class InvestorModel: Mappable, User {
         rating <- map["rating"]
         isFollowed <- map["is_followed"]
         index <- map["rating_index"]
+        coversetionID <- map["conversation_id"]
     }
 }

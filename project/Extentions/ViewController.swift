@@ -2,6 +2,9 @@ import UIKit
 import MBProgressHUD
 
 class DMViewController: UIViewController {
+}
+
+extension  UIViewController {
     
     open func showAlertWith(title: String = NSLocalizedString("Error!!!", comment: ""), message: String?, cancelButton: Bool = false) {
         let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)

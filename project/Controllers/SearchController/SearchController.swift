@@ -183,6 +183,8 @@ class SearchControllerDataSource:
     func configurateCell(_ cell: StringTableViewCell, item: SearchItem, at indexPath: IndexPath) {
         cell.titleLabel.text = item.title
         cell.subtitleLabel.text = item.subtitle
-
+        cell.selector = { [weak self] in
+            self?.selectors[.select]?(cell, indexPath, item)
+        }
     }
 }

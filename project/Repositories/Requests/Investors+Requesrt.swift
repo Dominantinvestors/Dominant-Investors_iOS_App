@@ -8,7 +8,7 @@ extension InvestorModel {
         return URLEncodingRequestBuilder(path: "/investors/", parameters: parameters)
     }
     
-    func get() -> RequestProvider {
+    static func get(by id: Int) -> RequestProvider {
         return URLEncodingRequestBuilder(path: "/investors/\(id)/")
     }
     

@@ -40,6 +40,7 @@ class RatingsDetailsViewController: DMViewController {
             self.unfollow()
         }
         details.selectors[.custom("message")] = {_, _, _ in
+            self.message()
         }
         
         let assets = TransactionsDataSource(data: [])
@@ -56,6 +57,12 @@ class RatingsDetailsViewController: DMViewController {
         
         self.dataSource = TableViewDataSourceShim(ComposedDataSource([details, assets]))
         self.tableView.reloadData()
+    }
+    
+    private func message() {
+        let chat = InvestorsChatViewController()
+        chat.investor = investor
+        navigationController?.pushViewController(chat, animated: true)
     }
     
     private func follow() {
@@ -84,7 +91,7 @@ class RatingsDetailsViewController: DMViewController {
     
     private func update() {
         showActivityIndicator()
-        InvestorsDataProvider.default().get(investor) { investor, error in
+        InvestorsDataProvider.default().get(by: investor.id) { investor, error in
             self.dismissActivityIndicator()
             if let investor = investor {
                 self.investor = investor
@@ -121,6 +128,12 @@ class InvestorsDetailsDataSource:
             cell.follow.isHidden = false
             cell.unfollow.isHidden = true
         }
+        
+        let user: UserModel = ServiceLocator.shared.getService()
+        if user.id == item.id {
+            cell.message.isHidden = true
+        }
+        
         cell.follow.actionHandle(.touchUpInside) {
             self.selectors[.custom("follow")]?(cell, indexPath, item)
         }

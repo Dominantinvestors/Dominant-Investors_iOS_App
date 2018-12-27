@@ -26,3 +26,29 @@ class DMScreenerViewController: DMScreenerTypeViewController {
     }
         
 }
+
+class MoreViewController: DMScreenerTypeViewController {
+    
+    var ticker: String!
+    var HTMLString: String!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = ticker
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTradingViewScreener()
+    }
+    
+    fileprivate func loadTradingViewScreener() {
+        self.showActivityIndicator()
+        self.webView.delegate = self
+        self.webView.loadHTMLString(HTMLString, baseURL: nil)
+        self.webView.sizeToFit()
+        self.webView.scrollView.bounces = false
+        self.tickerLoaded = true
+    }
+    
+}

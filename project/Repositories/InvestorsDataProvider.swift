@@ -23,8 +23,8 @@ struct InvestorsDataProvider: Repository, Syncable {
         }
     }
     
-    func get(_ investor: InvestorModel, completion: @escaping (InvestorModel?, String?) -> Void) {
-        send(request: investor.get()).responseObject { (response: DataResponse<InvestorModel>) -> Void in
+    func get(by id: Int, completion: @escaping (InvestorModel?, String?) -> Void) {
+        send(request: InvestorModel.get(by: id)).responseObject { (response: DataResponse<InvestorModel>) -> Void in
             switch self.handler.handle(response) {
             case .success(let result):
                 completion(result, nil)

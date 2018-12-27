@@ -29,6 +29,28 @@
 		CE09A0F4216E1224009C7A10 /* CompanyFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE09A0F2216E1224009C7A10 /* CompanyFooterView.xib */; };
 		CE09A0F6216E14E1009C7A10 /* Dominant+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09A0F5216E14E1009C7A10 /* Dominant+View.swift */; };
 		CE09A0F7216E14E1009C7A10 /* Dominant+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09A0F5216E14E1009C7A10 /* Dominant+View.swift */; };
+		CE0F543E21D37B8800AEFBC1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F543C21D37B8800AEFBC1 /* ChatViewController.swift */; };
+		CE0F543F21D37B8800AEFBC1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F543C21D37B8800AEFBC1 /* ChatViewController.swift */; };
+		CE0F544021D37B8800AEFBC1 /* ChatDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F543D21D37B8800AEFBC1 /* ChatDataSources.swift */; };
+		CE0F544121D37B8800AEFBC1 /* ChatDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F543D21D37B8800AEFBC1 /* ChatDataSources.swift */; };
+		CE0F544321D37D5500AEFBC1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F544221D37D5500AEFBC1 /* Message.swift */; };
+		CE0F544421D37D5500AEFBC1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F544221D37D5500AEFBC1 /* Message.swift */; };
+		CE0F544621D3858400AEFBC1 /* ConversationsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F544521D3858400AEFBC1 /* ConversationsDataProvider.swift */; };
+		CE0F544721D3858400AEFBC1 /* ConversationsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F544521D3858400AEFBC1 /* ConversationsDataProvider.swift */; };
+		CE0F544921D3871100AEFBC1 /* Conversations+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F544821D3871100AEFBC1 /* Conversations+Requests.swift */; };
+		CE0F544A21D3871100AEFBC1 /* Conversations+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F544821D3871100AEFBC1 /* Conversations+Requests.swift */; };
+		CE0F544F21D3B85900AEFBC1 /* InvestorsChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F544E21D3B85900AEFBC1 /* InvestorsChatViewController.swift */; };
+		CE0F545021D3B85900AEFBC1 /* InvestorsChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F544E21D3B85900AEFBC1 /* InvestorsChatViewController.swift */; };
+		CE0F545221D3B86700AEFBC1 /* CompanyChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F545121D3B86700AEFBC1 /* CompanyChatViewController.swift */; };
+		CE0F545321D3B86700AEFBC1 /* CompanyChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F545121D3B86700AEFBC1 /* CompanyChatViewController.swift */; };
+		CE0F545521D4D43F00AEFBC1 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F545421D4D43F00AEFBC1 /* ConversationsViewController.swift */; };
+		CE0F545621D4D43F00AEFBC1 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F545421D4D43F00AEFBC1 /* ConversationsViewController.swift */; };
+		CE0F545821D4D72C00AEFBC1 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F545721D4D72C00AEFBC1 /* Conversation.swift */; };
+		CE0F545921D4D72C00AEFBC1 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F545721D4D72C00AEFBC1 /* Conversation.swift */; };
+		CE0F545C21D4D9F400AEFBC1 /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F545A21D4D9F400AEFBC1 /* ConversationTableViewCell.swift */; };
+		CE0F545D21D4D9F400AEFBC1 /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F545A21D4D9F400AEFBC1 /* ConversationTableViewCell.swift */; };
+		CE0F545E21D4D9F400AEFBC1 /* ConversationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0F545B21D4D9F400AEFBC1 /* ConversationTableViewCell.xib */; };
+		CE0F545F21D4D9F400AEFBC1 /* ConversationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0F545B21D4D9F400AEFBC1 /* ConversationTableViewCell.xib */; };
 		CE449B9C215516100091940E /* AddSignalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449B9B215516100091940E /* AddSignalViewController.swift */; };
 		CE449B9D215516100091940E /* AddSignalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449B9B215516100091940E /* AddSignalViewController.swift */; };
 		CE449B9F2158D5000091940E /* Company+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449B9E2158D5000091940E /* Company+Request.swift */; };
@@ -296,6 +318,17 @@
 		CE09A0EF216E1218009C7A10 /* CompanyFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyFooterView.swift; sourceTree = "<group>"; };
 		CE09A0F2216E1224009C7A10 /* CompanyFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyFooterView.xib; sourceTree = "<group>"; };
 		CE09A0F5216E14E1009C7A10 /* Dominant+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dominant+View.swift"; sourceTree = "<group>"; };
+		CE0F543C21D37B8800AEFBC1 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		CE0F543D21D37B8800AEFBC1 /* ChatDataSources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDataSources.swift; sourceTree = "<group>"; };
+		CE0F544221D37D5500AEFBC1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		CE0F544521D3858400AEFBC1 /* ConversationsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsDataProvider.swift; sourceTree = "<group>"; };
+		CE0F544821D3871100AEFBC1 /* Conversations+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Conversations+Requests.swift"; sourceTree = "<group>"; };
+		CE0F544E21D3B85900AEFBC1 /* InvestorsChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorsChatViewController.swift; sourceTree = "<group>"; };
+		CE0F545121D3B86700AEFBC1 /* CompanyChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyChatViewController.swift; sourceTree = "<group>"; };
+		CE0F545421D4D43F00AEFBC1 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		CE0F545721D4D72C00AEFBC1 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		CE0F545A21D4D9F400AEFBC1 /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
+		CE0F545B21D4D9F400AEFBC1 /* ConversationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationTableViewCell.xib; sourceTree = "<group>"; };
 		CE449B9B215516100091940E /* AddSignalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSignalViewController.swift; sourceTree = "<group>"; };
 		CE449B9E2158D5000091940E /* Company+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+Request.swift"; sourceTree = "<group>"; };
 		CE449BA12158DE3F0091940E /* SearchSignalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSignalViewController.swift; sourceTree = "<group>"; };
@@ -511,6 +544,18 @@
 			path = CompanyFooter;
 			sourceTree = "<group>";
 		};
+		CE0F543B21D37B7A00AEFBC1 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				CE0F543D21D37B8800AEFBC1 /* ChatDataSources.swift */,
+				CE0F543C21D37B8800AEFBC1 /* ChatViewController.swift */,
+				CE0F544E21D3B85900AEFBC1 /* InvestorsChatViewController.swift */,
+				CE0F545121D3B86700AEFBC1 /* CompanyChatViewController.swift */,
+				CE0F545421D4D43F00AEFBC1 /* ConversationsViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		CE449B9A215515F80091940E /* AddSignal */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,6 +602,7 @@
 		CE735CAD21523B2300E2849E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE0F543B21D37B7A00AEFBC1 /* Chat */,
 				CE897B9A2192DB51006A4069 /* Sell */,
 				CE449B9A215515F80091940E /* AddSignal */,
 				CE735CAE21523B2300E2849E /* Personal */,
@@ -717,6 +763,7 @@
 				CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */,
 				CE735CF521523B2300E2849E /* SignalsDataProvider.swift */,
 				CEE89E7E2179C933006B8F2B /* CompanyDataProvider.swift */,
+				CE0F544521D3858400AEFBC1 /* ConversationsDataProvider.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -730,6 +777,7 @@
 				CE735CF221523B2300E2849E /* Portfolio+Request.swift */,
 				CE735CF321523B2300E2849E /* Investors+Requesrt.swift */,
 				CE449B9E2158D5000091940E /* Company+Request.swift */,
+				CE0F544821D3871100AEFBC1 /* Conversations+Requests.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -743,6 +791,8 @@
 				CE735EBA21523CF200E2849E /* PortfolioModel.swift */,
 				CE735EBB21523CF200E2849E /* UserModel.swift */,
 				CEB880192181CBAF006DFD9F /* MonayTransformator.swift */,
+				CE0F544221D37D5500AEFBC1 /* Message.swift */,
+				CE0F545721D4D72C00AEFBC1 /* Conversation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -763,6 +813,8 @@
 				CE735EDD21523FA000E2849E /* DMStockInfoCell.xib */,
 				CE735EE721523FA000E2849E /* FXBlurView.h */,
 				CE735EEF21523FA000E2849E /* FXBlurView.m */,
+				CE0F545A21D4D9F400AEFBC1 /* ConversationTableViewCell.swift */,
+				CE0F545B21D4D9F400AEFBC1 /* ConversationTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -898,7 +950,7 @@
 				TargetAttributes = {
 					CE04D7A0215231CE00AD3D4D = {
 						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -938,6 +990,7 @@
 				CE735F382152653600E2849E /* MuseoCyrl900.otf in Resources */,
 				CE09A0E6216DFA29009C7A10 /* StatsTableViewCell.xib in Resources */,
 				CE735E5821523B2400E2849E /* WatchListTableViewCell.xib in Resources */,
+				CE0F545E21D4D9F400AEFBC1 /* ConversationTableViewCell.xib in Resources */,
 				CE735F342152653600E2849E /* MuseoCyrl100.otf in Resources */,
 				CE735F28215247AB00E2849E /* Launch Screen.storyboard in Resources */,
 				CE09A0F3216E1224009C7A10 /* CompanyFooterView.xib in Resources */,
@@ -980,6 +1033,7 @@
 				CE735BE221523B1300E2849E /* Analytics.storyboard in Resources */,
 				CE735F352152653600E2849E /* MuseoCyrl100.otf in Resources */,
 				CE09A0E7216DFA29009C7A10 /* StatsTableViewCell.xib in Resources */,
+				CE0F545F21D4D9F400AEFBC1 /* ConversationTableViewCell.xib in Resources */,
 				CE735F29215247AB00E2849E /* Launch Screen.storyboard in Resources */,
 				CE735F372152653600E2849E /* MuseoCyrl300.otf in Resources */,
 				CE09A0F4216E1224009C7A10 /* CompanyFooterView.xib in Resources */,
@@ -1028,6 +1082,7 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1044,6 +1099,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1070,6 +1126,7 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1086,6 +1143,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1134,13 +1192,9 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 			);
 			name = Build;
-			outputFileListPaths = (
-			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1152,13 +1206,9 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 			);
 			name = Build;
-			outputFileListPaths = (
-			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1179,6 +1229,7 @@
 				CEE89E5721761F4B006B8F2B /* RatingsDetailsViewController.swift in Sources */,
 				CE735E6A21523B2400E2849E /* DMScreenerContainerViewController.swift in Sources */,
 				CE735F0421523FA000E2849E /* SegmentControll.swift in Sources */,
+				CE0F544321D37D5500AEFBC1 /* Message.swift in Sources */,
 				CE735E6C21523B2400E2849E /* DMStockDetailViewController.swift in Sources */,
 				CE735D1021523B2400E2849E /* EditableSectionDataSource.swift in Sources */,
 				CE735D0421523B2400E2849E /* TableViewComposedDataSource.swift in Sources */,
@@ -1197,6 +1248,7 @@
 				CE735E9421523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */,
 				CE735ED021523CF200E2849E /* UserModel.swift in Sources */,
 				CE449BAB215A1F830091940E /* Dominant+String.swift in Sources */,
+				CE0F545221D3B86700AEFBC1 /* CompanyChatViewController.swift in Sources */,
 				CE735E7221523B2400E2849E /* DMTradingViewChartViewController.swift in Sources */,
 				CE09A048216B7425009C7A10 /* Dominant+ImageView.swift in Sources */,
 				CE735E9C21523B2400E2849E /* AccountsDataProvider.swift in Sources */,
@@ -1210,6 +1262,7 @@
 				CE735E9221523B2400E2849E /* DMAnalyticsViewController.swift in Sources */,
 				CEE89E5B2176201A006B8F2B /* InvestorProfileTableViewCell.swift in Sources */,
 				CE735E6E21523B2400E2849E /* DMSignUpViewController.swift in Sources */,
+				CE0F544921D3871100AEFBC1 /* Conversations+Requests.swift in Sources */,
 				CE735F1A21523FA000E2849E /* FXBlurView.m in Sources */,
 				CE735D0221523B2400E2849E /* EditableCellDataSource.swift in Sources */,
 				CE09A0F0216E1218009C7A10 /* CompanyFooterView.swift in Sources */,
@@ -1233,6 +1286,7 @@
 				CEE89E7C2179C8F9006B8F2B /* Repository.swift in Sources */,
 				CE735E5A21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */,
 				CE09A0E4216DFA29009C7A10 /* StatsTableViewCell.swift in Sources */,
+				CE0F543E21D37B8800AEFBC1 /* ChatViewController.swift in Sources */,
 				CE735F482152782800E2849E /* NavigationController.swift in Sources */,
 				CE735F4E2152782800E2849E /* KeyboardObservableViewController.swift in Sources */,
 				CE735F1D2152406B00E2849E /* SwiftStockKit.swift in Sources */,
@@ -1247,6 +1301,9 @@
 				CE735EA621523B2400E2849E /* User+Request.swift in Sources */,
 				CE735BD021523B0900E2849E /* Constants.swift in Sources */,
 				CE735E3E21523B2400E2849E /* PersonalViewController.swift in Sources */,
+				CE0F544F21D3B85900AEFBC1 /* InvestorsChatViewController.swift in Sources */,
+				CE0F545C21D4D9F400AEFBC1 /* ConversationTableViewCell.swift in Sources */,
+				CE0F544621D3858400AEFBC1 /* ConversationsDataProvider.swift in Sources */,
 				CE09A0EA216E0DF6009C7A10 /* TitleSection.swift in Sources */,
 				CE449B9F2158D5000091940E /* Company+Request.swift in Sources */,
 				CE735E5C21523B2400E2849E /* WatchListTableViewCell.swift in Sources */,
@@ -1255,14 +1312,17 @@
 				CE449B9C215516100091940E /* AddSignalViewController.swift in Sources */,
 				CEE89E4E2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */,
 				CE897B9C2192DEE4006A4069 /* SellViewController.swift in Sources */,
+				CE0F545821D4D72C00AEFBC1 /* Conversation.swift in Sources */,
 				CEB8801A2181CBAF006DFD9F /* MonayTransformator.swift in Sources */,
 				CE735EA021523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
+				CE0F545521D4D43F00AEFBC1 /* ConversationsViewController.swift in Sources */,
 				CE735EC621523CF200E2849E /* OffsetResponse.swift in Sources */,
 				CE735E4021523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
 				CE735F502152782800E2849E /* TabBarController.swift in Sources */,
 				CEE89E7F2179C933006B8F2B /* CompanyDataProvider.swift in Sources */,
 				CE735D0821523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */,
 				CE8854CA215CC8940093564B /* DrivewealthDataProvider.swift in Sources */,
+				CE0F544021D37B8800AEFBC1 /* ChatDataSources.swift in Sources */,
 				CE735F0221523FA000E2849E /* DMRatingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1278,6 +1338,7 @@
 				CEE89E5821761F4B006B8F2B /* RatingsDetailsViewController.swift in Sources */,
 				CE735E6B21523B2400E2849E /* DMScreenerContainerViewController.swift in Sources */,
 				CE735F0521523FA000E2849E /* SegmentControll.swift in Sources */,
+				CE0F544421D37D5500AEFBC1 /* Message.swift in Sources */,
 				CE735E6D21523B2400E2849E /* DMStockDetailViewController.swift in Sources */,
 				CE735D1121523B2400E2849E /* EditableSectionDataSource.swift in Sources */,
 				CE735D0521523B2400E2849E /* TableViewComposedDataSource.swift in Sources */,
@@ -1296,6 +1357,7 @@
 				CE735E9521523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */,
 				CE735ED121523CF200E2849E /* UserModel.swift in Sources */,
 				CE449BAC215A1F830091940E /* Dominant+String.swift in Sources */,
+				CE0F545321D3B86700AEFBC1 /* CompanyChatViewController.swift in Sources */,
 				CE735E7321523B2400E2849E /* DMTradingViewChartViewController.swift in Sources */,
 				CE09A049216B7425009C7A10 /* Dominant+ImageView.swift in Sources */,
 				CE735E9D21523B2400E2849E /* AccountsDataProvider.swift in Sources */,
@@ -1309,6 +1371,7 @@
 				CE735E9321523B2400E2849E /* DMAnalyticsViewController.swift in Sources */,
 				CEE89E5C2176201A006B8F2B /* InvestorProfileTableViewCell.swift in Sources */,
 				CE735E6F21523B2400E2849E /* DMSignUpViewController.swift in Sources */,
+				CE0F544A21D3871100AEFBC1 /* Conversations+Requests.swift in Sources */,
 				CE735F1B21523FA000E2849E /* FXBlurView.m in Sources */,
 				CE735D0321523B2400E2849E /* EditableCellDataSource.swift in Sources */,
 				CE09A0F1216E1218009C7A10 /* CompanyFooterView.swift in Sources */,
@@ -1332,6 +1395,7 @@
 				CEE89E7D2179C8F9006B8F2B /* Repository.swift in Sources */,
 				CE735E5B21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */,
 				CE09A0E5216DFA29009C7A10 /* StatsTableViewCell.swift in Sources */,
+				CE0F543F21D37B8800AEFBC1 /* ChatViewController.swift in Sources */,
 				CE735F492152782800E2849E /* NavigationController.swift in Sources */,
 				CE735F4F2152782800E2849E /* KeyboardObservableViewController.swift in Sources */,
 				CE735F1E2152406B00E2849E /* SwiftStockKit.swift in Sources */,
@@ -1346,6 +1410,9 @@
 				CE735EA721523B2400E2849E /* User+Request.swift in Sources */,
 				CE735BD121523B0900E2849E /* Constants.swift in Sources */,
 				CE735E3F21523B2400E2849E /* PersonalViewController.swift in Sources */,
+				CE0F545021D3B85900AEFBC1 /* InvestorsChatViewController.swift in Sources */,
+				CE0F545D21D4D9F400AEFBC1 /* ConversationTableViewCell.swift in Sources */,
+				CE0F544721D3858400AEFBC1 /* ConversationsDataProvider.swift in Sources */,
 				CE09A0EB216E0DF6009C7A10 /* TitleSection.swift in Sources */,
 				CE449BA02158D5000091940E /* Company+Request.swift in Sources */,
 				CE735E5D21523B2400E2849E /* WatchListTableViewCell.swift in Sources */,
@@ -1354,14 +1421,17 @@
 				CE449B9D215516100091940E /* AddSignalViewController.swift in Sources */,
 				CEE89E4F2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */,
 				CE897B9D2192DEE4006A4069 /* SellViewController.swift in Sources */,
+				CE0F545921D4D72C00AEFBC1 /* Conversation.swift in Sources */,
 				CEB8801B2181CBAF006DFD9F /* MonayTransformator.swift in Sources */,
 				CE735EA121523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
+				CE0F545621D4D43F00AEFBC1 /* ConversationsViewController.swift in Sources */,
 				CE735EC721523CF200E2849E /* OffsetResponse.swift in Sources */,
 				CE735E4121523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
 				CE735F512152782800E2849E /* TabBarController.swift in Sources */,
 				CEE89E802179C933006B8F2B /* CompanyDataProvider.swift in Sources */,
 				CE735D0921523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */,
 				CE8854CB215CC8940093564B /* DrivewealthDataProvider.swift in Sources */,
+				CE0F544121D37B8800AEFBC1 /* ChatDataSources.swift in Sources */,
 				CE735F0321523FA000E2849E /* DMRatingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,8 @@ public extension UIStoryboard {
         case AnalitycalInfo
         case TermsAndConditions
         case RatingsDetails
+        case More
+        case Conversations
     }
     
     subscript<T: UIViewController>(_ identifier: Identifier) -> T {

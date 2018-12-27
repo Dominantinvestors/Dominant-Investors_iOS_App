@@ -74,6 +74,8 @@ class PortfolioDataSource:
     CellConfigurator,
     CellSelectable
 {
+    var unread: Int = 0
+    
     var data: [(UserModel?, PortfolioModel?)]
     
     init(user: UserModel?, portfolio: PortfolioModel?) {
@@ -100,10 +102,9 @@ class PortfolioDataSource:
         }
         
         cell.edit.setTitle(NSLocalizedString("Edit profile", comment: ""), for: .normal)
-        cell.message.setTitle(" 5", for: .normal)
+        cell.message.setTitle(" \(unread)", for: .normal)
         
         cell.edit.isHidden = true
-        cell.message.isHidden = true
         
         if let portfolio = item.1 {
             cell.value.text = portfolio.value + Values.Currency

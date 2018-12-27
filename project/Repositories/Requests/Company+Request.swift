@@ -20,12 +20,29 @@ extension CompanyModel {
         let parameters: [String: Any] = ["q": text]
         return URLEncodingRequestBuilder(path: "/search-assets/", parameters: parameters)
     }
+    
+    func comments() -> RequestProvider {
+        return JSONEncodingRequestBuilder(path: "/signals/investment-ideas/\(id)/comments/")
+    }
+    
+    func add(_ comment: String) -> RequestProvider {
+        let parameters: [String: Any] = ["text": comment]
+        return JSONEncodingRequestBuilder(path: "/signals/investment-ideas/\(id)/comments/", method: .post, parameters: parameters)
+    }
 }
 
 extension Company {
     
     func rate() -> RequestProvider {
-        return URLEncodingRequestBuilder(path: "/asset-rate/\(ticker)/")
+        let parameters: [String: Any] = ["asset-type": type]
+        return URLEncodingRequestBuilder(path: "/asset-rate/\(ticker)/", parameters: parameters)
+    }
+    
+    func stockInfo(_ isChart: Bool) -> RequestProvider {
+        let bar = UIApplication.shared.statusBarFrame.height
+        let parameters = "width=\(UIScreen.main.bounds.width)&height=\(UIScreen.main.bounds.height - bar - 20)" + (isChart ? "&chart" : "")
+        
+        return URLEncodingRequestBuilder(path: "/stock-info/\(chart())/?\(parameters)")
     }
     
     func createSignal(_ buyPoint: String, _ targetPrice: String, _ stopLoss: String) -> RequestProvider {
@@ -41,7 +58,7 @@ extension Company {
         let parameters: [String: Any] = ["ticker": ticker,
                                          "amount": amount,
                                          "price": rate,
-                                         "category": type]
+                                         "asset_type": type]
         return JSONEncodingRequestBuilder(path: "/transactions/buy/", method: .post, parameters: parameters)
     }
     
@@ -49,7 +66,8 @@ extension Company {
         let parameters: [String: Any] = ["ticker": ticker,
                                          "amount": amount,
                                          "price": rate,
-                                         "category": type]
+                                         "asset_type": type]
         return JSONEncodingRequestBuilder(path: "/transactions/sell/", method: .post, parameters: parameters)
     }
+    
 }

@@ -14,9 +14,9 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         renewRating()
     }
-    
     
     private func setupUI() {
        self.tableView.dataSource = self

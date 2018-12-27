@@ -9,7 +9,8 @@ class CompanyFooterView: UITableViewCell {
     @IBOutlet weak var revenueEstimizeButton: UIButton!
     @IBOutlet weak var epsEstimizeButton: UIButton!
     @IBOutlet weak var tradingViewButton: UIButton!
-    
+    @IBOutlet weak var comentsButton: UIButton!
+
     @IBOutlet weak var buyPointLabel: UILabel!
     @IBOutlet weak var growthPotential: UILabel!
     @IBOutlet weak var stopLoss: UILabel!

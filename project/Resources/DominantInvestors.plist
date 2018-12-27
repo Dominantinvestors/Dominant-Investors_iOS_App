@@ -23,14 +23,14 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb247108002597863</string>
+				<string>fb295880337874110</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>533</string>
+	<string>618</string>
 	<key>FacebookAppID</key>
-	<string>247108002597863</string>
+	<string>295880337874110</string>
 	<key>FacebookDisplayName</key>
 	<string>Dominant investors: Stocks</string>
 	<key>LSApplicationQueriesSchemes</key>

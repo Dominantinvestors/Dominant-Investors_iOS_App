@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -109,13 +109,13 @@
                                 <state key="normal" image="interactive"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGNAL INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbC-tD-wR2">
-                                <rect key="frame" x="56" y="230" width="263.5" height="30"/>
+                                <rect key="frame" x="56" y="280" width="263.5" height="30"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yY-Be-T3I">
-                                <rect key="frame" x="0.0" y="295" width="375" height="125"/>
+                                <rect key="frame" x="0.0" y="345" width="375" height="125"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nye-fi-WL0">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="62.5"/>
@@ -255,16 +255,25 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="its-V0-eZJ">
-                                <rect key="frame" x="-90.5" y="450" width="556" height="94"/>
+                                <rect key="frame" x="-90.5" y="500" width="556" height="94"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
                                 <state key="normal" title="ADD TO WATCH LIST" backgroundImage="addToWatchList">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALK-BC-PTB" customClass="ActionHandleButton" customModule="DominantCrypto" customModuleProvider="target">
+                                <rect key="frame" x="-90.5" y="210" width="556" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="2PC-Mo-vzH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
+                                <state key="normal" title=" COMMENTS" image="rating_message_icon" backgroundImage="addToWatchList"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6KM-nL-kR0" firstAttribute="leading" secondItem="R0Y-PC-bNf" secondAttribute="leading" id="3hG-xL-dqH"/>
+                            <constraint firstItem="ALK-BC-PTB" firstAttribute="top" secondItem="SaL-lC-Cb7" secondAttribute="bottom" constant="15" id="7XU-Ub-HWo"/>
                             <constraint firstItem="its-V0-eZJ" firstAttribute="top" secondItem="6yY-Be-T3I" secondAttribute="bottom" constant="30" id="855-Rp-f6t"/>
                             <constraint firstItem="6yY-Be-T3I" firstAttribute="leading" secondItem="R0Y-PC-bNf" secondAttribute="leading" id="8OE-ge-jTz"/>
                             <constraint firstItem="6yY-Be-T3I" firstAttribute="top" secondItem="UbC-tD-wR2" secondAttribute="bottom" constant="35" id="Mi9-gV-Pgj"/>
@@ -272,9 +281,10 @@
                             <constraint firstItem="UbC-tD-wR2" firstAttribute="centerX" secondItem="FJe-hU-C9H" secondAttribute="centerX" id="YYM-Zz-uL8"/>
                             <constraint firstItem="R0Y-PC-bNf" firstAttribute="trailing" secondItem="6KM-nL-kR0" secondAttribute="trailing" id="adS-gF-hMD"/>
                             <constraint firstItem="6KM-nL-kR0" firstAttribute="top" secondItem="R0Y-PC-bNf" secondAttribute="top" constant="35" id="ead-3h-RST"/>
-                            <constraint firstItem="UbC-tD-wR2" firstAttribute="top" secondItem="SaL-lC-Cb7" secondAttribute="bottom" constant="35" id="it2-ry-yjF"/>
+                            <constraint firstItem="UbC-tD-wR2" firstAttribute="top" secondItem="SaL-lC-Cb7" secondAttribute="bottom" constant="85" id="it2-ry-yjF"/>
                             <constraint firstItem="SaL-lC-Cb7" firstAttribute="top" secondItem="6KM-nL-kR0" secondAttribute="bottom" constant="15" id="nOx-ed-79g"/>
                             <constraint firstItem="SaL-lC-Cb7" firstAttribute="centerX" secondItem="FJe-hU-C9H" secondAttribute="centerX" id="oO4-CR-kv7"/>
+                            <constraint firstItem="ALK-BC-PTB" firstAttribute="centerX" secondItem="FJe-hU-C9H" secondAttribute="centerX" id="vba-am-Auh"/>
                             <constraint firstItem="its-V0-eZJ" firstAttribute="centerX" secondItem="FJe-hU-C9H" secondAttribute="centerX" id="zUW-8d-Vwc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R0Y-PC-bNf"/>
@@ -293,6 +303,7 @@
                 <outlet property="addToWatchlistButton" destination="its-V0-eZJ" id="24Z-tx-0xO"/>
                 <outlet property="buttonsEstimizeHeight" destination="J8q-Pd-UME" id="bej-Dg-JdO"/>
                 <outlet property="buyPointLabel" destination="UwZ-lW-oU7" id="gGi-4C-deP"/>
+                <outlet property="comentsButton" destination="ALK-BC-PTB" id="RqV-Ac-fGR"/>
                 <outlet property="epsEstimizeButton" destination="1a4-7T-VjZ" id="pUa-ox-J0c"/>
                 <outlet property="growthPotential" destination="W7b-Kt-5Mw" id="vwF-5C-rTP"/>
                 <outlet property="revenueEstimizeButton" destination="r0w-rH-RSe" id="gyU-3R-1UV"/>
@@ -306,5 +317,6 @@
     <resources>
         <image name="addToWatchList" width="556" height="94"/>
         <image name="interactive" width="351" height="55"/>
+        <image name="rating_message_icon" width="25" height="25"/>
     </resources>
 </document>

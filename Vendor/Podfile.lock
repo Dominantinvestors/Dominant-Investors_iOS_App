@@ -32,6 +32,7 @@ PODS:
   - FBSDKShareKit (4.36.0):
     - FBSDKCoreKit (~> 4.36.0)
   - MBProgressHUD (1.1.0)
+  - MessageKit (1.0.0)
   - ObjectMapper (3.3.0)
 
 DEPENDENCIES:
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - FacebookLogin
   - FacebookShare
   - MBProgressHUD
+  - MessageKit
   - ObjectMapper
 
 SPEC REPOS:
@@ -58,6 +60,7 @@ SPEC REPOS:
     - FBSDKLoginKit
     - FBSDKShareKit
     - MBProgressHUD
+    - MessageKit
     - ObjectMapper
 
 SPEC CHECKSUMS:
@@ -73,8 +76,9 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 8bccb6064708ab2f4251a7fc4e3b6d8d00ad91ba
   FBSDKShareKit: 7090fdd55c39b03941efddb64c83a64ff6b3949f
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MessageKit: 16160036b16476b04bd0e9f2c7ce67e662e503e4
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
 
-PODFILE CHECKSUM: aa9f63e30185b6204cb6b354393283a3111940f6
+PODFILE CHECKSUM: 82ef43a04087afc2f6f8f96f2b862c89990b8090
 
 COCOAPODS: 1.5.3

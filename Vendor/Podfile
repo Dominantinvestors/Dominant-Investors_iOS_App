@@ -16,6 +16,8 @@ target :DominantInvestors do
     pod 'FacebookLogin'
     pod 'FacebookShare'
     pod 'AFDateHelper', '~> 4.2.2'
+    pod 'MessageKit'
+    pod 'MessageInputBar'
 end
 
 target :DominantCrypto do
@@ -27,6 +29,8 @@ target :DominantCrypto do
     pod 'FacebookLogin'
     pod 'FacebookShare'
     pod 'AFDateHelper', '~> 4.2.2'
+    pod 'MessageKit'
+    pod 'MessageInputBar'
 end
 
 post_install do |installer|
@@ -34,6 +38,11 @@ post_install do |installer|
         target.build_configurations.each do |configuration|
             if ['AlamofireImage'].include? target.name
                 configuration.build_settings['SWIFT_VERSION'] = "3.2"
+            end
+            if target.name == 'MessageKit'
+                target.build_configurations.each do |config|
+                    config.build_settings['SWIFT_VERSION'] = '4.0'
+                end
             end
         end
     end
