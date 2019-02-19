@@ -4,7 +4,7 @@ class Conversation: Mappable {
     
     var id: Int = 0
     var unread: Int = 0
-    var last: Message!
+    var last: Message?
     var created: String = ""
     var peers: [UserModel]!
     
@@ -16,5 +16,16 @@ class Conversation: Mappable {
         last <- map["last_message"]
         created <- map["created_on"]
         peers <- map["peers"]
+    }
+}
+
+class NewConversation: Mappable {
+    
+    var id: Int = 0
+    
+    required init?(map: Map) { }
+    
+    func mapping(map: Map) {
+        id <- map["conversation_id"]
     }
 }

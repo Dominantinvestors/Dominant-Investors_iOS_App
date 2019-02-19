@@ -8,10 +8,10 @@ class Message: Mappable, MessageType {
     var date: String = ""
     var text: String = ""
     
-    var author: UserModel!
+    var author: UserModel?
 
     var messageId: String { return String(id) }
-    var sender: Sender { return Sender(id: String(author.id), displayName: author.fullName()) }
+    var sender: Sender { return Sender(id: String(author?.id ?? 0), displayName: author?.fullName() ?? "") }
     var kind: MessageKind { return .text(text) }
     var sentDate: Date { return Date(fromString: date, format: .custom("MM/dd/yyyy HH:mm")) ?? Date()}
     
@@ -19,9 +19,9 @@ class Message: Mappable, MessageType {
     
     func mapping(map: Map) {
         id <- map["id"]
-        date <- map["created_at"]
+        date <- map["sent_at"]
         text <- map["text"]
-        author <- map["author"]
+        author <- map["sender"]
     }
 }
 
@@ -32,6 +32,6 @@ class Unread: Mappable {
     required init?(map: Map) { }
     
     func mapping(map: Map) {
-        count <- map["count"]
+        count <- map["unread"]
     }
 }

@@ -51,7 +51,7 @@ class DMScreenerContainerViewController: DMViewController {
         ]
         navigationItem.backBarButtonItem = backItem
         self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = UIColor.lightGray
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 16/255, green: 18/255, blue: 26/255, alpha: 1)
         self.navigationController?.navigationBar.barStyle = .blackTranslucent
         self.navigationController?.pushViewController(chartVC, animated: true)

@@ -43,9 +43,9 @@ class ConversationsViewController: UIViewController {
     }
     
     private func message(_ conversation: Conversation) {
-//        let chat = InvestorsChatViewController()
-//        chat.investor = investor
-//        navigationController?.pushViewController(chat, animated: true)
+        let chat = InvestorsChatViewController()
+        chat.coversetionID = conversation.id
+        navigationController?.pushViewController(chat, animated: true)
     }
 }
 
@@ -65,10 +65,9 @@ struct ConversationDataSource:
     }
     
     func configurateCell(_ cell: ConversationTableViewCell, item: Conversation, at indexPath: IndexPath) {
-        cell.names.text = item.peers.reduce("", { result, item -> String in
-            return result + item.fullName()
-        })
+        cell.names.text = item.peers.compactMap{ $0.fullName() }.joined(separator: ", ")
         cell.date.text = item.created
-        cell.message.text = item.last.text
+        cell.message.text = item.last?.text
     }
 }
+

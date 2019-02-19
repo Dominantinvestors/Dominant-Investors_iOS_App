@@ -18,20 +18,11 @@ target :DominantInvestors do
     pod 'AFDateHelper', '~> 4.2.2'
     pod 'MessageKit'
     pod 'MessageInputBar'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
+    pod 'PromiseKit/CorePromise', '~> 6.0'
 end
 
-target :DominantCrypto do
-    pod 'ObjectMapper'
-    pod 'AlamofireObjectMapper'
-    pod 'AlamofireImage'
-    pod 'MBProgressHUD'
-    pod 'FacebookCore'
-    pod 'FacebookLogin'
-    pod 'FacebookShare'
-    pod 'AFDateHelper', '~> 4.2.2'
-    pod 'MessageKit'
-    pod 'MessageInputBar'
-end
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|

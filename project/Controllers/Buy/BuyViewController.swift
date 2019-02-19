@@ -26,7 +26,7 @@ class BuyViewController: KeyboardObservableViewController {
         tableView.register(cell: BuyTableViewCell.self)
         tableView.register(BuySectionView.self)
         
-        let footer = BuySectionConfigurator(subtitle: NSLocalizedString("Tou are simulating a trade with Dominant investors. No money will be transacted at this time.", comment: ""))
+        let footer = BuySectionConfigurator(subtitle: NSLocalizedString("You are simulating a trade with Dominant investors. No money will be transacted at this time.", comment: ""))
         footer.selectors[.select] = { _, _ in
             self.onSubmit()
         }
@@ -66,15 +66,16 @@ class BuyViewController: KeyboardObservableViewController {
     
     private func updateRate() {
         self.showActivityIndicator()
-        CompanyDataProvider.default().rate(company) { rate, error in
-            self.dismissActivityIndicator()
-            if let rate = rate {
-                self.priceDataSource.text = rate.rate
-                self.costDataSource.text = self.cost(self.buyDataSource.text, rate.rate)
+        CompanyDataProvider.default().rate(company)
+            .done{
+                self.priceDataSource.text = $0.rate
+                self.costDataSource.text = self.cost(self.buyDataSource.text, $0.rate)
                 self.tableView.reloadData()
-            } else {
-                self.showAlertWith(message: error)
-            }
+            }.ensure {
+                self.dismissActivityIndicator()
+                
+            }.catch {
+                self.showAlertWith($0)
         }
     }
     

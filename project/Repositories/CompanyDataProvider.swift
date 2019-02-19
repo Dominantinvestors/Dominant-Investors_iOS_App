@@ -1,6 +1,6 @@
 import Alamofire
-
-struct CompanyDataProvider: Repository, Syncable {
+import PromiseKit
+struct CompanyDataProvider: PromiseRepository, Syncable {
     typealias Item = CompanyModel
     
     let session: SessionManager
@@ -22,15 +22,8 @@ struct CompanyDataProvider: Repository, Syncable {
         }
     }
     
-    func get(_ byID: Int, completion: @escaping (CompanyModel?, String?) -> Void) {
-        send(request: CompanyModel.get(byID)).responseObject { (response: DataResponse<CompanyModel>) -> Void in
-            switch self.handler.handle(response) {
-            case .success(let result):
-                completion(result, nil)
-            case .error(let error):
-                completion(nil, error.localizedDescription)
-            }
-        }
+    func get(by ID: Int) -> Promise<CompanyModel> {
+        return send(request: CompanyModel.get(ID))
     }
     
     func addToWatchList(_ company: CompanyModel, completion: @escaping (Bool, String?) -> Void) {
@@ -44,15 +37,8 @@ struct CompanyDataProvider: Repository, Syncable {
         }
     }
     
-    func rate(_ company: Company, completion: @escaping (Rate?, String?) -> Void) {
-        send(request: company.rate()).responseObject { (response: DataResponse<Rate>) -> Void in
-            switch self.handler.handle(response) {
-            case .success(let result):
-                completion(result, nil)
-            case .error(let error):
-                completion(nil, error.localizedDescription)
-            }
-        }
+    func rate(_ company: Company) -> Promise<Rate> {
+        return send(request: company.rate())
     }
     
     func more(_ company: Company, completion: @escaping (Widget?, String?) -> Void) {

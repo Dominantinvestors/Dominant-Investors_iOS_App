@@ -1,6 +1,7 @@
 import Alamofire
+import PromiseKit
 
-struct SignalsDataProvider: Repository, Syncable {
+struct SignalsDataProvider: PromiseRepository, Syncable {
     
     typealias Item = SignalModel
     
@@ -12,15 +13,12 @@ struct SignalsDataProvider: Repository, Syncable {
         return SignalsDataProvider(session: session, handler: BaseHandler())
     }
     
-    func get(completion: @escaping ([SignalModel]?, String?) -> Void) {
-        send(request: SignalModel.get()).responseObject { (response: DataResponse<OffsetResponse<SignalModel>>) -> Void in
-            switch self.handler.handle(response) {
-            case .success(let result):
-                completion(result.items, nil)
-            case .error(let error):
-                completion(nil, error.localizedDescription)
-            }
-        }
+    func get() -> Promise<OffsetResponse<SignalModel>> {
+        return send(request: SignalModel.get())
+    }
+    
+    func get(by id: Int) -> Promise<SignalModel> {
+        return send(request: SignalModel.get(by: id))
     }
     
     func create(for company: Company,

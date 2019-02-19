@@ -2,24 +2,16 @@ import UIKit
 import AFDateHelper
 import Alamofire
 
-class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebViewDelegate {
+class DMCompanyDetailViewController: DMViewController, UIWebViewDelegate {
 
     var company: CompanyModel!
-    var chartView: ChartView? = nil
-    var chart: SwiftStockChart!
     
-    var items: [ChartPoint] = []
+    var rate: RatingDataSource!
     
     let footerView: CompanyFooterView = CompanyFooterView.instanceFromNib()
 
     @IBOutlet weak var tableView: UITableView!
-
     @IBOutlet weak var infoLabel: UILabel!
-    @IBOutlet weak var chartContainer: UIView!
-    @IBOutlet weak var priceView: UIView!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var chartContainerHeight: NSLayoutConstraint!
-    @IBOutlet weak var isGrowingIcon: UIImageView!
     @IBOutlet weak var logo: UIImageView!
 
     private var dataSource: TableViewDataSourceShim? = nil {
@@ -35,14 +27,19 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         
         tableView.tableFooterView = footerView
         tableView.register(cell: StatsTableViewCell.self)
+        tableView.register(cell: ChartTableViewCell.self)
+        tableView.register(cell: PriceTableViewCell.self)
         tableView.register(TitleSection.self)
         
-        var statistic: [TableViewDataSource] = []
-        if let _ = company.stats {
+        rate = RatingDataSource(item: (company, nil))
+        
+        var statistic: [TableViewDataSource] = [ChartDataSource(item: company), rate]
+        
+        if company.stats != nil {
             statistic.append( CompanySatatusDataSource(title: NSLocalizedString("Stats", comment: ""), data: company.status()))
         }
         
-        if let _ = company.ratings {
+        if company.ratings != nil {
             statistic.append( CompanySatatusDataSource(title: NSLocalizedString("Rating", comment: ""), data: company.rating()))
         }
         
@@ -55,14 +52,11 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         footerView.tradingViewButton.addTarget(self, action: #selector(tradingViewChartButtonPressed(sender:)), for: .touchUpInside)
         footerView.addToWatchlistButton.addTarget(self, action: #selector(addToWatchlist(sender:)), for: .touchUpInside)
 
-          footerView.comentsButton.addTarget(self, action: #selector(commentsButtonPressed(sender:)), for: .touchUpInside)
-        
-        _ = self.chartContainerHeight.setMultiplier(multiplier: 0.25)
+        footerView.comentsButton.addTarget(self, action: #selector(commentsButtonPressed(sender:)), for: .touchUpInside)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        loadChart()
         updateRate()
     }
     
@@ -74,37 +68,22 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
         }
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        for view in self.chartContainer.subviews {
-            view.removeFromSuperview()
-        }
-        coordinator.animate(alongsideTransition: { context in
-            context.viewController(forKey: UITransitionContextViewControllerKey.from)
-        }, completion: { context in
-            self.loadChart()
-        })
-    }
-    
     // MARK: Private
     private func updateRate() {
         self.showActivityIndicator()
-        CompanyDataProvider.default().rate(company) { rate, error in
-            self.dismissActivityIndicator()
-            if let rate = rate {
-                self.priceLabel.attributedText = rate.rate.toMoneyStyle()
+        CompanyDataProvider.default().rate(company)
+            .done{
+                self.rate.data = [(self.company, $0)]
                 self.tableView.reloadData()
-            } else {
-                self.showAlertWith(message: error)
-            }
+            }.ensure {
+                self.dismissActivityIndicator()
+            }.catch {
+                self.showAlertWith($0)
         }
     }
     
     private func setupUI() {
         infoLabel.text = company.description
-        isGrowingIcon.image = company.isGrowing ?
-            UIImage(named: "grouving_green") :
-            UIImage(named: "grouving_red")
         
         if let logo = company.logo {
             Alamofire.request(logo).responseImage { response in
@@ -125,111 +104,9 @@ class DMCompanyDetailViewController: DMViewController, ChartViewDelegate, UIWebV
             footerView.epsEstimizeButton.isEnabled = false
             footerView.epsEstimizeButton.alpha = 0.5
         }
-        self.priceView.layer.cornerRadius = 25.0
-    }
-    
-    private func loadChart() {
-        chartView = ChartView.create()
-        chartView?.delegate = self
-        chartView?.frame = CGRect(x: 24, y: 10, width: self.chartContainer.frame.width-48, height: self.chartContainer.frame.height - 20)
-        chartContainer?.addSubview(chartView!)
-        
-        chart = SwiftStockChart(frame: CGRect(x : 16, y :  0, width : self.chartContainer.bounds.size.width - 60, height : chartContainer.frame.height -
-            100))
-        
-        chartView?.backgroundColor = UIColor.clear
-        
-        chart.axisColor = UIColor.red
-        chart.verticalGridStep = 3
-        
-        loadChartWithRange(range: .OneDay)
-        
-        chartView?.addSubview(chart)
-        chartView?.backgroundColor = UIColor.black
-        
-        self.view.setNeedsLayout()
-        self.view.layoutIfNeeded()
-}
-    
-    
-    // MARK: ChartViewDelegate
-    
-    func loadChartWithRange(range: ChartTimeRange) {
-        
-        chart.timeRange = range
-        
-        let times = chart.timeLabelsForTimeFrame(range: range)
-        chart.horizontalGridStep = times.count - 1
-        
-        chart.labelForIndex = {(index: NSInteger) -> String in
-            return times[index]
-        }
-        
-        chart.labelForValue = {(value: CGFloat) -> String in
-            return String(format: "%.02f", value)
-        }
-        
-        if self.company.isCrypto() {
-            rangeChangeForCrypto(range: range)
-        } else {
-            rangeChangeForCompany(range: range)
-        }
-    }
-    
-    func rangeChangeForCompany(range: ChartTimeRange) {
-        SwiftStockKit.fetchChartPoints(symbol: self.company.ticker, range: range, crypto: self.company.isCrypto()) { (chartPoints) -> () in
-            self.chart.clearChartData()
-            self.chart.setChartPoints(points: chartPoints)
-        }
-    }
-    
-    func rangeChangeForCrypto(range: ChartTimeRange) {
-        let endDate = Date()
-        var startDate: Date
-        
-        switch (range) {
-        case .OneDay:
-            startDate = endDate.adjust(.day, offset: -1)
-        case .FiveDays:
-            startDate = endDate.adjust(.day, offset: -5)
-        case .TenDays:
-            startDate = endDate.adjust(.day, offset: -10)
-        case .OneMonth:
-            startDate = endDate.adjust(.month, offset: -1)
-        case .ThreeMonths:
-            startDate = endDate.adjust(.month, offset: -3)
-        case .OneYear:
-            startDate = endDate.adjust(.year, offset: -1)
-        case .FiveYears:
-            startDate = endDate.adjust(.year, offset: -5)
-        }
-        
-        if !self.items.isEmpty {
-            self.filter(fot: startDate.timeIntervalSince1970)
-        } else {
-            self.showActivityIndicator()
-            CryptoCompareDataProvider.default().get(for: self.company.ticker) { points, error in
-                self.dismissActivityIndicator()
-                if let points = points {
-                    self.items = points
-                    self.filter(fot: startDate.timeIntervalSince1970)
-                }
-            }
-        }
-    }
-    
-    func filter(fot date: Double)  {
-        let points = self.items.filter({ TimeInterval( $0.timeStamp ?? 0.0) > date})
-        self.chart.clearChartData()
-        self.chart.setChartPoints(points: points)
-    }
-    
-    func didChangeTimeRange(range: ChartTimeRange) {
-        loadChartWithRange(range: range)
     }
 
     // MARK: Actions
-    
     @IBAction func showSignals(sender : UIButton) {
         self.performSegue(withIdentifier: "DMSignalsSegue", sender: self)
     }
@@ -314,4 +191,23 @@ struct CompanySatatusDataSource:
     }
 }
 
+class RatingDataSource:
+    TableViewDataSource,
+    DataContainable,
+    CellContainable,
+    CellConfigurator
+{
+    var data: [(CompanyModel, Rate?)]
+    
+    init(item: (CompanyModel, Rate?)) {
+        self.data = [item]
+    }
+    
+    func configurateCell(_ cell: PriceTableViewCell, item: (CompanyModel, Rate?), at indexPath: IndexPath) {
+        cell.isGrowingIcon.image = item.0.isGrowing ?
+            UIImage(named: "grouving_green") :
+            UIImage(named: "grouving_red")
+        cell.priceLabel.attributedText = (item.1?.rate ?? "0.00").toMoneyStyle()
+    }
+}
 

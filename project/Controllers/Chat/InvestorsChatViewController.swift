@@ -1,26 +1,24 @@
 import UIKit
 
 class InvestorsChatViewController: ChatViewController {
-
-    var investor: InvestorModel!
+    
+    var coversetionID: Int!
     
     override func loadFirstMessages() {
-        if investor.coversetionID != 0 {
-            showActivityIndicator()
-            ConversationsDataProvider.default().getMessages(for: investor.coversetionID) { messages, error in
-                self.dismissActivityIndicator()
-                if let messages = messages {
-                    self.insertMessages(messages)
-                } else {
-                    self.showAlertWith(message: error)
-                }
+        showActivityIndicator()
+        ConversationsDataProvider.default().getMessages(for: coversetionID) { messages, error in
+            self.dismissActivityIndicator()
+            if let messages = messages {
+                self.insertMessages(messages)
+            } else {
+                self.showAlertWith(message: error)
             }
         }
     }
     
     override func create(_ str: String) {
         showActivityIndicator()
-        ConversationsDataProvider.default().new(message: str, for: investor) { message, error in
+        ConversationsDataProvider.default().new(message: str, for: coversetionID) { message, error in
             self.dismissActivityIndicator()
             if let message = message {
                 self.insertMessage(message)
@@ -32,8 +30,6 @@ class InvestorsChatViewController: ChatViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if investor.coversetionID != 0 {
-            ConversationsDataProvider.default().markAsRead(conversation: investor.coversetionID) {_,_ in }
-        }
+        ConversationsDataProvider.default().markAsRead(conversation: coversetionID) {_,_ in }
     }
 }

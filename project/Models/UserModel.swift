@@ -48,7 +48,7 @@ class InvestorModel: Mappable, User {
     var rating: Int = 0
     var isFollowed: Bool = false
     var index: Int = 0
-    var coversetionID: Int = 0
+    var conversetionID: Int?
 
     required init?(map: Map) { }
     
@@ -61,6 +61,6 @@ class InvestorModel: Mappable, User {
         rating <- map["rating"]
         isFollowed <- map["is_followed"]
         index <- map["rating_index"]
-        coversetionID <- map["conversation_id"]
+        conversetionID <- map["conversation_id"]
     }
 }

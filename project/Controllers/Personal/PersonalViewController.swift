@@ -129,13 +129,14 @@ class PersonalViewController: KeyboardObservableViewController {
             }
         }
         
-        SignalsDataProvider.default().get {[unowned self] signals, error in
-            if let signals = signals {
-                self.watchList.data = signals
+        SignalsDataProvider.default().get()
+            .done {
+                self.watchList.data = $0.items
                 self.tableView.reloadData()
-            } else {
-                self.showAlertWith(message: error)
-            }
+            }.ensure{
+                
+            }.catch {
+                self.showAlertWith($0)
         }
         
         ConversationsDataProvider.default().unread { count, _ in

@@ -27,7 +27,7 @@
         <!--Launch View Controller-->
         <scene sceneID="odo-BQ-W3b">
             <objects>
-                <viewController id="c2J-Yd-yOd" customClass="DMLaunchViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="c2J-Yd-yOd" customClass="DMLaunchViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="flV-90-wLD"/>
                         <viewControllerLayoutGuide type="bottom" id="b8b-HU-WEc"/>
@@ -54,6 +54,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5f-dQ-AdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="298" y="130"/>
+        </scene>
+        <!--Alert New Signal View Controller-->
+        <scene sceneID="Vub-YD-3H7">
+            <objects>
+                <viewController storyboardIdentifier="AlertNewSignal" id="ctu-uA-65i" customClass="AlertNewSignalViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j1R-ol-6bl"/>
+                        <viewControllerLayoutGuide type="bottom" id="AdA-8a-6xL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gzz-iq-0oV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dy5-kF-h5H">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dy5-kF-h5H" secondAttribute="trailing" id="2h6-yK-thx"/>
+                            <constraint firstItem="AdA-8a-6xL" firstAttribute="top" secondItem="dy5-kF-h5H" secondAttribute="bottom" id="WMc-B6-qCr"/>
+                            <constraint firstItem="dy5-kF-h5H" firstAttribute="leading" secondItem="Gzz-iq-0oV" secondAttribute="leading" id="i3l-yJ-Ffq"/>
+                            <constraint firstItem="dy5-kF-h5H" firstAttribute="top" secondItem="j1R-ol-6bl" secondAttribute="bottom" id="xsS-xb-zyD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="dy5-kF-h5H" id="UO0-F6-sqI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7O7-mR-Q6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="140"/>
         </scene>
     </scenes>
     <resources>

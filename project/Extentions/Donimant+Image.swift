@@ -3,7 +3,7 @@ import UIKit
 class LetterImageGenerator: NSObject {
     
     class func imageWith(name: String?) -> UIImage? {
-        let frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        let frame = CGRect(x: 0, y: 0, width: 65, height: 65)
         let nameLabel = UILabel(frame: frame)
         nameLabel.textAlignment = .center
         nameLabel.backgroundColor = .lightGray

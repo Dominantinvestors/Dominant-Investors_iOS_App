@@ -33,12 +33,19 @@ struct ConversationsDataProvider: Repository, Syncable {
         }
     }
 
-    func new(message: String, for investor: InvestorModel, completion: @escaping (Message?, String?) -> Void) {
-        let request = investor.coversetionID == 0 ?
-            investor.messageToNew(message) :
-            investor.messageToExisting(message)
-        
-        send(request: request).responseObject { (response: DataResponse<Message>) -> Void in
+    func new(message: String, for conversationsId: Int, completion: @escaping (Message?, String?) -> Void) {
+        send(request: UserModel.message(message, for: conversationsId)).responseObject { (response: DataResponse<Message>) -> Void in
+            switch self.handler.handle(response) {
+            case .success(let result):
+                completion(result, nil)
+            case .error(let error):
+                completion(nil, error.localizedDescription)
+            }
+        }
+    }
+    
+    func newConversation(with investor: Int, completion: @escaping (NewConversation?, String?) -> Void) {
+        send(request: UserModel.newConversation(with: investor)).responseObject { (response: DataResponse<NewConversation>) -> Void in
             switch self.handler.handle(response) {
             case .success(let result):
                 completion(result, nil)
@@ -49,7 +56,7 @@ struct ConversationsDataProvider: Repository, Syncable {
     }
     
     func markAsRead(conversation: Int, completion: @escaping (Bool, String?) -> Void) {
-        send(request: InvestorModel.markAsRead(conversation)).responseJSON { response in
+        send(request: UserModel.markAsRead(conversation)).responseJSON { response in
             switch self.handler.handle(response) {
             case .success( _ ):
                 completion(true, nil)

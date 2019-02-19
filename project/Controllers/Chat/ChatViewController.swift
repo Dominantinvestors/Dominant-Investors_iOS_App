@@ -32,7 +32,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
     }
     
     func insertMessages(_ messages: [Message]) {
-        self.messageList = messages
+        self.messageList = messages.sorted(by: { $0.sentDate < $1.sentDate })
         self.messagesCollectionView.reloadData()
         self.messagesCollectionView.scrollToBottom()
     }

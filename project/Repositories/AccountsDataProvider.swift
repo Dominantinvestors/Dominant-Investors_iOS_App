@@ -82,4 +82,15 @@ struct AccountsDataProvider: Repository, Syncable {
             }
         }
     }
+    
+    func registerFDT(_ token: String, completion: @escaping (Bool, String?) -> Void)  {
+        send(request: UserModel.registerFDT(token)).responseString { (response: DataResponse<String>) -> Void in
+            switch self.handler.handle(response) {
+            case .success( _ ):
+                completion(true, nil)
+            case .error(let error):
+                completion(false, error.localizedDescription)
+            }
+        }
+    }
 }

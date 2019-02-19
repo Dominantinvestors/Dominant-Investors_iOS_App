@@ -34,11 +34,16 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     
     open func renewRating() {
         showActivityIndicator()
-        InvestorsDataProvider.default().get { investors, error in
-            self.dismissActivityIndicator()
-            self.ratings = investors?.sorted(by: {$0.index < $1.index})
-            self.tableView.reloadData()
-            self.refreshControl.endRefreshing()
+        InvestorsDataProvider.default().get()
+            .done { respounse in
+                self.dismissActivityIndicator()
+                self.ratings = respounse.items.sorted(by: {$0.index < $1.index})
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+            }.ensure {
+                self.dismissActivityIndicator()
+            }.catch {
+                self.showAlertWith($0)
         }
     }
     

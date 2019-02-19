@@ -6,6 +6,10 @@ class DMViewController: UIViewController {
 
 extension  UIViewController {
     
+    open func showAlertWith(_ error: Error) {
+        showAlertWith(message: error.localizedDescription)
+    }
+        
     open func showAlertWith(title: String = NSLocalizedString("Error!!!", comment: ""), message: String?, cancelButton: Bool = false) {
         let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         

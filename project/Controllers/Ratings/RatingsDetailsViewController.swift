@@ -60,8 +60,24 @@ class RatingsDetailsViewController: DMViewController {
     }
     
     private func message() {
+        if let conversetionID = investor.conversetionID {
+            self.showConversation(conversetionID)
+        } else {
+            showActivityIndicator()
+            ConversationsDataProvider.default().newConversation(with: investor.id) { conversation, error in
+                self.dismissActivityIndicator()
+                if let conversation = conversation {
+                   self.showConversation(conversation.id)
+                } else {
+                    self.showAlertWith(message: error)
+                }
+            }
+        }
+    }
+    
+    private func showConversation(_ id: Int) {
         let chat = InvestorsChatViewController()
-        chat.investor = investor
+        chat.coversetionID = id
         navigationController?.pushViewController(chat, animated: true)
     }
     
@@ -91,13 +107,13 @@ class RatingsDetailsViewController: DMViewController {
     
     private func update() {
         showActivityIndicator()
-        InvestorsDataProvider.default().get(by: investor.id) { investor, error in
-            self.dismissActivityIndicator()
-            if let investor = investor {
-                self.investor = investor
-            } else {
-                self.showAlertWith(message: error)
-            }
+        InvestorsDataProvider.default().get(by: investor.id)
+            .done{
+                self.investor = $0
+            }.ensure {
+                self.dismissActivityIndicator()
+            }.catch {
+                self.showAlertWith($0)
         }
     }
 }

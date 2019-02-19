@@ -11,6 +11,7 @@ public extension UIStoryboard {
         case RatingsDetails
         case More
         case Conversations
+        case AlertNewSignal
     }
     
     subscript<T: UIViewController>(_ identifier: Identifier) -> T {

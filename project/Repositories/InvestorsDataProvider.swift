@@ -1,6 +1,7 @@
 import Alamofire
+import PromiseKit
 
-struct InvestorsDataProvider: Repository, Syncable {
+struct InvestorsDataProvider: PromiseRepository, Syncable {
 
     typealias Item = InvestorModel
     
@@ -12,26 +13,12 @@ struct InvestorsDataProvider: Repository, Syncable {
         return InvestorsDataProvider(session: session, handler: BaseHandler())
     }
     
-    func get(completion: @escaping ([InvestorModel]?, String?) -> Void) {
-        send(request: InvestorModel.get()).responseObject { (response: DataResponse<OffsetResponse<InvestorModel>>) -> Void in
-            switch self.handler.handle(response) {
-            case .success(let result):
-                completion(result.items, nil)
-            case .error(let error):
-                completion(nil, error.localizedDescription)
-            }
-        }
+    func get() -> Promise<OffsetResponse<InvestorModel>> {
+        return send(request: InvestorModel.get())
     }
     
-    func get(by id: Int, completion: @escaping (InvestorModel?, String?) -> Void) {
-        send(request: InvestorModel.get(by: id)).responseObject { (response: DataResponse<InvestorModel>) -> Void in
-            switch self.handler.handle(response) {
-            case .success(let result):
-                completion(result, nil)
-            case .error(let error):
-                completion(nil, error.localizedDescription)
-            }
-        }
+    func get(by id: Int) -> Promise<InvestorModel> {
+        return send(request: InvestorModel.get(by: id))
     }
     
     func follow(_ investor: InvestorModel, completion: @escaping (Bool, String?) -> Void) {

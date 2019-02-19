@@ -40,5 +40,11 @@ extension UserModel {
     static func user() -> RequestProvider {
         return JSONEncodingRequestBuilder(path: "/accounts/user/", method: .get)
     }
+    
+    static func registerFDT(_ token: String) -> RequestProvider {
+        let parameters: [String: Any] = ["registration_id": token,
+                                         "active": true]
+        return JSONEncodingRequestBuilder(path: "/device/fcm/", method: .post, parameters: parameters)
+    }
 }
 

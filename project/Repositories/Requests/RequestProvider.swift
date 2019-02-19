@@ -3,6 +3,7 @@ import Alamofire
 public protocol RequestProvider: URLRequestConvertible {
     var url: String { get }
     var path: String? { get }
+    var keyPath: String? { get }
     var method: HTTPMethod { get }
     var parameters: [String: Any]? { get }
 }
@@ -11,6 +12,7 @@ class BaseRequestBuilder: RequestProvider {
     
     let url: String
     let path: String?
+    let keyPath: String?
     let method: HTTPMethod
     let parameters: [String : Any]?
     
@@ -18,11 +20,13 @@ class BaseRequestBuilder: RequestProvider {
     
     init(url: String = Network.baseURL,
          path: String? = nil,
+         keyPath: String?  = nil,
          method: HTTPMethod = .get,
          parameters: [String: Any]? = nil)
     {
         self.url = url
         self.path = path
+        self.keyPath = keyPath
         self.method = method
         self.parameters = parameters
     }

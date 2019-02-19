@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MuseoCyrl500.otf">
+            <string>MuseoCyrl-500</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="53" id="KGk-i7-Jjw" customClass="PriceTableViewCell" customModule="DominantInvestors" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="52.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQ3-fL-niw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="19E-rV-zuY"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8s-od-wT6">
+                        <rect key="frame" x="79.5" y="0.0" width="161" height="52.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grouving_green" translatesAutoresizingMaskIntoConstraints="NO" id="bzU-ad-XKz">
+                                <rect key="frame" x="15" y="-2" width="48" height="56.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeK-3j-daM">
+                                <rect key="frame" x="71" y="8" width="75" height="36.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bzU-ad-XKz" firstAttribute="leading" secondItem="C8s-od-wT6" secondAttribute="leading" constant="15" id="1Mr-MI-nhH"/>
+                            <constraint firstItem="qeK-3j-daM" firstAttribute="centerY" secondItem="C8s-od-wT6" secondAttribute="centerY" id="5dY-3U-ofq"/>
+                            <constraint firstItem="qeK-3j-daM" firstAttribute="top" secondItem="C8s-od-wT6" secondAttribute="top" constant="8" id="8xe-jR-vg7"/>
+                            <constraint firstAttribute="bottom" secondItem="qeK-3j-daM" secondAttribute="bottom" constant="8" id="a7I-15-KfP"/>
+                            <constraint firstItem="bzU-ad-XKz" firstAttribute="centerY" secondItem="C8s-od-wT6" secondAttribute="centerY" id="c0B-Cf-wtb"/>
+                            <constraint firstItem="bzU-ad-XKz" firstAttribute="centerY" secondItem="C8s-od-wT6" secondAttribute="centerY" id="g1y-Ok-sws"/>
+                            <constraint firstItem="qeK-3j-daM" firstAttribute="leading" secondItem="bzU-ad-XKz" secondAttribute="trailing" constant="8" id="sD1-Qo-r0L"/>
+                            <constraint firstAttribute="trailing" secondItem="qeK-3j-daM" secondAttribute="trailing" constant="15" id="vLL-iZ-yas"/>
+                            <constraint firstItem="qeK-3j-daM" firstAttribute="centerY" secondItem="C8s-od-wT6" secondAttribute="centerY" id="vjQ-D3-6M3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="GQ3-fL-niw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8Vi-XP-F2P"/>
+                    <constraint firstItem="C8s-od-wT6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Kaw-Io-4oo"/>
+                    <constraint firstItem="C8s-od-wT6" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Nf7-TY-jyA"/>
+                    <constraint firstAttribute="bottom" secondItem="C8s-od-wT6" secondAttribute="bottom" id="OzG-SM-EJK"/>
+                    <constraint firstAttribute="trailing" secondItem="GQ3-fL-niw" secondAttribute="trailing" id="up9-Us-yhD"/>
+                    <constraint firstItem="GQ3-fL-niw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wLZ-EV-ed0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="isGrowingIcon" destination="bzU-ad-XKz" id="Gwm-Rk-gCT"/>
+                <outlet property="priceLabel" destination="qeK-3j-daM" id="Jw7-0X-Qak"/>
+                <outlet property="priceView" destination="C8s-od-wT6" id="Pai-RJ-ZiX"/>
+            </connections>
+            <point key="canvasLocation" x="52.799999999999997" y="77.811094452773617"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="grouving_green" width="48" height="56"/>
+    </resources>
+</document>

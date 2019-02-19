@@ -12,18 +12,18 @@ class DMCompanyCollectionCell: UICollectionViewCell {
     open func setupWith(model : CompanyModel) {
         self.model = model
         
-        self.companyImage.image = UIImage(named: "Ellipse 4")
         self.logoImage.image = nil
+        
+        self.companyImage.image = UIImage(named: "Ellipse 4")
 
         if let imageUrl = model.image {
             self.activity.startAnimating()
-            
-            Alamofire.request(imageUrl).responseImage { response in
-                if let image = response.result.value {
-                    self.companyImage.image = image
-                }
+            self.companyImage.loadImage(imageUrl, done: { image in
+                self.companyImage.image = image
                 self.activity.stopAnimating()
-            }
+            }, error: {
+                self.activity.stopAnimating()
+            })
         }
     }
 }

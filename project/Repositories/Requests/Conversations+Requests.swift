@@ -6,30 +6,26 @@ extension User {
         return URLEncodingRequestBuilder(path: "/conversations/")
     }
     
+    static func newConversation(with investor: Int) -> RequestProvider {
+        return URLEncodingRequestBuilder(path: "/conversations/id-for-investor/\(investor)/")
+    }
+    
     static func messages(for conversationsId: Int) -> RequestProvider {
-        return URLEncodingRequestBuilder(path: "/conversations/\(conversationsId)/messages/")
+        return URLEncodingRequestBuilder(path: "/conversations/\(conversationsId)/messages/?ordering=-sent_at")
     }
     
     static func unread() -> RequestProvider {
         return URLEncodingRequestBuilder(path: "/messages/unread-count/")
     }
-}
-
-extension InvestorModel {
-
-    func messageToExisting(_ text: String) -> RequestProvider {
+    
+   static func message(_ text: String, for conversation: Int ) -> RequestProvider {
         let parameters: [String: Any] = ["text": text]
-        return URLEncodingRequestBuilder(path: "/conversations/\(coversetionID)/messages/",
+        return JSONEncodingRequestBuilder(path: "/conversations/\(conversation)/messages/",
             method: .post,
             parameters: parameters)
     }
     
-    func messageToNew(_ text: String) -> RequestProvider {
-        let parameters: [String: Any] = ["text": text, "receiver_id": id]
-        return URLEncodingRequestBuilder(path: "/messages/", method: .post, parameters: parameters)
-    }
-    
-  static func markAsRead(_ conversation: Int) -> RequestProvider {
+    static func markAsRead(_ conversation: Int) -> RequestProvider {
         return URLEncodingRequestBuilder(path: "/conversations/\(conversation)/mark-as-read/", method: .post)
     }
 }

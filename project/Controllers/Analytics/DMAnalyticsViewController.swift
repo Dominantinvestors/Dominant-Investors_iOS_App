@@ -1,10 +1,11 @@
 import UIKit
-//import MBProgressHUD
+import UserNotifications
+import Firebase
 
 class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UICollectionViewDataSource, DMContainerDelegate {
 
-    @IBOutlet weak var collectionView   : UICollectionView!
-    @IBOutlet weak var subscriptionContainer : UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var subscriptionContainer: UIView!
     
     var companies = [CompanyModel]()
 
@@ -12,6 +13,18 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         super.viewDidLoad()
         setupUI()
         self.hideContainer()
+        
+        registerForRemoteNotifications()
+        
+        let notifications: PushNotifications = ServiceLocator.shared.getService()
+        notifications.urlPath.value = ["": ""]
+
+        notifications.urlPath.bindAndFire { data in
+            if let data = data {
+                notifications.openData(data)
+                notifications.urlPath.value = nil
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,6 +35,26 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         setStatusBarBackgroundColor(.clear)
         
         updateIdeas()
+    }
+    
+    private func registerForRemoteNotifications() {
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: authOptions,
+            completionHandler: { success, _ in
+                if success {
+                    DispatchQueue.main.async {
+                        UIApplication.shared.registerForRemoteNotifications()
+                        self.registerDeviceToken()
+                    }
+                }
+        })
+    }
+    
+    func registerDeviceToken() {
+        if let token = Messaging.messaging().fcmToken {
+            AccountsDataProvider.default().registerFDT(token) { _, _ in }
+        }
     }
     
     private func updateIdeas() {

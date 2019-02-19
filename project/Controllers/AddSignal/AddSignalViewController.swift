@@ -25,7 +25,7 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
         tableView.register(cell: CreateSignalTableViewCell.self)
         tableView.register(cell: AddSignalHeaderTableViewCell.self)
 
-        header = AddSignalHeaderDataSource(data: [(company, nil)])
+        header = AddSignalHeaderDataSource(item: (company, nil))
         buyDataSource = EditableDataSource(title: NSLocalizedString("BUY POINT", comment: ""),
                                            rightText: Values.Currency)
         targetDataSource = EditableDataSource(title: NSLocalizedString("TARGET PRICE", comment: ""),
@@ -49,14 +49,15 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
     
     private func updateRate() {
         self.showActivityIndicator()
-        CompanyDataProvider.default().rate(company) {[unowned self] rate, error in
-            self.dismissActivityIndicator()
-            if let rate = rate {
-                self.header.data = [(self.company, rate)]
+        CompanyDataProvider.default().rate(company)
+            .done{
+                self.header.data = [(self.company, $0)]
                 self.tableView.reloadData()
-            } else {
-                self.showAlertWith(message: error)
-            }
+            }.ensure {
+                self.dismissActivityIndicator()
+
+            }.catch {
+                self.showAlertWith($0)
         }
     }
     
@@ -83,14 +84,14 @@ class AddSignalHeaderDataSource:
     CellContainable,
     CellConfigurator
 {
-    var data: [(Company, Rate?)]
+    var data: [(Company?, Rate?)]
     
-    init(data: [(Company, Rate?)]) {
-        self.data = data
+    init(item: (Company?, Rate?)) {
+        self.data = [item]
     }
     
-    func configurateCell(_ cell: AddSignalHeaderTableViewCell, item: (Company, Rate?), at indexPath: IndexPath) {
-        cell.companyTitle.text = item.0.name
+    func configurateCell(_ cell: AddSignalHeaderTableViewCell, item: (Company?, Rate?), at indexPath: IndexPath) {
+        cell.companyTitle.text = item.0?.name
         cell.companyPrice.attributedText = (item.1.flatMap{ $0.rate } ?? "0.0" ).toMoneyStyle()
     }
 }

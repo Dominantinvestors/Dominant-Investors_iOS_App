@@ -17,7 +17,7 @@
         <!--Main Navigation Controller-->
         <scene sceneID="AXR-a0-dX6">
             <objects>
-                <navigationController id="U02-tf-7YS" customClass="MainNavigationController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="U02-tf-7YS" customClass="MainNavigationController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="abi-HB-Vki">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -33,7 +33,7 @@
         <!--Personal View Controller-->
         <scene sceneID="z9h-zC-L4q">
             <objects>
-                <viewController restorationIdentifier="portfolio" storyboardIdentifier="portfolio" id="zhg-Ll-4Gt" customClass="PersonalViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="portfolio" storyboardIdentifier="portfolio" id="zhg-Ll-4Gt" customClass="PersonalViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ggR-72-DX3"/>
                         <viewControllerLayoutGuide type="bottom" id="ilW-DD-Bdl"/>
@@ -42,7 +42,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imF-vl-QBW" customClass="SegmentControll" customModule="DominantCrypto" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imF-vl-QBW" customClass="SegmentControll" customModule="DominantInvestors" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyI-2U-rho">
@@ -108,7 +108,7 @@
         <!--Buy View Controller-->
         <scene sceneID="6Ec-Zr-iYN">
             <objects>
-                <viewController restorationIdentifier="Buy" storyboardIdentifier="Buy" hidesBottomBarWhenPushed="YES" id="pbv-DW-CY9" customClass="BuyViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Buy" storyboardIdentifier="Buy" hidesBottomBarWhenPushed="YES" id="pbv-DW-CY9" customClass="BuyViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="opY-ml-z6F"/>
                         <viewControllerLayoutGuide type="bottom" id="6KE-IQ-8wL"/>
@@ -142,7 +142,7 @@
         <!--Add Signal View Controller-->
         <scene sceneID="51j-2b-qnt">
             <objects>
-                <viewController restorationIdentifier="AddSignal" storyboardIdentifier="AddSignal" hidesBottomBarWhenPushed="YES" id="H6C-e2-ZyE" customClass="AddSignalViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="AddSignal" storyboardIdentifier="AddSignal" hidesBottomBarWhenPushed="YES" id="H6C-e2-ZyE" customClass="AddSignalViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Xc-ne-c2B"/>
                         <viewControllerLayoutGuide type="bottom" id="EfB-BO-I6S"/>
@@ -175,7 +175,7 @@
         <!--Search Signal View Controller-->
         <scene sceneID="Pil-JB-NBj">
             <objects>
-                <viewController restorationIdentifier="SearchSignal" storyboardIdentifier="SearchSignal" hidesBottomBarWhenPushed="YES" id="eub-95-nls" customClass="SearchSignalViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SearchSignal" storyboardIdentifier="SearchSignal" hidesBottomBarWhenPushed="YES" id="eub-95-nls" customClass="SearchSignalViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b5S-Yf-TzY"/>
                         <viewControllerLayoutGuide type="bottom" id="UDn-yh-p6D"/>
@@ -211,7 +211,7 @@
         <!--Sell View Controller-->
         <scene sceneID="f8x-OC-rUd">
             <objects>
-                <viewController restorationIdentifier="Sell" storyboardIdentifier="Sell" hidesBottomBarWhenPushed="YES" id="IJc-Xd-jJx" customClass="SellViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Sell" storyboardIdentifier="Sell" hidesBottomBarWhenPushed="YES" id="IJc-Xd-jJx" customClass="SellViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3ZX-yk-RWu"/>
                         <viewControllerLayoutGuide type="bottom" id="uxN-rt-nua"/>
@@ -245,7 +245,7 @@
         <!--Conversations View Controller-->
         <scene sceneID="gK4-0B-6sm">
             <objects>
-                <viewController restorationIdentifier="Conversations" storyboardIdentifier="Conversations" hidesBottomBarWhenPushed="YES" id="Zku-kF-o5z" customClass="ConversationsViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Conversations" storyboardIdentifier="Conversations" hidesBottomBarWhenPushed="YES" id="Zku-kF-o5z" customClass="ConversationsViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="44G-8X-Wjb"/>
                         <viewControllerLayoutGuide type="bottom" id="bR2-5F-StE"/>
@@ -254,7 +254,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="lRJ-PR-nd6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="lRJ-PR-nd6">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
