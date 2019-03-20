@@ -3,8 +3,8 @@ import PromiseKit
 
 class AlertNewSignalViewController: UIViewController {
 
-    var investorID: String!
-    var signalID: String!
+    var investorID: Int!
+    var signalID: Int!
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -19,10 +19,10 @@ class AlertNewSignalViewController: UIViewController {
         super.viewDidLoad()
         
         firstly{
-                SignalsDataProvider.default().get(by: Int(signalID)!)
+                SignalsDataProvider.default().get(by: signalID!)
             }.then { signal in
                 when(fulfilled: Promise.value(signal),
-                     InvestorsDataProvider.default().get(by: Int(self.investorID)!),
+                     InvestorsDataProvider.default().get(by: self.investorID!),
                      CompanyDataProvider.default().rate(signal))
             }.done { signal, investor, rate in
                 
@@ -35,8 +35,10 @@ class AlertNewSignalViewController: UIViewController {
                 }
                 
                 let chart = ChartDataSource(item: signal)
+                let info = SignalInfoSource(item: signal)
+
+                let composed = ComposedDataSource([title, subtitle, info, buy, chart])
                 
-                let composed = ComposedDataSource([title, subtitle, buy, chart])
                 self.dataSource = TableViewDataSourceShim(composed)
                 self.tableView.reloadData()
             }.ensure {
@@ -49,6 +51,7 @@ class AlertNewSignalViewController: UIViewController {
         tableView.register(cell: CreateSignalTableViewCell.self)
         tableView.register(cell: AlertTitleTableViewCell.self)
         tableView.register(cell: ChartTableViewCell.self)
+        tableView.register(cell: SignalInfoTableViewCell.self)
     }
     
     fileprivate func buy(_ company: Company) {
@@ -89,5 +92,27 @@ struct ChartDataSource:
     
     func configurateCell(_ cell: ChartTableViewCell, item: Company, at indexPath: IndexPath) {
         cell.company = item
+    }
+}
+
+struct SignalInfoSource:
+    TableViewDataSource,
+    DataContainable,
+    CellContainable,
+    CellConfigurator
+{
+    var data: [SignalModel]
+    
+    init(item: SignalModel) {
+        self.data = [item]
+    }
+    
+    func configurateCell(_ cell: SignalInfoTableViewCell, item: SignalModel, at indexPath: IndexPath) {
+        cell.point.text = item.buyPoint + Values.Currency
+        cell.pointTitle.text = NSLocalizedString("BUY POINT", comment: "")
+        cell.targetPrice.text = item.targetPrice + Values.Currency
+        cell.targetTitle.text = NSLocalizedString("TARGET PRICE", comment: "")
+        cell.stop.text = item.stopLoss + Values.Currency
+        cell.stopTitle.text = NSLocalizedString("STOP LOSS", comment: "")
     }
 }

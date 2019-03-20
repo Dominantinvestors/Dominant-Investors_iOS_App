@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MuseoCyrl300.otf">
+            <string>MuseoCyrl-300</string>
+        </array>
+        <array key="MuseoCyrl500.otf">
+            <string>MuseoCyrl-500</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="67" id="KGk-i7-Jjw" customClass="SignalInfoTableViewCell" customModule="DominantInvestors" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="341" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="341" height="66.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0k-9N-Vee">
+                        <rect key="frame" x="0.0" y="26" width="341" height="40.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 $" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHB-wG-maW">
+                                <rect key="frame" x="0.0" y="0.0" width="113.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyt-Lo-NSI">
+                                <rect key="frame" x="0.0" y="23.5" width="113.5" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
+                                <color key="textColor" red="0.76862745099999996" green="0.79215686269999996" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 $" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BH-CN-hOS">
+                                <rect key="frame" x="113.5" y="0.0" width="114" height="19.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xc-ZR-PvL">
+                                <rect key="frame" x="113.5" y="23.5" width="114" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
+                                <color key="textColor" red="0.76862745099999996" green="0.79215686269999996" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="0.00 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAK-pp-dwL">
+                                <rect key="frame" x="227.5" y="0.0" width="113.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6f-DK-LJy">
+                                <rect key="frame" x="227.5" y="23.5" width="113.5" height="17"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
+                                <color key="textColor" red="0.76862745099999996" green="0.79215686269999996" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c6f-DK-LJy" firstAttribute="leading" secondItem="6xc-ZR-PvL" secondAttribute="trailing" id="1LA-ve-Wot"/>
+                            <constraint firstItem="c6f-DK-LJy" firstAttribute="top" secondItem="MAK-pp-dwL" secondAttribute="bottom" constant="4" id="37V-Yw-LOc"/>
+                            <constraint firstAttribute="bottom" secondItem="c6f-DK-LJy" secondAttribute="bottom" id="8Ds-Pv-mTK"/>
+                            <constraint firstAttribute="bottom" secondItem="6xc-ZR-PvL" secondAttribute="bottom" id="AdI-oD-fh7"/>
+                            <constraint firstItem="MAK-pp-dwL" firstAttribute="top" secondItem="q0k-9N-Vee" secondAttribute="top" id="ICx-7a-rCh"/>
+                            <constraint firstItem="6xc-ZR-PvL" firstAttribute="leading" secondItem="oyt-Lo-NSI" secondAttribute="trailing" id="Kit-1D-Ubx"/>
+                            <constraint firstItem="MAK-pp-dwL" firstAttribute="leading" secondItem="3BH-CN-hOS" secondAttribute="trailing" id="Q15-G6-uQ4"/>
+                            <constraint firstItem="IHB-wG-maW" firstAttribute="top" secondItem="q0k-9N-Vee" secondAttribute="top" id="TUm-xf-tjJ"/>
+                            <constraint firstItem="6xc-ZR-PvL" firstAttribute="top" secondItem="3BH-CN-hOS" secondAttribute="bottom" constant="4" id="WBp-kd-UvS"/>
+                            <constraint firstItem="MAK-pp-dwL" firstAttribute="width" secondItem="IHB-wG-maW" secondAttribute="width" id="Xbc-yU-8Eh"/>
+                            <constraint firstItem="IHB-wG-maW" firstAttribute="leading" secondItem="q0k-9N-Vee" secondAttribute="leading" id="Xj9-fn-Bqj"/>
+                            <constraint firstAttribute="trailing" secondItem="MAK-pp-dwL" secondAttribute="trailing" id="ZjB-O3-qak"/>
+                            <constraint firstItem="oyt-Lo-NSI" firstAttribute="leading" secondItem="q0k-9N-Vee" secondAttribute="leading" id="eAi-DL-ee6"/>
+                            <constraint firstItem="3BH-CN-hOS" firstAttribute="width" secondItem="IHB-wG-maW" secondAttribute="width" id="gak-5u-CSk"/>
+                            <constraint firstItem="c6f-DK-LJy" firstAttribute="width" secondItem="oyt-Lo-NSI" secondAttribute="width" id="hab-Cp-vTZ"/>
+                            <constraint firstItem="3BH-CN-hOS" firstAttribute="top" secondItem="q0k-9N-Vee" secondAttribute="top" id="kMh-7X-Bm6"/>
+                            <constraint firstItem="oyt-Lo-NSI" firstAttribute="top" secondItem="IHB-wG-maW" secondAttribute="bottom" constant="4" id="mMc-Xk-NFk"/>
+                            <constraint firstItem="3BH-CN-hOS" firstAttribute="leading" secondItem="IHB-wG-maW" secondAttribute="trailing" id="sz2-2k-0bQ"/>
+                            <constraint firstAttribute="bottom" secondItem="oyt-Lo-NSI" secondAttribute="bottom" id="t3v-Jh-nrt"/>
+                            <constraint firstItem="6xc-ZR-PvL" firstAttribute="width" secondItem="oyt-Lo-NSI" secondAttribute="width" id="uiP-8P-PJo"/>
+                            <constraint firstAttribute="trailing" secondItem="c6f-DK-LJy" secondAttribute="trailing" id="ukS-f2-Axr"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dots" translatesAutoresizingMaskIntoConstraints="NO" id="OBj-ws-W1E">
+                        <rect key="frame" x="95.5" y="0.0" width="150" height="4"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="cCG-cQ-PbP"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="q0k-9N-Vee" secondAttribute="bottom" id="65N-pd-6zM"/>
+                    <constraint firstAttribute="trailing" secondItem="q0k-9N-Vee" secondAttribute="trailing" id="7M9-LM-Hk8"/>
+                    <constraint firstItem="OBj-ws-W1E" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Dxi-p9-ZDh"/>
+                    <constraint firstItem="OBj-ws-W1E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="H89-Va-hnB"/>
+                    <constraint firstItem="q0k-9N-Vee" firstAttribute="top" secondItem="OBj-ws-W1E" secondAttribute="bottom" constant="22" id="i5C-RK-GNx"/>
+                    <constraint firstItem="q0k-9N-Vee" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ina-BT-mb9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="point" destination="IHB-wG-maW" id="qsn-zM-spz"/>
+                <outlet property="pointTitle" destination="oyt-Lo-NSI" id="jTI-l4-Idw"/>
+                <outlet property="stop" destination="MAK-pp-dwL" id="fU5-57-lSC"/>
+                <outlet property="stopTitle" destination="c6f-DK-LJy" id="4Bw-XF-gbG"/>
+                <outlet property="targetPrice" destination="3BH-CN-hOS" id="UmN-RL-90Y"/>
+                <outlet property="targetTitle" destination="6xc-ZR-PvL" id="v6a-yX-UR5"/>
+            </connections>
+            <point key="canvasLocation" x="154.40000000000001" y="169.56521739130437"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Dots" width="678" height="4"/>
+    </resources>
+</document>

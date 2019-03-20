@@ -42,6 +42,11 @@ class MoreViewController: DMScreenerTypeViewController {
         self.loadTradingViewScreener()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     fileprivate func loadTradingViewScreener() {
         self.showActivityIndicator()
         self.webView.delegate = self

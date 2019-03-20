@@ -9,6 +9,10 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
     
     var companies = [CompanyModel]()
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -17,8 +21,6 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         registerForRemoteNotifications()
         
         let notifications: PushNotifications = ServiceLocator.shared.getService()
-        notifications.urlPath.value = ["": ""]
-
         notifications.urlPath.bindAndFire { data in
             if let data = data {
                 notifications.openData(data)
@@ -31,10 +33,10 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         super.viewWillAppear(animated)
         self.collectionView.reloadData()
         
-        self.navigationController?.navigationBar.isHidden = false
         setStatusBarBackgroundColor(.clear)
         
         updateIdeas()
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     private func registerForRemoteNotifications() {
@@ -66,11 +68,6 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
             }
             self.dismissActivityIndicator()
         }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.isHidden = false
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

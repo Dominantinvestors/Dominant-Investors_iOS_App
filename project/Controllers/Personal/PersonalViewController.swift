@@ -1,4 +1,5 @@
 import UIKit
+import PromiseKit
 
 class PersonalViewController: KeyboardObservableViewController {
     
@@ -12,7 +13,8 @@ class PersonalViewController: KeyboardObservableViewController {
     private var watchList: WatchListDataSource!
     private var portfolio: PortfolioDataSource!
     private var transactions: TransactionsDataSource!
-    
+    private var refreshControl : UIRefreshControl!
+
     @IBOutlet weak var segmentControll: SegmentControll!
     
     override func viewDidLoad() {
@@ -21,6 +23,11 @@ class PersonalViewController: KeyboardObservableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 50
  
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing")
+        refreshControl.addTarget(self, action: #selector(self.refresh(sender:)), for: .valueChanged)
+        tableView.addSubview(self.refreshControl)
+        
         tableView.register(cell: CreateSignalTableViewCell.self)
         tableView.register(cell: WatchListTableViewCell.self)
         tableView.register(cell: PortfolioTableViewCell.self)
@@ -49,6 +56,10 @@ class PersonalViewController: KeyboardObservableViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    @objc private func refresh(sender : UIRefreshControl) {
+        reloadData()
     }
     
     private func createSignal() {
@@ -110,38 +121,24 @@ class PersonalViewController: KeyboardObservableViewController {
     }
     
     fileprivate func reloadData() {
-        PortfolioDataProvider.default().get {[unowned self] portfolio, error in
-            if let portfolio = portfolio {
+        
+        showActivityIndicator()
+        firstly{ when(fulfilled:  PortfolioDataProvider.default().get(),
+                      PortfolioDataProvider.default().transactions(),
+                      SignalsDataProvider.default().get(),
+                      ConversationsDataProvider.default().unread())}
+            .done{ portfolio, assets, signals, unread in
                 let user: UserModel = ServiceLocator.shared.getService()
                 self.portfolio.data = [(user, portfolio)]
+                self.transactions.data = assets.items
+                self.watchList.data = signals.items
+                self.portfolio.unread = unread.count
                 self.tableView.reloadData()
-            } else {
-                self.showAlertWith(message: error)
-            }
-        }
-        
-        PortfolioDataProvider.default().transactions {[unowned self] assets, error in
-            if let assets = assets {
-                self.transactions.data = assets
-                self.tableView.reloadData()
-            } else {
-                self.showAlertWith(message: error)
-            }
-        }
-        
-        SignalsDataProvider.default().get()
-            .done {
-                self.watchList.data = $0.items
-                self.tableView.reloadData()
-            }.ensure{
-                
+            }.ensure {
+                self.dismissActivityIndicator()
+                self.refreshControl.endRefreshing()
             }.catch {
                 self.showAlertWith($0)
-        }
-        
-        ConversationsDataProvider.default().unread { count, _ in
-            self.portfolio.unread = count
-            self.tableView.reloadData()
         }
     }
     

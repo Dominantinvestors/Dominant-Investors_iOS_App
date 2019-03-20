@@ -5,7 +5,7 @@ class Conversation: Mappable {
     var id: Int = 0
     var unread: Int = 0
     var last: Message?
-    var created: String = ""
+    var created: Date = Date()
     var peers: [UserModel]!
     
     required init?(map: Map) { }
@@ -14,7 +14,7 @@ class Conversation: Mappable {
         id <- map["id"]
         unread <- map["unread_message_count"]
         last <- map["last_message"]
-        created <- map["created_on"]
+        created <- (map["created_on"], DateTransformator())
         peers <- map["peers"]
     }
 }

@@ -1,6 +1,7 @@
 import Alamofire
+import PromiseKit
 
-struct PortfolioDataProvider: Repository, Syncable {
+struct PortfolioDataProvider: PromiseRepository, Syncable {
     
     typealias Item = PortfolioModel
     
@@ -12,26 +13,12 @@ struct PortfolioDataProvider: Repository, Syncable {
         return PortfolioDataProvider(session: session, handler: BaseHandler())
     }
     
-    func get(completion: @escaping (PortfolioModel?, String?) -> Void) {
-        send(request: PortfolioModel.get()).responseObject { (response: DataResponse<PortfolioModel>) -> Void in
-            switch self.handler.handle(response) {
-            case .success(let result):
-                completion(result, nil)
-            case .error(let error):
-                completion(nil, error.localizedDescription)
-            }
-        }
+    func get() -> Promise<PortfolioModel> {
+        return send(request: PortfolioModel.get())
     }
     
-    func transactions(completion: @escaping ([TransactionModel]?, String?) -> Void) {
-        send(request: PortfolioModel.transactions()).responseObject { (response: DataResponse<OffsetResponse<TransactionModel>>) -> Void in
-            switch self.handler.handle(response) {
-            case .success(let result):
-                completion(result.items, nil)
-            case .error(let error):
-                completion(nil, error.localizedDescription)
-            }
-        }
+    func transactions() -> Promise<OffsetResponse<TransactionModel>> {
+        return send(request: PortfolioModel.transactions())
     }
     
     func transactions(_ forUser: Int, completion: @escaping ([TransactionModel]?, String?) -> Void) {

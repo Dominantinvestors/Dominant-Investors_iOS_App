@@ -1,6 +1,7 @@
 import Alamofire
+import PromiseKit
 
-struct ConversationsDataProvider: Repository, Syncable {
+struct ConversationsDataProvider: PromiseRepository, Syncable {
     typealias Item = Conversation
     
     let session: SessionManager
@@ -66,15 +67,8 @@ struct ConversationsDataProvider: Repository, Syncable {
         }
     }
     
-    func unread(completion: @escaping (Int, String?) -> Void) {
-        send(request: UserModel.unread()).responseObject { (response: DataResponse<Unread>) -> Void in
-            switch self.handler.handle(response) {
-            case .success(let result):
-                completion(result.count, nil)
-            case .error(let error):
-                completion(0, error.localizedDescription)
-            }
-        }
+    func unread() -> Promise<Unread> {
+        return send(request: UserModel.unread())
     }
 }
 

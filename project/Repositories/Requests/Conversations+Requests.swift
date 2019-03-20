@@ -19,7 +19,8 @@ extension User {
     }
     
    static func message(_ text: String, for conversation: Int ) -> RequestProvider {
-        let parameters: [String: Any] = ["text": text]
+        let parameters: [String: Any] = ["text": text,
+                                         "sent_at": Date().toString(format: .isoDateTimeMilliSec)]
         return JSONEncodingRequestBuilder(path: "/conversations/\(conversation)/messages/",
             method: .post,
             parameters: parameters)

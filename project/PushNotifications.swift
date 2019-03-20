@@ -1,5 +1,17 @@
 import Foundation
 
+enum PushNotificationsTypes: String {
+    case none = "0"
+    case NEW_IDEA = "1"
+    case BUY_POINT = "2"
+    case NEW_SIGNAL = "3"
+    case NEW_FOLLOWER = "4"
+    case NEW_MESSAGE = "5"
+    case NEW_ADMIN_MESSAGE = "6"
+    case STOP_LOSS = "7"
+    case TARGET_PRICE = "8"
+}
+
 class PushNotifications {
     let window: UIWindow?
     
@@ -26,28 +38,28 @@ class PushNotifications {
     }
     
     func openData(_ data: [AnyHashable: Any]) {
- 
-        let navigation = MainNavigationController()
-        let controller: AlertNewSignalViewController = UIStoryboard.init(name: "Main", bundle: nil)[.AlertNewSignal]
-        controller.investorID = "1"
-        controller.signalID = "4"
-        navigation.pushViewController(controller, animated: false)
-        self.window?.rootViewController?.present(navigation, animated: true, completion: nil)
-
-        if let data = data as? [String: Any], let type = data["type"] as? String {
-            ////Type 3
-            if type == "new_investor_signal",
-                let investor = data["investor_id"] as? String,
-                let signal = data["signal_id"] as? String
-            {
-                let navigation = MainNavigationController()
-                let controller: AlertNewSignalViewController = UIStoryboard.init(name: "Main", bundle: nil)[.AlertNewSignal]
-                controller.investorID = investor
-                controller.signalID = signal
-                navigation.pushViewController(controller, animated: false)
-                self.window?.rootViewController?.present(navigation, animated: true, completion: nil)
+        if let data = data as? [String: Any],
+            let type = data["type"] as? String
+        {
+            switch PushNotificationsTypes.init(rawValue: type) ?? .none {
+            case .BUY_POINT:
+                newSignal(data)
+            default:
+                print("PushNotificationsTypes not parced")
             }
-            
+        }
+    }
+    
+    func newSignal(_ data: [String: Any]) {
+        if let investor = data["user_id"] as? String,
+            let signal = data["signal_id"] as? String
+        {
+            let navigation = MainNavigationController()
+            let controller: AlertNewSignalViewController = UIStoryboard.init(name: "Main", bundle: nil)[.AlertNewSignal]
+            controller.investorID = Int(investor)
+            controller.signalID = Int(signal)
+            navigation.pushViewController(controller, animated: false)
+            self.window?.rootViewController?.present(navigation, animated: true, completion: nil)
         }
     }
 }

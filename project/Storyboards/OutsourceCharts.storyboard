@@ -13,7 +13,7 @@
         <!--Estimaze Chart View Controller-->
         <scene sceneID="s3x-ss-RrA">
             <objects>
-                <viewController storyboardIdentifier="DMEstimazeChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zyr-ux-rLf" customClass="DMEstimazeChartViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DMEstimazeChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zyr-ux-rLf" customClass="DMEstimazeChartViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vru-a1-dvU"/>
                         <viewControllerLayoutGuide type="bottom" id="SUN-Fq-B0b"/>
@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="aBd-Ls-Tg2">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="aBd-Ls-Tg2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <webView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="K8s-GL-bcB">
@@ -75,7 +75,7 @@
         <!--Trading View Chart View Controller-->
         <scene sceneID="MwD-9g-feM">
             <objects>
-                <viewController storyboardIdentifier="DMTradingViewChartViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j0l-uE-c2o" customClass="DMTradingViewChartViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DMTradingViewChartViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j0l-uE-c2o" customClass="DMTradingViewChartViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DTw-5E-ttb"/>
                         <viewControllerLayoutGuide type="bottom" id="IGp-W7-yxk"/>
@@ -89,7 +89,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" red="0.062745098040000002" green="0.070588235289999995" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Vyb-9x-py7" firstAttribute="leading" secondItem="gIh-l0-LGA" secondAttribute="leading" id="HNO-XV-Wfc"/>
                             <constraint firstAttribute="bottom" secondItem="Vyb-9x-py7" secondAttribute="bottom" id="LaQ-dK-CT5"/>

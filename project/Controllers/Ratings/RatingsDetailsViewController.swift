@@ -59,6 +59,11 @@ class RatingsDetailsViewController: DMViewController {
         self.tableView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     private func message() {
         if let conversetionID = investor.conversetionID {
             self.showConversation(conversetionID)

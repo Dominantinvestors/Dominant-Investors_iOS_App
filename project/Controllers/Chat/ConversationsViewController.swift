@@ -66,7 +66,7 @@ struct ConversationDataSource:
     
     func configurateCell(_ cell: ConversationTableViewCell, item: Conversation, at indexPath: IndexPath) {
         cell.names.text = item.peers.compactMap{ $0.fullName() }.joined(separator: ", ")
-        cell.date.text = item.created
+        cell.date.text = item.created.toString(style: .short)
         cell.message.text = item.last?.text
     }
 }

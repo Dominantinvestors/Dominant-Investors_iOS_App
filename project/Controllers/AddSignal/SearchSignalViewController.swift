@@ -45,7 +45,7 @@ class SearchSignalViewController: KeyboardObservableViewController, UISearchBarD
             
             if let items = items {
                 self.items.data = items
-                self.tableView.reloadData()
+                self.tableView.reloadSections([1], with: .fade)
             } else {
                 self.showAlertWith(message: error)
             }

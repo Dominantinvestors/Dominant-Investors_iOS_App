@@ -9,6 +9,11 @@ class CompanyChatViewController: ChatViewController {
         navigationController?.navigationBar.tintColor = .lightGray
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     override func loadFirstMessages() {
         showActivityIndicator()
         CompanyDataProvider.default().comments(company) { messages, error in

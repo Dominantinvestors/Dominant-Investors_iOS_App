@@ -26,15 +26,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="540" id="aGC-Zs-xxe" customClass="CompanyFooterView" customModule="DominantCrypto" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="540"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="525" id="aGC-Zs-xxe" customClass="CompanyFooterView" customModule="DominantInvestors" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="525"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aGC-Zs-xxe" id="JCf-Ay-UjO">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="539.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="524.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJe-hU-C9H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="539.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="524.5"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6KM-nL-kR0">
                                 <rect key="frame" x="0.0" y="35" width="375" height="90"/>
@@ -103,19 +103,14 @@
                                     <constraint firstItem="1a4-7T-VjZ" firstAttribute="width" secondItem="r0w-rH-RSe" secondAttribute="width" id="xpt-hg-uty"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaL-lC-Cb7">
-                                <rect key="frame" x="12" y="140" width="351" height="55"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="17"/>
-                                <state key="normal" image="interactive"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGNAL INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbC-tD-wR2">
-                                <rect key="frame" x="56" y="280" width="263.5" height="30"/>
+                                <rect key="frame" x="56" y="237" width="263.5" height="30"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yY-Be-T3I">
-                                <rect key="frame" x="0.0" y="345" width="375" height="125"/>
+                                <rect key="frame" x="0.0" y="302" width="375" height="125"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nye-fi-WL0">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="62.5"/>
@@ -255,36 +250,61 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="its-V0-eZJ">
-                                <rect key="frame" x="-90.5" y="500" width="556" height="94"/>
+                                <rect key="frame" x="-90.5" y="457" width="556" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="y2x-kX-fLV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
                                 <state key="normal" title="ADD TO WATCH LIST" backgroundImage="addToWatchList">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALK-BC-PTB" customClass="ActionHandleButton" customModule="DominantCrypto" customModuleProvider="target">
-                                <rect key="frame" x="-90.5" y="210" width="556" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALK-BC-PTB" customClass="ActionHandleButton" customModule="DominantInvestors" customModuleProvider="target">
+                                <rect key="frame" x="223.5" y="137" width="139.5" height="50"/>
+                                <color key="backgroundColor" red="0.8901960784313725" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="2PC-Mo-vzH"/>
+                                    <constraint firstAttribute="height" constant="50" id="rbE-8R-aoG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
-                                <state key="normal" title=" COMMENTS" image="rating_message_icon" backgroundImage="addToWatchList"/>
+                                <state key="normal" title="   DISCUSS" image="rating_message_icon"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaL-lC-Cb7">
+                                <rect key="frame" x="12" y="137" width="199.5" height="50"/>
+                                <color key="backgroundColor" red="0.8901960784313725" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wE7-ZM-Ew2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
+                                <state key="normal" title="  INTERACTIVE CHART" image="chart"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6KM-nL-kR0" firstAttribute="leading" secondItem="R0Y-PC-bNf" secondAttribute="leading" id="3hG-xL-dqH"/>
-                            <constraint firstItem="ALK-BC-PTB" firstAttribute="top" secondItem="SaL-lC-Cb7" secondAttribute="bottom" constant="15" id="7XU-Ub-HWo"/>
+                            <constraint firstItem="ALK-BC-PTB" firstAttribute="leading" secondItem="SaL-lC-Cb7" secondAttribute="trailing" constant="12" id="4tl-mk-hB1"/>
                             <constraint firstItem="its-V0-eZJ" firstAttribute="top" secondItem="6yY-Be-T3I" secondAttribute="bottom" constant="30" id="855-Rp-f6t"/>
                             <constraint firstItem="6yY-Be-T3I" firstAttribute="leading" secondItem="R0Y-PC-bNf" secondAttribute="leading" id="8OE-ge-jTz"/>
+                            <constraint firstItem="ALK-BC-PTB" firstAttribute="top" secondItem="SaL-lC-Cb7" secondAttribute="top" id="Dwh-Lv-oc2"/>
                             <constraint firstItem="6yY-Be-T3I" firstAttribute="top" secondItem="UbC-tD-wR2" secondAttribute="bottom" constant="35" id="Mi9-gV-Pgj"/>
                             <constraint firstItem="R0Y-PC-bNf" firstAttribute="trailing" secondItem="6yY-Be-T3I" secondAttribute="trailing" id="TSa-M6-fW4"/>
                             <constraint firstItem="UbC-tD-wR2" firstAttribute="centerX" secondItem="FJe-hU-C9H" secondAttribute="centerX" id="YYM-Zz-uL8"/>
                             <constraint firstItem="R0Y-PC-bNf" firstAttribute="trailing" secondItem="6KM-nL-kR0" secondAttribute="trailing" id="adS-gF-hMD"/>
+                            <constraint firstAttribute="trailing" secondItem="ALK-BC-PTB" secondAttribute="trailing" constant="12" id="d6G-6C-nJD"/>
                             <constraint firstItem="6KM-nL-kR0" firstAttribute="top" secondItem="R0Y-PC-bNf" secondAttribute="top" constant="35" id="ead-3h-RST"/>
-                            <constraint firstItem="UbC-tD-wR2" firstAttribute="top" secondItem="SaL-lC-Cb7" secondAttribute="bottom" constant="85" id="it2-ry-yjF"/>
-                            <constraint firstItem="SaL-lC-Cb7" firstAttribute="top" secondItem="6KM-nL-kR0" secondAttribute="bottom" constant="15" id="nOx-ed-79g"/>
-                            <constraint firstItem="SaL-lC-Cb7" firstAttribute="centerX" secondItem="FJe-hU-C9H" secondAttribute="centerX" id="oO4-CR-kv7"/>
-                            <constraint firstItem="ALK-BC-PTB" firstAttribute="centerX" secondItem="FJe-hU-C9H" secondAttribute="centerX" id="vba-am-Auh"/>
+                            <constraint firstItem="UbC-tD-wR2" firstAttribute="top" secondItem="SaL-lC-Cb7" secondAttribute="bottom" constant="50" id="exW-uV-fjB"/>
+                            <constraint firstItem="SaL-lC-Cb7" firstAttribute="top" secondItem="6KM-nL-kR0" secondAttribute="bottom" constant="12" id="fRa-zr-GUb"/>
+                            <constraint firstItem="SaL-lC-Cb7" firstAttribute="leading" secondItem="R0Y-PC-bNf" secondAttribute="leading" constant="12" id="pPe-GO-Prw"/>
+                            <constraint firstItem="ALK-BC-PTB" firstAttribute="width" secondItem="SaL-lC-Cb7" secondAttribute="width" multiplier="0.7" id="w3i-mJ-Rae"/>
                             <constraint firstItem="its-V0-eZJ" firstAttribute="centerX" secondItem="FJe-hU-C9H" secondAttribute="centerX" id="zUW-8d-Vwc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R0Y-PC-bNf"/>
@@ -311,12 +331,12 @@
                 <outlet property="targetPrice" destination="di6-0e-lZv" id="NDt-vK-Qaf"/>
                 <outlet property="tradingViewButton" destination="SaL-lC-Cb7" id="5GP-5i-Wb7"/>
             </connections>
-            <point key="canvasLocation" x="151.19999999999999" y="-84.557721139430285"/>
+            <point key="canvasLocation" x="151.19999999999999" y="-44.527736131934034"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="addToWatchList" width="556" height="94"/>
-        <image name="interactive" width="351" height="55"/>
+        <image name="chart" width="45" height="36"/>
         <image name="rating_message_icon" width="25" height="25"/>
     </resources>
 </document>

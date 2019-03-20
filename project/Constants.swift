@@ -20,6 +20,10 @@ struct Colors {
     static let DMChartButtonColor = UIColor.init(red: 215/255, green: 221/255, blue: 238/255, alpha: 1)
     
     static let primaryColor = UIColor(red: 69/255, green: 193/255, blue: 89/255, alpha: 1)
+    
+    static let red = UIColor(red: 227/255, green: 45/255, blue: 45/255, alpha: 1)
+    static let green = UIColor(red: 55/255, green: 159/255, blue: 82/255, alpha: 1)
+
 }
 
 struct Strings {

@@ -29,16 +29,17 @@ class DMEstimazeChartViewController: DMViewController, UIWebViewDelegate, UIScro
         self.navigationItem.title = self.ticker!
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.webimageView.contentMode = .scaleAspectFit
         if let urlLink = self.estimazeImageURL {
             self.webimageView.af_setImage(withURL: urlLink)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     //MARK: UIWebViewDelegate

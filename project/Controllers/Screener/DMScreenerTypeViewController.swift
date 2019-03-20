@@ -16,13 +16,18 @@ class DMScreenerTypeViewController: DMViewController, UIWebViewDelegate {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     open func openChartFor(ticker : String) {
         
         let storyboard = UIStoryboard.init(name: "OutsourceCharts", bundle: nil)
         if let chartVC = storyboard.instantiateViewController(withIdentifier: "DMTradingViewChartViewController") as? DMTradingViewChartViewController {
             chartVC.ticker = ticker
             if let parent = self.parentContainer {
-                parent.showChart(chartVC: chartVC)
+                parent.navigationController?.pushViewController(chartVC, animated: true)
             }
         }
     }

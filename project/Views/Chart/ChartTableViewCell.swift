@@ -1,4 +1,5 @@
 import UIKit
+import MBProgressHUD
 
 class ChartTableViewCell: UITableViewCell {
     
@@ -17,7 +18,6 @@ class ChartTableViewCell: UITableViewCell {
     private func loadChart() {
         chartView = ChartView.create()
         chartView.delegate = self
-        
         
         chartView.frame = CGRect(x: 24,
                                  y: 10,
@@ -62,7 +62,12 @@ class ChartTableViewCell: UITableViewCell {
     }
     
     func rangeChangeForCompany(range: ChartTimeRange) {
-        SwiftStockKit.fetchChartPoints(symbol: self.company.ticker, range: range, crypto: self.company.isCrypto()) { (chartPoints) -> () in
+        showActivityIndicator()
+        SwiftStockKit.fetchChartPoints(symbol: self.company.ticker,
+                                       range: range,
+                                       crypto: self.company.isCrypto())
+        { (chartPoints) -> () in
+            self.dismissActivityIndicator()
             self.chart.clearChartData()
             self.chart.setChartPoints(points: chartPoints)
         }
@@ -92,13 +97,24 @@ class ChartTableViewCell: UITableViewCell {
         if !self.items.isEmpty {
             self.filter(fot: startDate.timeIntervalSince1970)
         } else {
+            showActivityIndicator()
             CryptoCompareDataProvider.default().get(for: self.company.ticker) { points, error in
+                self.dismissActivityIndicator()
                 if let points = points {
                     self.items = points
                     self.filter(fot: startDate.timeIntervalSince1970)
                 }
             }
         }
+    }
+    
+    open func showActivityIndicator() {
+        let loadingNotification = MBProgressHUD.showAdded(to: self, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.indeterminate
+    }
+    
+    open func dismissActivityIndicator() {
+        MBProgressHUD.hide(for: self, animated: true)
     }
     
     func filter(fot date: Double)  {

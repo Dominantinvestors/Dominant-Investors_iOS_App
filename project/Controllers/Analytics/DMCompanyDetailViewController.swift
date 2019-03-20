@@ -21,10 +21,13 @@ class DMCompanyDetailViewController: DMViewController, UIWebViewDelegate {
         }
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
         tableView.tableFooterView = footerView
         tableView.register(cell: StatsTableViewCell.self)
         tableView.register(cell: ChartTableViewCell.self)
@@ -57,7 +60,13 @@ class DMCompanyDetailViewController: DMViewController, UIWebViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
         updateRate()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -111,8 +120,8 @@ class DMCompanyDetailViewController: DMViewController, UIWebViewDelegate {
         self.performSegue(withIdentifier: "DMSignalsSegue", sender: self)
     }
     
-    @IBAction func backButtonAction(sender : UIButton) {
-        _ = self.navigationController?.popViewController(animated: true)
+    @IBAction func onBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func estimazeButtonPressed(sender: UIButton) {

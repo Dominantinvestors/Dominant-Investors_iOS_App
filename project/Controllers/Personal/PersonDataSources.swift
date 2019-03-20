@@ -53,11 +53,15 @@ class WatchListDataSource:
     }
   
     func configurateCell(_ cell: WatchListTableViewCell, item: SignalModel, at indexPath: IndexPath) {
+        cell.contentView.backgroundColor = indexPath.row % 2 == 0 ?
+            UIColor.lightGray.withAlphaComponent(0.3) :
+            UIColor.white
+        
         cell.ticker.text = item.ticker
-        cell.mktPrice.text = item.mktPrice
-        cell.buyPoint.text = item.buyPoint
-        cell.targetPrice.text = item.targetPrice
-        cell.stopLoss.text = item.stopLoss
+        cell.mktPrice.text = Values.Currency + item.mktPrice
+        cell.buyPoint.text = Values.Currency + item.buyPoint
+        cell.targetPrice.text = Values.Currency + item.targetPrice
+        cell.stopLoss.text = Values.Currency + item.stopLoss
 
         if item.investmentIdea != nil {
             cell.profile.image = UIImage(named: "Logo")
@@ -98,7 +102,7 @@ class PortfolioDataSource:
         
         if let user = item.0 {
             cell.name.text = user.fullName()
-            cell.followers.text = "\(user.followers) followers"
+            cell.followers.text = "\(user.followers) Followers"
         }
         
         cell.edit.setTitle(NSLocalizedString("Edit profile", comment: ""), for: .normal)
@@ -107,9 +111,9 @@ class PortfolioDataSource:
         cell.edit.isHidden = true
         
         if let portfolio = item.1 {
-            cell.value.text = portfolio.value + Values.Currency
-            cell.power.text = portfolio.buyingPower + Values.Currency
-            cell.total.text = portfolio.total + Values.Currency
+            cell.value.text = Values.Currency + portfolio.value
+            cell.power.text = Values.Currency + portfolio.buyingPower
+            cell.total.text = Values.Currency + portfolio.total
             cell.results.text = portfolio.profit + "%"
             cell.rating.text = "\(portfolio.index) Rating"
         }
@@ -150,15 +154,21 @@ class TransactionsDataSource:
     }
     
     func configurateCell(_ cell: AssetsTableViewCell, item: TransactionModel, at indexPath: IndexPath) {
+        cell.background.backgroundColor = indexPath.row % 2 == 0 ?
+            UIColor.lightGray.withAlphaComponent(0.3) :
+            UIColor.white
+        
         cell.ticker.text = item.ticker
         cell.amount.text = item.amount
-        cell.buyPoint.text = item.buyPoint
-        cell.mktPrice.text = item.mktPrice
+        cell.buyPoint.text = Values.Currency + item.buyPoint
+        cell.mktPrice.text = Values.Currency + item.mktPrice
 
         if Double(item.profitPoints)! >= 0.0 {
-            cell.profitPoints.setGreen()
+            cell.profitValueView.backgroundColor = Colors.green
+            cell.profitValue.setGreen()
         } else {
-            cell.profitPoints.setRed()
+            cell.profitValueView.backgroundColor = Colors.red
+            cell.profitValue.setRed()
         }
         
         if (Double(item.buyPoint)! - Double(item.mktPrice)!) <= 0.0 {
@@ -167,8 +177,8 @@ class TransactionsDataSource:
             cell.mktPrice.setRed()
         }
         
-        cell.profitPoints.text = item.profitPoints
-        cell.profitValue.text = String(format:"%.2f", Double(item.profitValue)!)
+        cell.profitPoints.text = item.profitPoints + "%"
+        cell.profitValue.text = Values.Currency + String(format:"%.2f", Double(item.profitValue)!)
     }
 }
 

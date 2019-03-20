@@ -39,26 +39,7 @@ class DMScreenerContainerViewController: DMViewController {
             }
         }
     }
-
-    //MARK: Open
-    
-    open func showChart(chartVC : DMTradingViewChartViewController) {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        let backItem = UIBarButtonItem()
-        backItem.title = ""
-        self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor : UIColor.white
-        ]
-        navigationItem.backBarButtonItem = backItem
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationController?.navigationBar.tintColor = UIColor.lightGray
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 16/255, green: 18/255, blue: 26/255, alpha: 1)
-        self.navigationController?.navigationBar.barStyle = .blackTranslucent
-        self.navigationController?.pushViewController(chartVC, animated: true)
-    }
-    
-    //MARK: Private
-    
+        
     fileprivate func setupUI() {
         self.screenerContainer.alpha = 1
         self.cryptoContainer.alpha = 0
