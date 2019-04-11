@@ -59,7 +59,7 @@ class PersonalViewController: KeyboardObservableViewController {
     }
     
     @objc private func refresh(sender : UIRefreshControl) {
-        reloadData()
+        reloadData(false)
     }
     
     private func createSignal() {
@@ -120,9 +120,10 @@ class PersonalViewController: KeyboardObservableViewController {
         }
     }
     
-    fileprivate func reloadData() {
-        
-        showActivityIndicator()
+    fileprivate func reloadData(_ needToShowIndecator: Bool = true) {
+        if needToShowIndecator {
+            showActivityIndicator()
+        }
         firstly{ when(fulfilled:  PortfolioDataProvider.default().get(),
                       PortfolioDataProvider.default().transactions(),
                       SignalsDataProvider.default().get(),

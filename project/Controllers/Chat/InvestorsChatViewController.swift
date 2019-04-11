@@ -4,8 +4,10 @@ class InvestorsChatViewController: ChatViewController {
     
     var coversetionID: Int!
     
-    override func loadFirstMessages() {
-        showActivityIndicator()
+    override func loadFirstMessages(_ needToShowActivity: Bool = true) {
+        if needToShowActivity {
+            showActivityIndicator()
+        }
         ConversationsDataProvider.default().getMessages(for: coversetionID) { messages, error in
             self.dismissActivityIndicator()
             if let messages = messages {

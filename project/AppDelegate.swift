@@ -30,6 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+      
+//        if([[url host] isEqualToString:@"page"]){
+//            if([[url path] isEqualToString:@"/page1"]){
+//                [self.mainController pushViewController:[[Page1ViewController alloc] init] animated:YES];
+//            }
+//            return YES;
+        
         return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
     }
     

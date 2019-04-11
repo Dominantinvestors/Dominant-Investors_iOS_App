@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,8 +37,16 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-59-8Ny">
+                        <rect key="frame" x="160" y="48" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="k9W-59-8Ny" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="KLe-da-b3c"/>
+                    <constraint firstItem="k9W-59-8Ny" firstAttribute="top" secondItem="njc-D8-HRG" secondAttribute="bottom" constant="4" id="PZ9-8V-wiv"/>
                     <constraint firstItem="ZfV-HH-aGm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="meK-AQ-DOu"/>
                     <constraint firstAttribute="bottom" secondItem="ZfV-HH-aGm" secondAttribute="bottom" id="oCd-JC-vOx"/>
                     <constraint firstItem="ZfV-HH-aGm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="pEm-Tk-LOY"/>
@@ -49,11 +57,12 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="icon" destination="ZfV-HH-aGm" id="EOh-hn-y0E"/>
+                <outlet property="tiker" destination="k9W-59-8Ny" id="lAd-2a-4Z5"/>
             </connections>
             <point key="canvasLocation" x="-179.19999999999999" y="79.160419790104953"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Ellipse 4" width="189" height="189"/>
+        <image name="Ellipse 4" width="94.5" height="94.5"/>
     </resources>
 </document>

@@ -17,9 +17,19 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0</string>
+	<string>2.1</string>
 	<key>CFBundleURLTypes</key>
 	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.Dominant.DominantStocks</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>DominantStocks</string>
+			</array>
+		</dict>
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
@@ -28,7 +38,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>920</string>
+	<string>956</string>
 	<key>FacebookAppID</key>
 	<string>295880337874110</string>
 	<key>FacebookDisplayName</key>

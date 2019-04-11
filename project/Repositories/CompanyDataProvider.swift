@@ -1,5 +1,6 @@
 import Alamofire
 import PromiseKit
+
 struct CompanyDataProvider: PromiseRepository, Syncable {
     typealias Item = CompanyModel
     
@@ -20,6 +21,10 @@ struct CompanyDataProvider: PromiseRepository, Syncable {
                 completion(nil, error.localizedDescription)
             }
         }
+    }
+    
+    func getMyCommented() -> Promise<[CompanyModel]> {
+        return send(request: CompanyModel.myCommented())
     }
     
     func get(by ID: Int) -> Promise<CompanyModel> {

@@ -12,15 +12,8 @@ struct ConversationsDataProvider: PromiseRepository, Syncable {
         return ConversationsDataProvider(session: session, handler: BaseHandler())
     }
     
-    func get(completion: @escaping ([Conversation]?, String?) -> Void) {
-        send(request: UserModel.conversation()).responseObject { (response: DataResponse<OffsetResponse<Conversation>>) -> Void in
-            switch self.handler.handle(response) {
-            case .success(let result):
-                completion(result.items, nil)
-            case .error(let error):
-                completion(nil, error.localizedDescription)
-            }
-        }
+    func get() -> Promise<OffsetResponse<Conversation>> {
+        return send(request: UserModel.conversation())
     }
     
     func getMessages(for conversationsId: Int, completion: @escaping ([Message]?, String?) -> Void) {

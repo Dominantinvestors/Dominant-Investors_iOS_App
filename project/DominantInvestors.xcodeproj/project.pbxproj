@@ -166,7 +166,6 @@
 		B7B4F88AD8A2FE5DB2595A6E /* Pods-DominantInvestors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantInvestors.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors.debug.xcconfig"; sourceTree = "<group>"; };
 		C9DBD300783B3BA57C773EA0 /* Pods_DominantCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominantCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE04D7A1215231CE00AD3D4D /* DominantInvestors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominantInvestors.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE04D7D6215236DB00AD3D4D /* DominantCrypto.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DominantCrypto.plist; sourceTree = "<group>"; };
 		CE04D7D7215236DB00AD3D4D /* DominantInvestors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DominantInvestors.plist; sourceTree = "<group>"; };
 		CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE056EDB221AB7A200034511 /* AlertTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTitleTableViewCell.swift; sourceTree = "<group>"; };
@@ -396,7 +395,6 @@
 				CE735F2A2152653600E2849E /* Fonts */,
 				CE735BC721523A7D00E2849E /* Crypto.xcassets */,
 				CE735BC821523A7D00E2849E /* Investors.xcassets */,
-				CE04D7D6215236DB00AD3D4D /* DominantCrypto.plist */,
 				CE04D7D7215236DB00AD3D4D /* DominantInvestors.plist */,
 			);
 			path = Resources;
@@ -822,7 +820,7 @@
 				TargetAttributes = {
 					CE04D7A0215231CE00AD3D4D = {
 						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;

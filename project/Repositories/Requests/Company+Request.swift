@@ -21,6 +21,10 @@ extension CompanyModel {
         return URLEncodingRequestBuilder(path: "/search-assets/", parameters: parameters)
     }
     
+    static func myCommented() -> RequestProvider {
+        return URLEncodingRequestBuilder(path: "/investment-ideas/my-threads/")
+    }
+    
     func comments() -> RequestProvider {
         return JSONEncodingRequestBuilder(path: "/signals/investment-ideas/\(id)/comments/")
     }

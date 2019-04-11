@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uIT-ph-p3Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uIT-ph-p3Q">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,7 +23,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="fsA-MV-cSR">
             <objects>
-                <viewController storyboardIdentifier="DMSignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RCZ-dQ-T9G" customClass="DMSignUpViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DMSignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RCZ-dQ-T9G" customClass="DMSignUpViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iLl-xs-6ND"/>
                         <viewControllerLayoutGuide type="bottom" id="smd-mV-W7X"/>
@@ -87,7 +87,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOt-8e-Sg3" customClass="TextBackground" customModule="DominantCrypto" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOt-8e-Sg3" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
                                         <rect key="frame" x="47.000000000000014" y="292.33333333333337" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CONFIRM PASSWORD" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="W3X-qu-iJa">
@@ -105,14 +105,14 @@
                                             <constraint firstAttribute="bottom" secondItem="W3X-qu-iJa" secondAttribute="bottom" constant="5" id="vsH-TC-C9e"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8J5-XX-UZ0" customClass="TextBackground" customModule="DominantCrypto" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8J5-XX-UZ0" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
                                         <rect key="frame" x="47.000000000000014" y="224.33333333333337" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="bVS-X2-qoe">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,14 +123,14 @@
                                             <constraint firstAttribute="trailing" secondItem="bVS-X2-qoe" secondAttribute="trailing" constant="8" id="lCO-nz-enW"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ne-N2-MyN" customClass="TextBackground" customModule="DominantCrypto" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ne-N2-MyN" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
                                         <rect key="frame" x="47.000000000000014" y="88.333333333333329" width="220.66666666666669" height="59.999999999999986"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="LjO-qn-pOj">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" returnKeyType="next"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -146,14 +146,14 @@
                                         <rect key="frame" x="0.0" y="74.000000000000014" width="315" height="6.3333333333333286"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6i-sP-htn" customClass="TextBackground" customModule="DominantCrypto" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6i-sP-htn" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
                                         <rect key="frame" x="47.000000000000014" y="156.33333333333331" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-MAIL" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="ugo-ib-Z6f" userLabel="email">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" returnKeyType="next"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -165,7 +165,7 @@
                                             <constraint firstAttribute="trailing" secondItem="ugo-ib-Z6f" secondAttribute="trailing" constant="8" id="sBQ-pP-gs6"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xi-6K-qNH" customClass="TextBackground" customModule="DominantCrypto" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xi-6K-qNH" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
                                         <rect key="frame" x="47.000000000000014" y="360.33333333333337" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="INVITE ID" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="aXS-GJ-7SQ" userLabel="email">
@@ -315,7 +315,7 @@
         <!--Login View Controller-->
         <scene sceneID="loR-ZS-cHB">
             <objects>
-                <viewController storyboardIdentifier="DMLoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WYA-Wt-9PR" customClass="DMLoginViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DMLoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WYA-Wt-9PR" customClass="DMLoginViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wfx-QG-e0c"/>
                         <viewControllerLayoutGuide type="bottom" id="Dzd-7A-GQE"/>
@@ -331,7 +331,7 @@
                                 <rect key="frame" x="49.666666666666657" y="207" width="315" height="350"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54h-Qt-L57">
-                                        <rect key="frame" x="47.000000000000014" y="269" width="220.66666666666669" height="40"/>
+                                        <rect key="frame" x="47.000000000000014" y="268" width="220.66666666666669" height="40"/>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.1450980392" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="NSg-oh-Pa1"/>
@@ -349,8 +349,8 @@
                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpI-dy-BZ3" customClass="TextBackground" customModule="DominantCrypto" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="156.66666666666669" width="220.66666666666669" height="60"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpI-dy-BZ3" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
+                                        <rect key="frame" x="47.000000000000014" y="156" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="etB-0a-uLH">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
@@ -367,8 +367,8 @@
                                             <constraint firstAttribute="trailing" secondItem="etB-0a-uLH" secondAttribute="trailing" constant="8" id="KUp-fd-Ag1"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhw-xt-ZhX" customClass="TextBackground" customModule="DominantCrypto" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="88.666666666666686" width="220.66666666666669" height="60"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhw-xt-ZhX" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
+                                        <rect key="frame" x="47.000000000000014" y="88" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Emo-io-ONH">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
@@ -387,10 +387,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dgm-Gh-RXd">
-                                        <rect key="frame" x="109.33333333333334" y="317" width="96" height="25"/>
+                                        <rect key="frame" x="109.33333333333334" y="316" width="96" height="26"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erc-KX-zIx">
-                                                <rect key="frame" x="0.0" y="0.0" width="96" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="26"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
                                                 <state key="normal" title="CREATE ACCOUNT">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -409,11 +409,11 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bA-ek-Gx2">
-                                        <rect key="frame" x="55.000000000000014" y="59.999999999999993" width="204.66666666666669" height="20.666666666666664"/>
+                                        <rect key="frame" x="55.000000000000014" y="60" width="204.66666666666669" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DominantLoginBg" translatesAutoresizingMaskIntoConstraints="NO" id="ydP-By-17s">
-                                        <rect key="frame" x="63.000000000000014" y="232.66666666666669" width="188.66666666666669" height="20.333333333333343"/>
+                                        <rect key="frame" x="63.000000000000014" y="232" width="188.66666666666669" height="20"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -513,7 +513,7 @@
         <!--Main Navigation Controller-->
         <scene sceneID="uUg-oA-lqO">
             <objects>
-                <navigationController navigationBarHidden="YES" id="uIT-ph-p3Q" customClass="MainNavigationController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="uIT-ph-p3Q" customClass="MainNavigationController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YYi-lN-SWe">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -528,7 +528,7 @@
         <!--Terms And Conditions View Controller-->
         <scene sceneID="tY9-MI-db5">
             <objects>
-                <viewController restorationIdentifier="TermsAndConditions" storyboardIdentifier="TermsAndConditions" id="bXi-71-9Lu" customClass="TermsAndConditionsViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="TermsAndConditions" storyboardIdentifier="TermsAndConditions" id="bXi-71-9Lu" customClass="TermsAndConditionsViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Hp-3t-ja7"/>
                         <viewControllerLayoutGuide type="bottom" id="HiN-gp-7el"/>
@@ -581,7 +581,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-6h-dW1">
-                                        <rect key="frame" x="-71" y="800.66666666666663" width="556" height="94"/>
+                                        <rect key="frame" x="68" y="800.66666666666663" width="278" height="47"/>
                                         <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="17"/>
                                         <state key="normal" title="I AGREE" backgroundImage="addToWatchList">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -592,11 +592,11 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJ4-xi-dUk">
                                         <rect key="frame" x="20" y="342" width="374" height="428.66666666666674"/>
-                                        <mutableString key="text">The success of aggressive investing is to buy the most actively developing companies, whose profit growth rate is 50% or more, while the average company of the S&amp;P 500 shows an average quarterly economic growth of only 10%.
+                                        <string key="text">The success of aggressive investing is to buy the most actively developing companies, whose profit growth rate is 50% or more, while the average company of the S&amp;P 500 shows an average quarterly economic growth of only 10%.
 
 McDolands, Microsoft, General Motors - dead money and long-established companies do not need the money of investors as they needed at an early stage of development, on the contrary, they already pay their dividends to their investors (and penny), because there is nowhere to invest.
 
-But companies with new unique products or services that develop revenues by 30%, 50%, 100% or more per year, actively raising capital through secondary placements of shares and investing all the profits in development - deserves the money of the dominant investors</mutableString>
+But companies with new unique products or services that develop revenues by 30%, 50%, 100% or more per year, actively raising capital through secondary placements of shares and investing all the profits in development - deserves the money of the dominant investors</string>
                                         <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -642,7 +642,7 @@ But companies with new unique products or services that develop revenues by 30%,
         <!--Analitycal Info View Controller-->
         <scene sceneID="HJk-5U-wGw">
             <objects>
-                <viewController restorationIdentifier="AnalitycalInfo" storyboardIdentifier="AnalitycalInfo" id="OfR-V4-qH7" customClass="AnalitycalInfoViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="AnalitycalInfo" storyboardIdentifier="AnalitycalInfo" id="OfR-V4-qH7" customClass="AnalitycalInfoViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YdQ-QK-paE"/>
                         <viewControllerLayoutGuide type="bottom" id="g4I-W1-nbp"/>
@@ -657,11 +657,14 @@ But companies with new unique products or services that develop revenues by 30%,
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ag-QG-7r3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ViewSignals" translatesAutoresizingMaskIntoConstraints="NO" id="ZHV-cF-uoK">
-                                        <rect key="frame" x="0.0" y="-50" width="1629" height="4500"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ViewSignals" translatesAutoresizingMaskIntoConstraints="NO" id="ZHV-cF-uoK">
+                                        <rect key="frame" x="0.0" y="-50" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="9qL-pS-6DN"/>
+                                        </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxF-4Y-RPp">
-                                        <rect key="frame" x="-71" y="4286" width="556" height="94"/>
+                                        <rect key="frame" x="140" y="-93" width="134" height="23"/>
                                         <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="19"/>
                                         <state key="normal" title="VIEW RESULTS" backgroundImage="addToWatchList">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -705,11 +708,11 @@ But companies with new unique products or services that develop revenues by 30%,
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="1575" height="705"/>
-        <image name="DominantLoginBg" width="483" height="40"/>
-        <image name="Logo" width="324" height="364"/>
+        <image name="Background" width="787.5" height="352.5"/>
+        <image name="DominantLoginBg" width="241.5" height="20"/>
+        <image name="Logo" width="108" height="121.33333587646484"/>
         <image name="SignalsBackground" width="6516" height="8192"/>
-        <image name="ViewSignals" width="1629" height="4500"/>
-        <image name="addToWatchList" width="556" height="94"/>
+        <image name="ViewSignals" width="496.66665649414062" height="1363.3333740234375"/>
+        <image name="addToWatchList" width="278" height="47"/>
     </resources>
 </document>

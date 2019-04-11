@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 inhibit_all_warnings!
 use_frameworks!
@@ -11,30 +11,51 @@ target :DominantInvestors do
     pod 'ObjectMapper'
     pod 'AlamofireObjectMapper'
     pod 'AlamofireImage'
+    pod 'Alamofire'
     pod 'MBProgressHUD'
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'FacebookShare'
-    pod 'AFDateHelper', '~> 4.2.2'
+    pod 'AFDateHelper'
     pod 'MessageKit'
     pod 'MessageInputBar'
     pod 'Firebase/Core'
     pod 'Firebase/Messaging'
     pod 'PromiseKit/CorePromise', '~> 6.0'
-end
-
-
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |configuration|
-            if ['AlamofireImage'].include? target.name
-                configuration.build_settings['SWIFT_VERSION'] = "3.2"
-            end
-            if target.name == 'MessageKit'
-                target.build_configurations.each do |config|
-                    config.build_settings['SWIFT_VERSION'] = '4.0'
-                end
-            end
+    
+    post_install do |installer|
+      installer.pods_project.targets.each do |target|
+        if target.name == 'MessageKit'
+          target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '4.0'
+          end
         end
+        if target.name == 'MessageInputBar'
+          target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '4.0'
+          end
+        end
+      end
     end
+#
 end
+
+#post_install do |installer|
+#    installer.pods_project.targets.each do |target|
+#        target.build_configurations.each do |configuration|
+#            if target.name == 'MessageKit'
+#                target.build_configurations.each do |config|
+#                    config.build_settings['SWIFT_VERSION'] = '4.0'
+#                end
+#            end
+##            if ['MessageKit'].include? target.name
+##              configuration.build_settings['SWIFT_VERSION'] = "4.0"
+##            end
+##
+##            if ['MessageInputBar'].include? target.name
+##              configuration.build_settings['SWIFT_VERSION'] = "4.0"
+##            end
+#        end
+#    end
+#end
+

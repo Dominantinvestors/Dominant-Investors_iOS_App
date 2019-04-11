@@ -1,5 +1,6 @@
 import UIKit
 import MessageKit
+import MessageInputBar
 
 class ChatViewController: MessagesViewController, MessagesDataSource {
     
@@ -37,7 +38,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
         self.messagesCollectionView.scrollToBottom()
     }
     
-    func loadFirstMessages() {
+    func loadFirstMessages(_ needToShowActivity: Bool = true) {
     }
     
     func create(_ str: String) {
@@ -49,7 +50,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
         self.messagesCollectionView.reloadDataAndKeepOffset()
         self.refreshControl.endRefreshing()
         
-        loadFirstMessages()
+        loadFirstMessages(false)
     }
     
     func configureMessageCollectionView() {
@@ -59,7 +60,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messageCellDelegate = self
         
-        scrollsToBottomOnKeybordBeginsEditing = true
+        scrollsToBottomOnKeyboardBeginsEditing = true
         maintainPositionOnKeyboardFrameChanged = true // default false
         
         messagesCollectionView.addSubview(refreshControl)
@@ -192,11 +193,11 @@ extension ChatViewController: MessageLabelDelegate {
 // MARK: - MessageInputBarDelegate
 
 extension ChatViewController: MessageInputBarDelegate {
-    
+
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-          
+
         for component in inputBar.inputTextView.components {
-            
+
             if let str = component as? String {
                 create(str)
             }
@@ -204,5 +205,5 @@ extension ChatViewController: MessageInputBarDelegate {
         inputBar.inputTextView.text = String()
         messagesCollectionView.scrollToBottom(animated: true)
     }
-    
+
 }

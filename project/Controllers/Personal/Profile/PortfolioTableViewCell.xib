@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,19 +38,19 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dots" translatesAutoresizingMaskIntoConstraints="NO" id="3u7-59-R2x">
-                        <rect key="frame" x="16" y="162" width="288" height="4"/>
+                        <rect key="frame" x="16" y="164" width="288" height="2"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZg-Ul-4Ct">
-                        <rect key="frame" x="118" y="21.5" width="136" height="67.5"/>
+                        <rect key="frame" x="118" y="31.5" width="68" height="47.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqL-b5-gmZ">
-                                <rect key="frame" x="0.0" y="0.0" width="136" height="19.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="68" height="19.5"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIr-Is-EbX" customClass="ActionHandleButton" customModule="DominantInvestors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="27.5" width="136" height="40"/>
+                                <rect key="frame" x="0.0" y="27.5" width="68" height="20"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-100" family="Museo Cyrl" pointSize="12"/>
                                 <state key="normal" title="Button" backgroundImage="greyButton">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,7 +69,7 @@
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dots" translatesAutoresizingMaskIntoConstraints="NO" id="yJl-Oc-kSJ">
-                        <rect key="frame" x="16" y="110" width="288" height="4"/>
+                        <rect key="frame" x="16" y="110" width="288" height="2"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFX-mp-stq">
                         <rect key="frame" x="16" y="182" width="288" height="40.5"/>
@@ -156,25 +156,25 @@
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dots" translatesAutoresizingMaskIntoConstraints="NO" id="BMZ-7Q-gf6">
-                        <rect key="frame" x="16" y="234.5" width="288" height="4"/>
+                        <rect key="frame" x="16" y="236.5" width="288" height="2"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-kg-5k1">
-                        <rect key="frame" x="16" y="114" width="288" height="48"/>
+                        <rect key="frame" x="16" y="112" width="288" height="52"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Rating" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFb-Qy-Jyi">
-                                <rect key="frame" x="0.0" y="0.0" width="70" height="48"/>
+                                <rect key="frame" x="0.0" y="0.0" width="103" height="52"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Followers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo4-Ov-l0G">
-                                <rect key="frame" x="86" y="0.0" width="70" height="48"/>
+                                <rect key="frame" x="119" y="0.0" width="103" height="52"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vt4-pZ-A1b" customClass="ActionHandleButton" customModule="DominantInvestors" customModuleProvider="target">
-                                <rect key="frame" x="156" y="8" width="132" height="32"/>
+                                <rect key="frame" x="222" y="8" width="66" height="36"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="16"/>
                                 <state key="normal" title="3" image="messageIcon" backgroundImage="messageBG"/>
                             </button>
@@ -196,6 +196,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="uFX-mp-stq" secondAttribute="trailing" constant="16" id="0h2-T2-r3H"/>
                     <constraint firstItem="yJl-Oc-kSJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="D9A-vs-Jrm"/>
@@ -240,10 +241,10 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Dots" width="678" height="4"/>
-        <image name="Ellipse 4" width="189" height="189"/>
-        <image name="greyButton" width="136" height="40"/>
-        <image name="messageBG" width="132" height="92"/>
-        <image name="messageIcon" width="34" height="34"/>
+        <image name="Dots" width="339" height="2"/>
+        <image name="Ellipse 4" width="94.5" height="94.5"/>
+        <image name="greyButton" width="68" height="20"/>
+        <image name="messageBG" width="66" height="46"/>
+        <image name="messageIcon" width="17" height="17"/>
     </resources>
 </document>

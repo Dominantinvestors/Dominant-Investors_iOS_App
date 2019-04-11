@@ -47,6 +47,8 @@ class CompanyModel: Mappable, Company {
     var ratings: RatingsModel?
     var stats: StatsModel?
 
+    var latestComment: Message?
+    
     required init?(map: Map) { }
     
     func mapping(map: Map) {
@@ -70,6 +72,7 @@ class CompanyModel: Mappable, Company {
         
         ratings <- map["ratings"]
         stats <- map["stats"]
+        latestComment <- map["latest_comment"]
     }
 }
 

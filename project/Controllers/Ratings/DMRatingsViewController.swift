@@ -25,7 +25,8 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     private func setupUI() {
        self.tableView.dataSource = self
        self.tableView.delegate = self
-       self.tableView.register(UINib(nibName: "DMRatingTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "DMRatingTableViewCell")
+       self.tableView.register(UINib(nibName: "DMRatingTableViewCell", bundle: Bundle.main),
+                               forCellReuseIdentifier: "DMRatingTableViewCell")
        self.refreshControl = UIRefreshControl()
        self.refreshControl.attributedTitle = NSAttributedString(string: "Refreshing")
        self.refreshControl.addTarget(self, action: #selector(self.refresh(sender:)), for: .valueChanged)
@@ -33,11 +34,14 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     }
     
     @objc private func refresh(sender : UIRefreshControl) {
-        renewRating()
+        renewRating(false)
     }
     
-    open func renewRating() {
-        showActivityIndicator()
+    open func renewRating(_ showActivity: Bool = true) {
+        if showActivity {
+            showActivityIndicator()
+        }
+        
         InvestorsDataProvider.default().get()
             .done { respounse in
                 self.dismissActivityIndicator()

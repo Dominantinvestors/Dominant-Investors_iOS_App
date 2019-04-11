@@ -58,7 +58,7 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
             NSAttributedString(string:"E-mail",
                                attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
         self.passwordTextField.attributedPlaceholder =
-            NSAttributedString(string:"PASSWORD",
+            NSAttributedString(string:"Password",
                                attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
         
         self.usernameTextField.delegate = self

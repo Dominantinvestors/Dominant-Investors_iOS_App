@@ -26,7 +26,7 @@ class AlertNewSignalViewController: UIViewController {
                      CompanyDataProvider.default().rate(signal))
             }.done { signal, investor, rate in
                 
-                let title = AlertTitleDataSource(item: investor)
+                let title = AlertTitleDataSource(item: (investor, signal))
                 let subtitle = AddSignalHeaderDataSource(item: (signal, rate))
                 
                 var buy = CreateSignalDataSource(title: NSLocalizedString("BUY", comment: ""))
@@ -67,14 +67,19 @@ struct AlertTitleDataSource:
     CellContainable,
     CellConfigurator
 {
-    var data: [InvestorModel]
+    var data: [(InvestorModel, SignalModel)]
     
-    init(item: InvestorModel) {
+    init(item: (InvestorModel, SignalModel)) {
         self.data = [item]
     }
     
-    func configurateCell(_ cell: AlertTitleTableViewCell, item: InvestorModel, at indexPath: IndexPath) {
-        cell.icon.setProfileImage(for: item)
+    func configurateCell(_ cell: AlertTitleTableViewCell, item: (InvestorModel, SignalModel), at indexPath: IndexPath) {
+        if item.1.investmentIdea != nil {
+            cell.icon.image = UIImage(named: "Logo")
+        } else {
+            cell.icon.setProfileImage(for: item.0)
+        }
+        cell.tiker.text = item.1.name
     }
 }
 

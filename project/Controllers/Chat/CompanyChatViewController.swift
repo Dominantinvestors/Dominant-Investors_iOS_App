@@ -14,8 +14,10 @@ class CompanyChatViewController: ChatViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    override func loadFirstMessages() {
-        showActivityIndicator()
+    override func loadFirstMessages(_ needToShowActivity: Bool = true) {
+        if needToShowActivity {
+            showActivityIndicator()
+        }
         CompanyDataProvider.default().comments(company) { messages, error in
             self.dismissActivityIndicator()
             if let messages = messages {
