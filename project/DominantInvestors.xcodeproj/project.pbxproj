@@ -147,6 +147,8 @@
 		CE735F562152788700E2849E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F552152788700E2849E /* Protocols.swift */; };
 		CE8854CA215CC8940093564B /* DrivewealthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */; };
 		CE897B9C2192DEE4006A4069 /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897B9B2192DEE4006A4069 /* SellViewController.swift */; };
+		CEB48F18226A43F10063D217 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB48F17226A43F10063D217 /* ForgotPasswordViewController.swift */; };
+		CEB48F1A226A4CFE0063D217 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB48F19226A4CFE0063D217 /* ResetPasswordViewController.swift */; };
 		CEB8801A2181CBAF006DFD9F /* MonayTransformator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB880192181CBAF006DFD9F /* MonayTransformator.swift */; };
 		CEE89E4B2170884D006B8F2B /* AnalitycalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E4A2170884D006B8F2B /* AnalitycalInfoViewController.swift */; };
 		CEE89E4E2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E4D2170AC3B006B8F2B /* TermsAndConditionsViewController.swift */; };
@@ -310,6 +312,8 @@
 		CE735F552152788700E2849E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivewealthDataProvider.swift; sourceTree = "<group>"; };
 		CE897B9B2192DEE4006A4069 /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
+		CEB48F17226A43F10063D217 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		CEB48F19226A4CFE0063D217 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		CEB880192181CBAF006DFD9F /* MonayTransformator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonayTransformator.swift; sourceTree = "<group>"; };
 		CEE89E4A2170884D006B8F2B /* AnalitycalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalitycalInfoViewController.swift; sourceTree = "<group>"; };
 		CEE89E4D2170AC3B006B8F2B /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
@@ -488,6 +492,7 @@
 		CE735CAD21523B2300E2849E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CEB48F16226A43BE0063D217 /* ForgotPassword */,
 				CE4F20AC2215B91300A90552 /* AlertNewSignal */,
 				CE0F543B21D37B7A00AEFBC1 /* Chat */,
 				CE897B9A2192DB51006A4069 /* Sell */,
@@ -765,6 +770,15 @@
 			path = Sell;
 			sourceTree = "<group>";
 		};
+		CEB48F16226A43BE0063D217 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				CEB48F17226A43F10063D217 /* ForgotPasswordViewController.swift */,
+				CEB48F19226A4CFE0063D217 /* ResetPasswordViewController.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
 		CEE89E712179C8F9006B8F2B /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -1001,6 +1015,7 @@
 				CE735F0421523FA000E2849E /* SegmentControll.swift in Sources */,
 				CE0F544321D37D5500AEFBC1 /* Message.swift in Sources */,
 				CE735E6C21523B2400E2849E /* DMStockDetailViewController.swift in Sources */,
+				CEB48F1A226A4CFE0063D217 /* ResetPasswordViewController.swift in Sources */,
 				CE056EDD221AB7A200034511 /* AlertTitleTableViewCell.swift in Sources */,
 				CE735D1021523B2400E2849E /* EditableSectionDataSource.swift in Sources */,
 				CE735D0421523B2400E2849E /* TableViewComposedDataSource.swift in Sources */,
@@ -1038,6 +1053,7 @@
 				CE735F1A21523FA000E2849E /* FXBlurView.m in Sources */,
 				CE735D0221523B2400E2849E /* EditableCellDataSource.swift in Sources */,
 				CE09A0F0216E1218009C7A10 /* CompanyFooterView.swift in Sources */,
+				CEB48F18226A43F10063D217 /* ForgotPasswordViewController.swift in Sources */,
 				CE4F20B02216B1F700A90552 /* PushNotifications.swift in Sources */,
 				CE735E7C21523B2400E2849E /* SearchController.swift in Sources */,
 				CE4F20AE2215B92800A90552 /* AlertNewSignalViewController.swift in Sources */,

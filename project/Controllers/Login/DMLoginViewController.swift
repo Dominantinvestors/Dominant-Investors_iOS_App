@@ -11,9 +11,25 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        let notifications: PushNotifications = ServiceLocator.shared.getService()
+        notifications.fogotpassword.bindAndFire { url in
+            if let url = url {
+                self.startResetPassword(url)
+                notifications.fogotpassword.value = nil
+            }
+        }
     }
 
     // MARK: Private
+    
+    func startResetPassword(_ url: URL) {
+        let token = url.pathComponents[1]
+        let udid = url.pathComponents[2]
+        let reset: ResetPasswordViewController = UIStoryboard.init(name: "Authorization", bundle: nil)[.ResetPasswordViewController]
+        reset.UDID = udid
+        reset.token = token
+        navigationController?.pushViewController(reset, animated: true)
+    }
     
     private func setupUI() {
         drawBlurOverlay()

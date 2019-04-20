@@ -16,7 +16,8 @@ class PushNotifications {
     let window: UIWindow?
     
     let urlPath: Dynamic< [AnyHashable: Any]?> = Dynamic(nil)
-    
+    let fogotpassword: Dynamic<URL?> = Dynamic(nil)
+
     init(window: UIWindow?) {
         self.window = window
     }

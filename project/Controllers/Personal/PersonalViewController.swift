@@ -128,7 +128,7 @@ class PersonalViewController: KeyboardObservableViewController {
                       PortfolioDataProvider.default().transactions(),
                       SignalsDataProvider.default().get(),
                       ConversationsDataProvider.default().unread())}
-            .done{ portfolio, assets, signals, unread in
+            .done { portfolio, assets, signals, unread in
                 let user: UserModel = ServiceLocator.shared.getService()
                 self.portfolio.data = [(user, portfolio)]
                 self.transactions.data = assets.items

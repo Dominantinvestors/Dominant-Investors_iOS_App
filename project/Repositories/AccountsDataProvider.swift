@@ -1,9 +1,10 @@
 import Alamofire
 import AlamofireObjectMapper
+import PromiseKit
 
 public typealias Completion = (Bool, String?) -> Void
 
-struct AccountsDataProvider: Repository, Syncable {
+struct AccountsDataProvider: PromiseRepository, Syncable {
     
     typealias Item = UserModel
     
@@ -70,6 +71,14 @@ struct AccountsDataProvider: Repository, Syncable {
                 completion(false, error.localizedDescription)
             }
         }
+    }
+    
+    func resetpassword(for email: String) -> Promise<String>  {
+        return send(request: UserModel.resetpassword(email))
+    }
+    
+    func confirmresetpassword(_ password: String, confirm: String, UDID: String, token: String) -> Promise<String> {
+        return send(request: UserModel.confirmresetpassword(password, confirm, UDID, token))
     }
     
     func getUser(completion: @escaping (UserModel?, String?) -> Void)  {

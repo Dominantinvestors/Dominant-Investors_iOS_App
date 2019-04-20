@@ -37,6 +37,19 @@ extension UserModel {
         return JSONEncodingRequestBuilder(path: "/accounts/logout/", method: .post)
     }
     
+    static func resetpassword(_ email: String) -> RequestProvider {
+        let parameters: [String: Any] = [Key.email: email]
+        return JSONEncodingRequestBuilder(path: "/accounts/password/reset/", method: .post, parameters: parameters)
+    }
+
+    static func confirmresetpassword(_ password: String, _ confirm: String, _ UDID: String,  _ token: String) -> RequestProvider {
+        let parameters: [String: Any] = [ "new_password1": password,
+                                         "new_password2": confirm,
+                                         "uid": UDID,
+                                         "token": token]
+        return JSONEncodingRequestBuilder(path: "/accounts/password/reset/confirm/", method: .post, parameters: parameters)
+    }
+    
     static func user() -> RequestProvider {
         return JSONEncodingRequestBuilder(path: "/accounts/user/", method: .get)
     }

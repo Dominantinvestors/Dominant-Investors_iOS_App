@@ -10,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var notification: PushNotifications!
-    
+
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
@@ -30,13 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-      
-//        if([[url host] isEqualToString:@"page"]){
-//            if([[url path] isEqualToString:@"/page1"]){
-//                [self.mainController pushViewController:[[Page1ViewController alloc] init] animated:YES];
-//            }
-//            return YES;
-        
+        if url.host == "fogotpassword" {
+            self.notification.fogotpassword.value = url
+            return true
+        }
         return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
     }
     
