@@ -52,6 +52,11 @@ class ForgotPasswordViewController: UIViewController {
         showActivityIndicator()
         AccountsDataProvider.default().resetpassword(for: textField.text ?? "").done { _ in
                 self.done()
+            
+            CRNotifications.showNotification(type: .info,
+                                             title: NSLocalizedString("Password reset!", comment: ""),
+                                             message: NSLocalizedString("Password reset e-mail has been sent.", comment: ""),
+                                             dismissDelay: 3)
             }.ensure {
                 self.dismissActivityIndicator()
             }.catch {

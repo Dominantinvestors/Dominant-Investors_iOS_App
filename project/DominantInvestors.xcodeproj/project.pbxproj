@@ -48,6 +48,12 @@
 		CE45BF2C21EDC5D20066B56F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE45BF2B21EDC5D20066B56F /* GoogleService-Info.plist */; };
 		CE4F20AE2215B92800A90552 /* AlertNewSignalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F20AD2215B92800A90552 /* AlertNewSignalViewController.swift */; };
 		CE4F20B02216B1F700A90552 /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F20AF2216B1F700A90552 /* PushNotifications.swift */; };
+		CE65E5CA2278404600B4955F /* CRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C32278404500B4955F /* CRNotification.swift */; };
+		CE65E5CB2278404600B4955F /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C42278404500B4955F /* DeviceManager.swift */; };
+		CE65E5CC2278404600B4955F /* CRNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C52278404500B4955F /* CRNotifications.swift */; };
+		CE65E5CD2278404600B4955F /* CRNotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C62278404500B4955F /* CRNotificationType.swift */; };
+		CE65E5CE2278404600B4955F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C72278404500B4955F /* Colors.swift */; };
+		CE65E5CF2278404600B4955F /* CRNotificationsMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE65E5C92278404500B4955F /* CRNotificationsMedia.xcassets */; };
 		CE735BCD21523A7D00E2849E /* Investors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC821523A7D00E2849E /* Investors.xcassets */; };
 		CE735BD021523B0900E2849E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BCF21523B0900E2849E /* Constants.swift */; };
 		CE735BDB21523B1300E2849E /* Ratings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD321523B1300E2849E /* Ratings.storyboard */; };
@@ -209,6 +215,12 @@
 		CE45BF2B21EDC5D20066B56F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE4F20AD2215B92800A90552 /* AlertNewSignalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNewSignalViewController.swift; sourceTree = "<group>"; };
 		CE4F20AF2216B1F700A90552 /* PushNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotifications.swift; sourceTree = "<group>"; };
+		CE65E5C32278404500B4955F /* CRNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotification.swift; sourceTree = "<group>"; };
+		CE65E5C42278404500B4955F /* DeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		CE65E5C52278404500B4955F /* CRNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotifications.swift; sourceTree = "<group>"; };
+		CE65E5C62278404500B4955F /* CRNotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotificationType.swift; sourceTree = "<group>"; };
+		CE65E5C72278404500B4955F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CE65E5C92278404500B4955F /* CRNotificationsMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CRNotificationsMedia.xcassets; sourceTree = "<group>"; };
 		CE6607DE2212F99400DA09D0 /* DominantInvestors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DominantInvestors.entitlements; sourceTree = "<group>"; };
 		CE735BC721523A7D00E2849E /* Crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crypto.xcassets; sourceTree = "<group>"; };
 		CE735BC821523A7D00E2849E /* Investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Investors.xcassets; sourceTree = "<group>"; };
@@ -457,6 +469,35 @@
 			path = AlertNewSignal;
 			sourceTree = "<group>";
 		};
+		CE65E5C12278404500B4955F /* CRNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				CE65E5C22278404500B4955F /* Classes */,
+				CE65E5C82278404500B4955F /* Assets */,
+			);
+			path = CRNotifications;
+			sourceTree = "<group>";
+		};
+		CE65E5C22278404500B4955F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CE65E5C32278404500B4955F /* CRNotification.swift */,
+				CE65E5C42278404500B4955F /* DeviceManager.swift */,
+				CE65E5C52278404500B4955F /* CRNotifications.swift */,
+				CE65E5C62278404500B4955F /* CRNotificationType.swift */,
+				CE65E5C72278404500B4955F /* Colors.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CE65E5C82278404500B4955F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CE65E5C92278404500B4955F /* CRNotificationsMedia.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		CE735BD221523B1300E2849E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -692,6 +733,7 @@
 		CE735ED721523FA000E2849E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE65E5C12278404500B4955F /* CRNotifications */,
 				CE3C301F221C05C1007759A7 /* Chart */,
 				CE735EE221523FA000E2849E /* SegmentControll */,
 				CE09A0EE216E11E2009C7A10 /* CompanyFooter */,
@@ -880,6 +922,7 @@
 				CE735BDF21523B1300E2849E /* Portfolio.storyboard in Resources */,
 				CE735F382152653600E2849E /* MuseoCyrl900.otf in Resources */,
 				CE09A0E6216DFA29009C7A10 /* StatsTableViewCell.xib in Resources */,
+				CE65E5CF2278404600B4955F /* CRNotificationsMedia.xcassets in Resources */,
 				CE735E5821523B2400E2849E /* WatchListTableViewCell.xib in Resources */,
 				CE0F545E21D4D9F400AEFBC1 /* ConversationTableViewCell.xib in Resources */,
 				CE735F342152653600E2849E /* MuseoCyrl100.otf in Resources */,
@@ -1055,6 +1098,7 @@
 				CE09A0F0216E1218009C7A10 /* CompanyFooterView.swift in Sources */,
 				CEB48F18226A43F10063D217 /* ForgotPasswordViewController.swift in Sources */,
 				CE4F20B02216B1F700A90552 /* PushNotifications.swift in Sources */,
+				CE65E5CE2278404600B4955F /* Colors.swift in Sources */,
 				CE735E7C21523B2400E2849E /* SearchController.swift in Sources */,
 				CE4F20AE2215B92800A90552 /* AlertNewSignalViewController.swift in Sources */,
 				CE735D0E21523B2400E2849E /* TableViewItemConfigurators.swift in Sources */,
@@ -1071,6 +1115,7 @@
 				CE3C301E221C0043007759A7 /* Dynemic.swift in Sources */,
 				CE735ECA21523CF200E2849E /* CompanyModel.swift in Sources */,
 				CE735D0621523B2400E2849E /* TableViewDataSourceShim.swift in Sources */,
+				CE65E5CB2278404600B4955F /* DeviceManager.swift in Sources */,
 				CE735D0021523B2400E2849E /* TableViewDataSource.swift in Sources */,
 				CE449BAE215A20FF0091940E /* Dominant+TextField.swift in Sources */,
 				CE735E9E21523B2400E2849E /* PortfolioDataProvider.swift in Sources */,
@@ -1097,6 +1142,7 @@
 				CE0F544621D3858400AEFBC1 /* ConversationsDataProvider.swift in Sources */,
 				CE09A0EA216E0DF6009C7A10 /* TitleSection.swift in Sources */,
 				CE449B9F2158D5000091940E /* Company+Request.swift in Sources */,
+				CE65E5CA2278404600B4955F /* CRNotification.swift in Sources */,
 				CE735E5C21523B2400E2849E /* WatchListTableViewCell.swift in Sources */,
 				CE449BA22158DE3F0091940E /* SearchSignalViewController.swift in Sources */,
 				CEE89E762179C8F9006B8F2B /* SessionAdapter.swift in Sources */,
@@ -1105,6 +1151,7 @@
 				CE897B9C2192DEE4006A4069 /* SellViewController.swift in Sources */,
 				CE0F545821D4D72C00AEFBC1 /* Conversation.swift in Sources */,
 				CE3C302A221D5C2A007759A7 /* SignalInfoTableViewCell.swift in Sources */,
+				CE65E5CC2278404600B4955F /* CRNotifications.swift in Sources */,
 				CEB8801A2181CBAF006DFD9F /* MonayTransformator.swift in Sources */,
 				CE735EA021523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
 				CE0F545521D4D43F00AEFBC1 /* ConversationsViewController.swift in Sources */,
@@ -1112,6 +1159,7 @@
 				CE735E4021523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
 				CE3C3026221C42AC007759A7 /* PriceTableViewCell.swift in Sources */,
 				CE735F502152782800E2849E /* TabBarController.swift in Sources */,
+				CE65E5CD2278404600B4955F /* CRNotificationType.swift in Sources */,
 				CEE89E7F2179C933006B8F2B /* CompanyDataProvider.swift in Sources */,
 				CE735D0821523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */,
 				CE8854CA215CC8940093564B /* DrivewealthDataProvider.swift in Sources */,

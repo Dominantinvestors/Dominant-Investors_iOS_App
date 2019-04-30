@@ -17,8 +17,6 @@ class ConversationsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = NSLocalizedString("Conversations", comment: "")
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 50
@@ -30,8 +28,8 @@ class ConversationsViewController: UIViewController {
     }
     
     fileprivate func setUpSegmentControll() {
-        segmentControll.setLeft(NSLocalizedString("PRIVATE", comment: ""))
-        segmentControll.setRight(NSLocalizedString("BY COMPANY", comment: ""))
+        segmentControll.setLeft(NSLocalizedString("Private talks", comment: ""))
+        segmentControll.setRight(NSLocalizedString("All talks", comment: ""))
         
         segmentControll.selector = {[unowned self] index in
             self.dataSource?.selectIndex = index
