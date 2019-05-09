@@ -28,8 +28,8 @@ class ConversationsViewController: UIViewController {
     }
     
     fileprivate func setUpSegmentControll() {
-        segmentControll.setLeft(NSLocalizedString("Private talks", comment: ""))
-        segmentControll.setRight(NSLocalizedString("All talks", comment: ""))
+        segmentControll.setLeft(NSLocalizedString("PRIVATE TALKS", comment: ""))
+        segmentControll.setRight(NSLocalizedString("ALL TALKS", comment: ""))
         
         segmentControll.selector = {[unowned self] index in
             self.dataSource?.selectIndex = index
@@ -39,13 +39,17 @@ class ConversationsViewController: UIViewController {
     fileprivate func setupDataSource() {
         showActivityIndicator()
         
-        firstly{ when(fulfilled: CompanyDataProvider.default().getMyCommented(), ConversationsDataProvider.default().get())}
-            .done{ myCommented, conversetiones in
+        firstly { when(fulfilled: CompanyDataProvider.default().getMyCommented(),       ConversationsDataProvider.default().get())}
+            .done { myCommented, conversetiones in
+                
+                conversetiones.items.sort(by: { $0.last!.date > $1.last!.date })
                 var conversetion = ConversationDataSource(data: conversetiones.items)
                 conversetion.selectors[.select] = { [unowned self] _, _, item in
                     self.message(item)
                 }
                 
+                var myCommented = myCommented
+                myCommented.sort(by: { $0.latestComment!.date > $1.latestComment!.date })
                 var company = ConversationByCompanyDataSource(data: myCommented)
                 company.selectors[.select] = { [unowned self] _, _, item in
                     self.message(item)

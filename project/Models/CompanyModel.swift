@@ -51,7 +51,7 @@ class CompanyModel: Mappable, Company {
     
     required init?(map: Map) { }
     
-    func mapping(map: Map) {
+    func mapping(map: Map) {        
         id <- map["id"]
         type <- map["asset.type"]
         name <- map["asset.name"]
