@@ -51,6 +51,9 @@ class PersonalViewController: KeyboardObservableViewController {
         super.viewWillAppear(animated)
         reloadData()
         self.navigationController?.navigationBar.isHidden = true
+        
+        let pay: PayViewController = UIStoryboard.init(name: "Main", bundle: nil)[.Pay]
+        self.navigationController?.pushViewController(pay, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

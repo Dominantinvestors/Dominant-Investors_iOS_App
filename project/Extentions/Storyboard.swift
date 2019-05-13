@@ -13,6 +13,7 @@ public extension UIStoryboard {
         case Conversations
         case AlertNewSignal
         case ResetPasswordViewController
+        case Pay
     }
     
     subscript<T: UIViewController>(_ identifier: Identifier) -> T {

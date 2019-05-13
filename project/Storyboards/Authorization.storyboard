@@ -1055,9 +1055,9 @@ But companies with new unique products or services that develop revenues by 30%,
                             <mask key="constraints">
                                 <exclude reference="jrG-HY-yLR"/>
                                 <exclude reference="5bM-8m-X4A"/>
+                                <exclude reference="FdK-50-fp2"/>
                                 <exclude reference="e5P-rp-j90"/>
                                 <exclude reference="wYH-z5-3FU"/>
-                                <exclude reference="FdK-50-fp2"/>
                                 <exclude reference="Aqm-Tx-fYL"/>
                             </mask>
                         </variation>

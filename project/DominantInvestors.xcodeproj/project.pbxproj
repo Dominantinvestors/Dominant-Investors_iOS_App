@@ -153,6 +153,10 @@
 		CE735F562152788700E2849E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F552152788700E2849E /* Protocols.swift */; };
 		CE8854CA215CC8940093564B /* DrivewealthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */; };
 		CE897B9C2192DEE4006A4069 /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897B9B2192DEE4006A4069 /* SellViewController.swift */; };
+		CE9B70D52289554F0035071A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9B70D42289554F0035071A /* StoreKit.framework */; };
+		CE9B70D82289571C0035071A /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B70D62289571C0035071A /* PayViewController.swift */; };
+		CE9B70D92289571C0035071A /* PayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9B70D72289571C0035071A /* PayViewController.xib */; };
+		CE9B70DB2289574F0035071A /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B70DA2289574F0035071A /* IAPHelper.swift */; };
 		CEB48F18226A43F10063D217 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB48F17226A43F10063D217 /* ForgotPasswordViewController.swift */; };
 		CEB48F1A226A4CFE0063D217 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB48F19226A4CFE0063D217 /* ResetPasswordViewController.swift */; };
 		CEB8801A2181CBAF006DFD9F /* MonayTransformator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB880192181CBAF006DFD9F /* MonayTransformator.swift */; };
@@ -324,6 +328,10 @@
 		CE735F552152788700E2849E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivewealthDataProvider.swift; sourceTree = "<group>"; };
 		CE897B9B2192DEE4006A4069 /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
+		CE9B70D42289554F0035071A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		CE9B70D62289571C0035071A /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		CE9B70D72289571C0035071A /* PayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayViewController.xib; sourceTree = "<group>"; };
+		CE9B70DA2289574F0035071A /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		CEB48F17226A43F10063D217 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CEB48F19226A4CFE0063D217 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		CEB880192181CBAF006DFD9F /* MonayTransformator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonayTransformator.swift; sourceTree = "<group>"; };
@@ -347,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B3745267EDC827994C5C373 /* Pods_DominantInvestors.framework in Frameworks */,
+				CE9B70D52289554F0035071A /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +542,7 @@
 		CE735CAD21523B2300E2849E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE9B70D12285A5CD0035071A /* Pay */,
 				CEB48F16226A43BE0063D217 /* ForgotPassword */,
 				CE4F20AC2215B91300A90552 /* AlertNewSignal */,
 				CE0F543B21D37B7A00AEFBC1 /* Chat */,
@@ -812,6 +822,16 @@
 			path = Sell;
 			sourceTree = "<group>";
 		};
+		CE9B70D12285A5CD0035071A /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B70DA2289574F0035071A /* IAPHelper.swift */,
+				CE9B70D62289571C0035071A /* PayViewController.swift */,
+				CE9B70D72289571C0035071A /* PayViewController.xib */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
 		CEB48F16226A43BE0063D217 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -835,6 +855,7 @@
 		E482CC02D3CCE862FD9AFBF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE9B70D42289554F0035071A /* StoreKit.framework */,
 				C9DBD300783B3BA57C773EA0 /* Pods_DominantCrypto.framework */,
 				CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */,
 			);
@@ -878,6 +899,9 @@
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1020;
 						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -909,6 +933,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE735BDD21523B1300E2849E /* Authorization.storyboard in Resources */,
+				CE9B70D92289571C0035071A /* PayViewController.xib in Resources */,
 				CE735E5221523B2400E2849E /* CreateSignalTableViewCell.xib in Resources */,
 				CE735E4A21523B2400E2849E /* PortfolioTableViewCell.xib in Resources */,
 				CE735EFA21523FA000E2849E /* DMStockInfoCell.xib in Resources */,
@@ -1055,6 +1080,7 @@
 				CE735F532152785E00E2849E /* Dominant+LayoutConstraint.swift in Sources */,
 				CEE89E5721761F4B006B8F2B /* RatingsDetailsViewController.swift in Sources */,
 				CE735E6A21523B2400E2849E /* DMScreenerContainerViewController.swift in Sources */,
+				CE9B70DB2289574F0035071A /* IAPHelper.swift in Sources */,
 				CE735F0421523FA000E2849E /* SegmentControll.swift in Sources */,
 				CE0F544321D37D5500AEFBC1 /* Message.swift in Sources */,
 				CE735E6C21523B2400E2849E /* DMStockDetailViewController.swift in Sources */,
@@ -1089,6 +1115,7 @@
 				CE735E7421523B2400E2849E /* DMEstimazeChartViewController.swift in Sources */,
 				CE735F4A2152782800E2849E /* Storyboard.swift in Sources */,
 				CE735ECE21523CF200E2849E /* PortfolioModel.swift in Sources */,
+				CE9B70D82289571C0035071A /* PayViewController.swift in Sources */,
 				CE735E9221523B2400E2849E /* DMAnalyticsViewController.swift in Sources */,
 				CEE89E5B2176201A006B8F2B /* InvestorProfileTableViewCell.swift in Sources */,
 				CE735E6E21523B2400E2849E /* DMSignUpViewController.swift in Sources */,
