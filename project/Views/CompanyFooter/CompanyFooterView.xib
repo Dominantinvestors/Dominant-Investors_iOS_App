@@ -104,13 +104,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGNAL INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbC-tD-wR2">
-                                <rect key="frame" x="56" y="237" width="263.5" height="47.5"/>
+                                <rect key="frame" x="56" y="237" width="263.5" height="32.5"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yY-Be-T3I">
-                                <rect key="frame" x="0.0" y="319.5" width="375" height="125"/>
+                                <rect key="frame" x="0.0" y="304.5" width="375" height="125"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nye-fi-WL0">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="62.5"/>
@@ -250,19 +250,19 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="its-V0-eZJ">
-                                <rect key="frame" x="0.0" y="474.5" width="375" height="50"/>
-                                <color key="backgroundColor" red="0.8901960784313725" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <rect key="frame" x="48.5" y="459.5" width="278" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="y2x-kX-fLV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="14"/>
-                                <state key="normal" title="ADD TO WATCH LIST">
+                                <state key="normal" title="ADD TO WATCH LIST" backgroundImage="addToWatchList">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALK-BC-PTB" customClass="ActionHandleButton" customModule="DominantInvestors" customModuleProvider="target">
                                 <rect key="frame" x="223.5" y="137" width="139.5" height="50"/>
-                                <color key="backgroundColor" red="0.8901960784313725" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="rbE-8R-aoG"/>
                                 </constraints>
@@ -272,11 +272,14 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaL-lC-Cb7">
                                 <rect key="frame" x="12" y="137" width="199.5" height="50"/>
-                                <color key="backgroundColor" red="0.8901960784313725" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="wE7-ZM-Ew2"/>
                                 </constraints>
@@ -286,21 +289,22 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="R0Y-PC-bNf" firstAttribute="trailing" secondItem="its-V0-eZJ" secondAttribute="trailing" id="0sw-BE-hmG"/>
                             <constraint firstItem="6KM-nL-kR0" firstAttribute="leading" secondItem="R0Y-PC-bNf" secondAttribute="leading" id="3hG-xL-dqH"/>
                             <constraint firstItem="ALK-BC-PTB" firstAttribute="leading" secondItem="SaL-lC-Cb7" secondAttribute="trailing" constant="12" id="4tl-mk-hB1"/>
                             <constraint firstItem="its-V0-eZJ" firstAttribute="top" secondItem="6yY-Be-T3I" secondAttribute="bottom" constant="30" id="855-Rp-f6t"/>
                             <constraint firstItem="6yY-Be-T3I" firstAttribute="leading" secondItem="R0Y-PC-bNf" secondAttribute="leading" id="8OE-ge-jTz"/>
                             <constraint firstItem="ALK-BC-PTB" firstAttribute="top" secondItem="SaL-lC-Cb7" secondAttribute="top" id="Dwh-Lv-oc2"/>
                             <constraint firstItem="6yY-Be-T3I" firstAttribute="top" secondItem="UbC-tD-wR2" secondAttribute="bottom" constant="35" id="Mi9-gV-Pgj"/>
-                            <constraint firstItem="R0Y-PC-bNf" firstAttribute="bottom" secondItem="its-V0-eZJ" secondAttribute="bottom" id="TRn-6h-32w"/>
+                            <constraint firstItem="R0Y-PC-bNf" firstAttribute="bottom" secondItem="its-V0-eZJ" secondAttribute="bottom" constant="15" id="TRn-6h-32w"/>
                             <constraint firstItem="R0Y-PC-bNf" firstAttribute="trailing" secondItem="6yY-Be-T3I" secondAttribute="trailing" id="TSa-M6-fW4"/>
-                            <constraint firstItem="its-V0-eZJ" firstAttribute="leading" secondItem="R0Y-PC-bNf" secondAttribute="leading" id="X9F-5a-JHs"/>
                             <constraint firstItem="UbC-tD-wR2" firstAttribute="centerX" secondItem="FJe-hU-C9H" secondAttribute="centerX" id="YYM-Zz-uL8"/>
                             <constraint firstItem="R0Y-PC-bNf" firstAttribute="trailing" secondItem="6KM-nL-kR0" secondAttribute="trailing" id="adS-gF-hMD"/>
                             <constraint firstAttribute="trailing" secondItem="ALK-BC-PTB" secondAttribute="trailing" constant="12" id="d6G-6C-nJD"/>
@@ -339,6 +343,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="addToWatchList" width="278" height="47"/>
         <image name="chart" width="15" height="12"/>
         <image name="rating_message_icon" width="12.5" height="12.5"/>
     </resources>

@@ -26,6 +26,14 @@ class CompanyFooterView: UITableViewCell {
         epsEstimizeButton.layer.cornerRadius = 25.0
         epsEstimizeButton.layer.borderColor = UIColor.red.cgColor
         epsEstimizeButton.layer.borderWidth = 1.0
+        
+        tradingViewButton.layer.cornerRadius = 25.0
+        tradingViewButton.layer.borderColor = UIColor.red.cgColor
+        tradingViewButton.layer.borderWidth = 1.0
+        
+        comentsButton.layer.cornerRadius = 25.0
+        comentsButton.layer.borderColor = UIColor.red.cgColor
+        comentsButton.layer.borderWidth = 1.0
     }
     
     func setCompany(_ company: CompanyModel) {

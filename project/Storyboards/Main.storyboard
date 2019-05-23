@@ -18,6 +18,9 @@
         <array key="MuseoCyrl700.otf">
             <string>MuseoCyrl-700</string>
         </array>
+        <array key="MuseoCyrl900.otf">
+            <string>MuseoCyrl-900</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Navigation Controller-->
@@ -145,14 +148,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="terms:" destination="gGF-pW-LtH" eventType="touchUpInside" id="F1C-0Z-dhg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1U-d3-CTs">
-                                <rect key="frame" x="323" y="44" width="56" height="56"/>
-                                <state key="normal" backgroundImage="cancel_buy"/>
-                                <connections>
-                                    <action selector="cancel:" destination="gGF-pW-LtH" eventType="touchUpInside" id="XNR-q3-GAs"/>
+                                    <segue destination="nuO-6V-9oh" kind="show" id="KaP-xX-MER"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take part in the tournament on investing in stocks and cryptocurrency with a prize found of $ 5000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ty9-CR-Wbc">
@@ -161,6 +157,24 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki0-ga-5KG" userLabel="TradingView">
+                                <rect key="frame" x="173" y="565" width="68" height="32"/>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="16"/>
+                                <state key="normal" title="RESTORE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="restore:" destination="gGF-pW-LtH" eventType="touchUpInside" id="TRL-OQ-yIs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -172,15 +186,15 @@
                             <constraint firstAttribute="trailing" secondItem="sPM-KI-Jh5" secondAttribute="trailing" id="Ein-O7-cNM"/>
                             <constraint firstItem="7Qv-16-PYt" firstAttribute="centerX" secondItem="RfH-un-hpS" secondAttribute="centerX" id="HG0-Bt-Ben"/>
                             <constraint firstItem="0Z0-Hp-gZO" firstAttribute="centerX" secondItem="RfH-un-hpS" secondAttribute="centerX" id="IFE-iq-hjY"/>
+                            <constraint firstItem="Ki0-ga-5KG" firstAttribute="top" secondItem="7Qv-16-PYt" secondAttribute="bottom" constant="10" id="ImG-SZ-ddl"/>
                             <constraint firstItem="6nN-AC-ITg" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="RfH-un-hpS" secondAttribute="centerX" id="KJT-ZD-R2E"/>
                             <constraint firstItem="Ty9-CR-Wbc" firstAttribute="top" secondItem="0Z0-Hp-gZO" secondAttribute="bottom" constant="50" id="RIc-pV-r9z"/>
-                            <constraint firstAttribute="trailing" secondItem="x1U-d3-CTs" secondAttribute="trailing" constant="35" id="Swy-7g-POp"/>
                             <constraint firstItem="sPM-KI-Jh5" firstAttribute="leading" secondItem="RfH-un-hpS" secondAttribute="leading" id="UED-hY-0yi"/>
                             <constraint firstItem="sPM-KI-Jh5" firstAttribute="top" secondItem="RfH-un-hpS" secondAttribute="top" id="YJl-HD-hrW"/>
                             <constraint firstItem="Ty9-CR-Wbc" firstAttribute="leading" secondItem="RfH-un-hpS" secondAttribute="leading" constant="25" id="fR1-Z5-OSk"/>
-                            <constraint firstItem="x1U-d3-CTs" firstAttribute="top" secondItem="diG-vP-4C0" secondAttribute="bottom" id="gRN-WY-Erp"/>
                             <constraint firstItem="F3E-3A-1g4" firstAttribute="centerX" secondItem="RfH-un-hpS" secondAttribute="centerX" id="jDN-nV-bou"/>
                             <constraint firstItem="7Qv-16-PYt" firstAttribute="top" secondItem="F3E-3A-1g4" secondAttribute="bottom" constant="25" id="kSH-K2-7WQ"/>
+                            <constraint firstItem="Ki0-ga-5KG" firstAttribute="centerX" secondItem="RfH-un-hpS" secondAttribute="centerX" id="kcz-TA-N2J"/>
                             <constraint firstItem="wen-HO-Io1" firstAttribute="top" secondItem="Ty9-CR-Wbc" secondAttribute="bottom" constant="40" id="ors-nX-ozf"/>
                             <constraint firstItem="6nN-AC-ITg" firstAttribute="top" secondItem="diG-vP-4C0" secondAttribute="bottom" constant="65" id="vif-0L-Rzb"/>
                             <constraint firstItem="6nN-AC-ITg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RfH-un-hpS" secondAttribute="leading" constant="35" id="vso-mP-uBT"/>
@@ -194,11 +208,147 @@
             </objects>
             <point key="canvasLocation" x="297" y="-511"/>
         </scene>
+        <!--Tournament Terms View Controller-->
+        <scene sceneID="qw9-ou-w5h">
+            <objects>
+                <viewController restorationIdentifier="TournamentTerms" storyboardIdentifier="TournamentTerms" hidesBottomBarWhenPushed="YES" id="nuO-6V-9oh" customClass="TournamentTermsViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Seg-qW-yBt"/>
+                        <viewControllerLayoutGuide type="bottom" id="jhV-8q-Qdl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cva-vS-0BH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="iOl-HS-4Sy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="tintColor" red="0.84422856570000004" green="0.86546021699999998" blue="0.93334376809999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIr-Oq-6EK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKN-5r-JcS">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="825"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Meb-KW-mAn">
+                                                <rect key="frame" x="20" y="545" width="374" height="210"/>
+                                                <string key="text">The tournament shall be suitable for both beginners and experienced traders and investors
+More than 7,000 Nyse and Nasdaq-traded stocks, as well as 1,500 cryptocurrencies shall be available for trading
+The prize money shall be credited to the personal Bitcoin wallets of the winning participants
+Each participant who entered the TOP 100 Investor Rating shall have the opportunity to monetize their trading signals through the Dominant investors application
+The winners of each of the</string>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="15"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oX-cX-7PC">
+                                                <rect key="frame" x="179.5" y="785" width="55" height="20"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="17"/>
+                                                <state key="normal" title="GOT IT" backgroundImage="addToWatchList"/>
+                                                <connections>
+                                                    <action selector="onGotIt:" destination="nuO-6V-9oh" eventType="touchUpInside" id="rhW-5t-CiD"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="mNI-8O-kub">
+                                                <rect key="frame" x="199" y="40" width="16" height="16"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dominant Investors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kuK-TB-y1U">
+                                                <rect key="frame" x="111.5" y="76" width="191" height="26"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="22"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Global Investment Tournament" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fh8-e4-kGT">
+                                                <rect key="frame" x="90.5" y="152" width="233" height="20"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="17"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prize-fund: $ 5,000 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LDW-hx-Qor">
+                                                <rect key="frame" x="110.5" y="192" width="193.5" height="26"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="22"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entry fee: $ 9.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DDm-xf-CMR">
+                                                <rect key="frame" x="126.5" y="228" width="161" height="26"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="22"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rounds" translatesAutoresizingMaskIntoConstraints="NO" id="AjL-Cb-J0W">
+                                                <rect key="frame" x="199" y="499" width="16" height="16"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAw-h9-ATR">
+                                                <rect key="frame" x="20" y="304" width="374" height="175"/>
+                                                <string key="text">Terms and conditions:  Each member receives $ 100,000 in their virtual account  You should buy stocks and cryptocurrency and sell them after the price rises. The ultimate goal is to be the first to get the highest return on an investment portfolio, in percentageterms  The distribution of prize money by rounds:</string>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="15"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="AjL-Cb-J0W" firstAttribute="centerX" secondItem="dKN-5r-JcS" secondAttribute="centerX" id="1wE-XU-61P"/>
+                                            <constraint firstItem="kAw-h9-ATR" firstAttribute="leading" secondItem="dKN-5r-JcS" secondAttribute="leading" constant="20" id="3Es-nU-2GU"/>
+                                            <constraint firstItem="LDW-hx-Qor" firstAttribute="centerX" secondItem="dKN-5r-JcS" secondAttribute="centerX" id="3YH-x9-efj"/>
+                                            <constraint firstItem="mNI-8O-kub" firstAttribute="centerX" secondItem="dKN-5r-JcS" secondAttribute="centerX" id="41C-kj-x2o"/>
+                                            <constraint firstItem="kAw-h9-ATR" firstAttribute="top" secondItem="DDm-xf-CMR" secondAttribute="bottom" constant="50" id="845-vP-Feo"/>
+                                            <constraint firstItem="0oX-cX-7PC" firstAttribute="centerX" secondItem="dKN-5r-JcS" secondAttribute="centerX" id="Bri-zg-eVz"/>
+                                            <constraint firstItem="0oX-cX-7PC" firstAttribute="top" secondItem="Meb-KW-mAn" secondAttribute="bottom" constant="30" id="H8p-I6-Fa3"/>
+                                            <constraint firstItem="DDm-xf-CMR" firstAttribute="top" secondItem="LDW-hx-Qor" secondAttribute="bottom" constant="10" id="KCV-R1-Dq4"/>
+                                            <constraint firstAttribute="trailing" secondItem="kAw-h9-ATR" secondAttribute="trailing" constant="20" id="LEY-PM-zfo"/>
+                                            <constraint firstItem="mNI-8O-kub" firstAttribute="top" secondItem="dKN-5r-JcS" secondAttribute="top" constant="40" id="NBZ-NH-6Tq"/>
+                                            <constraint firstItem="kuK-TB-y1U" firstAttribute="centerX" secondItem="dKN-5r-JcS" secondAttribute="centerX" id="R4K-mv-1De"/>
+                                            <constraint firstItem="DDm-xf-CMR" firstAttribute="centerX" secondItem="dKN-5r-JcS" secondAttribute="centerX" id="Yem-qM-cF0"/>
+                                            <constraint firstAttribute="width" constant="414" placeholder="YES" id="akY-ul-CiR"/>
+                                            <constraint firstItem="LDW-hx-Qor" firstAttribute="top" secondItem="Fh8-e4-kGT" secondAttribute="bottom" constant="20" id="apN-Jh-3w4"/>
+                                            <constraint firstItem="Fh8-e4-kGT" firstAttribute="top" secondItem="kuK-TB-y1U" secondAttribute="bottom" constant="50" id="bfC-Q9-lxr"/>
+                                            <constraint firstAttribute="trailing" secondItem="Meb-KW-mAn" secondAttribute="trailing" constant="20" id="k51-V4-ihZ"/>
+                                            <constraint firstItem="Meb-KW-mAn" firstAttribute="leading" secondItem="dKN-5r-JcS" secondAttribute="leading" constant="20" id="m8E-wA-fLi"/>
+                                            <constraint firstItem="AjL-Cb-J0W" firstAttribute="top" secondItem="kAw-h9-ATR" secondAttribute="bottom" constant="20" id="seD-EL-SBn"/>
+                                            <constraint firstItem="Meb-KW-mAn" firstAttribute="top" secondItem="AjL-Cb-J0W" secondAttribute="bottom" constant="30" id="xF1-Zr-nh9"/>
+                                            <constraint firstItem="kuK-TB-y1U" firstAttribute="top" secondItem="mNI-8O-kub" secondAttribute="bottom" constant="20" id="xYU-0i-XAN"/>
+                                            <constraint firstAttribute="bottom" secondItem="0oX-cX-7PC" secondAttribute="bottom" constant="20" id="ySc-Kj-f5h"/>
+                                            <constraint firstItem="Fh8-e4-kGT" firstAttribute="centerX" secondItem="dKN-5r-JcS" secondAttribute="centerX" id="z7C-zm-dPh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dKN-5r-JcS" firstAttribute="leading" secondItem="yIr-Oq-6EK" secondAttribute="leading" id="CYc-Xi-rLV"/>
+                                    <constraint firstAttribute="bottom" secondItem="dKN-5r-JcS" secondAttribute="bottom" id="R2n-Ww-egC"/>
+                                    <constraint firstItem="dKN-5r-JcS" firstAttribute="top" secondItem="yIr-Oq-6EK" secondAttribute="top" id="TNb-un-YQH"/>
+                                    <constraint firstAttribute="trailing" secondItem="dKN-5r-JcS" secondAttribute="trailing" id="rQq-YB-lsp"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="iOl-HS-4Sy" secondAttribute="bottom" id="Hbh-Fl-Uww"/>
+                            <constraint firstItem="yIr-Oq-6EK" firstAttribute="leading" secondItem="Cva-vS-0BH" secondAttribute="leading" id="LKo-iz-Juu"/>
+                            <constraint firstAttribute="trailing" secondItem="yIr-Oq-6EK" secondAttribute="trailing" id="Nln-MZ-24r"/>
+                            <constraint firstItem="jhV-8q-Qdl" firstAttribute="top" secondItem="yIr-Oq-6EK" secondAttribute="bottom" id="QLB-qA-a14"/>
+                            <constraint firstItem="iOl-HS-4Sy" firstAttribute="top" secondItem="Cva-vS-0BH" secondAttribute="top" id="Yq7-o2-rJQ"/>
+                            <constraint firstItem="iOl-HS-4Sy" firstAttribute="leading" secondItem="Cva-vS-0BH" secondAttribute="leading" id="aZU-ms-6BG"/>
+                            <constraint firstAttribute="trailing" secondItem="iOl-HS-4Sy" secondAttribute="trailing" id="pOT-Mx-Rt6"/>
+                            <constraint firstItem="yIr-Oq-6EK" firstAttribute="top" secondItem="Seg-qW-yBt" secondAttribute="bottom" id="ykP-mD-GtC"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="conteiner" destination="dKN-5r-JcS" id="7zP-iI-kty"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNC-dm-lOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942.02898550724649" y="-512.27678571428567"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background" width="787.5" height="352.5"/>
         <image name="Dominant Investors" width="489" height="41"/>
+        <image name="Logo" width="103" height="115"/>
         <image name="addToWatchList" width="278" height="47"/>
-        <image name="cancel_buy" width="56" height="56"/>
+        <image name="rounds" width="373.33334350585938" height="417.33334350585938"/>
     </resources>
 </document>

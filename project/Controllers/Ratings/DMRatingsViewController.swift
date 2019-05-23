@@ -6,6 +6,7 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     
     var ratings: [InvestorModel]?
     var refreshControl : UIRefreshControl!
+    var titleLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,17 +15,23 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
         if let navigationBar = self.navigationController?.navigationBar {
             let firstFrame = CGRect(x: 0, y: 0, width: navigationBar.frame.width, height: navigationBar.frame.height)
       
-            let firstLabel = UILabel(frame: firstFrame)
-            firstLabel.font = Fonts.regular(16)
-            firstLabel.text = "Top 100"
-            firstLabel.textAlignment = .center
-            navigationBar.addSubview(firstLabel)
+            titleLabel.frame = firstFrame
+            titleLabel.font = Fonts.regular(16)
+            titleLabel.text = "TOP 100"
+            titleLabel.textAlignment = .center
+            navigationBar.addSubview(titleLabel)
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        titleLabel.isHidden = false
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        titleLabel.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {

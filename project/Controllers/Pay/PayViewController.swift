@@ -1,7 +1,7 @@
 import UIKit
 import StoreKit
 
-private let  investmentTournamentId = "3892887888"
+private let investmentTournamentId = "3892887888"
 
 class PayViewController: UIViewController {
     
@@ -10,6 +10,14 @@ class PayViewController: UIViewController {
     }
     
     var product: SKProduct?
+    
+    class func isBought() -> Bool {
+        return UserDefaults.standard.bool(forKey: "isBought")
+    }
+    
+    class func buy() {
+        UserDefaults.standard.set(true, forKey: "isBought")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,15 +47,13 @@ class PayViewController: UIViewController {
         }
     }
     
-    @IBAction func terms(_ sender: Any) {
-    }
-    
-    @IBAction func cancel(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
-    
     @IBAction func restore(_ sender: Any) {
         SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+    
+    fileprivate func success() {
+        PayViewController.buy()
+        navigationController?.popViewController(animated: true)
     }
 }
 
@@ -73,8 +79,10 @@ extension PayViewController: SKPaymentTransactionObserver {
             case .purchasing:
                 print("The payment is being processed.")
             case .purchased:
+                success()
                 print("Payment processed successfully.")
             case .restored:
+                success()
                 print("Payment restored successfully.")
             case .failed:
                 showAlertWith(transaction.error ?? "" as! Error)
