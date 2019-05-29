@@ -48,6 +48,9 @@ class PersonalViewController: KeyboardObservableViewController {
         
         if PayViewController.isBought() == false {
             let pay: PayViewController = UIStoryboard.init(name: "Main", bundle: nil)[.Pay]
+            pay.back = {
+                self.tabBarController?.selectedIndex = 0
+            }
             self.navigationController?.pushViewController(pay, animated: true)
         }
     }

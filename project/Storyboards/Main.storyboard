@@ -118,6 +118,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="tintColor" red="0.84422856570000004" green="0.86546021699999998" blue="0.93334376809999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZX7-1l-uPY" customClass="FXBlurView">
+                                <rect key="frame" x="25" y="220.5" width="364" height="429.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.99$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wen-HO-Io1">
                                 <rect key="frame" x="158" y="362" width="98" height="48"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="40"/>
@@ -134,7 +138,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qv-16-PYt">
-                                <rect key="frame" x="68" y="508" width="278" height="47"/>
+                                <rect key="frame" x="68" y="498" width="278" height="47"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="17"/>
                                 <state key="normal" title="BUY" backgroundImage="addToWatchList"/>
                                 <connections>
@@ -152,27 +156,39 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take part in the tournament on investing in stocks and cryptocurrency with a prize found of $ 5000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ty9-CR-Wbc">
-                                <rect key="frame" x="25" y="260.5" width="364" height="61.5"/>
+                                <rect key="frame" x="45" y="260.5" width="324" height="61.5"/>
                                 <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="17"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki0-ga-5KG" userLabel="TradingView">
-                                <rect key="frame" x="173" y="565" width="68" height="32"/>
-                                <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="16"/>
+                                <rect key="frame" x="109.5" y="565" width="195" height="45"/>
+                                <color key="backgroundColor" red="0.10283091793255812" green="0.10583835639069768" blue="0.10410485781162791" alpha="0.87423691860465114" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6VV-s2-s4A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="17"/>
                                 <state key="normal" title="RESTORE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
+                                        <real key="value" value="22.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="restore:" destination="gGF-pW-LtH" eventType="touchUpInside" id="TRL-OQ-yIs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVX-dy-rsB">
+                                <rect key="frame" x="369" y="630" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="FrG-CO-bRm"/>
+                                    <constraint firstAttribute="height" constant="35" id="gz1-Np-rsa"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="cancel_buy"/>
+                                <connections>
+                                    <action selector="back:" destination="gGF-pW-LtH" eventType="touchUpInside" id="1UE-GI-Uzg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -180,33 +196,43 @@
                         <constraints>
                             <constraint firstItem="F3E-3A-1g4" firstAttribute="top" secondItem="wen-HO-Io1" secondAttribute="bottom" constant="40" id="21V-aq-7Qs"/>
                             <constraint firstItem="0Z0-Hp-gZO" firstAttribute="leading" secondItem="RfH-un-hpS" secondAttribute="leading" constant="25" id="2fX-vb-dEr"/>
-                            <constraint firstAttribute="trailing" secondItem="6nN-AC-ITg" secondAttribute="trailing" constant="35" id="4EI-dM-kkE"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6nN-AC-ITg" secondAttribute="trailing" constant="35" id="4EI-dM-kkE"/>
                             <constraint firstAttribute="bottom" secondItem="sPM-KI-Jh5" secondAttribute="bottom" id="4SI-X4-FZr"/>
                             <constraint firstItem="wen-HO-Io1" firstAttribute="centerX" secondItem="RfH-un-hpS" secondAttribute="centerX" id="6Tm-lI-aJB"/>
+                            <constraint firstItem="Ty9-CR-Wbc" firstAttribute="leading" secondItem="ZX7-1l-uPY" secondAttribute="leading" constant="20" id="8gk-qs-JKn"/>
                             <constraint firstAttribute="trailing" secondItem="sPM-KI-Jh5" secondAttribute="trailing" id="Ein-O7-cNM"/>
+                            <constraint firstItem="Ki0-ga-5KG" firstAttribute="width" secondItem="7Qv-16-PYt" secondAttribute="width" multiplier="0.7" id="GIH-CJ-lev"/>
                             <constraint firstItem="7Qv-16-PYt" firstAttribute="centerX" secondItem="RfH-un-hpS" secondAttribute="centerX" id="HG0-Bt-Ben"/>
                             <constraint firstItem="0Z0-Hp-gZO" firstAttribute="centerX" secondItem="RfH-un-hpS" secondAttribute="centerX" id="IFE-iq-hjY"/>
-                            <constraint firstItem="Ki0-ga-5KG" firstAttribute="top" secondItem="7Qv-16-PYt" secondAttribute="bottom" constant="10" id="ImG-SZ-ddl"/>
+                            <constraint firstItem="Ki0-ga-5KG" firstAttribute="top" secondItem="7Qv-16-PYt" secondAttribute="bottom" constant="20" id="ImG-SZ-ddl"/>
                             <constraint firstItem="6nN-AC-ITg" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="RfH-un-hpS" secondAttribute="centerX" id="KJT-ZD-R2E"/>
                             <constraint firstItem="Ty9-CR-Wbc" firstAttribute="top" secondItem="0Z0-Hp-gZO" secondAttribute="bottom" constant="50" id="RIc-pV-r9z"/>
                             <constraint firstItem="sPM-KI-Jh5" firstAttribute="leading" secondItem="RfH-un-hpS" secondAttribute="leading" id="UED-hY-0yi"/>
+                            <constraint firstItem="Ty9-CR-Wbc" firstAttribute="top" secondItem="ZX7-1l-uPY" secondAttribute="top" constant="40" id="XB8-MQ-ej2"/>
                             <constraint firstItem="sPM-KI-Jh5" firstAttribute="top" secondItem="RfH-un-hpS" secondAttribute="top" id="YJl-HD-hrW"/>
-                            <constraint firstItem="Ty9-CR-Wbc" firstAttribute="leading" secondItem="RfH-un-hpS" secondAttribute="leading" constant="25" id="fR1-Z5-OSk"/>
+                            <constraint firstItem="Ty9-CR-Wbc" firstAttribute="leading" secondItem="RfH-un-hpS" secondAttribute="leading" constant="45" id="fR1-Z5-OSk"/>
+                            <constraint firstItem="Ty9-CR-Wbc" firstAttribute="trailing" secondItem="ZX7-1l-uPY" secondAttribute="trailing" constant="-20" id="fbL-Nk-SdK"/>
                             <constraint firstItem="F3E-3A-1g4" firstAttribute="centerX" secondItem="RfH-un-hpS" secondAttribute="centerX" id="jDN-nV-bou"/>
-                            <constraint firstItem="7Qv-16-PYt" firstAttribute="top" secondItem="F3E-3A-1g4" secondAttribute="bottom" constant="25" id="kSH-K2-7WQ"/>
+                            <constraint firstItem="7Qv-16-PYt" firstAttribute="top" secondItem="F3E-3A-1g4" secondAttribute="bottom" constant="15" id="kSH-K2-7WQ"/>
                             <constraint firstItem="Ki0-ga-5KG" firstAttribute="centerX" secondItem="RfH-un-hpS" secondAttribute="centerX" id="kcz-TA-N2J"/>
+                            <constraint firstItem="XVX-dy-rsB" firstAttribute="bottom" secondItem="ZX7-1l-uPY" secondAttribute="bottom" constant="15" id="mS3-eG-ad1"/>
                             <constraint firstItem="wen-HO-Io1" firstAttribute="top" secondItem="Ty9-CR-Wbc" secondAttribute="bottom" constant="40" id="ors-nX-ozf"/>
+                            <constraint firstItem="Ki0-ga-5KG" firstAttribute="bottom" secondItem="ZX7-1l-uPY" secondAttribute="bottom" constant="-40" id="qt9-wm-Fve"/>
+                            <constraint firstItem="XVX-dy-rsB" firstAttribute="trailing" secondItem="ZX7-1l-uPY" secondAttribute="trailing" constant="15" id="ubE-aB-a1v"/>
                             <constraint firstItem="6nN-AC-ITg" firstAttribute="top" secondItem="diG-vP-4C0" secondAttribute="bottom" constant="65" id="vif-0L-Rzb"/>
                             <constraint firstItem="6nN-AC-ITg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RfH-un-hpS" secondAttribute="leading" constant="35" id="vso-mP-uBT"/>
                             <constraint firstItem="0Z0-Hp-gZO" firstAttribute="top" secondItem="6nN-AC-ITg" secondAttribute="bottom" constant="10" id="yYY-0K-wGV"/>
-                            <constraint firstAttribute="trailing" secondItem="Ty9-CR-Wbc" secondAttribute="trailing" constant="25" id="zSk-7K-7vD"/>
+                            <constraint firstAttribute="trailing" secondItem="Ty9-CR-Wbc" secondAttribute="trailing" constant="45" id="zSk-7K-7vD"/>
                             <constraint firstAttribute="trailing" secondItem="0Z0-Hp-gZO" secondAttribute="trailing" constant="25" id="zYy-6n-8yg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="overlayView" destination="ZX7-1l-uPY" id="2pB-dg-yJv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q19-83-I3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="-511"/>
+            <point key="canvasLocation" x="295.6521739130435" y="-511.60714285714283"/>
         </scene>
         <!--Tournament Terms View Controller-->
         <scene sceneID="qw9-ou-w5h">
@@ -228,21 +254,18 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKN-5r-JcS">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="825"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1667"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Meb-KW-mAn">
-                                                <rect key="frame" x="20" y="545" width="374" height="210"/>
-                                                <string key="text">The tournament shall be suitable for both beginners and experienced traders and investors
-More than 7,000 Nyse and Nasdaq-traded stocks, as well as 1,500 cryptocurrencies shall be available for trading
-The prize money shall be credited to the personal Bitcoin wallets of the winning participants
-Each participant who entered the TOP 100 Investor Rating shall have the opportunity to monetize their trading signals through the Dominant investors application
-The winners of each of the</string>
-                                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="15"/>
+                                                <rect key="frame" x="20" y="1159.5" width="374" height="410.5"/>
+                                                <string key="text">The tournament shall be suitable for both beginners and experienced traders and investors More than 7,000 Nyse and Nasdaq-traded stocks, as well as 1,500 cryptocurrencies shall be available for trading The prize money shall be credited to the personal Bitcoin wallets of the winning participants
+Each participant who entered the TOP 100 Investor Rating shall have the opportunity to monetize their trading signals through the Dominant investors application The winners of each of the  rounds shall be included in the Dominant investors special advisory board and shall be able to manage the assets of the company's customers </string>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="19"/>
                                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oX-cX-7PC">
-                                                <rect key="frame" x="179.5" y="785" width="55" height="20"/>
+                                                <rect key="frame" x="68" y="1600" width="278" height="47"/>
                                                 <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="17"/>
                                                 <state key="normal" title="GOT IT" backgroundImage="addToWatchList"/>
                                                 <connections>
@@ -250,39 +273,39 @@ The winners of each of the</string>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="mNI-8O-kub">
-                                                <rect key="frame" x="199" y="40" width="16" height="16"/>
+                                                <rect key="frame" x="155.5" y="40" width="103.00000000000003" height="115"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dominant Investors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kuK-TB-y1U">
-                                                <rect key="frame" x="111.5" y="76" width="191" height="26"/>
-                                                <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="22"/>
+                                                <rect key="frame" x="89.5" y="175" width="235.5" height="29"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="24"/>
                                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Global Investment Tournament" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fh8-e4-kGT">
-                                                <rect key="frame" x="90.5" y="152" width="233" height="20"/>
-                                                <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="17"/>
+                                                <rect key="frame" x="52.5" y="254" width="309" height="24"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="20"/>
                                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prize-fund: $ 5,000 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LDW-hx-Qor">
-                                                <rect key="frame" x="110.5" y="192" width="193.5" height="26"/>
-                                                <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="22"/>
+                                                <rect key="frame" x="87" y="298" width="240" height="30"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="25"/>
                                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entry fee: $ 9.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DDm-xf-CMR">
-                                                <rect key="frame" x="126.5" y="228" width="161" height="26"/>
-                                                <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="22"/>
+                                                <rect key="frame" x="109" y="338" width="196" height="30"/>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="25"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rounds" translatesAutoresizingMaskIntoConstraints="NO" id="AjL-Cb-J0W">
-                                                <rect key="frame" x="199" y="499" width="16" height="16"/>
+                                                <rect key="frame" x="20.5" y="712" width="373" height="417.50000000000011"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAw-h9-ATR">
-                                                <rect key="frame" x="20" y="304" width="374" height="175"/>
-                                                <string key="text">Terms and conditions:  Each member receives $ 100,000 in their virtual account  You should buy stocks and cryptocurrency and sell them after the price rises. The ultimate goal is to be the first to get the highest return on an investment portfolio, in percentageterms  The distribution of prize money by rounds:</string>
-                                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="15"/>
+                                                <rect key="frame" x="20" y="418" width="374" height="274"/>
+                                                <string key="text">Terms and conditions:  Each member receives $ 100,000 in their virtual account  You should buy stocks and cryptocurrency and sell them after the price rises. The ultimate goal is to be the first to get the highest return on an investment portfolio, in percentage terms  The distribution of prize money by rounds:</string>
+                                                <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="19"/>
                                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -349,6 +372,7 @@ The winners of each of the</string>
         <image name="Dominant Investors" width="489" height="41"/>
         <image name="Logo" width="103" height="115"/>
         <image name="addToWatchList" width="278" height="47"/>
+        <image name="cancel_buy" width="56" height="56"/>
         <image name="rounds" width="373.33334350585938" height="417.33334350585938"/>
     </resources>
 </document>

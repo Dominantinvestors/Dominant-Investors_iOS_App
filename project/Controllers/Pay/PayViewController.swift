@@ -5,12 +5,16 @@ private let investmentTournamentId = "3892887888"
 
 class PayViewController: UIViewController {
     
+    var back: (() -> Void)?
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     var product: SKProduct?
     
+    @IBOutlet weak var overlayView : FXBlurView!
+
     class func isBought() -> Bool {
         return UserDefaults.standard.bool(forKey: "isBought")
     }
@@ -23,11 +27,21 @@ class PayViewController: UIViewController {
         super.viewDidLoad()
         loadProducts()
         showActivityIndicator()
+        drawBlurOverlay()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    private func drawBlurOverlay() {
+        self.overlayView.clipsToBounds      = true
+        self.overlayView.layer.cornerRadius = 7
+        self.overlayView.isBlurEnabled      = true
+        self.overlayView.blurRadius         = 20
+        self.overlayView.isDynamic          = false
+        self.overlayView.tintColor          = UIColor.lightGray
     }
     
     func loadProducts() {
@@ -45,6 +59,10 @@ class PayViewController: UIViewController {
         } else {
             showAlertWith(message: "No purchasable products available.")
         }
+    }
+    
+    @IBAction func back(_ sender: Any) {
+        back?()
     }
     
     @IBAction func restore(_ sender: Any) {

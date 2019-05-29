@@ -56,10 +56,19 @@ class PushNotifications {
             let signal = data["signal_id"] as? String
         {
             let navigation = MainNavigationController()
-            let controller: AlertNewSignalViewController = UIStoryboard.init(name: "Main", bundle: nil)[.AlertNewSignal]
-            controller.investorID = Int(investor)
-            controller.signalID = Int(signal)
-            navigation.pushViewController(controller, animated: false)
+            if PayViewController.isBought() {
+                let controller: AlertNewSignalViewController = UIStoryboard.init(name: "Main", bundle: nil)[.AlertNewSignal]
+                controller.investorID = Int(investor)
+                controller.signalID = Int(signal)
+                navigation.pushViewController(controller, animated: false)
+            } else {
+                let pay: PayViewController = UIStoryboard.init(name: "Main", bundle: nil)[.Pay]
+                pay.back = {
+                    navigation.dismiss(animated: true, completion: nil)
+                }
+                navigation.pushViewController(pay, animated: false )
+            }
+  
             self.window?.rootViewController?.present(navigation, animated: true, completion: nil)
         }
     }
