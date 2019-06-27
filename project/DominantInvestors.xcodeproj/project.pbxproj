@@ -46,7 +46,6 @@
 		CE449BA8215A16CB0091940E /* AddSignalHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE449BA5215A16CB0091940E /* AddSignalHeaderTableViewCell.xib */; };
 		CE449BAB215A1F830091940E /* Dominant+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449BAA215A1F820091940E /* Dominant+String.swift */; };
 		CE449BAE215A20FF0091940E /* Dominant+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE449BAD215A20FF0091940E /* Dominant+TextField.swift */; };
-		CE45BF2C21EDC5D20066B56F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE45BF2B21EDC5D20066B56F /* GoogleService-Info.plist */; };
 		CE4F20AE2215B92800A90552 /* AlertNewSignalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F20AD2215B92800A90552 /* AlertNewSignalViewController.swift */; };
 		CE4F20B02216B1F700A90552 /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F20AF2216B1F700A90552 /* PushNotifications.swift */; };
 		CE65E5CA2278404600B4955F /* CRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C32278404500B4955F /* CRNotification.swift */; };
@@ -159,6 +158,7 @@
 		CEB48F18226A43F10063D217 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB48F17226A43F10063D217 /* ForgotPasswordViewController.swift */; };
 		CEB48F1A226A4CFE0063D217 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB48F19226A4CFE0063D217 /* ResetPasswordViewController.swift */; };
 		CEB8801A2181CBAF006DFD9F /* MonayTransformator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB880192181CBAF006DFD9F /* MonayTransformator.swift */; };
+		CECA915922AD8AB9005941A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CECA915822AD8AB9005941A4 /* GoogleService-Info.plist */; };
 		CEE89E4B2170884D006B8F2B /* AnalitycalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E4A2170884D006B8F2B /* AnalitycalInfoViewController.swift */; };
 		CEE89E4E2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E4D2170AC3B006B8F2B /* TermsAndConditionsViewController.swift */; };
 		CEE89E5721761F4B006B8F2B /* RatingsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E5621761F4B006B8F2B /* RatingsDetailsViewController.swift */; };
@@ -216,7 +216,6 @@
 		CE449BA5215A16CB0091940E /* AddSignalHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSignalHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		CE449BAA215A1F820091940E /* Dominant+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dominant+String.swift"; sourceTree = "<group>"; };
 		CE449BAD215A20FF0091940E /* Dominant+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dominant+TextField.swift"; sourceTree = "<group>"; };
-		CE45BF2B21EDC5D20066B56F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE4F20AD2215B92800A90552 /* AlertNewSignalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNewSignalViewController.swift; sourceTree = "<group>"; };
 		CE4F20AF2216B1F700A90552 /* PushNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotifications.swift; sourceTree = "<group>"; };
 		CE65E5C32278404500B4955F /* CRNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotification.swift; sourceTree = "<group>"; };
@@ -333,6 +332,7 @@
 		CEB48F17226A43F10063D217 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CEB48F19226A4CFE0063D217 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		CEB880192181CBAF006DFD9F /* MonayTransformator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonayTransformator.swift; sourceTree = "<group>"; };
+		CECA915822AD8AB9005941A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEE89E4A2170884D006B8F2B /* AnalitycalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalitycalInfoViewController.swift; sourceTree = "<group>"; };
 		CEE89E4D2170AC3B006B8F2B /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		CEE89E5621761F4B006B8F2B /* RatingsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsDetailsViewController.swift; sourceTree = "<group>"; };
@@ -393,7 +393,7 @@
 		CE04D7D2215236DB00AD3D4D /* project */ = {
 			isa = PBXGroup;
 			children = (
-				CE45BF2B21EDC5D20066B56F /* GoogleService-Info.plist */,
+				CECA915822AD8AB9005941A4 /* GoogleService-Info.plist */,
 				CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */,
 				CE4F20AF2216B1F700A90552 /* PushNotifications.swift */,
 				CE735BCF21523B0900E2849E /* Constants.swift */,
@@ -936,9 +936,9 @@
 				CE735F3B215265FF00E2849E /* Assets.xcassets in Resources */,
 				CE3C3027221C42AC007759A7 /* PriceTableViewCell.xib in Resources */,
 				CE735E4421523B2400E2849E /* AssetsSection.xib in Resources */,
-				CE45BF2C21EDC5D20066B56F /* GoogleService-Info.plist in Resources */,
 				CE3C302B221D5C2A007759A7 /* SignalInfoTableViewCell.xib in Resources */,
 				CE735BE521523B1300E2849E /* OutsourceCharts.storyboard in Resources */,
+				CECA915922AD8AB9005941A4 /* GoogleService-Info.plist in Resources */,
 				CE735BE321523B1300E2849E /* Screener.storyboard in Resources */,
 				CE735BDF21523B1300E2849E /* Portfolio.storyboard in Resources */,
 				CE735F382152653600E2849E /* MuseoCyrl900.otf in Resources */,
@@ -1326,9 +1326,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantStocks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantCrypto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "App Store Dominant";
+				PROVISIONING_PROFILE_SPECIFIER = "DominantCrypto Distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1349,9 +1349,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantStocks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantCrypto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "App Store Dominant";
+				PROVISIONING_PROFILE_SPECIFIER = "DominantCrypto Distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

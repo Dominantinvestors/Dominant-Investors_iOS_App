@@ -254,10 +254,10 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKN-5r-JcS">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1074"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Meb-KW-mAn">
-                                                <rect key="frame" x="20" y="1159.5" width="374" height="410.5"/>
+                                                <rect key="frame" x="20" y="627.5" width="374" height="376.5"/>
                                                 <string key="text">The tournament shall be suitable for both beginners and experienced traders and investors More than 7,000 Nyse and Nasdaq-traded stocks, as well as 1,500 cryptocurrencies shall be available for trading The prize money shall be credited to the personal Bitcoin wallets of the winning participants
 Each participant who entered the TOP 100 Investor Rating shall have the opportunity to monetize their trading signals through the Dominant investors application The winners of each of the  rounds shall be included in the Dominant investors special advisory board and shall be able to manage the assets of the company's customers </string>
                                                 <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="19"/>
@@ -265,7 +265,7 @@ Each participant who entered the TOP 100 Investor Rating shall have the opportun
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oX-cX-7PC">
-                                                <rect key="frame" x="68" y="1600" width="278" height="47"/>
+                                                <rect key="frame" x="179.5" y="1034" width="55" height="20"/>
                                                 <fontDescription key="fontDescription" name="MuseoCyrl-700" family="Museo Cyrl" pointSize="17"/>
                                                 <state key="normal" title="GOT IT" backgroundImage="addToWatchList"/>
                                                 <connections>
@@ -273,37 +273,37 @@ Each participant who entered the TOP 100 Investor Rating shall have the opportun
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="mNI-8O-kub">
-                                                <rect key="frame" x="155.5" y="40" width="103.00000000000003" height="115"/>
+                                                <rect key="frame" x="199" y="40" width="16" height="16"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dominant Investors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kuK-TB-y1U">
-                                                <rect key="frame" x="89.5" y="175" width="235.5" height="29"/>
+                                                <rect key="frame" x="103" y="76" width="208.5" height="28"/>
                                                 <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="24"/>
                                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Global Investment Tournament" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fh8-e4-kGT">
-                                                <rect key="frame" x="52.5" y="254" width="309" height="24"/>
+                                                <rect key="frame" x="70" y="154" width="274" height="24"/>
                                                 <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="20"/>
                                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prize-fund: $ 5,000 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LDW-hx-Qor">
-                                                <rect key="frame" x="87" y="298" width="240" height="30"/>
+                                                <rect key="frame" x="97.5" y="198" width="219.5" height="30"/>
                                                 <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="25"/>
                                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entry fee: $ 9.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DDm-xf-CMR">
-                                                <rect key="frame" x="109" y="338" width="196" height="30"/>
+                                                <rect key="frame" x="116" y="238" width="182.5" height="30"/>
                                                 <fontDescription key="fontDescription" name="MuseoCyrl-900" family="Museo Cyrl" pointSize="25"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rounds" translatesAutoresizingMaskIntoConstraints="NO" id="AjL-Cb-J0W">
-                                                <rect key="frame" x="20.5" y="712" width="373" height="417.50000000000011"/>
+                                                <rect key="frame" x="199" y="581.5" width="16" height="16"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAw-h9-ATR">
-                                                <rect key="frame" x="20" y="418" width="374" height="274"/>
+                                                <rect key="frame" x="20" y="318" width="374" height="243.5"/>
                                                 <string key="text">Terms and conditions:  Each member receives $ 100,000 in their virtual account  You should buy stocks and cryptocurrency and sell them after the price rises. The ultimate goal is to be the first to get the highest return on an investment portfolio, in percentage terms  The distribution of prize money by rounds:</string>
                                                 <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="19"/>
                                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
