@@ -151,6 +151,7 @@
 		CE735F502152782800E2849E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F452152782800E2849E /* TabBarController.swift */; };
 		CE735F532152785E00E2849E /* Dominant+LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F522152785E00E2849E /* Dominant+LayoutConstraint.swift */; };
 		CE735F562152788700E2849E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F552152788700E2849E /* Protocols.swift */; };
+		CE7713C422DE18E3003556EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE7713C322DE18E3003556EF /* GoogleService-Info.plist */; };
 		CE8854CA215CC8940093564B /* DrivewealthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */; };
 		CE897B9C2192DEE4006A4069 /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897B9B2192DEE4006A4069 /* SellViewController.swift */; };
 		CE9B70D52289554F0035071A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9B70D42289554F0035071A /* StoreKit.framework */; };
@@ -158,7 +159,6 @@
 		CEB48F18226A43F10063D217 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB48F17226A43F10063D217 /* ForgotPasswordViewController.swift */; };
 		CEB48F1A226A4CFE0063D217 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB48F19226A4CFE0063D217 /* ResetPasswordViewController.swift */; };
 		CEB8801A2181CBAF006DFD9F /* MonayTransformator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB880192181CBAF006DFD9F /* MonayTransformator.swift */; };
-		CECA915922AD8AB9005941A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CECA915822AD8AB9005941A4 /* GoogleService-Info.plist */; };
 		CEE89E4B2170884D006B8F2B /* AnalitycalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E4A2170884D006B8F2B /* AnalitycalInfoViewController.swift */; };
 		CEE89E4E2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E4D2170AC3B006B8F2B /* TermsAndConditionsViewController.swift */; };
 		CEE89E5721761F4B006B8F2B /* RatingsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E5621761F4B006B8F2B /* RatingsDetailsViewController.swift */; };
@@ -225,7 +225,6 @@
 		CE65E5C72278404500B4955F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CE65E5C92278404500B4955F /* CRNotificationsMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CRNotificationsMedia.xcassets; sourceTree = "<group>"; };
 		CE6607DE2212F99400DA09D0 /* DominantInvestors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DominantInvestors.entitlements; sourceTree = "<group>"; };
-		CE735BC721523A7D00E2849E /* Crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crypto.xcassets; sourceTree = "<group>"; };
 		CE735BC821523A7D00E2849E /* Investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Investors.xcassets; sourceTree = "<group>"; };
 		CE735BCF21523B0900E2849E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE735BD321523B1300E2849E /* Ratings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ratings.storyboard; sourceTree = "<group>"; };
@@ -325,6 +324,7 @@
 		CE735F452152782800E2849E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE735F522152785E00E2849E /* Dominant+LayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dominant+LayoutConstraint.swift"; sourceTree = "<group>"; };
 		CE735F552152788700E2849E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		CE7713C322DE18E3003556EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivewealthDataProvider.swift; sourceTree = "<group>"; };
 		CE897B9B2192DEE4006A4069 /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
 		CE9B70D42289554F0035071A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -332,7 +332,6 @@
 		CEB48F17226A43F10063D217 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CEB48F19226A4CFE0063D217 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		CEB880192181CBAF006DFD9F /* MonayTransformator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonayTransformator.swift; sourceTree = "<group>"; };
-		CECA915822AD8AB9005941A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEE89E4A2170884D006B8F2B /* AnalitycalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalitycalInfoViewController.swift; sourceTree = "<group>"; };
 		CEE89E4D2170AC3B006B8F2B /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		CEE89E5621761F4B006B8F2B /* RatingsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsDetailsViewController.swift; sourceTree = "<group>"; };
@@ -393,8 +392,8 @@
 		CE04D7D2215236DB00AD3D4D /* project */ = {
 			isa = PBXGroup;
 			children = (
-				CECA915822AD8AB9005941A4 /* GoogleService-Info.plist */,
 				CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */,
+				CE7713C322DE18E3003556EF /* GoogleService-Info.plist */,
 				CE4F20AF2216B1F700A90552 /* PushNotifications.swift */,
 				CE735BCF21523B0900E2849E /* Constants.swift */,
 				CE735F262152435E00E2849E /* Dominant-Bridging-Header.h */,
@@ -416,7 +415,6 @@
 			children = (
 				CE735F3A215265FF00E2849E /* Assets.xcassets */,
 				CE735F2A2152653600E2849E /* Fonts */,
-				CE735BC721523A7D00E2849E /* Crypto.xcassets */,
 				CE735BC821523A7D00E2849E /* Investors.xcassets */,
 				CE04D7D7215236DB00AD3D4D /* DominantInvestors.plist */,
 			);
@@ -938,8 +936,8 @@
 				CE735E4421523B2400E2849E /* AssetsSection.xib in Resources */,
 				CE3C302B221D5C2A007759A7 /* SignalInfoTableViewCell.xib in Resources */,
 				CE735BE521523B1300E2849E /* OutsourceCharts.storyboard in Resources */,
-				CECA915922AD8AB9005941A4 /* GoogleService-Info.plist in Resources */,
 				CE735BE321523B1300E2849E /* Screener.storyboard in Resources */,
+				CE7713C422DE18E3003556EF /* GoogleService-Info.plist in Resources */,
 				CE735BDF21523B1300E2849E /* Portfolio.storyboard in Resources */,
 				CE735F382152653600E2849E /* MuseoCyrl900.otf in Resources */,
 				CE09A0E6216DFA29009C7A10 /* StatsTableViewCell.xib in Resources */,
@@ -1320,15 +1318,15 @@
 				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = QSURT3ZX3X;
+				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantCrypto;
+				PRODUCT_BUNDLE_IDENTIFIER = com.investors.application;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "DominantCrypto Distribution";
+				PROVISIONING_PROFILE_SPECIFIER = "INVESTORS APP";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1343,15 +1341,15 @@
 				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = QSURT3ZX3X;
+				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantCrypto;
+				PRODUCT_BUNDLE_IDENTIFIER = com.investors.application;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "DominantCrypto Distribution";
+				PROVISIONING_PROFILE_SPECIFIER = "INVESTORS APP";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
