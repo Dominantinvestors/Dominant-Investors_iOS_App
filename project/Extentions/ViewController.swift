@@ -23,6 +23,8 @@ extension  UIViewController {
             }))
         }
         
+        alert.modalPresentationStyle = .fullScreen
+
         self.present(alert, animated: true) {
             
         }

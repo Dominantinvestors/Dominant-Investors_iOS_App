@@ -118,6 +118,7 @@ class DMSubscriptionViewController: DMViewController, SKProductsRequestDelegate,
         actionSheetController.addAction(buyAction)
         actionSheetController.addAction(cancelAction)
         
+        actionSheetController.modalPresentationStyle = .fullScreen
         present(actionSheetController, animated: true, completion: nil)
     }
     
@@ -185,6 +186,7 @@ class DMSubscriptionViewController: DMViewController, SKProductsRequestDelegate,
             let alert = UIAlertController(title: "Error", message: "Nothing to restore", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil));
             self.dismissActivityIndicator()
+            alert.modalPresentationStyle = .fullScreen
             self.present(alert, animated: true, completion: nil)
             self.transactionInProgress = false
             return

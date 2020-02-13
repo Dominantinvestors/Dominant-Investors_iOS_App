@@ -34,7 +34,8 @@ class PushNotifications {
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { action in })
         alertController.addAction(cancelAction)
-        
+        alertController.modalPresentationStyle = .fullScreen
+
         self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
     }
     
@@ -56,19 +57,21 @@ class PushNotifications {
             let signal = data["signal_id"] as? String
         {
             let navigation = MainNavigationController()
-            if PayViewController.isBought() {
+//            if PayViewController.isBought() {
                 let controller: AlertNewSignalViewController = UIStoryboard.init(name: "Main", bundle: nil)[.AlertNewSignal]
                 controller.investorID = Int(investor)
                 controller.signalID = Int(signal)
                 navigation.pushViewController(controller, animated: false)
-            } else {
-                let pay: PayViewController = UIStoryboard.init(name: "Main", bundle: nil)[.Pay]
-                pay.back = {
-                    navigation.dismiss(animated: true, completion: nil)
-                }
-                navigation.pushViewController(pay, animated: false )
-            }
+//            } else {
+//                let pay: PayViewController = UIStoryboard.init(name: "Main", bundle: nil)[.Pay]
+//                pay.back = {
+//                    navigation.dismiss(animated: true, completion: nil)
+//                }
+//                navigation.pushViewController(pay, animated: false )
+//            }
   
+            navigation.modalPresentationStyle = .fullScreen
+
             self.window?.rootViewController?.present(navigation, animated: true, completion: nil)
         }
     }

@@ -1,6 +1,6 @@
 import UIKit
 import MessageKit
-import MessageInputBar
+import InputBarAccessoryView
 
 class ChatViewController: MessagesViewController, MessagesDataSource {
     
@@ -101,7 +101,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
     
     // MARK: - MessagesDataSource
     
-    func currentSender() -> Sender {
+    func currentSender() -> SenderType {
         let user: UserModel = ServiceLocator.shared.getService()
         return Sender(id: String(user.id), displayName: user.fullName())
     }
@@ -192,10 +192,9 @@ extension ChatViewController: MessageLabelDelegate {
 
 // MARK: - MessageInputBarDelegate
 
-extension ChatViewController: MessageInputBarDelegate {
+extension ChatViewController: InputBarAccessoryViewDelegate {
 
-    func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-
+    func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
         for component in inputBar.inputTextView.components {
 
             if let str = component as? String {
@@ -205,5 +204,4 @@ extension ChatViewController: MessageInputBarDelegate {
         inputBar.inputTextView.text = String()
         messagesCollectionView.scrollToBottom(animated: true)
     }
-
 }

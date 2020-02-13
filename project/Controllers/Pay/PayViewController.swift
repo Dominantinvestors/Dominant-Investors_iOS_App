@@ -1,7 +1,7 @@
 import UIKit
 import StoreKit
 
-private let investmentTournamentId = "3892887888"
+private let investmentTournamentId = "merchant.3892887888"
 
 class PayViewController: UIViewController {
     

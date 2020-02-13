@@ -11,7 +11,7 @@ class Message: Mappable, MessageType {
     var author: UserModel?
 
     var messageId: String { return String(id) }
-    var sender: Sender { return Sender(id: String(author?.id ?? 0), displayName: author?.fullName() ?? "") }
+    var sender: SenderType { return Sender(id: String(author?.id ?? 0), displayName: author?.fullName() ?? "") }
     var kind: MessageKind { return .text(text) }
     var sentDate: Date { return date}
     

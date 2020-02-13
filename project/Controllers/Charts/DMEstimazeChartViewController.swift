@@ -6,12 +6,12 @@
 //  Copyright © 2017 Dominant. All rights reserved.
 //
 
-import UIKit
+import WebKit
 import AlamofireImage
 
-class DMEstimazeChartViewController: DMViewController, UIWebViewDelegate, UIScrollViewDelegate {
+class DMEstimazeChartViewController: DMViewController, WKNavigationDelegate, UIScrollViewDelegate {
 
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var webimageView: UIImageView!
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -42,25 +42,23 @@ class DMEstimazeChartViewController: DMViewController, UIWebViewDelegate, UIScro
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    
     //MARK: UIWebViewDelegate
     
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        webView.scalesPageToFit = true
-        return true
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+
+        decisionHandler(.allow)
     }
-    
-    func webViewDidFinishLoad(_ webView: UIWebView) {
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+
         let bodyStyleVertical = "document.getElementsByTagName('body')[0].style.verticalAlign = 'middle';";
         let bodyStyleHorizontal = "document.getElementsByTagName('body')[0].style.textAlign = 'center';";
         let mapStyle = "document.getElementById('mapid').style.margin = 'auto';";
         
-        self.webView.stringByEvaluatingJavaScript(from: bodyStyleVertical)
-        self.webView.stringByEvaluatingJavaScript(from: bodyStyleHorizontal)
-        self.webView.stringByEvaluatingJavaScript(from: mapStyle)
-    }
-    
-    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        print(error.localizedDescription)
+        webView.evaluateJavaScript(bodyStyleVertical, completionHandler: nil)
+        webView.evaluateJavaScript(bodyStyleHorizontal, completionHandler: nil)
+        webView.evaluateJavaScript(mapStyle, completionHandler: nil)
     }
     
     //MARK: UIScrollViewDelegate

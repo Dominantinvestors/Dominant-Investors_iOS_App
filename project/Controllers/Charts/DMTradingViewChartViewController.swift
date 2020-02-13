@@ -1,11 +1,11 @@
 import UIKit
 import WebKit
 
-class DMTradingViewChartViewController: DMViewController, UIWebViewDelegate {
+class DMTradingViewChartViewController: DMViewController, WKNavigationDelegate {
 
-    @IBOutlet weak var webView: UIWebView! {
+    @IBOutlet weak var webView: WKWebView! {
         didSet {
-            webView.delegate = self
+            webView.navigationDelegate = self
         }
     }
     
@@ -39,19 +39,6 @@ class DMTradingViewChartViewController: DMViewController, UIWebViewDelegate {
         
         //self.webView.scrollView.isScrollEnabled = false
         self.webView.loadHTMLString(html, baseURL: nil)
-    }
-    
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        print("DONE")
-    }
-    
-    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        print(error.localizedDescription)
-    }
-    
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-       
-        return true
     }
 
 }

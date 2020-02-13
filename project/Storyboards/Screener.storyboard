@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mFe-bi-yPP">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mFe-bi-yPP">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +16,7 @@
         <!--Main Navigation Controller-->
         <scene sceneID="68g-cd-xwr">
             <objects>
-                <navigationController hidesBottomBarWhenPushed="YES" navigationBarHidden="YES" id="mFe-bi-yPP" customClass="MainNavigationController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController hidesBottomBarWhenPushed="YES" navigationBarHidden="YES" id="mFe-bi-yPP" customClass="MainNavigationController" customModule="Dominant_Investors" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FUr-cB-dXC">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -33,25 +31,25 @@
         <!--Screener Container View Controller-->
         <scene sceneID="7jF-4J-kaS">
             <objects>
-                <viewController id="aEN-2o-eMh" customClass="DMScreenerContainerViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aEN-2o-eMh" customClass="DMScreenerContainerViewController" customModule="Dominant_Investors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8cy-IR-ShC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkf-Tl-u73">
-                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="573"/>
                                 <connections>
                                     <segue destination="5HB-PI-3Pl" kind="embed" identifier="stockChart" id="5dd-fq-TOy"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xz9-FI-FdO">
-                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="573"/>
                                 <connections>
                                     <segue destination="qr4-Yr-odZ" kind="embed" identifier="cryptoChart" id="woY-vR-s3I"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQG-nd-9nf" customClass="SegmentControll" customModule="DominantInvestors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQG-nd-9nf" customClass="SegmentControll" customModule="Dominant_Investors" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzn-ac-Xoa">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
@@ -119,29 +117,32 @@
         <!--Screener View Controller-->
         <scene sceneID="TaA-ZA-mC5">
             <objects>
-                <viewController id="5HB-PI-3Pl" customClass="DMScreenerViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5HB-PI-3Pl" customClass="DMScreenerViewController" customModule="Dominant_Investors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZOD-Tn-cax">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="573"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleAspectFit" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hQ-lI-V6E">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdQ-C2-eUD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="573"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                            </webView>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8hQ-lI-V6E" firstAttribute="top" secondItem="ZOD-Tn-cax" secondAttribute="top" id="BeY-eH-zQg"/>
-                            <constraint firstAttribute="bottom" secondItem="8hQ-lI-V6E" secondAttribute="bottom" constant="-20" id="lZj-kF-sbi"/>
-                            <constraint firstItem="MBC-nJ-gXn" firstAttribute="trailing" secondItem="8hQ-lI-V6E" secondAttribute="trailing" id="xd8-HX-GVF"/>
-                            <constraint firstItem="8hQ-lI-V6E" firstAttribute="leading" secondItem="MBC-nJ-gXn" secondAttribute="leading" id="ygv-NS-Qcc"/>
+                            <constraint firstItem="vdQ-C2-eUD" firstAttribute="top" secondItem="MBC-nJ-gXn" secondAttribute="top" id="Bw1-PP-0gD"/>
+                            <constraint firstItem="vdQ-C2-eUD" firstAttribute="leading" secondItem="MBC-nJ-gXn" secondAttribute="leading" id="diZ-ig-TdI"/>
+                            <constraint firstItem="MBC-nJ-gXn" firstAttribute="trailing" secondItem="vdQ-C2-eUD" secondAttribute="trailing" id="g9q-cP-fsy"/>
+                            <constraint firstItem="MBC-nJ-gXn" firstAttribute="bottom" secondItem="vdQ-C2-eUD" secondAttribute="bottom" id="taw-Pn-4a2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MBC-nJ-gXn"/>
                     </view>
                     <navigationItem key="navigationItem" id="AwG-xT-ptz"/>
                     <connections>
-                        <outlet property="webView" destination="8hQ-lI-V6E" id="l0t-GN-fbr"/>
+                        <outlet property="webView" destination="vdQ-C2-eUD" id="8OE-Wa-jZB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A99-gn-DAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -151,29 +152,32 @@
         <!--More View Controller-->
         <scene sceneID="Uvb-g9-kXK">
             <objects>
-                <viewController restorationIdentifier="More" storyboardIdentifier="More" hidesBottomBarWhenPushed="YES" id="4Ak-o3-vil" customClass="MoreViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="More" storyboardIdentifier="More" hidesBottomBarWhenPushed="YES" id="4Ak-o3-vil" customClass="MoreViewController" customModule="Dominant_Investors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CLF-IL-3ip">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleAspectFit" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86l-EM-z2q">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="687"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                            </webView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGa-mb-wzn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="86l-EM-z2q" firstAttribute="leading" secondItem="Qrd-io-ok0" secondAttribute="leading" id="0jw-Ba-fHe"/>
-                            <constraint firstItem="Qrd-io-ok0" firstAttribute="trailing" secondItem="86l-EM-z2q" secondAttribute="trailing" id="6mu-2T-Q0a"/>
-                            <constraint firstItem="86l-EM-z2q" firstAttribute="top" secondItem="CLF-IL-3ip" secondAttribute="top" id="Aao-rB-0FF"/>
-                            <constraint firstAttribute="bottom" secondItem="86l-EM-z2q" secondAttribute="bottom" constant="-20" id="aBx-I6-wT6"/>
+                            <constraint firstItem="fGa-mb-wzn" firstAttribute="top" secondItem="Qrd-io-ok0" secondAttribute="top" id="oiW-Wa-moX"/>
+                            <constraint firstItem="fGa-mb-wzn" firstAttribute="leading" secondItem="CLF-IL-3ip" secondAttribute="leading" id="yAT-tS-Vcu"/>
+                            <constraint firstItem="Qrd-io-ok0" firstAttribute="trailing" secondItem="fGa-mb-wzn" secondAttribute="trailing" id="zgL-pC-IhA"/>
+                            <constraint firstItem="Qrd-io-ok0" firstAttribute="bottom" secondItem="fGa-mb-wzn" secondAttribute="bottom" id="zm1-Rn-cMo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qrd-io-ok0"/>
                     </view>
                     <navigationItem key="navigationItem" id="QaH-X5-f58"/>
                     <connections>
-                        <outlet property="webView" destination="86l-EM-z2q" id="FgB-St-2l3"/>
+                        <outlet property="webView" destination="fGa-mb-wzn" id="pDi-JN-pC6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pif-4w-Ctf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -183,29 +187,32 @@
         <!--Crypto Screener View Controller-->
         <scene sceneID="fTp-Nx-wDi">
             <objects>
-                <viewController id="qr4-Yr-odZ" customClass="DMCryptoScreenerViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qr4-Yr-odZ" customClass="DMCryptoScreenerViewController" customModule="Dominant_Investors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fxx-RX-mUF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="573"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleAspectFit" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vlh-Z7-pDI">
-                                <rect key="frame" x="0.0" y="20" width="375" height="553"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                            </webView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8r-XP-Va4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="573"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Vlh-Z7-pDI" firstAttribute="leading" secondItem="kSx-3j-iT1" secondAttribute="leading" id="6QO-g2-PKZ"/>
-                            <constraint firstItem="Vlh-Z7-pDI" firstAttribute="top" secondItem="kSx-3j-iT1" secondAttribute="top" id="Ha8-yt-kzo"/>
-                            <constraint firstItem="kSx-3j-iT1" firstAttribute="trailing" secondItem="Vlh-Z7-pDI" secondAttribute="trailing" id="S89-l9-sjK"/>
-                            <constraint firstAttribute="bottom" secondItem="Vlh-Z7-pDI" secondAttribute="bottom" constant="-20" id="Sqa-50-iK8"/>
+                            <constraint firstItem="kSx-3j-iT1" firstAttribute="bottom" secondItem="V8r-XP-Va4" secondAttribute="bottom" id="cPb-CY-Lv5"/>
+                            <constraint firstItem="kSx-3j-iT1" firstAttribute="trailing" secondItem="V8r-XP-Va4" secondAttribute="trailing" id="ucN-da-9cp"/>
+                            <constraint firstItem="V8r-XP-Va4" firstAttribute="leading" secondItem="fxx-RX-mUF" secondAttribute="leading" id="ySz-7z-qD5"/>
+                            <constraint firstItem="V8r-XP-Va4" firstAttribute="top" secondItem="kSx-3j-iT1" secondAttribute="top" id="zrg-k0-847"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kSx-3j-iT1"/>
                     </view>
                     <navigationItem key="navigationItem" id="4YK-qe-bNz"/>
                     <connections>
-                        <outlet property="webView" destination="Vlh-Z7-pDI" id="n60-zJ-VAk"/>
+                        <outlet property="webView" destination="V8r-XP-Va4" id="N98-4O-7ot"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9LM-Wb-9bm" userLabel="First Responder" sceneMemberID="firstResponder"/>

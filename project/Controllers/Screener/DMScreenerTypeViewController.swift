@@ -1,10 +1,10 @@
-import UIKit
+import WebKit
 
-class DMScreenerTypeViewController: DMViewController, UIWebViewDelegate {
+class DMScreenerTypeViewController: DMViewController, WKNavigationDelegate {
     
-    @IBOutlet  weak var webView : UIWebView! {
+    @IBOutlet  weak var webView : WKWebView! {
         didSet {
-            webView.delegate = self
+            webView.navigationDelegate = self
         }
     }
     
@@ -31,43 +31,48 @@ class DMScreenerTypeViewController: DMViewController, UIWebViewDelegate {
             }
         }
     }
-        
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+
+        let request = navigationAction.request
         
         if request.url?.absoluteString.contains("https://www.tradingview.com/?utm_campaign=screener&utm_medium=widget&utm_source=") == true {
-            return false
-        }
-        if request.url?.absoluteString.contains("https://www.tradingview.com/?utm_campaign=cryptoscreener&utm_medium=widget&utm_source=") == true {
-            return false
-        }
-        
-        if request.url?.absoluteString.contains("symbols") == true {
-            if let ticker = request.url?.lastPathComponent {
-                if ticker.contains("-") {
-                    var token = ticker.components(separatedBy: "-")
-                    if token.count >= 2 {
-                        self.openChartFor(ticker: token[1])
-                    } else {
-                        self.openChartFor(ticker: ticker)
-                        return false
-                    }
-                } else {
-                    self.openChartFor(ticker: ticker)
-                }
-            }
-            return false
-        }
-        return true
-    }
+                   decisionHandler(.cancel)
+               }
+               if request.url?.absoluteString.contains("https://www.tradingview.com/?utm_campaign=cryptoscreener&utm_medium=widget&utm_source=") == true {
+                   decisionHandler(.cancel)
+               }
+               
+               if request.url?.absoluteString.contains("symbols") == true {
+                   if let ticker = request.url?.lastPathComponent {
+                       if ticker.contains("-") {
+                           let token = ticker.components(separatedBy: "-")
+                           if token.count >= 2 {
+                               self.openChartFor(ticker: token[1])
+                           } else {
+                               self.openChartFor(ticker: ticker)
+                               decisionHandler(.cancel)
+                           }
+                       } else {
+                           self.openChartFor(ticker: ticker)
+                       }
+                   }
+                   decisionHandler(.cancel)
 
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        self.dismissActivityIndicator()
-        let bodyStyleVertical = "document.getElementsByTagName('body')[0].style.verticalAlign = 'middle';";
-        let bodyStyleHorizontal = "document.getElementsByTagName('body')[0].style.textAlign = 'center';";
-        let mapStyle = "document.getElementById('mapid').style.margin = 'auto';";
+               }
         
-        self.webView.stringByEvaluatingJavaScript(from: bodyStyleVertical)
-        self.webView.stringByEvaluatingJavaScript(from: bodyStyleHorizontal)
-        self.webView.stringByEvaluatingJavaScript(from: mapStyle)
-    }
+          decisionHandler(.allow)
+      }
+
+      func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+            self.dismissActivityIndicator()
+
+          let bodyStyleVertical = "document.getElementsByTagName('body')[0].style.verticalAlign = 'middle';";
+          let bodyStyleHorizontal = "document.getElementsByTagName('body')[0].style.textAlign = 'center';";
+          let mapStyle = "document.getElementById('mapid').style.margin = 'auto';";
+          
+          webView.evaluateJavaScript(bodyStyleVertical, completionHandler: nil)
+          webView.evaluateJavaScript(bodyStyleHorizontal, completionHandler: nil)
+          webView.evaluateJavaScript(mapStyle, completionHandler: nil)
+      }
 }

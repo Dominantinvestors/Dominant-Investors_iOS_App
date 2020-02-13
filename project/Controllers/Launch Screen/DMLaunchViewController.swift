@@ -30,6 +30,7 @@ class DMLaunchViewController: DMViewController {
     
     private func userNotAuthorized() {
         let auth = UIStoryboard(name: "Authorization", bundle: nil).instantiateInitialViewController()!
+        auth.modalPresentationStyle = .fullScreen
         self.present(auth, animated: false, completion: nil)
     }
     

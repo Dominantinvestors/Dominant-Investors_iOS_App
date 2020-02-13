@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE04D7A0215231CE00AD3D4D"
-               BuildableName = "DominantInvestors.app"
+               BuildableName = "Dominant Investors.app"
                BlueprintName = "DominantInvestors"
                ReferencedContainer = "container:DominantInvestors.xcodeproj">
             </BuildableReference>
@@ -27,19 +27,17 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <Testables>
-      </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE04D7A0215231CE00AD3D4D"
-            BuildableName = "DominantInvestors.app"
+            BuildableName = "Dominant Investors.app"
             BlueprintName = "DominantInvestors"
             ReferencedContainer = "container:DominantInvestors.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <Testables>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -56,13 +54,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE04D7A0215231CE00AD3D4D"
-            BuildableName = "DominantInvestors.app"
+            BuildableName = "Dominant Investors.app"
             BlueprintName = "DominantInvestors"
             ReferencedContainer = "container:DominantInvestors.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,7 +71,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE04D7A0215231CE00AD3D4D"
-            BuildableName = "DominantInvestors.app"
+            BuildableName = "Dominant Investors.app"
             BlueprintName = "DominantInvestors"
             ReferencedContainer = "container:DominantInvestors.xcodeproj">
          </BuildableReference>
