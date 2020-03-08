@@ -4,11 +4,10 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
     
     @IBOutlet weak var usernameTextField  : UITextField!
     @IBOutlet weak var passwordTextField  : UITextField!
-    @IBOutlet weak var overlayView        : UIView!
+    @IBOutlet weak var overlayView        : FXBlurView!
     @IBOutlet weak var createNewAccount   : UIButton!
     @IBOutlet weak var signInButton   : UIButton!
-    @IBOutlet weak var fogotButton   : UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -33,12 +32,11 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
     }
     
     private func setupUI() {
-//        drawBlurOverlay()
+        drawBlurOverlay()
         configureLabels()
         configureTextFields()
         configureKeyboard()
-        self.overlayView.layer.cornerRadius = 10
-
+        
         self.signInButton.layer.cornerRadius = signInButton.frame.size.height / 2
     }
     
@@ -52,18 +50,22 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
     }
     
     private func drawBlurOverlay() {
-//        self.overlayView.clipsToBounds      = true
-//        self.overlayView.layer.cornerRadius = 7
-//        self.overlayView.isBlurEnabled      = true
-//        self.overlayView.blurRadius         = 20
-//        self.overlayView.isDynamic          = false
-//        self.overlayView.tintColor          = UIColor(red: 54 / 255, green: 54 / 255,blue: 54 / 255, alpha: 1)
+        self.overlayView.clipsToBounds      = true
+        self.overlayView.layer.cornerRadius = 7
+        self.overlayView.isBlurEnabled      = true
+        self.overlayView.blurRadius         = 20
+        self.overlayView.isDynamic          = false
+        self.overlayView.tintColor          = UIColor.lightGray
     }
     
     private func configureLabels() {
+        let underlineAttriString = NSMutableAttributedString(string:"CREATE ACCOUNT", attributes:
+            [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
         
-        createNewAccount.underlineAttriString("CREATE ACCOUNT")
-        fogotButton.underlineAttriString("FORGOT PASSWORD?")
+        underlineAttriString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.white, range: NSRange.init(location: 0, length: underlineAttriString.length))
+        underlineAttriString.addAttribute(NSAttributedStringKey.font, value: Fonts.regular(), range: NSRange.init(location: 0, length: underlineAttriString.length))
+        
+        createNewAccount.setAttributedTitle(underlineAttriString, for: .normal)
     }
     
     private func configureTextFields() {
@@ -151,17 +153,4 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
         }
     }
 
-}
-
-extension UIButton {
-    
-    func underlineAttriString(_ text: String) {
-    let underlineAttriString = NSMutableAttributedString(string: text, attributes:
-        [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
-    
-    underlineAttriString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red: 227.0 / 255.0, green: 47.0 / 255.0, blue: 47.0 / 255.0, alpha: 1.0), range: NSRange.init(location: 0, length: underlineAttriString.length))
-    underlineAttriString.addAttribute(NSAttributedStringKey.font, value: Fonts.regular(), range: NSRange.init(location: 0, length: underlineAttriString.length))
-    
-    setAttributedTitle(underlineAttriString, for: .normal)
-    }
 }

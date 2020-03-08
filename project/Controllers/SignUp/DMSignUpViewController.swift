@@ -12,7 +12,7 @@ class DMSignUpViewController: DMViewController, UITextFieldDelegate {
     @IBOutlet weak var password  : UITextField!
     @IBOutlet weak var confirmPassword         : UITextField!
     
-    @IBOutlet var overlayView                    : UIView!
+    @IBOutlet var overlayView                    : FXBlurView!
 
     
     override func viewDidLoad() {
@@ -23,19 +23,17 @@ class DMSignUpViewController: DMViewController, UITextFieldDelegate {
     // MARK: Private
     private func setupUI() {
         configureTextFields()
-
+        drawBlurOverlay()
         configureKeyboard()
-        self.overlayView.layer.cornerRadius = 7
-
     }
     
     private func drawBlurOverlay() {
-//        self.overlayView.clipsToBounds      = true
-//        self.overlayView.layer.cornerRadius = 7
-//        self.overlayView.isBlurEnabled      = true
-//        self.overlayView.blurRadius         = 20
-//        self.overlayView.isDynamic          = false
-//        self.overlayView.tintColor          = UIColor.lightGray
+        self.overlayView.clipsToBounds      = true
+        self.overlayView.layer.cornerRadius = 7
+        self.overlayView.isBlurEnabled      = true
+        self.overlayView.blurRadius         = 20
+        self.overlayView.isDynamic          = false
+        self.overlayView.tintColor          = UIColor.lightGray
     }
     
     private func configureKeyboard() {

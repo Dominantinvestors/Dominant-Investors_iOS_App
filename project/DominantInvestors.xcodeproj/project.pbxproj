@@ -54,6 +54,7 @@
 		CE65E5CD2278404600B4955F /* CRNotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C62278404500B4955F /* CRNotificationType.swift */; };
 		CE65E5CE2278404600B4955F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C72278404500B4955F /* Colors.swift */; };
 		CE65E5CF2278404600B4955F /* CRNotificationsMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE65E5C92278404500B4955F /* CRNotificationsMedia.xcassets */; };
+		CE6CA7072414D13000D3ED06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6CA7062414D13000D3ED06 /* GoogleService-Info.plist */; };
 		CE735BCD21523A7D00E2849E /* Investors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC821523A7D00E2849E /* Investors.xcassets */; };
 		CE735BD021523B0900E2849E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BCF21523B0900E2849E /* Constants.swift */; };
 		CE735BDB21523B1300E2849E /* Ratings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD321523B1300E2849E /* Ratings.storyboard */; };
@@ -151,7 +152,6 @@
 		CE735F502152782800E2849E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F452152782800E2849E /* TabBarController.swift */; };
 		CE735F532152785E00E2849E /* Dominant+LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F522152785E00E2849E /* Dominant+LayoutConstraint.swift */; };
 		CE735F562152788700E2849E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735F552152788700E2849E /* Protocols.swift */; };
-		CE7713C422DE18E3003556EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE7713C322DE18E3003556EF /* GoogleService-Info.plist */; };
 		CE8854CA215CC8940093564B /* DrivewealthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */; };
 		CE897B9C2192DEE4006A4069 /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897B9B2192DEE4006A4069 /* SellViewController.swift */; };
 		CE9B70D52289554F0035071A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9B70D42289554F0035071A /* StoreKit.framework */; };
@@ -225,6 +225,8 @@
 		CE65E5C72278404500B4955F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CE65E5C92278404500B4955F /* CRNotificationsMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CRNotificationsMedia.xcassets; sourceTree = "<group>"; };
 		CE6607DE2212F99400DA09D0 /* DominantInvestors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DominantInvestors.entitlements; sourceTree = "<group>"; };
+		CE6CA7062414D13000D3ED06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE735BC721523A7D00E2849E /* Crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crypto.xcassets; sourceTree = "<group>"; };
 		CE735BC821523A7D00E2849E /* Investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Investors.xcassets; sourceTree = "<group>"; };
 		CE735BCF21523B0900E2849E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE735BD321523B1300E2849E /* Ratings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ratings.storyboard; sourceTree = "<group>"; };
@@ -324,7 +326,6 @@
 		CE735F452152782800E2849E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE735F522152785E00E2849E /* Dominant+LayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dominant+LayoutConstraint.swift"; sourceTree = "<group>"; };
 		CE735F552152788700E2849E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		CE7713C322DE18E3003556EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivewealthDataProvider.swift; sourceTree = "<group>"; };
 		CE897B9B2192DEE4006A4069 /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
 		CE9B70D42289554F0035071A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -392,8 +393,8 @@
 		CE04D7D2215236DB00AD3D4D /* project */ = {
 			isa = PBXGroup;
 			children = (
+				CE6CA7062414D13000D3ED06 /* GoogleService-Info.plist */,
 				CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */,
-				CE7713C322DE18E3003556EF /* GoogleService-Info.plist */,
 				CE4F20AF2216B1F700A90552 /* PushNotifications.swift */,
 				CE735BCF21523B0900E2849E /* Constants.swift */,
 				CE735F262152435E00E2849E /* Dominant-Bridging-Header.h */,
@@ -415,6 +416,7 @@
 			children = (
 				CE735F3A215265FF00E2849E /* Assets.xcassets */,
 				CE735F2A2152653600E2849E /* Fonts */,
+				CE735BC721523A7D00E2849E /* Crypto.xcassets */,
 				CE735BC821523A7D00E2849E /* Investors.xcassets */,
 				CE04D7D7215236DB00AD3D4D /* DominantInvestors.plist */,
 			);
@@ -937,7 +939,6 @@
 				CE3C302B221D5C2A007759A7 /* SignalInfoTableViewCell.xib in Resources */,
 				CE735BE521523B1300E2849E /* OutsourceCharts.storyboard in Resources */,
 				CE735BE321523B1300E2849E /* Screener.storyboard in Resources */,
-				CE7713C422DE18E3003556EF /* GoogleService-Info.plist in Resources */,
 				CE735BDF21523B1300E2849E /* Portfolio.storyboard in Resources */,
 				CE735F382152653600E2849E /* MuseoCyrl900.otf in Resources */,
 				CE09A0E6216DFA29009C7A10 /* StatsTableViewCell.xib in Resources */,
@@ -969,6 +970,7 @@
 				CE735E8A21523B2400E2849E /* BuyTableViewCell.xib in Resources */,
 				CE735F322152653600E2849E /* MuseoCyrl500.otf in Resources */,
 				CE3C3023221C05CF007759A7 /* ChartTableViewCell.xib in Resources */,
+				CE6CA7072414D13000D3ED06 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

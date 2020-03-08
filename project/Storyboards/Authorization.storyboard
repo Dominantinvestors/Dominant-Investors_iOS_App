@@ -32,18 +32,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4CS-F1-h1o">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="4CS-F1-h1o">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1A-zt-hf6">
-                                <rect key="frame" x="49.666666666666657" y="94" width="315" height="576"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1A-zt-hf6" customClass="FXBlurView">
+                                <rect key="frame" x="49.666666666666657" y="79.333333333333314" width="315" height="605.33333333333348"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mzv-0M-NkY">
-                                        <rect key="frame" x="0.0" y="8" width="315" height="5.6666666666666679"/>
+                                        <rect key="frame" x="0.0" y="8" width="315" height="6"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddF-Xy-SJi">
-                                        <rect key="frame" x="47.000000000000014" y="462.33333333333337" width="220.66666666666669" height="40"/>
+                                        <rect key="frame" x="47.000000000000014" y="488.66666666666669" width="220.66666666666669" height="40.000000000000057"/>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.1450980392" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="jr3-3y-Uxw"/>
@@ -56,16 +56,16 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE YOUR ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loe-W8-Jh1">
-                                        <rect key="frame" x="8" y="37.666666666666657" width="299" height="20"/>
+                                        <rect key="frame" x="8" y="38" width="299" height="20"/>
                                         <fontDescription key="fontDescription" name="MuseoCyrl-100" family="Museo Cyrl" pointSize="17"/>
                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXj-iG-99h">
-                                        <rect key="frame" x="0.0" y="510.33333333333343" width="315" height="57.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="536.66666666666663" width="315" height="60.666666666666629"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNu-LR-h6s">
-                                                <rect key="frame" x="47.000000000000014" y="8" width="220.66666666666669" height="41.666666666666664"/>
+                                                <rect key="frame" x="47.000000000000014" y="8" width="220.66666666666669" height="44.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="MuseoCyrl-100" family="Museo Cyrl" pointSize="11"/>
                                                 <state key="normal" title="ALREADY HAVE AN ACCOUNT">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -88,7 +88,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOt-8e-Sg3" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="291.33333333333331" width="220.66666666666669" height="60"/>
+                                        <rect key="frame" x="47.000000000000014" y="292.33333333333337" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CONFIRM PASSWORD" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="W3X-qu-iJa">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
@@ -97,7 +97,7 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.34117993712425232" green="0.34117186069488525" blue="0.3411734402179718" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="W3X-qu-iJa" secondAttribute="trailing" constant="8" id="1v8-RR-egZ"/>
                                             <constraint firstItem="W3X-qu-iJa" firstAttribute="top" secondItem="EOt-8e-Sg3" secondAttribute="top" constant="5" id="Uko-bL-jjz"/>
@@ -106,7 +106,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8J5-XX-UZ0" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="223.33333333333331" width="220.66666666666669" height="60"/>
+                                        <rect key="frame" x="47.000000000000014" y="224.33333333333337" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="bVS-X2-qoe">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
@@ -115,7 +115,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.34117993712425232" green="0.34117186069488525" blue="0.3411734402179718" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="bVS-X2-qoe" firstAttribute="top" secondItem="8J5-XX-UZ0" secondAttribute="top" constant="5" id="GlL-DR-bYw"/>
                                             <constraint firstAttribute="bottom" secondItem="bVS-X2-qoe" secondAttribute="bottom" constant="5" id="ItD-VV-qzk"/>
@@ -124,7 +124,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ne-N2-MyN" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="87.333333333333343" width="220.66666666666669" height="60"/>
+                                        <rect key="frame" x="47.000000000000014" y="88.333333333333329" width="220.66666666666669" height="59.999999999999986"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="LjO-qn-pOj">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
@@ -133,7 +133,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" returnKeyType="next"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.34117993712425232" green="0.34117186069488525" blue="0.3411734402179718" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="LjO-qn-pOj" secondAttribute="bottom" constant="5" id="Kbq-Ur-9m3"/>
                                             <constraint firstAttribute="height" constant="60" id="L8b-vZ-b7P"/>
@@ -143,11 +143,11 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45G-g9-Bpg">
-                                        <rect key="frame" x="0.0" y="73.666666666666657" width="315" height="5.6666666666666714"/>
+                                        <rect key="frame" x="0.0" y="74.000000000000014" width="315" height="6.3333333333333286"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6i-sP-htn" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="155.33333333333334" width="220.66666666666669" height="60"/>
+                                        <rect key="frame" x="47.000000000000014" y="156.33333333333331" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-MAIL" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="ugo-ib-Z6f" userLabel="email">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
@@ -156,7 +156,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" returnKeyType="next"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.34117993712425232" green="0.34117186069488525" blue="0.3411734402179718" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="ugo-ib-Z6f" secondAttribute="bottom" constant="5" id="5bC-X4-V4L"/>
                                             <constraint firstItem="ugo-ib-Z6f" firstAttribute="leading" secondItem="j6i-sP-htn" secondAttribute="leading" constant="8" id="93o-it-D3E"/>
@@ -166,7 +166,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xi-6K-qNH" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="359.33333333333331" width="220.66666666666669" height="60"/>
+                                        <rect key="frame" x="47.000000000000014" y="360.33333333333337" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="INVITE ID" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="aXS-GJ-7SQ" userLabel="email">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
@@ -175,7 +175,7 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.34117993712425232" green="0.34117186069488525" blue="0.3411734402179718" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="aXS-GJ-7SQ" firstAttribute="leading" secondItem="6Xi-6K-qNH" secondAttribute="leading" constant="8" id="Nla-qh-pCS"/>
                                             <constraint firstItem="aXS-GJ-7SQ" firstAttribute="top" secondItem="6Xi-6K-qNH" secondAttribute="top" constant="5" id="UuP-2R-go2"/>
@@ -183,11 +183,10 @@
                                             <constraint firstAttribute="trailing" secondItem="aXS-GJ-7SQ" secondAttribute="trailing" constant="8" id="kbE-3d-3sQ"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Investors app копия 3" translatesAutoresizingMaskIntoConstraints="NO" id="lQM-Ms-LIl">
-                                        <rect key="frame" x="63.000000000000014" y="427.33333333333337" width="188.66666666666669" height="19"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DominantLoginBg" translatesAutoresizingMaskIntoConstraints="NO" id="lQM-Ms-LIl">
+                                        <rect key="frame" x="63.000000000000014" y="428.33333333333337" width="188.66666666666669" height="44.333333333333314"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.2117670476436615" green="0.21176165342330933" blue="0.21176266670227051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="j6i-sP-htn" firstAttribute="width" secondItem="0ne-N2-MyN" secondAttribute="width" id="0gG-sS-7ZN"/>
                                     <constraint firstItem="tNu-LR-h6s" firstAttribute="leading" secondItem="ddF-Xy-SJi" secondAttribute="leading" id="0rI-yM-Qym"/>
@@ -226,6 +225,7 @@
                                     <constraint firstItem="j6i-sP-htn" firstAttribute="top" secondItem="0ne-N2-MyN" secondAttribute="bottom" constant="8" id="cJE-Ie-63i"/>
                                     <constraint firstItem="ddF-Xy-SJi" firstAttribute="leading" secondItem="0ne-N2-MyN" secondAttribute="leading" id="eXJ-Y9-b0C"/>
                                     <constraint firstAttribute="trailing" secondItem="hXj-iG-99h" secondAttribute="trailing" id="fa2-AR-7ft"/>
+                                    <constraint firstItem="lQM-Ms-LIl" firstAttribute="height" secondItem="tNu-LR-h6s" secondAttribute="height" id="g6o-s9-53p"/>
                                     <constraint firstItem="8J5-XX-UZ0" firstAttribute="centerX" secondItem="k1A-zt-hf6" secondAttribute="centerX" id="gdm-3A-7dX"/>
                                     <constraint firstItem="6Xi-6K-qNH" firstAttribute="height" secondItem="j6i-sP-htn" secondAttribute="height" id="hYq-hj-qHK"/>
                                     <constraint firstItem="45G-g9-Bpg" firstAttribute="centerX" secondItem="k1A-zt-hf6" secondAttribute="centerX" id="icO-sS-gJl"/>
@@ -254,15 +254,15 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wo-UI-XK2">
-                                <rect key="frame" x="40" y="20" width="334" height="66"/>
+                                <rect key="frame" x="40" y="20.000000000000004" width="334" height="51.333333333333343"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38o-Mu-2ET">
-                                <rect key="frame" x="28" y="670" width="346" height="66"/>
+                                <rect key="frame" x="28" y="684.66666666666663" width="346" height="51.333333333333371"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.25490468740463257" green="0.25489836931228638" blue="0.25489959120750427" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="38o-Mu-2ET" firstAttribute="leading" secondItem="hms-Wd-epQ" secondAttribute="leadingMargin" constant="8" id="9kU-LM-Vut"/>
                             <constraint firstAttribute="trailingMargin" secondItem="k1A-zt-hf6" secondAttribute="trailing" constant="8" id="MHj-lA-GrZ"/>
@@ -324,15 +324,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kH7-Fj-38q">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="kH7-Fj-38q">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" red="0.25490468740463257" green="0.25489836931228638" blue="0.25489959120750427" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6G-SZ-i1R">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6G-SZ-i1R" customClass="FXBlurView">
                                 <rect key="frame" x="49.666666666666657" y="187" width="315" height="390"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54h-Qt-L57">
-                                        <rect key="frame" x="47.000000000000014" y="266" width="220.66666666666669" height="40"/>
+                                        <rect key="frame" x="47.000000000000014" y="268" width="220.66666666666669" height="40"/>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.1450980392" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="NSg-oh-Pa1"/>
@@ -348,10 +347,10 @@
                                         <rect key="frame" x="8" y="32" width="299" height="20"/>
                                         <fontDescription key="fontDescription" name="MuseoCyrl-100" family="Museo Cyrl" pointSize="17"/>
                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="highlightedColor" red="0.2117670476436615" green="0.21176165342330933" blue="0.21176266670227051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpI-dy-BZ3" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="155" width="220.66666666666669" height="60"/>
+                                        <rect key="frame" x="47.000000000000014" y="156" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="etB-0a-uLH">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
@@ -360,7 +359,7 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.34117993712425232" green="0.34117186069488525" blue="0.3411734402179718" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="etB-0a-uLH" firstAttribute="leading" secondItem="KpI-dy-BZ3" secondAttribute="leading" constant="8" id="0E3-uB-tq7"/>
                                             <constraint firstAttribute="bottom" secondItem="etB-0a-uLH" secondAttribute="bottom" constant="5" id="0F3-J2-Zq0"/>
@@ -369,7 +368,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhw-xt-ZhX" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="87" width="220.66666666666669" height="60"/>
+                                        <rect key="frame" x="47.000000000000014" y="88" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Emo-io-ONH">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
@@ -378,7 +377,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.33333674073219299" green="0.33332890272140503" blue="0.3333304226398468" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="R6O-fR-CgA"/>
                                             <constraint firstItem="Emo-io-ONH" firstAttribute="top" secondItem="fhw-xt-ZhX" secondAttribute="top" constant="5" id="UM0-ZR-Hcn"/>
@@ -388,7 +387,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dgm-Gh-RXd">
-                                        <rect key="frame" x="109.33333333333334" y="314" width="96" height="68"/>
+                                        <rect key="frame" x="109.33333333333334" y="316" width="96" height="66"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erc-KX-zIx">
                                                 <rect key="frame" x="0.0" y="0.0" width="96" height="35"/>
@@ -397,20 +396,20 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
                                                 <state key="normal" title="CREATE ACCOUNT">
-                                                    <color key="titleColor" red="0.89019607840000003" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="signUpButtonPressedWithSender:" destination="WYA-Wt-9PR" eventType="touchUpInside" id="WvU-Q1-waR"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M6-7z-4JQ">
-                                                <rect key="frame" x="-8.3333333333333428" y="33" width="113" height="35"/>
+                                                <rect key="frame" x="-8.3333333333333428" y="31" width="113" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="1Vb-NA-euw"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
                                                 <state key="normal" title="FORGOT PASSWORD?">
-                                                    <color key="titleColor" red="0.89019607840000003" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="63a-FL-2aQ" kind="show" id="YtS-8f-mNl"/>
@@ -427,14 +426,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bA-ek-Gx2">
-                                        <rect key="frame" x="55.000000000000014" y="60" width="204.66666666666669" height="19"/>
+                                        <rect key="frame" x="55.000000000000014" y="60" width="204.66666666666669" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Investors app копия 3" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ydP-By-17s">
-                                        <rect key="frame" x="63.000000000000014" y="231" width="188.66666666666669" height="19"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DominantLoginBg" translatesAutoresizingMaskIntoConstraints="NO" id="ydP-By-17s">
+                                        <rect key="frame" x="63.000000000000014" y="232" width="188.66666666666669" height="20"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.2117670476436615" green="0.21176165342330933" blue="0.21176266670227051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="Seq-FT-Jps" firstAttribute="leading" secondItem="c6G-SZ-i1R" secondAttribute="leading" constant="8" id="01X-Jy-Iaf"/>
                                     <constraint firstItem="fhw-xt-ZhX" firstAttribute="width" secondItem="c6G-SZ-i1R" secondAttribute="width" multiplier="0.7" id="1K8-lo-KCT"/>
@@ -483,6 +481,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Dzd-7A-GQE" firstAttribute="top" secondItem="kH7-Fj-38q" secondAttribute="bottom" id="AHc-qf-MJf"/>
                             <constraint firstItem="OSE-eI-C3N" firstAttribute="top" secondItem="hJM-Yb-ote" secondAttribute="topMargin" id="BR6-yb-TbW"/>
                             <constraint firstItem="kH7-Fj-38q" firstAttribute="top" secondItem="hJM-Yb-ote" secondAttribute="topMargin" id="DFx-K1-GVC"/>
                             <constraint firstItem="OSE-eI-C3N" firstAttribute="leading" secondItem="hJM-Yb-ote" secondAttribute="leadingMargin" constant="20" id="GAY-qL-Sj4"/>
@@ -501,7 +500,6 @@
                             <constraint firstItem="ucc-LJ-bfn" firstAttribute="centerX" secondItem="hJM-Yb-ote" secondAttribute="centerX" id="miQ-G5-q4A"/>
                             <constraint firstItem="c6G-SZ-i1R" firstAttribute="height" secondItem="kH7-Fj-38q" secondAttribute="height" multiplier="0.7" id="mvk-Aw-i3b"/>
                             <constraint firstItem="OSE-eI-C3N" firstAttribute="top" secondItem="hJM-Yb-ote" secondAttribute="topMargin" id="oWo-lE-WVb"/>
-                            <constraint firstAttribute="bottom" secondItem="kH7-Fj-38q" secondAttribute="bottom" id="vg3-BJ-TxE"/>
                             <constraint firstItem="c6G-SZ-i1R" firstAttribute="leading" secondItem="hJM-Yb-ote" secondAttribute="leadingMargin" constant="8" id="wLd-C8-r7a"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ucc-LJ-bfn" secondAttribute="trailing" constant="20" id="xN7-Wz-9NZ"/>
                         </constraints>
@@ -519,7 +517,6 @@
                     <navigationItem key="navigationItem" id="8MC-e5-SDg"/>
                     <connections>
                         <outlet property="createNewAccount" destination="Erc-KX-zIx" id="jgd-69-F8P"/>
-                        <outlet property="fogotButton" destination="3M6-7z-4JQ" id="z6a-lO-RbO"/>
                         <outlet property="overlayView" destination="c6G-SZ-i1R" id="PhW-LV-V2z"/>
                         <outlet property="passwordTextField" destination="etB-0a-uLH" id="YBr-zV-5Vq"/>
                         <outlet property="signInButton" destination="54h-Qt-L57" id="Nxj-Fj-arY"/>
@@ -542,14 +539,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sv9-qI-6Ud">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="sv9-qI-6Ud">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOx-Tk-1nM">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOx-Tk-1nM" customClass="FXBlurView">
                                 <rect key="frame" x="49.666666666666657" y="217" width="315" height="330"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-iN-rxk">
-                                        <rect key="frame" x="47.000000000000014" y="266" width="220.66666666666669" height="40"/>
+                                        <rect key="frame" x="47.000000000000014" y="268" width="220.66666666666669" height="40"/>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.1450980392" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="8CY-4D-Qjk"/>
@@ -568,7 +565,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89h-r8-hkY" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="155" width="220.66666666666669" height="60"/>
+                                        <rect key="frame" x="47.000000000000014" y="156" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="jp0-eb-YLc">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
@@ -577,7 +574,7 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.34117993712425232" green="0.34117186069488525" blue="0.3411734402179718" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="jp0-eb-YLc" secondAttribute="bottom" constant="5" id="0EY-vu-24g"/>
                                             <constraint firstItem="jp0-eb-YLc" firstAttribute="leading" secondItem="89h-r8-hkY" secondAttribute="leading" constant="8" id="CYP-xC-NEQ"/>
@@ -586,7 +583,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYV-qc-Y9Z" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="87" width="220.66666666666669" height="60"/>
+                                        <rect key="frame" x="47.000000000000014" y="88" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="0Ns-6K-ATo">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
@@ -595,7 +592,7 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.34117993712425232" green="0.34117186069488525" blue="0.3411734402179718" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="0Ns-6K-ATo" secondAttribute="trailing" constant="8" id="6Wx-4C-56d"/>
                                             <constraint firstItem="0Ns-6K-ATo" firstAttribute="leading" secondItem="RYV-qc-Y9Z" secondAttribute="leading" constant="8" id="M60-9a-U7w"/>
@@ -605,14 +602,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXX-Mi-Gni">
-                                        <rect key="frame" x="55.000000000000014" y="60" width="204.66666666666669" height="19"/>
+                                        <rect key="frame" x="55.000000000000014" y="60" width="204.66666666666669" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Investors app копия 3" translatesAutoresizingMaskIntoConstraints="NO" id="CWm-RK-V0C">
-                                        <rect key="frame" x="63.000000000000014" y="231" width="188.66666666666669" height="19"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DominantLoginBg" translatesAutoresizingMaskIntoConstraints="NO" id="CWm-RK-V0C">
+                                        <rect key="frame" x="63.000000000000014" y="232" width="188.66666666666669" height="20"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.2117670476436615" green="0.21176165342330933" blue="0.21176266670227051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="RYV-qc-Y9Z" firstAttribute="top" secondItem="FXX-Mi-Gni" secondAttribute="bottom" constant="8" id="1Cg-Cf-lbg"/>
                                     <constraint firstItem="FXX-Mi-Gni" firstAttribute="top" secondItem="CnK-zr-aIq" secondAttribute="bottom" constant="8" id="5aH-4n-nar"/>
@@ -674,7 +670,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.25490468740463257" green="0.25489836931228638" blue="0.25489959120750427" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="h7W-MG-gKn" firstAttribute="top" secondItem="AO0-Va-WB8" secondAttribute="topMargin" id="0T0-2B-EI9"/>
                             <constraint firstItem="8qB-sM-mFl" firstAttribute="top" secondItem="dOx-Tk-1nM" secondAttribute="bottom" id="1jh-vH-tCl"/>
@@ -748,35 +744,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-N1-8CH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-N1-8CH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUB-qf-Qwx">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Векторный смарт-объект копия 4-2" translatesAutoresizingMaskIntoConstraints="NO" id="jDA-mF-BMI">
-                                        <rect key="frame" x="191" y="50" width="32" height="82"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="jDA-mF-BMI">
+                                        <rect key="frame" x="147" y="50" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="K9e-kY-fd3"/>
+                                            <constraint firstAttribute="height" constant="120" id="Uhr-r5-jqo"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="K9e-kY-fd3"/>
+                                                <exclude reference="Uhr-r5-jqo"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="K9e-kY-fd3"/>
+                                                <include reference="Uhr-r5-jqo"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzh-fd-oj4">
-                                        <rect key="frame" x="160" y="153" width="94" height="21"/>
+                                        <rect key="frame" x="160" y="191" width="94" height="21"/>
                                         <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our manifesto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nA-n6-2zh">
-                                        <rect key="frame" x="150.66666666666666" y="253" width="112.99999999999997" height="21"/>
+                                        <rect key="frame" x="150.66666666666666" y="291" width="112.99999999999997" height="21"/>
                                         <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investors app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lP-P9-6zR">
-                                        <rect key="frame" x="154.33333333333334" y="182" width="105.33333333333334" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dominant Investors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lP-P9-6zR">
+                                        <rect key="frame" x="129.66666666666666" y="220" width="154.99999999999997" height="21"/>
                                         <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-6h-dW1">
-                                        <rect key="frame" x="68" y="762.66666666666663" width="278" height="47"/>
+                                        <rect key="frame" x="68" y="800.66666666666663" width="278" height="47"/>
                                         <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="17"/>
                                         <state key="normal" title="I AGREE" backgroundImage="addToWatchList">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -786,7 +798,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJ4-xi-dUk">
-                                        <rect key="frame" x="20" y="304" width="374" height="428.66666666666674"/>
+                                        <rect key="frame" x="20" y="342" width="374" height="428.66666666666674"/>
                                         <string key="text">The success of aggressive investing is to buy the most actively developing companies, whose profit growth rate is 50% or more, while the average company of the S&amp;P 500 shows an average quarterly economic growth of only 10%.
 
 McDolands, Microsoft, General Motors - dead money and long-established companies do not need the money of investors as they needed at an early stage of development, on the contrary, they already pay their dividends to their investors (and penny), because there is nowhere to invest.
@@ -816,7 +828,7 @@ But companies with new unique products or services that develop revenues by 30%,
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.27843433618545532" green="0.27842751145362854" blue="0.27842885255813599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wgb-N1-8CH" firstAttribute="leading" secondItem="w7u-1I-86O" secondAttribute="leading" id="FLF-3P-gvh"/>
                             <constraint firstItem="wgb-N1-8CH" firstAttribute="top" secondItem="w7u-1I-86O" secondAttribute="top" id="Sw3-9V-03M"/>
@@ -852,8 +864,11 @@ But companies with new unique products or services that develop revenues by 30%,
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ag-QG-7r3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="ZHV-cF-uoK">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ViewSignals" translatesAutoresizingMaskIntoConstraints="NO" id="ZHV-cF-uoK">
                                         <rect key="frame" x="0.0" y="-50" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="9qL-pS-6DN"/>
+                                        </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxF-4Y-RPp">
                                         <rect key="frame" x="140" y="-93" width="134" height="23"/>
@@ -871,7 +886,6 @@ But companies with new unique products or services that develop revenues by 30%,
                                     <constraint firstAttribute="bottom" secondItem="rxF-4Y-RPp" secondAttribute="bottom" constant="70" id="19K-gT-g6F"/>
                                     <constraint firstItem="rxF-4Y-RPp" firstAttribute="centerX" secondItem="7Ag-QG-7r3" secondAttribute="centerX" id="4u3-aT-nNN"/>
                                     <constraint firstItem="ZHV-cF-uoK" firstAttribute="top" secondItem="7Ag-QG-7r3" secondAttribute="top" constant="-50" id="ZF9-gI-GHB"/>
-                                    <constraint firstItem="ZHV-cF-uoK" firstAttribute="width" secondItem="7Ag-QG-7r3" secondAttribute="width" id="cOF-cD-5Oo"/>
                                     <constraint firstItem="ZHV-cF-uoK" firstAttribute="leading" secondItem="7Ag-QG-7r3" secondAttribute="leading" id="oi4-SK-cYl"/>
                                     <constraint firstAttribute="bottom" secondItem="ZHV-cF-uoK" secondAttribute="bottom" id="qba-SL-PLI"/>
                                     <constraint firstAttribute="trailing" secondItem="ZHV-cF-uoK" secondAttribute="trailing" id="uqV-eL-WiC"/>
@@ -911,14 +925,14 @@ But companies with new unique products or services that develop revenues by 30%,
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6hP-GH-sHw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="6hP-GH-sHw">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFO-Uh-0Ce">
-                                <rect key="frame" x="49.666666666666657" y="248.66666666666663" width="315" height="267"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFO-Uh-0Ce" customClass="FXBlurView">
+                                <rect key="frame" x="49.666666666666657" y="247.66666666666663" width="315" height="269"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46e-rZ-ego">
-                                        <rect key="frame" x="47.000000000000014" y="197.00000000000003" width="220.66666666666669" height="40"/>
+                                        <rect key="frame" x="47.000000000000014" y="199.00000000000003" width="220.66666666666669" height="40"/>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.1450980392" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="lFU-wu-TnI"/>
@@ -937,7 +951,7 @@ But companies with new unique products or services that develop revenues by 30%,
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeh-VT-Nee" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
-                                        <rect key="frame" x="47.000000000000014" y="87.000000000000028" width="220.66666666666669" height="60"/>
+                                        <rect key="frame" x="47.000000000000014" y="88.000000000000028" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EMAIL" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="aix-wT-Ghc">
                                                 <rect key="frame" x="8" y="5" width="204.66666666666666" height="50"/>
@@ -946,7 +960,7 @@ But companies with new unique products or services that develop revenues by 30%,
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.34117993712425232" green="0.34117186069488525" blue="0.3411734402179718" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="aix-wT-Ghc" secondAttribute="trailing" constant="8" id="2Wr-4H-Qy1"/>
                                             <constraint firstAttribute="height" constant="60" id="8tN-Dq-Sfe"/>
@@ -956,14 +970,13 @@ But companies with new unique products or services that develop revenues by 30%,
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRl-AH-ZOR">
-                                        <rect key="frame" x="55.000000000000014" y="60.000000000000028" width="204.66666666666669" height="19"/>
+                                        <rect key="frame" x="55.000000000000014" y="60.000000000000028" width="204.66666666666669" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Investors app копия 3" translatesAutoresizingMaskIntoConstraints="NO" id="QNU-Mg-tbn">
-                                        <rect key="frame" x="63.000000000000014" y="162.00000000000003" width="188.66666666666669" height="19"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DominantLoginBg" translatesAutoresizingMaskIntoConstraints="NO" id="QNU-Mg-tbn">
+                                        <rect key="frame" x="63.000000000000014" y="163.00000000000003" width="188.66666666666669" height="20"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.2117670476436615" green="0.21176165342330933" blue="0.21176266670227051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="46e-rZ-ego" secondAttribute="bottom" constant="30" id="0hb-rW-2y1"/>
                                     <constraint firstItem="xeh-VT-Nee" firstAttribute="top" secondItem="gRl-AH-ZOR" secondAttribute="bottom" constant="8" id="1Me-Z9-zAS"/>
@@ -989,7 +1002,7 @@ But companies with new unique products or services that develop revenues by 30%,
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPK-VK-kBZ">
-                                <rect key="frame" x="40" y="19.999999999999986" width="334" height="220.66666666666663"/>
+                                <rect key="frame" x="40" y="19.999999999999986" width="334" height="219.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4l-2r-vt8">
                                         <rect key="frame" x="0.0" y="20" width="40" height="40"/>
@@ -1010,11 +1023,11 @@ But companies with new unique products or services that develop revenues by 30%,
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVo-fn-GGo">
-                                <rect key="frame" x="28" y="515.66666666666663" width="346" height="220.33333333333337"/>
+                                <rect key="frame" x="28" y="516.66666666666663" width="346" height="219.33333333333337"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.25490468740463257" green="0.25489836931228638" blue="0.25489959120750427" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qVo-fn-GGo" firstAttribute="top" secondItem="dFO-Uh-0Ce" secondAttribute="bottom" id="2Jm-9H-2Hi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6hP-GH-sHw" secondAttribute="trailing" constant="-20" id="3SC-cy-bHi"/>
@@ -1062,11 +1075,12 @@ But companies with new unique products or services that develop revenues by 30%,
         </scene>
     </scenes>
     <resources>
-        <image name="Group" width="496.66665649414062" height="1516.6666259765625"/>
-        <image name="Investors app копия 3" width="125" height="19"/>
+        <image name="Background" width="787.5" height="352.5"/>
+        <image name="DominantLoginBg" width="241.5" height="20"/>
+        <image name="Logo" width="108" height="121.33333587646484"/>
         <image name="SignalsBackground" width="6516" height="8192"/>
+        <image name="ViewSignals" width="496.66665649414062" height="1363.3333740234375"/>
         <image name="addToWatchList" width="278" height="47"/>
         <image name="backArrow" width="96" height="96"/>
-        <image name="Векторный смарт-объект копия 4-2" width="32" height="82"/>
     </resources>
 </document>

@@ -4,13 +4,13 @@ class ForgotPasswordViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var verify: UIButton!
-    @IBOutlet weak var overlayView: UIView!
+    @IBOutlet weak var overlayView: FXBlurView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         verify.layer.cornerRadius = verify.frame.size.height / 2
         configureKeyboard()
-        self.overlayView.layer.cornerRadius = 10
+        drawBlurOverlay()
         configureTextFields()
     }
 
@@ -21,6 +21,15 @@ class ForgotPasswordViewController: UIViewController {
     
     @objc private func hideKeyboard() {
         self.view.endEditing(true)
+    }
+    
+    private func drawBlurOverlay() {
+        self.overlayView.clipsToBounds      = true
+        self.overlayView.layer.cornerRadius = 7
+        self.overlayView.isBlurEnabled      = true
+        self.overlayView.blurRadius         = 20
+        self.overlayView.isDynamic          = false
+        self.overlayView.tintColor          = UIColor.lightGray
     }
     
     private func configureTextFields() {

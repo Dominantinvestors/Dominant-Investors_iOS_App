@@ -46,13 +46,13 @@ class PersonalViewController: KeyboardObservableViewController {
         self.dataSource = SegmentDataSourceShim([watchListController, portfolioController], tableView: tableView)
         self.tableView.reloadData()
         
-//        if PayViewController.isBought() == false {
-//            let pay: PayViewController = UIStoryboard.init(name: "Main", bundle: nil)[.Pay]
-//            pay.back = {
-//                self.tabBarController?.selectedIndex = 0
-//            }
-//            self.navigationController?.pushViewController(pay, animated: true)
-//        }
+        if PayViewController.isBought() == false {
+            let pay: PayViewController = UIStoryboard.init(name: "Main", bundle: nil)[.Pay]
+            pay.back = {
+                self.tabBarController?.selectedIndex = 0
+            }
+            self.navigationController?.pushViewController(pay, animated: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

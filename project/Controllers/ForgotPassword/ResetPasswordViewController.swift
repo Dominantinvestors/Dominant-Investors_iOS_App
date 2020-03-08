@@ -7,7 +7,7 @@ class ResetPasswordViewController: DMViewController, UITextFieldDelegate {
     
     @IBOutlet weak var passwordTextField  : UITextField!
     @IBOutlet weak var confirmTextField  : UITextField!
-    @IBOutlet weak var overlayView        : UIView!
+    @IBOutlet weak var overlayView        : FXBlurView!
     @IBOutlet weak var confirmButton   : UIButton!
     
     override func viewDidLoad() {
@@ -16,10 +16,10 @@ class ResetPasswordViewController: DMViewController, UITextFieldDelegate {
     }
     
     private func setupUI() {
+        drawBlurOverlay()
         configureTextFields()
         configureKeyboard()
-        self.overlayView.layer.cornerRadius = 7
-
+        
         confirmButton.layer.cornerRadius = confirmButton.frame.size.height / 2
     }
     
@@ -30,6 +30,15 @@ class ResetPasswordViewController: DMViewController, UITextFieldDelegate {
     
     @objc private func hideKeyboard() {
         self.view.endEditing(true)
+    }
+    
+    private func drawBlurOverlay() {
+        self.overlayView.clipsToBounds      = true
+        self.overlayView.layer.cornerRadius = 7
+        self.overlayView.isBlurEnabled      = true
+        self.overlayView.blurRadius         = 20
+        self.overlayView.isDynamic          = false
+        self.overlayView.tintColor          = UIColor.lightGray
     }
     
     private func configureTextFields() {
