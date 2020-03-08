@@ -1281,17 +1281,17 @@
 				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.investors.application;
+				MARKETING_VERSION = 5.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.DominantStocks;
 				PRODUCT_NAME = "Dominant Investors";
-				PROVISIONING_PROFILE_SPECIFIER = "INVESTORS APP";
+				PROVISIONING_PROFILE_SPECIFIER = "DominantStocks distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1306,17 +1306,17 @@
 				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.investors.application;
+				MARKETING_VERSION = 5.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.DominantStocks;
 				PRODUCT_NAME = "Dominant Investors";
-				PROVISIONING_PROFILE_SPECIFIER = "INVESTORS APP";
+				PROVISIONING_PROFILE_SPECIFIER = "DominantStocks distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

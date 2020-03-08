@@ -23,10 +23,14 @@
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="aBd-Ls-Tg2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <webView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="K8s-GL-bcB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="duX-Sr-VRl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="659"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </webView>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aKD-Ab-JtQ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
@@ -44,25 +48,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aKD-Ab-JtQ" firstAttribute="top" secondItem="Pgu-39-zWS" secondAttribute="top" id="62C-vb-Rfo"/>
-                            <constraint firstItem="K8s-GL-bcB" firstAttribute="top" secondItem="Vru-a1-dvU" secondAttribute="bottom" id="65r-y9-EIn"/>
                             <constraint firstItem="W5n-yq-fn2" firstAttribute="width" secondItem="hN8-GU-3Hn" secondAttribute="width" id="8wz-da-3ar"/>
                             <constraint firstItem="SUN-Fq-B0b" firstAttribute="top" secondItem="aBd-Ls-Tg2" secondAttribute="bottom" id="B4R-Fp-BC1"/>
                             <constraint firstItem="Pgu-39-zWS" firstAttribute="trailing" secondItem="aBd-Ls-Tg2" secondAttribute="trailing" id="Ba1-iK-Qhg"/>
                             <constraint firstItem="aBd-Ls-Tg2" firstAttribute="leading" secondItem="Pgu-39-zWS" secondAttribute="leading" id="EUi-66-ZpT"/>
-                            <constraint firstItem="K8s-GL-bcB" firstAttribute="leading" secondItem="hN8-GU-3Hn" secondAttribute="leading" id="N5Y-BQ-8O8"/>
-                            <constraint firstAttribute="trailing" secondItem="K8s-GL-bcB" secondAttribute="trailing" id="TG6-9N-CMd"/>
-                            <constraint firstAttribute="bottom" secondItem="K8s-GL-bcB" secondAttribute="bottom" id="cf7-xF-vqj"/>
+                            <constraint firstItem="Pgu-39-zWS" firstAttribute="trailing" secondItem="duX-Sr-VRl" secondAttribute="trailing" id="T1h-hS-HG8"/>
+                            <constraint firstItem="SUN-Fq-B0b" firstAttribute="top" secondItem="duX-Sr-VRl" secondAttribute="bottom" constant="8" symbolic="YES" id="avZ-Q0-q8m"/>
+                            <constraint firstItem="duX-Sr-VRl" firstAttribute="leading" secondItem="Pgu-39-zWS" secondAttribute="leading" id="d6T-zT-RMw"/>
                             <constraint firstItem="Pgu-39-zWS" firstAttribute="trailing" secondItem="aKD-Ab-JtQ" secondAttribute="trailing" id="e9e-9f-YhA"/>
                             <constraint firstItem="aBd-Ls-Tg2" firstAttribute="top" secondItem="hN8-GU-3Hn" secondAttribute="top" id="gz3-c7-X8U"/>
                             <constraint firstItem="W5n-yq-fn2" firstAttribute="height" secondItem="hN8-GU-3Hn" secondAttribute="height" multiplier="0.5" id="pmW-1x-sJH"/>
                             <constraint firstItem="Pgu-39-zWS" firstAttribute="bottom" secondItem="aKD-Ab-JtQ" secondAttribute="bottom" id="vuo-we-ic4"/>
                             <constraint firstItem="aKD-Ab-JtQ" firstAttribute="leading" secondItem="Pgu-39-zWS" secondAttribute="leading" id="ygy-LF-35B"/>
+                            <constraint firstItem="duX-Sr-VRl" firstAttribute="top" secondItem="Vru-a1-dvU" secondAttribute="bottom" id="yox-2v-a5A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pgu-39-zWS"/>
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="aKD-Ab-JtQ" id="uiC-tt-ndR"/>
-                        <outlet property="webView" destination="K8s-GL-bcB" id="4ao-6V-4hX"/>
+                        <outlet property="webView" destination="duX-Sr-VRl" id="IFt-PS-R3P"/>
                         <outlet property="webimageView" destination="W5n-yq-fn2" id="Uv4-rh-soV"/>
                     </connections>
                 </viewController>

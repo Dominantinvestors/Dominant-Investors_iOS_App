@@ -33,7 +33,7 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         super.viewWillAppear(animated)
         self.collectionView.reloadData()
         
-        setStatusBarBackgroundColor(.clear)
+//        setStatusBarBackgroundColor(.clear)
         
         updateIdeas()
         navigationController?.setNavigationBarHidden(true, animated: animated)

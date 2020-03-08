@@ -52,10 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-func setStatusBarBackgroundColor(_ color: UIColor) {
-    guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
-    statusBar.backgroundColor = color
-}
+//func setStatusBarBackgroundColor(_ color: UIColor) {
+//    guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
+//    statusBar.backgroundColor = color
+//}
 
 extension AppDelegate: MessagingDelegate {
     
