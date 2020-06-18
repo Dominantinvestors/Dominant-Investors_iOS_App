@@ -14,6 +14,6 @@ extension UITextField {
     func setPlaceholder(_ placeholder: String) {
         self.attributedPlaceholder =
             NSAttributedString(string:placeholder,
-                               attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
+                               attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
     }
 }

@@ -15,13 +15,13 @@ class KeyboardObservableViewController: DMViewController {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(self.didShow(sender:)),
-            name: .UIKeyboardDidShow,
+            name: UIResponder.keyboardDidShowNotification,
             object: nil)
         
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(self.didHide(sender:)),
-            name: .UIKeyboardDidHide,
+            name: UIResponder.keyboardDidHideNotification,
             object: nil)
     }
     
@@ -41,8 +41,8 @@ class KeyboardObservableViewController: DMViewController {
     }
     
     @objc private func didShow(sender: NSNotification) {
-        if let kbSize = sender.userInfo?[UIKeyboardFrameEndUserInfoKey] as? CGRect,
-            let duration = sender.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval
+        if let kbSize = sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
+            let duration = sender.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval
         {
             var height = kbSize.size.height
             
@@ -70,7 +70,7 @@ class KeyboardObservableViewController: DMViewController {
     }
     
     @objc private func didHide(sender: NSNotification)  {
-        if let duration = sender.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval {
+        if let duration = sender.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval {
             self.tableView.isScrollEnabled = true
             
             UIView.animate(withDuration: duration, animations: {

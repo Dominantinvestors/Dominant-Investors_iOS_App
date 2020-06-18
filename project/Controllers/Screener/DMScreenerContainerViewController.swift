@@ -47,7 +47,7 @@ class DMScreenerContainerViewController: DMViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor : UIColor.white
+            NSAttributedString.Key.foregroundColor : UIColor.white
         ]
         navigationItem.backBarButtonItem = backItem
         self.navigationController?.navigationBar.topItem?.title = ""

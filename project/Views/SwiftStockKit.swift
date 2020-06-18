@@ -564,7 +564,7 @@ class SwiftStockChart: UIView {
             let rect = CGRect(x : margin!,  y: p.y + 2, width: self.frame.size.width - margin! * 2 - 4.0, height: 14.0)
             let width = text.boundingRect(with: rect.size,
                 options: NSStringDrawingOptions.usesLineFragmentOrigin,
-                attributes:[NSAttributedStringKey.font : valueLabelFont!],
+                attributes:[NSAttributedString.Key.font : valueLabelFont!],
                 context: nil).size.width
             
             let xPadding = 6
@@ -592,7 +592,7 @@ class SwiftStockChart: UIView {
             let rect = CGRect(x : margin!, y: p.y + 2, width: self.frame.size.width - margin! * 2 - 4.0, height : 14)
             let width = text.boundingRect(with: rect.size,
                 options: NSStringDrawingOptions.usesLineFragmentOrigin,
-                attributes:[NSAttributedStringKey.font : indexLabelFont!],
+                attributes:[NSAttributedString.Key.font : indexLabelFont!],
                 context: nil).size.width
             
             let label = UILabel(frame: CGRect(x : p.x - 5.0, y : p.y + 5.0, width : width + 2, height : 14))
@@ -703,7 +703,7 @@ class SwiftStockChart: UIView {
         pathLayer.fillColor = nil //color.CGColor
         pathLayer.strokeColor = UIColor.init(red: 218/255, green: 19/255, blue: 34/255, alpha: 1).cgColor
         pathLayer.lineWidth = lineWidth!
-        pathLayer.lineJoin = kCALineJoinRound
+        pathLayer.lineJoin = CAShapeLayerLineJoin.round
         
         self.layer.addSublayer(pathLayer)
         layers.append(pathLayer)

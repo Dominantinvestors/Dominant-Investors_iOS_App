@@ -44,10 +44,10 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
     
     private func configureLabels() {
         let underlineAttriString = NSMutableAttributedString(string:"CREATE ACCOUNT", attributes:
-            [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
+            [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue])
         
-        underlineAttriString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.white, range: NSRange.init(location: 0, length: underlineAttriString.length))
-        underlineAttriString.addAttribute(NSAttributedStringKey.font, value: Fonts.regular(), range: NSRange.init(location: 0, length: underlineAttriString.length))
+        underlineAttriString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.white, range: NSRange.init(location: 0, length: underlineAttriString.length))
+        underlineAttriString.addAttribute(NSAttributedString.Key.font, value: Fonts.regular(), range: NSRange.init(location: 0, length: underlineAttriString.length))
         
         createNewAccount.setAttributedTitle(underlineAttriString, for: .normal)
     }
@@ -56,10 +56,10 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
     
         self.usernameTextField.attributedPlaceholder =
             NSAttributedString(string:"E-mail",
-                               attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
+                               attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
         self.passwordTextField.attributedPlaceholder =
             NSAttributedString(string:"PASSWORD",
-                               attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
+                               attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
         
         self.usernameTextField.delegate = self
         self.passwordTextField.delegate = self

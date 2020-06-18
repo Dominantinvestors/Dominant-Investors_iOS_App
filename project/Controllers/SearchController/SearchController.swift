@@ -60,11 +60,11 @@ class SearchController: UIView {
         background.translatesAutoresizingMaskIntoConstraints = false
         addSubview(background)
         
-        let vConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[background]|", options: NSLayoutFormatOptions(rawValue:0), metrics: nil, views: ["background": background] )
+        let vConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[background]|", options: NSLayoutConstraint.FormatOptions(rawValue:0), metrics: nil, views: ["background": background] )
         
         addConstraints(vConstraints)
         
-        let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[background]|", options: NSLayoutFormatOptions(rawValue:0), metrics: nil, views: ["background": background] )
+        let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[background]|", options: NSLayoutConstraint.FormatOptions(rawValue:0), metrics: nil, views: ["background": background] )
         
         addConstraints(hConstraints)
         
@@ -79,7 +79,7 @@ class SearchController: UIView {
     private func decorateTableView() {
         tableView.separatorStyle = .none
         tableView.layer.cornerRadius = 20
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50
         tableView.layer.borderWidth = 1
         tableView.layer.borderColor = UIColor.lightGray.cgColor

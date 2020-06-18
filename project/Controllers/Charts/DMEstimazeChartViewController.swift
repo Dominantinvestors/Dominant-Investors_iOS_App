@@ -43,7 +43,7 @@ class DMEstimazeChartViewController: DMViewController, UIWebViewDelegate, UIScro
     
     //MARK: UIWebViewDelegate
     
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
         webView.scalesPageToFit = true
         return true
     }

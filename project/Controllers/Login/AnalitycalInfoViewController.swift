@@ -8,7 +8,7 @@ class AnalitycalInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let horizontalConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.width, multiplier: 1, constant: 0)
+        let horizontalConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.width, multiplier: 1, constant: 0)
         view.addConstraint(horizontalConstraint)
         
         if UIDevice.current.userInterfaceIdiom == .pad {

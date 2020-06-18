@@ -62,7 +62,7 @@ class DMTradingViewChartViewController: DMViewController, UIWebViewDelegate {
         print(error.localizedDescription)
     }
     
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
        
         return true
     }
