@@ -28,3 +28,7 @@ target :DominantCrypto do
     pod 'FacebookShare'
     pod 'AFDateHelper', '~> 4.2.2'
 end
+
+target :Inapps do
+    pod 'SwiftyStoreKit'
+end
