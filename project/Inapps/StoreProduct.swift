@@ -1,7 +1,7 @@
 import Foundation
 import StoreKit
 
-struct StoreProduct {
+public struct StoreProduct {
     // ProductId format <app>.<inapp_type>.<inapp_name>
     // inapp_type - enum(lifetime, subscription, subscription_with_trial)
     public let id: String

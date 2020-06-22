@@ -1,5 +1,6 @@
 import UIKit
 import FBSDKCoreKit
+import Inapps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -10,6 +11,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ApplicationDelegate.shared.application(application,
                                                didFinishLaunchingWithOptions: launchOptions)
+        let productIds = ProductId.allCases.map { $0.rawValue }
+        StoreKitManager.default.configure(productIds: productIds)
         
         return true
     }

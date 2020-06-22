@@ -1,13 +1,13 @@
 import Foundation
 import SwiftyStoreKit
 
-enum StoreSubscriptionStatus {
+public enum StoreSubscriptionStatus {
     case purchased
     case expired
     case notPurchased
 }
 
-struct StoreSubscription {
+public struct StoreSubscription {
     let id: String
     let status: StoreSubscriptionStatus
     let receipts: [ReceiptItem]?

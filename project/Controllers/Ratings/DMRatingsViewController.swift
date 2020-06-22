@@ -10,7 +10,6 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        title = NSLocalizedString("TOP 100", comment: "")
     }
     
     override func viewDidAppear(_ animated: Bool) {

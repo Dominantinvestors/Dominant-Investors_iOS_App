@@ -10,33 +10,33 @@ import Foundation
 import SwiftyStoreKit
 import StoreKit
 
-enum ProductId: String, CaseIterable {
+public enum ProductId: String, CaseIterable {
     case monthly = "signal_subscription_monthly_renewable"
     case annually = "signal_subscription_annually_renewable"
 }
 
 // StoreKitManager assumes that we have only auto renewable subscriptions in our productIds
 // For another type of products we must extend this manager
-final class StoreKitManager {
+public final class StoreKitManager {
     
-    static let `default`: StoreKitManager = { return StoreKitManager() }()
+    public static let `default`: StoreKitManager = { return StoreKitManager() }()
     
-    private(set) var products: [StoreProduct]?
-    private(set) var subscriptions: [StoreSubscription]?
-    private(set) var productIds: [String] = []
+    public private(set) var products: [StoreProduct]?
+    public private(set) var subscriptions: [StoreSubscription]?
+    public private(set) var productIds: [String] = []
     
     private var isLoadingProducts = false
     private var isLoadingSubscriptions = false
     private var productsSubscriptions: [String: Bool] = [:]
     private var productsCompletion: (([StoreProduct]?, Error?) -> Void)?
     private var subscriptionsCompletion: (([StoreSubscription]?, Error?) -> Void)?
-    private var secret: String? = "5e07eb06d97542508769bfd7547e89e7"
+    private var secret: String?
     
     private init() {
         validatePendingTransactions()
     }
     
-    func configure(productIds: [String], secret: String?) {
+    public func configure(productIds: [String], secret: String? = nil) {
         self.productIds = productIds
         self.secret = secret
         
@@ -45,7 +45,7 @@ final class StoreKitManager {
         verifySubscriptions(forceRefresh: true)
     }
     
-    func isSubscribed(productId: String) -> Bool? {
+    public func isSubscribed(productId: String) -> Bool? {
         return productsSubscriptions[productId]
     }
     
@@ -66,7 +66,7 @@ final class StoreKitManager {
         return SwiftyStoreKit.canMakePayments
     }
     
-    func buy(productId: String, source: String,
+    public func buy(productId: String, source: String,
              additionalParams: [String: AnyHashable]? = nil,
              completion: @escaping (Error?) -> Void) {
         var params: [String: AnyHashable] = ["source": source, "inapp_id": productId]
@@ -124,7 +124,7 @@ final class StoreKitManager {
         print("Error code: \(code)")
     }
     
-    func restore(completion: @escaping ([StoreSubscription]?, Error?) -> Void) {
+    public func restore(completion: @escaping ([StoreSubscription]?, Error?) -> Void) {
         if let subscriptions = subscriptions {
             completion(subscriptions, nil)
         } else {

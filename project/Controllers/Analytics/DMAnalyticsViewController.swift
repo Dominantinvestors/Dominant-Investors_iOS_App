@@ -1,5 +1,6 @@
 import UIKit
 //import MBProgressHUD
+import Inapps
 
 class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UICollectionViewDataSource, DMContainerDelegate {
 
@@ -29,7 +30,15 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         self.collectionView.reloadData()
         
         self.navigationController?.navigationBar.isHidden = false
-        setStatusBarBackgroundColor(.clear)
+//        setStatusBarBackgroundColor(.clear)
+        
+        let isSubscribed = StoreKitManager.default.isSubscribed(productId: ProductId.monthly.rawValue) ?? false
+        if isSubscribed == false {
+            
+            let controller = UIStoryboard(name: "Subscription", bundle: nil).instantiateInitialViewController()!
+            controller.modalPresentationStyle = .overFullScreen
+            self.present(controller, animated: true, completion: nil)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
