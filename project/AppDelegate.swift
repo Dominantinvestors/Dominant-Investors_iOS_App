@@ -24,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 func setStatusBarBackgroundColor(_ color: UIColor) {
-    guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
-    statusBar.backgroundColor = color
+    
+    if #available(iOS 13.0, *) {
+        return
+    } else {
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
+        statusBar.backgroundColor = color
+    }
 }
