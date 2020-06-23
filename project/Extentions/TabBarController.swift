@@ -71,6 +71,8 @@ final class MainTabBar: TabBarController {
         controller.closeCompletion = { [tabBarController] isSubscribed in
             if !isSubscribed {
                 tabBarController?.selectedIndex = 2 // 2 - Portfolio Tab
+            } else {
+                tabBarController?.selectedIndex = 0 // 0 - Purchase Tab
             }
         }
     }

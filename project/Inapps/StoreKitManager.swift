@@ -85,7 +85,8 @@ public final class StoreKitManager {
                 if purchase.needsFinishTransaction {
                     SwiftyStoreKit.finishTransaction(purchase.transaction)
                 }
-                self.verifySubscriptions(forceRefresh: true)
+                self.saveSubscriptionsToDisk()
+                self.verifySubscriptions(forceRefresh: false)
                 
                 completion(.success(Void()))
             case .error(let error):
