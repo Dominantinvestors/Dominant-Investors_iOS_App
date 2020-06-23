@@ -30,6 +30,7 @@ public final class StoreKitManager {
     private var productsSubscriptions: [String: Bool] = [:]
     private var productsCompletion: (([StoreProduct]?, Error?) -> Void)?
     private var subscriptionsCompletion: (([StoreSubscription]?, Error?) -> Void)?
+    public var productsLoadCompletion: (() -> Void)?
     private var secret: String?
     
     private init() {
@@ -68,7 +69,7 @@ public final class StoreKitManager {
     
     public func buy(productId: String, source: String,
              additionalParams: [String: AnyHashable]? = nil,
-             completion: @escaping (Error?) -> Void) {
+             completion: @escaping (Result<Void, Error>) -> Void) {
         var params: [String: AnyHashable] = ["source": source, "inapp_id": productId]
         
         if let additionalParams = additionalParams {
@@ -82,14 +83,14 @@ public final class StoreKitManager {
                 if purchase.needsFinishTransaction {
                     SwiftyStoreKit.finishTransaction(purchase.transaction)
                 }
-//                self.productsSubscriptions.accept(true)
-                self.verifySubscriptions(forceRefresh: false)
+                self.productsSubscriptions[productId] = true
+                self.saveSubscriptionsToDisk()
+                self.verifySubscriptions(forceRefresh: true)
                 
-                completion(nil)
+                completion(.success(Void()))
             case .error(let error):
                 self.logInappError(error: error, params: params)
-                
-                completion(error)
+                completion(.failure(error))
             }
         }
     }
@@ -151,6 +152,8 @@ extension StoreKitManager {
             
             self.productsCompletion?(self.products, result.error)
             self.productsCompletion = nil
+            self.productsLoadCompletion?()
+            self.productsLoadCompletion = nil
             self.isLoadingProducts = false
         }
     }
@@ -175,7 +178,7 @@ extension StoreKitManager {
     // - Parameter forceRefresh: If true, refreshes the receipt even if one already exists.
     private func verifySubscriptions(forceRefresh: Bool) {
         isLoadingSubscriptions = true
-        let appleValidator = AppleReceiptValidator(service: .production, sharedSecret: secret)
+        let appleValidator = AppleReceiptValidator(service: .sandbox, sharedSecret: secret)
         SwiftyStoreKit.verifyReceipt(using: appleValidator, forceRefresh: forceRefresh) { [unowned self] result in
             switch result {
             case .success(let receipt):

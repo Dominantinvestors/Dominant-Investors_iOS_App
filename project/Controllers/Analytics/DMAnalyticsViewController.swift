@@ -30,10 +30,11 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         self.collectionView.reloadData()
         
         self.navigationController?.navigationBar.isHidden = false
-//        setStatusBarBackgroundColor(.clear)
+        setStatusBarBackgroundColor(.clear)
         
-        let isSubscribed = StoreKitManager.default.isSubscribed(productId: ProductId.monthly.rawValue) ?? false
-        if isSubscribed == false {
+        let isMontlySubscribed = StoreKitManager.default.isSubscribed(productId: ProductId.monthly.rawValue) ?? false
+        let isAnnuallySubscribed = StoreKitManager.default.isSubscribed(productId: ProductId.annually.rawValue) ?? false
+        if isMontlySubscribed == false && isAnnuallySubscribed == false {
             
             let controller = UIStoryboard(name: "Subscription", bundle: nil).instantiateInitialViewController()!
             controller.modalPresentationStyle = .overFullScreen

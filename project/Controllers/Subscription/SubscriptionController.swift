@@ -14,8 +14,8 @@ final class SubscriptionController: DMViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private var collectionView: UICollectionView!
-    @IBOutlet private var monthlySubscription: UIButton!
-    @IBOutlet private var annuallySubscription: UIButton!
+    @IBOutlet private var monthlySubscriptionButton: UIButton!
+    @IBOutlet private var annuallySubscriptionButton: UIButton!
     @IBOutlet private var pageControl: UIPageControl!
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var discountView: UIView!
@@ -38,6 +38,12 @@ final class SubscriptionController: DMViewController {
         setupButtons()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        collectionView.reloadData()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         discountView.layer.cornerRadius = discountView.bounds.midY
@@ -48,26 +54,36 @@ final class SubscriptionController: DMViewController {
 private extension SubscriptionController {
     
     func checkInapps() {
-        guard storeKit.isSubscribed(productId: ProductId.monthly.rawValue) == true ||
-            storeKit.isSubscribed(productId: ProductId.annually.rawValue) == true else {
+        guard storeKit.isSubscribed(productId: ProductId.monthly.rawValue) == false ||
+            storeKit.isSubscribed(productId: ProductId.annually.rawValue) == false else {
                 close(self)
                 return
         }
-        
-        if storeKit.products?.isEmpty == true {
-            let productIds = ProductId.allCases.map { $0.rawValue }
-            storeKit.configure(productIds: productIds)
+
+        if storeKit.products?.isEmpty == true || storeKit.products == nil {
+            startLoading()
+            storeKit.productsLoadCompletion = { [weak self] in
+                self?.endLoading()
+                self?.setupButtons()
+            }
         }
     }
     
     func setupButtons() {
         var monthlyProduct = storeKit.products?.first { $0.id == ProductId.monthly.rawValue }
-        monthlySubscription.setTitle(monthlyProduct?.localizedPrice, for: .normal)
-        monthlySubscription.isEnabled = true
+        if let monthlyPrice = monthlyProduct?.localizedPrice {
+            let monthlyPriceString = ("\(monthlyPrice)/Month")
+            monthlySubscriptionButton.setTitle(monthlyPriceString, for: .normal)
+            monthlySubscriptionButton.isEnabled = true
+        }
         
         var annuallyProduct = storeKit.products?.first { $0.id == ProductId.annually.rawValue }
-        annuallySubscription.setTitle(annuallyProduct?.localizedPrice, for: .normal)
-        annuallySubscription.isEnabled = true
+        if let annuallyPrice = annuallyProduct?.localizedPrice {
+            let annuallyPriceString = ("\(annuallyPrice)/Month")
+            annuallySubscriptionButton.setTitle(annuallyPriceString, for: .normal)
+            annuallySubscriptionButton.isEnabled = true
+        }
+        discountView.isHidden = false
         
         activityIndicator.stopAnimating()
     }
@@ -83,6 +99,18 @@ private extension SubscriptionController {
         let button = UIAlertAction(title: "Ok", style: .default) { _ in }
         alertController.addAction(button)
         present(alertController, animated: false, completion: nil)
+    }
+    
+    func startLoading() {
+        monthlySubscriptionButton.isEnabled = false
+        annuallySubscriptionButton.isEnabled = false
+        activityIndicator.startAnimating()
+    }
+    
+    func endLoading() {
+        monthlySubscriptionButton.isEnabled = true
+        annuallySubscriptionButton.isEnabled = true
+        activityIndicator.stopAnimating()
     }
 }
 
@@ -116,17 +144,31 @@ private extension SubscriptionController {
     
     @IBAction func subscribeMonthly(_ sender: UIButton) {
         let monthlyId = ProductId.monthly.rawValue
+        startLoading()
         StoreKitManager.default.buy(productId: monthlyId,
-                                    source: String(describing: self)) { [weak self] error in
-                                        self?.handleError(error)
+                                    source: String(describing: self)) { [weak self] result in
+            self?.endLoading()
+            switch result {
+            case .success:
+                self?.close(self)
+            case .failure(let error):
+                self?.handleError(error)
+            }
         }
     }
     
     @IBAction func subscribeAnnually(_ sender: UIButton) {
         let monthlyId = ProductId.annually.rawValue
+        startLoading()
         StoreKitManager.default.buy(productId: monthlyId,
-                                    source: String(describing: self)) { [weak self] error in
-                                        self?.handleError(error)
+                                    source: String(describing: self)) { [weak self] result in
+            self?.endLoading()
+            switch result {
+            case .success:
+                self?.close(self)
+            case .failure(let error):
+                self?.handleError(error)
+            }
         }
     }
 }
