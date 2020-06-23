@@ -35,10 +35,17 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         let isMontlySubscribed = StoreKitManager.default.isSubscribed(productId: ProductId.monthly.rawValue) ?? false
         let isAnnuallySubscribed = StoreKitManager.default.isSubscribed(productId: ProductId.annually.rawValue) ?? false
         if isMontlySubscribed == false && isAnnuallySubscribed == false {
+            guard let controller = UIStoryboard(name: "Subscription", bundle: nil).instantiateInitialViewController() as? SubscriptionController else {
+                fatalError("Can't init SubscriptionController")
+            }
             
-            let controller = UIStoryboard(name: "Subscription", bundle: nil).instantiateInitialViewController()!
             controller.modalPresentationStyle = .overFullScreen
             self.present(controller, animated: true, completion: nil)
+            controller.closeCompletion = { [tabBarController] isSubscribed in
+                if !isSubscribed {
+                    tabBarController?.selectedIndex = 2 // 2 - Portfolio Tab
+                }
+            }
         }
     }
     

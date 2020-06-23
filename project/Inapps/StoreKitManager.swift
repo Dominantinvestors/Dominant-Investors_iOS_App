@@ -31,7 +31,7 @@ public final class StoreKitManager {
     private var productsCompletion: (([StoreProduct]?, Error?) -> Void)?
     private var subscriptionsCompletion: (([StoreSubscription]?, Error?) -> Void)?
     public var productsLoadCompletion: (() -> Void)?
-    private var secret: String?
+    private var secret: String = "9df3097a9c314684919d7f2b251138fa"
     
     private init() {
         validatePendingTransactions()
@@ -39,7 +39,9 @@ public final class StoreKitManager {
     
     public func configure(productIds: [String], secret: String? = nil) {
         self.productIds = productIds
-        self.secret = secret
+        if let secret = secret {
+            self.secret = secret
+        }
         
         restoreSavedSubscriptions()
         loadProducts()
@@ -83,8 +85,6 @@ public final class StoreKitManager {
                 if purchase.needsFinishTransaction {
                     SwiftyStoreKit.finishTransaction(purchase.transaction)
                 }
-                self.productsSubscriptions[productId] = true
-                self.saveSubscriptionsToDisk()
                 self.verifySubscriptions(forceRefresh: true)
                 
                 completion(.success(Void()))
@@ -178,7 +178,16 @@ extension StoreKitManager {
     // - Parameter forceRefresh: If true, refreshes the receipt even if one already exists.
     private func verifySubscriptions(forceRefresh: Bool) {
         isLoadingSubscriptions = true
-        let appleValidator = AppleReceiptValidator(service: .sandbox, sharedSecret: secret)
+        
+        let service: AppleReceiptValidator.VerifyReceiptURLType = {
+            #if DEBUG
+            return .sandbox
+            #else
+            return .production
+            #endif
+        }()
+        
+        let appleValidator = AppleReceiptValidator(service: service, sharedSecret: secret)
         SwiftyStoreKit.verifyReceipt(using: appleValidator, forceRefresh: forceRefresh) { [unowned self] result in
             switch result {
             case .success(let receipt):

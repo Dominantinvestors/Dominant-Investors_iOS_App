@@ -24,6 +24,8 @@ final class SubscriptionController: DMViewController {
     private let storeKit = StoreKitManager.default
     private let previewController = QLPreviewController()
     private var previewUrl: URL?
+    private var isSubscribed: Bool = false
+    var closeCompletion: ((_ isSubscribed: Bool) -> Void)?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -56,6 +58,7 @@ private extension SubscriptionController {
     func checkInapps() {
         guard storeKit.isSubscribed(productId: ProductId.monthly.rawValue) == false ||
             storeKit.isSubscribed(productId: ProductId.annually.rawValue) == false else {
+                isSubscribed = true
                 close(self)
                 return
         }
@@ -84,8 +87,6 @@ private extension SubscriptionController {
             annuallySubscriptionButton.isEnabled = true
         }
         discountView.isHidden = false
-        
-        activityIndicator.stopAnimating()
     }
     
     func handleError(_ error: Error?) {
@@ -103,13 +104,15 @@ private extension SubscriptionController {
     
     func startLoading() {
         monthlySubscriptionButton.isEnabled = false
+        monthlySubscriptionButton.setTitle(nil, for: .normal)
         annuallySubscriptionButton.isEnabled = false
+        annuallySubscriptionButton.setTitle(nil, for: .normal)
+        discountView.isHidden = true
         activityIndicator.startAnimating()
     }
     
     func endLoading() {
-        monthlySubscriptionButton.isEnabled = true
-        annuallySubscriptionButton.isEnabled = true
+        setupButtons()
         activityIndicator.stopAnimating()
     }
 }
@@ -118,6 +121,7 @@ private extension SubscriptionController {
 private extension SubscriptionController {
     
     @IBAction func close(_ sender: Any) {
+        closeCompletion?(isSubscribed)
         dismiss(animated: true, completion: nil)
     }
     
@@ -150,6 +154,7 @@ private extension SubscriptionController {
             self?.endLoading()
             switch result {
             case .success:
+                self?.isSubscribed = true
                 self?.close(self)
             case .failure(let error):
                 self?.handleError(error)
@@ -165,6 +170,7 @@ private extension SubscriptionController {
             self?.endLoading()
             switch result {
             case .success:
+                self?.isSubscribed = true
                 self?.close(self)
             case .failure(let error):
                 self?.handleError(error)
