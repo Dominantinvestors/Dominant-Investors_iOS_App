@@ -1,4 +1,5 @@
 import UIKit
+import Inapps
 
 class TabBarController: UITabBarController {
     
@@ -34,23 +35,17 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedIndex = 0
-        delegate = self
     }
 }
 
-extension TabBarController: UITabBarControllerDelegate {
+final class MainTabBar: TabBarController {
     
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        
+    private var isMontlySubscribed: Bool {
+        return StoreKitManager.default.isSubscribed(productId: ProductId.monthly.rawValue) ?? false
     }
-    
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        
-        return true
+    private var isAnnuallySubscribed: Bool {
+        return StoreKitManager.default.isSubscribed(productId: ProductId.annually.rawValue) ?? false
     }
-}
-
-class MainTabBar: TabBarController {
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?){
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil, menu: MainMenu())
@@ -58,6 +53,46 @@ class MainTabBar: TabBarController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder, menu: MainMenu())
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        delegate = self
+    }
+    
+    private func checkSubscription() {
+        
+        guard let controller = UIStoryboard(name: "Subscription", bundle: nil).instantiateInitialViewController() as? SubscriptionController else {
+            fatalError("Can't init SubscriptionController")
+        }
+        
+        controller.modalPresentationStyle = .overFullScreen
+        self.present(controller, animated: true, completion: nil)
+        controller.closeCompletion = { [tabBarController] isSubscribed in
+            if !isSubscribed {
+                tabBarController?.selectedIndex = 2 // 2 - Portfolio Tab
+            }
+        }
+    }
+}
+
+extension MainTabBar: UITabBarControllerDelegate {
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        if let navigationController = viewController as? UINavigationController,
+            let controller = navigationController.topViewController,
+            controller is DMAnalyticsViewController,
+            isMontlySubscribed == false && isAnnuallySubscribed == false {
+            checkSubscription()
+            return false
+        }
+        
+        return true
     }
 }
 

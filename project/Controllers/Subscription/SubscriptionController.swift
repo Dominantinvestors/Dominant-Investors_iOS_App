@@ -82,7 +82,7 @@ private extension SubscriptionController {
         
         var annuallyProduct = storeKit.products?.first { $0.id == ProductId.annually.rawValue }
         if let annuallyPrice = annuallyProduct?.localizedPrice {
-            let annuallyPriceString = ("\(annuallyPrice)/Month")
+            let annuallyPriceString = ("\(annuallyPrice)/Year")
             annuallySubscriptionButton.setTitle(annuallyPriceString, for: .normal)
             annuallySubscriptionButton.isEnabled = true
         }

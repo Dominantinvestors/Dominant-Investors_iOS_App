@@ -31,22 +31,7 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         
         self.navigationController?.navigationBar.isHidden = false
         setStatusBarBackgroundColor(.clear)
-        
-        let isMontlySubscribed = StoreKitManager.default.isSubscribed(productId: ProductId.monthly.rawValue) ?? false
-        let isAnnuallySubscribed = StoreKitManager.default.isSubscribed(productId: ProductId.annually.rawValue) ?? false
-        if isMontlySubscribed == false && isAnnuallySubscribed == false {
-            guard let controller = UIStoryboard(name: "Subscription", bundle: nil).instantiateInitialViewController() as? SubscriptionController else {
-                fatalError("Can't init SubscriptionController")
-            }
-            
-            controller.modalPresentationStyle = .overFullScreen
-            self.present(controller, animated: true, completion: nil)
-            controller.closeCompletion = { [tabBarController] isSubscribed in
-                if !isSubscribed {
-                    tabBarController?.selectedIndex = 2 // 2 - Portfolio Tab
-                }
-            }
-        }
+        checkSubscription()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -71,6 +56,24 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
             layout.minimumLineSpacing = 0
             layout.invalidateLayout()
             self.collectionView?.setCollectionViewLayout(layout, animated: true)
+        }
+    }
+    
+    private func checkSubscription() {
+        let isMontlySubscribed = StoreKitManager.default.isSubscribed(productId: ProductId.monthly.rawValue) ?? false
+        let isAnnuallySubscribed = StoreKitManager.default.isSubscribed(productId: ProductId.annually.rawValue) ?? false
+        if isMontlySubscribed == false && isAnnuallySubscribed == false {
+            guard let controller = UIStoryboard(name: "Subscription", bundle: nil).instantiateInitialViewController() as? SubscriptionController else {
+                fatalError("Can't init SubscriptionController")
+            }
+            
+            controller.modalPresentationStyle = .overFullScreen
+            self.present(controller, animated: false, completion: nil)
+            controller.closeCompletion = { [tabBarController] isSubscribed in
+                if !isSubscribed {
+                    tabBarController?.selectedIndex = 2 // 2 - Portfolio Tab
+                }
+            }
         }
     }
     
