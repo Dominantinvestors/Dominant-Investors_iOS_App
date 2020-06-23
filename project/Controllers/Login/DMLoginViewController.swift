@@ -8,6 +8,11 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
     @IBOutlet weak var createNewAccount   : UIButton!
     @IBOutlet weak var signInButton   : UIButton!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        modalPresentationStyle = .overCurrentContext
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -93,7 +98,7 @@ class DMLoginViewController: DMViewController, UITextFieldDelegate {
 
     @IBAction func signUpButtonPressed(sender : UIButton) {
         let signUp = UIStoryboard(name: "Authorization", bundle: nil).instantiateViewController(withIdentifier: "DMSignUpViewController")
-        
+        signUp.modalPresentationStyle = .overCurrentContext
         self.navigationController?.pushViewController(signUp, animated: true)
     }
     

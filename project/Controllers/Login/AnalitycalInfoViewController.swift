@@ -4,6 +4,12 @@ class AnalitycalInfoViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scroll: UIScrollView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        modalPresentationStyle = .overCurrentContext
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +25,13 @@ class AnalitycalInfoViewController: UIViewController {
     }
     
     @IBAction func onViewResult() {
-        self.dismiss(animated: false, completion: nil)
+//        self.dismiss(animated: false, completion: nil)
+        
+        userAuthorized()
+    }
+    
+    private func userAuthorized() {
+        let tabBar = UIStoryboard(name: "TabBar", bundle: nil).instantiateInitialViewController()!
+        UIApplication.shared.delegate?.window!!.rootViewController = animate(tabBar)
     }
 }
