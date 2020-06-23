@@ -28,6 +28,10 @@
 		8FC2947C24A1246D00BEB07C /* Terms of Service.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC2947924A1246D00BEB07C /* Terms of Service.rtf */; };
 		8FC2947D24A1246D00BEB07C /* Privacy Policy.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC2947A24A1246D00BEB07C /* Privacy Policy.rtf */; };
 		8FC2947E24A1246D00BEB07C /* Privacy Policy.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC2947A24A1246D00BEB07C /* Privacy Policy.rtf */; };
+		8FC3B0A724A22218004888B7 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC3B0A524A22218004888B7 /* Roboto-Medium.ttf */; };
+		8FC3B0A824A22218004888B7 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC3B0A524A22218004888B7 /* Roboto-Medium.ttf */; };
+		8FC3B0A924A22218004888B7 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC3B0A624A22218004888B7 /* Roboto-Regular.ttf */; };
+		8FC3B0AA24A22218004888B7 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC3B0A624A22218004888B7 /* Roboto-Regular.ttf */; };
 		8FEF9A7C249BD5F300A01090 /* Inapps.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FEF9A7A249BD5F300A01090 /* Inapps.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FEF9A7F249BD5F300A01090 /* Inapps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FEF9A78249BD5F300A01090 /* Inapps.framework */; };
 		8FEF9A80249BD5F300A01090 /* Inapps.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FEF9A78249BD5F300A01090 /* Inapps.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -336,6 +340,8 @@
 		8FADB51D24A119AF004994E7 /* SubscriptionInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionInfoController.swift; sourceTree = "<group>"; };
 		8FC2947924A1246D00BEB07C /* Terms of Service.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Terms of Service.rtf"; sourceTree = "<group>"; };
 		8FC2947A24A1246D00BEB07C /* Privacy Policy.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Privacy Policy.rtf"; sourceTree = "<group>"; };
+		8FC3B0A524A22218004888B7 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		8FC3B0A624A22218004888B7 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		8FEF9A78249BD5F300A01090 /* Inapps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Inapps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FEF9A7A249BD5F300A01090 /* Inapps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Inapps.h; sourceTree = "<group>"; };
 		8FEF9A7B249BD5F300A01090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -888,6 +894,8 @@
 		CE735F2A2152653600E2849E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				8FC3B0A524A22218004888B7 /* Roboto-Medium.ttf */,
+				8FC3B0A624A22218004888B7 /* Roboto-Regular.ttf */,
 				CE735F2B2152653600E2849E /* MuseoCyrl700.otf */,
 				CE735F2C2152653600E2849E /* MuseoCyrl500.otf */,
 				CE735F2D2152653600E2849E /* MuseoCyrl100.otf */,
@@ -1081,6 +1089,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC3B0A724A22218004888B7 /* Roboto-Medium.ttf in Resources */,
 				CE735BDD21523B1300E2849E /* Authorization.storyboard in Resources */,
 				CE735E5221523B2400E2849E /* CreateSignalTableViewCell.xib in Resources */,
 				CE735E4A21523B2400E2849E /* PortfolioTableViewCell.xib in Resources */,
@@ -1097,6 +1106,7 @@
 				CE735F342152653600E2849E /* MuseoCyrl100.otf in Resources */,
 				CE735F28215247AB00E2849E /* Launch Screen.storyboard in Resources */,
 				CE09A0F3216E1224009C7A10 /* CompanyFooterView.xib in Resources */,
+				8FC3B0A924A22218004888B7 /* Roboto-Regular.ttf in Resources */,
 				CE735F362152653600E2849E /* MuseoCyrl300.otf in Resources */,
 				CEE89E5D2176201A006B8F2B /* InvestorProfileTableViewCell.xib in Resources */,
 				CE735F1221523FA000E2849E /* DMRatingTableViewCell.xib in Resources */,
@@ -1127,6 +1137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC3B0A824A22218004888B7 /* Roboto-Medium.ttf in Resources */,
 				CE735BDC21523B1300E2849E /* Ratings.storyboard in Resources */,
 				CE735E4521523B2400E2849E /* AssetsSection.xib in Resources */,
 				CE735BCC21523A7D00E2849E /* Crypto.xcassets in Resources */,
@@ -1143,6 +1154,7 @@
 				CE735F29215247AB00E2849E /* Launch Screen.storyboard in Resources */,
 				CE735F372152653600E2849E /* MuseoCyrl300.otf in Resources */,
 				CE09A0F4216E1224009C7A10 /* CompanyFooterView.xib in Resources */,
+				8FC3B0AA24A22218004888B7 /* Roboto-Regular.ttf in Resources */,
 				CE735BE421523B1300E2849E /* Screener.storyboard in Resources */,
 				CEE89E5E2176201A006B8F2B /* InvestorProfileTableViewCell.xib in Resources */,
 				CE735E7B21523B2400E2849E /* StringTableViewCell.xib in Resources */,
