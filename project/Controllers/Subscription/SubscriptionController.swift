@@ -22,7 +22,6 @@ final class SubscriptionController: DMViewController {
     
     // MARK: - Properties
     private let storeKit = StoreKitManager.default
-    private let previewController = QLPreviewController()
     private var previewUrl: URL?
     private var isSubscribed: Bool = false
     var closeCompletion: ((_ isSubscribed: Bool) -> Void)?
@@ -33,8 +32,6 @@ final class SubscriptionController: DMViewController {
 
         let nib = UINib(nibName: "SubscriptionCell", bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: "SubscriptionCell")
-        
-        previewController.dataSource = self
 
         checkInapps()
         setupButtons()
@@ -136,13 +133,19 @@ private extension SubscriptionController {
     
     @IBAction func showPrivacy(_ sender: UIButton) {
         previewUrl = Bundle.main
-            .url(forResource: "Terms of Service", withExtension: "rtf")
+            .url(forResource: "Privacy Policy", withExtension: "rtf")
+        let previewController = QLPreviewController()
+        previewController.dataSource = self
+        previewController.currentPreviewItemIndex = 0
         present(previewController, animated: true)
     }
     
     @IBAction func showTerms(_ sender: UIButton) {
         previewUrl = Bundle.main
-            .url(forResource: "Privacy Policy", withExtension: "rtf")
+            .url(forResource: "Terms of Service", withExtension: "rtf")
+        let previewController = QLPreviewController()
+        previewController.dataSource = self
+        previewController.currentPreviewItemIndex = 0
         present(previewController, animated: true)
     }
     
