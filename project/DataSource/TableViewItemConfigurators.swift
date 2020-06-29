@@ -52,17 +52,17 @@ public protocol CellContainable {
  */
 public protocol CellConfigurator {
     associatedtype Item
-    associatedtype Cell: UITableViewCell
+    associatedtype CellView: UITableViewCell
 
     func reuseIdentifier() -> String
     
-    func configurateCell(_ cell: Cell, item: Item, at indexPath: IndexPath)
+    func configurateCell(_ cell: CellView, item: Item, at indexPath: IndexPath)
 }
 
-public extension CellConfigurator where Cell: ReuseIdentifier {
+public extension CellConfigurator where CellView: ReuseIdentifier {
     
     func reuseIdentifier() -> String {
-        return Cell.identifier
+        return CellView.identifier
     }
 }
 
@@ -71,7 +71,7 @@ public extension CellConfigurator where Cell: ReuseIdentifier {
  */
 public protocol CellSelectable: CellConfigurator {
     
-    typealias Handler = (Cell, IndexPath, Item) -> ()
+    typealias Handler = (CellView, IndexPath, Item) -> ()
     
     var selectors: [DataSource.Action: Handler] { get set }
 }

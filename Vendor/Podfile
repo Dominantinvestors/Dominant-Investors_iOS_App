@@ -8,19 +8,23 @@ project '../project/DominantInvestors'
 workspace '../DominantInvestors.xcworkspace'
 
 target :DominantInvestors do
-    pod 'ObjectMapper'
-    pod 'AlamofireObjectMapper'
-    pod 'AlamofireImage'
-    pod 'Alamofire'
+    pod 'ObjectMapper', '3.5.1'
+    pod 'AlamofireObjectMapper', '5.2.1'
+    pod 'AlamofireImage', '3.6.0'
+    pod 'Alamofire', '4.9.1'
     pod 'MBProgressHUD'
+    
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'FacebookShare'
+    
     pod 'AFDateHelper'
     pod 'MessageKit'
     pod 'MessageInputBar'
+    
     pod 'Firebase/Core'
     pod 'Firebase/Messaging'
+    
     pod 'PromiseKit/CorePromise', '~> 6.0'
     
     post_install do |installer|

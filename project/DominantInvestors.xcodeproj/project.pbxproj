@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B3745267EDC827994C5C373 /* Pods_DominantInvestors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */; };
+		CE0054672497C5D0001DD2E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0054662497C5D0001DD2E4 /* GoogleService-Info.plist */; };
 		CE04D7EC215236DB00AD3D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */; };
 		CE056EDD221AB7A200034511 /* AlertTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE056EDB221AB7A200034511 /* AlertTitleTableViewCell.swift */; };
 		CE056EDE221AB7A200034511 /* AlertTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE056EDC221AB7A200034511 /* AlertTitleTableViewCell.xib */; };
@@ -54,7 +55,6 @@
 		CE65E5CD2278404600B4955F /* CRNotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C62278404500B4955F /* CRNotificationType.swift */; };
 		CE65E5CE2278404600B4955F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C72278404500B4955F /* Colors.swift */; };
 		CE65E5CF2278404600B4955F /* CRNotificationsMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE65E5C92278404500B4955F /* CRNotificationsMedia.xcassets */; };
-		CE6CA7092414D29800D3ED06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6CA7082414D29800D3ED06 /* GoogleService-Info.plist */; };
 		CE735BCD21523A7D00E2849E /* Investors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC821523A7D00E2849E /* Investors.xcassets */; };
 		CE735BD021523B0900E2849E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BCF21523B0900E2849E /* Constants.swift */; };
 		CE735BDB21523B1300E2849E /* Ratings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD321523B1300E2849E /* Ratings.storyboard */; };
@@ -176,6 +176,7 @@
 		9E0A733618BF5F7879B72B8D /* Pods-DominantCrypto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantCrypto.release.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto.release.xcconfig"; sourceTree = "<group>"; };
 		B7B4F88AD8A2FE5DB2595A6E /* Pods-DominantInvestors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantInvestors.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors.debug.xcconfig"; sourceTree = "<group>"; };
 		C9DBD300783B3BA57C773EA0 /* Pods_DominantCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominantCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0054662497C5D0001DD2E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE04D7A1215231CE00AD3D4D /* Dominant Investors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dominant Investors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE04D7D7215236DB00AD3D4D /* DominantInvestors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DominantInvestors.plist; sourceTree = "<group>"; };
 		CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,7 +226,6 @@
 		CE65E5C72278404500B4955F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CE65E5C92278404500B4955F /* CRNotificationsMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CRNotificationsMedia.xcassets; sourceTree = "<group>"; };
 		CE6607DE2212F99400DA09D0 /* DominantInvestors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DominantInvestors.entitlements; sourceTree = "<group>"; };
-		CE6CA7082414D29800D3ED06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE735BC721523A7D00E2849E /* Crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crypto.xcassets; sourceTree = "<group>"; };
 		CE735BC821523A7D00E2849E /* Investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Investors.xcassets; sourceTree = "<group>"; };
 		CE735BCF21523B0900E2849E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -393,7 +393,7 @@
 		CE04D7D2215236DB00AD3D4D /* project */ = {
 			isa = PBXGroup;
 			children = (
-				CE6CA7082414D29800D3ED06 /* GoogleService-Info.plist */,
+				CE0054662497C5D0001DD2E4 /* GoogleService-Info.plist */,
 				CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */,
 				CE4F20AF2216B1F700A90552 /* PushNotifications.swift */,
 				CE735BCF21523B0900E2849E /* Constants.swift */,
@@ -939,7 +939,6 @@
 				CE3C302B221D5C2A007759A7 /* SignalInfoTableViewCell.xib in Resources */,
 				CE735BE521523B1300E2849E /* OutsourceCharts.storyboard in Resources */,
 				CE735BE321523B1300E2849E /* Screener.storyboard in Resources */,
-				CE6CA7092414D29800D3ED06 /* GoogleService-Info.plist in Resources */,
 				CE735BDF21523B1300E2849E /* Portfolio.storyboard in Resources */,
 				CE735F382152653600E2849E /* MuseoCyrl900.otf in Resources */,
 				CE09A0E6216DFA29009C7A10 /* StatsTableViewCell.xib in Resources */,
@@ -971,6 +970,7 @@
 				CE735E8A21523B2400E2849E /* BuyTableViewCell.xib in Resources */,
 				CE735F322152653600E2849E /* MuseoCyrl500.otf in Resources */,
 				CE3C3023221C05CF007759A7 /* ChartTableViewCell.xib in Resources */,
+				CE0054672497C5D0001DD2E4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1283,14 +1283,14 @@
 				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.6;
+				MARKETING_VERSION = 6.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.DominantStocks;
 				PRODUCT_NAME = "Dominant Investors";
 				PROVISIONING_PROFILE_SPECIFIER = "DominantStocks distribution";
@@ -1308,14 +1308,14 @@
 				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.6;
+				MARKETING_VERSION = 6.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.DominantStocks;
 				PRODUCT_NAME = "Dominant Investors";
 				PROVISIONING_PROFILE_SPECIFIER = "DominantStocks distribution";

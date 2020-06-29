@@ -36,7 +36,7 @@ public extension TableViewDataSource where
     Self: CellContainable,
     Self.Item == Self.Configurator.Item
 {
-    typealias Cell = Self.Configurator.Cell
+    typealias Cell = Self.Configurator.CellView
     
     func numberOfSections(for tableView: UITableView) -> Int {
         return 1
