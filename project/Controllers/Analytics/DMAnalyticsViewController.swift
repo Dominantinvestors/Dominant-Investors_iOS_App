@@ -34,13 +34,11 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.collectionView.reloadData()
-        
-//        setStatusBarBackgroundColor(.clear)
-        
+                
         updateIdeas()
         navigationController?.setNavigationBarHidden(true, animated: animated)
               
-        checkSubscription()
+       checkSubscription()
     }
     
     private func registerForRemoteNotifications() {

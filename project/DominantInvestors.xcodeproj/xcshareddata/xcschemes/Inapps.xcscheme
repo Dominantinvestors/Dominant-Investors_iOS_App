@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "1150"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE04D7B62152321F00AD3D4D"
-               BuildableName = "DominantCrypto.app"
-               BlueprintName = "DominantCrypto"
+               BlueprintIdentifier = "8FEF9A77249BD5F300A01090"
+               BuildableName = "Inapps.framework"
+               BlueprintName = "Inapps"
                ReferencedContainer = "container:DominantInvestors.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,17 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE04D7B62152321F00AD3D4D"
-            BuildableName = "DominantCrypto.app"
-            BlueprintName = "DominantCrypto"
-            ReferencedContainer = "container:DominantInvestors.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -51,18 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE04D7B62152321F00AD3D4D"
-            BuildableName = "DominantCrypto.app"
-            BlueprintName = "DominantCrypto"
-            ReferencedContainer = "container:DominantInvestors.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -70,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE04D7B62152321F00AD3D4D"
-            BuildableName = "DominantCrypto.app"
-            BlueprintName = "DominantCrypto"
+            BlueprintIdentifier = "8FEF9A77249BD5F300A01090"
+            BuildableName = "Inapps.framework"
+            BlueprintName = "Inapps"
             ReferencedContainer = "container:DominantInvestors.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

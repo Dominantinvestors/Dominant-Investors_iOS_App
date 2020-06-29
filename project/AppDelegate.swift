@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let productIds = ProductId.allCases.map { $0.rawValue }
         StoreKitManager.default.configure(productIds: productIds)
         
+        
         return true
     }
     

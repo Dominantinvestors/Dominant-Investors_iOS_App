@@ -1,10 +1,11 @@
 import UIKit
-import MBProgressHUD
+import NVActivityIndicatorView
 
 class DMViewController: UIViewController {
+    
 }
 
-extension  UIViewController {
+extension UIViewController: NVActivityIndicatorViewable {
     
     open func showAlertWith(_ error: Error) {
         showAlertWith(message: error.localizedDescription)
@@ -43,12 +44,10 @@ extension  UIViewController {
     }
     
     open func showActivityIndicator(_ aView: UIView? = nil) {
-        let loadingNotification = MBProgressHUD.showAdded(to: aView ?? view, animated: true)
-        loadingNotification.mode = MBProgressHUDMode.indeterminate
-        loadingNotification.label.text = "Loading"
+        startAnimating(color: .red, backgroundColor: .clear)
     }
     
     open func dismissActivityIndicator(_ aView: UIView? = nil) {
-        MBProgressHUD.hide(for: aView ?? view, animated: true)
+        stopAnimating()
     }
 }

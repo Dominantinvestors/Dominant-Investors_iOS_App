@@ -12,8 +12,8 @@ target :DominantInvestors do
     pod 'AlamofireObjectMapper', '5.2.1'
     pod 'AlamofireImage', '3.6.0'
     pod 'Alamofire', '4.9.1'
-    pod 'MBProgressHUD'
-    
+    pod 'NVActivityIndicatorView'
+
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'FacebookShare'

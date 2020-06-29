@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0B3745267EDC827994C5C373 /* Pods_DominantInvestors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */; };
-		649382C2DFF2735E4585270B /* Pods_Inapps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD5FF64AA4AD4383092DF8D /* Pods_Inapps.framework */; };
 		8F3C4EC8249BD8C7003A89D3 /* StoreSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C4EC7249BD8C7003A89D3 /* StoreSubscription.swift */; };
 		8F3C4ECA249BD8D8003A89D3 /* StoreProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C4EC9249BD8D8003A89D3 /* StoreProduct.swift */; };
 		8F3C4ED1249BE9DE003A89D3 /* SubscriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C4ECE249BE99E003A89D3 /* SubscriptionController.swift */; };
@@ -25,6 +24,7 @@
 		8FEF9A7F249BD5F300A01090 /* Inapps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FEF9A78249BD5F300A01090 /* Inapps.framework */; };
 		8FEF9A80249BD5F300A01090 /* Inapps.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FEF9A78249BD5F300A01090 /* Inapps.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8FEF9A86249BD67100A01090 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEF9A85249BD67100A01090 /* StoreKitManager.swift */; };
+		ABA3A610B362749758267F89 /* Pods_Inapps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA610ABC53594A15699723C /* Pods_Inapps.framework */; };
 		CE04D7EC215236DB00AD3D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */; };
 		CE056EDD221AB7A200034511 /* AlertTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE056EDB221AB7A200034511 /* AlertTitleTableViewCell.swift */; };
 		CE056EDE221AB7A200034511 /* AlertTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE056EDC221AB7A200034511 /* AlertTitleTableViewCell.xib */; };
@@ -171,6 +171,7 @@
 		CE897B9C2192DEE4006A4069 /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897B9B2192DEE4006A4069 /* SellViewController.swift */; };
 		CE9B70D82289571C0035071A /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B70D62289571C0035071A /* PayViewController.swift */; };
 		CEB3269724AA147400B654B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEB3269624AA147400B654B6 /* GoogleService-Info.plist */; };
+		CEB3269824AA2EA100B654B6 /* ChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3C3021221C05CF007759A7 /* ChartTableViewCell.xib */; };
 		CEB48F18226A43F10063D217 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB48F17226A43F10063D217 /* ForgotPasswordViewController.swift */; };
 		CEB48F1A226A4CFE0063D217 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB48F19226A4CFE0063D217 /* ResetPasswordViewController.swift */; };
 		CEB8801A2181CBAF006DFD9F /* MonayTransformator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB880192181CBAF006DFD9F /* MonayTransformator.swift */; };
@@ -211,10 +212,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		038E7A93D4C444B0925876EE /* Pods-Inapps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inapps.release.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-Inapps/Pods-Inapps.release.xcconfig"; sourceTree = "<group>"; };
 		363CBE73292F3B57EBC39762 /* Pods-DominantInvestors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantInvestors.release.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors.release.xcconfig"; sourceTree = "<group>"; };
-		66326E95791178BE02DEB4C8 /* Pods-Inapps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inapps.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-Inapps/Pods-Inapps.debug.xcconfig"; sourceTree = "<group>"; };
-		7CD5FF64AA4AD4383092DF8D /* Pods_Inapps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inapps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CA610ABC53594A15699723C /* Pods_Inapps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inapps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DC55E702B77F3EA42D10A01 /* Pods-Inapps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inapps.release.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-Inapps/Pods-Inapps.release.xcconfig"; sourceTree = "<group>"; };
 		8F3C4EC7249BD8C7003A89D3 /* StoreSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSubscription.swift; sourceTree = "<group>"; };
 		8F3C4EC9249BD8D8003A89D3 /* StoreProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProduct.swift; sourceTree = "<group>"; };
 		8F3C4ECC249BDEFE003A89D3 /* Subscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Subscription.storyboard; sourceTree = "<group>"; };
@@ -231,10 +231,9 @@
 		8FEF9A7A249BD5F300A01090 /* Inapps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Inapps.h; sourceTree = "<group>"; };
 		8FEF9A7B249BD5F300A01090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FEF9A85249BD67100A01090 /* StoreKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
-		9E0A733618BF5F7879B72B8D /* Pods-DominantCrypto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantCrypto.release.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto.release.xcconfig"; sourceTree = "<group>"; };
 		B7B4F88AD8A2FE5DB2595A6E /* Pods-DominantInvestors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantInvestors.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors.debug.xcconfig"; sourceTree = "<group>"; };
-		C9DBD300783B3BA57C773EA0 /* Pods_DominantCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominantCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE04D7A1215231CE00AD3D4D /* Dominant Investors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Dominant Investors.app"; path = DominantInvestors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5A05CB6231A50E22A1FE29F /* Pods-Inapps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inapps.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-Inapps/Pods-Inapps.debug.xcconfig"; sourceTree = "<group>"; };
+		CE04D7A1215231CE00AD3D4D /* DominantInvestors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominantInvestors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE04D7D7215236DB00AD3D4D /* DominantInvestors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DominantInvestors.plist; sourceTree = "<group>"; };
 		CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE056EDB221AB7A200034511 /* AlertTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTitleTableViewCell.swift; sourceTree = "<group>"; };
@@ -282,7 +281,6 @@
 		CE65E5C62278404500B4955F /* CRNotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotificationType.swift; sourceTree = "<group>"; };
 		CE65E5C72278404500B4955F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CE65E5C92278404500B4955F /* CRNotificationsMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CRNotificationsMedia.xcassets; sourceTree = "<group>"; };
-		CE6607DE2212F99400DA09D0 /* DominantInvestors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DominantInvestors.entitlements; sourceTree = "<group>"; };
 		CE735BC721523A7D00E2849E /* Crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crypto.xcassets; sourceTree = "<group>"; };
 		CE735BC821523A7D00E2849E /* Investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Investors.xcassets; sourceTree = "<group>"; };
 		CE735BCF21523B0900E2849E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -385,8 +383,8 @@
 		CE735F552152788700E2849E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CE8854C9215CC8940093564B /* DrivewealthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivewealthDataProvider.swift; sourceTree = "<group>"; };
 		CE897B9B2192DEE4006A4069 /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
-		CE9B70D42289554F0035071A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CE9B70D62289571C0035071A /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		CEB3269124A9F4FE00B654B6 /* DominantInvestors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DominantInvestors.entitlements; sourceTree = "<group>"; };
 		CEB3269624AA147400B654B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEB48F17226A43F10063D217 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CEB48F19226A4CFE0063D217 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -402,7 +400,6 @@
 		CEE89E752179C8F9006B8F2B /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CEE89E7E2179C933006B8F2B /* CompanyDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDataProvider.swift; sourceTree = "<group>"; };
 		CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominantInvestors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEB57268B412308413460525 /* Pods-DominantCrypto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantCrypto.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,7 +407,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				649382C2DFF2735E4585270B /* Pods_Inapps.framework in Frameworks */,
+				ABA3A610B362749758267F89 /* Pods_Inapps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,12 +426,10 @@
 		02D6829DCEBF64A819421BB7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EEB57268B412308413460525 /* Pods-DominantCrypto.debug.xcconfig */,
-				9E0A733618BF5F7879B72B8D /* Pods-DominantCrypto.release.xcconfig */,
 				B7B4F88AD8A2FE5DB2595A6E /* Pods-DominantInvestors.debug.xcconfig */,
 				363CBE73292F3B57EBC39762 /* Pods-DominantInvestors.release.xcconfig */,
-				66326E95791178BE02DEB4C8 /* Pods-Inapps.debug.xcconfig */,
-				038E7A93D4C444B0925876EE /* Pods-Inapps.release.xcconfig */,
+				C5A05CB6231A50E22A1FE29F /* Pods-Inapps.debug.xcconfig */,
+				6DC55E702B77F3EA42D10A01 /* Pods-Inapps.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -476,7 +471,7 @@
 		CE04D798215231CE00AD3D4D = {
 			isa = PBXGroup;
 			children = (
-				CE6607DE2212F99400DA09D0 /* DominantInvestors.entitlements */,
+				CEB3269124A9F4FE00B654B6 /* DominantInvestors.entitlements */,
 				CE04D7D2215236DB00AD3D4D /* project */,
 				8FEF9A79249BD5F300A01090 /* Inapps */,
 				CE04D7A2215231CE00AD3D4D /* Products */,
@@ -488,7 +483,7 @@
 		CE04D7A2215231CE00AD3D4D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE04D7A1215231CE00AD3D4D /* Dominant Investors.app */,
+				CE04D7A1215231CE00AD3D4D /* DominantInvestors.app */,
 				8FEF9A78249BD5F300A01090 /* Inapps.framework */,
 			);
 			name = Products;
@@ -960,10 +955,8 @@
 		E482CC02D3CCE862FD9AFBF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE9B70D42289554F0035071A /* StoreKit.framework */,
-				C9DBD300783B3BA57C773EA0 /* Pods_DominantCrypto.framework */,
 				CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */,
-				7CD5FF64AA4AD4383092DF8D /* Pods_Inapps.framework */,
+				3CA610ABC53594A15699723C /* Pods_Inapps.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -986,7 +979,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FEF9A81249BD5F300A01090 /* Build configuration list for PBXNativeTarget "Inapps" */;
 			buildPhases = (
-				7EAE286AFE4AC175F601B474 /* [CP] Check Pods Manifest.lock */,
+				E9C8BE6C95F41C2C0B265152 /* [CP] Check Pods Manifest.lock */,
 				8FEF9A73249BD5F300A01090 /* Headers */,
 				8FEF9A74249BD5F300A01090 /* Sources */,
 				8FEF9A75249BD5F300A01090 /* Frameworks */,
@@ -1010,7 +1003,6 @@
 				CE04D79E215231CE00AD3D4D /* Frameworks */,
 				CE04D79F215231CE00AD3D4D /* Resources */,
 				72F59B71AA7C279E9537D4EF /* [CP] Embed Pods Frameworks */,
-				CE61AE5C21662FCD00FAFBD3 /* Build */,
 				8FEF9A84249BD5F300A01090 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -1020,7 +1012,7 @@
 			);
 			name = DominantInvestors;
 			productName = DominantInvestors;
-			productReference = CE04D7A1215231CE00AD3D4D /* Dominant Investors.app */;
+			productReference = CE04D7A1215231CE00AD3D4D /* DominantInvestors.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1118,6 +1110,7 @@
 				CE735BE921523B1300E2849E /* Main.storyboard in Resources */,
 				CE735E4C21523B2400E2849E /* AssetsTableViewCell.xib in Resources */,
 				CE056EDE221AB7A200034511 /* AlertTitleTableViewCell.xib in Resources */,
+				CEB3269824AA2EA100B654B6 /* ChartTableViewCell.xib in Resources */,
 				CE735E8A21523B2400E2849E /* BuyTableViewCell.xib in Resources */,
 				CE735F322152653600E2849E /* MuseoCyrl500.otf in Resources */,
 				8FC2947B24A1246D00BEB07C /* Terms of Service.rtf in Resources */,
@@ -1144,7 +1137,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7EAE286AFE4AC175F601B474 /* [CP] Check Pods Manifest.lock */ = {
+		83A23BA1B8E5F7D680A623D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DominantInvestors-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9C8BE6C95F41C2C0B265152 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1165,38 +1176,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		83A23BA1B8E5F7D680A623D4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DominantInvestors-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE61AE5C21662FCD00FAFBD3 /* Build */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Build;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/Resources/DominantInvestors.plist\")\n#buildNumber=$(($buildNumber + 1))\n#/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/Resources/DominantInvestors.plist\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1353,14 +1332,14 @@
 /* Begin XCBuildConfiguration section */
 		8FEF9A82249BD5F300A01090 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66326E95791178BE02DEB4C8 /* Pods-Inapps.debug.xcconfig */;
+			baseConfigurationReference = C5A05CB6231A50E22A1FE29F /* Pods-Inapps.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = Z2684TC4PW;
+				DEVELOPMENT_TEAM = 45F26FVHGB;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1386,14 +1365,14 @@
 		};
 		8FEF9A83249BD5F300A01090 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 038E7A93D4C444B0925876EE /* Pods-Inapps.release.xcconfig */;
+			baseConfigurationReference = 6DC55E702B77F3EA42D10A01 /* Pods-Inapps.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = Z2684TC4PW;
+				DEVELOPMENT_TEAM = 45F26FVHGB;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1540,9 +1519,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1552,7 +1532,7 @@
 				MARKETING_VERSION = 6.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.DominantStocks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "DominantStocks distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1565,9 +1545,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1576,8 +1557,8 @@
 				);
 				MARKETING_VERSION = 6.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.DominantStocks;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_NAME = "Dominant Investors";
+				PROVISIONING_PROFILE_SPECIFIER = "DominantStocks distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

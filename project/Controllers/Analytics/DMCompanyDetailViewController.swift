@@ -37,6 +37,7 @@ class DMCompanyDetailViewController: DMViewController, UIWebViewDelegate {
         rate = RatingDataSource(item: (company, nil))
         
         var statistic: [TableViewDataSource] = [ChartDataSource(item: company), rate]
+
         
         if company.stats != nil {
             statistic.append( CompanySatatusDataSource(title: NSLocalizedString("Stats", comment: ""), data: company.status()))

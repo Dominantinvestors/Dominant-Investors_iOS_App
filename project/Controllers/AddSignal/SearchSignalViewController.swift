@@ -19,7 +19,7 @@ class SearchSignalViewController: KeyboardObservableViewController, UISearchBarD
         tableView.register(cell: SearchTableViewCell.self)
         tableView.register(cell: StringTableViewCell.self)
         
-        let search = SearchDataSource(data: [NSLocalizedString("Enter the ticket", comment: "")], delegate: self)
+        let search = SearchDataSource(data: [NSLocalizedString("Enter the ticker", comment: "")], delegate: self)
         items = SearchControllerDataSource(data: [])
         
         items.selectors[.select] = { [unowned self]  _, _, item in

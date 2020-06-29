@@ -41,25 +41,30 @@ class DMScreenerTypeViewController: DMViewController, WKNavigationDelegate {
                }
                if request.url?.absoluteString.contains("https://www.tradingview.com/?utm_campaign=cryptoscreener&utm_medium=widget&utm_source=") == true {
                    decisionHandler(.cancel)
-               }
-               
-               if request.url?.absoluteString.contains("symbols") == true {
-                   if let ticker = request.url?.lastPathComponent {
-                       if ticker.contains("-") {
-                           let token = ticker.components(separatedBy: "-")
-                           if token.count >= 2 {
-                               self.openChartFor(ticker: token[1])
-                           } else {
-                               self.openChartFor(ticker: ticker)
-                               decisionHandler(.cancel)
-                           }
-                       } else {
-                           self.openChartFor(ticker: ticker)
-                       }
-                   }
-                   decisionHandler(.cancel)
-
-               }
+        }
+        
+        if request.url?.absoluteString.contains("symbols") == true {
+            if let ticker = request.url?.lastPathComponent {
+                if ticker.contains("-") {
+                    let token = ticker.components(separatedBy: "-")
+                    if token.count >= 2 {
+                        self.openChartFor(ticker: token[1])
+                        decisionHandler(.cancel)
+                        return
+                    } else {
+                        self.openChartFor(ticker: ticker)
+                        decisionHandler(.cancel)
+                        return
+                    }
+                } else {
+                    self.openChartFor(ticker: ticker)
+                    decisionHandler(.cancel)
+                    return
+                }
+            }
+            decisionHandler(.cancel)
+            return
+        }
         
           decisionHandler(.allow)
       }

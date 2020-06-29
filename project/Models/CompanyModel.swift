@@ -178,14 +178,15 @@ extension CompanyModel {
     func companyStatus() -> [StatusModel] {
         var status: [StatusModel] = []
         if let stats = stats {
+            
             let marketCap = StatusModel(title: NSLocalizedString("Market Cap", comment: ""),
-                                        subtitle: "\(stats.marketCap)")
+                                        subtitle: Double(stats.marketCap) != 0.0 ? "\(stats.marketCap)" : "N/A")
             let salesFQ3 = StatusModel(title: NSLocalizedString("Sales FQ", comment: ""),
-                                       subtitle: "\(stats.salesFQ3V) (\(stats.salesFQ3P)%)")
+                                       subtitle: Double(stats.salesFQ3V) != 0.0 ? "\(stats.salesFQ3V) (\(stats.salesFQ3P)%)" : "N/A")
             let epsfq3 = StatusModel(title: NSLocalizedString("EPS FQ", comment: ""),
-                                     subtitle: "\(stats.epsFQ3V) (\(stats.epsFQ3P)%)")
+                                     subtitle: Double(stats.epsFQ3V) != 0.0 ? "\(stats.epsFQ3V) (\(stats.epsFQ3P)%)" : "N/A")
             let peRatio = StatusModel(title: NSLocalizedString("P/E Ratio", comment: ""),
-                                      subtitle: String(stats.peRatio))
+                                      subtitle: Double(stats.peRatio) != 0.0 ? String(stats.peRatio) : "N/A")
             status.append(marketCap)
             status.append(salesFQ3)
             status.append(epsfq3)

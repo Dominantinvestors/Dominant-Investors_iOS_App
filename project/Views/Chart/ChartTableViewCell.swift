@@ -1,5 +1,5 @@
 import UIKit
-import MBProgressHUD
+import NVActivityIndicatorView
 
 class ChartTableViewCell: UITableViewCell {
     
@@ -109,13 +109,14 @@ class ChartTableViewCell: UITableViewCell {
     }
     
     open func showActivityIndicator() {
-        let loadingNotification = MBProgressHUD.showAdded(to: self, animated: true)
-        loadingNotification.mode = MBProgressHUDMode.indeterminate
-    }
-    
-    open func dismissActivityIndicator() {
-        MBProgressHUD.hide(for: self, animated: true)
-    }
+        let activityData = ActivityData()
+
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+     }
+     
+     open func dismissActivityIndicator() {
+         NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+     }
     
     func filter(fot date: Double)  {
         let points = self.items.filter({ TimeInterval( $0.timeStamp ?? 0.0) > date})
