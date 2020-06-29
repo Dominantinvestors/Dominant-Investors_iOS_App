@@ -122,12 +122,13 @@ PODS:
   - PromiseKit/CorePromise (6.13.1)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.3)
+  - SwiftyStoreKit (0.15.0)
 
 DEPENDENCIES:
   - AFDateHelper
-  - Alamofire
-  - AlamofireImage
-  - AlamofireObjectMapper
+  - Alamofire (= 4.9.1)
+  - AlamofireImage (= 3.6.0)
+  - AlamofireObjectMapper (= 5.2.1)
   - FacebookCore
   - FacebookLogin
   - FacebookShare
@@ -136,8 +137,9 @@ DEPENDENCIES:
   - MBProgressHUD
   - MessageInputBar
   - MessageKit
-  - ObjectMapper
+  - ObjectMapper (= 3.5.1)
   - PromiseKit/CorePromise (~> 6.0)
+  - SwiftyStoreKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -173,6 +175,7 @@ SPEC REPOS:
     - PromiseKit
     - PromisesObjC
     - Protobuf
+    - SwiftyStoreKit
 
 SPEC CHECKSUMS:
   AFDateHelper: b769c07d3d4784ee9a74633285304261bb27dc52
@@ -207,7 +210,8 @@ SPEC CHECKSUMS:
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 0e94afe3b47cb11876eb6aee296638711a24bf75
+  SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
 
-PODFILE CHECKSUM: 82e1b7f1594c6c580efab6a3ef59d44473f45e4f
+PODFILE CHECKSUM: 12a89c4bccb2a69d34b078918f9b4061526009e1
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

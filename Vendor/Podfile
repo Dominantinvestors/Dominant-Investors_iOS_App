@@ -42,3 +42,7 @@ target :DominantInvestors do
       end
     end
 end
+
+target :Inapps do
+    pod 'SwiftyStoreKit'
+end

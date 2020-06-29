@@ -35,7 +35,7 @@ class ForgotPasswordViewController: UIViewController {
     private func configureTextFields() {
         textField.attributedPlaceholder =
             NSAttributedString(string:"E-mail",
-                               attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
+                               attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
     
         textField.delegate = self
     }

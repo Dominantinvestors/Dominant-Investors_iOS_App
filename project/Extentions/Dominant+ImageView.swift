@@ -58,7 +58,7 @@ extension UIImageView {
         
         let fileName = imageName
         let fileURL = documentsDirectory.appendingPathComponent(fileName)
-        guard let data = UIImageJPEGRepresentation(image, 1) else { return }
+        guard let data = image.jpegData(compressionQuality: 1) else { return }
         
         if FileManager.default.fileExists(atPath: fileURL.path) {
             do {

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE04D7A0215231CE00AD3D4D"
-               BuildableName = "Dominant Investors.app"
+               BuildableName = "DominantInvestors.app"
                BlueprintName = "DominantInvestors"
                ReferencedContainer = "container:DominantInvestors.xcodeproj">
             </BuildableReference>
@@ -31,7 +31,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE04D7A0215231CE00AD3D4D"
-            BuildableName = "Dominant Investors.app"
+            BuildableName = "DominantInvestors.app"
             BlueprintName = "DominantInvestors"
             ReferencedContainer = "container:DominantInvestors.xcodeproj">
          </BuildableReference>
@@ -54,7 +54,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE04D7A0215231CE00AD3D4D"
-            BuildableName = "Dominant Investors.app"
+            BuildableName = "DominantInvestors.app"
             BlueprintName = "DominantInvestors"
             ReferencedContainer = "container:DominantInvestors.xcodeproj">
          </BuildableReference>
@@ -71,7 +71,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE04D7A0215231CE00AD3D4D"
-            BuildableName = "Dominant Investors.app"
+            BuildableName = "DominantInvestors.app"
             BlueprintName = "DominantInvestors"
             ReferencedContainer = "container:DominantInvestors.xcodeproj">
          </BuildableReference>

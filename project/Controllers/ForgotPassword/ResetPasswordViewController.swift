@@ -45,10 +45,10 @@ class ResetPasswordViewController: DMViewController, UITextFieldDelegate {
         
         self.passwordTextField.attributedPlaceholder =
             NSAttributedString(string:"Password",
-                               attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
+                               attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
         self.confirmTextField.attributedPlaceholder =
             NSAttributedString(string:"Confirm",
-                               attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
+                               attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
         
         self.confirmTextField.delegate = self
         self.passwordTextField.delegate = self

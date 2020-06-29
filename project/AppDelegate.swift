@@ -23,22 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ServiceLocator.shared.registerService(service: pushNotifications)
         
         registerForRemoteNotifications()
-    
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        
-        ApplicationDelegate.shared.application(application,
-                                               didFinishLaunchingWithOptions: launchOptions)
+
         let productIds = ProductId.allCases.map { $0.rawValue }
         StoreKitManager.default.configure(productIds: productIds)
         
         return true
     }
+    
     func applicationDidBecomeActive(_ application: UIApplication) {
         AppEvents.activateApp()
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    internal func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         if url.host == "fogotpassword" {
             self.notification.fogotpassword.value = url
             return true
@@ -95,6 +91,3 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         completionHandler()
     }
 }
-
-
-

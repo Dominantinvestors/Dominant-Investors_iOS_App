@@ -39,6 +39,8 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         
         updateIdeas()
         navigationController?.setNavigationBarHidden(true, animated: animated)
+              
+        checkSubscription()
     }
     
     private func registerForRemoteNotifications() {
@@ -70,15 +72,6 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
             }
             self.dismissActivityIndicator()
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.collectionView.reloadData()
-        
-        self.navigationController?.navigationBar.isHidden = false
-        setStatusBarBackgroundColor(.clear)
-        checkSubscription()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

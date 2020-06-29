@@ -18,7 +18,7 @@ class ConversationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50
         
         tableView.register(cell: ConversationTableViewCell.self)

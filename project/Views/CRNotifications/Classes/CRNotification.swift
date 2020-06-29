@@ -89,9 +89,9 @@ class CRNotification: UIView {
 	}
 	
 	func setupTargets() {
-		NotificationCenter.default.addObserver(self, selector: #selector(didRotate), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
-		let dismissRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissNotification))
-		addGestureRecognizer(dismissRecognizer)
+//        NotificationCenter.default.addObserver(self, selector: #selector(didRotate), name: NSNotification.Name.Orii UIDevice.orientationDidChangeNotification, object: nil)
+//		let dismissRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissNotification))
+//		addGestureRecognizer(dismissRecognizer)
 	}
 	
 	@objc func didRotate() {
@@ -138,18 +138,18 @@ class CRNotification: UIView {
 	
 	/// Animates in the notification
 	func showNotification() {
-		UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.68, initialSpringVelocity: 0.1, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.68, initialSpringVelocity: 0.1, options: UIView.AnimationOptions(), animations: {
 			self.frame.origin.y = UIApplication.shared.statusBarFrame.height + 10
 		})
 	}
 	
 	/// Animates out the notification
 	@objc func dismissNotification() {
-		UIView.animate(withDuration: 0.1, delay: 0.0, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: 0.1, delay: 0.0, options: UIView.AnimationOptions(), animations: {
 			self.frame.origin.y = self.frame.origin.y + 5
 		}, completion: {
 			(complete: Bool) in
-			UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions(), animations: {
+            UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions(), animations: {
 				self.center.y = -self.frame.height
 			}, completion: { [weak self] (complete) in
 				self?.completion()
