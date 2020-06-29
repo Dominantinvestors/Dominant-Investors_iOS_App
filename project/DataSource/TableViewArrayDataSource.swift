@@ -47,7 +47,7 @@ public extension TableViewDataSource where
     }
     
     func cellHeight(for tableView: UITableView, at indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
     func cell(for tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell {
@@ -95,7 +95,7 @@ public extension TableViewDataSource where
             return height(view, in: section)
         }
         
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
     func headerView(for tableView: UITableView, in section: Int) -> UIView? {
@@ -112,7 +112,7 @@ public extension TableViewDataSource where
     
     private func height(_ view: UIView,in section: Int) -> CGFloat {
         view.layoutIfNeeded()
-        return view.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        return view.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
     }
 }
 
@@ -179,7 +179,7 @@ public extension TableViewDataSource where
     
     private func height(_ view: UIView,in section: Int) -> CGFloat {
         view.layoutIfNeeded()
-        return view.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        return view.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
     }
 }
 

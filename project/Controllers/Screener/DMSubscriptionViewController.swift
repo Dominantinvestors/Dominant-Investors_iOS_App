@@ -96,9 +96,9 @@ class DMSubscriptionViewController: DMViewController, SKProductsRequestDelegate,
         
         let actionSheetController = UIAlertController(title: "Dominant stock signals",
                                                       message: "Get investment signals subscription for one month?",
-                                                      preferredStyle: UIAlertControllerStyle.alert)
+                                                      preferredStyle: UIAlertController.Style.alert)
         
-        let buyAction = UIAlertAction(title: "Buy", style: UIAlertActionStyle.default) { (action) -> Void in
+        let buyAction = UIAlertAction(title: "Buy", style: UIAlertAction.Style.default) { (action) -> Void in
             DispatchQueue.main.async {
         
                 if (self.productsArray.count > 0) {
@@ -183,8 +183,8 @@ class DMSubscriptionViewController: DMViewController, SKProductsRequestDelegate,
  
         if (queue.transactions.count == 0) {
             self.dismissActivityIndicator()
-            let alert = UIAlertController(title: "Error", message: "Nothing to restore", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil));
+            let alert = UIAlertController(title: "Error", message: "Nothing to restore", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil));
             self.dismissActivityIndicator()
             alert.modalPresentationStyle = .fullScreen
             self.present(alert, animated: true, completion: nil)

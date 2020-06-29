@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>842937312335-4k0fh2kh3q09jtas2147n9ttpk6d7lqh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.842937312335-4k0fh2kh3q09jtas2147n9ttpk6d7lqh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBGxFN4dVFGR4webRqmdPatx0cqIFwakbU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>842937312335</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.personal.DominantStocks</string>
+	<key>PROJECT_ID</key>
+	<string>dominant-5f0f9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dominant-5f0f9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:842937312335:ios:5e06c28dc1c911b726363a</string>
+	<key>DATABASE_URL</key>
+	<string>https://dominant-5f0f9.firebaseio.com</string>
+</dict>
+</plist>

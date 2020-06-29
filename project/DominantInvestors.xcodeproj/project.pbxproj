@@ -9,6 +9,34 @@
 /* Begin PBXBuildFile section */
 		0B3745267EDC827994C5C373 /* Pods_DominantInvestors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */; };
 		CE0054672497C5D0001DD2E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0054662497C5D0001DD2E4 /* GoogleService-Info.plist */; };
+		37716B655F36541A363ED520 /* Pods_DominantCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DBD300783B3BA57C773EA0 /* Pods_DominantCrypto.framework */; };
+		649382C2DFF2735E4585270B /* Pods_Inapps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD5FF64AA4AD4383092DF8D /* Pods_Inapps.framework */; };
+		8F3C4EC8249BD8C7003A89D3 /* StoreSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C4EC7249BD8C7003A89D3 /* StoreSubscription.swift */; };
+		8F3C4ECA249BD8D8003A89D3 /* StoreProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C4EC9249BD8D8003A89D3 /* StoreProduct.swift */; };
+		8F3C4ED0249BE9DD003A89D3 /* SubscriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C4ECE249BE99E003A89D3 /* SubscriptionController.swift */; };
+		8F3C4ED1249BE9DE003A89D3 /* SubscriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C4ECE249BE99E003A89D3 /* SubscriptionController.swift */; };
+		8F3C4ED2249BE9E4003A89D3 /* Subscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F3C4ECC249BDEFE003A89D3 /* Subscription.storyboard */; };
+		8F3C4ED3249BE9E4003A89D3 /* Subscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F3C4ECC249BDEFE003A89D3 /* Subscription.storyboard */; };
+		8F3C4ED8249BFA79003A89D3 /* SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C4ED4249BF9C7003A89D3 /* SubscriptionCell.swift */; };
+		8F3C4ED9249BFA7A003A89D3 /* SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C4ED4249BF9C7003A89D3 /* SubscriptionCell.swift */; };
+		8F3C4EDA249BFA7E003A89D3 /* SubscriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3C4ED5249BF9C7003A89D3 /* SubscriptionCell.xib */; };
+		8F3C4EDB249BFA7E003A89D3 /* SubscriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3C4ED5249BF9C7003A89D3 /* SubscriptionCell.xib */; };
+		8F3C4EDE249BFCD7003A89D3 /* SubscriptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C4EDC249BFB88003A89D3 /* SubscriptionItem.swift */; };
+		8F3C4EDF249BFCD7003A89D3 /* SubscriptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C4EDC249BFB88003A89D3 /* SubscriptionItem.swift */; };
+		8FADB51E24A119AF004994E7 /* SubscriptionInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FADB51D24A119AF004994E7 /* SubscriptionInfoController.swift */; };
+		8FADB52624A11F55004994E7 /* SubscriptionInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FADB51D24A119AF004994E7 /* SubscriptionInfoController.swift */; };
+		8FC2947B24A1246D00BEB07C /* Terms of Service.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC2947924A1246D00BEB07C /* Terms of Service.rtf */; };
+		8FC2947C24A1246D00BEB07C /* Terms of Service.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC2947924A1246D00BEB07C /* Terms of Service.rtf */; };
+		8FC2947D24A1246D00BEB07C /* Privacy Policy.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC2947A24A1246D00BEB07C /* Privacy Policy.rtf */; };
+		8FC2947E24A1246D00BEB07C /* Privacy Policy.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC2947A24A1246D00BEB07C /* Privacy Policy.rtf */; };
+		8FC3B0A724A22218004888B7 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC3B0A524A22218004888B7 /* Roboto-Medium.ttf */; };
+		8FC3B0A824A22218004888B7 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC3B0A524A22218004888B7 /* Roboto-Medium.ttf */; };
+		8FC3B0A924A22218004888B7 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC3B0A624A22218004888B7 /* Roboto-Regular.ttf */; };
+		8FC3B0AA24A22218004888B7 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC3B0A624A22218004888B7 /* Roboto-Regular.ttf */; };
+		8FEF9A7C249BD5F300A01090 /* Inapps.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FEF9A7A249BD5F300A01090 /* Inapps.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FEF9A7F249BD5F300A01090 /* Inapps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FEF9A78249BD5F300A01090 /* Inapps.framework */; };
+		8FEF9A80249BD5F300A01090 /* Inapps.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FEF9A78249BD5F300A01090 /* Inapps.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FEF9A86249BD67100A01090 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEF9A85249BD67100A01090 /* StoreKitManager.swift */; };
 		CE04D7EC215236DB00AD3D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D7DF215236DB00AD3D4D /* AppDelegate.swift */; };
 		CE056EDD221AB7A200034511 /* AlertTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE056EDB221AB7A200034511 /* AlertTitleTableViewCell.swift */; };
 		CE056EDE221AB7A200034511 /* AlertTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE056EDC221AB7A200034511 /* AlertTitleTableViewCell.xib */; };
@@ -171,8 +199,60 @@
 		CEE89E7F2179C933006B8F2B /* CompanyDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE89E7E2179C933006B8F2B /* CompanyDataProvider.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8FEF9A7D249BD5F300A01090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE04D799215231CE00AD3D4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FEF9A77249BD5F300A01090;
+			remoteInfo = Inapps;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8FEF9A84249BD5F300A01090 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8FEF9A80249BD5F300A01090 /* Inapps.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE61AE5D2166309D00FAFBD3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		038E7A93D4C444B0925876EE /* Pods-Inapps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inapps.release.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-Inapps/Pods-Inapps.release.xcconfig"; sourceTree = "<group>"; };
 		363CBE73292F3B57EBC39762 /* Pods-DominantInvestors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantInvestors.release.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors.release.xcconfig"; sourceTree = "<group>"; };
+		66326E95791178BE02DEB4C8 /* Pods-Inapps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inapps.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-Inapps/Pods-Inapps.debug.xcconfig"; sourceTree = "<group>"; };
+		7CD5FF64AA4AD4383092DF8D /* Pods_Inapps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inapps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F3C4EC7249BD8C7003A89D3 /* StoreSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSubscription.swift; sourceTree = "<group>"; };
+		8F3C4EC9249BD8D8003A89D3 /* StoreProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProduct.swift; sourceTree = "<group>"; };
+		8F3C4ECC249BDEFE003A89D3 /* Subscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Subscription.storyboard; sourceTree = "<group>"; };
+		8F3C4ECE249BE99E003A89D3 /* SubscriptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionController.swift; sourceTree = "<group>"; };
+		8F3C4ED4249BF9C7003A89D3 /* SubscriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCell.swift; sourceTree = "<group>"; };
+		8F3C4ED5249BF9C7003A89D3 /* SubscriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionCell.xib; sourceTree = "<group>"; };
+		8F3C4EDC249BFB88003A89D3 /* SubscriptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionItem.swift; sourceTree = "<group>"; };
+		8FADB51D24A119AF004994E7 /* SubscriptionInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionInfoController.swift; sourceTree = "<group>"; };
+		8FC2947924A1246D00BEB07C /* Terms of Service.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Terms of Service.rtf"; sourceTree = "<group>"; };
+		8FC2947A24A1246D00BEB07C /* Privacy Policy.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Privacy Policy.rtf"; sourceTree = "<group>"; };
+		8FC3B0A524A22218004888B7 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		8FC3B0A624A22218004888B7 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		8FEF9A78249BD5F300A01090 /* Inapps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Inapps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FEF9A7A249BD5F300A01090 /* Inapps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Inapps.h; sourceTree = "<group>"; };
+		8FEF9A7B249BD5F300A01090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FEF9A85249BD67100A01090 /* StoreKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
 		9E0A733618BF5F7879B72B8D /* Pods-DominantCrypto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantCrypto.release.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto.release.xcconfig"; sourceTree = "<group>"; };
 		B7B4F88AD8A2FE5DB2595A6E /* Pods-DominantInvestors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominantInvestors.debug.xcconfig"; path = "../Vendor/Pods/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors.debug.xcconfig"; sourceTree = "<group>"; };
 		C9DBD300783B3BA57C773EA0 /* Pods_DominantCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominantCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -348,12 +428,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8FEF9A75249BD5F300A01090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				649382C2DFF2735E4585270B /* Pods_Inapps.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE04D79E215231CE00AD3D4D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0B3745267EDC827994C5C373 /* Pods_DominantInvestors.framework in Frameworks */,
-				CE9B70D52289554F0035071A /* StoreKit.framework in Frameworks */,
+				8FEF9A7F249BD5F300A01090 /* Inapps.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE04D7BA2152321F00AD3D4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37716B655F36541A363ED520 /* Pods_DominantCrypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,8 +463,44 @@
 				9E0A733618BF5F7879B72B8D /* Pods-DominantCrypto.release.xcconfig */,
 				B7B4F88AD8A2FE5DB2595A6E /* Pods-DominantInvestors.debug.xcconfig */,
 				363CBE73292F3B57EBC39762 /* Pods-DominantInvestors.release.xcconfig */,
+				66326E95791178BE02DEB4C8 /* Pods-Inapps.debug.xcconfig */,
+				038E7A93D4C444B0925876EE /* Pods-Inapps.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F3C4ECB249BDEBE003A89D3 /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				8FADB51F24A11F26004994E7 /* Docs */,
+				8F3C4ECE249BE99E003A89D3 /* SubscriptionController.swift */,
+				8FADB51D24A119AF004994E7 /* SubscriptionInfoController.swift */,
+				8F3C4ED4249BF9C7003A89D3 /* SubscriptionCell.swift */,
+				8F3C4ED5249BF9C7003A89D3 /* SubscriptionCell.xib */,
+				8F3C4EDC249BFB88003A89D3 /* SubscriptionItem.swift */,
+			);
+			path = Subscription;
+			sourceTree = "<group>";
+		};
+		8FADB51F24A11F26004994E7 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				8FC2947A24A1246D00BEB07C /* Privacy Policy.rtf */,
+				8FC2947924A1246D00BEB07C /* Terms of Service.rtf */,
+			);
+			path = Docs;
+			sourceTree = "<group>";
+		};
+		8FEF9A79249BD5F300A01090 /* Inapps */ = {
+			isa = PBXGroup;
+			children = (
+				8FEF9A7A249BD5F300A01090 /* Inapps.h */,
+				8FEF9A7B249BD5F300A01090 /* Info.plist */,
+				8FEF9A85249BD67100A01090 /* StoreKitManager.swift */,
+				8F3C4EC7249BD8C7003A89D3 /* StoreSubscription.swift */,
+				8F3C4EC9249BD8D8003A89D3 /* StoreProduct.swift */,
+			);
+			path = Inapps;
 			sourceTree = "<group>";
 		};
 		CE04D798215231CE00AD3D4D = {
@@ -376,6 +508,7 @@
 			children = (
 				CE6607DE2212F99400DA09D0 /* DominantInvestors.entitlements */,
 				CE04D7D2215236DB00AD3D4D /* project */,
+				8FEF9A79249BD5F300A01090 /* Inapps */,
 				CE04D7A2215231CE00AD3D4D /* Products */,
 				02D6829DCEBF64A819421BB7 /* Pods */,
 				E482CC02D3CCE862FD9AFBF9 /* Frameworks */,
@@ -385,7 +518,9 @@
 		CE04D7A2215231CE00AD3D4D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE04D7A1215231CE00AD3D4D /* Dominant Investors.app */,
+				CE04D7A1215231CE00AD3D4D /* DominantInvestors.app */,
+				CE04D7C22152321F00AD3D4D /* DominantCrypto.app */,
+				8FEF9A78249BD5F300A01090 /* Inapps.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -517,6 +652,7 @@
 				CE735BD921523B1300E2849E /* TabBar.storyboard */,
 				CE735BDA21523B1300E2849E /* Main.storyboard */,
 				CE735F27215247AB00E2849E /* Launch Screen.storyboard */,
+				8F3C4ECC249BDEFE003A89D3 /* Subscription.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -544,6 +680,7 @@
 				CEB48F16226A43BE0063D217 /* ForgotPassword */,
 				CE4F20AC2215B91300A90552 /* AlertNewSignal */,
 				CE0F543B21D37B7A00AEFBC1 /* Chat */,
+				8F3C4ECB249BDEBE003A89D3 /* Subscription */,
 				CE897B9A2192DB51006A4069 /* Sell */,
 				CE449B9A215515F80091940E /* AddSignal */,
 				CE735CAE21523B2300E2849E /* Personal */,
@@ -775,6 +912,8 @@
 		CE735F2A2152653600E2849E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				8FC3B0A524A22218004888B7 /* Roboto-Medium.ttf */,
+				8FC3B0A624A22218004888B7 /* Roboto-Regular.ttf */,
 				CE735F2B2152653600E2849E /* MuseoCyrl700.otf */,
 				CE735F2C2152653600E2849E /* MuseoCyrl500.otf */,
 				CE735F2D2152653600E2849E /* MuseoCyrl100.otf */,
@@ -855,13 +994,44 @@
 				CE9B70D42289554F0035071A /* StoreKit.framework */,
 				C9DBD300783B3BA57C773EA0 /* Pods_DominantCrypto.framework */,
 				CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */,
+				7CD5FF64AA4AD4383092DF8D /* Pods_Inapps.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		8FEF9A73249BD5F300A01090 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FEF9A7C249BD5F300A01090 /* Inapps.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		8FEF9A77249BD5F300A01090 /* Inapps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FEF9A81249BD5F300A01090 /* Build configuration list for PBXNativeTarget "Inapps" */;
+			buildPhases = (
+				7EAE286AFE4AC175F601B474 /* [CP] Check Pods Manifest.lock */,
+				8FEF9A73249BD5F300A01090 /* Headers */,
+				8FEF9A74249BD5F300A01090 /* Sources */,
+				8FEF9A75249BD5F300A01090 /* Frameworks */,
+				8FEF9A76249BD5F300A01090 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Inapps;
+			productName = Inapps;
+			productReference = 8FEF9A78249BD5F300A01090 /* Inapps.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		CE04D7A0215231CE00AD3D4D /* DominantInvestors */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE04D7B3215231D000AD3D4D /* Build configuration list for PBXNativeTarget "DominantInvestors" */;
@@ -872,10 +1042,12 @@
 				CE04D79F215231CE00AD3D4D /* Resources */,
 				72F59B71AA7C279E9537D4EF /* [CP] Embed Pods Frameworks */,
 				CE61AE5C21662FCD00FAFBD3 /* Build */,
+				8FEF9A84249BD5F300A01090 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8FEF9A7E249BD5F300A01090 /* PBXTargetDependency */,
 			);
 			name = DominantInvestors;
 			productName = DominantInvestors;
@@ -892,17 +1064,13 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = DS;
 				TargetAttributes = {
+					8FEF9A77249BD5F300A01090 = {
+						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
+					};
 					CE04D7A0215231CE00AD3D4D = {
 						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1020;
-						SystemCapabilities = {
-							com.apple.InAppPurchase = {
-								enabled = 1;
-							};
-							com.apple.Push = {
-								enabled = 1;
-							};
-						};
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -920,15 +1088,25 @@
 			projectRoot = "";
 			targets = (
 				CE04D7A0215231CE00AD3D4D /* DominantInvestors */,
+				CE04D7B62152321F00AD3D4D /* DominantCrypto */,
+				8FEF9A77249BD5F300A01090 /* Inapps */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8FEF9A76249BD5F300A01090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE04D79F215231CE00AD3D4D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC3B0A724A22218004888B7 /* Roboto-Medium.ttf in Resources */,
 				CE735BDD21523B1300E2849E /* Authorization.storyboard in Resources */,
 				CE735E5221523B2400E2849E /* CreateSignalTableViewCell.xib in Resources */,
 				CE735E4A21523B2400E2849E /* PortfolioTableViewCell.xib in Resources */,
@@ -939,6 +1117,7 @@
 				CE3C302B221D5C2A007759A7 /* SignalInfoTableViewCell.xib in Resources */,
 				CE735BE521523B1300E2849E /* OutsourceCharts.storyboard in Resources */,
 				CE735BE321523B1300E2849E /* Screener.storyboard in Resources */,
+				8FC2947D24A1246D00BEB07C /* Privacy Policy.rtf in Resources */,
 				CE735BDF21523B1300E2849E /* Portfolio.storyboard in Resources */,
 				CE735F382152653600E2849E /* MuseoCyrl900.otf in Resources */,
 				CE09A0E6216DFA29009C7A10 /* StatsTableViewCell.xib in Resources */,
@@ -948,6 +1127,7 @@
 				CE735F342152653600E2849E /* MuseoCyrl100.otf in Resources */,
 				CE735F28215247AB00E2849E /* Launch Screen.storyboard in Resources */,
 				CE09A0F3216E1224009C7A10 /* CompanyFooterView.xib in Resources */,
+				8FC3B0A924A22218004888B7 /* Roboto-Regular.ttf in Resources */,
 				CE735F362152653600E2849E /* MuseoCyrl300.otf in Resources */,
 				CEE89E5D2176201A006B8F2B /* InvestorProfileTableViewCell.xib in Resources */,
 				CE735F1221523FA000E2849E /* DMRatingTableViewCell.xib in Resources */,
@@ -955,11 +1135,13 @@
 				CE735F0821523FA000E2849E /* ChartView.xib in Resources */,
 				CE735E4221523B2400E2849E /* SearchTableViewCell.xib in Resources */,
 				CE449BA8215A16CB0091940E /* AddSignalHeaderTableViewCell.xib in Resources */,
+				8F3C4EDB249BFA7E003A89D3 /* SubscriptionCell.xib in Resources */,
 				CE735BCD21523A7D00E2849E /* Investors.xcassets in Resources */,
 				CE735BE721523B1300E2849E /* TabBar.storyboard in Resources */,
 				CE735E8221523B2400E2849E /* BuySectionView.xib in Resources */,
 				CE735F302152653600E2849E /* MuseoCyrl700.otf in Resources */,
 				CE09A0EC216E0DF6009C7A10 /* TitleSection.xib in Resources */,
+				8F3C4ED3249BE9E4003A89D3 /* Subscription.storyboard in Resources */,
 				CE735F0C21523FA000E2849E /* DMCompanyCollectionCell.xib in Resources */,
 				CE735E7A21523B2400E2849E /* StringTableViewCell.xib in Resources */,
 				CE735BE121523B1300E2849E /* Analytics.storyboard in Resources */,
@@ -969,14 +1151,78 @@
 				CE056EDE221AB7A200034511 /* AlertTitleTableViewCell.xib in Resources */,
 				CE735E8A21523B2400E2849E /* BuyTableViewCell.xib in Resources */,
 				CE735F322152653600E2849E /* MuseoCyrl500.otf in Resources */,
-				CE3C3023221C05CF007759A7 /* ChartTableViewCell.xib in Resources */,
-				CE0054672497C5D0001DD2E4 /* GoogleService-Info.plist in Resources */,
+				8FC2947B24A1246D00BEB07C /* Terms of Service.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE04D7BB2152321F00AD3D4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC3B0A824A22218004888B7 /* Roboto-Medium.ttf in Resources */,
+				CE735BDC21523B1300E2849E /* Ratings.storyboard in Resources */,
+				CE735E4521523B2400E2849E /* AssetsSection.xib in Resources */,
+				CE735BCC21523A7D00E2849E /* Crypto.xcassets in Resources */,
+				CE735BE621523B1300E2849E /* OutsourceCharts.storyboard in Resources */,
+				CE735F3C215265FF00E2849E /* Assets.xcassets in Resources */,
+				CE735E5921523B2400E2849E /* WatchListTableViewCell.xib in Resources */,
+				CE735BDE21523B1300E2849E /* Authorization.storyboard in Resources */,
+				CE735F0921523FA000E2849E /* ChartView.xib in Resources */,
+				8FC2947E24A1246D00BEB07C /* Privacy Policy.rtf in Resources */,
+				CE735F392152653600E2849E /* MuseoCyrl900.otf in Resources */,
+				CE735BE221523B1300E2849E /* Analytics.storyboard in Resources */,
+				CE735F352152653600E2849E /* MuseoCyrl100.otf in Resources */,
+				CE09A0E7216DFA29009C7A10 /* StatsTableViewCell.xib in Resources */,
+				CE735F29215247AB00E2849E /* Launch Screen.storyboard in Resources */,
+				CE735F372152653600E2849E /* MuseoCyrl300.otf in Resources */,
+				CE09A0F4216E1224009C7A10 /* CompanyFooterView.xib in Resources */,
+				8FC3B0AA24A22218004888B7 /* Roboto-Regular.ttf in Resources */,
+				CE735BE421523B1300E2849E /* Screener.storyboard in Resources */,
+				CEE89E5E2176201A006B8F2B /* InvestorProfileTableViewCell.xib in Resources */,
+				CE735E7B21523B2400E2849E /* StringTableViewCell.xib in Resources */,
+				CE735E5321523B2400E2849E /* CreateSignalTableViewCell.xib in Resources */,
+				CE735F312152653600E2849E /* MuseoCyrl700.otf in Resources */,
+				CE449BA9215A16CB0091940E /* AddSignalHeaderTableViewCell.xib in Resources */,
+				CE735E8B21523B2400E2849E /* BuyTableViewCell.xib in Resources */,
+				8F3C4EDA249BFA7E003A89D3 /* SubscriptionCell.xib in Resources */,
+				CE735E5521523B2400E2849E /* WatchListSection.xib in Resources */,
+				CE735EFB21523FA000E2849E /* DMStockInfoCell.xib in Resources */,
+				CE735E8321523B2400E2849E /* BuySectionView.xib in Resources */,
+				CE09A0ED216E0DF6009C7A10 /* TitleSection.xib in Resources */,
+				CE735BEA21523B1300E2849E /* Main.storyboard in Resources */,
+				8F3C4ED2249BE9E4003A89D3 /* Subscription.storyboard in Resources */,
+				CE735E4321523B2400E2849E /* SearchTableViewCell.xib in Resources */,
+				CE735E4B21523B2400E2849E /* PortfolioTableViewCell.xib in Resources */,
+				CE735F1321523FA000E2849E /* DMRatingTableViewCell.xib in Resources */,
+				CE735F0D21523FA000E2849E /* DMCompanyCollectionCell.xib in Resources */,
+				CE735BE821523B1300E2849E /* TabBar.storyboard in Resources */,
+				CE735BE021523B1300E2849E /* Portfolio.storyboard in Resources */,
+				CE735E4D21523B2400E2849E /* AssetsTableViewCell.xib in Resources */,
+				CE735F332152653600E2849E /* MuseoCyrl500.otf in Resources */,
+				8FC2947C24A1246D00BEB07C /* Terms of Service.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		03EA4CA57B5E32519420D224 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DominantCrypto/Pods-DominantCrypto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		72F59B71AA7C279E9537D4EF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -992,6 +1238,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EAE286AFE4AC175F601B474 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Inapps-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		83A23BA1B8E5F7D680A623D4 /* [CP] Check Pods Manifest.lock */ = {
@@ -1029,6 +1297,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8FEF9A74249BD5F300A01090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F3C4EC8249BD8C7003A89D3 /* StoreSubscription.swift in Sources */,
+				8FEF9A86249BD67100A01090 /* StoreKitManager.swift in Sources */,
+				8F3C4ECA249BD8D8003A89D3 /* StoreProduct.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE04D79D215231CE00AD3D4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1065,11 +1343,13 @@
 				CE449BAB215A1F830091940E /* Dominant+String.swift in Sources */,
 				CE0F545221D3B86700AEFBC1 /* CompanyChatViewController.swift in Sources */,
 				CE735E7221523B2400E2849E /* DMTradingViewChartViewController.swift in Sources */,
+				8F3C4EDE249BFCD7003A89D3 /* SubscriptionItem.swift in Sources */,
 				CE09A048216B7425009C7A10 /* Dominant+ImageView.swift in Sources */,
 				CE735E9C21523B2400E2849E /* AccountsDataProvider.swift in Sources */,
 				CE735E8421523B2400E2849E /* BuySectionView.swift in Sources */,
 				CE04D7EC215236DB00AD3D4D /* AppDelegate.swift in Sources */,
 				CE735EA421523B2400E2849E /* RequestProvider.swift in Sources */,
+				8FADB51E24A119AF004994E7 /* SubscriptionInfoController.swift in Sources */,
 				CE735E7E21523B2400E2849E /* StringTableViewCell.swift in Sources */,
 				CE735E7421523B2400E2849E /* DMEstimazeChartViewController.swift in Sources */,
 				CE735F4A2152782800E2849E /* Storyboard.swift in Sources */,
@@ -1090,10 +1370,12 @@
 				CE735D0E21523B2400E2849E /* TableViewItemConfigurators.swift in Sources */,
 				CE735E5021523B2400E2849E /* PersonDataSources.swift in Sources */,
 				CE735E4E21523B2400E2849E /* AssetsTableViewCell.swift in Sources */,
+				8F3C4ED1249BE9DE003A89D3 /* SubscriptionController.swift in Sources */,
 				CE735EF821523FA000E2849E /* ChartView.swift in Sources */,
 				CE09A045216B554D009C7A10 /* Donimant+Image.swift in Sources */,
 				CEE89E7A2179C8F9006B8F2B /* CompletionHandler.swift in Sources */,
 				CE735F4C2152782800E2849E /* ViewController.swift in Sources */,
+				8F3C4ED9249BFA7A003A89D3 /* SubscriptionCell.swift in Sources */,
 				CE735D0C21523B2400E2849E /* Extensions.swift in Sources */,
 				CE735E8821523B2400E2849E /* BuyTableViewCell.swift in Sources */,
 				CE735E5621523B2400E2849E /* WatchListSection.swift in Sources */,
@@ -1154,9 +1436,185 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE04D7B72152321F00AD3D4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE449BA7215A16CB0091940E /* AddSignalHeaderTableViewCell.swift in Sources */,
+				CE735E7921523B2400E2849E /* DMLaunchViewController.swift in Sources */,
+				CE09A0F7216E14E1009C7A10 /* Dominant+View.swift in Sources */,
+				CE735F542152785E00E2849E /* Dominant+LayoutConstraint.swift in Sources */,
+				CEE89E5821761F4B006B8F2B /* RatingsDetailsViewController.swift in Sources */,
+				CE735E6B21523B2400E2849E /* DMScreenerContainerViewController.swift in Sources */,
+				CE735F0521523FA000E2849E /* SegmentControll.swift in Sources */,
+				CE735E6D21523B2400E2849E /* DMStockDetailViewController.swift in Sources */,
+				CE735D1121523B2400E2849E /* EditableSectionDataSource.swift in Sources */,
+				CE735D0521523B2400E2849E /* TableViewComposedDataSource.swift in Sources */,
+				CE735E7121523B2400E2849E /* DMRatingsViewController.swift in Sources */,
+				CE735E6521523B2400E2849E /* DMSubscriptionViewController.swift in Sources */,
+				CE735D0B21523B2400E2849E /* TableViewArrayDataSource.swift in Sources */,
+				CE735EA921523B2400E2849E /* Portfolio+Request.swift in Sources */,
+				CE735EAF21523B2400E2849E /* SignalsDataProvider.swift in Sources */,
+				CE735F572152788700E2849E /* Protocols.swift in Sources */,
+				CE735E4921523B2400E2849E /* SearchTableViewCell.swift in Sources */,
+				CE735E6721523B2400E2849E /* DMCryptoScreenerViewController.swift in Sources */,
+				CE735E8721523B2400E2849E /* BuyViewController.swift in Sources */,
+				CE735F1921523FA000E2849E /* DMStockInfoCell.swift in Sources */,
+				CE735EF121523FA000E2849E /* DMCompanyCollectionCell.swift in Sources */,
+				CE735EA321523B2400E2849E /* Signals+Request.swift in Sources */,
+				CE735E9521523B2400E2849E /* DMCompanyDetailViewController.swift in Sources */,
+				CE735ED121523CF200E2849E /* UserModel.swift in Sources */,
+				CE449BAC215A1F830091940E /* Dominant+String.swift in Sources */,
+				CE735E7321523B2400E2849E /* DMTradingViewChartViewController.swift in Sources */,
+				8F3C4EDF249BFCD7003A89D3 /* SubscriptionItem.swift in Sources */,
+				CE09A049216B7425009C7A10 /* Dominant+ImageView.swift in Sources */,
+				CE735E9D21523B2400E2849E /* AccountsDataProvider.swift in Sources */,
+				CE735E8521523B2400E2849E /* BuySectionView.swift in Sources */,
+				CE04D7ED215236DB00AD3D4D /* AppDelegate.swift in Sources */,
+				CE735EA521523B2400E2849E /* RequestProvider.swift in Sources */,
+				8FADB52624A11F55004994E7 /* SubscriptionInfoController.swift in Sources */,
+				CE735E7F21523B2400E2849E /* StringTableViewCell.swift in Sources */,
+				CE735E7521523B2400E2849E /* DMEstimazeChartViewController.swift in Sources */,
+				CE735F4B2152782800E2849E /* Storyboard.swift in Sources */,
+				CE735ECF21523CF200E2849E /* PortfolioModel.swift in Sources */,
+				CE735E9321523B2400E2849E /* DMAnalyticsViewController.swift in Sources */,
+				CEE89E5C2176201A006B8F2B /* InvestorProfileTableViewCell.swift in Sources */,
+				CE735E6F21523B2400E2849E /* DMSignUpViewController.swift in Sources */,
+				CE735F1B21523FA000E2849E /* FXBlurView.m in Sources */,
+				CE735D0321523B2400E2849E /* EditableCellDataSource.swift in Sources */,
+				CE09A0F1216E1218009C7A10 /* CompanyFooterView.swift in Sources */,
+				CE735E7D21523B2400E2849E /* SearchController.swift in Sources */,
+				CE735D0F21523B2400E2849E /* TableViewItemConfigurators.swift in Sources */,
+				CE735E5121523B2400E2849E /* PersonDataSources.swift in Sources */,
+				CE735E4F21523B2400E2849E /* AssetsTableViewCell.swift in Sources */,
+				8F3C4ED0249BE9DD003A89D3 /* SubscriptionController.swift in Sources */,
+				CE735EF921523FA000E2849E /* ChartView.swift in Sources */,
+				CE09A046216B554D009C7A10 /* Donimant+Image.swift in Sources */,
+				CEE89E7B2179C8F9006B8F2B /* CompletionHandler.swift in Sources */,
+				CE735F4D2152782800E2849E /* ViewController.swift in Sources */,
+				8F3C4ED8249BFA79003A89D3 /* SubscriptionCell.swift in Sources */,
+				CE735D0D21523B2400E2849E /* Extensions.swift in Sources */,
+				CE735E8921523B2400E2849E /* BuyTableViewCell.swift in Sources */,
+				CE735E5721523B2400E2849E /* WatchListSection.swift in Sources */,
+				CE735E8F21523B2400E2849E /* DMLoginViewController.swift in Sources */,
+				CE735ECB21523CF200E2849E /* CompanyModel.swift in Sources */,
+				CE735D0721523B2400E2849E /* TableViewDataSourceShim.swift in Sources */,
+				CE735D0121523B2400E2849E /* TableViewDataSource.swift in Sources */,
+				CE449BAF215A20FF0091940E /* Dominant+TextField.swift in Sources */,
+				CE735E9F21523B2400E2849E /* PortfolioDataProvider.swift in Sources */,
+				CEE89E7D2179C8F9006B8F2B /* Repository.swift in Sources */,
+				CE735E5B21523B2400E2849E /* CreateSignalTableViewCell.swift in Sources */,
+				CE09A0E5216DFA29009C7A10 /* StatsTableViewCell.swift in Sources */,
+				CE735F492152782800E2849E /* NavigationController.swift in Sources */,
+				CE735F4F2152782800E2849E /* KeyboardObservableViewController.swift in Sources */,
+				CE735F1E2152406B00E2849E /* SwiftStockKit.swift in Sources */,
+				CE735E6321523B2400E2849E /* DMScreenerTypeViewController.swift in Sources */,
+				CE735E6921523B2400E2849E /* DMScreenerViewController.swift in Sources */,
+				CE735F472152782800E2849E /* NavigationControllerDecorator.swift in Sources */,
+				CEE89E792179C8F9006B8F2B /* ServiceLocator.swift in Sources */,
+				CE735EAB21523B2400E2849E /* Investors+Requesrt.swift in Sources */,
+				CE735ECD21523CF200E2849E /* SignalModel.swift in Sources */,
+				CE735E4721523B2400E2849E /* AssetsSection.swift in Sources */,
+				CEE89E4C2170884D006B8F2B /* AnalitycalInfoViewController.swift in Sources */,
+				CE735EA721523B2400E2849E /* User+Request.swift in Sources */,
+				CE735BD121523B0900E2849E /* Constants.swift in Sources */,
+				CE735E3F21523B2400E2849E /* PersonalViewController.swift in Sources */,
+				CE09A0EB216E0DF6009C7A10 /* TitleSection.swift in Sources */,
+				CE449BA02158D5000091940E /* Company+Request.swift in Sources */,
+				CE735E5D21523B2400E2849E /* WatchListTableViewCell.swift in Sources */,
+				CE449BA32158DE3F0091940E /* SearchSignalViewController.swift in Sources */,
+				CEE89E772179C8F9006B8F2B /* SessionAdapter.swift in Sources */,
+				CE449B9D215516100091940E /* AddSignalViewController.swift in Sources */,
+				CEE89E4F2170AC3B006B8F2B /* TermsAndConditionsViewController.swift in Sources */,
+				CE897B9D2192DEE4006A4069 /* SellViewController.swift in Sources */,
+				CEB8801B2181CBAF006DFD9F /* MonayTransformator.swift in Sources */,
+				CE735EA121523B2400E2849E /* InvestorsDataProvider.swift in Sources */,
+				CE735EC721523CF200E2849E /* OffsetResponse.swift in Sources */,
+				CE735E4121523B2400E2849E /* PortfolioTableViewCell.swift in Sources */,
+				CE735F512152782800E2849E /* TabBarController.swift in Sources */,
+				CEE89E802179C933006B8F2B /* CompanyDataProvider.swift in Sources */,
+				CE735D0921523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */,
+				CE8854CB215CC8940093564B /* DrivewealthDataProvider.swift in Sources */,
+				CE735F0321523FA000E2849E /* DMRatingTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8FEF9A7E249BD5F300A01090 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FEF9A77249BD5F300A01090 /* Inapps */;
+			targetProxy = 8FEF9A7D249BD5F300A01090 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8FEF9A82249BD5F300A01090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66326E95791178BE02DEB4C8 /* Pods-Inapps.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z2684TC4PW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Inapps/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.Inapps;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8FEF9A83249BD5F300A01090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 038E7A93D4C444B0925876EE /* Pods-Inapps.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z2684TC4PW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Inapps/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.Inapps;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		CE04D7B1215231D000AD3D4D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1279,11 +1737,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B7B4F88AD8A2FE5DB2595A6E /* Pods-DominantInvestors.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1292,10 +1750,10 @@
 				);
 				MARKETING_VERSION = 6.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.DominantStocks;
-				PRODUCT_NAME = "Dominant Investors";
-				PROVISIONING_PROFILE_SPECIFIER = "DominantStocks distribution";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1304,13 +1762,55 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 363CBE73292F3B57EBC39762 /* Pods-DominantInvestors.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 6.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.DominantStocks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE04D7C02152321F00AD3D4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEB57268B412308413460525 /* Pods-DominantCrypto.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z2684TC4PW;
+				INFOPLIST_FILE = Resources/DominantCrypto.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dominant.DominantStocks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE04D7C12152321F00AD3D4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E0A733618BF5F7879B72B8D /* Pods-DominantCrypto.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z2684TC4PW;
+				INFOPLIST_FILE = Resources/DominantCrypto.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1320,7 +1820,7 @@
 				PRODUCT_NAME = "Dominant Investors";
 				PROVISIONING_PROFILE_SPECIFIER = "DominantStocks distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dominant-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1328,6 +1828,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8FEF9A81249BD5F300A01090 /* Build configuration list for PBXNativeTarget "Inapps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FEF9A82249BD5F300A01090 /* Debug */,
+				8FEF9A83249BD5F300A01090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CE04D79C215231CE00AD3D4D /* Build configuration list for PBXProject "DominantInvestors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

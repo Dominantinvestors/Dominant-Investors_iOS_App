@@ -3,6 +3,7 @@ import FacebookCore
 import FBSDKCoreKit
 import Firebase
 import UserNotifications
+import Inapps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         registerForRemoteNotifications()
     
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        ApplicationDelegate.shared.application(application,
+                                               didFinishLaunchingWithOptions: launchOptions)
+        let productIds = ProductId.allCases.map { $0.rawValue }
+        StoreKitManager.default.configure(productIds: productIds)
+        
         return true
     }
     func applicationDidBecomeActive(_ application: UIApplication) {

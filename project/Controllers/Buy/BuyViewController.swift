@@ -20,7 +20,7 @@ class BuyViewController: KeyboardObservableViewController {
         
         title = NSLocalizedString("MARKET BUY", comment: "")
         
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50
         
         tableView.register(cell: BuyTableViewCell.self)

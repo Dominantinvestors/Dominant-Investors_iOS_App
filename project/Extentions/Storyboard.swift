@@ -14,6 +14,7 @@ public extension UIStoryboard {
         case AlertNewSignal
         case ResetPasswordViewController
         case Pay
+        case Subscription
     }
     
     subscript<T: UIViewController>(_ identifier: Identifier) -> T {

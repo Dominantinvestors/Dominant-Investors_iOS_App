@@ -1,6 +1,8 @@
 import UIKit
 import UserNotifications
 import Firebase
+//import MBProgressHUD
+import Inapps
 
 class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UICollectionViewDataSource, DMContainerDelegate {
 
@@ -70,6 +72,20 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.collectionView.reloadData()
+        
+        self.navigationController?.navigationBar.isHidden = false
+        setStatusBarBackgroundColor(.clear)
+        checkSubscription()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         updateCollectionViewLayout(with: size)
         super.viewWillTransition(to: size, with: coordinator)
@@ -87,6 +103,24 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
             layout.minimumLineSpacing = 0
             layout.invalidateLayout()
             self.collectionView?.setCollectionViewLayout(layout, animated: true)
+        }
+    }
+    
+    private func checkSubscription() {
+        let isMontlySubscribed = StoreKitManager.default.isSubscribed(productId: ProductId.monthly.rawValue) ?? false
+        let isAnnuallySubscribed = StoreKitManager.default.isSubscribed(productId: ProductId.annually.rawValue) ?? false
+        if isMontlySubscribed == false && isAnnuallySubscribed == false {
+            guard let controller = UIStoryboard(name: "Subscription", bundle: nil).instantiateInitialViewController() as? SubscriptionController else {
+                fatalError("Can't init SubscriptionController")
+            }
+            
+            controller.modalPresentationStyle = .overFullScreen
+            self.present(controller, animated: false, completion: nil)
+            controller.closeCompletion = { [tabBarController] isSubscribed in
+                if !isSubscribed {
+                    tabBarController?.selectedIndex = 2 // 2 - Portfolio Tab
+                }
+            }
         }
     }
     
