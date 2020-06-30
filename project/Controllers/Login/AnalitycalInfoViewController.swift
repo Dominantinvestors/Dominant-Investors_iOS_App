@@ -25,7 +25,7 @@ class AnalitycalInfoViewController: UIViewController {
     }
     
     @IBAction func onViewResult() {
-//        self.dismiss(animated: false, completion: nil)
+        self.dismiss(animated: false, completion: nil)
         
         userAuthorized()
     }
