@@ -70,6 +70,7 @@
 		CE65E5CD2278404600B4955F /* CRNotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C62278404500B4955F /* CRNotificationType.swift */; };
 		CE65E5CE2278404600B4955F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C72278404500B4955F /* Colors.swift */; };
 		CE65E5CF2278404600B4955F /* CRNotificationsMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE65E5C92278404500B4955F /* CRNotificationsMedia.xcassets */; };
+		CE71024824AE240800E396ED /* ваTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71024724AE240800E396ED /* ваTableViewCell.swift */; };
 		CE735BCD21523A7D00E2849E /* Investors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC821523A7D00E2849E /* Investors.xcassets */; };
 		CE735BD021523B0900E2849E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BCF21523B0900E2849E /* Constants.swift */; };
 		CE735BDB21523B1300E2849E /* Ratings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD321523B1300E2849E /* Ratings.storyboard */; };
@@ -281,6 +282,7 @@
 		CE65E5C62278404500B4955F /* CRNotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotificationType.swift; sourceTree = "<group>"; };
 		CE65E5C72278404500B4955F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CE65E5C92278404500B4955F /* CRNotificationsMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CRNotificationsMedia.xcassets; sourceTree = "<group>"; };
+		CE71024724AE240800E396ED /* ваTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ваTableViewCell.swift"; sourceTree = "<group>"; };
 		CE735BC721523A7D00E2849E /* Crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crypto.xcassets; sourceTree = "<group>"; };
 		CE735BC821523A7D00E2849E /* Investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Investors.xcassets; sourceTree = "<group>"; };
 		CE735BCF21523B0900E2849E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -705,6 +707,7 @@
 			children = (
 				CE735CC921523B2300E2849E /* DMScreenerContainerViewController.swift */,
 				CE735CC521523B2300E2849E /* DMScreenerTypeViewController.swift */,
+				CE71024724AE240800E396ED /* ваTableViewCell.swift */,
 				CE735CC821523B2300E2849E /* DMScreenerViewController.swift */,
 				CE735CC721523B2300E2849E /* DMCryptoScreenerViewController.swift */,
 				CE735CC621523B2300E2849E /* DMSubscriptionViewController.swift */,
@@ -999,6 +1002,7 @@
 			buildConfigurationList = CE04D7B3215231D000AD3D4D /* Build configuration list for PBXNativeTarget "DominantInvestors" */;
 			buildPhases = (
 				83A23BA1B8E5F7D680A623D4 /* [CP] Check Pods Manifest.lock */,
+				2272D8A7D72E3B0D67A8D23E /* [CP] Prepare Artifacts */,
 				CE04D79D215231CE00AD3D4D /* Sources */,
 				CE04D79E215231CE00AD3D4D /* Frameworks */,
 				CE04D79F215231CE00AD3D4D /* Resources */,
@@ -1120,6 +1124,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2272D8A7D72E3B0D67A8D23E /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DominantInvestors/Pods-DominantInvestors-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		72F59B71AA7C279E9537D4EF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1315,6 +1336,7 @@
 				CE735D0821523B2400E2849E /* TableViewDataSourceCollapsible.swift in Sources */,
 				CE8854CA215CC8940093564B /* DrivewealthDataProvider.swift in Sources */,
 				CE0F544021D37B8800AEFBC1 /* ChatDataSources.swift in Sources */,
+				CE71024824AE240800E396ED /* ваTableViewCell.swift in Sources */,
 				CE735F0221523FA000E2849E /* DMRatingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1522,7 +1544,7 @@
 				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1548,7 +1570,7 @@
 				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

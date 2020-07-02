@@ -33,9 +33,8 @@ class DMScreenerTypeViewController: DMViewController, WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-
         let request = navigationAction.request
-        
+
         if request.url?.absoluteString.contains("https://www.tradingview.com/?utm_campaign=screener&utm_medium=widget&utm_source=") == true {
                    decisionHandler(.cancel)
                }

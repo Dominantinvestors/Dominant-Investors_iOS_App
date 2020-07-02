@@ -4,14 +4,19 @@ import FBSDKCoreKit
 import Firebase
 import UserNotifications
 import Inapps
+import AppsFlyerLib
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, AppsFlyerTrackerDelegate {
 
     var window: UIWindow?
 
     var notification: PushNotifications!
 
+    @objc func sendLaunch(app:Any) {
+          AppsFlyerTracker.shared().trackAppLaunch()
+      }
+    
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
@@ -27,6 +32,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let productIds = ProductId.allCases.map { $0.rawValue }
         StoreKitManager.default.configure(productIds: productIds)
         
+        AppsFlyerTracker.shared().appsFlyerDevKey = "9vgpkncYVtFfKQy7f5kJ7A"
+        AppsFlyerTracker.shared().appleAppID = "1147502198"
+        AppsFlyerTracker.shared().delegate = self
+        AppsFlyerTracker.shared().isDebug = false
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(sendLaunch),
+                                               name: UIApplication.didBecomeActiveNotification,
+                                               object: nil)
         
         return true
     }
@@ -34,17 +48,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
         AppEvents.activateApp()
     }
-    
-    internal func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         if url.host == "fogotpassword" {
             self.notification.fogotpassword.value = url
             return true
         }
+        AppsFlyerTracker.shared().handleOpen(url, options: options)
+
         return ApplicationDelegate.shared.application(app, open: url, options: options)
     }
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+      AppsFlyerTracker.shared().handleOpen(url, sourceApplication: sourceApplication, withAnnotation: annotation)
+      return true
+    }
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+           AppsFlyerTracker.shared().handlePushNotification(userInfo)
+       }
+  
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+           AppsFlyerTracker.shared().continue(userActivity, restorationHandler: nil)
+           return true
+       }
     
-    internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    func application(_ application: UIApplication,
+                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         registerDeviceToken(deviceToken)
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        
     }
     
     private func registerForRemoteNotifications() {
@@ -56,6 +89,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    private func registerDeviceToken(_ deviceToken: Data) {
         Messaging.messaging().apnsToken = deviceToken
     }
+    
+      func onConversionDataSuccess(_ data: [AnyHashable: Any]) {
+          print("\(data)")
+          if let status = data["af_status"] as? String{
+              if(status == "Non-organic"){
+                  if let sourceID = data["media_source"] , let campaign = data["campaign"]{
+                      print("This is a Non-Organic install. Media source: \(sourceID)  Campaign: \(campaign)")
+                  }
+              } else {
+                  print("This is an organic install.")
+              }
+              if let is_first_launch = data["is_first_launch"] , let launch_code = is_first_launch as? Int {
+                  if(launch_code == 1){
+                      print("First Launch")
+                  } else {
+                      print("Not First Launch")
+                  }
+              }
+          }
+      }
+      func onConversionDataFail(_ error: Error) {
+         print("\(error)")
+      }
+      
+     func onAppOpenAttribution(_ attributionData: [AnyHashable: Any]) {
+          print("onAppOpenAttribution data:")
+          for (key, value) in attributionData {
+              print(key, ":",value)
+          }
+      }
+      func onAppOpenAttributionFailure(_ error: Error) {
+          print("\(error)")
+      }
 }
 
 //func setStatusBarBackgroundColor(_ color: UIColor) {

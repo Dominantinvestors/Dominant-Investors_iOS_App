@@ -107,7 +107,7 @@ class PersonalViewController: KeyboardObservableViewController {
     }
     
     fileprivate func moreInfo(_ company: Company) {
-        self.showCompanyWidget(company, widget: "<!-- TradingView Widget BEGIN --><meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0\"> <div class=\"tradingview-widget-container\"><div class=\"tradingview-widget-container__widget\"></div><div class=\"tradingview-widget-copyright\"><a href=\"https://www.tradingview.com/symbols/NASDAQ-AAPL/technicals/\"rel=\"noopener\" target=\"_blank\"><span class=\"blue-text\">Technical Analysis for AAPL</span></a> by TradingView</div><script type=\"text/javascript\" src=\"https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js\" async>{\"interval\": \"1m\",\"width\": \"100%\",\"isTransparent\": false,\"height\": \"100%\",\"symbol\": \"NASDAQ:\(company.ticker)\",\"showIntervalTabs\": true,\"locale\": \"en\",\"colorTheme\": \"light\"}</script></div><!-- TradingView Widget END -->")
+        self.showCompanyWidget(company, widget: "<!-- TradingView Widget BEGIN --><meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0\"> <div class=\"tradingview-widget-container\"><div class=\"tradingview-widget-container__widget\"></div><div class=\"tradingview-widget-copyright\"><a href=\"https://www.tradingview.com/symbols/NASDAQ-AAPL/technicals/\"rel=\"noopener\" target=\"_blank\"><span class=\"blue-text\">Technical Analysis for AAPL</span></a> by TradingView</div><script type=\"text/javascript\" src=\"https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js\" async>{\"interval\": \"1m\",\"width\": \"100%\",\"isTransparent\": false,\"height\": \"100%\",\"symbol\": \"\(company.ticker)\",\"showIntervalTabs\": true,\"locale\": \"en\",\"colorTheme\": \"light\"}</script></div><!-- TradingView Widget END -->")
     }
     
     fileprivate func delete(_ signal: SignalModel) {
@@ -250,7 +250,7 @@ class PersonalViewController: KeyboardObservableViewController {
                                       title: NSLocalizedString("CHART", comment: ""),
                                       color: Colors.DMChartButtonColor),
                            EditAction(action: .custom("More"),
-                                      title: NSLocalizedString("Alalysis", comment: ""),
+                                      title: NSLocalizedString("Analyze", comment: ""),
                                       color: UIColor.lightGray)]
         
         let transactions = TransactionsDataSource(data: [], editActions: editActions)
