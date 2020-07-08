@@ -28,6 +28,8 @@ target :DominantInvestors do
     pod 'PromiseKit/CorePromise', '~> 6.0'
     
     pod 'AppsFlyerFramework'
+    
+    pod 'Purchases', '3.4.0'
 
     post_install do |installer|
       installer.pods_project.targets.each do |target|

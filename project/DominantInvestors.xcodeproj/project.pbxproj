@@ -48,6 +48,7 @@
 		CE0F545821D4D72C00AEFBC1 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F545721D4D72C00AEFBC1 /* Conversation.swift */; };
 		CE0F545C21D4D9F400AEFBC1 /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F545A21D4D9F400AEFBC1 /* ConversationTableViewCell.swift */; };
 		CE0F545E21D4D9F400AEFBC1 /* ConversationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0F545B21D4D9F400AEFBC1 /* ConversationTableViewCell.xib */; };
+		CE14425E24B310D100B10F32 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE14425D24B310D100B10F32 /* StoreKit.framework */; };
 		CE2E38BA2292A7320003A341 /* TournamentTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E38B92292A7320003A341 /* TournamentTermsViewController.swift */; };
 		CE3C301E221C0043007759A7 /* Dynemic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C301D221C0043007759A7 /* Dynemic.swift */; };
 		CE3C3022221C05CF007759A7 /* ChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C3020221C05CF007759A7 /* ChartTableViewCell.swift */; };
@@ -259,6 +260,7 @@
 		CE0F545721D4D72C00AEFBC1 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		CE0F545A21D4D9F400AEFBC1 /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 		CE0F545B21D4D9F400AEFBC1 /* ConversationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationTableViewCell.xib; sourceTree = "<group>"; };
+		CE14425D24B310D100B10F32 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CE2E38B92292A7320003A341 /* TournamentTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentTermsViewController.swift; sourceTree = "<group>"; };
 		CE3C301D221C0043007759A7 /* Dynemic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynemic.swift; sourceTree = "<group>"; };
 		CE3C3020221C05CF007759A7 /* ChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTableViewCell.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE14425E24B310D100B10F32 /* StoreKit.framework in Frameworks */,
 				0B3745267EDC827994C5C373 /* Pods_DominantInvestors.framework in Frameworks */,
 				8FEF9A7F249BD5F300A01090 /* Inapps.framework in Frameworks */,
 			);
@@ -958,6 +961,7 @@
 		E482CC02D3CCE862FD9AFBF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE14425D24B310D100B10F32 /* StoreKit.framework */,
 				CF5A1536C092F288D8775835 /* Pods_DominantInvestors.framework */,
 				3CA610ABC53594A15699723C /* Pods_Inapps.framework */,
 			);
@@ -1544,7 +1548,7 @@
 				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1570,7 +1574,7 @@
 				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

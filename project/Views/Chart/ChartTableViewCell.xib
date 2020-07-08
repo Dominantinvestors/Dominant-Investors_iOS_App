@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,26 +14,36 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="239.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTQ-GM-NPm">
-                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="239.5"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deH-zj-s0V">
+                        <rect key="frame" x="15" y="11" width="290" height="200"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="239.5" id="LZc-Ch-nC0"/>
-                            <constraint firstAttribute="width" id="s7H-Ed-eAx"/>
+                            <constraint firstAttribute="height" constant="200" id="BTK-DL-lPG"/>
                         </constraints>
                     </view>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kSx-V2-d9n">
+                        <rect key="frame" x="141.5" y="101.5" width="37" height="37"/>
+                        <color key="color" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </activityIndicatorView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="NTQ-GM-NPm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NyU-Ho-Qid"/>
-                    <constraint firstAttribute="bottom" secondItem="NTQ-GM-NPm" secondAttribute="bottom" id="PjW-71-ooV"/>
-                    <constraint firstItem="NTQ-GM-NPm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="iMW-Hw-Svg"/>
+                    <constraint firstItem="kSx-V2-d9n" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="A8W-7V-jSE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="deH-zj-s0V" secondAttribute="bottom" id="QXU-fx-PXd"/>
+                    <constraint firstItem="kSx-V2-d9n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="90.5" id="YXH-0K-FGI"/>
+                    <constraint firstItem="deH-zj-s0V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="eSn-9h-1Zv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="deH-zj-s0V" secondAttribute="trailing" id="flC-gU-02B"/>
+                    <constraint firstItem="deH-zj-s0V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hKN-52-HEf"/>
+                    <constraint firstItem="kSx-V2-d9n" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="kR3-Lb-cjh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="activity" destination="kSx-V2-d9n" id="Bfo-cm-K9I"/>
+            </connections>
             <point key="canvasLocation" x="137.59999999999999" y="241.97901049475263"/>
         </tableViewCell>
     </objects>

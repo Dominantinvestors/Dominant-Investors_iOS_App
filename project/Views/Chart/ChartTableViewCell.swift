@@ -10,11 +10,17 @@ class ChartTableViewCell: UITableViewCell {
         }
     }
     
-    var chartView: ChartView!
+    var chartView: ChartView! {
+        didSet {
+            oldValue.flatMap{ $0.removeFromSuperview()}
+        }
+    }
     var chart: SwiftStockChart!
     
     var items: [ChartPoint] = []
     
+    @IBOutlet weak var activity: UIActivityIndicatorView!
+
     private func loadChart() {
         chartView = ChartView.create()
         chartView.delegate = self
@@ -37,6 +43,7 @@ class ChartTableViewCell: UITableViewCell {
         
         chartView.addSubview(chart)
         chartView.backgroundColor = UIColor.black
+        
     }
     
     func loadChartWithRange(range: ChartTimeRange) {
@@ -109,14 +116,10 @@ class ChartTableViewCell: UITableViewCell {
     }
     
     open func showActivityIndicator() {
-        let activityData = ActivityData()
-
-        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
-     }
-     
-     open func dismissActivityIndicator() {
-         NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
-     }
+    }
+    
+    open func dismissActivityIndicator() {
+    }
     
     func filter(fot date: Double)  {
         let points = self.items.filter({ TimeInterval( $0.timeStamp ?? 0.0) > date})
