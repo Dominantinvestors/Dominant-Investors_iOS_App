@@ -60,9 +60,14 @@ private extension SubscriptionController {
                 return
         }
 
-        if storeKit.products?.isEmpty == true || storeKit.products == nil {
+        if (storeKit.products?.isEmpty == true ||
+            storeKit.products == nil), storeKit.isLoadingProducts {
             startLoading()
-            storeKit.productsLoadCompletion = { [weak self] in
+            storeKit.productsLoadCompletion = { [weak self] error in
+                if let error = error {
+                    self?.handleError(error)
+                }
+                
                 self?.endLoading()
                 self?.setupButtons()
             }
