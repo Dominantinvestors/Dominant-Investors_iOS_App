@@ -19,7 +19,7 @@
         <!--Subscription Controller-->
         <scene sceneID="w9l-1z-9Vy">
             <objects>
-                <viewController storyboardIdentifier="Subscription" id="RPQ-ae-LdB" customClass="SubscriptionController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Subscription" id="RPQ-ae-LdB" customClass="SubscriptionController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tul-gp-Yya">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,16 +28,16 @@
                                 <rect key="frame" x="113.66666666666669" y="64" width="148" height="46"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWt-fa-z8u">
-                                <rect key="frame" x="78.333333333333329" y="123" width="218.66666666666669" height="44"/>
+                                <rect key="frame" x="78" y="123" width="219" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signals Subscriptions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Rr-UH-lMn">
-                                        <rect key="frame" x="0.0" y="0.0" width="174.66666666666666" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signals Subscriptions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" autoshrinkMode="minimumScaleFactor" translatesAutoresizingMaskIntoConstraints="NO" id="1Rr-UH-lMn">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="44"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGf-8Q-nWY">
-                                        <rect key="frame" x="174.66666666666669" y="0.0" width="44" height="44"/>
+                                        <rect key="frame" x="175" y="0.0" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Wfs-G3-Fcb"/>
                                             <constraint firstAttribute="width" constant="44" id="fh9-zc-3Mu"/>
@@ -145,7 +145,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89W-YK-9Kf">
-                                <rect key="frame" x="267.66666666666669" y="699" width="58" height="44"/>
+                                <rect key="frame" x="267.66666666666669" y="699" width="59" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Ar8-aG-bLu"/>
                                 </constraints>
@@ -161,7 +161,7 @@
                                 <rect key="frame" x="277.66666666666669" y="540" width="60" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save $300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0P-o1-Za6">
-                                        <rect key="frame" x="3" y="4.3333333333333703" width="54" height="11.666666666666664"/>
+                                        <rect key="frame" x="3" y="4" width="54" height="12"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="10"/>
                                         <color key="textColor" red="0.043137254901960784" green="0.10588235294117647" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -226,13 +226,13 @@
         <!--Subscription Info Controller-->
         <scene sceneID="6Rg-Nz-9J7">
             <objects>
-                <viewController storyboardIdentifier="SubscriptionInfoController" id="GHi-hw-vdk" customClass="SubscriptionInfoController" customModule="DominantInvestors" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubscriptionInfoController" id="GHi-hw-vdk" customClass="SubscriptionInfoController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3VD-7W-5GL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0d-qC-ms8">
-                                <rect key="frame" x="37.666666666666629" y="306" width="300" height="200"/>
+                                <rect key="frame" x="37.666666666666657" y="306" width="300" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdV-DJ-U24">
                                         <rect key="frame" x="256" y="0.0" width="44" height="44"/>
@@ -245,7 +245,7 @@
                                             <action selector="close:" destination="GHi-hw-vdk" eventType="touchUpInside" id="fM4-1E-naq"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pcp-zp-PFw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" autoshrinkMode="minimumScaleFactor" translatesAutoresizingMaskIntoConstraints="NO" id="pcp-zp-PFw">
                                         <rect key="frame" x="18" y="36" width="264" height="129"/>
                                         <string key="text">Our trading signals are generated by a unique algorithm built on the basis of the Follow the Trend strategy. We are using the system of Moving Averages with exponential averaging, the founder of which is Edward Arthur Seykota </string>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
@@ -274,7 +274,7 @@
                         <viewLayoutGuide key="safeArea" id="xN1-B1-OfD"/>
                     </view>
                     <connections>
-                        <outlet property="backView" destination="I0d-qC-ms8" id="vKb-FZ-wWH"/>
+                        <outlet property="backContainerView" destination="I0d-qC-ms8" id="vKb-FZ-wWH"/>
                         <outlet property="closeButton" destination="cdV-DJ-U24" id="wpi-Jf-JsS"/>
                         <outlet property="descriptionLabel" destination="pcp-zp-PFw" id="5Rp-Km-YIH"/>
                     </connections>

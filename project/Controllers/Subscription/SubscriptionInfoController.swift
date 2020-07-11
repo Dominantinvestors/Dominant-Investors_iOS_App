@@ -13,7 +13,7 @@ final class SubscriptionInfoController: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet private var descriptionLabel: UILabel!
     @IBOutlet private var closeButton: UIButton!
-    @IBOutlet private var backView: UIView!
+    @IBOutlet private var backContainerView: UIView!
 
     // MARK: - Lifecylce
     override func awakeFromNib() {
@@ -25,13 +25,13 @@ final class SubscriptionInfoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        backView.clipsToBounds = true
+        backContainerView.clipsToBounds = true
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        backView.layer.cornerRadius = 8.0
+        backContainerView.layer.cornerRadius = 8.0
     }
 }
 
