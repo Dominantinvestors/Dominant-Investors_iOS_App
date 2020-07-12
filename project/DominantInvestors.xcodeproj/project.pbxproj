@@ -1548,7 +1548,7 @@
 				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1574,7 +1574,7 @@
 				CODE_SIGN_ENTITLEMENTS = DominantInvestors.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 45F26FVHGB;
 				INFOPLIST_FILE = Resources/DominantInvestors.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
