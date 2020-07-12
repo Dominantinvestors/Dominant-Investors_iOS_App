@@ -45,7 +45,7 @@ public final class StoreKitManager {
         
         restoreSavedSubscriptions()
         loadProducts()
-        verifySubscriptions(forceRefresh: true)
+        verifySubscriptions(forceRefresh: false)
     }
     
     public func isSubscribed(productId: String) -> Bool? {
