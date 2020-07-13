@@ -4,13 +4,13 @@ class DMLaunchViewController: DMViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.showActivityIndicator()
         launchApp()
     }
 
     private func launchApp() {
         if let token = UserDefaults.standard.string(forKey: ConstantsUserDefaults.accessToken) {
             ServiceLocator.shared.registerService(service: MainSessionManager.default(token: token))
+            self.showActivityIndicator()
             AccountsDataProvider.default().getUser { userModel, error in
                 self.dismissActivityIndicator()
 
