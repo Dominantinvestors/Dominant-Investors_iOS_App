@@ -19,6 +19,7 @@ final class SubscriptionController: DMViewController {
     @IBOutlet private var pageControl: UIPageControl!
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var discountView: UIView!
+    @IBOutlet private var tryFreeView: UIView!
     
     // MARK: - Properties
     private let storeKit = StoreKitManager.default
@@ -46,6 +47,7 @@ final class SubscriptionController: DMViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         discountView.layer.cornerRadius = discountView.bounds.midY
+        tryFreeView.layer.cornerRadius = tryFreeView.bounds.midY
     }
 }
 
@@ -57,7 +59,7 @@ private extension SubscriptionController {
             storeKit.isSubscribed(productId: ProductId.annually.rawValue) == false else {
                 isSubscribed = true
                 close(self)
-                return
+            return
         }
 
         if (storeKit.products?.isEmpty == true ||
@@ -89,6 +91,7 @@ private extension SubscriptionController {
             annuallySubscriptionButton.isEnabled = true
         }
         discountView.isHidden = false
+        tryFreeView.isHidden = false
     }
     
     func handleError(_ error: Error?) {
@@ -110,6 +113,7 @@ private extension SubscriptionController {
         annuallySubscriptionButton.isEnabled = false
         annuallySubscriptionButton.setTitle(nil, for: .normal)
         discountView.isHidden = true
+        tryFreeView.isHidden = true
         activityIndicator.startAnimating()
     }
     

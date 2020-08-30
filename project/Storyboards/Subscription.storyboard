@@ -69,9 +69,28 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="subscribeMonthly:" destination="RPQ-ae-LdB" eventType="touchUpInside" id="X2Z-Fm-S28"/>
+                                    <action selector="subscribeAnnually:" destination="RPQ-ae-LdB" eventType="touchUpInside" id="z16-1k-Xlu"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Kh-1J-mfi">
+                                <rect key="frame" x="277.66666666666669" y="477" width="60" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save $300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vis-Lu-gjA">
+                                        <rect key="frame" x="3" y="4.3333333333333135" width="54" height="11.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="10"/>
+                                        <color key="textColor" red="0.043137254899999998" green="0.1058823529" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="1" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="12z-qO-rki"/>
+                                    <constraint firstAttribute="height" constant="20" id="AVP-wV-Emp"/>
+                                    <constraint firstItem="vis-Lu-gjA" firstAttribute="leading" secondItem="0Kh-1J-mfi" secondAttribute="leading" constant="3" id="Bj9-uU-t3G"/>
+                                    <constraint firstAttribute="trailing" secondItem="vis-Lu-gjA" secondAttribute="trailing" constant="3" id="uKW-ez-00f"/>
+                                    <constraint firstItem="vis-Lu-gjA" firstAttribute="centerY" secondItem="0Kh-1J-mfi" secondAttribute="centerY" id="vqR-vM-r0p"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwR-cI-f02">
                                 <rect key="frame" x="17.666666666666657" y="547" width="340" height="50"/>
                                 <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,7 +103,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="subscribeAnnually:" destination="RPQ-ae-LdB" eventType="touchUpInside" id="WyN-Fj-MEj"/>
+                                    <action selector="subscribeMonthly:" destination="RPQ-ae-LdB" eventType="touchUpInside" id="TaK-IM-A8b"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63e-tg-gMT">
@@ -124,7 +143,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89W-YK-9Kf">
-                                <rect key="frame" x="267.66666666666669" y="699" width="59" height="44"/>
+                                <rect key="frame" x="267.66666666666669" y="699" width="58" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Ar8-aG-bLu"/>
                                 </constraints>
@@ -137,16 +156,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="qWt-fa-z8u">
-                                <rect key="frame" x="78" y="123" width="219" height="44"/>
+                                <rect key="frame" x="78.333333333333329" y="123" width="218.66666666666669" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signals Subscriptions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Rr-UH-lMn">
-                                        <rect key="frame" x="0.0" y="0.0" width="175" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="174.66666666666666" height="44"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGf-8Q-nWY">
-                                        <rect key="frame" x="175" y="0.0" width="44" height="44"/>
+                                        <rect key="frame" x="174.66666666666669" y="0.0" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Wfs-G3-Fcb"/>
                                             <constraint firstAttribute="width" constant="44" id="fh9-zc-3Mu"/>
@@ -158,11 +177,11 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPS-4S-DFE">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPS-4S-DFE">
                                 <rect key="frame" x="277.66666666666669" y="540" width="60" height="20"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save $300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0P-o1-Za6">
-                                        <rect key="frame" x="3" y="4" width="54" height="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try it free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0P-o1-Za6">
+                                        <rect key="frame" x="3" y="4.3333333333333703" width="54" height="11.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="10"/>
                                         <color key="textColor" red="0.043137254901960784" green="0.10588235294117647" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -202,22 +221,25 @@
                             <constraint firstItem="QZk-lm-2xm" firstAttribute="trailing" secondItem="eVU-jP-XOO" secondAttribute="trailing" id="cRY-q5-bq7"/>
                             <constraint firstItem="jwR-cI-f02" firstAttribute="top" secondItem="J7K-9z-7Ef" secondAttribute="bottom" constant="10" id="ckb-rJ-rr9"/>
                             <constraint firstItem="zT4-yi-mgd" firstAttribute="centerX" secondItem="tul-gp-Yya" secondAttribute="centerX" id="fgC-db-c3l"/>
+                            <constraint firstItem="J7K-9z-7Ef" firstAttribute="trailing" secondItem="0Kh-1J-mfi" secondAttribute="trailing" constant="20" id="lrv-v2-kgJ"/>
                             <constraint firstItem="63e-tg-gMT" firstAttribute="leading" secondItem="6e7-dQ-ImD" secondAttribute="trailing" constant="30" id="nUw-CP-2aq"/>
                             <constraint firstItem="HA9-lz-zg0" firstAttribute="top" secondItem="63e-tg-gMT" secondAttribute="bottom" constant="15" id="oyd-lU-Cv8"/>
                             <constraint firstItem="QZk-lm-2xm" firstAttribute="trailing" secondItem="HA9-lz-zg0" secondAttribute="trailing" constant="15" id="p1V-2z-6uV"/>
                             <constraint firstItem="J7K-9z-7Ef" firstAttribute="top" secondItem="eVU-jP-XOO" secondAttribute="bottom" id="tXc-jT-ocu"/>
                             <constraint firstItem="qWt-fa-z8u" firstAttribute="top" secondItem="rY0-yI-2Ow" secondAttribute="bottom" constant="13" id="vIf-sF-PiT"/>
                             <constraint firstItem="eVU-jP-XOO" firstAttribute="leading" secondItem="QZk-lm-2xm" secondAttribute="leading" id="yHe-dC-F0X"/>
+                            <constraint firstItem="0Kh-1J-mfi" firstAttribute="centerY" secondItem="J7K-9z-7Ef" secondAttribute="top" id="zGk-WW-32I"/>
                             <constraint firstItem="eVU-jP-XOO" firstAttribute="top" secondItem="qWt-fa-z8u" secondAttribute="bottom" constant="25" id="zJ8-3G-RaG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="zT4-yi-mgd" id="yS8-3Z-9kX"/>
-                        <outlet property="annuallySubscriptionButton" destination="jwR-cI-f02" id="0b6-0C-uRU"/>
+                        <outlet property="annuallySubscriptionButton" destination="J7K-9z-7Ef" id="dhC-u3-fIm"/>
                         <outlet property="collectionView" destination="eVU-jP-XOO" id="Ld7-I7-E8T"/>
-                        <outlet property="discountView" destination="rPS-4S-DFE" id="rXC-so-c7D"/>
-                        <outlet property="monthlySubscriptionButton" destination="J7K-9z-7Ef" id="UNo-qZ-N2I"/>
+                        <outlet property="discountView" destination="0Kh-1J-mfi" id="zeS-nC-BWR"/>
+                        <outlet property="monthlySubscriptionButton" destination="jwR-cI-f02" id="Vu7-AT-Qgn"/>
                         <outlet property="pageControl" destination="3LZ-xm-525" id="wxI-Qj-Ttl"/>
+                        <outlet property="tryFreeView" destination="rPS-4S-DFE" id="HFE-Rv-m6z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jmz-JF-vQR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

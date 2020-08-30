@@ -29,9 +29,7 @@ enum SubscriptionItem: Int, CaseIterable {
             """
         case .professional:
             return """
-            Access to private chat rooms in
-            which top investors discuss
-            trade deals
+            24 hours chat rooms with mentors
             """
         }
     }
