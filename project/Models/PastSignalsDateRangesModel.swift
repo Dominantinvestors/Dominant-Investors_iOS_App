@@ -14,6 +14,7 @@ struct PastSignalsDateRangesModel: Mappable, Hashable {
     var title: String = ""
     var startDate: String = ""
     var endDate: String = ""
+    var isDefault: Bool = false
     
     init?(map: Map) { }
 
@@ -21,5 +22,6 @@ struct PastSignalsDateRangesModel: Mappable, Hashable {
         title <- map["title"]
         startDate <- map["start_date"]
         endDate <- map["end_date"]
+        isDefault <- map["is_default"]
     }
 }

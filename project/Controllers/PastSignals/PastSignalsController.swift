@@ -63,9 +63,18 @@ private extension PastSignalsController {
             .done { [weak self] pastSignal, periods in
                 self?.pastSignal = pastSignal
                 self?.periods = periods
-                self?.selectedPeriod = periods.first
-                self?.collectionView.reloadData()
                 self?.collectionView.contentSize.height += PastSignalsFooterCell.height + PastSignalsHeaderCell.height
+                
+                if let period = periods.first(where: { $0.isDefault }) {
+                    // Select default period in response as default
+                    self?.didSelectChangePeriod(period)
+                } else if let period = periods.first {
+                    // Select first period in response as default
+                    self?.didSelectChangePeriod(period)
+                } else {
+                    // If impossible to handle periods, we will show data for all time
+                    self?.reloadData()
+                }
             }.ensure {
                 self.dismissActivityIndicator()
             }.catch {

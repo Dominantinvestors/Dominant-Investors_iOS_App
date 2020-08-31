@@ -83,7 +83,7 @@ extension PastSignalsHeaderCell {
     func configure(with title: String, pastSignal: PastSignalModel, periods: [PastSignalsDateRangesModel]) {
         periodButton.setTitle(title, for: .normal)
         totalTransactionsLabel.text = numberFormatter.string(from: NSNumber(value: pastSignal.totalTransactions))
-        avgTradeReturn.text = numberFormatter.string(from: NSNumber(value: pastSignal.avg))
+        avgTradeReturn.text = percentFormatter.string(from: NSNumber(value: pastSignal.avg))
         totalReturn.text = percentFormatter.string(from: NSNumber(value: pastSignal.totalProfit))
         self.periods = periods
     }
