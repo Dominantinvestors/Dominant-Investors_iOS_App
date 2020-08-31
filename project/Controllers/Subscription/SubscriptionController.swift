@@ -9,6 +9,7 @@
 import UIKit
 import Inapps
 import QuickLook
+import AppsFlyerLib
 
 final class SubscriptionController: DMViewController {
     
@@ -25,6 +26,7 @@ final class SubscriptionController: DMViewController {
     private let storeKit = StoreKitManager.default
     private var previewUrl: URL?
     private var isSubscribed: Bool = false
+    private let eventName = "successfullySubscribed"
     var closeCompletion: ((_ isSubscribed: Bool) -> Void)?
 
     // MARK: - Lifecycle
@@ -163,13 +165,22 @@ private extension SubscriptionController {
         startLoading()
         StoreKitManager.default.buy(productId: monthlyId,
                                     source: String(describing: self)) { [weak self] result in
-            self?.endLoading()
+            
+            guard let self = self else {
+                return
+            }
+            
+            self.endLoading()
             switch result {
             case .success:
-                self?.isSubscribed = true
-                self?.close(self)
+                self.isSubscribed = true
+                let values: [String: Any] = ["type": "monthly"]
+                AppsFlyerTracker.shared().trackEvent(AFEventPurchase, withValues: values)
+                AppsFlyerTracker.shared().trackEvent(self.eventName,
+                                                     withValues: values)
+                self.close(self)
             case .failure(let error):
-                self?.handleError(error)
+                self.handleError(error)
             }
         }
     }
@@ -179,13 +190,22 @@ private extension SubscriptionController {
         startLoading()
         StoreKitManager.default.buy(productId: monthlyId,
                                     source: String(describing: self)) { [weak self] result in
-            self?.endLoading()
+            
+            guard let self = self else {
+                return
+            }
+            
+            self.endLoading()
             switch result {
             case .success:
-                self?.isSubscribed = true
-                self?.close(self)
+                self.isSubscribed = true
+                let values: [String: Any] = ["type": "annually"]
+                AppsFlyerTracker.shared().trackEvent(AFEventPurchase, withValues: values)
+                AppsFlyerTracker.shared().trackEvent(self.eventName,
+                                                     withValues: values)
+                self.close(self)
             case .failure(let error):
-                self?.handleError(error)
+                self.handleError(error)
             }
         }
     }
