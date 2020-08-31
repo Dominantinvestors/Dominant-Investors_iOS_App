@@ -91,7 +91,7 @@ private extension SubscriptionController {
             annuallySubscriptionButton.isEnabled = true
         }
         discountView.isHidden = false
-        tryFreeView.isHidden = false
+        /* tryFreeView.isHidden = false */ // Temporary hidden forever
     }
     
     func handleError(_ error: Error?) {
