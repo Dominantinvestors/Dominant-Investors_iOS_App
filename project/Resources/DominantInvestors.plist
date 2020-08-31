@@ -43,6 +43,18 @@
 	<string>295880337874110</string>
 	<key>FacebookDisplayName</key>
 	<string>Dominant investors: Stocks</string>
+	<key>Fonts provided by application</key>
+	<array>
+		<string>RobotoSlab-Medium.ttf</string>
+		<string>RobotoSlab-ExtraLight.ttf</string>
+		<string>RobotoSlab-Bold.ttf</string>
+		<string>RobotoSlab-Black.ttf</string>
+		<string>Roboto-Black.ttf</string>
+		<string>Roboto-Light.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-Medium.ttf</string>
+	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -78,17 +90,5 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
-	<key>Fonts provided by application</key>
-	<array>
-		<string>RobotoSlab-Medium.ttf</string>
-		<string>RobotoSlab-ExtraLight.ttf</string>
-		<string>RobotoSlab-Bold.ttf</string>
-		<string>RobotoSlab-Black.ttf</string>
-		<string>Roboto-Black.ttf</string>
-		<string>Roboto-Light.ttf</string>
-		<string>Roboto-Bold.ttf</string>
-		<string>Roboto-Regular.ttf</string>
-		<string>Roboto-Medium.ttf</string>
-	</array>
 </dict>
 </plist>
