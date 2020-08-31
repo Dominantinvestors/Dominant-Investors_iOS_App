@@ -31,6 +31,7 @@ final class PastSignalsCell: UICollectionViewCell {
         percentFormatter.locale = locale
         percentFormatter.maximumFractionDigits = 2
         percentFormatter.positiveSuffix = "%"
+        percentFormatter.negativeSuffix = "%"
     }
 }
 

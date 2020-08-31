@@ -25,6 +25,7 @@ final class PastSignalsFooterCell: UICollectionReusableView {
         percentFormatter.locale = locale
         percentFormatter.maximumFractionDigits = 2
         percentFormatter.positiveSuffix = "%"
+        percentFormatter.negativeSuffix = "%"
     }
     
     override func layoutSubviews() {

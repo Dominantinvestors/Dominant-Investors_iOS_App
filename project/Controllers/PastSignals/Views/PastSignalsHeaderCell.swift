@@ -41,6 +41,7 @@ final class PastSignalsHeaderCell: UICollectionReusableView {
         percentFormatter.locale = locale
         percentFormatter.maximumFractionDigits = 2
         percentFormatter.positiveSuffix = "%"
+        percentFormatter.negativeSuffix = "%"
         
         periodButton.delegate = self
         periodButton.dataSource = self
