@@ -17,6 +17,7 @@ final class PastSignalsController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private var collectionView: UICollectionView!
+    @IBOutlet private var collectionViewWidthConstraint: NSLayoutConstraint!
     
     // MARK: - Properties
     var topViewHeight: CGFloat = .zero
@@ -32,6 +33,10 @@ final class PastSignalsController: UIViewController {
         collectionView.register(UINib(nibName: "PastSignalsFooterCell", bundle: .main),
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
                                 withReuseIdentifier: "PastSignalsFooterCell")
+        
+        if DeviceManager.device() == .iPhone40 {
+            collectionViewWidthConstraint.constant = view.frame.width - 10
+        }
         
         reloadData()
     }
@@ -71,7 +76,7 @@ private extension PastSignalsController {
 
 private extension PastSignalsController {
     
-    @IBAction private func close(_ sender: UIButton) {
+    @IBAction private func close(_ sender: Any) {
         dismiss(animated: true)
     }
 }
@@ -171,6 +176,6 @@ extension PastSignalsController: PastSignalsHeaderCellDelegate {
     }
     
     func didSelectSubscrube(_ header: PastSignalsHeaderCell) {
-        
+        close(self)
     }
 }

@@ -21,6 +21,10 @@ final class SubscriptionController: DMViewController {
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var discountView: UIView!
     @IBOutlet private var tryFreeView: UIView!
+    @IBOutlet private var logoImageView: UIImageView!
+    @IBOutlet private var buttonHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private var logoTopConstraint: NSLayoutConstraint!
+    @IBOutlet private var logoBottomConstraint: NSLayoutConstraint!
     
     // MARK: - Properties
     private let storeKit = StoreKitManager.default
@@ -32,12 +36,22 @@ final class SubscriptionController: DMViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         let nib = UINib(nibName: "SubscriptionCell", bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: "SubscriptionCell")
 
         checkInapps()
         setupButtons()
+        
+        // Change layout if use iPhone 5
+        if DeviceManager.device() == .iPhone40 {
+            logoImageView.removeFromSuperview()
+            buttonHeightConstraint.constant = 35.0
+            logoTopConstraint.constant = 5.0
+            logoBottomConstraint.constant = 5.0
+        } else if DeviceManager.device() == .iPhone47 {
+            logoImageView.removeFromSuperview()
+        }
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -50,6 +64,8 @@ final class SubscriptionController: DMViewController {
         super.viewDidLayoutSubviews()
         discountView.layer.cornerRadius = discountView.bounds.midY
         tryFreeView.layer.cornerRadius = tryFreeView.bounds.midY
+        monthlySubscriptionButton.layer.cornerRadius = 8.0
+        annuallySubscriptionButton.layer.cornerRadius = 8.0
     }
 }
 
