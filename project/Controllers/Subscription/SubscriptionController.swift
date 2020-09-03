@@ -17,6 +17,7 @@ final class SubscriptionController: DMViewController {
     @IBOutlet private var collectionView: UICollectionView!
     @IBOutlet private var monthlySubscriptionButton: UIButton!
     @IBOutlet private var annuallySubscriptionButton: UIButton!
+    @IBOutlet private var pastResultButton: UIButton!
     @IBOutlet private var pageControl: UIPageControl!
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var discountView: UIView!
@@ -66,6 +67,7 @@ final class SubscriptionController: DMViewController {
         tryFreeView.layer.cornerRadius = tryFreeView.bounds.midY
         monthlySubscriptionButton.layer.cornerRadius = 8.0
         annuallySubscriptionButton.layer.cornerRadius = 8.0
+        pastResultButton.layer.cornerRadius = pastResultButton.bounds.midY
     }
 }
 
@@ -108,6 +110,8 @@ private extension SubscriptionController {
             annuallySubscriptionButton.setTitle(annuallyPriceString, for: .normal)
             annuallySubscriptionButton.isEnabled = true
         }
+        pastResultButton.layer.borderWidth = 1.5
+        pastResultButton.layer.borderColor = UIColor.red.cgColor
         discountView.isHidden = false
         /* tryFreeView.isHidden = false */ // Temporary hidden forever
     }

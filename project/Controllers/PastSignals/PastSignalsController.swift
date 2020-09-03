@@ -184,7 +184,11 @@ extension PastSignalsController: PastSignalsHeaderCellDelegate {
             }
     }
     
-    func didSelectSubscrube(_ header: PastSignalsHeaderCell) {
+    func didSelectSubscribe(_ header: PastSignalsHeaderCell) {
+        close(self)
+    }
+    
+    func didSelectClose(_ header: PastSignalsHeaderCell) {
         close(self)
     }
 }
