@@ -9,6 +9,7 @@
 import UIKit
 import Inapps
 import QuickLook
+import AppsFlyerLib
 
 final class SubscriptionController: DMViewController {
     
@@ -16,25 +17,42 @@ final class SubscriptionController: DMViewController {
     @IBOutlet private var collectionView: UICollectionView!
     @IBOutlet private var monthlySubscriptionButton: UIButton!
     @IBOutlet private var annuallySubscriptionButton: UIButton!
+    @IBOutlet private var pastResultButton: UIButton!
     @IBOutlet private var pageControl: UIPageControl!
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var discountView: UIView!
+    @IBOutlet private var tryFreeView: UIView!
+    @IBOutlet private var logoImageView: UIImageView!
+    @IBOutlet private var buttonHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private var logoTopConstraint: NSLayoutConstraint!
+    @IBOutlet private var logoBottomConstraint: NSLayoutConstraint!
     
     // MARK: - Properties
     private let storeKit = StoreKitManager.default
     private var previewUrl: URL?
     private var isSubscribed: Bool = false
+    private let eventName = "successfullySubscribed"
     var closeCompletion: ((_ isSubscribed: Bool) -> Void)?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         let nib = UINib(nibName: "SubscriptionCell", bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: "SubscriptionCell")
 
         checkInapps()
         setupButtons()
+        
+        // Change layout if use iPhone 5
+        if DeviceManager.device() == .iPhone40 {
+            logoImageView.removeFromSuperview()
+            buttonHeightConstraint.constant = 35.0
+            logoTopConstraint.constant = 5.0
+            logoBottomConstraint.constant = 5.0
+        } else if DeviceManager.device() == .iPhone47 {
+            logoImageView.removeFromSuperview()
+        }
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -46,6 +64,10 @@ final class SubscriptionController: DMViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         discountView.layer.cornerRadius = discountView.bounds.midY
+        tryFreeView.layer.cornerRadius = tryFreeView.bounds.midY
+        monthlySubscriptionButton.layer.cornerRadius = 8.0
+        annuallySubscriptionButton.layer.cornerRadius = 8.0
+        pastResultButton.layer.cornerRadius = pastResultButton.bounds.midY
     }
 }
 
@@ -57,12 +79,17 @@ private extension SubscriptionController {
             storeKit.isSubscribed(productId: ProductId.annually.rawValue) == false else {
                 isSubscribed = true
                 close(self)
-                return
+            return
         }
 
-        if storeKit.products?.isEmpty == true || storeKit.products == nil {
+        if (storeKit.products?.isEmpty == true ||
+            storeKit.products == nil), storeKit.isLoadingProducts {
             startLoading()
-            storeKit.productsLoadCompletion = { [weak self] in
+            storeKit.productsLoadCompletion = { [weak self] error in
+                if let error = error {
+                    self?.handleError(error)
+                }
+                
                 self?.endLoading()
                 self?.setupButtons()
             }
@@ -83,7 +110,10 @@ private extension SubscriptionController {
             annuallySubscriptionButton.setTitle(annuallyPriceString, for: .normal)
             annuallySubscriptionButton.isEnabled = true
         }
+        pastResultButton.layer.borderWidth = 1.5
+        pastResultButton.layer.borderColor = UIColor.red.cgColor
         discountView.isHidden = false
+        /* tryFreeView.isHidden = false */ // Temporary hidden forever
     }
     
     func handleError(_ error: Error?) {
@@ -105,6 +135,7 @@ private extension SubscriptionController {
         annuallySubscriptionButton.isEnabled = false
         annuallySubscriptionButton.setTitle(nil, for: .normal)
         discountView.isHidden = true
+        tryFreeView.isHidden = true
         activityIndicator.startAnimating()
     }
     
@@ -154,13 +185,22 @@ private extension SubscriptionController {
         startLoading()
         StoreKitManager.default.buy(productId: monthlyId,
                                     source: String(describing: self)) { [weak self] result in
-            self?.endLoading()
+            
+            guard let self = self else {
+                return
+            }
+            
+            self.endLoading()
             switch result {
             case .success:
-                self?.isSubscribed = true
-                self?.close(self)
+                self.isSubscribed = true
+                let values: [String: Any] = ["type": "monthly"]
+                AppsFlyerTracker.shared().trackEvent(AFEventPurchase, withValues: values)
+                AppsFlyerTracker.shared().trackEvent(self.eventName,
+                                                     withValues: values)
+                self.close(self)
             case .failure(let error):
-                self?.handleError(error)
+                self.handleError(error)
             }
         }
     }
@@ -170,13 +210,22 @@ private extension SubscriptionController {
         startLoading()
         StoreKitManager.default.buy(productId: monthlyId,
                                     source: String(describing: self)) { [weak self] result in
-            self?.endLoading()
+            
+            guard let self = self else {
+                return
+            }
+            
+            self.endLoading()
             switch result {
             case .success:
-                self?.isSubscribed = true
-                self?.close(self)
+                self.isSubscribed = true
+                let values: [String: Any] = ["type": "annually"]
+                AppsFlyerTracker.shared().trackEvent(AFEventPurchase, withValues: values)
+                AppsFlyerTracker.shared().trackEvent(self.eventName,
+                                                     withValues: values)
+                self.close(self)
             case .failure(let error):
-                self?.handleError(error)
+                self.handleError(error)
             }
         }
     }

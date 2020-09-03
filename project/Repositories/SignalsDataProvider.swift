@@ -57,4 +57,17 @@ struct SignalsDataProvider: PromiseRepository, Syncable {
             }
         }
     }
+    
+    func getPastSignal() -> Promise<PastSignalModel> {
+        return send(request: PastSignalModel.get())
+    }
+    
+    func getPastSignal(startDate: String, endDate: String) -> Promise<PastSignalModel> {
+        return send(request: PastSignalModel.get(startDate: startDate,
+                                                 endDate: endDate))
+    }
+    
+    func getPastSignalsPeriods() -> Promise<[PastSignalsDateRangesModel]> {
+        return send(request: PastSignalsDateRangesModel.get())
+    }
 }

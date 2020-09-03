@@ -25,12 +25,12 @@ public final class StoreKitManager {
     public private(set) var subscriptions: [StoreSubscription]?
     public private(set) var productIds: [String] = []
     
-    private var isLoadingProducts = false
+    public private(set) var isLoadingProducts = false
     private var isLoadingSubscriptions = false
     private var productsSubscriptions: [String: Bool] = [:]
     private var productsCompletion: (([StoreProduct]?, Error?) -> Void)?
     private var subscriptionsCompletion: (([StoreSubscription]?, Error?) -> Void)?
-    public var productsLoadCompletion: (() -> Void)?
+    public var productsLoadCompletion: ((Error?) -> Void)?
     private var secret: String = "9df3097a9c314684919d7f2b251138fa"
     
     private init() {
@@ -45,7 +45,6 @@ public final class StoreKitManager {
         
         restoreSavedSubscriptions()
         loadProducts()
-        verifySubscriptions(forceRefresh: true)
     }
     
     public func isSubscribed(productId: String) -> Bool? {
@@ -153,7 +152,7 @@ extension StoreKitManager {
             
             self.productsCompletion?(self.products, result.error)
             self.productsCompletion = nil
-            self.productsLoadCompletion?()
+            self.productsLoadCompletion?(result.error)
             self.productsLoadCompletion = nil
             self.isLoadingProducts = false
         }
