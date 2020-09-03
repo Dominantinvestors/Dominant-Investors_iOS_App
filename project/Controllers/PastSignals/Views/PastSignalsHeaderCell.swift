@@ -10,7 +10,8 @@ import UIKit
 
 protocol PastSignalsHeaderCellDelegate: AnyObject {
     func didSelectChangePeriod(_ period: PastSignalsDateRangesModel)
-    func didSelectSubscrube(_ header: PastSignalsHeaderCell)
+    func didSelectSubscribe(_ header: PastSignalsHeaderCell)
+    func didSelectClose(_ header: PastSignalsHeaderCell)
 }
 
 final class PastSignalsHeaderCell: UICollectionReusableView {
@@ -24,7 +25,7 @@ final class PastSignalsHeaderCell: UICollectionReusableView {
     @IBOutlet private var backView: UIView!
     
     // MARK: - Properties
-    static let height: CGFloat = 350.0
+    static let height: CGFloat = 370.0
     weak var delegate: PastSignalsHeaderCellDelegate?
     private var periods = [PastSignalsDateRangesModel]()
     private var selectedPeriodIndex = 0
@@ -74,7 +75,11 @@ private extension PastSignalsHeaderCell {
     }
     
     @IBAction func subscribe(_ sender: UIButton) {
-        delegate?.didSelectSubscrube(self)
+        delegate?.didSelectSubscribe(self)
+    }
+    
+    @IBAction func close(_ sender: UIButton) {
+        delegate?.didSelectClose(self)
     }
 }
 
