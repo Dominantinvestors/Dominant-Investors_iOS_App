@@ -29,7 +29,7 @@ enum SubscriptionItem: Int, CaseIterable {
             """
         case .professional:
             return """
-            24 hours chat rooms with mentors
+            24 hours acces to chat rooms with mentors
             """
         }
     }
