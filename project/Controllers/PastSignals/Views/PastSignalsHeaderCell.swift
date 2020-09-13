@@ -25,7 +25,7 @@ final class PastSignalsHeaderCell: UICollectionReusableView {
     @IBOutlet private var backView: UIView!
     
     // MARK: - Properties
-    static let height: CGFloat = 370.0
+    static let height: CGFloat = 380.0
     weak var delegate: PastSignalsHeaderCellDelegate?
     private var periods = [PastSignalsDateRangesModel]()
     private var selectedPeriodIndex = 0
