@@ -25,6 +25,7 @@ struct AccountsDataProvider: PromiseRepository, Syncable {
                 if let json = json as? [String : AnyObject] {
                     if let token = json["key"] as? String  {
                         UserDefaults.standard.set(token, forKey: ConstantsUserDefaults.accessToken)
+                        UserDefaults.standard.set(email, forKey: ConstantsUserDefaults.userEmail)
                         ServiceLocator.shared.registerService(service: MainSessionManager.default(token:token))
                     }
                 }

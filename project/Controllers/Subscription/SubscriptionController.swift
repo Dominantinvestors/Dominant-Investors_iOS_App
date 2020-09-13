@@ -194,7 +194,10 @@ private extension SubscriptionController {
             switch result {
             case .success:
                 self.isSubscribed = true
-                let values: [String: Any] = ["type": "monthly"]
+                var values: [String: Any] = ["type": "monthly"]
+                if let email = UserDefaults.standard.string(forKey: ConstantsUserDefaults.userEmail) {
+                    values["email"] = email
+                }
                 AppsFlyerTracker.shared().trackEvent(AFEventPurchase, withValues: values)
                 AppsFlyerTracker.shared().trackEvent(self.eventName,
                                                      withValues: values)
@@ -219,7 +222,11 @@ private extension SubscriptionController {
             switch result {
             case .success:
                 self.isSubscribed = true
-                let values: [String: Any] = ["type": "annually"]
+                
+                var values: [String: Any] = ["type": "annually"]
+                if let email = UserDefaults.standard.string(forKey: ConstantsUserDefaults.userEmail) {
+                    values["email"] = email
+                }
                 AppsFlyerTracker.shared().trackEvent(AFEventPurchase, withValues: values)
                 AppsFlyerTracker.shared().trackEvent(self.eventName,
                                                      withValues: values)
