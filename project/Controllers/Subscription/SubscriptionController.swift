@@ -236,6 +236,18 @@ private extension SubscriptionController {
             }
         }
     }
+    
+    @IBAction func restorePurchases(_ sender: UIButton) {
+        StoreKitManager.default.restore { [unowned self] subscribtion, error in
+            
+            if let error = error {
+                self.handleError(error)
+                return
+            } else {
+                self.close(self)
+            }
+        }
+    }
 }
 
 // MARK: - UICollectionViewDataSource
