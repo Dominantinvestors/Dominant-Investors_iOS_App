@@ -41,6 +41,7 @@ struct Network {
 
 struct ConstantsUserDefaults{
 	static let accessToken = "AccessToken"
+    static let userEmail = "userEmail"
 }
 
 

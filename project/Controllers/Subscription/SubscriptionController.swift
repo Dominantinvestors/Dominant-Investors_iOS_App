@@ -194,7 +194,10 @@ private extension SubscriptionController {
             switch result {
             case .success:
                 self.isSubscribed = true
-                let values: [String: Any] = ["type": "monthly"]
+                var values: [String: Any] = ["type": "monthly"]
+                if let email = UserDefaults.standard.string(forKey: ConstantsUserDefaults.userEmail) {
+                    values["email"] = email
+                }
                 AppsFlyerTracker.shared().trackEvent(AFEventPurchase, withValues: values)
                 AppsFlyerTracker.shared().trackEvent(self.eventName,
                                                      withValues: values)
@@ -219,13 +222,29 @@ private extension SubscriptionController {
             switch result {
             case .success:
                 self.isSubscribed = true
-                let values: [String: Any] = ["type": "annually"]
+                
+                var values: [String: Any] = ["type": "annually"]
+                if let email = UserDefaults.standard.string(forKey: ConstantsUserDefaults.userEmail) {
+                    values["email"] = email
+                }
                 AppsFlyerTracker.shared().trackEvent(AFEventPurchase, withValues: values)
                 AppsFlyerTracker.shared().trackEvent(self.eventName,
                                                      withValues: values)
                 self.close(self)
             case .failure(let error):
                 self.handleError(error)
+            }
+        }
+    }
+    
+    @IBAction func restorePurchases(_ sender: UIButton) {
+        StoreKitManager.default.restore { [unowned self] subscribtion, error in
+            
+            if let error = error {
+                self.handleError(error)
+                return
+            } else {
+                self.close(self)
             }
         }
     }
