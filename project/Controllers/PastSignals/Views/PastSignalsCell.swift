@@ -27,9 +27,11 @@ final class PastSignalsCell: UICollectionViewCell {
         let locale = Locale(identifier: "en_US")
         numberFormatter.locale = locale
         numberFormatter.maximumFractionDigits = 1
+        numberFormatter.minimumIntegerDigits = 1
         
         percentFormatter.locale = locale
         percentFormatter.maximumFractionDigits = 2
+        percentFormatter.minimumIntegerDigits = 1
         percentFormatter.positiveSuffix = "%"
         percentFormatter.negativeSuffix = "%"
     }
