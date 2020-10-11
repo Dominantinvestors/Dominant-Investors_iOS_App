@@ -10,13 +10,13 @@ public struct StoreProduct {
     public let price: NSDecimalNumber
     public let priceLocale: Locale
     
-    public lazy var localizedPrice: String? = {
+    public var localizedPrice: String? {
         let formatter = NumberFormatter()
         formatter.locale = priceLocale
         formatter.numberStyle = .currency
         
         return formatter.string(from: price)
-    }()
+    }
     
     init(product: SKProduct) {
         id = product.productIdentifier
