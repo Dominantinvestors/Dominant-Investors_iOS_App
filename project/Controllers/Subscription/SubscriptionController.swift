@@ -44,12 +44,6 @@ final class SubscriptionController: DMViewController {
         setupButtons()
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        
-        collectionView.reloadData()
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         discountView.layer.cornerRadius = discountView.bounds.midY
@@ -57,6 +51,14 @@ final class SubscriptionController: DMViewController {
         monthlySubscriptionButton.layer.cornerRadius = 8.0
         annuallySubscriptionButton.layer.cornerRadius = 8.0
         pastResultButton.layer.cornerRadius = pastResultButton.bounds.midY
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
 }
 
@@ -111,10 +113,13 @@ private extension SubscriptionController {
             formatter.minimumFractionDigits = 0
             formatter.maximumFractionDigits = 0
         
-            let formattedValue = formatter.string(from: NSDecimalNumber(decimal: discountValue))
-            
-            discountLabel.text = formattedValue
-            discountView.isHidden = false
+            if let formattedValue = formatter.string(from: NSDecimalNumber(decimal: discountValue)) {
+                
+                discountLabel.text = "Save \(formattedValue)"
+                discountView.isHidden = false
+            } else {
+                discountView.isHidden = true
+            }
         } else {
             discountView.isHidden = true
         }
@@ -289,7 +294,7 @@ extension SubscriptionController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = collectionView.bounds.width
+        let width = collectionView.bounds.size.width
         return CGSize(width: width, height: SubscriptionCell.height)
     }
     
