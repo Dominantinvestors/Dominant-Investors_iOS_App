@@ -9,8 +9,8 @@
 import UIKit
 
 enum SubscriptionItem: Int, CaseIterable {
-    case alers
     case notifications
+    case alers
     case professional
     
     var title: String {
@@ -54,8 +54,7 @@ enum SubscriptionItem: Int, CaseIterable {
             """
         case .notifications:
             return """
-            Buy & Sell signals
-            via push notifications
+            List of the best stocks to buy now
             """
         case .professional:
             return """
