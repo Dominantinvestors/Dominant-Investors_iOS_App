@@ -5,7 +5,6 @@ import Firebase
 import UserNotifications
 import Inapps
 import AppsFlyerLib
-import Purchases
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, AppsFlyerTrackerDelegate {
@@ -32,9 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppsFlyerTrackerDelegate 
 
         let productIds = ProductId.allCases.map { $0.rawValue }
         StoreKitManager.default.configure(productIds: productIds)
-        
-        Purchases.debugLogsEnabled = false
-        Purchases.configure(withAPIKey: "9df3097a9c314684919d7f2b251138fa")
         
         AppsFlyerTracker.shared().appsFlyerDevKey = "9vgpkncYVtFfKQy7f5kJ7A"
         AppsFlyerTracker.shared().appleAppID = "1147502198"

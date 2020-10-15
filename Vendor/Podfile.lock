@@ -125,7 +125,6 @@ PODS:
   - PromiseKit/CorePromise (6.13.1)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.3)
-  - Purchases (3.4.0)
   - SwiftyStoreKit (0.15.0)
 
 DEPENDENCIES:
@@ -144,7 +143,6 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - ObjectMapper (= 3.5.1)
   - PromiseKit/CorePromise (~> 6.0)
-  - Purchases (= 3.4.0)
   - SwiftyStoreKit
 
 SPEC REPOS:
@@ -182,7 +180,6 @@ SPEC REPOS:
     - PromiseKit
     - PromisesObjC
     - Protobuf
-    - Purchases
     - SwiftyStoreKit
 
 SPEC CHECKSUMS:
@@ -219,9 +216,8 @@ SPEC CHECKSUMS:
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 0e94afe3b47cb11876eb6aee296638711a24bf75
-  Purchases: b8cac232e403ca51541a425a65992b902cecc044
   SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
 
-PODFILE CHECKSUM: 4fa0b296601df443d92e5418846c6971b23d8d4d
+PODFILE CHECKSUM: 29f56d818680c19e7c477c4707fd36ec42d74c9d
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3
