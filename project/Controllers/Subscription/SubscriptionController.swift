@@ -24,8 +24,7 @@ final class SubscriptionController: DMViewController {
     @IBOutlet private var tryFreeView: UIView!
     @IBOutlet private var logoImageView: UIImageView!
     @IBOutlet private var buttonHeightConstraint: NSLayoutConstraint!
-    @IBOutlet private var logoTopConstraint: NSLayoutConstraint!
-    @IBOutlet private var logoBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private var discountLabel: UILabel!
     
     // MARK: - Properties
     private let storeKit = StoreKitManager.default
@@ -43,22 +42,6 @@ final class SubscriptionController: DMViewController {
 
         checkInapps()
         setupButtons()
-        
-        // Change layout if use iPhone 5
-        if DeviceManager.device() == .iPhone40 {
-            logoImageView.removeFromSuperview()
-            buttonHeightConstraint.constant = 35.0
-            logoTopConstraint.constant = 5.0
-            logoBottomConstraint.constant = 5.0
-        } else if DeviceManager.device() == .iPhone47 {
-            logoImageView.removeFromSuperview()
-        }
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        
-        collectionView.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -68,6 +51,14 @@ final class SubscriptionController: DMViewController {
         monthlySubscriptionButton.layer.cornerRadius = 8.0
         annuallySubscriptionButton.layer.cornerRadius = 8.0
         pastResultButton.layer.cornerRadius = pastResultButton.bounds.midY
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
 }
 
@@ -97,22 +88,44 @@ private extension SubscriptionController {
     }
     
     func setupButtons() {
-        var monthlyProduct = storeKit.products?.first { $0.id == ProductId.monthly.rawValue }
+        let monthlyProduct = storeKit.products?.first { $0.id == ProductId.monthly.rawValue }
         if let monthlyPrice = monthlyProduct?.localizedPrice {
             let monthlyPriceString = ("\(monthlyPrice)/Month")
             monthlySubscriptionButton.setTitle(monthlyPriceString, for: .normal)
             monthlySubscriptionButton.isEnabled = true
         }
         
-        var annuallyProduct = storeKit.products?.first { $0.id == ProductId.annually.rawValue }
-        if let annuallyPrice = annuallyProduct?.localizedPrice {
+        if let annuallyProduct = storeKit.products?
+            .first(where: { $0.id == ProductId.annually.rawValue }),
+           let annuallyPrice = annuallyProduct.localizedPrice {
             let annuallyPriceString = ("\(annuallyPrice)/Year")
             annuallySubscriptionButton.setTitle(annuallyPriceString, for: .normal)
             annuallySubscriptionButton.isEnabled = true
+            
+            let monthlyPrice = monthlyProduct?.price ?? 0
+            let discountValue = (monthlyPrice as Decimal * 12) - (annuallyProduct.price as Decimal)
+            
+            let formatter = NumberFormatter()
+            formatter.locale = annuallyProduct.priceLocale
+            formatter.numberStyle = .currency
+            formatter.roundingMode = .halfUp
+            formatter.generatesDecimalNumbers = false
+            formatter.minimumFractionDigits = 0
+            formatter.maximumFractionDigits = 0
+        
+            if let formattedValue = formatter.string(from: NSDecimalNumber(decimal: discountValue)) {
+                
+                discountLabel.text = "Save \(formattedValue)"
+                discountView.isHidden = false
+            } else {
+                discountView.isHidden = true
+            }
+        } else {
+            discountView.isHidden = true
         }
         pastResultButton.layer.borderWidth = 1.5
         pastResultButton.layer.borderColor = UIColor.red.cgColor
-        discountView.isHidden = false
+        
         /* tryFreeView.isHidden = false */ // Temporary hidden forever
     }
     
@@ -281,7 +294,7 @@ extension SubscriptionController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = collectionView.bounds.width
+        let width = collectionView.bounds.size.width
         return CGSize(width: width, height: SubscriptionCell.height)
     }
     
