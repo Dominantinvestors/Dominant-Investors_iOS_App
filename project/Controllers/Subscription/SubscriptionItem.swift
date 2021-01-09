@@ -9,37 +9,38 @@
 import UIKit
 
 enum SubscriptionItem: Int, CaseIterable {
-    case notifications
-    case alers
     case professional
+    case alers
+    case notifications
     
     var title: String {
         switch self {
+        case .professional:
+            return """
+            Take the quality of your investment portfolio
+            management to the next level
+            """
         case .alers:
             return """
-            Use high-precision trading signals
-            that tell you when to buy when to sell
-            and when to take profits
+            Increase the performance of your
+            investment portfolio several times using
+            Copy Trading technology
             """
         case .notifications:
             return """
-            Our algorithm analyzes more than 7500
-            companies and can recognize breakout
-            stocks with huge growth potential
-            """
-        case .professional:
-            return """
-            24 hours acces to chat rooms with mentors
+            Get exact trading recommendations
+            when to buy, when to sell and
+            when to take profits
             """
         }
     }
     
     var image: UIImage? {
         switch self {
-        case .alers:
-            return UIImage(named: "Subscription/alerts")
         case .notifications:
             return UIImage(named: "Subscription/notification")
+        case .alers:
+            return UIImage(named: "Subscription/alerts")
         case .professional:
             return UIImage(named: "Subscription/profi")
         }
@@ -47,19 +48,17 @@ enum SubscriptionItem: Int, CaseIterable {
     
     var description: String {
         switch self {
+        case .professional:
+            return """
+            Invest like a pro
+            """
         case .alers:
             return """
-            Alerts on when to increase positions
-            take profits or cut losses
+            Follow the trading signals of top investors
             """
         case .notifications:
             return """
-            List of the best stocks to buy now
-            """
-        case .professional:
-            return """
-            Professional traders guiding you
-            during bear and bull markets
+            Receive useful notifications
             """
         }
     }
