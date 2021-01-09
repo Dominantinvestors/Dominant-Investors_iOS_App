@@ -111,8 +111,14 @@ class DMSignUpViewController: DMViewController, UITextFieldDelegate {
         handleSignUp()
     }
     
-    @IBAction func backToLoginButtonPressed(sender : UIButton) {        
+    @IBAction func backToLoginButtonPressed(_ sender : UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func loginPressed(sender : UIButton) {
+        let signUp = UIStoryboard(name: "Authorization", bundle: nil).instantiateViewController(withIdentifier: "DMLoginViewController")
+        signUp.modalPresentationStyle = .overCurrentContext
+        self.navigationController?.pushViewController(signUp, animated: true)
     }
     
     // MARK: UITextFieldDelegate

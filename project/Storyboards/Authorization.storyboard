@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uIT-ph-p3Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uIT-ph-p3Q">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -21,7 +21,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="fsA-MV-cSR">
             <objects>
-                <viewController storyboardIdentifier="DMSignUpViewController" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RCZ-dQ-T9G" customClass="DMSignUpViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DMSignUpViewController" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RCZ-dQ-T9G" customClass="DMSignUpViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iLl-xs-6ND"/>
                         <viewControllerLayoutGuide type="bottom" id="smd-mV-W7X"/>
@@ -40,7 +40,7 @@
                                         <rect key="frame" x="0.0" y="8" width="315" height="6"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddF-Xy-SJi">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddF-Xy-SJi">
                                         <rect key="frame" x="47.000000000000014" y="488.66666666666669" width="220.66666666666669" height="40.000000000000057"/>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.1450980392" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -62,14 +62,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXj-iG-99h">
                                         <rect key="frame" x="0.0" y="536.66666666666663" width="315" height="60.666666666666629"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNu-LR-h6s">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNu-LR-h6s">
                                                 <rect key="frame" x="47.000000000000014" y="8" width="220.66666666666669" height="44.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="MuseoCyrl-100" family="Museo Cyrl" pointSize="11"/>
                                                 <state key="normal" title="ALREADY HAVE AN ACCOUNT">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="backToLoginButtonPressedWithSender:" destination="RCZ-dQ-T9G" eventType="touchUpInside" id="xZ6-aN-xDk"/>
+                                                    <action selector="loginPressedWithSender:" destination="RCZ-dQ-T9G" eventType="touchUpInside" id="eD2-GG-LhB"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -295,6 +295,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="brh-Pq-BnX"/>
                     <connections>
                         <outlet property="alreadyHaveAccount" destination="tNu-LR-h6s" id="6Rk-El-idx"/>
                         <outlet property="confirmPassword" destination="aXS-GJ-7SQ" id="cyK-MQ-OUq"/>
@@ -308,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcU-z0-eMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1214" y="-50"/>
+            <point key="canvasLocation" x="441" y="-50"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="loR-ZS-cHB">
@@ -326,9 +327,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6G-SZ-i1R" customClass="FXBlurView">
-                                <rect key="frame" x="49.666666666666657" y="197" width="315" height="350"/>
+                                <rect key="frame" x="49.666666666666657" y="177" width="315" height="390"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54h-Qt-L57">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54h-Qt-L57">
                                         <rect key="frame" x="47.000000000000014" y="268" width="220.66666666666669" height="40"/>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.1450980392" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -347,7 +348,7 @@
                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpI-dy-BZ3" customClass="TextBackground" customModule="DominantCrypto" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpI-dy-BZ3" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
                                         <rect key="frame" x="47.000000000000014" y="156" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="etB-0a-uLH">
@@ -365,7 +366,7 @@
                                             <constraint firstAttribute="trailing" secondItem="etB-0a-uLH" secondAttribute="trailing" constant="8" id="KUp-fd-Ag1"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhw-xt-ZhX" customClass="TextBackground" customModule="DominantCrypto" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhw-xt-ZhX" customClass="TextBackground" customModule="DominantInvestors" customModuleProvider="target">
                                         <rect key="frame" x="47.000000000000014" y="88" width="220.66666666666669" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Emo-io-ONH">
@@ -385,19 +386,19 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dgm-Gh-RXd">
-                                        <rect key="frame" x="109.33333333333334" y="316" width="96" height="26"/>
+                                        <rect key="frame" x="109.33333333333334" y="316" width="96" height="66"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erc-KX-zIx">
-                                                <rect key="frame" x="0.0" y="0.0" width="96" height="26"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erc-KX-zIx">
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="25"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
                                                 <state key="normal" title="CREATE ACCOUNT">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="signUpButtonPressedWithSender:" destination="WYA-Wt-9PR" eventType="touchUpInside" id="WvU-Q1-waR"/>
+                                                    <action selector="backToSignUpButtonPressedWithSender:" destination="WYA-Wt-9PR" eventType="touchUpInside" id="UTI-Oa-vDo"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M6-7z-4JQ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M6-7z-4JQ">
                                                 <rect key="frame" x="-8.3333333333333428" y="31" width="113" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="1Vb-NA-euw"/>
@@ -466,11 +467,11 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSE-eI-C3N">
-                                <rect key="frame" x="40" y="0.0" width="334" height="189"/>
+                                <rect key="frame" x="40" y="0.0" width="334" height="169"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucc-LJ-bfn">
-                                <rect key="frame" x="28" y="547" width="346" height="189"/>
+                                <rect key="frame" x="28" y="567" width="346" height="169"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -538,9 +539,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOx-Tk-1nM" customClass="FXBlurView">
-                                <rect key="frame" x="49.666666666666657" y="217" width="315" height="330"/>
+                                <rect key="frame" x="49.666666666666657" y="207" width="315" height="330"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-iN-rxk">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-iN-rxk">
                                         <rect key="frame" x="47.000000000000014" y="268" width="220.66666666666669" height="40"/>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.1450980392" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -639,7 +640,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7W-MG-gKn">
-                                <rect key="frame" x="40" y="20" width="334" height="189"/>
+                                <rect key="frame" x="40" y="0.0" width="334" height="199"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53Z-ZL-Yys">
                                         <rect key="frame" x="0.0" y="20" width="40" height="40"/>
@@ -661,7 +662,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qB-sM-mFl">
-                                <rect key="frame" x="28" y="547" width="346" height="189"/>
+                                <rect key="frame" x="28" y="537" width="346" height="199"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -720,17 +721,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="WYA-Wt-9PR" kind="relationship" relationship="rootViewController" id="eqv-9U-75I"/>
+                        <segue destination="RCZ-dQ-T9G" kind="relationship" relationship="rootViewController" id="EHY-UL-rGf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1IT-hS-ITJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-935" y="-49"/>
+            <point key="canvasLocation" x="441" y="-742"/>
         </scene>
         <!--Terms And Conditions View Controller-->
         <scene sceneID="tY9-MI-db5">
             <objects>
-                <viewController restorationIdentifier="TermsAndConditions" storyboardIdentifier="TermsAndConditions" modalPresentationStyle="overCurrentContext" id="bXi-71-9Lu" customClass="TermsAndConditionsViewController" customModule="DominantCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="TermsAndConditions" storyboardIdentifier="TermsAndConditions" modalPresentationStyle="overCurrentContext" id="bXi-71-9Lu" customClass="TermsAndConditionsViewController" customModule="DominantInvestors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Hp-3t-ja7"/>
                         <viewControllerLayoutGuide type="bottom" id="HiN-gp-7el"/>
@@ -782,7 +783,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-6h-dW1">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-6h-dW1">
                                         <rect key="frame" x="68" y="800.66666666666663" width="278" height="47"/>
                                         <fontDescription key="fontDescription" name="MuseoCyrl-500" family="Museo Cyrl" pointSize="17"/>
                                         <state key="normal" title="I AGREE" backgroundImage="addToWatchList">
@@ -839,7 +840,7 @@ But companies with new unique products or services that develop revenues by 30%,
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzX-HK-8SB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="453.62318840579712" y="-50.54347826086957"/>
+            <point key="canvasLocation" x="1157" y="-51"/>
         </scene>
         <!--Analitycal Info View Controller-->
         <scene sceneID="HJk-5U-wGw">
@@ -860,10 +861,10 @@ But companies with new unique products or services that develop revenues by 30%,
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ViewSignals" translatesAutoresizingMaskIntoConstraints="NO" id="ZHV-cF-uoK">
-                                        <rect key="frame" x="0.0" y="-50" width="543" height="1500"/>
+                                        <rect key="frame" x="0.0" y="-50" width="496.66666666666669" height="1363.3333333333333"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxF-4Y-RPp">
-                                        <rect key="frame" x="68" y="1333" width="278" height="47"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxF-4Y-RPp">
+                                        <rect key="frame" x="68" y="1196.3333333333333" width="278" height="47"/>
                                         <fontDescription key="fontDescription" name="MuseoCyrl-300" family="Museo Cyrl" pointSize="19"/>
                                         <state key="normal" title="GOT IT" backgroundImage="addToWatchList">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -914,16 +915,16 @@ But companies with new unique products or services that develop revenues by 30%,
                         <viewControllerLayoutGuide type="bottom" id="wjw-tZ-f9i"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mCG-z4-HEQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="6hP-GH-sHw">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFO-Uh-0Ce" customClass="FXBlurView">
-                                <rect key="frame" x="49.666666666666657" y="247.66666666666663" width="315" height="269"/>
+                                <rect key="frame" x="49.666666666666657" y="227.66666666666663" width="315" height="269"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46e-rZ-ego">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46e-rZ-ego">
                                         <rect key="frame" x="47.000000000000014" y="199.00000000000003" width="220.66666666666669" height="40"/>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.1450980392" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -994,7 +995,7 @@ But companies with new unique products or services that develop revenues by 30%,
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPK-VK-kBZ">
-                                <rect key="frame" x="40" y="19.999999999999986" width="334" height="219.66666666666663"/>
+                                <rect key="frame" x="40" y="0.0" width="334" height="219.66666666666666"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4l-2r-vt8">
                                         <rect key="frame" x="0.0" y="20" width="40" height="40"/>
@@ -1015,7 +1016,7 @@ But companies with new unique products or services that develop revenues by 30%,
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVo-fn-GGo">
-                                <rect key="frame" x="28" y="516.66666666666663" width="346" height="219.33333333333337"/>
+                                <rect key="frame" x="28" y="496.66666666666669" width="346" height="219.33333333333331"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -1071,7 +1072,8 @@ But companies with new unique products or services that develop revenues by 30%,
         <image name="DominantLoginBg" width="241.5" height="20"/>
         <image name="Logo" width="108" height="121.33333587646484"/>
         <image name="SignalsBackground" width="6516" height="8192"/>
-        <image name="ViewSignals" width="543" height="1500"/>
+        <image name="ViewSignals" width="496.66665649414062" height="1363.3333740234375"/>
         <image name="addToWatchList" width="278" height="47"/>
+        <image name="backArrow" width="96" height="96"/>
     </resources>
 </document>
