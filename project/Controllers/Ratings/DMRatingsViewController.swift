@@ -95,8 +95,13 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DMRatingTableViewCell") as! DMRatingTableViewCell
-        cell.setupWith(model: ratings![indexPath.row])
+        guard let model = ratings?[indexPath.row],
+              let cell = tableView.dequeueReusableCell(withIdentifier: "DMRatingTableViewCell") as? DMRatingTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let isProHidden = indexPath.row > 10
+        cell.setupWith(model: model, isProHidden: isProHidden)
         return cell
     }
     
