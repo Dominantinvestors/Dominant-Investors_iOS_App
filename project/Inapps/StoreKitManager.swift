@@ -13,6 +13,8 @@ import StoreKit
 public enum ProductId: String, CaseIterable {
     case monthly = "signal_subscription_monthly_renewable"
     case annually = "signal_subscription_annually_renewable"
+    case followProMonthly = "follow_subscription_monthly_renewable"
+    case followProAnnually = "follow_subscription_annually_renewable"
 }
 
 // StoreKitManager assumes that we have only auto renewable subscriptions in our productIds
@@ -45,6 +47,7 @@ public final class StoreKitManager {
         
         restoreSavedSubscriptions()
         loadProducts()
+        verifySubscriptions(forceRefresh: false)
     }
     
     public func isSubscribed(productId: String) -> Bool? {
@@ -84,6 +87,7 @@ public final class StoreKitManager {
                 if purchase.needsFinishTransaction {
                     SwiftyStoreKit.finishTransaction(purchase.transaction)
                 }
+                self.productsSubscriptions[productId] = true
                 self.saveSubscriptionsToDisk()
                 self.verifySubscriptions(forceRefresh: false)
                 
@@ -186,6 +190,10 @@ extension StoreKitManager {
             return .production
             #endif
         }()
+        
+        guard productsSubscriptions.contains(where: { $0.value == true }) else {
+            return
+        }
         
         let appleValidator = AppleReceiptValidator(service: service, sharedSecret: secret)
         SwiftyStoreKit.verifyReceipt(using: appleValidator, forceRefresh: forceRefresh) { [unowned self] result in

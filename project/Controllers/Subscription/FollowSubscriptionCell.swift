@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SubscriptionCell: UICollectionViewCell {
+final class FollowSubscriptionCell: UICollectionViewCell {
     
     // MARK: - IBOutlets
     @IBOutlet private var titleLabel: UILabel!
@@ -22,12 +22,6 @@ final class SubscriptionCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-    
-    func configure(with item: SubscriptionItem) {
-        titleLabel.text = item.title
-        imageView.image = item.image
-        descriptionLabel.text = item.description
     }
     
     func configure(with item: FollowSubscriptionItem) {

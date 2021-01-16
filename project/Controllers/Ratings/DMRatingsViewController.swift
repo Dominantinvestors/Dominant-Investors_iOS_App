@@ -1,4 +1,5 @@
 import UIKit
+import Inapps
 
 class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -7,6 +8,14 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
     var ratings: [InvestorModel]?
     var refreshControl : UIRefreshControl!
     var titleLabel = UILabel()
+    private let numberOfPro = 15
+    var isSubscribed: Bool {
+        let isMontlySubscribed = StoreKitManager.default
+            .isSubscribed(productId: ProductId.followProMonthly.rawValue) ?? false
+        let isAnnuallySubscribed = StoreKitManager.default
+            .isSubscribed(productId: ProductId.followProAnnually.rawValue) ?? false
+        return isMontlySubscribed || isAnnuallySubscribed
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +29,10 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
             titleLabel.text = "TOP 100"
             titleLabel.textAlignment = .center
             navigationBar.addSubview(titleLabel)
+        }
+        
+        renewRating() { [weak self] in
+            self?.checkSubscription()
         }
     }
     
@@ -54,7 +67,7 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
         renewRating(false)
     }
     
-    open func renewRating(_ showActivity: Bool = true) {
+    open func renewRating(_ showActivity: Bool = true, completion: (() -> Void)? = nil) {
         if showActivity {
             showActivityIndicator()
         }
@@ -65,19 +78,127 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
                 self.ratings = respounse.items.sorted(by: {$0.index < $1.index})
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
+                completion?()
             }.ensure {
                 self.dismissActivityIndicator()
             }.catch {
                 self.showAlertWith($0)
+                completion?()
+        }
+    }
+    
+    private func checkSubscription() {
+        
+        let storeSubscriptions = StoreKitManager.default.subscriptions
+        guard let subscriptions = storeSubscriptions else {
+            return
+        }
+        
+        if subscriptions.isEmpty {
+            self.unfollowToProUsers()
+        } else {
+            for subscription in subscriptions where
+                subscription.id == ProductId.followProMonthly.rawValue ||
+                subscription.id == ProductId.followProAnnually.rawValue {
+                
+                if subscription.status == .expired {
+                    self.unfollowToProUsers()
+                }
+            }
+        }
+    }
+    
+    private func follow(_ investor: InvestorModel, completion: @escaping () -> Void) {
+        showActivityIndicator()
+        InvestorsDataProvider.default().follow(investor) { success, error in
+            self.dismissActivityIndicator()
+            if success {
+                completion()
+            } else {
+                self.showAlertWith(message: error)
+            }
+        }
+    }
+    
+    private func unfollow(_ investor: InvestorModel, completion: @escaping () -> Void) {
+        showActivityIndicator()
+        InvestorsDataProvider.default().unfollow(investor) { success, error in
+            self.dismissActivityIndicator()
+            if success {
+                completion()
+            } else {
+                self.showAlertWith(message: error)
+            }
+        }
+    }
+    
+    private func followToProUsers(completion: @escaping () -> Void) {
+        guard let proInvestors = ratings?.prefix(numberOfPro) else {
+            return
+        }
+        
+        var numberOfFollows = 0
+        for investor in proInvestors {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+                
+                self?.follow(investor) {
+                    numberOfFollows += 1
+                    
+                    if numberOfFollows == proInvestors.count {
+                        self?.renewRating(completion: completion)
+                    }
+                }
+            }
+        }
+    }
+    
+    private func unfollowToProUsers(completion: (() -> Void)? = nil) {
+        guard let proInvestors = ratings?.prefix(numberOfPro) else {
+            return
+        }
+        
+        var numberOfFollows = 0
+        for investor in proInvestors {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+                
+                self?.unfollow(investor) {
+                    numberOfFollows += 1
+                    
+                    if numberOfFollows == proInvestors.count {
+                        self?.renewRating(completion: completion)
+                    }
+                }
+            }
         }
     }
     
     // MARK: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let companyDetail: RatingsDetailsViewController = storyboard![.RatingsDetails]
-        self.navigationController?.pushViewController(companyDetail, animated: true)
-        companyDetail.investor = ratings![indexPath.row]
+        
+        if indexPath.row >= numberOfPro || isSubscribed {
+            self.navigationController?.pushViewController(companyDetail, animated: true)
+            companyDetail.investor = ratings![indexPath.row]
+        } else {
+            
+            guard let controller = UIStoryboard(name: "FollowSubscription", bundle: nil).instantiateInitialViewController() as? FollowSubscriptionController else {
+                fatalError("Can't init SubscriptionController")
+            }
+
+            controller.modalPresentationStyle = .overFullScreen
+            self.present(controller, animated: true)
+            controller.closeCompletion = { [weak self] isSubscribed in
+                
+                self?.followToProUsers {
+                    if isSubscribed {
+                        self?.navigationController?.pushViewController(companyDetail, animated: true)
+                        companyDetail.investor = self?.ratings?[indexPath.row]
+                    }
+                }
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -100,7 +221,7 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
             return UITableViewCell()
         }
         
-        let isProHidden = indexPath.row >= 15
+        let isProHidden = indexPath.row >= numberOfPro
         cell.setupWith(model: model, isProHidden: isProHidden)
         return cell
     }

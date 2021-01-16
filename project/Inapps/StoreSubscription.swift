@@ -8,8 +8,8 @@ public enum StoreSubscriptionStatus {
 }
 
 public struct StoreSubscription {
-    let id: String
-    let status: StoreSubscriptionStatus
+    public let id: String
+    public let status: StoreSubscriptionStatus
     let receipts: [ReceiptItem]?
     let expirationDate: Date?
     

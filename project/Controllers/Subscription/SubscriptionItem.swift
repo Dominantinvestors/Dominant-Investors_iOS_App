@@ -64,3 +64,33 @@ enum SubscriptionItem: Int, CaseIterable {
         }
     }
 }
+
+enum FollowSubscriptionItem: Int, CaseIterable {
+    case invest
+
+    var title: String {
+        switch self {
+        case .invest:
+            return """
+            Invest like a Pro
+            """
+        }
+    }
+    
+    var image: UIImage? {
+        switch self {
+        case .invest:
+            return UIImage(named: "Subscription/follow")
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .invest:
+            return """
+            Receive trading signals from the 15 most
+            profitable investors in the rating
+            """
+        }
+    }
+}

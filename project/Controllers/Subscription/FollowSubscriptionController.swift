@@ -1,25 +1,24 @@
 //
-//  SubscriptionController.swift
-//  Inapps
+//  FollowSubscriptionController.swift
+//  DominantInvestors
 //
-//  Created by Andrew Konovalskiy on 18.06.2020.
-//  Copyright © 2020 DS. All rights reserved.
+//  Created by Andrew Konovalskiy on 16.01.2021.
+//  Copyright © 2021 DS. All rights reserved.
 //
 
 import UIKit
-import Inapps
 import QuickLook
+import Inapps
 import AppsFlyerLib
 import StoreKit
 
-final class SubscriptionController: DMViewController {
-    
+final class FollowSubscriptionController: UIViewController {
+
     // MARK: - IBOutlets
     @IBOutlet private var collectionView: UICollectionView!
     @IBOutlet private var monthlySubscriptionButton: UIButton!
     @IBOutlet private var annuallySubscriptionButton: UIButton!
     @IBOutlet private var pastResultButton: UIButton!
-    @IBOutlet private var pageControl: UIPageControl!
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var discountView: UIView!
     @IBOutlet private var tryFreeView: UIView!
@@ -38,8 +37,8 @@ final class SubscriptionController: DMViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        let nib = UINib(nibName: "SubscriptionCell", bundle: .main)
-        collectionView.register(nib, forCellWithReuseIdentifier: "SubscriptionCell")
+        let nib = UINib(nibName: "FollowSubscriptionCell", bundle: .main)
+        collectionView.register(nib, forCellWithReuseIdentifier: "FollowSubscriptionCell")
 
         checkInapps()
         setupButtons()
@@ -64,11 +63,11 @@ final class SubscriptionController: DMViewController {
 }
 
 // MARK: - Private methods
-private extension SubscriptionController {
+private extension FollowSubscriptionController {
     
     func checkInapps() {
-        guard storeKit.isSubscribed(productId: ProductId.monthly.rawValue) == false ||
-            storeKit.isSubscribed(productId: ProductId.annually.rawValue) == false else {
+        guard storeKit.isSubscribed(productId: ProductId.followProMonthly.rawValue) == false ||
+            storeKit.isSubscribed(productId: ProductId.followProAnnually.rawValue) == false else {
                 isSubscribed = true
                 close(self)
             return
@@ -89,7 +88,7 @@ private extension SubscriptionController {
     }
     
     func setupButtons() {
-        let monthlyProduct = storeKit.products?.first { $0.id == ProductId.monthly.rawValue }
+        let monthlyProduct = storeKit.products?.first { $0.id == ProductId.followProMonthly.rawValue }
         if let monthlyPrice = monthlyProduct?.localizedPrice {
             let monthlyPriceString = ("\(monthlyPrice)/Month")
             monthlySubscriptionButton.setTitle(monthlyPriceString, for: .normal)
@@ -97,7 +96,7 @@ private extension SubscriptionController {
         }
         
         if let annuallyProduct = storeKit.products?
-            .first(where: { $0.id == ProductId.annually.rawValue }),
+            .first(where: { $0.id == ProductId.followProAnnually.rawValue }),
            let annuallyPrice = annuallyProduct.localizedPrice {
             let annuallyPriceString = ("\(annuallyPrice)/Year")
             annuallySubscriptionButton.setTitle(annuallyPriceString, for: .normal)
@@ -160,7 +159,7 @@ private extension SubscriptionController {
 }
 
 // MARK: - Actions
-private extension SubscriptionController {
+private extension FollowSubscriptionController {
     
     @IBAction func close(_ sender: Any) {
         closeCompletion?(isSubscribed)
@@ -195,7 +194,7 @@ private extension SubscriptionController {
     }
     
     @IBAction func subscribeMonthly(_ sender: UIButton) {
-        let monthlyId = ProductId.monthly.rawValue
+        let monthlyId = ProductId.followProMonthly.rawValue
         startLoading()
         StoreKitManager.default.buy(productId: monthlyId,
                                     source: String(describing: self)) { [weak self] result in
@@ -217,13 +216,17 @@ private extension SubscriptionController {
                                                      withValues: values)
                 self.close(self)
             case .failure(let error):
+                if let error = error as? SKError,
+                   error.code == .paymentCancelled {
+                    return
+                }
                 self.handleError(error)
             }
         }
     }
     
     @IBAction func subscribeAnnually(_ sender: UIButton) {
-        let monthlyId = ProductId.annually.rawValue
+        let monthlyId = ProductId.followProAnnually.rawValue
         startLoading()
         StoreKitManager.default.buy(productId: monthlyId,
                                     source: String(describing: self)) { [weak self] result in
@@ -246,10 +249,6 @@ private extension SubscriptionController {
                                                      withValues: values)
                 self.close(self)
             case .failure(let error):
-                if let error = error as? SKError,
-                   error.code == .paymentCancelled {
-                    return
-                }
                 self.handleError(error)
             }
         }
@@ -269,33 +268,33 @@ private extension SubscriptionController {
 }
 
 // MARK: - UICollectionViewDataSource
-extension SubscriptionController: UICollectionViewDataSource {
+extension FollowSubscriptionController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return SubscriptionItem.allCases.count
+        return FollowSubscriptionItem.allCases.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "SubscriptionCell",
-            for: indexPath) as? SubscriptionCell else {
+            withReuseIdentifier: "FollowSubscriptionCell",
+            for: indexPath) as? FollowSubscriptionCell else {
                 fatalError("Can't init SubscriptionCell")
         }
         
-        let item = SubscriptionItem.allCases[indexPath.row]
+        let item = FollowSubscriptionItem.allCases[indexPath.row]
         cell.configure(with: item)
         return cell
     }
 }
 
 // MARK: - UICollectionViewDelegate
-extension SubscriptionController: UICollectionViewDelegate {
+extension FollowSubscriptionController: UICollectionViewDelegate {
     
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
-extension SubscriptionController: UICollectionViewDelegateFlowLayout {
+extension FollowSubscriptionController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -308,16 +307,8 @@ extension SubscriptionController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-// MARK: - UIScrollViewDelegate
-extension SubscriptionController: UIScrollViewDelegate {
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
-    }
-}
-
 // MARK: - QLPreviewControllerDataSource
-extension SubscriptionController: QLPreviewControllerDataSource {
+extension FollowSubscriptionController: QLPreviewControllerDataSource {
     
     func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
         return 1
