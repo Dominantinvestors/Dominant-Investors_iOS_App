@@ -68,11 +68,11 @@ final class MainTabBar: TabBarController {
         
         controller.modalPresentationStyle = .overFullScreen
         self.present(controller, animated: true, completion: nil)
-        controller.closeCompletion = { [tabBarController] isSubscribed in
+        controller.closeCompletion = { [weak self] isSubscribed in
             if !isSubscribed {
-                tabBarController?.selectedIndex = 2 // 2 - Portfolio Tab
+                self?.selectedIndex = 2 // 2 - Portfolio Tab
             } else {
-                tabBarController?.selectedIndex = 0 // 0 - Purchase Tab
+                self?.selectedIndex = 0 // 0 - Purchase Tab
             }
         }
     }
