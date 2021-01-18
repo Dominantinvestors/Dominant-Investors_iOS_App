@@ -71,6 +71,10 @@ final class MainTabBar: TabBarController {
         controller.closeCompletion = { [weak self] isSubscribed in
             if !isSubscribed {
                 self?.selectedIndex = 2 // 2 - Portfolio Tab
+                if let viewControllers = self?.viewControllers?.compactMap({ $0 as? MainNavigationController }),
+                   let controller = viewControllers.compactMap({ $0.viewControllers.first as? PersonalViewController }).first {
+                    controller.segmentControll.onRight()
+                }
             } else {
                 self?.selectedIndex = 0 // 0 - Purchase Tab
             }
