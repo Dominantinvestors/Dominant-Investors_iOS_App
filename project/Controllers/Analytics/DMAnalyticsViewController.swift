@@ -110,6 +110,14 @@ class DMAnalyticsViewController: DMViewController, UICollectionViewDelegate, UIC
             controller.closeCompletion = { [tabBarController] isSubscribed in
                 if !isSubscribed {
                     tabBarController?.selectedIndex = 2 // 2 - Portfolio Tab
+                    
+                    // Need some delay before screen will be loaded
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        if let viewControllers = tabBarController?.viewControllers?.compactMap({ $0 as? MainNavigationController }),
+                           let controller = viewControllers.compactMap({ $0.viewControllers.first as? PersonalViewController }).first {
+                            controller.segmentControll.onRight()
+                        }
+                    }
                 }
             }
         }
