@@ -12,6 +12,7 @@ enum SubscriptionItem: Int, CaseIterable {
     case notifications
     case alers
     case professional
+    case invest
     
     var title: String {
         switch self {
@@ -31,6 +32,10 @@ enum SubscriptionItem: Int, CaseIterable {
             return """
             24 hours acces to chat rooms with mentors
             """
+        case .invest:
+            return """
+            Browse investment portfolios of top investors
+            """
         }
     }
     
@@ -42,6 +47,8 @@ enum SubscriptionItem: Int, CaseIterable {
             return UIImage(named: "Subscription/notification")
         case .professional:
             return UIImage(named: "Subscription/profi")
+        case .invest:
+            return UIImage(named: "Subscription/follow")
         }
     }
     
@@ -60,6 +67,11 @@ enum SubscriptionItem: Int, CaseIterable {
             return """
             Professional traders guiding you
             during bear and bull markets
+            """
+        case .invest:
+            return """
+            Track what Buy or Sell 15 most
+            profitable investors in the rating
             """
         }
     }

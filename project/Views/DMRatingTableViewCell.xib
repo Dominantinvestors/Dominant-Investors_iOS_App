@@ -53,29 +53,20 @@
                             <constraint firstAttribute="height" constant="55" id="RTn-3W-uyK"/>
                         </constraints>
                     </imageView>
-                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="proSign" translatesAutoresizingMaskIntoConstraints="NO" id="6ro-oS-Jkb">
-                        <rect key="frame" x="244" y="23.5" width="36" height="28"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="36" id="VC8-78-LiH"/>
-                            <constraint firstAttribute="width" secondItem="6ro-oS-Jkb" secondAttribute="height" multiplier="9:7" id="Y7j-pv-SFm"/>
-                        </constraints>
-                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="sce-ot-0Jy" firstAttribute="centerY" secondItem="iWQ-bc-mz8" secondAttribute="centerY" id="71W-WI-2BY"/>
                     <constraint firstItem="JBo-Cv-GFb" firstAttribute="top" secondItem="iWQ-bc-mz8" secondAttribute="topMargin" constant="4" id="AiD-y5-m9S"/>
+                    <constraint firstItem="m9D-jp-HsY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2b9-31-88I" secondAttribute="trailing" constant="12" id="DEp-Qd-wQO"/>
                     <constraint firstAttribute="trailingMargin" secondItem="JBo-Cv-GFb" secondAttribute="trailing" constant="8" id="ELT-s8-Cfd"/>
-                    <constraint firstItem="6ro-oS-Jkb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2b9-31-88I" secondAttribute="trailing" constant="5" id="Igt-hY-6nk"/>
                     <constraint firstAttribute="bottomMargin" secondItem="WfG-xH-FJx" secondAttribute="bottom" constant="4" id="Nrp-b3-q3T"/>
                     <constraint firstItem="JBo-Cv-GFb" firstAttribute="bottom" secondItem="m9D-jp-HsY" secondAttribute="bottom" constant="-5" id="O1l-1O-g0Q"/>
-                    <constraint firstItem="6ro-oS-Jkb" firstAttribute="centerY" secondItem="iWQ-bc-mz8" secondAttribute="centerY" id="SAa-c7-LDf"/>
                     <constraint firstItem="sce-ot-0Jy" firstAttribute="leading" secondItem="WfG-xH-FJx" secondAttribute="trailing" constant="8" id="UbZ-C0-78s"/>
                     <constraint firstItem="2b9-31-88I" firstAttribute="leading" secondItem="sce-ot-0Jy" secondAttribute="trailing" constant="8" id="VKc-h2-z38"/>
                     <constraint firstItem="JBo-Cv-GFb" firstAttribute="top" secondItem="m9D-jp-HsY" secondAttribute="top" constant="5" id="Zat-rq-hjB"/>
                     <constraint firstItem="WfG-xH-FJx" firstAttribute="leading" secondItem="iWQ-bc-mz8" secondAttribute="leadingMargin" constant="8" id="eEy-4S-9wR"/>
                     <constraint firstItem="WfG-xH-FJx" firstAttribute="top" secondItem="iWQ-bc-mz8" secondAttribute="topMargin" constant="4" id="gqZ-kr-63u"/>
                     <constraint firstAttribute="bottomMargin" secondItem="JBo-Cv-GFb" secondAttribute="bottom" constant="4" id="l9C-dJ-ZyK"/>
-                    <constraint firstAttribute="trailing" secondItem="6ro-oS-Jkb" secondAttribute="trailing" constant="95" id="mcY-bh-AO8"/>
                     <constraint firstItem="JBo-Cv-GFb" firstAttribute="trailing" secondItem="m9D-jp-HsY" secondAttribute="trailing" constant="-15" id="oSR-ZU-37x"/>
                     <constraint firstItem="2b9-31-88I" firstAttribute="centerY" secondItem="iWQ-bc-mz8" secondAttribute="centerY" id="tqV-Mc-gUO"/>
                     <constraint firstItem="JBo-Cv-GFb" firstAttribute="leading" secondItem="m9D-jp-HsY" secondAttribute="leading" constant="15" id="zEc-TB-Buu"/>
@@ -88,13 +79,11 @@
                 <outlet property="overallView" destination="m9D-jp-HsY" id="rph-r2-g16"/>
                 <outlet property="portfolio" destination="sce-ot-0Jy" id="afO-qa-yAn"/>
                 <outlet property="positionLabel" destination="WfG-xH-FJx" id="cXs-4p-N31"/>
-                <outlet property="proImage" destination="6ro-oS-Jkb" id="YJB-hF-qIa"/>
             </connections>
             <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Ellipse 4" width="94.5" height="94.5"/>
-        <image name="proSign" width="36" height="28"/>
     </resources>
 </document>

@@ -10,6 +10,7 @@ import UIKit
 import Inapps
 import QuickLook
 import AppsFlyerLib
+import StoreKit
 
 final class SubscriptionController: DMViewController {
     
@@ -39,6 +40,7 @@ final class SubscriptionController: DMViewController {
        
         let nib = UINib(nibName: "SubscriptionCell", bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: "SubscriptionCell")
+        pageControl.numberOfPages = SubscriptionItem.allCases.count
 
         checkInapps()
         setupButtons()
@@ -245,6 +247,10 @@ private extension SubscriptionController {
                                                      withValues: values)
                 self.close(self)
             case .failure(let error):
+                if let error = error as? SKError,
+                   error.code == .paymentCancelled {
+                    return
+                }
                 self.handleError(error)
             }
         }

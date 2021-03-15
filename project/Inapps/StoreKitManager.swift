@@ -45,6 +45,7 @@ public final class StoreKitManager {
         
         restoreSavedSubscriptions()
         loadProducts()
+        verifySubscriptions(forceRefresh: false)
     }
     
     public func isSubscribed(productId: String) -> Bool? {
@@ -84,6 +85,7 @@ public final class StoreKitManager {
                 if purchase.needsFinishTransaction {
                     SwiftyStoreKit.finishTransaction(purchase.transaction)
                 }
+                self.productsSubscriptions[productId] = true
                 self.saveSubscriptionsToDisk()
                 self.verifySubscriptions(forceRefresh: false)
                 
@@ -186,6 +188,10 @@ extension StoreKitManager {
             return .production
             #endif
         }()
+        
+        guard productsSubscriptions.contains(where: { $0.value == true }) else {
+            return
+        }
         
         let appleValidator = AppleReceiptValidator(service: service, sharedSecret: secret)
         SwiftyStoreKit.verifyReceipt(using: appleValidator, forceRefresh: forceRefresh) { [unowned self] result in

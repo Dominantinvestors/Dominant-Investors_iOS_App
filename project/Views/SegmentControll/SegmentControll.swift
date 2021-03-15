@@ -41,7 +41,7 @@ class SegmentControll: UIView {
         selector?(0)
     }
     
-    @objc private func onRight() {
+    @objc func onRight() {
         leftButton.unSelect()
         rightButton.select()
         selector?(1)

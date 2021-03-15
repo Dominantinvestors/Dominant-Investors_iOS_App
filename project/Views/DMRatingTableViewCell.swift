@@ -7,14 +7,8 @@ class DMRatingTableViewCell: UITableViewCell {
     @IBOutlet weak var  overallLabel  : UILabel!
     @IBOutlet weak var  portfolio  : UIImageView!
     @IBOutlet weak var  overallView  : UIView!
-    @IBOutlet weak var proImage : UIImageView!
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        proImage.isHidden = true
-    }
-
-    open func setupWith(model : InvestorModel, isProHidden : Bool) {
+    open func setupWith(model : InvestorModel) {
         
         overallView.layer.cornerRadius = 5
         
@@ -38,8 +32,6 @@ class DMRatingTableViewCell: UITableViewCell {
         }
         
         self.positionLabel.text = "\(model.index)"
-        
-        proImage.isHidden = isProHidden
     }
 
 }

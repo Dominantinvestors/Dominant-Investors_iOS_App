@@ -100,8 +100,7 @@ class DMRatingsViewController: DMViewController, UITableViewDelegate, UITableVie
             return UITableViewCell()
         }
         
-        let isProHidden = indexPath.row >= 15
-        cell.setupWith(model: model, isProHidden: isProHidden)
+        cell.setupWith(model: model)
         return cell
     }
     
