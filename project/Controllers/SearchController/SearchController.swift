@@ -147,7 +147,12 @@ extension SearchController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool  {
-        let currentString: NSString = searchBar.text! as NSString
+        
+        guard let searchTrimmedText = searchBar.text?.trimmingCharacters(in: .newlines) else {
+            return true
+        }
+        
+        let currentString: NSString = searchTrimmedText as NSString
         let searchText = currentString.replacingCharacters(in: range, with: text)
         
         if searchText.count > 1 {
@@ -158,6 +163,19 @@ extension SearchController: UISearchBarDelegate {
         }
         
         return true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        guard searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false,
+              !dataSource.data.isEmpty else {
+            return
+        }
+        
+        if let firstItem = dataSource.data.first {
+            selectedItem?(firstItem)
+        }
+        
     }
 }
 
