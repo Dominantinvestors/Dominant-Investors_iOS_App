@@ -64,4 +64,17 @@ class SearchSignalViewController: KeyboardObservableViewController, UISearchBarD
         }
         return true
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        guard searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false,
+              !items.data.isEmpty else {
+            return
+        }
+        
+        if let firstItem = items.data.first,
+           let company = firstItem as? SearchAssetModel {
+            self.addCompany(company)
+        }
+    }
 }
