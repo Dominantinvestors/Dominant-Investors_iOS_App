@@ -34,7 +34,7 @@ enum SubscriptionItem: Int, CaseIterable {
             """
         case .invest:
             return """
-            Browse investment portfolios of top investors
+            Invest with Pro
             """
         }
     }
@@ -70,8 +70,8 @@ enum SubscriptionItem: Int, CaseIterable {
             """
         case .invest:
             return """
-            Track what Buy or Sell 15 most
-            profitable investors in the rating
+            Take the quality of your investment
+            portfolio management to the next level
             """
         }
     }
