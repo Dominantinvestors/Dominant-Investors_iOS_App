@@ -53,6 +53,11 @@ class SearchSignalViewController: KeyboardObservableViewController, UISearchBarD
     }
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool  {
+        
+        guard text != "\n" else {
+            return true
+        }
+        
         let currentString: NSString = searchBar.text! as NSString
         let searchText = currentString.replacingCharacters(in: range, with: text)
         
@@ -67,14 +72,6 @@ class SearchSignalViewController: KeyboardObservableViewController, UISearchBarD
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-        guard searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false,
-              !items.data.isEmpty else {
-            return
-        }
-        
-        if let firstItem = items.data.first,
-           let company = firstItem as? SearchAssetModel {
-            self.addCompany(company)
-        }
+        searchBar.resignFirstResponder()
     }
 }
