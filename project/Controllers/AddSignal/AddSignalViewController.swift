@@ -62,11 +62,19 @@ class AddSignalViewController: KeyboardObservableViewController, UITextFieldDele
     }
     
     private func createSignal() {
-        guard buyDataSource.text.count > 0, targetDataSource.text.count > 0, lossDataSource.text.count > 0 else {
+
+        guard !buyDataSource.text.isEmpty,
+              !targetDataSource.text.isEmpty,
+              !lossDataSource.text.isEmpty else {
             return
         }
+        
+        let buyText = buyDataSource.text.replacingOccurrences(of: ",", with: ".")
+        let targetText = targetDataSource.text.replacingOccurrences(of: ",", with: ".")
+        let stopLossText = lossDataSource.text.replacingOccurrences(of: ",", with: ".")
+         
         showActivityIndicator()
-        SignalsDataProvider.default().create(for: company, buyDataSource.text, targetDataSource.text, lossDataSource.text)
+        SignalsDataProvider.default().create(for: company, buyText, targetText, stopLossText)
         {[unowned self] success, error in
             self.dismissActivityIndicator()
             if success {

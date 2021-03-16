@@ -54,7 +54,9 @@ class BuyViewController: KeyboardObservableViewController {
     
     func onSubmit() {
         showActivityIndicator()
-        PortfolioDataProvider.default().buy(priceDataSource.text, buyDataSource.text, company) { success, error in
+        let amount = buyDataSource.text.replacingOccurrences(of: ",", with: ".")
+        let price = priceDataSource.text.replacingOccurrences(of: ",", with: ".")
+        PortfolioDataProvider.default().buy(price, amount, company) { success, error in
             self.dismissActivityIndicator()
             if success {
                 self.navigationController?.popToRootViewController(animated: true)
