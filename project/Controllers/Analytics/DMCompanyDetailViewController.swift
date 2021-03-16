@@ -157,12 +157,9 @@ class DMCompanyDetailViewController: DMViewController, UIWebViewDelegate {
         showActivityIndicator()
         CompanyDataProvider.default().chart(company) { widget, error in
             self.dismissActivityIndicator()
-            if let widget = widget {
-                let add: MoreViewController = UIStoryboard.init(name: "Screener", bundle: nil)[.More]
-                add.HTMLString = widget.html
-                add.ticker = self.company.ticker
-                self.navigationController?.pushViewController(add, animated: true)
-            }
+            let add: MoreViewController = UIStoryboard.init(name: "Screener", bundle: nil)[.More]
+            add.ticker = self.company.ticker
+            self.navigationController?.pushViewController(add, animated: true)
         }
     }
     

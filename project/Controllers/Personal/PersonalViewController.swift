@@ -100,14 +100,12 @@ class PersonalViewController: KeyboardObservableViewController {
         showActivityIndicator()
         CompanyDataProvider.default().chart(company) { widget, error in
             self.dismissActivityIndicator()
-            if let widget = widget {
-                self.showCompanyWidget(company, widget: widget.html)
-            }
+            self.showCompanyWidget(company)
         }
     }
     
     fileprivate func moreInfo(_ company: Company) {
-        self.showCompanyWidget(company, widget: "<!-- TradingView Widget BEGIN --><meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0\"> <div class=\"tradingview-widget-container\"><div class=\"tradingview-widget-container__widget\"></div><div class=\"tradingview-widget-copyright\"><a href=\"https://www.tradingview.com/symbols/NASDAQ-AAPL/technicals/\"rel=\"noopener\" target=\"_blank\"><span class=\"blue-text\">Technical Analysis for AAPL</span></a> by TradingView</div><script type=\"text/javascript\" src=\"https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js\" async>{\"interval\": \"1m\",\"width\": \"100%\",\"isTransparent\": false,\"height\": \"100%\",\"symbol\": \"\(company.ticker)\",\"showIntervalTabs\": true,\"locale\": \"en\",\"colorTheme\": \"light\"}</script></div><!-- TradingView Widget END -->")
+        self.showCompanyWidget(company)
     }
     
     fileprivate func delete(_ signal: SignalModel) {
@@ -235,9 +233,8 @@ class PersonalViewController: KeyboardObservableViewController {
         return SearchDataSource(data: [NSLocalizedString("Enter the ticker", comment: "")], delegate: searchController)
     }
     
-    fileprivate func showCompanyWidget(_ company: Company, widget: String) {
+    fileprivate func showCompanyWidget(_ company: Company) {
         let add: MoreViewController = UIStoryboard.init(name: "Screener", bundle: nil)[.More]
-        add.HTMLString = widget
         add.ticker = company.ticker
         self.navigationController?.pushViewController(add, animated: true)
     }

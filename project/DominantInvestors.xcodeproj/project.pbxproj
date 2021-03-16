@@ -92,7 +92,6 @@
 		CE65E5CD2278404600B4955F /* CRNotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C62278404500B4955F /* CRNotificationType.swift */; };
 		CE65E5CE2278404600B4955F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E5C72278404500B4955F /* Colors.swift */; };
 		CE65E5CF2278404600B4955F /* CRNotificationsMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE65E5C92278404500B4955F /* CRNotificationsMedia.xcassets */; };
-		CE71024824AE240800E396ED /* ваTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71024724AE240800E396ED /* ваTableViewCell.swift */; };
 		CE735BCD21523A7D00E2849E /* Investors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE735BC821523A7D00E2849E /* Investors.xcassets */; };
 		CE735BD021523B0900E2849E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735BCF21523B0900E2849E /* Constants.swift */; };
 		CE735BDB21523B1300E2849E /* Ratings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735BD321523B1300E2849E /* Ratings.storyboard */; };
@@ -326,7 +325,6 @@
 		CE65E5C62278404500B4955F /* CRNotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotificationType.swift; sourceTree = "<group>"; };
 		CE65E5C72278404500B4955F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CE65E5C92278404500B4955F /* CRNotificationsMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CRNotificationsMedia.xcassets; sourceTree = "<group>"; };
-		CE71024724AE240800E396ED /* ваTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ваTableViewCell.swift"; sourceTree = "<group>"; };
 		CE735BC721523A7D00E2849E /* Crypto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crypto.xcassets; sourceTree = "<group>"; };
 		CE735BC821523A7D00E2849E /* Investors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Investors.xcassets; sourceTree = "<group>"; };
 		CE735BCF21523B0900E2849E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -786,9 +784,8 @@
 			children = (
 				CE735CC921523B2300E2849E /* DMScreenerContainerViewController.swift */,
 				CE735CC521523B2300E2849E /* DMScreenerTypeViewController.swift */,
-				CE71024724AE240800E396ED /* ваTableViewCell.swift */,
-				CE735CC821523B2300E2849E /* DMScreenerViewController.swift */,
 				CE735CC721523B2300E2849E /* DMCryptoScreenerViewController.swift */,
+				CE735CC821523B2300E2849E /* DMScreenerViewController.swift */,
 				CE735CC621523B2300E2849E /* DMSubscriptionViewController.swift */,
 				CE735CCA21523B2300E2849E /* DMStockDetailViewController.swift */,
 			);
@@ -1448,7 +1445,6 @@
 				CE8854CA215CC8940093564B /* DrivewealthDataProvider.swift in Sources */,
 				8F90602724FBD2A2004C76E9 /* PastSignalsCell.swift in Sources */,
 				CE0F544021D37B8800AEFBC1 /* ChatDataSources.swift in Sources */,
-				CE71024824AE240800E396ED /* ваTableViewCell.swift in Sources */,
 				CE735F0221523FA000E2849E /* DMRatingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
