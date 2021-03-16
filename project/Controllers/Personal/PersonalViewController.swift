@@ -100,12 +100,12 @@ class PersonalViewController: KeyboardObservableViewController {
         showActivityIndicator()
         CompanyDataProvider.default().chart(company) { widget, error in
             self.dismissActivityIndicator()
-            self.showCompanyWidget(company)
+            self.showCompanyWidget(company, isAnalyze: false)
         }
     }
     
     fileprivate func moreInfo(_ company: Company) {
-        self.showCompanyWidget(company)
+        self.showCompanyWidget(company, isAnalyze: true)
     }
     
     fileprivate func delete(_ signal: SignalModel) {
@@ -233,9 +233,10 @@ class PersonalViewController: KeyboardObservableViewController {
         return SearchDataSource(data: [NSLocalizedString("Enter the ticker", comment: "")], delegate: searchController)
     }
     
-    fileprivate func showCompanyWidget(_ company: Company) {
+    fileprivate func showCompanyWidget(_ company: Company, isAnalyze: Bool) {
         let add: MoreViewController = UIStoryboard.init(name: "Screener", bundle: nil)[.More]
         add.ticker = company.ticker
+        add.isAnalyze = isAnalyze
         self.navigationController?.pushViewController(add, animated: true)
     }
     
