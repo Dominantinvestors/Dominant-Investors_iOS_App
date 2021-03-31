@@ -45,7 +45,9 @@ public final class StoreKitManager {
         
         restoreSavedSubscriptions()
         loadProducts()
-        verifySubscriptions(forceRefresh: false)
+        if productsSubscriptions.contains(where: { $0.value == true }) {
+            verifySubscriptions(forceRefresh: false)
+        }
     }
     
     public func isSubscribed(productId: String) -> Bool? {
@@ -133,7 +135,9 @@ public final class StoreKitManager {
         } else {
             self.subscriptionsCompletion = completion
             if !isLoadingSubscriptions {
-                verifySubscriptions(forceRefresh: true)
+                SwiftyStoreKit.restorePurchases { [unowned self] result in
+                    verifySubscriptions(forceRefresh: true)
+                }
             }
         }
     }
@@ -188,10 +192,6 @@ extension StoreKitManager {
             return .production
             #endif
         }()
-        
-        guard productsSubscriptions.contains(where: { $0.value == true }) else {
-            return
-        }
         
         let appleValidator = AppleReceiptValidator(service: service, sharedSecret: secret)
         SwiftyStoreKit.verifyReceipt(using: appleValidator, forceRefresh: forceRefresh) { [unowned self] result in

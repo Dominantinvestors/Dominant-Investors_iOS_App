@@ -257,8 +257,11 @@ private extension SubscriptionController {
     }
     
     @IBAction func restorePurchases(_ sender: UIButton) {
+        startLoading()
+        sender.isEnabled = false
         StoreKitManager.default.restore { [unowned self] subscribtion, error in
-            
+            endLoading()
+            sender.isEnabled = true
             if let error = error {
                 self.handleError(error)
                 return
